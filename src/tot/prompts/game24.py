@@ -132,3 +132,103 @@ impossible
 Input: {input}
 Answer: {answer}
 Judge:'''
+
+# evaluate_prompt = '''You and your colleague are working on Game of 24: 
+# use numbers and basic arithmetic operations (+ - * /) to obtain 24. 
+# Your colleague has provided a possible answers with multiple steps.
+# Given the input and each steps of the answer, give a judgement (sure/impossible) if the answer is correct, 
+# i.e. it uses each input exactly once and no other numbers, and reach 24.
+# You should look at each step and evaluate if it is valid. 
+# If you think the answer is impossible to be correct, please step does it start to go wrong. 
+# Input: 4 4 6 8
+# Steps: 
+# Step 1:
+# 4 + 8 = 12 (left: 4 6 12)
+# Step 2:
+# 4 + 8 = 12 (left: 4 6 12)
+# 6 - 4 = 2 (left: 2 12)
+# Step 3:
+# 4 + 8 = 12 (left: 4 6 12)
+# 6 - 4 = 2 (left: 2 12)
+# 2 * 12 = 24 (left: 24)
+# Step 4:
+# 4 + 8 = 12 (left: 4 6 12)
+# 6 - 4 = 2 (left: 2 12)
+# 2 * 12 = 24 (left: 24)
+# Answer: (4 + 8) * (6 - 4) = 24
+# Judge:
+# sure
+
+# Input: 4 5 10 10
+# Steps:
+# Step 1:
+# 10 - 4 = 6 (left: 6 5 10)
+# Step 2:
+# 10 - 4 = 6 (left: 6 5 10)
+# 8 / 2 = 4 (left: 4 6)
+# Step 3:
+# 10 - 4 = 6 (left: 6 5 10)
+# 8 / 2 = 4 (left: 4 6)
+# 4 * 6 = 24 (left: 24)
+# Step 4:
+# 10 - 4 = 6 (left: 6 5 10)
+# 8 / 2 = 4 (left: 4 6)
+# 4 * 6 = 24 (left: 24)
+# Answer: (10 - 4) * (5 + 10) = 24
+# Judge:
+# impossible, invalid at step 2.
+# '''
+
+evaluate_prompt = """
+You are an expert verifier for the Game of 24.
+
+Objective  
+Check whether a proposed multi-step solution transforms the four given numbers into **24**, using **only** +, -, *, /, **each starting number exactly once**, and no extra numbers.
+
+Input format
+------------
+Input: a b c d
+Steps:
+Step k:
+x op y = z (left: L)    # x and y must be in the current multiset L; z must be the correct result;  
+                        # L is the multiset after replacing x and y with z.
+
+Task
+----
+1. Process the steps in order, updating the multiset.  
+2. At the first violation (wrong operands, wrong arithmetic, bad “left” list, division by zero, etc.)  
+   stop and output:  
+
+   impossible, invalid at step N
+
+3. If no violation occurs **and** the final multiset is exactly {24}, output:  
+
+   sure
+
+Output **only** that single line—no extra text.
+
+Examples
+--------
+Input: 4 4 6 8
+Steps:
+1. 4 + 8 = 12 (left: 4 6 12)
+2. 6 - 4 = 2 (left: 2 12)
+3. 2 * 12 = 24 (left: 24)
+Answer: (4 + 8) * (6 - 4)
+Judge:
+sure
+
+Input: 4 5 10 10
+Steps:
+1. 10 - 4 = 6 (left: 6 5 10)
+2. 8 / 2 = 4 (left: 4 6)      # 8 and 2 are not available
+3. 4 * 6 = 24 (left: 24)
+Answer: (10 - 4) * (5 + 10)
+Judge:
+impossible, invalid at step 2
+
+Input: {input}
+Steps:
+{steps}
+Judge:
+"""

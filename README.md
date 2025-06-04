@@ -1,5 +1,6 @@
-# Official Repo of Tree of Thoughts (ToT)
+# The first version of LLM reasoning with Lazy Search, built on ToT repo.
 
+This version use LLM to validate reasoning steps, SLM continue exploring with feedback from LLM. 
 <p>
     <a href="https://badge.fury.io/py/tree-of-thoughts-llm">
         <img src="https://badge.fury.io/py/tree-of-thoughts-llm.svg">
