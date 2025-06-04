@@ -49,8 +49,10 @@ def get_samples(task, x, y, n_generate_sample, prompt_sample, stop):
 
 
 def get_proposals_v1(task, x, y, index, feedback = None): 
+    print(f'Getting proposals from index {index} with y = {y}')
     propose_prompt = task.propose_prompt_wrap(x, y)
     proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
+    print(f'The proposals for {y} is \n {proposals}')
     return [(y + _ + '\n', index) for _ in proposals]
 
 def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
@@ -75,7 +77,7 @@ def check_answer(prev_level): #This is only for game of 24
 def reasoning(task, step, x, prev_level, feedback = None, single = None): 
     #if prev_level only one element(first node or refinement), single signal the index of previous thoughts
     #this should be improved
-    while step < task.steps:
+    while step < 2:
         print(f'Start reasoning with step {step}\n')
         print(f'number of prev level{len(prev_level)}')
         if(len(prev_level) > 5):
@@ -100,7 +102,7 @@ def reasoning(task, step, x, prev_level, feedback = None, single = None):
         #log
         print(f'-- new step of {step}\n')
         sorted_new_ys, sorted_values = zip(*sorted(zip(new_ys, values), key=lambda x: x[1], reverse=True))
-        print(f'-- new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
+        print(f'-- new_ys --: {new_ys}\n-- values -- {values}\n-- sorted_new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
         
         #update thoughts tree
         prev_level = [y for (y,i) in select_new_ys]
@@ -131,6 +133,7 @@ def solve_v1(args, task, idx):
         print(f'step {i} \n')
         for t in ts:
             print(f'{t} \n')
+        print(connection[i])
     print("Index: \n")
     print(connection)
     return ys

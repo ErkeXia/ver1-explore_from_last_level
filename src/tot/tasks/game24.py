@@ -77,9 +77,11 @@ class Game24Task(Task):
         last_line = y.strip().split('\n')[-1]
         if 'left: ' not in last_line:  # last step
             ans = last_line.lower().replace('answer: ', '')
+            print(ans)
             # print([value_last_step_prompt.format(input=x, answer=ans)])
             return value_last_step_prompt.format(input=x, answer=ans)
         current_numbers = get_current_numbers(y)
+        print(current_numbers)
         return value_prompt.format(input=current_numbers)
     
     @staticmethod
