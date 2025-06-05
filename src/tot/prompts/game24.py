@@ -179,56 +179,120 @@ Judge:'''
 # impossible, invalid at step 2.
 # '''
 
+# evaluate_prompt = """
+# You are an expert verifier for the Game of 24.
+
+# Objective  
+# Check whether a proposed multi-step solution transforms the four given numbers into **24**, using **only** +, -, *, /, **each starting number exactly once**, and no extra numbers.
+
+# Input format
+# ------------
+# Input: a b c d
+# Steps:
+# Step k:
+# x op y = z (left: L)    # x and y must be in the current multiset L; z must be the correct result;  
+#                         # L is the multiset after replacing x and y with z.
+
+# Task
+# ----
+# 1. Process the steps in order, updating the multiset.  
+# 2. At the first violation (wrong operands, wrong arithmetic, bad “left” list, division by zero, etc.)  
+#    stop and output:  
+
+#    No, invalid at step N
+
+# 3. If no violation occurs **and** the final multiset is exactly 24, output:  
+
+#    Yes
+
+# Output **only** that single line—no extra text.
+
+# Examples
+# --------
+# Input: 4 4 6 8
+# Steps:
+# 1. 4 + 8 = 12 (left: 4 6 12)
+# 2. 6 - 4 = 2 (left: 2 12)
+# 3. 2 * 12 = 24 (left: 24)
+# 4. Answer: (4 + 8) * (6 - 4)
+# Judge:
+# Yes
+
+# Input: 4 5 10 10
+# Steps:
+# 1. 10 - 4 = 6 (left: 6 5 10)
+# 2. 8 / 2 = 4 (left: 4 6)
+# 3. 4 * 6 = 24 (left: 24)
+# Judge:
+# No, invalid at step 2
+
+# Input: {input}
+# Steps:
+# {f_step}
+# Judge:
+# """
+
 evaluate_prompt = """
-You are an expert verifier for the Game of 24.
+You are an expert verifier and coach for the Game of 24.
 
-Objective  
-Check whether a proposed multi-step solution transforms the four given numbers into **24**, using **only** +, -, *, /, **each starting number exactly once**, and no extra numbers.
+Goal  
+Check a multi-step attempt that should turn four numbers into **24** using only +, -, *, /.  
+Besides legality, you must detect the first step that makes the target **unreachable**.
 
-Input format
-------------
-Input: a b c d
-Steps:
-Step k:
-x op y = z (left: L)    # x and y must be in the current multiset L; z must be the correct result;  
-                        # L is the multiset after replacing x and y with z.
+Definitions
+-----------
+• blocking step = a legal step after which **no sequence** of further legal operations can yield 24.
 
-Task
-----
-1. Process the steps in order, updating the multiset.  
-2. At the first violation (wrong operands, wrong arithmetic, bad “left” list, division by zero, etc.)  
-   stop and output:  
+Required output
+---------------
+Exactly one line, with one of three possible forms:
 
-   impossible, invalid at step N
+1. Yes                              # all steps legal, final left number = 24
+2. No, invalid at step N            # first illegal step
+3. No, blocking at step N           # first legal but hopeless step
 
-3. If no violation occurs **and** the final multiset is exactly {24}, output:  
+Procedure
+---------
+1. Walk through the steps in order, checking:
+   • x and y are in the set of remaining number.  
+   • z is the correct result of x op y (no division by zero).  
+   • left list matches the updated multiset.
 
-   sure
+2. If a check fails → form 2.
 
-Output **only** that single line—no extra text.
+3. After **each legal step**, decide whether 24 is still reachable from the new multiset
+   If not reachable → form 3 using this step's index.
+
+4. When the steps end, the only number left is 24 -> form 1.
 
 Examples
 --------
 Input: 4 4 6 8
 Steps:
-1. 4 + 8 = 12 (left: 4 6 12)
-2. 6 - 4 = 2 (left: 2 12)
-3. 2 * 12 = 24 (left: 24)
-Answer: (4 + 8) * (6 - 4)
+1: 4 + 8 = 12 (left: 4 6 12)
+2: 6 - 4 = 2 (left: 2 12)
+3: 2 * 12 = 24 (left: 24)
 Judge:
-sure
+Yes
 
 Input: 4 5 10 10
 Steps:
-1. 10 - 4 = 6 (left: 6 5 10)
-2. 8 / 2 = 4 (left: 4 6)      # 8 and 2 are not available
-3. 4 * 6 = 24 (left: 24)
-Answer: (10 - 4) * (5 + 10)
+1: 10 - 4 = 6 (left: 6 5 10)
+2: 8 / 2 = 4 (left: 4 6)           # 8 and 2 not in multiset
+3: 4 * 6 = 24 (left: 24)
 Judge:
-impossible, invalid at step 2
+No, invalid at step 2
+
+Input: 1 1 6 8
+Steps:
+1: 1 + 1 = 2 (left: 2 6 8)
+2: 2 + 6 = 8 (left: 8 8)         # after this, 24 is impossible
+Judge:
+No, blocking at step 2
+
 
 Input: {input}
 Steps:
-{steps}
+{f_step}
 Judge:
 """
