@@ -6,7 +6,7 @@ from tot.models import gpt_usage
 
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
-    model = 'gpt-4'
+    model = 'gpt-3.5-turbo'
     args = argparse.Namespace(backend=model, temperature=0.7, task='game24', naive_run=False, prompt_sample=None, method_generate='propose', method_evaluate='value', method_select='greedy', n_generate_sample=1, n_evaluate_sample=3, n_select_sample=5)
 
     task = Game24Task()

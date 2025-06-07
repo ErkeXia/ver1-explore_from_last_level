@@ -2,16 +2,8 @@ import itertools
 import numpy as np
 from functools import partial
 from tot.models import gpt
+from tot.models import llama
 
-def get_value(task, x, y, n_evaluate_sample, cache_value=True):
-    value_prompt = task.value_prompt_wrap(x, y)
-    if cache_value and value_prompt in task.value_cache:
-        return task.value_cache[value_prompt]
-    value_outputs = gpt(value_prompt, n=n_evaluate_sample, stop=None)
-    value = task.value_outputs_unwrap(x, y, value_outputs)
-    if cache_value:
-        task.value_cache[value_prompt] = value
-    return value
 
 def get_values(task, x, ys, n_evaluate_sample, cache_value=True):
     values = []
@@ -46,12 +38,22 @@ def get_samples(task, x, y, n_generate_sample, prompt_sample, stop):
     samples = gpt(prompt, n=n_generate_sample, stop=stop)
     return [y + _ for _ in samples]
 
-
+def get_value(task, x, y, n_evaluate_sample, cache_value=True):
+    value_prompt = task.value_prompt_wrap(x, y)
+    if cache_value and value_prompt in task.value_cache:
+        return task.value_cache[value_prompt]
+    # value_outputs = gpt(value_prompt, n=n_evaluate_sample, stop=None)
+    value_outputs = llama(value_prompt, n=n_evaluate_sample, stop=None)
+    value = task.value_outputs_unwrap(x, y, value_outputs)
+    if cache_value:
+        task.value_cache[value_prompt] = value
+    return value
 
 def get_proposals_v1(task, x, y, index, feedback = None): 
     print(f'Getting proposals from index {index} with y = {y}')
     propose_prompt = task.propose_prompt_wrap(x, y)
-    proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
+    # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
+    proposals = llama(propose_prompt, n=1, stop=None)[0].split('\n')
     print(f'The proposals for {y} is \n {proposals}')
     return [(y + _ + '\n', index , _) for _ in proposals]
 
@@ -83,7 +85,7 @@ def check_answer(prev_level): #This is only for game of 24
 def reasoning(task, step, x, prev_level, feedback = None, single = None): 
     #if prev_level only one element(first node or refinement), single signal the index of previous thoughts
     #this should be improved
-    while step < task.steps:
+    while step < 2:
         print(f'Start reasoning with step {step}\n')
         print(f'number of prev level{len(prev_level)}')
         if(len(prev_level) > 5):
@@ -155,7 +157,7 @@ def solve_v1(args, task, idx):
     val_count = 0
     while(val_count < 1): # call large model for at most three times
         idx, y = reasoning(task, 0, x, prev_level, feedback = None, single = 0)
-        f_step = retrieve_steps(task.steps, idx, y)
+        f_step = retrieve_steps(2, idx, y)
         print(f'Retrieve steps: {f_step}')
         validate_outputs = validate(task, x, f_step)
         print(f'The validate result: \n {validate_outputs}\n')

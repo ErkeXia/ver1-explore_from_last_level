@@ -49,7 +49,24 @@ Input: {input}
 '''
 
 # 1-shot
-propose_prompt = '''Input: 2 8 8 14
+# propose_prompt = '''Input: 2 8 8 14
+# Possible next steps:
+# 2 + 8 = 10 (left: 8 10 14)
+# 8 / 2 = 4 (left: 4 8 14)
+# 14 + 2 = 16 (left: 8 8 16)
+# 2 * 8 = 16 (left: 8 14 16)
+# 8 - 2 = 6 (left: 6 8 14)
+# 14 - 8 = 6 (left: 2 6 8)
+# 14 /  2 = 7 (left: 7 8 8)
+# 14 - 2 = 12 (left: 8 8 12)
+# Input: {input}
+# Possible next steps:
+# '''
+
+propose_prompt = '''
+You aim to use numbers and basic arithmetic operations (+ - * /) to obtain 24.
+You now should provide eight possible next steps for the given input only. 
+Input: 2 8 8 14
 Possible next steps:
 2 + 8 = 10 (left: 8 10 14)
 8 / 2 = 4 (left: 4 8 14)
