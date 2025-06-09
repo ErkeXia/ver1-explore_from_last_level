@@ -3,7 +3,7 @@ import sys
 
 propose_prompt = '''
 You aim to use numbers and basic arithmetic operations (+ - * /) to obtain 24.
-You now should provide eight possible next steps for the given input.
+You now should provide eight possible next steps for the given input like the example.
 EXAMPLE:
 Input: 2 8 8 14
 Possible next steps:
@@ -16,7 +16,29 @@ Possible next steps:
 14 /  2 = 7 (left: 7 8 8)
 14 - 2 = 12 (left: 8 8 12)
 TASK:
-Input: 4 5 10 10
+Input: 1 5 5 5
+Possible next steps:
+'''
+
+propose_system_prompt = '''
+You aim to use numbers and basic arithmetic operations (+ - * /) to obtain 24.
+You now should provide eight possible next steps for the given input like the example.
+EXAMPLE:
+Input: 2 8 8 14
+Possible next steps:
+2 + 8 = 10 (left: 8 10 14)
+8 / 2 = 4 (left: 4 8 14)
+14 + 2 = 16 (left: 8 8 16)
+2 * 8 = 16 (left: 8 14 16)
+8 - 2 = 6 (left: 6 8 14)
+14 - 8 = 6 (left: 2 6 8)
+14 /  2 = 7 (left: 7 8 8)
+14 - 2 = 12 (left: 8 8 12)
+'''
+
+propose_user_prompt = '''
+TASK:
+Input: 1 5 5 5
 Possible next steps:
 '''
 
@@ -72,7 +94,13 @@ TASK:
 Input: 5 9 9
 '''
 value_system_prompt = '''Evaluate if given numbers can reach 24 with basic arithmetic operations (+ - * /) 
-You should response to the task with some reasoning steps and sure/likely/impossible
+THINK step-by-step **internally**
+Produce output in *exactly* this format:
+a  op  b  =  c        (remaining: …)   # optional
+c  op  d  =  e                         # optional
+<final>    sure | likely | impossible
+You may write at most five lines total
+
 EXAMPLES:
 Input: 10 14
 10 + 14 = 24
@@ -122,10 +150,10 @@ impossible
 
 value_user_prompt = '''
 TASK:
-Input: 5 9 9
+Input: 9 10 10
 '''
 
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
     print(value_prompt)
-    output = llama(value_user_prompt, value_system_prompt, n=5, stop=None)
+    output = llama(value_user_prompt, value_system_prompt, n=5, stop=None, temperature=0.5)

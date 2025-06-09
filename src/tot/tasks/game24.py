@@ -67,10 +67,17 @@ class Game24Task(Task):
         current_numbers = get_current_numbers(y if y else x)
         print(f'Current number is: {current_numbers}\n')
         if current_numbers == '24':
-            prompt = cot_prompt.format(input=x) + 'Steps:' + y
+            prompt = cot_user_prompt.format(input=x) + 'Steps:' + y
+            system = cot_system_prompt
         else:
-            prompt = propose_prompt.format(input=current_numbers)
-        return prompt
+            prompt = propose_user_prompt.format(input=current_numbers)
+            system = propose_system_prompt
+        return system, prompt
+    
+    @staticmethod
+    def propose_prompt_unwrap(value_outputs: list) -> list:
+        filtered = [s for s in value_outputs if s and 'is' not in s and 'are' not in s and 'steps' not in s]
+        return filtered
     
     @staticmethod
     def value_prompt_wrap(x: str, y: str) -> str:
@@ -79,10 +86,10 @@ class Game24Task(Task):
             ans = last_line.lower().replace('answer: ', '')
             # print(ans)
             # print([value_last_step_prompt.format(input=x, answer=ans)])
-            return value_last_step_prompt.format(input=x, answer=ans)
+            return value_last_step_prompt_system, value_last_step_prompt.format(input=x, answer=ans)
         current_numbers = get_current_numbers(y)
         # print(current_numbers)
-        return value_prompt.format(input=current_numbers)
+        return value_system_prompt, value_user_prompt.format(input=current_numbers)
     
     @staticmethod
     def value_outputs_unwrap(x: str, y: str, value_outputs: list) -> float:
@@ -91,7 +98,10 @@ class Game24Task(Task):
         # value_names = [_.split('\n')[-1] for _ in value_outputs]
         value_map = {'impossible': 0.001, 'likely': 1, 'sure': 20}  # TODO: ad hoc
         # value = sum(value * value_names.count(name) for name, value in value_map.items())
-        value = sum(value * value_outputs.count(name) for name, value in value_map.items())
+        value = sum(
+            value * sum(s.count(name) for s in value_outputs)
+            for name, value in value_map.items()
+        )
         return value
     
     @staticmethod

@@ -57,9 +57,10 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
         if prompt in output_text:
             output_text = output_text.replace(prompt, "")
         if "assistant" in output_text:
-            output_text =  output_text[(output_text.index("assistant") + 9):]
+            index = output_text.rfind("assistant")
+            output_text =  output_text[(index + 9):]
         outputs.append(output_text)
-        print(f'LLAMA output: {output_text}\n')
+        # print(f'LLAMA output: {output_text}\n')
         if(output_text == ""):
             print(f'LLAMA output empty, raw output: {raw_output_text}')
         n -= 1

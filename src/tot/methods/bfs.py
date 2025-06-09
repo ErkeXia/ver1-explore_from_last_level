@@ -39,21 +39,41 @@ def get_samples(task, x, y, n_generate_sample, prompt_sample, stop):
     return [y + _ for _ in samples]
 
 def get_value(task, x, y, n_evaluate_sample, cache_value=True):
-    value_prompt = task.value_prompt_wrap(x, y)
-    if cache_value and value_prompt in task.value_cache:
-        return task.value_cache[value_prompt]
+    system, user = task.value_prompt_wrap(x, y)
+    if cache_value and user in task.value_cache:
+        return task.value_cache[user]
     # value_outputs = gpt(value_prompt, n=n_evaluate_sample, stop=None)
-    value_outputs = llama(value_prompt, n=n_evaluate_sample, stop=None)
+    num = n_evaluate_sample
+    value_outputs = []
+    max_attempts = 5
+    attempt = 0
+    while(num > 0 and attempt < max_attempts):
+        outputs = llama(user, system, n=num, stop=None)
+        keywords = {'likely', 'impossible', 'sure'}
+        valid_outputs = [
+            s for s in outputs
+            if any(k in s.strip().split('\n')[-1] for k in keywords)
+        ]
+        valid_count = len(valid_outputs)
+        print(f'Number of value needed is {num}, this time we have {valid_count} valid output')
+        num -= valid_count
+        value_outputs.extend(valid_outputs)
+        attempt += 1
+    if(attempt == max_attempts):
+        print('Reach max attempts')
+    print(f'The valid outputs are {value_outputs}')
     value = task.value_outputs_unwrap(x, y, value_outputs)
+    print(f'The value is {value}')
     if cache_value:
-        task.value_cache[value_prompt] = value
+        task.value_cache[user] = value
     return value
 
 def get_proposals_v1(task, x, y, index, feedback = None): 
     print(f'Getting proposals from index {index} with y = {y}')
-    propose_prompt = task.propose_prompt_wrap(x, y)
+    system, user = task.propose_prompt_wrap(x, y)
     # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
-    proposals = llama(propose_prompt, n=1, stop=None)[0].split('\n')[:8]
+    proposals = llama(user, system, n=1, stop=None)[0].split('\n')
+    proposals = task.propose_prompt_unwrap(proposals)
     print(f'The proposals for {y} is \n {proposals}')
     return [(y + _ + '\n', index , _) for _ in proposals]
 
@@ -64,6 +84,7 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
         if y in local_value_cache:  # avoid duplicate candidates
             value = 0
         else:
+            print(f'getting value for {y}')
             value = get_value(task, x, y, n_evaluate_sample, cache_value=cache_value)
             local_value_cache[y] = value
         values.append(value)
@@ -85,7 +106,7 @@ def check_answer(prev_level): #This is only for game of 24
 def reasoning(task, step, x, prev_level, feedback = None, single = None): 
     #if prev_level only one element(first node or refinement), single signal the index of previous thoughts
     #this should be improved
-    while step < 2:
+    while step < task.steps:
         print(f'Start reasoning with step {step}\n')
         print(f'number of prev level{len(prev_level)}')
         if(len(prev_level) > 5):
@@ -150,14 +171,14 @@ def solve_v1(args, task, idx):
     print(gpt)
     
     x = task.get_input(idx)  # input
-    x = "4 5 10 10"
+    x = "4 5 6 10"
     print(f'x = {x}\n')
     
     prev_level = ['']
     val_count = 0
     while(val_count < 1): # call large model for at most three times
         idx, y = reasoning(task, 0, x, prev_level, feedback = None, single = 0)
-        f_step = retrieve_steps(2, idx, y)
+        f_step = retrieve_steps(task.steps, idx, y)
         print(f'Retrieve steps: {f_step}')
         validate_outputs = validate(task, x, f_step)
         print(f'The validate result: \n {validate_outputs}\n')

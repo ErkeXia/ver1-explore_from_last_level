@@ -48,6 +48,44 @@ Answer: ((5 + 5) + 5) + 9 = 24
 Input: {input}
 '''
 
+cot_system_prompt = '''Use numbers and basic arithmetic operations (+ - * /) to obtain 24. Each step, you are only allowed to choose two of the remaining numbers to obtain a new number.
+Input: 4 4 6 8
+Steps:
+4 + 8 = 12 (left: 4 6 12)
+6 - 4 = 2 (left: 2 12)
+2 * 12 = 24 (left: 24)
+Answer: (6 - 4) * (4 + 8) = 24
+Input: 2 9 10 12
+Steps:
+12 * 2 = 24 (left: 9 10 24)
+10 - 9 = 1 (left: 1 24)
+24 * 1 = 24 (left: 24)
+Answer: (12 * 2) * (10 - 9) = 24
+Input: 4 9 10 13
+Steps:
+13 - 10 = 3 (left: 3 4 9)
+9 - 3 = 6 (left: 4 6)
+4 * 6 = 24 (left: 24)
+Answer: 4 * (9 - (13 - 10)) = 24
+Input: 1 4 8 8
+Steps:
+8 / 4 = 2 (left: 1 2 8)
+1 + 2 = 3 (left: 3 8)
+3 * 8 = 24 (left: 24)
+Answer: (1 + 8 / 4) * 8 = 24
+Input: 5 5 5 9
+Steps:
+5 + 5 = 10 (left: 5 9 10)
+10 + 5 = 15 (left: 9 15)
+15 + 9 = 24 (left: 24)
+Answer: ((5 + 5) + 5) + 9 = 24
+'''
+
+cot_user_prompt = '''
+Input: {input}
+'''
+
+
 # 1-shot
 # propose_prompt = '''Input: 2 8 8 14
 # Possible next steps:
@@ -77,6 +115,39 @@ Possible next steps:
 14 - 8 = 6 (left: 2 6 8)
 14 /  2 = 7 (left: 7 8 8)
 14 - 2 = 12 (left: 8 8 12)
+TASK:
+Input: {input}
+Possible next steps:
+'''
+
+propose_system_prompt = '''
+You aim to use numbers and basic arithmetic operations (+ - * /) to obtain 24.
+You now should provide eight possible next steps for the given input like the example.
+EXAMPLE1:
+Input: 2 8 8 14
+Possible next steps:
+2 + 8 = 10 (left: 8 10 14)
+8 / 2 = 4 (left: 4 8 14)
+14 + 2 = 16 (left: 8 8 16)
+2 * 8 = 16 (left: 8 14 16)
+8 - 2 = 6 (left: 6 8 14)
+14 - 8 = 6 (left: 2 6 8)
+14 /  2 = 7 (left: 7 8 8)
+14 - 2 = 12 (left: 8 8 12)
+EXAMPLE2:
+Input: 2 12
+Possible next steps:
+2 * 12 = 24 (left: 24)
+2 + 12 = 14 (left: 14)
+12 - 2 = 10 (left: 10)
+2 - 12 = -10 (left: -10)
+12 / 2 = 6 (left: 6)
+12 + 2 = 14 (left: 14)
+12 * 2 = 24 (left: 24)
+2 / 12 = 0.17 (left: 0.17)
+'''
+
+propose_user_prompt = '''
 TASK:
 Input: {input}
 Possible next steps:
@@ -134,8 +205,14 @@ Possible next steps:
 # Input: {input}
 # '''
 
-value_system_prompt = '''Evaluate if given numbers can reach 24 with basic arithmetic operations (+ - * /), each number can only be used once
-You should response to the task with some reasoning steps and sure/likely/impossible
+value_system_prompt = '''Evaluate if given numbers can reach 24 with basic arithmetic operations (+ - * /) 
+THINK step-by-step **internally**
+Produce output in *exactly* this format:
+a  op  b  =  c        (remaining: …)   # optional
+c  op  d  =  e                         # optional
+<final>    sure | likely | impossible
+You may write at most five lines total
+
 EXAMPLES:
 Input: 10 14
 10 + 14 = 24
@@ -188,7 +265,8 @@ TASK:
 Input: {input}
 '''
 
-value_last_step_prompt = '''Use numbers and basic arithmetic operations (+ - * /) to obtain 24. Given an input and an answer, give a judgement (sure/impossible) if the answer is correct, i.e. it uses each input exactly once and no other numbers, and reach 24.
+value_last_step_prompt_system = '''
+Use numbers and basic arithmetic operations (+ - * /) to obtain 24. Given an input and an answer, give a judgement (sure/impossible) if the answer is correct, i.e. it uses each input exactly once and no other numbers, and reach 24.
 Input: 4 4 6 8
 Answer: (4 + 8) * (6 - 4) = 24
 Judge: 
@@ -213,6 +291,9 @@ Input: 4 9 10 13
 Answer: (13 - 4) * (10 - 9) = 24
 Judge: 
 impossible
+'''
+
+value_last_step_prompt = '''
 Input: {input}
 Answer: {answer}
 Judge:'''
@@ -374,9 +455,91 @@ Steps:
 Judge:
 No, blocking at step 2
 
-
 Input: {input}
 Steps:
 {f_step}
 Judge:
 """
+
+
+
+
+
+
+# evaluate_prompt = '''
+# You are an expert verifier and coach for the Game of 24.
+
+# Goal  
+# Evaluate a multi-step attempt that should turn four numbers into **24** using only + - * /.  
+# Besides legality, detect the first step that makes 24 unreachable, **then give one short tip** the next
+# model can use.
+
+# Definitions
+# -----------
+# • blocking step = legal step after which **no sequence** of further legal operations can yield 24.
+
+# Required output
+# ---------------
+# Exactly **two lines**:
+
+# 1. One of
+#    • Yes                              # all steps legal, final left number = 24  
+#    • No, invalid at step N            # first illegal step  
+#    • No, blocking at step N           # first legal but hopeless step  
+
+# 2. ≤ 20 words of advice (no extra lines).  
+#    • If verdict is Yes → a brief praise (“Good job”).  
+#    • If verdict is No → a concrete, actionable hint (e.g.  
+#      “Step 2 uses 8,2 not present” or  
+#      “Avoid merging 1 and 6; keep 6*4”)
+
+# Procedure
+# ---------
+# 1. Walk through the steps in order, checking  
+#    • operands are in the remaining set,  
+#    • result is correct (no division by zero),  
+#    • “left” list matches the updated multiset.  
+#    If a check fails → verdict form 2.
+
+# 2. After each legal step, decide whether 24 is reachable from the new multiset.  
+#    If unreachable → verdict form 3 for this step.
+
+# 3. When the steps end  
+#    • single number = 24 → Yes  
+#    • single number ≠ 24 → No, blocking at last step
+
+# Remember: **only two lines** of output—no code fences, no commentary.
+
+# Examples
+# --------
+# Input: 4 4 6 8
+# Steps:
+# 1: 4 + 8 = 12 (left: 4 6 12)
+# 2: 6 - 4 = 2  (left: 2 12)
+# 3: 2 * 12 = 24 (left: 24)
+# Judge:
+# Yes
+# Good job
+
+# Input: 4 5 10 10
+# Steps:
+# 1: 10 - 4 = 6  (left: 6 5 10)
+# 2: 8 / 2 = 4  (left: 4 6)          # 8 and 2 not present
+# 3: 4 * 6 = 24 (left: 24)
+# Judge:
+# No, invalid at step 2
+# Step 2 uses numbers not in set
+
+# Input: 1 1 6 8
+# Steps:
+# 1: 1 + 1 = 2  (left: 2 6 8)
+# 2: 2 + 6 = 8  (left: 8 8)          # 24 now impossible
+# Judge:
+# No, blocking at step 2
+# Keep 6 for 6*4 later
+
+# Input: {input}
+# Steps:
+# {f_step}
+# Judge:
+# '''

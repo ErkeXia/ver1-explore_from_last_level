@@ -1,228 +1,1286 @@
-Evaluate if given numbers can reach 24 with basic arithmetic operations (+ - * /) 
-You should response (sure/likely/impossible)
-EXAMPLES:
-Input: 10 14
-10 + 14 = 24
-sure
+functools.partial(<function gpt at 0x7018deeb2680>, model='gpt-4', temperature=0.7)
+x = 4 5 6 10
 
-Input: 11 12
-11 + 12 = 23
-12 - 11 = 1
-11 * 12 = 132
-11 / 12 = 0.91
-impossible
+Start reasoning with step 0
 
-Input: 4 4 10
-4 + 4 + 10 = 8 + 10 = 18
-4 * 10 - 4 = 40 - 4 = 36
-(10 - 4) * 4 = 6 * 4 = 24
-sure
+number of prev level1
+Getting proposals from index 0 with y = 
+Current number is: 4 5 6 10
 
-Input: 4 9 11
-9 + 11 + 4 = 20 + 4 = 24
-sure
+The proposals for  is 
+ ['4 + 5 = 9 (left: 9 6 10)', '5 * 6 = 30 (left: 30 10)', '6 - 10 = -4 (left: 4 10)', '4 * 10 = 40 (left: 40 5)', '5 + 10 = 15 (left: 15 6)', '10 - 6 = 4 (left: 4 5)', '6 / 4 = 1.5 (left: 1.5 5 10)', '10 - 4 = 6 (left: 6 5 6)']
+getting value for 4 + 5 = 9 (left: 9 6 10)
 
-Input: 5 7 8
-5 + 7 + 8 = 12 + 8 = 20
-(8 - 5) * 7 = 3 * 7 = 21
-I cannot obtain 24 now, but numbers are within a reasonable range
-likely
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n9 + 6 + 10 = 25\n(10 - 9) * 6 = 1 * 6 = 6\n(10 - 9) * 6 + 9 = 6 + 9 = 15\n(10 - 9) * 6 + 9 + 6 = 15 + 6 = 21\n(6 - (10 - 9)) * 10 = 6 * 10 = 60\n(6 - (10 - 9)) * 10 + (10 - 9) = 60 + 1 = 61\n(6 - (10 - 9)) * 10 + (10 - 9) + 9 = 61 + 9 = 70\n(6 - (10 - 9)) * 10 + (10 - 9) + 9 + 6 = 70 + 6 = 76\n(10 - 9) * 6 + 9 + 6 + 10 = 21 + 10 = 31\n(6 - (10 - 9)) * 10 + (10 - 9) + 9 + 6 + 10 = 61 + 10 = 71\n(10 - 9) * 6 + 9 + 6 + 10 + 9 = 21 + 9 = 30\n(6 - (10 - 9)) * 10 + (10 - 9) + 9 + 6 + 10 + 9 = 61 + 9 = 70\n(10 - 9) * 6 + 9 + 6 + 10 + 9 + 6 = 21 + 6 = 27\n(6 - (10 - 9)) * 10 + (10 - 9) + 9 + 6 + 10 + 9 + 6 = 61 + 6 = 67\n(10 - 9) * 6 + 9 + 6 + 10 + 9 + 6 + 10 = 21 + 10 = 31\n(6 - (10 - 9)) * 10 + (10 - 9) + 9 + 6 + 10 + 9 + 6 + 10 = 61 + 10 = 71\n(10 - 9) * 6 + 9 + 6 + 10 + 9 + 6 + 10 + 9 = 21 + 9 = 30\n(6 - (10 - 9)) * 10 + (10 - 9) + 9 + 6 + 10 + 9 + 6 + 10 + 9 = 61 + 9 = 70\n(10 - 9) * 6 + 9 + 6 + 10 + 9 + 6 + 10 + 9 + 6 = 21 + 6 = 27\n(6 - (10 - 9)) * 10 + (10 - 9) + 9 + 6 + 10 + 9 + 6 + 10 + 9 + 6 = 61 + 6 = 67\n(10 - 9) * 6 + 9 + 6 + 10 + 9 + 6 + 10 + 9 + 6 + 10 = 21 + 10 = 31\n(6 - (10 - 9)) * 10 + (10 - 9) + 9 + 6 + 10 + 9 + 6 + 10 + 9 + 6 + 10 = 61 + 10 = 71\n(10 - 9) * 6 + 9 + 6 + 10 + 9 + 6 + 10 + 9 + 6 + 10 + 9 = 21 + 9 = 30\n(6 - (10 - 9)) * 10 + (10 - 9) + 9 + 6 + 10 + 9 + 6 + 10 + 9 + 6 + 10 + 9 = 61 + 9 = 70\nimpossible', '\n9 + 6 + 10 = 25\n9 * 10 - 6 = 84 - 6 = 78\n(10 - 6) * 9 = 4 * 9 = 36\n(6 - 9) * 10 = -3 * 10 = -30\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n9 + 6 + 10 = 25\n(9 - 6) * 10 = 3 * 10 = 30\n(9 + 6) * 10 = 15 * 10 = 150\n(10 - 6) * 9 = 4 * 9 = 36\n(10 - 9) * 6 = 1 * 6 = 6\n9 6 10 are all within a reasonable range\nlikely']
+The value is 2.001
+getting value for 5 * 6 = 30 (left: 30 10)
 
-Input: 5 6 6
-5 + 6 + 6 = 17
-(6 - 5) * 6 = 1 * 6 = 6
-I cannot obtain 24 now, but numbers are within a reasonable range
-likely
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n30 + 10 = 40\n10 * 30 = 300\n(10 - 30) * 30 = -20 * 30 = -600\nimpossible', '\n30 + 10 = 40\nimpossible', '\n30 10 = 40\n(10 - 30) * 10 = -20 * 10 = -200\n(30 + 10) * 10 = 40 * 10 = 400\n(10 + 30) * 10 = 40 * 10 = 400\n(10 - 30) * 10 = -20 * 10 = -200\n(30 - 10) * 10 = 20 * 10 = 200\nimpossible']
+The value is 0.003
+getting value for 6 - 10 = -4 (left: 4 10)
 
-Input: 10 10 11
-10 + 10 + 11 = 31
-(11 - 10) * 10 = 10
-10 10 10 are all too big
-impossible
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n4 10 = 14\n(10 - 4) = 6\n4 * 6 = 24\nsure', '\n4 10 = 14\n4 + 10 = 14\n(10 - 4) * 4 = 6 * 4 = 24\nsure', '\n4 + 10 = 14\nimpossible']
+The value is 40.001
+getting value for 4 * 10 = 40 (left: 40 5)
 
-Input: 1 3 3
-1 * 3 * 3 = 9
-(1 + 3) * 3 = 12
-1 3 3 are all too small
-impossible
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n40 - 5 = 35\n35 / 5 = 7\n7 * 5 = 35\n5 * 5 = 25\n(7 - 5) * 5 = 2 * 5 = 10\n(25 + 10) = 35\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n40 5 = 45\n(40 - 5) * 5 = 35 * 5 = 175\n(5 * 5) + 40 = 25 + 40 = 65\n(5 - 1) * (40 - 5) = 4 * 35 = 140\nimpossible', '\n40 * 5 = 200\nimpossible']
+The value is 1.002
+getting value for 5 + 10 = 15 (left: 15 6)
 
-TASK:
-Input: 5 9 9
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n15 + 6 = 21\n(15 - 6) * 6 = 9 * 6 = 54\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n15 + 6 = 21\n(6 - 1) * 15 = 5 * 15 = 75\n(6 - 2) * 15 = 4 * 15 = 60\n(6 - 3) * 15 = 3 * 15 = 45\n(6 - 4) * 15 = 2 * 15 = 30\n(6 - 5) * 15 = 1 * 15 = 15\n15 * 6 = 90\nimpossible', '\n15 + 6 = 21\n(15 - 6) * 6 = 9 * 6 = 54\n6 * 15 = 90\n(6 - 15) / 15 = -0.93\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 2.001
+getting value for 10 - 6 = 4 (left: 4 5)
 
-LLAMA output: 
-Let's try different combinations:
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n4 + 5 = 9\nimpossible', '\n4 + 5 = 9\nimpossible', '\n4 + 5 = 9\nimpossible']
+The value is 0.003
+getting value for 6 / 4 = 1.5 (left: 1.5 5 10)
 
-5 + 9 + 9 = 23
-9 + 9 + 5 = 23
-9 + 5 + 9 = 23
-9 * 5 + 9 = 54 + 9 = 63
-9 * 9 - 5 = 81 - 5 = 76
-5 * 9 - 9 = 45 - 9 = 36
-9 * 9 / 5 = 81 / 5 = 16.2
-5 * 9 + 9 = 45 + 9 = 54
-9 * 9 + 5 = 81 + 5 = 86
-9 * 5 + 9 = 45 + 9 = 54
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n1.5 + 5 + 10 = 16.5\n(10 - 5) * 1.5 = 5 * 1.5 = 7.5\n(5 - 1.5) * 10 = 3.5 * 10 = 35\n(10 - 1.5) * 5 = 8.5 * 5 = 42.5\n(5 - 1.5) * 10 = 3.5 * 10 = 35\n(10 - 1.5) * 5 = 8.5 * 5 = 42.5\n(10 - 5) * 1.5 = 5 * 1.5 = 7.5\n(5 - 1.5) * 10 = 3.5 * 10 = 35\n10 * 5 * 1.5 = 75\nimpossible', '\n1.5 * 5 = 7.5\n7.5 * 10 = 75\n(10 - 5) * 1.5 = 5 * 1.5 = 7.5\n(5 - 1.5) * 10 = 3.5 * 10 = 35\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n1.5 + 5 + 10 = 16.5\n(5 - 1.5) * 10 = 36\n(10 - 5) * 1.5 = 7.5\n(10 - 5) * (5 - 1.5) = 7.5 * 3.5 = 26.25\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 2.001
+getting value for 10 - 4 = 6 (left: 6 5 6)
 
-It seems I cannot reach 24 with the given numbers.
-likely
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n6 + 5 + 6 = 17\n(6 - 5) * 6 = 1 * 6 = 6\n(6 - 5) * 6 + 5 = 6 + 5 = 11\n(6 - 5) * 6 + 5 + 6 = 11 + 6 = 17\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n6 * 5 = 30\n(6 - 5) * 6 = 1 * 6 = 6\n6 * 6 = 36\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n6 + 5 + 6 = 17\n(6 - 5) * 6 = 1 * 6 = 6\n(6 - 5) * 6 + 5 = 1 * 6 + 5 = 11\n(5 + 1) + 6 = 6 + 6 = 12\n(5 + 1) * 6 = 6 * 6 = 36\n36 - 12 = 24\nsure']
+The value is 22.0
+-- new step of 0
 
-LLAMA output: 
-Let's evaluate the possibilities:
+-- new_ys --: [('4 + 5 = 9 (left: 9 6 10)\n', 0, '4 + 5 = 9 (left: 9 6 10)'), ('5 * 6 = 30 (left: 30 10)\n', 0, '5 * 6 = 30 (left: 30 10)'), ('6 - 10 = -4 (left: 4 10)\n', 0, '6 - 10 = -4 (left: 4 10)'), ('4 * 10 = 40 (left: 40 5)\n', 0, '4 * 10 = 40 (left: 40 5)'), ('5 + 10 = 15 (left: 15 6)\n', 0, '5 + 10 = 15 (left: 15 6)'), ('10 - 6 = 4 (left: 4 5)\n', 0, '10 - 6 = 4 (left: 4 5)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n', 0, '6 / 4 = 1.5 (left: 1.5 5 10)'), ('10 - 4 = 6 (left: 6 5 6)\n', 0, '10 - 4 = 6 (left: 6 5 6)')]
+-- values -- [2.001, 0.003, 40.001, 1.002, 2.001, 0.003, 2.001, 22.0]
+-- sorted_new_ys --: (('6 - 10 = -4 (left: 4 10)\n', 0, '6 - 10 = -4 (left: 4 10)'), ('10 - 4 = 6 (left: 6 5 6)\n', 0, '10 - 4 = 6 (left: 6 5 6)'), ('4 + 5 = 9 (left: 9 6 10)\n', 0, '4 + 5 = 9 (left: 9 6 10)'), ('5 + 10 = 15 (left: 15 6)\n', 0, '5 + 10 = 15 (left: 15 6)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n', 0, '6 / 4 = 1.5 (left: 1.5 5 10)'), ('4 * 10 = 40 (left: 40 5)\n', 0, '4 * 10 = 40 (left: 40 5)'), ('5 * 6 = 30 (left: 30 10)\n', 0, '5 * 6 = 30 (left: 30 10)'), ('10 - 6 = 4 (left: 4 5)\n', 0, '10 - 6 = 4 (left: 4 5)'))
+-- sol values --: (40.001, 22.0, 2.001, 2.001, 2.001, 1.002, 0.003, 0.003)
+-- choices --: [('6 - 10 = -4 (left: 4 10)\n', 0, '6 - 10 = -4 (left: 4 10)'), ('10 - 4 = 6 (left: 6 5 6)\n', 0, '10 - 4 = 6 (left: 6 5 6)'), ('4 + 5 = 9 (left: 9 6 10)\n', 0, '4 + 5 = 9 (left: 9 6 10)'), ('5 + 10 = 15 (left: 15 6)\n', 0, '5 + 10 = 15 (left: 15 6)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n', 0, '6 / 4 = 1.5 (left: 1.5 5 10)')]
 
-5 + 9 + 9 = 23
-9 + 9 - 5 = 13
-9 * 9 - 5 = 74 - 5 = 69
-9 / 5 + 9 = 1.8 + 9 = 10.8
-5 + 9 - 9 = 5
-9 + 9 - 5 = 13
-5 * 9 = 45
-5 * 9 + 9 = 45 + 9 = 54
-5 + 9 + 9 = 23
-9 * 9 - 5 = 74 - 5 = 69
-(9 - 5) * 9 = 4 * 9 = 36
-(5 + 9) * 9 = 14 * 9 = 126
-I cannot obtain 24 with the given numbers
-likely
+Start reasoning with step 1
 
-LLAMA output: 
-5 + 9 + 9 = 23
-(9 - 5) * 9 = 4 * 9 = 36
-(9 - 9) * 5 = 0 * 5 = 0
-(9 + 5) - 9 = 14 - 9 = 5
-(9 + 5) / 9 = 14 / 9 = 1.55
-(5 + 9) * 9 = 14 * 9 = 126
-(9 - 5) / 9 = 4 / 9 = 0.44
-(9 - 5) * 9 = 4 * 9 = 36
-(5 + 9) - 9 = 14 - 9 = 5
-I tried many combinations, but I couldn't reach 24.
-likely
+number of prev level5
+Getting proposals from index 0 with y = 6 - 10 = -4 (left: 4 10)
 
-LLAMA output: 
-Let's try to evaluate if these numbers can reach 24 with basic arithmetic operations (+ - * /).
+Current number is: 4 10
 
-First, let's add the numbers:
-5 + 9 + 9 = 23
+The proposals for 6 - 10 = -4 (left: 4 10)
+ is 
+ ['4 + 10 = 14 (left: 14)', '10 - 4 = 6 (left: 6)', '4 * 10 = 40 (left: 40)', '10 / 4 = 2.5 (left: 2.5)', '4 - 10 = -6 (left: -6)', '10 / 4 = 2.5 (left: 2.5)', '10 + 4 = 14 (left: 14)', '4 / 10 = 0.4 (left: 0.4)']
+Getting proposals from index 1 with y = 10 - 4 = 6 (left: 6 5 6)
 
-Since we can't get 24 by adding them, let's try multiplying and dividing:
-(9 - 5) * 9 = 4 * 9 = 36
-(9 - 5) / 9 = 4/9 = 0.44
-5 * 9 * 9 = 405
-5 / 9 * 9 = 5/9 * 9 = 5
+Current number is: 6 5 6
 
-It's clear that the numbers are not too small or too big, so let's try some other combinations:
-9 + 5 = 14
-9 + 9 = 18
-9 - 5 = 4
-9 - 9 = 0
-5 + 9 = 14
-5 - 9 = -4
-5 * 9 = 45
-5 / 9 = 0.56
+The proposals for 10 - 4 = 6 (left: 6 5 6)
+ is 
+ ['6 + 5 = 11 (left: 11 6)', '6 * 5 = 30 (left: 30 6)', '6 - 5 = 1 (left: 1 6)', '5 - 6 = -1 (left: -1 6)', '6 / 5 = 1.2 (left: 1.2 6)', '5 / 6 = 0.83 (left: 0.83 6)', '6 + 6 = 12 (left: 12 5)', '5 + 6 = 11 (left: 11 6)']
+Getting proposals from index 2 with y = 4 + 5 = 9 (left: 9 6 10)
 
-Now, let's try combining these results:
-(9 - 5) * 9 = 36 (too big)
-(9 - 5) + 9 = 13 (not 24)
-(9 - 5) + 5 = 9 (not 24)
-(9 - 5) * 5 = 20 (not 24)
-(9 - 5) / 9 * 9 = 0.44 * 9 = 3.96 (not 24)
+Current number is: 9 6 10
 
-At this point, it's clear that we can't get 24 by combining these numbers in a reasonable way. However, we still have some possibilities left:
-(5 * 9) + 9 = 45 + 9 = 54 (too big)
-(5 * 9) - 9 = 45 - 9 = 36 (too big)
-(5 * 9) * 9 = 405 * 9 = 3645 (too big)
+The proposals for 4 + 5 = 9 (left: 9 6 10)
+ is 
+ ['9 + 6 = 15 (left: 15 10)', '9 * 6 = 54 (left: 54 10)', '9 / 6 = 1.5 (left: 1.5 10)', '6 + 9 = 15 (left: 15 10)', '10 - 6 = 4 (left: 9 4)', '6 + 10 = 16 (left: 9 16)', '10 - 9 = 1 (left: 6 1)', '9 - 6 = 3 (left: 3 10)']
+Getting proposals from index 3 with y = 5 + 10 = 15 (left: 15 6)
 
-Since none of these combinations work, and we've exhausted all reasonable possibilities, I would say:
+Current number is: 15 6
 
-impossible
+The proposals for 5 + 10 = 15 (left: 15 6)
+ is 
+ ['1. 15 + 6 = 21 (left: 21)', '2. 6 - 15 = -9 (left: -9)', '3. 15 * 6 = 90 (left: 90)', '4. 15 / 6 = 2.5 (left: 2.5)', '5. 6 + 15 = 21 (left: 21)', '6. 15 - 6 = 9 (left: 9)', '7. 6 * 15 = 90 (left: 90)', '8. 15 / 2 = 7.5, then 7.5 + 6 = 13.5 (left: 13.5)']
+Getting proposals from index 4 with y = 6 / 4 = 1.5 (left: 1.5 5 10)
 
-LLAMA output: 
-Let's try to reach 24 using basic arithmetic operations (+ - * /) with the given numbers 5, 9, and 9.
+Current number is: 1.5 5 10
 
-Here are some possible combinations:
+The proposals for 6 / 4 = 1.5 (left: 1.5 5 10)
+ is 
+ ['1.5 + 5 = 6.5 (left: 6.5 10)', '5 * 1.5 = 7.5 (left: 7.5 10)', '10 - 1.5 = 8.5 (left: 8.5 5)', '5 - 1.5 = 3.5 (left: 3.5 10)', '10 / 1.5 = 6.67 (left: 6.67 5)', '5 + 1.5 = 6.5 (left: 6.5 10)', '10 * 1.5 = 15 (left: 15 5)', '1.5 + 10 = 11.5 (left: 11.5 5)']
+getting value for 6 - 10 = -4 (left: 4 10)
+4 + 10 = 14 (left: 14)
 
-5 + 9 + 9 = 23 (not 24)
-(9 - 5) * 9 = 4 * 9 = 36 (too big)
-(9 - 9) * 5 = 0 * 5 = 0 (not 24)
-9 * 9 = 81 (too big)
-9 / 5 = 1.8 (not an integer)
-5 + 9 = 14
-9 + 9 = 18
-14 + 18 = 32 (too big)
-However, we can try some other combinations:
-(5 + 9) * 9 = 14 * 9 = 126 (too big)
-5 * 9 = 45
-9 * 9 = 81 (too big)
-45 + 9 = 54 (too big)
-However, we can try some other combinations:
-(5 * 9) - 9 = 45 - 9 = 36 (too big)
-5 * (9 - 9) = 5 * 0 = 0 (not 24)
-5 * (9 - 9) = 5 * 0 = 0 (not 24)
-However, we can try some other combinations:
-9 - 5 = 4
-9 - 5 = 4
-4 * 9 = 36 (too big)
-However, we can try some other combinations:
-(5 * 9) + 9 - 9 = 45 + 9 - 9 = 45 (too big)
-5 + 9 - 9 = 5 (too small)
-However, we can try some other combinations:
-9 - 5 = 4
-9 - 5 = 4
-4 * 9 = 36 (too big)
-However, we can try some other combinations:
-5 * 9 = 45
-9 * 9 = 81 (too big)
-However, we can try some other combinations:
-(5 + 9) * (9 - 9) = 14 * 0 = 0 (not 24)
-However, we can try some other combinations:
-9 * 9 = 81 (too big)
-However, we can try some other combinations:
-9 - 5 = 4
-5 + 4 = 9
-9 * 9 = 81 (too big)
-However, we can try some other combinations:
-5 + 9 = 14
-14 + 9 = 23 (not 24)
-However, we can try some other combinations:
-5 * 9 = 45
-9 * 9 = 81 (too big)
-However, we can try some other combinations:
-9 - 5 = 4
-9 - 5 = 4
-4 * 9 = 36 (too big)
-However, we can try some other combinations:
-(5 + 9) - 9 = 14 - 9 = 5
-5 + 9 = 14
-14 + 9 = 23 (not 24)
-However, we can try some other combinations:
-5 * (9 - 9) = 5 * 0 = 0 (not 24)
-However, we can try some other combinations:
-9 * 9 = 81 (too big)
-However, we can try some other combinations:
-9 - 5 = 4
-9 - 5 = 4
-4 + 4 = 8
-8 + 9 + 9 = 26 (too big)
-However, we can try some other combinations:
-(9 - 5) * 9 = 4 * 9 = 36 (too big)
-However, we can try some other combinations:
-9 * 9 = 81 (too big)
-However, we can try some other combinations:
-9 - 5 = 4
-9 - 5 = 4
-4 + 9 = 13
-13 + 9 = 22 (not 24)
-However, we can try some other combinations:
-5 + 9 = 14
-14 + 9 = 23 (not 24)
-However, we can try some other combinations:
-5 * 9 = 45
-9 * 9 = 81 (too big)
-However, we can try some other combinations:
-9 - 5 = 4
-9 - 5 = 4
-4 * 9 = 36 (too big)
-However, we can try some other combinations:
-(5 * 9) + 9 = 45 + 9 = 54 (too big)
-However, we can try some other combinations:
-(9 - 5
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n14 + 0 = 14\nimpossible', '\n14 1 = 15\n14 - 1 = 13\n14 * 1 = 14\n14 / 1 = 14\nimpossible', '\n14 + 0 = 14\n14 0 0 are all too small\nimpossible']
+The value is 0.003
+getting value for 6 - 10 = -4 (left: 4 10)
+10 - 4 = 6 (left: 6)
 
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n6  = 6        (remaining: 18)   # optional\nimpossible', '\n6  = 6\n6 + 6 = 12\n6 * 6 = 36\n6 / 6 = 1\nimpossible', '\n6 * 4 = 24\nsure']
+The value is 20.002
+getting value for 6 - 10 = -4 (left: 4 10)
+4 * 10 = 40 (left: 40)
+
+Number of value needed is 3, this time we have 2 valid output
+Number of value needed is 1, this time we have 1 valid output
+The valid outputs are ['\n40 1 = 41        (remaining: 1)   # optional\nimpossible', '\n40 cannot be obtained using basic arithmetic operations (+ - * /) with a single number\nimpossible', '\n40 + 0 = 40\n40 - 0 = 40\n40 * 0 = 0\n40 / 0 = impossible\nimpossible']
+The value is 0.004
+getting value for 6 - 10 = -4 (left: 4 10)
+10 / 4 = 2.5 (left: 2.5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n2.5 * 1 = 2.5\n(2.5 * 1) * 1 = 2.5 * 1 = 2.5\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n2.5 * 2.5 = 6.25\n2.5 + 2.5 = 5\n2.5 / 2.5 = 1\n2.5 * 2.5 = 6.25\n2.5 / 2.5 = 1\n2.5 * 2.5 = 6.25\nimpossible', '\n2.5 + 2.5 = 5\n2.5 * 2.5 = 6.25\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 2.001
+getting value for 6 - 10 = -4 (left: 4 10)
+4 - 10 = -6 (left: -6)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n-6  = -6        (remaining: 18)   # optional\nimpossible', '\n-6  = -6        (remaining: …)   # optional\nimpossible', '\n-6 + 0 = 0\n-6 - 0 = -6\n-6 * 0 = 0\n-6 / 0 = impossible\nimpossible']
+The value is 0.004
+getting value for 6 - 10 = -4 (left: 4 10)
+10 + 4 = 14 (left: 14)
+
+getting value for 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n0.4 + 0.4 = 0.8\n0.4 * 6 = 2.4\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n0.4 * 60 = 24\nsure', '\n0.4  + 0.4 = 0.8\n0.8  + 0.8 = 1.6\n1.6  + 1.6 = 3.2\n3.2  + 3.2 = 6.4\n6.4  + 6.4 = 12.8\n12.8  + 6.4 = 19.2\n12.8  + 12.8 = 25.6\nimpossible']
+The value is 21.001
+getting value for 10 - 4 = 6 (left: 6 5 6)
+6 + 5 = 11 (left: 11 6)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n11 + 6 = 17\n(11 - 6) * 6 = 5 * 6 = 30\n11 * 6 = 66\n(6 - 11) / 11 = -0.55\nimpossible', '\n11 + 6 = 17\n(11 - 6) * 6 = 5 * 6 = 30\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n11 6 = 66\nimpossible']
+The value is 1.002
+getting value for 10 - 4 = 6 (left: 6 5 6)
+6 * 5 = 30 (left: 30 6)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n30 + 6 = 36\n(6 - 30) * 6 = -24 * 6 = -144\n(30 - 6) * 6 = 24 * 6 = 144\nimpossible', '\n30 + 6 = 36\n(6 * 30) / 6 = 30\n(6 / 30) * 30 = 6\n(30 - 6) * 6 = 24\nsure', '\n30 + 6 = 36\n(6 - 30) * 6 = -24 * 6 = -144\n(30 / 6) * 6 = 5 * 6 = 30\n30 6 are not too big or too small\nlikely']
+The value is 21.001
+getting value for 10 - 4 = 6 (left: 6 5 6)
+6 - 5 = 1 (left: 1 6)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n1 + 6 = 7\nimpossible', '\n1 + 6 = 7\nimpossible', '\n1 + 6 = 7\nimpossible']
+The value is 0.003
+getting value for 10 - 4 = 6 (left: 6 5 6)
+5 - 6 = -1 (left: -1 6)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n-1 + 6 = 5\n-1 * 6 = -6\n-1 - 6 = -7\n-1 / 6 = -0.16\nimpossible', '\n-1 6 = -5\n6 - (-1) = 7\n(-1 + 6) * 6 = 5 * 6 = 30\n-1 6 = -7\n6 - (-1) = 7\n(-1 - 6) = -7\n(-1 - 6) * 6 = -42\n-1 6 = -1\n6 - (-1) = 7\n-1 * 6 = -6\n-1 6 = -6\n6 - (-1) = 7\nimpossible', '\n-1 + 6 = 5\nimpossible']
+The value is 0.003
+getting value for 10 - 4 = 6 (left: 6 5 6)
+6 / 5 = 1.2 (left: 1.2 6)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n1.2 + 6 = 7.2\nimpossible', '\n1.2 * 6 = 7.2\n(6 - 1.2) * 1.2 = 4.8 * 1.2 = 5.76\n1.2 + 6 = 7.2\n(1.2 + 6) * 1.2 = 7.2 * 1.2 = 8.64\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n1.2 + 6 = 7.2\n(6 - 1.2) * 1.2 = 4.8 * 1.2 = 5.76\n(6 - 1.2) * (6 - 1.2) = 4.8 * 4.8 = 23.04\n(6 - 1.2) * (6 - 1.2) * 1.2 = 23.04 * 1.2 = 27.648\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 2.001
+getting value for 10 - 4 = 6 (left: 6 5 6)
+5 / 6 = 0.83 (left: 0.83 6)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n0.83 + 6 = 6.83\n(6 - 0.83) * 0.83 = 5.17 * 0.83 = 4.27\n(6 - 0.83) * 0.83 = 5.17 * 0.83 = 4.27\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n0.83 * 6 = 5.0\n0.83 + 6 = 6.83\n6 * 0.83 = 5.0\n6 - 0.83 = 5.17\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n0.83 * 6 = 4.98\n(6 - 0.83) * 0.83 = 5.17 * 0.83 = 4.3\n(0.83 + 6) * 0.83 = 6.83 * 0.83 = 5.66\n(6 / 0.83) + 0.83 = 7.24 + 0.83 = 8.07\nimpossible']
+The value is 2.001
+getting value for 10 - 4 = 6 (left: 6 5 6)
+6 + 6 = 12 (left: 12 5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n12 + 5 = 17\n(5 - 12) * 5 = -7 * 5 = -35\n12 * 5 = 60\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n12 + 5 = 17\n5 * 12 = 60\nimpossible', '\n12 + 5 = 17\n12 * 5 = 60\n(5 - 12) * 12 = -7 * 12 = -84\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 2.001
+getting value for 10 - 4 = 6 (left: 6 5 6)
+5 + 6 = 11 (left: 11 6)
+
+getting value for 4 + 5 = 9 (left: 9 6 10)
+9 + 6 = 15 (left: 15 10)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n15 + 10 = 25\nimpossible', '\n15 + 10 = 25\nimpossible', '\n15 + 10 = 25\nimpossible']
+The value is 0.003
+getting value for 4 + 5 = 9 (left: 9 6 10)
+9 * 6 = 54 (left: 54 10)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n54 + 10 = 64\n(54 - 10) * 10 = 440\n(10 - 54) * 10 = -440\n54 * 10 = 540\n54 / 10 = 5.4\nimpossible', '\n54 10 = 64\n(54 - 10) * 10 = 440 * 10 / 10 = 44\n44 + 10 = 54\n54 + 10 = 64\nimpossible', '\n54 10 = 64\n64 - 40 = 24\nsure']
+The value is 20.002
+getting value for 4 + 5 = 9 (left: 9 6 10)
+9 / 6 = 1.5 (left: 1.5 10)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n1.5 * 10 = 15\n(10 - 1.5) * 1.5 = 8.5 * 1.5 = 12.75\n(10 - 1.5) * (1.5 + 1.5) = 8.5 * 3 = 25.5\n(10 - 1.5) * (10 + 1.5) = 8.5 * 11.5 = 97.75\n(10 - 1.5) * 10 + 1.5 = 8.5 * 10 + 1.5 = 85 + 1.5 = 86.5\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n1.5 + 10 = 11.5\n10 - 1.5 = 8.5\n(1.5 * 10) / 10 = 1.5\n1.5 10 are not suitable\nimpossible', '\n1.5 + 10 = 11.5\nimpossible']
+The value is 1.002
+getting value for 4 + 5 = 9 (left: 9 6 10)
+6 + 9 = 15 (left: 15 10)
+
+getting value for 4 + 5 = 9 (left: 9 6 10)
+10 - 6 = 4 (left: 9 4)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n9 + 4 = 13\n9 * 4 = 36\n(4 - 9) * 9 = -5 * 9 = -45\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n9 * 4 = 36\n9 / 4 = 2.25\n4 * 6 = 24\n9 4\n9 - 4 = 5\n9 + 4 = 13\nimpossible', '\n9 + 4 = 13\n9 - 4 = 5\n9 * 4 = 36\n9 / 4 = 2.25\nimpossible']
+The value is 1.002
+getting value for 4 + 5 = 9 (left: 9 6 10)
+6 + 10 = 16 (left: 9 16)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n9 + 16 = 25\n(16 - 9) * 9 = 7 * 9 = 63\n16 / 9 = 1.78\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n9 + 16 = 25\n16 - 9 = 7\n9 * 16 = 144\n9 / 16 = 0.5625\nimpossible', '\n9 + 16 = 25\n(16 - 9) * 9 = 7 * 9 = 63\n9 16 are both too big\nimpossible']
+The value is 1.002
+getting value for 4 + 5 = 9 (left: 9 6 10)
+10 - 9 = 1 (left: 6 1)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n6 + 1 = 7\nimpossible', '\n6 + 1 = 7\n(6 - 1) * 1 = 5 * 1 = 5\n6 1 are all too small\nimpossible', '\n6 + 1 = 7\nimpossible']
+The value is 0.003
+getting value for 4 + 5 = 9 (left: 9 6 10)
+9 - 6 = 3 (left: 3 10)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n3 * 10 = 30\n3 + 10 = 13\nimpossible', '\n3 + 10 = 13\nimpossible', '\n3 + 10 = 13\n10 - 3 = 7\n3 * 10 = 30\n3 / 10 = 0.3\nimpossible']
+The value is 0.003
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n21 21 = 42        (remaining: 42 - 18 = 24)   # optional\n21 21 = 42\n42 - 18 = 24\nsure', '\n21 21 = 42\n21 / 21 = 1\nimpossible', '\n21 + 1 = 22\n22 + 2 = 24\nsure']
+The value is 40.001
+getting value for 5 + 10 = 15 (left: 15 6)
+2. 6 - 15 = -9 (left: -9)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n-9  + 9 = 0\n-9 * -9 = 81\n-9 / -9 = 1\nimpossible', '\n-9  = -9        (remaining: …)   # optional\nimpossible', '\n-9  = -9        (remaining: 35)   # optional\nimpossible']
+The value is 0.003
+getting value for 5 + 10 = 15 (left: 15 6)
+3. 15 * 6 = 90 (left: 90)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n90 + 90 = 180\n90 * 90 = 8100\n90 / 90 = 1\n90 - 90 = 0\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n90 9 = 81\n81 3 = 78\n78 9 = 69\n69 5 = 64\n64 10 = 54\n54 7 = 47\n47 8 = 39\n39 6 = 33\n33 9 = 24\nsure', '\n90 + 90 = 180\n90 * 90 = 8100\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 22.0
+getting value for 5 + 10 = 15 (left: 15 6)
+4. 15 / 6 = 2.5 (left: 2.5)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+6. 15 - 6 = 9 (left: 9)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n9 9 = 81\n81 / 9 = 9\n9 9 = 81\n81 / 9 = 9\n9 / 9 = 1\nimpossible', '\n9 9 = 81\n81 / 9 = 9\n9 9 = 81\n81 / 9 = 9\nimpossible', '\n9 + 9 = 18\n9 * 3 = 27\n9 * 2.67 = 24\n9 2.67 = 2.67\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 1.002
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+8. 15 / 2 = 7.5, then 7.5 + 6 = 13.5 (left: 13.5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n13.5 * 1.8 = 24.3\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n13.5 * 1.8 = 24.3\n(1.8 - 1) * 13.5 = 0.8 * 13.5 = 10.8\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n13.5 + 0 = 13.5\nimpossible']
+The value is 2.001
+getting value for 6 / 4 = 1.5 (left: 1.5 5 10)
+1.5 + 5 = 6.5 (left: 6.5 10)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n6.5 + 10 = 16.5\n10 - 6.5 = 3.5\n6.5 * 10 = 65\n6.5 / 10 = 0.65\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n6.5 + 10 = 16.5\n10 - 6.5 = 3.5\n6.5 * 10 = 65\n6.5 / 10 = 0.65\n10 / 6.5 = 1.54\n6.5 + (10 - 6.5) = 6.5 + 3.5 = 10\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n6.5 + 10 = 16.5\n10 - 6.5 = 3.5\n6.5 * 10 = 65\n6.5 / 10 = 0.65\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 3.0
+getting value for 6 / 4 = 1.5 (left: 1.5 5 10)
+5 * 1.5 = 7.5 (left: 7.5 10)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n7.5 + 10 = 17.5\n(10 - 7.5) * 7.5 = 2.5 * 7.5 = 18.75\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n7.5 * 10 = 75\n75 / 3 = 25\n10 - 7.5 = 2.5\n25 + 2.5 = 27.5\nimpossible', '\n7.5 * 10 = 75\n10 - 7.5 = 2.5\n2.5 * 10 = 25\n10 + 2.5 = 12.5\n7.5 10 are within a reasonable range, but I cannot reach 24 with the given operations\nlikely']
+The value is 2.001
+getting value for 6 / 4 = 1.5 (left: 1.5 5 10)
+10 - 1.5 = 8.5 (left: 8.5 5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n8.5 + 5 = 13.5\n(5 - 8.5) * 8.5 = -3.5 * 8.5 = -29.75\n8.5 * 5 = 42.5\n5 / 8.5 = 0.588\n(8.5 + 5) / 5 = 13.5 / 5 = 2.7\n8.5 * (5 + 1) = 8.5 * 6 = 51\n8.5 5 are all too small or too big\nimpossible', '\n8.5 + 5 = 13.5\n(5 - 8.5) * -8.5 = -3.5 * -8.5 = 29.75\n8.5 5 are not within a reasonable range\nimpossible', '\n8.5 + 5 = 13.5\n(5 - 8.5) * 8.5 = -3.5 * 8.5 = -29.75\n8.5 * 5 = 42.5\n8.5 / 5 = 1.7\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 1.002
+getting value for 6 / 4 = 1.5 (left: 1.5 5 10)
+5 - 1.5 = 3.5 (left: 3.5 10)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n3.5 * 10 = 35.0\n10 - 3.5 = 6.5\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n3.5 * 10 = 35.0\n10 / 3.5 = 2.857\n(10 - 3.5) * 3.5 = 6.5 * 3.5 = 22.75\n(10 - 3.5) * 10 = 6.5 * 10 = 65\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n3.5 * 10 = 35.0\n10 - 3.5 = 6.5\n3.5 * 6.5 = 22.75\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 3.0
+getting value for 6 / 4 = 1.5 (left: 1.5 5 10)
+10 / 1.5 = 6.67 (left: 6.67 5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n6.67 + 5 = 11.67\n6.67 * 5 = 33.35\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n6.67 + 5 = 11.67\n5 - 6.67 = -1.67\n6.67 * 5 = 33.35\n6.67 / 5 = 1.33\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n6.67 + 5 = 11.67\n5 - 6.67 = -1.67\n6.67 * 5 = 33.35\n6.67 / 5 = 1.334\n6.67 + 5 = 11.67\n(11.67 - 6.67) * 5 = 5 * 5 = 25\n5 + 6.67 = 11.67\n6.67 - 5 = 1.67\n1.67 + 5 = 6.67\n1.67 * 5 = 8.35\nimpossible']
+The value is 2.001
+getting value for 6 / 4 = 1.5 (left: 1.5 5 10)
+5 + 1.5 = 6.5 (left: 6.5 10)
+
+getting value for 6 / 4 = 1.5 (left: 1.5 5 10)
+10 * 1.5 = 15 (left: 15 5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n15 + 5 = 20\n5 * 15 = 75\n15 / 5 = 3\nimpossible', '\n15 + 5 = 20\n(5 - 1) * 15 = 4 * 15 = 60\n(5 - 2) * (5 + 2) * (15 - 5) = 3 * 7 * 10 = 210\n15 5 are too big to reach 24\nimpossible', '\n15 + 5 = 20\n15 * 5 = 75\n(5 - 15) * 15 = -10 * 15 = -150\n(15 - 5) * 5 = 10 * 5 = 50\n(15 + 5) * 15 = 20 * 15 = 300\n(15 * 5) / 15 = 75 / 15 = 5\nimpossible']
+The value is 0.003
+getting value for 6 / 4 = 1.5 (left: 1.5 5 10)
+1.5 + 10 = 11.5 (left: 11.5 5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n11.5 + 5 = 16.5\n11.5 * 5 = 57.5\n5 / 11.5 = 0.43\n11.5 - 5 = 6.5\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n11.5 + 5 = 16.5\n(5 - 1.5) * 11.5 = 3.5 * 11.5 = 40.25\n(5 - 11.5) * 11.5 = -6.5 * 11.5 = -75\n11.5 * 5 = 57.5\n11.5 / 5 = 2.3\nimpossible', '\n11.5 + 5 = 16.5\n(11.5 - 5) * 5 = 6.5 * 5 = 32.5\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 2.001
+-- new step of 1
+
+-- new_ys --: [('6 - 10 = -4 (left: 4 10)\n4 + 10 = 14 (left: 14)\n', 0, '4 + 10 = 14 (left: 14)'), ('6 - 10 = -4 (left: 4 10)\n10 - 4 = 6 (left: 6)\n', 0, '10 - 4 = 6 (left: 6)'), ('6 - 10 = -4 (left: 4 10)\n4 * 10 = 40 (left: 40)\n', 0, '4 * 10 = 40 (left: 40)'), ('6 - 10 = -4 (left: 4 10)\n10 / 4 = 2.5 (left: 2.5)\n', 0, '10 / 4 = 2.5 (left: 2.5)'), ('6 - 10 = -4 (left: 4 10)\n4 - 10 = -6 (left: -6)\n', 0, '4 - 10 = -6 (left: -6)'), ('6 - 10 = -4 (left: 4 10)\n10 / 4 = 2.5 (left: 2.5)\n', 0, '10 / 4 = 2.5 (left: 2.5)'), ('6 - 10 = -4 (left: 4 10)\n10 + 4 = 14 (left: 14)\n', 0, '10 + 4 = 14 (left: 14)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n', 0, '4 / 10 = 0.4 (left: 0.4)'), ('10 - 4 = 6 (left: 6 5 6)\n6 + 5 = 11 (left: 11 6)\n', 1, '6 + 5 = 11 (left: 11 6)'), ('10 - 4 = 6 (left: 6 5 6)\n6 * 5 = 30 (left: 30 6)\n', 1, '6 * 5 = 30 (left: 30 6)'), ('10 - 4 = 6 (left: 6 5 6)\n6 - 5 = 1 (left: 1 6)\n', 1, '6 - 5 = 1 (left: 1 6)'), ('10 - 4 = 6 (left: 6 5 6)\n5 - 6 = -1 (left: -1 6)\n', 1, '5 - 6 = -1 (left: -1 6)'), ('10 - 4 = 6 (left: 6 5 6)\n6 / 5 = 1.2 (left: 1.2 6)\n', 1, '6 / 5 = 1.2 (left: 1.2 6)'), ('10 - 4 = 6 (left: 6 5 6)\n5 / 6 = 0.83 (left: 0.83 6)\n', 1, '5 / 6 = 0.83 (left: 0.83 6)'), ('10 - 4 = 6 (left: 6 5 6)\n6 + 6 = 12 (left: 12 5)\n', 1, '6 + 6 = 12 (left: 12 5)'), ('10 - 4 = 6 (left: 6 5 6)\n5 + 6 = 11 (left: 11 6)\n', 1, '5 + 6 = 11 (left: 11 6)'), ('4 + 5 = 9 (left: 9 6 10)\n9 + 6 = 15 (left: 15 10)\n', 2, '9 + 6 = 15 (left: 15 10)'), ('4 + 5 = 9 (left: 9 6 10)\n9 * 6 = 54 (left: 54 10)\n', 2, '9 * 6 = 54 (left: 54 10)'), ('4 + 5 = 9 (left: 9 6 10)\n9 / 6 = 1.5 (left: 1.5 10)\n', 2, '9 / 6 = 1.5 (left: 1.5 10)'), ('4 + 5 = 9 (left: 9 6 10)\n6 + 9 = 15 (left: 15 10)\n', 2, '6 + 9 = 15 (left: 15 10)'), ('4 + 5 = 9 (left: 9 6 10)\n10 - 6 = 4 (left: 9 4)\n', 2, '10 - 6 = 4 (left: 9 4)'), ('4 + 5 = 9 (left: 9 6 10)\n6 + 10 = 16 (left: 9 16)\n', 2, '6 + 10 = 16 (left: 9 16)'), ('4 + 5 = 9 (left: 9 6 10)\n10 - 9 = 1 (left: 6 1)\n', 2, '10 - 9 = 1 (left: 6 1)'), ('4 + 5 = 9 (left: 9 6 10)\n9 - 6 = 3 (left: 3 10)\n', 2, '9 - 6 = 3 (left: 3 10)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n', 3, '1. 15 + 6 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n2. 6 - 15 = -9 (left: -9)\n', 3, '2. 6 - 15 = -9 (left: -9)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n', 3, '3. 15 * 6 = 90 (left: 90)'), ('5 + 10 = 15 (left: 15 6)\n4. 15 / 6 = 2.5 (left: 2.5)\n', 3, '4. 15 / 6 = 2.5 (left: 2.5)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n', 3, '5. 6 + 15 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n6. 15 - 6 = 9 (left: 9)\n', 3, '6. 15 - 6 = 9 (left: 9)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n', 3, '7. 6 * 15 = 90 (left: 90)'), ('5 + 10 = 15 (left: 15 6)\n8. 15 / 2 = 7.5, then 7.5 + 6 = 13.5 (left: 13.5)\n', 3, '8. 15 / 2 = 7.5, then 7.5 + 6 = 13.5 (left: 13.5)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n1.5 + 5 = 6.5 (left: 6.5 10)\n', 4, '1.5 + 5 = 6.5 (left: 6.5 10)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n5 * 1.5 = 7.5 (left: 7.5 10)\n', 4, '5 * 1.5 = 7.5 (left: 7.5 10)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n10 - 1.5 = 8.5 (left: 8.5 5)\n', 4, '10 - 1.5 = 8.5 (left: 8.5 5)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n5 - 1.5 = 3.5 (left: 3.5 10)\n', 4, '5 - 1.5 = 3.5 (left: 3.5 10)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n10 / 1.5 = 6.67 (left: 6.67 5)\n', 4, '10 / 1.5 = 6.67 (left: 6.67 5)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n5 + 1.5 = 6.5 (left: 6.5 10)\n', 4, '5 + 1.5 = 6.5 (left: 6.5 10)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n10 * 1.5 = 15 (left: 15 5)\n', 4, '10 * 1.5 = 15 (left: 15 5)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n1.5 + 10 = 11.5 (left: 11.5 5)\n', 4, '1.5 + 10 = 11.5 (left: 11.5 5)')]
+-- values -- [0.003, 20.002, 0.004, 2.001, 0.004, 0, 0.003, 21.001, 1.002, 21.001, 0.003, 0.003, 2.001, 2.001, 2.001, 1.002, 0.003, 20.002, 1.002, 0.003, 1.002, 1.002, 0.003, 0.003, 40.001, 0.003, 22.0, 2.001, 40.001, 1.002, 22.0, 2.001, 3.0, 2.001, 1.002, 3.0, 2.001, 3.0, 0.003, 2.001]
+-- sorted_new_ys --: (('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n', 3, '1. 15 + 6 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n', 3, '5. 6 + 15 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n', 3, '3. 15 * 6 = 90 (left: 90)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n', 3, '7. 6 * 15 = 90 (left: 90)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n', 0, '4 / 10 = 0.4 (left: 0.4)'), ('10 - 4 = 6 (left: 6 5 6)\n6 * 5 = 30 (left: 30 6)\n', 1, '6 * 5 = 30 (left: 30 6)'), ('6 - 10 = -4 (left: 4 10)\n10 - 4 = 6 (left: 6)\n', 0, '10 - 4 = 6 (left: 6)'), ('4 + 5 = 9 (left: 9 6 10)\n9 * 6 = 54 (left: 54 10)\n', 2, '9 * 6 = 54 (left: 54 10)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n1.5 + 5 = 6.5 (left: 6.5 10)\n', 4, '1.5 + 5 = 6.5 (left: 6.5 10)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n5 - 1.5 = 3.5 (left: 3.5 10)\n', 4, '5 - 1.5 = 3.5 (left: 3.5 10)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n5 + 1.5 = 6.5 (left: 6.5 10)\n', 4, '5 + 1.5 = 6.5 (left: 6.5 10)'), ('6 - 10 = -4 (left: 4 10)\n10 / 4 = 2.5 (left: 2.5)\n', 0, '10 / 4 = 2.5 (left: 2.5)'), ('10 - 4 = 6 (left: 6 5 6)\n6 / 5 = 1.2 (left: 1.2 6)\n', 1, '6 / 5 = 1.2 (left: 1.2 6)'), ('10 - 4 = 6 (left: 6 5 6)\n5 / 6 = 0.83 (left: 0.83 6)\n', 1, '5 / 6 = 0.83 (left: 0.83 6)'), ('10 - 4 = 6 (left: 6 5 6)\n6 + 6 = 12 (left: 12 5)\n', 1, '6 + 6 = 12 (left: 12 5)'), ('5 + 10 = 15 (left: 15 6)\n4. 15 / 6 = 2.5 (left: 2.5)\n', 3, '4. 15 / 6 = 2.5 (left: 2.5)'), ('5 + 10 = 15 (left: 15 6)\n8. 15 / 2 = 7.5, then 7.5 + 6 = 13.5 (left: 13.5)\n', 3, '8. 15 / 2 = 7.5, then 7.5 + 6 = 13.5 (left: 13.5)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n5 * 1.5 = 7.5 (left: 7.5 10)\n', 4, '5 * 1.5 = 7.5 (left: 7.5 10)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n10 / 1.5 = 6.67 (left: 6.67 5)\n', 4, '10 / 1.5 = 6.67 (left: 6.67 5)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n1.5 + 10 = 11.5 (left: 11.5 5)\n', 4, '1.5 + 10 = 11.5 (left: 11.5 5)'), ('10 - 4 = 6 (left: 6 5 6)\n6 + 5 = 11 (left: 11 6)\n', 1, '6 + 5 = 11 (left: 11 6)'), ('10 - 4 = 6 (left: 6 5 6)\n5 + 6 = 11 (left: 11 6)\n', 1, '5 + 6 = 11 (left: 11 6)'), ('4 + 5 = 9 (left: 9 6 10)\n9 / 6 = 1.5 (left: 1.5 10)\n', 2, '9 / 6 = 1.5 (left: 1.5 10)'), ('4 + 5 = 9 (left: 9 6 10)\n10 - 6 = 4 (left: 9 4)\n', 2, '10 - 6 = 4 (left: 9 4)'), ('4 + 5 = 9 (left: 9 6 10)\n6 + 10 = 16 (left: 9 16)\n', 2, '6 + 10 = 16 (left: 9 16)'), ('5 + 10 = 15 (left: 15 6)\n6. 15 - 6 = 9 (left: 9)\n', 3, '6. 15 - 6 = 9 (left: 9)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n10 - 1.5 = 8.5 (left: 8.5 5)\n', 4, '10 - 1.5 = 8.5 (left: 8.5 5)'), ('6 - 10 = -4 (left: 4 10)\n4 * 10 = 40 (left: 40)\n', 0, '4 * 10 = 40 (left: 40)'), ('6 - 10 = -4 (left: 4 10)\n4 - 10 = -6 (left: -6)\n', 0, '4 - 10 = -6 (left: -6)'), ('6 - 10 = -4 (left: 4 10)\n4 + 10 = 14 (left: 14)\n', 0, '4 + 10 = 14 (left: 14)'), ('6 - 10 = -4 (left: 4 10)\n10 + 4 = 14 (left: 14)\n', 0, '10 + 4 = 14 (left: 14)'), ('10 - 4 = 6 (left: 6 5 6)\n6 - 5 = 1 (left: 1 6)\n', 1, '6 - 5 = 1 (left: 1 6)'), ('10 - 4 = 6 (left: 6 5 6)\n5 - 6 = -1 (left: -1 6)\n', 1, '5 - 6 = -1 (left: -1 6)'), ('4 + 5 = 9 (left: 9 6 10)\n9 + 6 = 15 (left: 15 10)\n', 2, '9 + 6 = 15 (left: 15 10)'), ('4 + 5 = 9 (left: 9 6 10)\n6 + 9 = 15 (left: 15 10)\n', 2, '6 + 9 = 15 (left: 15 10)'), ('4 + 5 = 9 (left: 9 6 10)\n10 - 9 = 1 (left: 6 1)\n', 2, '10 - 9 = 1 (left: 6 1)'), ('4 + 5 = 9 (left: 9 6 10)\n9 - 6 = 3 (left: 3 10)\n', 2, '9 - 6 = 3 (left: 3 10)'), ('5 + 10 = 15 (left: 15 6)\n2. 6 - 15 = -9 (left: -9)\n', 3, '2. 6 - 15 = -9 (left: -9)'), ('6 / 4 = 1.5 (left: 1.5 5 10)\n10 * 1.5 = 15 (left: 15 5)\n', 4, '10 * 1.5 = 15 (left: 15 5)'), ('6 - 10 = -4 (left: 4 10)\n10 / 4 = 2.5 (left: 2.5)\n', 0, '10 / 4 = 2.5 (left: 2.5)'))
+-- sol values --: (40.001, 40.001, 22.0, 22.0, 21.001, 21.001, 20.002, 20.002, 3.0, 3.0, 3.0, 2.001, 2.001, 2.001, 2.001, 2.001, 2.001, 2.001, 2.001, 2.001, 1.002, 1.002, 1.002, 1.002, 1.002, 1.002, 1.002, 0.004, 0.004, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0)
+-- choices --: [('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n', 3, '1. 15 + 6 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n', 3, '5. 6 + 15 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n', 3, '3. 15 * 6 = 90 (left: 90)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n', 3, '7. 6 * 15 = 90 (left: 90)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n', 0, '4 / 10 = 0.4 (left: 0.4)')]
+
+Start reasoning with step 2
+
+number of prev level5
+Getting proposals from index 0 with y = 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+
+Current number is: 21
+
+The proposals for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+ is 
+ ['Input: 21', '21 + 0 = 21 (left: 0)', '21 - 0 = 21 (left: 0)', '21 * 1 = 21 (left: 1)', '21 / 1 = 21 (left: 1)', '21 + 1 = 22 (left: 1)', '21 - 1 = 20 (left: 1)', '21 * 0 = 0 (left: 0)', '21 / 0 = Not possible (left: undefined)', '21 + 21 = 42 (left: 21)', '21 - 21 = 0 (left: 21)', '21 * 0.5 = 10.5 (left: 10.5)', '21 / 0.5 = 42 (left: 0.5)']
+Getting proposals from index 1 with y = 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+
+Current number is: 21
+
+The proposals for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+ is 
+ ['Input: 21', '21 + 3 = 24 (left: 24)', '21 - 3 = 18 (left: 18)', '21 * 1.2 = 25.2 (left: 25.2)', '21 / 1 = 21 (left: 21)', '21 + 0 = 21 (left: 21)', '21 - 0 = 21 (left: 21)', '21 * 1.14 = 23.94 (left: 23.94)', '21 / 1.08 = 19.44 (left: 19.44)']
+Getting proposals from index 2 with y = 5 + 10 = 15 (left: 15 6)
+3. 15 * 6 = 90 (left: 90)
+
+Current number is: 90
+
+The proposals for 5 + 10 = 15 (left: 15 6)
+3. 15 * 6 = 90 (left: 90)
+ is 
+ ['90 + 0 = 90 (left: 0)', '90 / 0 ( invalid, cannot divide by zero)', '90 - 0 = 90 (left: 0)', '0 + 90 = 90 (left: 0)', '0 * 90 = 0 (left: 0)', '90 * 0 = 0 (left: 0)', '90 / 90 = 1 (left: 1)', '0 / 90 = 0 (left: 0)']
+Getting proposals from index 3 with y = 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+
+Current number is: 90
+
+The proposals for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+ is 
+ ['90 + 0 = 90 (left: 0)', '90 - 0 = 90 (left: 0)', '90 / 0 = Error (left: Error)', '90 * 0 = 0 (left: 0)', '90 + 90 = 180 (left: 180)', '90 - 90 = 0 (left: 0)', '90 / 90 = 1 (left: 1)', '90 * 90 = 8100 (left: 8100)']
+Getting proposals from index 4 with y = 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+
+Current number is: 0.4
+
+The proposals for 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+ is 
+ ['0.4 + 0.6 = 1 (left: 1)', '0.4 * 10 = 4 (left: 4)', '0.4 * 60 = 24 (left: 24)', '0.4 * 60.5 = 24.2 (left: 24.2)', '0.4 + 0.4 = 0.8 (left: 0.8)', '0.4 * 0.6 = 0.24 (left: 0.24)', '0.4 * 6 = 2.4 (left: 2.4)', '0.4 + 0.2 = 0.6 (left: 0.6)']
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+
+Number of value needed is 3, this time we have 2 valid output
+Number of value needed is 1, this time we have 1 valid output
+The valid outputs are ["\nTo check if the answer is correct, I'll try to create an expression that uses each number exactly once and reaches 21.\n\nOne possible answer is: (6 + 10) + (4 * 5) = 21\n\nJudge: \nsure", "\nTo check if the answer is correct, I'll try to obtain 21 using the input numbers 4, 5, 6, and 10 exactly once and no other numbers.\n\nLet's see... \n\nAnswer: (10 + 5) * (6 - 4) = 21\n\nThe answer is indeed correct, so the judge is:\n\nsure", '\nTo determine if the answer is correct, I will try to obtain 21 using each number in the input exactly once.\n\nOne possible solution is: (10 - 4) * (6 - 5) = 6\n\nSince this solution does not use the numbers to obtain 21, I will try another combination.\n\nAnother possible solution is: (10 + 6) - (5 - 4) = 21\n\nSince this solution uses each number in the input exactly once and reaches 21, I will judge it as follows:\n\nJudge: sure']
+The value is 60.0
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+21 + 0 = 21 (left: 0)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n0 + 0 = 0\n0  op  0  =  0        (remaining: 24)   # optional\nimpossible', '\n0  * 0  =  0\n0  / 0  =  error (division by zero)\n0  + 0  =  0\n0  - 0  =  0\nimpossible', '\n0 + 24 = 24\nsure']
+The value is 20.002
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+21 - 0 = 21 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+21 * 1 = 21 (left: 1)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n1  +  1  =  2        (remaining: 22)\n2  +  1  =  3\n3  +  1  =  4\n4  +  1  =  5\n5  +  1  =  6\n6  +  1  =  7\n7  +  1  =  8\n8  +  1  =  9\n9  +  1  =  10\n10  +  1  =  11\n11  +  1  =  12\n12  +  1  =  13\n13  +  1  =  14\n14  +  1  =  15\n15  +  1  =  16\n16  +  1  =  17\n17  +  1  =  18\n18  +  1  =  19\n19  +  1  =  20\n20  +  1  =  21\n21  +  1  =  22\nimpossible', '\n1  *  1  =  1        (remaining: 23)   # optional\nimpossible', '\n1  + 1  = 2        (remaining: 22)   #\n1  * 1  = 1\n1  + 1  = 2\n2  + 1  = 3\n3  + 1  = 4\n4  + 1  = 5\n5  + 1  = 6\n6  + 1  = 7\n7  + 1  = 8\n8  + 1  = 9\n9  + 1  = 10\n10  + 1  = 11\n11  + 1  = 12\n12  + 1  = 13\n13  + 1  = 14\n14  + 1  = 15\n15  + 1  = 16\n16  + 1  = 17\n17  + 1  = 18\n18  + 1  = 19\n19  + 1  = 20\n20  + 1  = 21\n21  + 1  = 22\n22  + 1  = 23\n23  + 1  = 24\nimpossible']
+The value is 0.003
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+21 / 1 = 21 (left: 1)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+21 + 1 = 22 (left: 1)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+21 - 1 = 20 (left: 1)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+21 * 0 = 0 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+21 / 0 = Not possible (left: undefined)
+
+Number of value needed is 3, this time we have 0 valid output
+Number of value needed is 3, this time we have 0 valid output
+Number of value needed is 3, this time we have 0 valid output
+Number of value needed is 3, this time we have 0 valid output
+Number of value needed is 3, this time we have 0 valid output
+Reach max attempts
+The valid outputs are []
+The value is 0.0
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+21 + 21 = 42 (left: 21)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+21 - 21 = 0 (left: 21)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+21 * 0.5 = 10.5 (left: 10.5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n10.5 + 0 = 10.5\n10.5 - 0 = 10.5\n10.5 * 0 = 0\n10.5 / 0 = impossible\nimpossible', '\n10.5 + 0 = 10.5\n10.5 - 0 = 10.5\n10.5 * 0 = 0\n10.5 / 0 = impossible\nimpossible', '\n10.5 + 10.5 = 21\n10.5 * 2.4 = 25.2\n10.5 / 1.2 = 8.75\n10.5 * 2.3 = 24.15\n10.5 * 2.4 = 25.2\n10.5 * 2.33 = 24.435\n10.5 / 1.2 = 8.75\n10.5 / 1.23 = 8.54\n10.5 / 1.24 = 8.47\n10.5 / 1.25 = 8.4\n10.5 / 1.26 = 8.33\n10.5 / 1.27 = 8.27\n10.5 / 1.28 = 8.2\n10.5 / 1.29 = 8.13\n10.5 / 1.3 = 8.08\n10.5 / 1.31 = 8.05\n10.5 / 1.32 = 7.98\n10.5 / 1.33 = 7.92\n10.5 / 1.34 = 7.85\n10.5 / 1.35 = 7.78\n10.5 / 1.36 = 7.74\n10.5 / 1.37 = 7.67\n10.5 / 1.38 = 7.61\n10.5 / 1.39 = 7.55\n10.5 / 1.4 = 7.5\nimpossible']
+The value is 0.005
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+21 / 0.5 = 42 (left: 0.5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n0.5 + 0.5 = 1.0\n0.5 * 4 = 2.0\n0.5 * 48 = 24.0\nsure', '\n0.5 + 0.5 = 1        (remaining: 23)   # optional\nimpossible', '\n0.5 + 0.5 = 1.0\n0.5 * 0.5 = 0.25\n0.5 / 0.5 = 1\n0.5 cannot be multiplied by itself to get 24\nimpossible']
+The value is 20.002
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n24  = 24\nsure', '\n24 24 = 24\nsure', '\n24  / 1  = 24\n24  / 24  = 1\n24  * 1  = 24\n24  * 24  = 576\n24  - 24  = 0\n24  + 24  = 48\nsure']
+The value is 60.0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 - 3 = 18 (left: 18)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n18 + 0 = 18\n18 * 1 = 18\n18 / 1 = 18\nimpossible', '\n18 18 = 324\n18 / 18 = 1\nimpossible', '\n18 1 = 19\n(19 - 18) * 1 = 1\n1 18 1 are all too small\nimpossible']
+The value is 0.003
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 * 1.2 = 25.2 (left: 25.2)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n25.2 / 1 = 25.2\nimpossible', '\n25.2 + 0 = 25.2\n25.2 * 1 = 25.2\n(25.2 - 25.2) = 0\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n25.2 + 0 = 25.2\n25.2 * 1 = 25.2\n25.2 / 1 = 25.2\n25.2 * 1 = 25.2\nimpossible']
+The value is 1.002
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 / 1 = 21 (left: 21)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 0 = 21 (left: 21)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 - 0 = 21 (left: 21)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 * 1.14 = 23.94 (left: 23.94)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n23.94 + 0 = 23.94\nimpossible', '\n23.94 / 1 = 23.94        (remaining: 0)\n23.94 = 23.94\n23.94 1 = 23.94\n<final>    sure', '\n23.94 1 = 24.94\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 21.001
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 / 1.08 = 19.44 (left: 19.44)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n19.44 1.0 + = 20.44        (remaining: 3.6)\n20.44 - 1.0 = 19.44\n19.44 * 1.0 = 19.44\n19.44 / 1.0 = 19.44\n19.44 / 0.5 = 38.88\nimpossible', '\n19.44 / 1 = 19.44\nimpossible', '\n19.44 1 + 0.44 = 19.84\n19.84 - 1 = 18.84\n(0.44 - 0.44) * 19.44 = 0 * 19.44 = 0\n19.44 0.44 * 19.44 = 8.57936\n19.44 19.44 = 379.1616\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 1.002
+getting value for 5 + 10 = 15 (left: 15 6)
+3. 15 * 6 = 90 (left: 90)
+90 + 0 = 90 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+3. 15 * 6 = 90 (left: 90)
+90 / 0 ( invalid, cannot divide by zero)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\nJudge: \nimpossible', '\nJudge: \nimpossible', '\nJudge: \nimpossible']
+The value is 0.003
+getting value for 5 + 10 = 15 (left: 15 6)
+3. 15 * 6 = 90 (left: 90)
+90 - 0 = 90 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+3. 15 * 6 = 90 (left: 90)
+0 + 90 = 90 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+3. 15 * 6 = 90 (left: 90)
+0 * 90 = 0 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+3. 15 * 6 = 90 (left: 90)
+90 * 0 = 0 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+3. 15 * 6 = 90 (left: 90)
+90 / 90 = 1 (left: 1)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+3. 15 * 6 = 90 (left: 90)
+0 / 90 = 0 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 0 = 90 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 - 0 = 90 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 / 0 = Error (left: Error)
+
+Number of value needed is 3, this time we have 2 valid output
+Number of value needed is 1, this time we have 1 valid output
+The valid outputs are ['\nError  op  Error  =  Error        (remaining: …)   # optional\nError  op  Error  =  Error                         # optional\nError    sure | likely | impossible', '\nError is not a number.\nimpossible', '\nThere is no input.\nimpossible']
+The value is 21.003
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 * 0 = 0 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n180 = 180        (remaining: 0)   # optional\n<final>    sure | likely | impossible\nsure', '\n180 = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 + 21 + 22 + 23 + 24 + 25 + 26 + 27 + 28 + 29 + 30 + 31 + 32 + 33 + 34 + 35 + 36 + 37 + 38 + 39 + 40 + 41 + 42 + 43 + 44 + 45 + 46 + 47 + 48 + 49 + 50 + 51 + 52 + 53 + 54 + 55 + 56 + 57 + 58 + 59 + 60 + 61 + 62 + 63 + 64 + 65 + 66 + 67 + 68 + 69 + 70 + 71 + 72 + 73 + 74 + 75 + 76 + 77 + 78 + 79 + 80 + 81 + 82 + 83 + 84 + 85 + 86 + 87 + 88 + 89 + 90 + 91 + 92 + 93 + 94 + 95 + 96 + 97 + 98 + 99 + 100 + 101 + 102 + 103 + 104 + 105 + 106 + 107 + 108 + 109 + 110 + 111 + 112 + 113 + 114 + 115 + 116 + 117 + 118 + 119 + 120 + 121 + 122 + 123 + 124 + 125 + 126 + 127 + 128 + 129 + 130 + 131 + 132 + 133 + 134 + 135 + 136 + 137 + 138 + 139 + 140 + 141 + 142 + 143 + 144 + 145 + 146 + 147 + 148 + 149 + 150 + 151 + 152 + 153 + 154 + 155 + 156 + 157 + 158 + 159 + 160 + 161 + 162 + 163 + 164 + 165 + 166 + 167 + 168 + 169 + 170 + 171 + 172 + 173 + 174 + 175 + 176 + 177 + 178 + 179 + 180 = 180\n180 / 1 = 180\n180 = 180\nsure', '\n180 + 0 = 180\nimpossible']
+The value is 61.002
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 - 90 = 0 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 / 90 = 1 (left: 1)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 * 90 = 8100 (left: 8100)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n8100 / 10 = 810\n810 10 = 8200\nimpossible', '\n8100 / 8100 = 1\n1 8100 / 8100 = 1\n1 1 * 8100 = 8100\n8100 * 1 = 8100\n8100 8100 * 1 = 8100\n8100 8100 / 1 = 8100\nimpossible', '\n8100 / 8100 = 1\n8100 8100 are all too big\nimpossible']
+The value is 0.003
+getting value for 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+0.4 + 0.6 = 1 (left: 1)
+
+getting value for 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+0.4 * 10 = 4 (left: 4)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n4 cannot reach 24 using basic arithmetic operations.\nimpossible', '\n4  + 4 = 8\n4  * 4 = 16\n4  + 4 + 4 = 12 + 4 = 16\n4  + 4 + 4 + 4 = 16 + 4 = 20\n4  * 4 + 4 = 16 + 4 = 20\nimpossible', '\n4  + 4  =  8\nimpossible']
+The value is 0.003
+getting value for 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+0.4 * 60 = 24 (left: 24)
+
+getting value for 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+0.4 * 60.5 = 24.2 (left: 24.2)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n24.2 1 + = 25.2        (remaining: 1.8)   \nimpossible', '\n24.2 / 1 = 24.2\nimpossible', '\n24.2 1 = 25.2        (remaining: 0.8)  \n25.2 0.8 = 34.2\n25.2 0.8 = 25.2\nimpossible']
+The value is 0.003
+getting value for 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+0.4 + 0.4 = 0.8 (left: 0.8)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n0.8 * 30 = 24\nsure', '\n0.8 + 0.8 = 1.6\n0.8 * 0.8 = 0.64\nimpossible', '\n0.8 + 0 = 0.8\n0.8 0 = 0\nimpossible']
+The value is 20.002
+getting value for 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+0.4 * 0.6 = 0.24 (left: 0.24)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n0.24 = 0.24  # cannot split this number\nimpossible', '\n0.24 1 + = 1.24        (remaining: 1)\n1.24 10 / = 0.124\n0.24 100 / = 0.0024\nimpossible', '\n0.24 * 100 = 24\nsure']
+The value is 20.002
+getting value for 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+0.4 * 6 = 2.4 (left: 2.4)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n2.4 + 0 = 2.4        (remaining: 22.4)   # optional\n2.4 * 10 = 24\nsure', '\n2.4 * 10 = 24\nsure', '\n2.4 * 10 = 24\nsure']
+The value is 60.0
+getting value for 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+0.4 + 0.2 = 0.6 (left: 0.6)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n0.6 0.6 = 0.36\n0.6 / 0.6 = 1\n0.6 * 0.6 = 0.36\n0.6 + 0.6 = 1.2\nimpossible', '\n0.6 + 0 = 0.6\n0.6 * 0 = 0\n0 0.6 = 0\n0.6 0 = 0\nimpossible', '\n0.6 + 0 = 0.6\n0.6 * 0 = 0\n0.6 - 0 = 0.6\nimpossible']
+The value is 0.003
+-- new step of 2
+
+-- new_ys --: [('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n', 0, 'Input: 21'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 + 0 = 21 (left: 0)\n', 0, '21 + 0 = 21 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 - 0 = 21 (left: 0)\n', 0, '21 - 0 = 21 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 * 1 = 21 (left: 1)\n', 0, '21 * 1 = 21 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 / 1 = 21 (left: 1)\n', 0, '21 / 1 = 21 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 + 1 = 22 (left: 1)\n', 0, '21 + 1 = 22 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 - 1 = 20 (left: 1)\n', 0, '21 - 1 = 20 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 * 0 = 0 (left: 0)\n', 0, '21 * 0 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 / 0 = Not possible (left: undefined)\n', 0, '21 / 0 = Not possible (left: undefined)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 + 21 = 42 (left: 21)\n', 0, '21 + 21 = 42 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 - 21 = 0 (left: 21)\n', 0, '21 - 21 = 0 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 * 0.5 = 10.5 (left: 10.5)\n', 0, '21 * 0.5 = 10.5 (left: 10.5)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 / 0.5 = 42 (left: 0.5)\n', 0, '21 / 0.5 = 42 (left: 0.5)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n', 1, 'Input: 21'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n', 1, '21 + 3 = 24 (left: 24)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 - 3 = 18 (left: 18)\n', 1, '21 - 3 = 18 (left: 18)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 * 1.2 = 25.2 (left: 25.2)\n', 1, '21 * 1.2 = 25.2 (left: 25.2)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 / 1 = 21 (left: 21)\n', 1, '21 / 1 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 0 = 21 (left: 21)\n', 1, '21 + 0 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 - 0 = 21 (left: 21)\n', 1, '21 - 0 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 * 1.14 = 23.94 (left: 23.94)\n', 1, '21 * 1.14 = 23.94 (left: 23.94)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 / 1.08 = 19.44 (left: 19.44)\n', 1, '21 / 1.08 = 19.44 (left: 19.44)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n90 + 0 = 90 (left: 0)\n', 2, '90 + 0 = 90 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n90 / 0 ( invalid, cannot divide by zero)\n', 2, '90 / 0 ( invalid, cannot divide by zero)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n90 - 0 = 90 (left: 0)\n', 2, '90 - 0 = 90 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n0 + 90 = 90 (left: 0)\n', 2, '0 + 90 = 90 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n0 * 90 = 0 (left: 0)\n', 2, '0 * 90 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n90 * 0 = 0 (left: 0)\n', 2, '90 * 0 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n90 / 90 = 1 (left: 1)\n', 2, '90 / 90 = 1 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n0 / 90 = 0 (left: 0)\n', 2, '0 / 90 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 0 = 90 (left: 0)\n', 3, '90 + 0 = 90 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 - 0 = 90 (left: 0)\n', 3, '90 - 0 = 90 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 / 0 = Error (left: Error)\n', 3, '90 / 0 = Error (left: Error)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 * 0 = 0 (left: 0)\n', 3, '90 * 0 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n', 3, '90 + 90 = 180 (left: 180)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 - 90 = 0 (left: 0)\n', 3, '90 - 90 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 / 90 = 1 (left: 1)\n', 3, '90 / 90 = 1 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 * 90 = 8100 (left: 8100)\n', 3, '90 * 90 = 8100 (left: 8100)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 + 0.6 = 1 (left: 1)\n', 4, '0.4 + 0.6 = 1 (left: 1)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 * 10 = 4 (left: 4)\n', 4, '0.4 * 10 = 4 (left: 4)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 * 60 = 24 (left: 24)\n', 4, '0.4 * 60 = 24 (left: 24)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 * 60.5 = 24.2 (left: 24.2)\n', 4, '0.4 * 60.5 = 24.2 (left: 24.2)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 + 0.4 = 0.8 (left: 0.8)\n', 4, '0.4 + 0.4 = 0.8 (left: 0.8)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 * 0.6 = 0.24 (left: 0.24)\n', 4, '0.4 * 0.6 = 0.24 (left: 0.24)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 * 6 = 2.4 (left: 2.4)\n', 4, '0.4 * 6 = 2.4 (left: 2.4)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 + 0.2 = 0.6 (left: 0.6)\n', 4, '0.4 + 0.2 = 0.6 (left: 0.6)')]
+-- values -- [60.0, 20.002, 20.002, 0.003, 0.003, 0.003, 0.003, 20.002, 0.0, 40.001, 40.001, 0.005, 20.002, 60.0, 60.0, 0.003, 1.002, 40.001, 40.001, 40.001, 21.001, 1.002, 20.002, 0.003, 20.002, 20.002, 20.002, 20.002, 0.003, 20.002, 20.002, 20.002, 21.003, 20.002, 61.002, 20.002, 0.003, 0.003, 0.003, 0.003, 60.0, 0.003, 20.002, 20.002, 60.0, 0.003]
+-- sorted_new_ys --: (('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n', 3, '90 + 90 = 180 (left: 180)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n', 0, 'Input: 21'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n', 1, 'Input: 21'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n', 1, '21 + 3 = 24 (left: 24)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 * 60 = 24 (left: 24)\n', 4, '0.4 * 60 = 24 (left: 24)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 * 6 = 2.4 (left: 2.4)\n', 4, '0.4 * 6 = 2.4 (left: 2.4)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 + 21 = 42 (left: 21)\n', 0, '21 + 21 = 42 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 - 21 = 0 (left: 21)\n', 0, '21 - 21 = 0 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 / 1 = 21 (left: 21)\n', 1, '21 / 1 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 0 = 21 (left: 21)\n', 1, '21 + 0 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 - 0 = 21 (left: 21)\n', 1, '21 - 0 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 / 0 = Error (left: Error)\n', 3, '90 / 0 = Error (left: Error)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 * 1.14 = 23.94 (left: 23.94)\n', 1, '21 * 1.14 = 23.94 (left: 23.94)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 + 0 = 21 (left: 0)\n', 0, '21 + 0 = 21 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 - 0 = 21 (left: 0)\n', 0, '21 - 0 = 21 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 * 0 = 0 (left: 0)\n', 0, '21 * 0 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 / 0.5 = 42 (left: 0.5)\n', 0, '21 / 0.5 = 42 (left: 0.5)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n90 + 0 = 90 (left: 0)\n', 2, '90 + 0 = 90 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n90 - 0 = 90 (left: 0)\n', 2, '90 - 0 = 90 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n0 + 90 = 90 (left: 0)\n', 2, '0 + 90 = 90 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n0 * 90 = 0 (left: 0)\n', 2, '0 * 90 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n90 * 0 = 0 (left: 0)\n', 2, '90 * 0 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n0 / 90 = 0 (left: 0)\n', 2, '0 / 90 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 0 = 90 (left: 0)\n', 3, '90 + 0 = 90 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 - 0 = 90 (left: 0)\n', 3, '90 - 0 = 90 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 * 0 = 0 (left: 0)\n', 3, '90 * 0 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 - 90 = 0 (left: 0)\n', 3, '90 - 90 = 0 (left: 0)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 + 0.4 = 0.8 (left: 0.8)\n', 4, '0.4 + 0.4 = 0.8 (left: 0.8)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 * 0.6 = 0.24 (left: 0.24)\n', 4, '0.4 * 0.6 = 0.24 (left: 0.24)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 * 1.2 = 25.2 (left: 25.2)\n', 1, '21 * 1.2 = 25.2 (left: 25.2)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 / 1.08 = 19.44 (left: 19.44)\n', 1, '21 / 1.08 = 19.44 (left: 19.44)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 * 0.5 = 10.5 (left: 10.5)\n', 0, '21 * 0.5 = 10.5 (left: 10.5)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 * 1 = 21 (left: 1)\n', 0, '21 * 1 = 21 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 / 1 = 21 (left: 1)\n', 0, '21 / 1 = 21 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 + 1 = 22 (left: 1)\n', 0, '21 + 1 = 22 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 - 1 = 20 (left: 1)\n', 0, '21 - 1 = 20 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 - 3 = 18 (left: 18)\n', 1, '21 - 3 = 18 (left: 18)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n90 / 0 ( invalid, cannot divide by zero)\n', 2, '90 / 0 ( invalid, cannot divide by zero)'), ('5 + 10 = 15 (left: 15 6)\n3. 15 * 6 = 90 (left: 90)\n90 / 90 = 1 (left: 1)\n', 2, '90 / 90 = 1 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 / 90 = 1 (left: 1)\n', 3, '90 / 90 = 1 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 * 90 = 8100 (left: 8100)\n', 3, '90 * 90 = 8100 (left: 8100)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 + 0.6 = 1 (left: 1)\n', 4, '0.4 + 0.6 = 1 (left: 1)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 * 10 = 4 (left: 4)\n', 4, '0.4 * 10 = 4 (left: 4)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 * 60.5 = 24.2 (left: 24.2)\n', 4, '0.4 * 60.5 = 24.2 (left: 24.2)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 + 0.2 = 0.6 (left: 0.6)\n', 4, '0.4 + 0.2 = 0.6 (left: 0.6)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\n21 / 0 = Not possible (left: undefined)\n', 0, '21 / 0 = Not possible (left: undefined)'))
+-- sol values --: (61.002, 60.0, 60.0, 60.0, 60.0, 60.0, 40.001, 40.001, 40.001, 40.001, 40.001, 21.003, 21.001, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 1.002, 1.002, 0.005, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.0)
+-- choices --: [('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n', 3, '90 + 90 = 180 (left: 180)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n', 0, 'Input: 21'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n', 1, 'Input: 21'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n', 1, '21 + 3 = 24 (left: 24)'), ('6 - 10 = -4 (left: 4 10)\n4 / 10 = 0.4 (left: 0.4)\n0.4 * 60 = 24 (left: 24)\n', 4, '0.4 * 60 = 24 (left: 24)')]
+
+Start reasoning with step 3
+
+number of prev level5
+Getting proposals from index 0 with y = 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+
+Current number is: 180
+
+The proposals for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+ is 
+ ['1. 180 - 180 = 0 (left: 0)', '2. 180 / 180 = 1 (left: 1)', '3. 180 + 0 = 180 (left: 0)', '4. 180 / 0 = Not a number (left: Not a number)', '5. 180 - 0 = 180 (left: 0)', '6. 180 * 1 = 180 (left: 1)', '7. 180 / 1 = 180 (left: 1)', '8. 180 + 1 = 181 (left: 181)']
+Getting proposals from index 1 with y = 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+
+Current number is: Input: 21
+
+The proposals for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+ is 
+ ['Input: 21', '21 + 0 = 21 (left: 0)', '21 - 0 = 21 (left: 0)', '21 * 0 = 0 (left: 0)', '21 / 0 = Not possible (left: Not possible)', '21 + 21 = 42 (left: 42 - 18)', '21 - 21 = 0 (left: 0)', '21 * 1 = 21 (left: 1)', '21 / 1 = 21 (left: 1)', '21 + 3 = 24 (left: 24 - 3)']
+Getting proposals from index 2 with y = 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+
+Current number is: Input: 21
+
+The proposals for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+ is 
+ ['Input: 21', '21 + 3 = 24 (left: 24)', '21 - 3 = 18 (left: 18)', '21 * 1.2 = 25.2 (left: 25.2)', '21 / 1.2 = 17.5 (left: 17.5)', '21 + 3 = 24 (left: 24)', '21 + 1.2 = 22.2 (left: 22.2)', '21 - 1.2 = 19.8 (left: 19.8)', '21 / 1 = 21 (left: 21)']
+Getting proposals from index 3 with y = 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+
+Current number is: 24
+
+The proposals for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+ is 
+ ["Let's try again from the beginning.", '5 + 10 = 15 (left: 4 6 15)', '4 + 6 = 10 (left: 10 15)', '10 + 15 = 25 (left: 25)', '5 + 6 = 11 (left: 4 10 11)', '4 + 10 = 14 (left: 14 11)', '14 + 11 = 25 (left: 25)', '5 + 4 = 9 (left: 6 10 9)', '6 + 9 = 15 (left: 15 10)', '10 + 15 = 25 (left: 25)', 'Let me think for a moment...', '5 + 10 = 15 (left: 4 6 15)', '6 + 4 = 10 (left: 10 15)', '10 + 15 = 25 (left: 25)', 'Wait, let me try another combination...', '5 + 4 = 9 (left: 6 10 9)', '10 + 6 = 16 (left: 16 9)', '16 + 9 = 25 (left: 25)', 'Let me think for a moment...', '5 + 6 = 11 (left: 4 10 11)', '4 + 10 = 14 (left: 14 11)', '14 - 11 = 3 (left: 3)', '5 + 6 = 11 (left: 4 10 11)', '10 - 6 = 4 (left: 4 11)', '4 + 11 = 15 (left: 15)', '15 + 4 = 19 (left: 19)', '5 + 4 = 9 (left: 6 10 9)', '10 + 6 = 16 (left: 16 9)', '16 - 9 = 7 (left: 7)', '5 + 10 = 15 (left: 4 6 15)', '6 + 4 = 10 (left: 10 15)', '15 - 10 = 5 (left: 5)', '5 + 5 = 10 (left: 10)', '5 + 10 = 15 (left: 4 6 15)', '6 - 4 = 2 (left: 2 15)', '2 + 15 = 17 (left: 17)', '5 + 4 = 9 (left: 6 10 9)', '6 + 9 = 15 (left: 15 10)', '15 - 10 = 5 (left: 5)', '5 + 6 = 11 (left: 11)', '5 + 10 = 15 (left: 4 6 15)', '10 - 6 = 4 (left: 4 15)', '4 + 15 = 19 (left: 19)', '5 + 10 = 15 (left: 4 6 15)', '6 + 4 = 10 (left: 10 15)', '10 - 15 = -5 (left: -5)', '5 + 4 = 9 (left: 6 10 9)', '4 + 6 = 10 (left: 10 9)', '10 + 9 = 19 (left: 19)', '5 + 10 = 15 (left: 4 6 15)', '10 + 4 = 14 (left: 14 15)', '14 + 15 = 29 (left: 29)', '5 + 4 = 9 (left: 6 10 9)', '6 + 10 = 16 (left: 16 9)', '16 - 9 = 7 (left: 7)', '5 + 6 = 11 (left: 4 10 11)', '10 - 6 = 4 (left: 4 11)', '4 + 11 = 15 (left:']
+Getting proposals from index 4 with y = 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+0.4 * 60 = 24 (left: 24)
+
+Current number is: 24
+
+The proposals for 6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+0.4 * 60 = 24 (left: 24)
+ is 
+ []
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+1. 180 - 180 = 0 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+2. 180 / 180 = 1 (left: 1)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+3. 180 + 0 = 180 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+4. 180 / 0 = Not a number (left: Not a number)
+
+Number of value needed is 3, this time we have 1 valid output
+Number of value needed is 2, this time we have 2 valid output
+The valid outputs are ['\nThere is no input to evaluate.\nimpossible', '\nInput: Not a number\nimpossible', '\nNot a number\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+5. 180 - 0 = 180 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+6. 180 * 1 = 180 (left: 1)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+7. 180 / 1 = 180 (left: 1)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+8. 180 + 1 = 181 (left: 181)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n181 + 181 = 362\n362 / 181 = 2\n181 * 2 = 362\nimpossible', '\n181 / 1 = 181\n181  / 1 = 181\n181  / 1 = 181\n181  / 1 = 181\nimpossible', '\n181 * 1 = 181\n181 / 1 = 181\n181 1 are all too big\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+Input: 21
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+21 + 0 = 21 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+21 - 0 = 21 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+21 * 0 = 0 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+21 / 0 = Not possible (left: Not possible)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\nimpossible', '\nimpossible', '\nNot possible  +  Not possible  =  Not possible\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+21 + 21 = 42 (left: 42 - 18)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n42 - 18 = 24\nsure', '\n42 - 18 = 24\nsure', '\n42 - 18 = 24\nsure']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+21 - 21 = 0 (left: 0)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+21 * 1 = 21 (left: 1)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+21 / 1 = 21 (left: 1)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+21 + 3 = 24 (left: 24 - 3)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n24 - 3 = 21\nimpossible', '\n24 - 3 = 21\n21 - 3 = 18\n3 + 18 = 21\n3 + 21 = 24\nsure', '\n24 - 3 = 21\n21 / 1.2 = 17.5\n(24 - 3) = 21\n21 1.2 = 25.2\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+Input: 21
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+21 + 3 = 24 (left: 24)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+21 - 3 = 18 (left: 18)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+21 * 1.2 = 25.2 (left: 25.2)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+21 / 1.2 = 17.5 (left: 17.5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n17.5 + 6.5 = 24\nsure', '\n17.5 * 1.4 = 24.5\n17.5 * 1.4 is slightly too big\nlikely', '\n17.5 + 6.5 = 24\nsure']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+21 + 1.2 = 22.2 (left: 22.2)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n22.2 + 1.8 = 24\nsure', '\n22.2 + 1.8 = 24\nsure', '\n22.2 * 1.1 = 24.42\n22.2 + 2.2 = 24.4\n22.2 / 1.1 = 20.18\n22.2 / 1.1 = 20.18\n22.2 / 1.1 = 20.18\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+21 - 1.2 = 19.8 (left: 19.8)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n19.8 1 = 20.8        (remaining: 4.2)   # \n20.8 - 4.2 = 16.6\n19.8 / 1 = 19.8\n19.8 1 = 20.8\n20.8 4.2 = 25.0\nimpossible', '\n19.8 / 1 = 19.8\nimpossible', '\n19.8 + 4.2 = 24\nsure']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+21 / 1 = 21 (left: 21)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+Let's try again from the beginning.
+
+Number of value needed is 3, this time we have 1 valid output
+Number of value needed is 2, this time we have 1 valid output
+Number of value needed is 1, this time we have 0 valid output
+Number of value needed is 1, this time we have 0 valid output
+Number of value needed is 1, this time we have 0 valid output
+Reach max attempts
+The valid outputs are ["\nLet's start from the beginning.\n\nHere's one possible answer:\n\n(4 + 6) * 5 = 50 (not 24, so let's try again)\n\n(4 + 5) * 6 = 54 (not 24, so let's try again)\n\n(4 + 10) * 6 - 6 = 44 (not 24, so let's try again)\n\n(5 + 6) * 4 = 44 (not 24, so let's try again)\n\n(5 + 10) * 4 - 4 = 44 (not 24, so let's try again)\n\n(6 + 10) * 4 - 4 = 44 (not 24, so let's try again)\n\nLet's try a different approach.\n\n(4 + 5) + (6 * 10) = 54 (not 24, so let's try again)\n\n(4 * 5) + (6 * 10) = 70 (not 24, so let's try again)\n\n(4 * 6) + (5 * 10) = 74 (not 24, so let's try again)\n\n(4 * 10) + (5 * 6) = 56 (not 24, so let's try again)\n\n(5 * 6) + (4 * 10) = 56 (not 24, so let's try again)\n\n(5 * 10) + (4 * 6) = 56 (not 24, so let's try again)\n\nLet's try again.\n\n(4 * 5) * 6 = 120 (not 24, so let's try again)\n\n(4 * 6) * 5 = 120 (not 24, so let's try again)\n\n(4 * 10) * 5 = 200 (not 24, so let's try again)\n\n(4 * 6) + (5 * 10) = 56 (not 24, so let's try again)\n\n(4 * 10) + (5 * 6) = 56 (not 24, so let's try again)\n\n(5 * 6) + (4 * 10) = 56 (not 24, so let's try again)\n\n(5 * 10) + (4 * 6) = 56 (not 24, so let's try again)\n\nLet's try again.\n\n(6 * 4) * 5 = 120 (not 24, so let's try again)\n\n(6 * 5) * 4 = 120 (not 24, so let's try again)\n\n(6 * 10) * 4 = 240 (not 24, so let's try again)\n\n(10 * 4) * 6 = 240 (not 24, so let's try again)\n\n(10 * 6) * 4 = 240 (not 24, so let's try again)\n\n(10 * 4) + (6 * 5) = 46 (not 24, so let's try again)\n\n(10 * 5) + (6 * 4) = 56 (not 24, so let's try again)\n\n(6 * 5) + (10 * 4) = 46 (not 24, so let's try again)\n\n(6 * 4) + (10 * 5) = 76 (not 24, so let's try again)\n\nLet's try again.\n\n(5 + 6) * 4 + 4 = 28 (not 24, so let's try again)\n\n(5 + 4) * 6 + 4 = 34 (not 24, so let's try again)\n\n(5 + 4) * 10 / 2 = 25 (not 24, so let's try again)\n\n(5 + 4) * 10 - 6 = 44 (not 24, so let's try again)\n\n(5 + 10) * 4 - 6 = 38 (not 24, so let's try again)\n\n(5 + 4) * (10 - 6) = 24 (yes!)\n\nJudge: sure", "\nTo obtain 24, let's try to combine the numbers in different ways. Here are a few attempts:\n\n1. (4 + 6) * 5 = 50\n2. 4 * (5 + 6) = 44\n3. (4 + 5) * 6 = 54\n4. (4 + 10) * 5 = 50\n5. 4 * (5 * 6) = 120\n6. (4 + 5) * (6 + 10) = 108\n7. 4 * (6 + 5) = 44\n8. (4 + 6) * (5 + 10) = 90\n9. 5 * (4 + 6) = 50\n10. (5 + 6) * 4 = 44\n11. 10 * (4 + 6) = 100\n12. 4 * (6 + 10) = 64\n13. 6 * (4 + 5) = 54\n14. 5 * (4 * 6) = 120\n15. 4 * (5 * 10) = 200\n16. 10 * (5 + 6) = 110\n17. (6 + 10) * 4 = 64\n18. (4 + 6 + 5) * 10 = 150\n19. 5 * (4 + 10) = 50\n20. (4 + 10) * (5 + 6) = 90\n\nAfter trying many combinations, I found one that works:\n\n(4 + 6) * 5 + 10 = 60\n\nHowever, this is not the correct answer.\n\nAnother attempt:\n\n(4 + 5) * (6 + 10) = 112\n\nThis is still not the correct answer.\n\nLet me try again:\n\n(4 + 10) * 6 - 5 = 49\n\nStill not the correct answer.\n\nAnother attempt:\n\n(4 + 5) * (6 + 10) - 4 = 94\n\nStill not the correct answer.\n\nLet me try again:\n\n6 * (4 + 5) + 10 = 54\n\nStill not the correct answer.\n\nAnother attempt:\n\n5 * (4 + 6) + 10 = 50\n\nStill not the correct answer.\n\nLet me try again:\n\n(4 + 6) * (5 + 10) - 10 = 60\n\nStill not the correct answer.\n\nAfter trying many more combinations, I found one that works:\n\n(4 + 10) * (5 + 6) = 150\n\nHowever, this is not the correct answer.\n\nLet me try again:\n\n(4 + 5 + 6) * 10 = 150\n\nStill not the correct answer.\n\nAnother attempt:\n\n(4 + 10) * (6 - 5) = 24\n\nYes! This one works!\n\nJudge: \nsure"]
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+5 + 10 = 15 (left: 4 6 15)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n4 + 6 = 10\n(15 - 10) * 6 = 5 * 6 = 30\n(15 - 10) * 6 = 5 * 6 = 30\n(10 - 4) * 6 = 6 * 6 = 36\n(10 - 4) * 6 = 6 * 6 = 36\n(15 - 6) * 4 = 9 * 4 = 36\n(15 - 6) * 4 = 9 * 4 = 36\n(15 - 6) * 4 = 9 * 4 = 36\n(15 - 6) * 4 = 9 * 4 = 36\nimpossible', '\n4 + 6 = 10\n10 + 15 = 25\n15 - 4 = 11\n(4 + 6) * 15 = 10 * 15 = 150\n(15 - 6) * 4 = 9 * 4 = 36\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n4 + 6 = 10\n(6 - 4) * 15 = 2 * 15 = 30\n4 * 15 - 6 = 60 - 6 = 54\n(15 - 6) * 4 = 9 * 4 = 36\n(15 - 4) * 6 = 11 * 6 = 66\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+4 + 6 = 10 (left: 10 15)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n10 + 15 = 25\n10 * 15 = 150\n10 / 15 = 0.67\n10 - 15 = -5\nimpossible', '\n10 + 15 = 25\nimpossible', '\n10 + 15 = 25\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+10 + 15 = 25 (left: 25)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n25 25 = 625\nimpossible', '\n25 25 = 625\nimpossible', '\n25 + 0 = 25\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+5 + 6 = 11 (left: 4 10 11)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n4 + 10 + 11 = 25\n4 * 11 - 10 = 44 - 10 = 34\n(11 - 10) * 4 = 1 * 4 = 4\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n4 10 11\n4 + 10 + 11 = 25\n(11 - 10) * 10 = 10\n10 + 11 = 21\n4 + 21 = 25\nimpossible', '\n4 + 10 + 11 = 25\n(11 - 10) * 10 + 4 = 1 * 10 + 4 = 14\n(10 - 4) * 11 = 6 * 11 = 66\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+4 + 10 = 14 (left: 14 11)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n14 + 11 = 25\n11 - 14 = -3\n14 * 11 = 154\n14 / 11 = 1.27\nimpossible', '\n14 + 11 = 25\n11 - 14 = -3\n14 * 11 = 154\n14 / 11 = 1.27\nimpossible', '\n14 11 = 25\n25 - 1 = 24\nsure']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+14 + 11 = 25 (left: 25)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+5 + 4 = 9 (left: 6 10 9)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n6 10 9\n6 * 9 = 54\n(9 - 6) * 10 = 3 * 10 = 30\n(10 - 9) * 6 = 1 * 6 = 6\n(10 - 6) * 9 = 4 * 9 = 36\n(9 - 10) * 6 = -1 * 6 = -6\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n6 + 10 + 9 = 25\n(9 - 6) * 10 = 3 * 10 = 30\n6 * (9 - 10) = 6 * -1 = -6\n(9 - 6) / 10 = 0.3\n(10 - 9) * 6 = -3 * 6 = -18\n(9 - 6) * 9 = 3 * 9 = 27\nimpossible', '\n6 + 10 + 9 = 25\n(9 - 6) * 10 = 3 * 10 = 30\n(9 - 10) * 6 = -1 * 6 = -6\n(10 - 9) * 6 = 1 * 6 = 6\n(9 - 6) * 10 = 3 * 10 = 30\n(10 - 6) * 9 = 4 * 9 = 36\n(9 - 10) * 6 = -1 * 6 = -6\n(10 - 6) * 9 = 4 * 9 = 36\n(10 - 9) * 6 = 1 * 6 = 6\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+6 + 9 = 15 (left: 15 10)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+Let me think for a moment...
+
+Number of value needed is 3, this time we have 2 valid output
+Number of value needed is 1, this time we have 0 valid output
+Number of value needed is 1, this time we have 1 valid output
+The valid outputs are ['\nInput: 4 5 6 10\nAnswer: (4 + 5) * (6 + 10) =?\nJudge: impossible', '\nInput: 4 5 6 10\nAnswer: (6 * 5) + (4 * 10) = 30 + 40 = 70\nJudge: \nimpossible\n\nWait, let me try again...\n\nInput: 4 5 6 10\nAnswer: (6 * 4) + (5 * 10) = 24 + 50 = 74\nJudge: \nimpossible\n\nHmm... How about this?\n\nInput: 4 5 6 10\nAnswer: (10 - 4) * (6 - 5) = 6 * 1 = 6\nJudge: \nimpossible\n\nLet me think...\n\nInput: 4 5 6 10\nAnswer: (6 * 4) + (5 * 10) is not correct. How about (6 + 4) * (10 - 5)?\nJudge: \nsure', "\nLet's see... \n\nOne possible solution is: (6 + 4) * (10 - 5) = 10 * 5 = 50, which is not correct.\n\nAnother possible solution is: (6 * 4) + 10 - 5 = 24\n\nSo, the answer is: (6 * 4) + (10 - 5) = 24\n\nJudge: \nsure"]
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+6 + 4 = 10 (left: 10 15)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+Wait, let me try another combination...
+
+Number of value needed is 3, this time we have 2 valid output
+Number of value needed is 1, this time we have 1 valid output
+The valid outputs are ['\nInput: 4 5 6 10\nAnswer: (4 + 6) * 10 = 100\nJudge: \nimpossible', '\nInput: 4 5 6 10\nAnswer: (10 - 6) * (4 + 5) = 36\nJudge: \nimpossible', '\nInput: 4 5 6 10\nAnswer: (5 + 6) * 4 + 10 = 50\nJudge: \nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+10 + 6 = 16 (left: 16 9)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n16 9 = 25\n(9 - 5) * 5 = 4 * 5 = 20\n(16 - 9) * 9 = 7 * 9 = 63\n16 - (9 - 9) = 16 - 0 = 16\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n16 + 9 = 25\n9 + 16 = 25\n16 * 9 = 144\n16 / 9 = 1.78\nimpossible', '\n16 + 9 = 25\n16 - 9 = 7\n16 * 9 = 144\n16 / 9 = 1.78\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+16 + 9 = 25 (left: 25)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+14 - 11 = 3 (left: 3)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n3 3 3 are all too small\nimpossible', '\n3  *  8  =  24\nimpossible', '\n3  + 3  =  6        (remaining: 18)   \n3  * 3  =  9        (remaining: 15)   \n3  * 3  =  9        (remaining: 15)   \n3  * 3  =  9        (remaining: 15)   \n3  * 3  * 3  =  27   (remaining: -3)  \nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+10 - 6 = 4 (left: 4 11)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n4 + 11 = 15\n4 * 11 = 44\n11 - 4 = 7\nimpossible', '\n4 11 = 15\n11 - 4 = 7\n4 * 7 = 28\n(11 - 4) + 4 = 7 + 4 = 11\n(7 - 4) * 4 = 3 * 4 = 12\nimpossible', '\n4 + 11 = 15\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+4 + 11 = 15 (left: 15)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n15 + 15 = 30\n15 * 15 = 225\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n15 + 0 = 15\n15 * 1 = 15\n15 / 1 = 15\n15 - 0 = 15\n15 + 15 = 30\n15 * 15 = 225\n15 / 15 = 1\nimpossible', '\n15 * 1 = 15\n15 / 1 = 15\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+15 + 4 = 19 (left: 19)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n19 + 5 = 24\nsure', '\n19 + 5 = 24\nsure', '\n19 * 1 = 19\n19 / 1 = 19\n19 * 1 = 19\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+16 - 9 = 7 (left: 7)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n7 + 7 = 14\n7 * 7 = 49\n7 / 7 = 1\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n7 + 7 = 14\n7 * 7 = 49\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n7 + 7 = 14\n7 * 7 = 49\n(7 - 7) * 7 = 0 * 7 = 0\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+15 - 10 = 5 (left: 5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n5 + 5 = 10\n5 * 5 = 25\n5 / 5 = 1\n5 - 5 = 0\n5 5 are all too small\nimpossible', '\n5  + 5  = 10\n10  + 5  = 15\n15  + 5  = 20\n20  + 5  = 25\nimpossible', '\n5 + 5 = 10\n10 + 5 = 15\n15 + 5 = 20\n20 + 5 = 25\n25 - 1 = 24\nsure']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+5 + 5 = 10 (left: 10)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n10 + 10 = 20\n10 * 2 = 20\n20 + 4 = 24\nsure', '\n10 10 = 20\n20 + 10 = 30\n(10 + 10) * 1 = 20 * 1 = 20\n(10 * 1) + 10 = 10 + 10 = 20\n(10 + 10) / 1 = 20 / 1 = 20\nimpossible', '\n10 = 24        (remaining: 14)   # optional\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+6 - 4 = 2 (left: 2 15)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n2 * 15 = 30\n15 - 2 = 13\n2 + 13 = 15\nimpossible', '\n2 + 15 = 17\n15 - 2 = 13\n2 * 15 = 30\n2 / 15 = 0.13\nimpossible', '\n2 + 15 = 17\n15 - 2 = 13\n2 * 15 = 30\n2 / 15 = 0.13\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+2 + 15 = 17 (left: 17)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n17 * 1 = 17\n17 / 1 = 17\n17 + 0 = 17\n17 - 0 = 17\n17 * 0 = 0\n17 / 0 = impossible\n17 17 are all too big\nimpossible', '\n17 1 = 18        (remaining: 1)   # optional\nimpossible', '\n17 + 7 = 24\nsure']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+5 + 6 = 11 (left: 11)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n11 + 11 = 22\n22 + 2 = 24\nsure', '\n11 + 11 = 22\n22 + 2 = 24\nsure', '\n11  *  2  =  22        (remaining: 2)   \n11 +  2  =  13\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+10 - 6 = 4 (left: 4 15)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n4 + 15 = 19\n15 - 4 = 11\n4 * 15 = 60\n4 / 15 = 0.27\nimpossible', '\n4 + 15 = 19\n15 - 4 = 11\n4 * 15 = 60\n4 / 15 = 0.27\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n4 + 15 = 19\n15 - 4 = 11\n4 * 15 = 60\n4 / 15 = 0.26\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+4 + 15 = 19 (left: 19)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+10 - 15 = -5 (left: -5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n-5  = -5        (remaining: -5)   # optional\nimpossible', '\n-5 + (-5) = -10\nimpossible', '\n-5  - (-5)  = 0        (remaining: 24)   # optional\n0 + 24 = 24\nsure']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+4 + 6 = 10 (left: 10 9)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n10 + 9 = 19\n10 - 9 = 1\n10 * 9 = 90\n10 / 9 = 1.11\n10 * (9 - 1) = 10 * 8 = 80\n10 * (9 - 2) = 10 * 7 = 70\n10 * (9 - 3) = 10 * 6 = 60\n10 * (9 - 4) = 10 * 5 = 50\n10 * (9 - 5) = 10 * 4 = 40\n10 * (9 - 6) = 10 * 3 = 30\n10 * (9 - 7) = 10 * 2 = 20\n10 * (9 - 8) = 10 * 1 = 10\nimpossible', '\n10 + 9 = 19\n9 - 10 = -1\n10 * 9 = 90\n10 / 9 = 1.11\nimpossible', '\n10 + 9 = 19\n10 - 9 = 1\n10 * 9 = 90\n10 / 9 = 1.11\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+10 + 9 = 19 (left: 19)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+10 + 4 = 14 (left: 14 15)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n14 + 15 = 29\nimpossible', '\n14 + 15 = 29\n(15 - 14) * 15 = 1 * 15 = 15\n14 15 are too big to reach 24\nimpossible', '\n14 + 15 = 29\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+14 + 15 = 29 (left: 29)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n29 1 = 30\nimpossible', '\n29 + 0 = 29\n29 / 0 = error\n29 * 1 = 29\n29 / 1 = 29\nimpossible', '\n29 * 1 = 29\n29 / 1 = 29\n29 1 are all too big\nimpossible']
+The value is 0
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+6 + 10 = 16 (left: 16 9)
+
+getting value for 5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+4 + 11 = 15 (left:
+
+Number of value needed is 3, this time we have 2 valid output
+Number of value needed is 1, this time we have 1 valid output
+The valid outputs are ['\nYou forgot to use the number 6 and 10 in the answer. The answer is impossible.', '\nIt looks like the answer is incomplete. To get a judgement, I need a complete answer.\n\nHowever, based on the given answer "4 + 11 = 15", I can see that it\'s missing a number. The number 11 is not in the input list. Therefore, I would say:\n\nJudge: \nimpossible', "\nYou didn't reach 24, you reached 15. Also, there is no 11 in the input, so it's impossible to use it.\n\nJudge: \nimpossible"]
+The value is 0
+-- new step of 3
+
+-- new_ys --: [('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n1. 180 - 180 = 0 (left: 0)\n', 0, '1. 180 - 180 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n2. 180 / 180 = 1 (left: 1)\n', 0, '2. 180 / 180 = 1 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n3. 180 + 0 = 180 (left: 0)\n', 0, '3. 180 + 0 = 180 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n4. 180 / 0 = Not a number (left: Not a number)\n', 0, '4. 180 / 0 = Not a number (left: Not a number)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n5. 180 - 0 = 180 (left: 0)\n', 0, '5. 180 - 0 = 180 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n6. 180 * 1 = 180 (left: 1)\n', 0, '6. 180 * 1 = 180 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n7. 180 / 1 = 180 (left: 1)\n', 0, '7. 180 / 1 = 180 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n8. 180 + 1 = 181 (left: 181)\n', 0, '8. 180 + 1 = 181 (left: 181)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\nInput: 21\n', 1, 'Input: 21'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 + 0 = 21 (left: 0)\n', 1, '21 + 0 = 21 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 - 0 = 21 (left: 0)\n', 1, '21 - 0 = 21 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 * 0 = 0 (left: 0)\n', 1, '21 * 0 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 / 0 = Not possible (left: Not possible)\n', 1, '21 / 0 = Not possible (left: Not possible)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 + 21 = 42 (left: 42 - 18)\n', 1, '21 + 21 = 42 (left: 42 - 18)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 - 21 = 0 (left: 0)\n', 1, '21 - 21 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 * 1 = 21 (left: 1)\n', 1, '21 * 1 = 21 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 / 1 = 21 (left: 1)\n', 1, '21 / 1 = 21 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 + 3 = 24 (left: 24 - 3)\n', 1, '21 + 3 = 24 (left: 24 - 3)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\nInput: 21\n', 2, 'Input: 21'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 + 3 = 24 (left: 24)\n', 2, '21 + 3 = 24 (left: 24)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 - 3 = 18 (left: 18)\n', 2, '21 - 3 = 18 (left: 18)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 * 1.2 = 25.2 (left: 25.2)\n', 2, '21 * 1.2 = 25.2 (left: 25.2)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 / 1.2 = 17.5 (left: 17.5)\n', 2, '21 / 1.2 = 17.5 (left: 17.5)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 + 3 = 24 (left: 24)\n', 2, '21 + 3 = 24 (left: 24)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 + 1.2 = 22.2 (left: 22.2)\n', 2, '21 + 1.2 = 22.2 (left: 22.2)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 - 1.2 = 19.8 (left: 19.8)\n', 2, '21 - 1.2 = 19.8 (left: 19.8)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 / 1 = 21 (left: 21)\n', 2, '21 / 1 = 21 (left: 21)'), ("5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\nLet's try again from the beginning.\n", 3, "Let's try again from the beginning."), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 6 = 10 (left: 10 15)\n', 3, '4 + 6 = 10 (left: 10 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 15 = 25 (left: 25)\n', 3, '10 + 15 = 25 (left: 25)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 6 = 11 (left: 4 10 11)\n', 3, '5 + 6 = 11 (left: 4 10 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 10 = 14 (left: 14 11)\n', 3, '4 + 10 = 14 (left: 14 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n14 + 11 = 25 (left: 25)\n', 3, '14 + 11 = 25 (left: 25)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 4 = 9 (left: 6 10 9)\n', 3, '5 + 4 = 9 (left: 6 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 + 9 = 15 (left: 15 10)\n', 3, '6 + 9 = 15 (left: 15 10)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 15 = 25 (left: 25)\n', 3, '10 + 15 = 25 (left: 25)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\nLet me think for a moment...\n', 3, 'Let me think for a moment...'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 + 4 = 10 (left: 10 15)\n', 3, '6 + 4 = 10 (left: 10 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 15 = 25 (left: 25)\n', 3, '10 + 15 = 25 (left: 25)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\nWait, let me try another combination...\n', 3, 'Wait, let me try another combination...'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 4 = 9 (left: 6 10 9)\n', 3, '5 + 4 = 9 (left: 6 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 6 = 16 (left: 16 9)\n', 3, '10 + 6 = 16 (left: 16 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n16 + 9 = 25 (left: 25)\n', 3, '16 + 9 = 25 (left: 25)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\nLet me think for a moment...\n', 3, 'Let me think for a moment...'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 6 = 11 (left: 4 10 11)\n', 3, '5 + 6 = 11 (left: 4 10 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 10 = 14 (left: 14 11)\n', 3, '4 + 10 = 14 (left: 14 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n14 - 11 = 3 (left: 3)\n', 3, '14 - 11 = 3 (left: 3)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 6 = 11 (left: 4 10 11)\n', 3, '5 + 6 = 11 (left: 4 10 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 - 6 = 4 (left: 4 11)\n', 3, '10 - 6 = 4 (left: 4 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 11 = 15 (left: 15)\n', 3, '4 + 11 = 15 (left: 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n15 + 4 = 19 (left: 19)\n', 3, '15 + 4 = 19 (left: 19)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 4 = 9 (left: 6 10 9)\n', 3, '5 + 4 = 9 (left: 6 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 6 = 16 (left: 16 9)\n', 3, '10 + 6 = 16 (left: 16 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n16 - 9 = 7 (left: 7)\n', 3, '16 - 9 = 7 (left: 7)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 + 4 = 10 (left: 10 15)\n', 3, '6 + 4 = 10 (left: 10 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n15 - 10 = 5 (left: 5)\n', 3, '15 - 10 = 5 (left: 5)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 5 = 10 (left: 10)\n', 3, '5 + 5 = 10 (left: 10)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 - 4 = 2 (left: 2 15)\n', 3, '6 - 4 = 2 (left: 2 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n2 + 15 = 17 (left: 17)\n', 3, '2 + 15 = 17 (left: 17)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 4 = 9 (left: 6 10 9)\n', 3, '5 + 4 = 9 (left: 6 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 + 9 = 15 (left: 15 10)\n', 3, '6 + 9 = 15 (left: 15 10)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n15 - 10 = 5 (left: 5)\n', 3, '15 - 10 = 5 (left: 5)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 6 = 11 (left: 11)\n', 3, '5 + 6 = 11 (left: 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 - 6 = 4 (left: 4 15)\n', 3, '10 - 6 = 4 (left: 4 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 15 = 19 (left: 19)\n', 3, '4 + 15 = 19 (left: 19)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 + 4 = 10 (left: 10 15)\n', 3, '6 + 4 = 10 (left: 10 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 - 15 = -5 (left: -5)\n', 3, '10 - 15 = -5 (left: -5)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 4 = 9 (left: 6 10 9)\n', 3, '5 + 4 = 9 (left: 6 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 6 = 10 (left: 10 9)\n', 3, '4 + 6 = 10 (left: 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 9 = 19 (left: 19)\n', 3, '10 + 9 = 19 (left: 19)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 4 = 14 (left: 14 15)\n', 3, '10 + 4 = 14 (left: 14 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n14 + 15 = 29 (left: 29)\n', 3, '14 + 15 = 29 (left: 29)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 4 = 9 (left: 6 10 9)\n', 3, '5 + 4 = 9 (left: 6 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 + 10 = 16 (left: 16 9)\n', 3, '6 + 10 = 16 (left: 16 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n16 - 9 = 7 (left: 7)\n', 3, '16 - 9 = 7 (left: 7)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 6 = 11 (left: 4 10 11)\n', 3, '5 + 6 = 11 (left: 4 10 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 - 6 = 4 (left: 4 11)\n', 3, '10 - 6 = 4 (left: 4 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 11 = 15 (left:\n', 3, '4 + 11 = 15 (left:')]
+-- values -- [20.002, 0.003, 20.002, 0, 20.002, 0.003, 0.003, 0, 60.0, 20.002, 20.002, 20.002, 0, 0, 20.002, 0.003, 0.003, 0, 60.0, 60.0, 0.003, 1.002, 0, 0, 0, 0, 40.001, 0, 0, 0, 0, 0, 0, 0, 0, 0.003, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+-- sorted_new_ys --: (('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\nInput: 21\n', 1, 'Input: 21'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\nInput: 21\n', 2, 'Input: 21'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 + 3 = 24 (left: 24)\n', 2, '21 + 3 = 24 (left: 24)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 / 1 = 21 (left: 21)\n', 2, '21 / 1 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n1. 180 - 180 = 0 (left: 0)\n', 0, '1. 180 - 180 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n3. 180 + 0 = 180 (left: 0)\n', 0, '3. 180 + 0 = 180 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n5. 180 - 0 = 180 (left: 0)\n', 0, '5. 180 - 0 = 180 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 + 0 = 21 (left: 0)\n', 1, '21 + 0 = 21 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 - 0 = 21 (left: 0)\n', 1, '21 - 0 = 21 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 * 0 = 0 (left: 0)\n', 1, '21 * 0 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 - 21 = 0 (left: 0)\n', 1, '21 - 21 = 0 (left: 0)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 * 1.2 = 25.2 (left: 25.2)\n', 2, '21 * 1.2 = 25.2 (left: 25.2)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n2. 180 / 180 = 1 (left: 1)\n', 0, '2. 180 / 180 = 1 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n6. 180 * 1 = 180 (left: 1)\n', 0, '6. 180 * 1 = 180 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n7. 180 / 1 = 180 (left: 1)\n', 0, '7. 180 / 1 = 180 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 * 1 = 21 (left: 1)\n', 1, '21 * 1 = 21 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 / 1 = 21 (left: 1)\n', 1, '21 / 1 = 21 (left: 1)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 - 3 = 18 (left: 18)\n', 2, '21 - 3 = 18 (left: 18)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 + 9 = 15 (left: 15 10)\n', 3, '6 + 9 = 15 (left: 15 10)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n4. 180 / 0 = Not a number (left: Not a number)\n', 0, '4. 180 / 0 = Not a number (left: Not a number)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n8. 180 + 1 = 181 (left: 181)\n', 0, '8. 180 + 1 = 181 (left: 181)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 / 0 = Not possible (left: Not possible)\n', 1, '21 / 0 = Not possible (left: Not possible)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 + 21 = 42 (left: 42 - 18)\n', 1, '21 + 21 = 42 (left: 42 - 18)'), ('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\n21 + 3 = 24 (left: 24 - 3)\n', 1, '21 + 3 = 24 (left: 24 - 3)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 / 1.2 = 17.5 (left: 17.5)\n', 2, '21 / 1.2 = 17.5 (left: 17.5)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 + 3 = 24 (left: 24)\n', 2, '21 + 3 = 24 (left: 24)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 + 1.2 = 22.2 (left: 22.2)\n', 2, '21 + 1.2 = 22.2 (left: 22.2)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 - 1.2 = 19.8 (left: 19.8)\n', 2, '21 - 1.2 = 19.8 (left: 19.8)'), ("5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\nLet's try again from the beginning.\n", 3, "Let's try again from the beginning."), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 6 = 10 (left: 10 15)\n', 3, '4 + 6 = 10 (left: 10 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 15 = 25 (left: 25)\n', 3, '10 + 15 = 25 (left: 25)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 6 = 11 (left: 4 10 11)\n', 3, '5 + 6 = 11 (left: 4 10 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 10 = 14 (left: 14 11)\n', 3, '4 + 10 = 14 (left: 14 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n14 + 11 = 25 (left: 25)\n', 3, '14 + 11 = 25 (left: 25)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 4 = 9 (left: 6 10 9)\n', 3, '5 + 4 = 9 (left: 6 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 15 = 25 (left: 25)\n', 3, '10 + 15 = 25 (left: 25)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\nLet me think for a moment...\n', 3, 'Let me think for a moment...'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 + 4 = 10 (left: 10 15)\n', 3, '6 + 4 = 10 (left: 10 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 15 = 25 (left: 25)\n', 3, '10 + 15 = 25 (left: 25)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\nWait, let me try another combination...\n', 3, 'Wait, let me try another combination...'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 4 = 9 (left: 6 10 9)\n', 3, '5 + 4 = 9 (left: 6 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 6 = 16 (left: 16 9)\n', 3, '10 + 6 = 16 (left: 16 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n16 + 9 = 25 (left: 25)\n', 3, '16 + 9 = 25 (left: 25)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\nLet me think for a moment...\n', 3, 'Let me think for a moment...'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 6 = 11 (left: 4 10 11)\n', 3, '5 + 6 = 11 (left: 4 10 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 10 = 14 (left: 14 11)\n', 3, '4 + 10 = 14 (left: 14 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n14 - 11 = 3 (left: 3)\n', 3, '14 - 11 = 3 (left: 3)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 6 = 11 (left: 4 10 11)\n', 3, '5 + 6 = 11 (left: 4 10 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 - 6 = 4 (left: 4 11)\n', 3, '10 - 6 = 4 (left: 4 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 11 = 15 (left: 15)\n', 3, '4 + 11 = 15 (left: 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n15 + 4 = 19 (left: 19)\n', 3, '15 + 4 = 19 (left: 19)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 4 = 9 (left: 6 10 9)\n', 3, '5 + 4 = 9 (left: 6 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 6 = 16 (left: 16 9)\n', 3, '10 + 6 = 16 (left: 16 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n16 - 9 = 7 (left: 7)\n', 3, '16 - 9 = 7 (left: 7)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 + 4 = 10 (left: 10 15)\n', 3, '6 + 4 = 10 (left: 10 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n15 - 10 = 5 (left: 5)\n', 3, '15 - 10 = 5 (left: 5)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 5 = 10 (left: 10)\n', 3, '5 + 5 = 10 (left: 10)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 - 4 = 2 (left: 2 15)\n', 3, '6 - 4 = 2 (left: 2 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n2 + 15 = 17 (left: 17)\n', 3, '2 + 15 = 17 (left: 17)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 4 = 9 (left: 6 10 9)\n', 3, '5 + 4 = 9 (left: 6 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 + 9 = 15 (left: 15 10)\n', 3, '6 + 9 = 15 (left: 15 10)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n15 - 10 = 5 (left: 5)\n', 3, '15 - 10 = 5 (left: 5)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 6 = 11 (left: 11)\n', 3, '5 + 6 = 11 (left: 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 - 6 = 4 (left: 4 15)\n', 3, '10 - 6 = 4 (left: 4 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 15 = 19 (left: 19)\n', 3, '4 + 15 = 19 (left: 19)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 + 4 = 10 (left: 10 15)\n', 3, '6 + 4 = 10 (left: 10 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 - 15 = -5 (left: -5)\n', 3, '10 - 15 = -5 (left: -5)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 4 = 9 (left: 6 10 9)\n', 3, '5 + 4 = 9 (left: 6 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 6 = 10 (left: 10 9)\n', 3, '4 + 6 = 10 (left: 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 9 = 19 (left: 19)\n', 3, '10 + 9 = 19 (left: 19)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 10 = 15 (left: 4 6 15)\n', 3, '5 + 10 = 15 (left: 4 6 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 + 4 = 14 (left: 14 15)\n', 3, '10 + 4 = 14 (left: 14 15)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n14 + 15 = 29 (left: 29)\n', 3, '14 + 15 = 29 (left: 29)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 4 = 9 (left: 6 10 9)\n', 3, '5 + 4 = 9 (left: 6 10 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n6 + 10 = 16 (left: 16 9)\n', 3, '6 + 10 = 16 (left: 16 9)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n16 - 9 = 7 (left: 7)\n', 3, '16 - 9 = 7 (left: 7)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n5 + 6 = 11 (left: 4 10 11)\n', 3, '5 + 6 = 11 (left: 4 10 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n10 - 6 = 4 (left: 4 11)\n', 3, '10 - 6 = 4 (left: 4 11)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\n21 + 3 = 24 (left: 24)\n4 + 11 = 15 (left:\n', 3, '4 + 11 = 15 (left:'))
+-- sol values --: (60.0, 60.0, 60.0, 40.001, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 20.002, 1.002, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0.003, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+-- choices --: [('5 + 10 = 15 (left: 15 6)\n1. 15 + 6 = 21 (left: 21)\nInput: 21\nInput: 21\n', 1, 'Input: 21'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\nInput: 21\n', 2, 'Input: 21'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 + 3 = 24 (left: 24)\n', 2, '21 + 3 = 24 (left: 24)'), ('5 + 10 = 15 (left: 15 6)\n5. 6 + 15 = 21 (left: 21)\nInput: 21\n21 / 1 = 21 (left: 21)\n', 2, '21 / 1 = 21 (left: 21)'), ('5 + 10 = 15 (left: 15 6)\n7. 6 * 15 = 90 (left: 90)\n90 + 90 = 180 (left: 180)\n1. 180 - 180 = 0 (left: 0)\n', 0, '1. 180 - 180 = 0 (left: 0)')]
+
+Could not find answer, return most probable steps
+
+Retrieve steps: ['Input: 21', 'Input: 21', '1. 15 + 6 = 21 (left: 21)', '5 + 10 = 15 (left: 15 6)']
+numbered steps : 
+1: 5 + 10 = 15 (left: 15 6)
+2: 1. 15 + 6 = 21 (left: 21)
+3: Input: 21
+4: Input: 21
+The validate result: 
+ ['No, invalid at step 2']
+
+Receive result from reasoning:
+5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+Input: 21
+ 
+ with index 0
+
+Thoughts: 
+
+step 0 
+
+6 - 10 = -4 (left: 4 10)
+ 
+
+10 - 4 = 6 (left: 6 5 6)
+ 
+
+4 + 5 = 9 (left: 9 6 10)
+ 
+
+5 + 10 = 15 (left: 15 6)
+ 
+
+6 / 4 = 1.5 (left: 1.5 5 10)
+ 
+
+[0, 0, 0, 0, 0]
+step 1 
+
+5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+ 
+
+5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+ 
+
+5 + 10 = 15 (left: 15 6)
+3. 15 * 6 = 90 (left: 90)
+ 
+
+5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+ 
+
+6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+ 
+
+[3, 3, 3, 3, 0]
+step 2 
+
+5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+ 
+
+5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+ 
+
+5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+ 
+
+5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+21 + 3 = 24 (left: 24)
+ 
+
+6 - 10 = -4 (left: 4 10)
+4 / 10 = 0.4 (left: 0.4)
+0.4 * 60 = 24 (left: 24)
+ 
+
+[3, 0, 1, 1, 4]
+step 3 
+
+5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+Input: 21
+ 
+
+5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+Input: 21
+ 
+
+5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+21 + 3 = 24 (left: 24)
+ 
+
+5 + 10 = 15 (left: 15 6)
+5. 6 + 15 = 21 (left: 21)
+Input: 21
+21 / 1 = 21 (left: 21)
+ 
+
+5 + 10 = 15 (left: 15 6)
+7. 6 * 15 = 90 (left: 90)
+90 + 90 = 180 (left: 180)
+1. 180 - 180 = 0 (left: 0)
+ 
+
+[1, 2, 2, 2, 0]
+Index: 
+
+[[0, 0, 0, 0, 0], [3, 3, 3, 3, 0], [3, 0, 1, 1, 4], [1, 2, 2, 2, 0]]
+Steps: 
+
+step 0 
+
+6 - 10 = -4 (left: 4 10) 
+
+10 - 4 = 6 (left: 6 5 6) 
+
+4 + 5 = 9 (left: 9 6 10) 
+
+5 + 10 = 15 (left: 15 6) 
+
+6 / 4 = 1.5 (left: 1.5 5 10) 
+
+step 1 
+
+1. 15 + 6 = 21 (left: 21) 
+
+5. 6 + 15 = 21 (left: 21) 
+
+3. 15 * 6 = 90 (left: 90) 
+
+7. 6 * 15 = 90 (left: 90) 
+
+4 / 10 = 0.4 (left: 0.4) 
+
+step 2 
+
+90 + 90 = 180 (left: 180) 
+
+Input: 21 
+
+Input: 21 
+
+21 + 3 = 24 (left: 24) 
+
+0.4 * 60 = 24 (left: 24) 
+
+step 3 
+
+Input: 21 
+
+Input: 21 
+
+21 + 3 = 24 (left: 24) 
+
+21 / 1 = 21 (left: 21) 
+
+1. 180 - 180 = 0 (left: 0) 
+
+The final answer is: 
+
+5 + 10 = 15 (left: 15 6)
+1. 15 + 6 = 21 (left: 21)
+Input: 21
+Input: 21
+
+{'completion_tokens': 7, 'prompt_tokens': 571, 'cost': 0.01755}
