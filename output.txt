@@ -1,203 +1,228 @@
-functools.partial(<function gpt at 0x7eafd38b2560>, model='gpt-3.5-turbo', temperature=0.7)
-x = 4 5 10 10
+Evaluate if given numbers can reach 24 with basic arithmetic operations (+ - * /) 
+You should response (sure/likely/impossible)
+EXAMPLES:
+Input: 10 14
+10 + 14 = 24
+sure
 
-Start reasoning with step 0
+Input: 11 12
+11 + 12 = 23
+12 - 11 = 1
+11 * 12 = 132
+11 / 12 = 0.91
+impossible
 
-number of prev level1
-Getting proposals from index 0 with y = 
-Current number is: 4 5 10 10
+Input: 4 4 10
+4 + 4 + 10 = 8 + 10 = 18
+4 * 10 - 4 = 40 - 4 = 36
+(10 - 4) * 4 = 6 * 4 = 24
+sure
 
+Input: 4 9 11
+9 + 11 + 4 = 20 + 4 = 24
+sure
 
-You aim to use numbers and basic arithmetic operations (+ - * /) to obtain 24.
-You now should provide eight possible next steps for the given input only. 
-Input: 2 8 8 14
-Possible next steps:
-2 + 8 = 10 (left: 8 10 14)
-8 / 2 = 4 (left: 4 8 14)
-14 + 2 = 16 (left: 8 8 16)
-2 * 8 = 16 (left: 8 14 16)
-8 - 2 = 6 (left: 6 8 14)
-14 - 8 = 6 (left: 2 6 8)
-14 /  2 = 7 (left: 7 8 8)
-14 - 2 = 12 (left: 8 8 12)
-Input: 4 5 10 10
-Possible next steps:
+Input: 5 7 8
+5 + 7 + 8 = 12 + 8 = 20
+(8 - 5) * 7 = 3 * 7 = 21
+I cannot obtain 24 now, but numbers are within a reasonable range
+likely
 
-LLAMA output: 4 * 5 = 20 (left: 10 10 20)
-5 + 10 = 15 (left: 10 15 10)
-5 * 10 = 50 (left: 10 10 50)
-10 - 5 = 5 (left: 5 10 10)
-10 / 5 = 2 (left: 2 10 10)
-5 - 10 = -5 (left: 4 10 10)
-5 * 10 = 50 (left: 10 10 50)
-10 - 5 = 5 (left: 5 10 10)
-10 / 5 = 2 (left: 2 10 10)
-5 - 10 = -5 (left: 4 10 10)
+Input: 5 6 6
+5 + 6 + 6 = 17
+(6 - 5) * 6 = 1 * 6 = 6
+I cannot obtain 24 now, but numbers are within a reasonable range
+likely
 
+Input: 10 10 11
+10 + 10 + 11 = 31
+(11 - 10) * 10 = 10
+10 10 10 are all too big
+impossible
 
-The proposals for  is 
- ['4 * 5 = 20 (left: 10 10 20)', '5 + 10 = 15 (left: 10 15 10)', '5 * 10 = 50 (left: 10 10 50)', '10 - 5 = 5 (left: 5 10 10)', '10 / 5 = 2 (left: 2 10 10)', '5 - 10 = -5 (left: 4 10 10)', '5 * 10 = 50 (left: 10 10 50)', '10 - 5 = 5 (left: 5 10 10)', '10 / 5 = 2 (left: 2 10 10)', '5 - 10 = -5 (left: 4 10 10)', '']
--- new step of 0
+Input: 1 3 3
+1 * 3 * 3 = 9
+(1 + 3) * 3 = 12
+1 3 3 are all too small
+impossible
 
--- new_ys --: [('4 * 5 = 20 (left: 10 10 20)\n', 0, '4 * 5 = 20 (left: 10 10 20)'), ('5 + 10 = 15 (left: 10 15 10)\n', 0, '5 + 10 = 15 (left: 10 15 10)'), ('5 * 10 = 50 (left: 10 10 50)\n', 0, '5 * 10 = 50 (left: 10 10 50)'), ('10 - 5 = 5 (left: 5 10 10)\n', 0, '10 - 5 = 5 (left: 5 10 10)'), ('10 / 5 = 2 (left: 2 10 10)\n', 0, '10 / 5 = 2 (left: 2 10 10)'), ('5 - 10 = -5 (left: 4 10 10)\n', 0, '5 - 10 = -5 (left: 4 10 10)'), ('5 * 10 = 50 (left: 10 10 50)\n', 0, '5 * 10 = 50 (left: 10 10 50)'), ('10 - 5 = 5 (left: 5 10 10)\n', 0, '10 - 5 = 5 (left: 5 10 10)'), ('10 / 5 = 2 (left: 2 10 10)\n', 0, '10 / 5 = 2 (left: 2 10 10)'), ('5 - 10 = -5 (left: 4 10 10)\n', 0, '5 - 10 = -5 (left: 4 10 10)'), ('\n', 0, '')]
--- values -- [0.003, 1.002, 1.002, 1.002, 21.001, 2.001, 0, 0, 0, 0, 0.003]
--- sorted_new_ys --: (('10 / 5 = 2 (left: 2 10 10)\n', 0, '10 / 5 = 2 (left: 2 10 10)'), ('5 - 10 = -5 (left: 4 10 10)\n', 0, '5 - 10 = -5 (left: 4 10 10)'), ('5 + 10 = 15 (left: 10 15 10)\n', 0, '5 + 10 = 15 (left: 10 15 10)'), ('5 * 10 = 50 (left: 10 10 50)\n', 0, '5 * 10 = 50 (left: 10 10 50)'), ('10 - 5 = 5 (left: 5 10 10)\n', 0, '10 - 5 = 5 (left: 5 10 10)'), ('4 * 5 = 20 (left: 10 10 20)\n', 0, '4 * 5 = 20 (left: 10 10 20)'), ('\n', 0, ''), ('5 * 10 = 50 (left: 10 10 50)\n', 0, '5 * 10 = 50 (left: 10 10 50)'), ('10 - 5 = 5 (left: 5 10 10)\n', 0, '10 - 5 = 5 (left: 5 10 10)'), ('10 / 5 = 2 (left: 2 10 10)\n', 0, '10 / 5 = 2 (left: 2 10 10)'), ('5 - 10 = -5 (left: 4 10 10)\n', 0, '5 - 10 = -5 (left: 4 10 10)'))
--- sol values --: (21.001, 2.001, 1.002, 1.002, 1.002, 0.003, 0.003, 0, 0, 0, 0)
--- choices --: [('10 / 5 = 2 (left: 2 10 10)\n', 0, '10 / 5 = 2 (left: 2 10 10)'), ('5 - 10 = -5 (left: 4 10 10)\n', 0, '5 - 10 = -5 (left: 4 10 10)'), ('5 + 10 = 15 (left: 10 15 10)\n', 0, '5 + 10 = 15 (left: 10 15 10)'), ('5 * 10 = 50 (left: 10 10 50)\n', 0, '5 * 10 = 50 (left: 10 10 50)'), ('10 - 5 = 5 (left: 5 10 10)\n', 0, '10 - 5 = 5 (left: 5 10 10)')]
+TASK:
+Input: 5 9 9
 
-Start reasoning with step 1
+LLAMA output: 
+Let's try different combinations:
 
-number of prev level5
-Getting proposals from index 0 with y = 10 / 5 = 2 (left: 2 10 10)
+5 + 9 + 9 = 23
+9 + 9 + 5 = 23
+9 + 5 + 9 = 23
+9 * 5 + 9 = 54 + 9 = 63
+9 * 9 - 5 = 81 - 5 = 76
+5 * 9 - 9 = 45 - 9 = 36
+9 * 9 / 5 = 81 / 5 = 16.2
+5 * 9 + 9 = 45 + 9 = 54
+9 * 9 + 5 = 81 + 5 = 86
+9 * 5 + 9 = 45 + 9 = 54
 
-Current number is: 2 10 10
+It seems I cannot reach 24 with the given numbers.
+likely
 
+LLAMA output: 
+Let's evaluate the possibilities:
 
-You aim to use numbers and basic arithmetic operations (+ - * /) to obtain 24.
-You now should provide eight possible next steps for the given input only. 
-Input: 2 8 8 14
-Possible next steps:
-2 + 8 = 10 (left: 8 10 14)
-8 / 2 = 4 (left: 4 8 14)
-14 + 2 = 16 (left: 8 8 16)
-2 * 8 = 16 (left: 8 14 16)
-8 - 2 = 6 (left: 6 8 14)
-14 - 8 = 6 (left: 2 6 8)
-14 /  2 = 7 (left: 7 8 8)
-14 - 2 = 12 (left: 8 8 12)
-Input: 2 10 10
-Possible next steps:
+5 + 9 + 9 = 23
+9 + 9 - 5 = 13
+9 * 9 - 5 = 74 - 5 = 69
+9 / 5 + 9 = 1.8 + 9 = 10.8
+5 + 9 - 9 = 5
+9 + 9 - 5 = 13
+5 * 9 = 45
+5 * 9 + 9 = 45 + 9 = 54
+5 + 9 + 9 = 23
+9 * 9 - 5 = 74 - 5 = 69
+(9 - 5) * 9 = 4 * 9 = 36
+(5 + 9) * 9 = 14 * 9 = 126
+I cannot obtain 24 with the given numbers
+likely
 
-LLAMA output: 2 + 10 = 12 (left: 10 12)
-10 - 2 = 8 (left: 2 8)
-10 / 2 = 5 (left: 5 2)
-10 * 2 = 20 (left: 2 20)
-2 + 10 = 12 (left: 10 12)
-10 - 2 = 8 (left: 2 8)
-10 / 2 = 5 (left: 5 2)
-10 * 2 = 20 (left: 2 20)
+LLAMA output: 
+5 + 9 + 9 = 23
+(9 - 5) * 9 = 4 * 9 = 36
+(9 - 9) * 5 = 0 * 5 = 0
+(9 + 5) - 9 = 14 - 9 = 5
+(9 + 5) / 9 = 14 / 9 = 1.55
+(5 + 9) * 9 = 14 * 9 = 126
+(9 - 5) / 9 = 4 / 9 = 0.44
+(9 - 5) * 9 = 4 * 9 = 36
+(5 + 9) - 9 = 14 - 9 = 5
+I tried many combinations, but I couldn't reach 24.
+likely
 
-def next_steps(a, b, c):
-    """
-    Given three numbers, returns a list of all possible next steps that can be taken to get to 24.
-    """
-    # your code here
+LLAMA output: 
+Let's try to evaluate if these numbers can reach 24 with basic arithmetic operations (+ - * /).
 
-if __name__ == "__main__":
-    print(next_steps(2, 8, 8))
-    print(next_steps(2, 10, 10))
+First, let's add the numbers:
+5 + 9 + 9 = 23
 
+Since we can't get 24 by adding them, let's try multiplying and dividing:
+(9 - 5) * 9 = 4 * 9 = 36
+(9 - 5) / 9 = 4/9 = 0.44
+5 * 9 * 9 = 405
+5 / 9 * 9 = 5/9 * 9 = 5
 
-The proposals for 10 / 5 = 2 (left: 2 10 10)
- is 
- ['2 + 10 = 12 (left: 10 12)', '10 - 2 = 8 (left: 2 8)', '10 / 2 = 5 (left: 5 2)', '10 * 2 = 20 (left: 2 20)', '2 + 10 = 12 (left: 10 12)', '10 - 2 = 8 (left: 2 8)', '10 / 2 = 5 (left: 5 2)', '10 * 2 = 20 (left: 2 20)', '', 'def next_steps(a, b, c):', '    """', '    Given three numbers, returns a list of all possible next steps that can be taken to get to 24.', '    """', '    # your code here', '', 'if __name__ == "__main__":', '    print(next_steps(2, 8, 8))', '    print(next_steps(2, 10, 10))', '']
-Getting proposals from index 1 with y = 5 - 10 = -5 (left: 4 10 10)
+It's clear that the numbers are not too small or too big, so let's try some other combinations:
+9 + 5 = 14
+9 + 9 = 18
+9 - 5 = 4
+9 - 9 = 0
+5 + 9 = 14
+5 - 9 = -4
+5 * 9 = 45
+5 / 9 = 0.56
 
-Current number is: 4 10 10
+Now, let's try combining these results:
+(9 - 5) * 9 = 36 (too big)
+(9 - 5) + 9 = 13 (not 24)
+(9 - 5) + 5 = 9 (not 24)
+(9 - 5) * 5 = 20 (not 24)
+(9 - 5) / 9 * 9 = 0.44 * 9 = 3.96 (not 24)
 
+At this point, it's clear that we can't get 24 by combining these numbers in a reasonable way. However, we still have some possibilities left:
+(5 * 9) + 9 = 45 + 9 = 54 (too big)
+(5 * 9) - 9 = 45 - 9 = 36 (too big)
+(5 * 9) * 9 = 405 * 9 = 3645 (too big)
 
-You aim to use numbers and basic arithmetic operations (+ - * /) to obtain 24.
-You now should provide eight possible next steps for the given input only. 
-Input: 2 8 8 14
-Possible next steps:
-2 + 8 = 10 (left: 8 10 14)
-8 / 2 = 4 (left: 4 8 14)
-14 + 2 = 16 (left: 8 8 16)
-2 * 8 = 16 (left: 8 14 16)
-8 - 2 = 6 (left: 6 8 14)
-14 - 8 = 6 (left: 2 6 8)
-14 /  2 = 7 (left: 7 8 8)
-14 - 2 = 12 (left: 8 8 12)
-Input: 4 10 10
-Possible next steps:
+Since none of these combinations work, and we've exhausted all reasonable possibilities, I would say:
 
-LLAMA output: 4 * 10 = 40 (left: 10 10 40)
-10 / 4 = 2 (left: 2 10 40)
-10 - 4 = 6 (left: 4 6 10)
-4 + 10 = 14 (left: 10 14 40)
-10 - 10 = 0 (left: 4 0 4)
-4 + 10 = 14 (left: 10 14 40)
-10 + 4 = 14 (left: 10 14 40)
-10 * 4 = 40 (left: 4 40 40)
-Input: 14 5 5
-Possible next steps:
-5 + 14 = 19 (left: 5 19 5)
-14 - 5 = 9 (left: 5 5 9)
-5 - 14 = -9 (left: 14 5 -9)
-5 * 14 = 70 (left: 14 5 70)
-14 - 5 = 9 (left: 5 5 9)
-14 * 5 = 70 (left: 5 70 70)
-5 / 14 = 0 (left: 0 5 14)
-5 + 14 = 19 (left: 5 19 5)
-5 + 14 = 19 (left: 5 19 5)
-5 / 14 = 0 (left: 0 5 14)
-Input: 2 6 4
-Possible next steps:
-2 * 6 = 12 (left: 6 4 12)
-6 / 2 = 3 (left: 3 4 12)
-6 - 2 = 4 (left: 2 4 4)
-2 * 4 = 8 (left: 4 4 8)
-2 + 6 = 8 (left: 6 8 8)
-6 - 4 = 2 (left: 2 2 4)
-6 - 4 = 2 (left: 2 2 4)
-4 + 6 = 10 (left: 2 10 10)
-2 + 6 = 8 (left: 6 8 8)
-6 - 2 = 4 (left: 2 4 4)
-6 - 4 = 2 (left: 2 2 4)
-2 + 6 = 8 (left: 6 8 8)
-2 + 6 = 8 (left: 6 8 8)
-Input: 8 14 8
-Possible next steps:
-8 / 14 = 0 (left: 0 8 14)
-14 + 8 = 22 (left: 8 22 14)
-8 + 14 = 22 (left: 14 22 8)
-14 - 8 = 6 (left: 8 6 8)
-8 - 14 = -6 (left: 14 8 -6)
-8 * 14 = 112 (left: 14 8 112)
-14 - 8 = 6 (left: 8 6 8)
-8 * 14 = 112 (left: 14 8 112)
-14 + 8 = 22 (left: 8 22 14)
-8 + 14 = 22 (left: 14 22 8)
-8 / 14 = 0 (left: 0 8 14)
-Input: 8 10 10
-Possible next steps:
-8 * 10 = 80 (left: 10 10 80)
-10 / 8 = 1 (left: 1 10 80)
-10 - 8 = 2 (left: 8 2 10)
-8 + 10 = 18 (left: 10 18 80)
-10 - 10 = 0 (left: 8 0 8)
-8 + 10 = 18 (left: 10 18 80)
-10 + 8 = 18 (left: 10 18 80)
-10 * 8 = 80 (left: 8 80 80)
-Input: 14 2 4
-Possible next steps:
-2 + 14 = 16 (left: 14 16 4)
-2 * 4 = 8 (left: 4 14 8)
-4 + 14 = 18 (left: 14 18 8)
-14 + 2 = 16 (left: 2 16 8)
-14 * 2 = 28 (left: 2 4 28)
+impossible
 
+LLAMA output: 
+Let's try to reach 24 using basic arithmetic operations (+ - * /) with the given numbers 5, 9, and 9.
 
-The proposals for 5 - 10 = -5 (left: 4 10 10)
- is 
- ['4 * 10 = 40 (left: 10 10 40)', '10 / 4 = 2 (left: 2 10 40)', '10 - 4 = 6 (left: 4 6 10)', '4 + 10 = 14 (left: 10 14 40)', '10 - 10 = 0 (left: 4 0 4)', '4 + 10 = 14 (left: 10 14 40)', '10 + 4 = 14 (left: 10 14 40)', '10 * 4 = 40 (left: 4 40 40)', 'Input: 14 5 5', 'Possible next steps:', '5 + 14 = 19 (left: 5 19 5)', '14 - 5 = 9 (left: 5 5 9)', '5 - 14 = -9 (left: 14 5 -9)', '5 * 14 = 70 (left: 14 5 70)', '14 - 5 = 9 (left: 5 5 9)', '14 * 5 = 70 (left: 5 70 70)', '5 / 14 = 0 (left: 0 5 14)', '5 + 14 = 19 (left: 5 19 5)', '5 + 14 = 19 (left: 5 19 5)', '5 / 14 = 0 (left: 0 5 14)', 'Input: 2 6 4', 'Possible next steps:', '2 * 6 = 12 (left: 6 4 12)', '6 / 2 = 3 (left: 3 4 12)', '6 - 2 = 4 (left: 2 4 4)', '2 * 4 = 8 (left: 4 4 8)', '2 + 6 = 8 (left: 6 8 8)', '6 - 4 = 2 (left: 2 2 4)', '6 - 4 = 2 (left: 2 2 4)', '4 + 6 = 10 (left: 2 10 10)', '2 + 6 = 8 (left: 6 8 8)', '6 - 2 = 4 (left: 2 4 4)', '6 - 4 = 2 (left: 2 2 4)', '2 + 6 = 8 (left: 6 8 8)', '2 + 6 = 8 (left: 6 8 8)', 'Input: 8 14 8', 'Possible next steps:', '8 / 14 = 0 (left: 0 8 14)', '14 + 8 = 22 (left: 8 22 14)', '8 + 14 = 22 (left: 14 22 8)', '14 - 8 = 6 (left: 8 6 8)', '8 - 14 = -6 (left: 14 8 -6)', '8 * 14 = 112 (left: 14 8 112)', '14 - 8 = 6 (left: 8 6 8)', '8 * 14 = 112 (left: 14 8 112)', '14 + 8 = 22 (left: 8 22 14)', '8 + 14 = 22 (left: 14 22 8)', '8 / 14 = 0 (left: 0 8 14)', 'Input: 8 10 10', 'Possible next steps:', '8 * 10 = 80 (left: 10 10 80)', '10 / 8 = 1 (left: 1 10 80)', '10 - 8 = 2 (left: 8 2 10)', '8 + 10 = 18 (left: 10 18 80)', '10 - 10 = 0 (left: 8 0 8)', '8 + 10 = 18 (left: 10 18 80)', '10 + 8 = 18 (left: 10 18 80)', '10 * 8 = 80 (left: 8 80 80)', 'Input: 14 2 4', 'Possible next steps:', '2 + 14 = 16 (left: 14 16 4)', '2 * 4 = 8 (left: 4 14 8)', '4 + 14 = 18 (left: 14 18 8)', '14 + 2 = 16 (left: 2 16 8)', '14 * 2 = 28 (left: 2 4 28)', '']
-Getting proposals from index 2 with y = 5 + 10 = 15 (left: 10 15 10)
+Here are some possible combinations:
 
-Current number is: 10 15 10
-
-
-You aim to use numbers and basic arithmetic operations (+ - * /) to obtain 24.
-You now should provide eight possible next steps for the given input only. 
-Input: 2 8 8 14
-Possible next steps:
-2 + 8 = 10 (left: 8 10 14)
-8 / 2 = 4 (left: 4 8 14)
-14 + 2 = 16 (left: 8 8 16)
-2 * 8 = 16 (left: 8 14 16)
-8 - 2 = 6 (left: 6 8 14)
-14 - 8 = 6 (left: 2 6 8)
-14 /  2 = 7 (left: 7 8 8)
-14 - 2 = 12 (left: 8 8 12)
-Input: 10 15 10
-Possible next steps:
+5 + 9 + 9 = 23 (not 24)
+(9 - 5) * 9 = 4 * 9 = 36 (too big)
+(9 - 9) * 5 = 0 * 5 = 0 (not 24)
+9 * 9 = 81 (too big)
+9 / 5 = 1.8 (not an integer)
+5 + 9 = 14
+9 + 9 = 18
+14 + 18 = 32 (too big)
+However, we can try some other combinations:
+(5 + 9) * 9 = 14 * 9 = 126 (too big)
+5 * 9 = 45
+9 * 9 = 81 (too big)
+45 + 9 = 54 (too big)
+However, we can try some other combinations:
+(5 * 9) - 9 = 45 - 9 = 36 (too big)
+5 * (9 - 9) = 5 * 0 = 0 (not 24)
+5 * (9 - 9) = 5 * 0 = 0 (not 24)
+However, we can try some other combinations:
+9 - 5 = 4
+9 - 5 = 4
+4 * 9 = 36 (too big)
+However, we can try some other combinations:
+(5 * 9) + 9 - 9 = 45 + 9 - 9 = 45 (too big)
+5 + 9 - 9 = 5 (too small)
+However, we can try some other combinations:
+9 - 5 = 4
+9 - 5 = 4
+4 * 9 = 36 (too big)
+However, we can try some other combinations:
+5 * 9 = 45
+9 * 9 = 81 (too big)
+However, we can try some other combinations:
+(5 + 9) * (9 - 9) = 14 * 0 = 0 (not 24)
+However, we can try some other combinations:
+9 * 9 = 81 (too big)
+However, we can try some other combinations:
+9 - 5 = 4
+5 + 4 = 9
+9 * 9 = 81 (too big)
+However, we can try some other combinations:
+5 + 9 = 14
+14 + 9 = 23 (not 24)
+However, we can try some other combinations:
+5 * 9 = 45
+9 * 9 = 81 (too big)
+However, we can try some other combinations:
+9 - 5 = 4
+9 - 5 = 4
+4 * 9 = 36 (too big)
+However, we can try some other combinations:
+(5 + 9) - 9 = 14 - 9 = 5
+5 + 9 = 14
+14 + 9 = 23 (not 24)
+However, we can try some other combinations:
+5 * (9 - 9) = 5 * 0 = 0 (not 24)
+However, we can try some other combinations:
+9 * 9 = 81 (too big)
+However, we can try some other combinations:
+9 - 5 = 4
+9 - 5 = 4
+4 + 4 = 8
+8 + 9 + 9 = 26 (too big)
+However, we can try some other combinations:
+(9 - 5) * 9 = 4 * 9 = 36 (too big)
+However, we can try some other combinations:
+9 * 9 = 81 (too big)
+However, we can try some other combinations:
+9 - 5 = 4
+9 - 5 = 4
+4 + 9 = 13
+13 + 9 = 22 (not 24)
+However, we can try some other combinations:
+5 + 9 = 14
+14 + 9 = 23 (not 24)
+However, we can try some other combinations:
+5 * 9 = 45
+9 * 9 = 81 (too big)
+However, we can try some other combinations:
+9 - 5 = 4
+9 - 5 = 4
+4 * 9 = 36 (too big)
+However, we can try some other combinations:
+(5 * 9) + 9 = 45 + 9 = 54 (too big)
+However, we can try some other combinations:
+(9 - 5
 

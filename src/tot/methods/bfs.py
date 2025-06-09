@@ -53,7 +53,7 @@ def get_proposals_v1(task, x, y, index, feedback = None):
     print(f'Getting proposals from index {index} with y = {y}')
     propose_prompt = task.propose_prompt_wrap(x, y)
     # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
-    proposals = llama(propose_prompt, n=1, stop=None)[0].split('\n')
+    proposals = llama(propose_prompt, n=1, stop=None)[0].split('\n')[:8]
     print(f'The proposals for {y} is \n {proposals}')
     return [(y + _ + '\n', index , _) for _ in proposals]
 

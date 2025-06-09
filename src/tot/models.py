@@ -18,7 +18,7 @@ if api_base != "":
     openai.api_base = api_base
     
 #llama setup
-model_id = "meta-llama/Llama-3.1-8B"
+model_id = "meta-llama/Llama-3.1-8B-Instruct"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForCausalLM.from_pretrained(
     model_id,
@@ -26,10 +26,20 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map="auto"
 )
 
-def llama(prompt, temperature=0.7, max_tokens=1000, n=1, stop=None) -> list:
+def format_chat_prompt(user_prompt: str, system_prompt: str = "You are a helpful assistant.") -> str:
+    return (
+        "<|start_header_id|>system<|end_header_id|>\n"
+        f"{system_prompt}<|eot_id|>\n"
+        "<|start_header_id|>user<|end_header_id|>\n"
+        f"{user_prompt}<|eot_id|>\n"
+        "<|start_header_id|>assistant<|end_header_id|>\n"
+    )
+
+def llama(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=1000, n=1, stop=None) -> list:
+    prompt = format_chat_prompt(user_prompt, system_prompt)
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     outputs = []
-    print(prompt)
+    # print(f'LLAMA prompt: \n{prompt}')
     while n > 0:
         with torch.no_grad():
             res = model.generate(
@@ -41,11 +51,17 @@ def llama(prompt, temperature=0.7, max_tokens=1000, n=1, stop=None) -> list:
                 temperature=temperature,
                 top_p=0.9
             )
-        output_text = tokenizer.decode(res[0], skip_special_tokens=True)
+        raw_output_text = tokenizer.decode(res[0], skip_special_tokens=True)
+        output_text = raw_output_text
+        # print(f'Raw LLAMA output: {output_text}\n')
         if prompt in output_text:
             output_text = output_text.replace(prompt, "")
-        print(f'LLAMA output: {output_text}\n')
+        if "assistant" in output_text:
+            output_text =  output_text[(output_text.index("assistant") + 9):]
         outputs.append(output_text)
+        print(f'LLAMA output: {output_text}\n')
+        if(output_text == ""):
+            print(f'LLAMA output empty, raw output: {raw_output_text}')
         n -= 1
     return outputs
 
