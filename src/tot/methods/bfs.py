@@ -96,9 +96,13 @@ def validate(task, x, f_step):
     validate_outputs = gpt(validate_prompt, n=1, stop=None) 
     return validate_outputs
 
+def get_current_numbers(y: str) -> str:
+    last_line = y.strip().split('\n')[-1]
+    return last_line.split('left: ')[-1].split(')')[0]
+
 def check_answer(prev_level): #This is only for game of 24
     for i,y in enumerate(prev_level):
-        if 'Answer' in y:
+        if get_current_numbers(y) == '24' or 'Answer' in y or 'answer' in y:
             print("Found the answer! \n")
             return i,y
     return 0,None

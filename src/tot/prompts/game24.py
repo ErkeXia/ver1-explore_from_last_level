@@ -48,7 +48,10 @@ Answer: ((5 + 5) + 5) + 9 = 24
 Input: {input}
 '''
 
-cot_system_prompt = '''Use numbers and basic arithmetic operations (+ - * /) to obtain 24. Each step, you are only allowed to choose two of the remaining numbers to obtain a new number.
+cot_system_prompt = '''Use numbers and basic arithmetic operations (+ - * /) to obtain 24. 
+You are given the steps to obtain 24. 
+Return only the final answer
+Examples:
 Input: 4 4 6 8
 Steps:
 4 + 8 = 12 (left: 4 6 12)

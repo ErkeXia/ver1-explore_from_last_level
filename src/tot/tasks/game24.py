@@ -67,8 +67,10 @@ class Game24Task(Task):
         current_numbers = get_current_numbers(y if y else x)
         print(f'Current number is: {current_numbers}\n')
         if current_numbers == '24':
-            prompt = cot_user_prompt.format(input=x) + 'Steps:' + y
+            print(f'Found the answer! ')
+            prompt = cot_user_prompt.format(input=x) + 'Steps:' + y + 'Answer:'
             system = cot_system_prompt
+            print(f'system prompt: {system}\n user prompt: {prompt}')
         else:
             prompt = propose_user_prompt.format(input=current_numbers)
             system = propose_system_prompt
@@ -76,7 +78,7 @@ class Game24Task(Task):
     
     @staticmethod
     def propose_prompt_unwrap(value_outputs: list) -> list:
-        filtered = [s for s in value_outputs if s and 'is' not in s and 'are' not in s and 'steps' not in s]
+        filtered = [s for s in value_outputs if s and 'are' not in s and 'steps' not in s]
         return filtered
     
     @staticmethod

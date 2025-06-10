@@ -153,7 +153,53 @@ TASK:
 Input: 9 10 10
 '''
 
+cot_system_prompt = '''Use numbers and basic arithmetic operations (+ - * /) to obtain 24. 
+You are given the steps to obtain 24. 
+Return only the final answer
+Examples:
+Input: 4 4 6 8
+Steps:
+4 + 8 = 12 (left: 4 6 12)
+6 - 4 = 2 (left: 2 12)
+2 * 12 = 24 (left: 24)
+Answer: (6 - 4) * (4 + 8) = 24
+Input: 2 9 10 12
+Steps:
+12 * 2 = 24 (left: 9 10 24)
+10 - 9 = 1 (left: 1 24)
+24 * 1 = 24 (left: 24)
+Answer: (12 * 2) * (10 - 9) = 24
+Input: 4 9 10 13
+Steps:
+13 - 10 = 3 (left: 3 4 9)
+9 - 3 = 6 (left: 4 6)
+4 * 6 = 24 (left: 24)
+Answer: 4 * (9 - (13 - 10)) = 24
+Input: 1 4 8 8
+Steps:
+8 / 4 = 2 (left: 1 2 8)
+1 + 2 = 3 (left: 3 8)
+3 * 8 = 24 (left: 24)
+Answer: (1 + 8 / 4) * 8 = 24
+Input: 5 5 5 9
+Steps:
+5 + 5 = 10 (left: 5 9 10)
+10 + 5 = 15 (left: 9 15)
+15 + 9 = 24 (left: 24)
+Answer: ((5 + 5) + 5) + 9 = 24
+'''
+
+cot_user_prompt = '''
+Input: 4 5 6 10
+Steps:10 + 6 = 16 (left: 4 5 16)
+16 + 4 = 20 (left: 4 20)
+4 + 20 = 24 (left: 24)
+Answer: 
+'''
+
+
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
-    print(value_prompt)
-    output = llama(value_user_prompt, value_system_prompt, n=5, stop=None, temperature=0.5)
+    # print(value_prompt)
+    output = llama(cot_user_prompt, cot_system_prompt, n=5, stop=None, temperature=0.7)
+    print(output)
