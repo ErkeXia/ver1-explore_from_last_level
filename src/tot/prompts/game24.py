@@ -404,64 +404,74 @@ evaluate_prompt = """
 You are an expert verifier and coach for the Game of 24.
 
 Goal  
-Check a multi-step attempt that should turn four numbers into **24** using only +, -, *, /.  
-Besides legality, you must detect the first step that makes the target **unreachable**.
-
-Definitions
------------
-• blocking step = a legal step after which **no sequence** of further legal operations can yield 24.
+Check a multi-step attempt that should turn four numbers into **24** using only + - * /.  
+Besides legality, detect the first step after which **no further legal moves can ever reach 24**.
 
 Required output
 ---------------
-Exactly one line, with one of three possible forms:
+Return **one line** in **one** of these three forms:
 
-1. Yes                              # all steps legal, final left number = 24
-2. No, invalid at step N            # first illegal step
-3. No, blocking at step N           # first legal but hopeless step
+1. Yes - Answer: a op b op c op d = 24  
+   # all steps legal, final remaining number is 24
+
+2. No, invalid at step N - Should be: x op y = z (left: …)  
+   # first illegal or blocking step **and** you can suggest a concrete fix
+
+3. No, invalid at step N  
+   # first illegal or blocking step, but no clear single-step fix exists
 
 Procedure
 ---------
-1. Walk through the steps in order, checking:
-   • x and y are in the set of remaining number.  
-   • z is the correct result of x op y (no division by zero).  
-   • left list matches the updated multiset.
+• Walk through the steps in order, ensuring  
+   x and y are in the current multiset,  
+   z is the correct result of x op y (no ÷0),  
+   the stated “left” multiset is correct.  
 
-2. If a check fails → form 2.
+• If any check fails or the new multiset can never make 24, emit form 2 or 3.  
+  (Use form 2 only when you can give one better replacement line.)
 
-3. After **each legal step**, decide whether 24 is still reachable from the new multiset
-   If not reachable → form 3 using this step's index.
-
-4. When the steps end, the only number left is 24 -> form 1.
+• When all steps finish:  
+   one remaining number = 24 → form 1  
+   otherwise → “invalid” at the last step (form 3).
 
 Examples
---------
 Input: 4 4 6 8
 Steps:
 1: 4 + 8 = 12 (left: 4 6 12)
-2: 6 - 4 = 2 (left: 2 12)
+2: 6 - 4 = 2  (left: 2 12)
 3: 2 * 12 = 24 (left: 24)
 Judge:
-Yes
+Yes - Answer: (4 + 8) * (6 - 4) = 24
 
 Input: 4 5 10 10
 Steps:
 1: 10 - 4 = 6 (left: 6 5 10)
-2: 8 / 2 = 4 (left: 4 6)           # 8 and 2 not in multiset
+2: 8 / 2 = 4 (left: 4 6)        # 8 and 2 not present
 3: 4 * 6 = 24 (left: 24)
 Judge:
-No, invalid at step 2
+No, invalid at step 2 - Should be: 5 + 10 = 15 (left: 6 15)
 
 Input: 1 1 6 8
 Steps:
 1: 1 + 1 = 2 (left: 2 6 8)
-2: 2 + 6 = 8 (left: 8 8)         # after this, 24 is impossible
+2: 2 + 6 = 8 (left: 8 8)        # 24 now impossible
 Judge:
-No, blocking at step 2
+No, invalid at step 2
 
+Input: 4 5 6 10
+Steps:
+1: 10 - 6 = 4 (left: 4 4 5)
+2: 4 * 5 = 20 (left: 4 4 20)
+3: 4 + 20 = 24 (left: 4 24)
+Judge:
+No, invalid at step 2 - Should be:  4 * 5 = 20 (left: 4 20)
+
+TASK
 Input: {input}
 Steps:
 {f_step}
 Judge:
+
 """
 
 

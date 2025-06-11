@@ -10,6 +10,14 @@ def get_current_numbers(y: str) -> str:
     last_line = y.strip().split('\n')[-1]
     return last_line.split('left: ')[-1].split(')')[0]
 
+pat = re.compile(r'^\s*\d+(?:\.\d+)?\s*[.:)]\s*')
+
+def clean(text: str) -> str:
+    return '\n'.join(
+        pat.sub('', line)
+        for line in text.splitlines()
+        if line.strip()
+    )
 
 class Game24Task(Task):
     """
@@ -78,7 +86,7 @@ class Game24Task(Task):
     
     @staticmethod
     def propose_prompt_unwrap(value_outputs: list) -> list:
-        filtered = [s for s in value_outputs if s and 'are' not in s and 'steps' not in s]
+        filtered = [clean(s) for s in value_outputs if s and 'are' not in s and 'steps' not in s]
         return filtered
     
     @staticmethod
@@ -111,3 +119,14 @@ class Game24Task(Task):
         numbered_steps = '\n'.join(f"{i + 1}: {step}" for i, step in enumerate(ys))
         print(f'numbered steps : \n{numbered_steps}')
         return evaluate_prompt.format(input = x, f_step = numbered_steps)
+    
+    @staticmethod
+    def validate_unwrap(validate_output: str) ->  tuple[int, str]:
+        if('Yes' in validate_output or 'yes' in validate_output):
+            return -1, validate_output[validate_output.find('Ans'):]
+        match = re.search(r"No, invalid at step (\d+)", validate_output)
+        redo_s = int(match.group(1)) - 1
+        if('Should' in validate_output):
+            return redo_s, validate_output[(validate_output.find('Should be:') + 10):].strip()
+        return redo_s, ""
+            

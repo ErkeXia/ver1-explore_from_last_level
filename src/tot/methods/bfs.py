@@ -93,7 +93,9 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
 def validate(task, x, f_step):
     f_step.reverse()
     validate_prompt = task.validate_prompt_wrap(x, f_step)
+    print(f'Validate prompt: {validate_prompt}')
     validate_outputs = gpt(validate_prompt, n=1, stop=None) 
+    print(validate_outputs)
     return validate_outputs
 
 def get_current_numbers(y: str) -> str:
@@ -150,18 +152,20 @@ def reasoning(task, step, x, prev_level, feedback = None, single = None):
         idx, ans = check_answer(prev_level)
         if ans != None:
             print("Find final answer!\n")
-            return idx, ans
+            return idx, ans, step
     print("Could not find answer, return most probable steps\n")
-    return 0, prev_level[0]
+    return 0, prev_level[0], step
 
 def retrieve_steps(num_steps, idx, y):
     step = num_steps - 1
-    f_step = []
+    thought_chain = []
+    chain_index = []
     while step >= 0:
-        f_step.append(steps[step][idx])
+        thought_chain.append(steps[step][idx])
+        chain_index.append(idx)
         idx = connection[step][idx]
         step -= 1
-    return f_step
+    return thought_chain, chain_index
 
 def solve_v1(args, task, idx):
     global gpt
@@ -175,16 +179,34 @@ def solve_v1(args, task, idx):
     print(gpt)
     
     x = task.get_input(idx)  # input
-    x = "4 5 6 10"
+    x = "4 5 10 10"
     print(f'x = {x}\n')
     
     prev_level = ['']
     val_count = 0
-    while(val_count < 1): # call large model for at most three times
-        idx, y = reasoning(task, 0, x, prev_level, feedback = None, single = 0)
-        f_step = retrieve_steps(task.steps, idx, y)
-        print(f'Retrieve steps: {f_step}')
-        validate_outputs = validate(task, x, f_step)
+    step = 0
+    while(val_count < 3): # call large model for at most three times
+        idx, y, st = reasoning(task, step, x, prev_level, feedback = None, single = 0)
+        thought_chain, chain_index = retrieve_steps(st, idx, y)
+        chain_index.reverse()
+        print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
+        validate_outputs = validate(task, x, thought_chain)
+        redo_s, feedback = task.validate_unwrap(validate_outputs[0])
+        print(f'redo{redo_s} feedback: {feedback}')
+        if(redo_s == -1):
+            return feedback
+        if(feedback != ""):
+            prev_level = [feedback]
+            step = redo_s + 1
+            single = chain_index[step]
+        else:
+            if(redo_s == 0):
+                prev_level = ['']
+                single = 0
+            else:
+                prev_level = thoughts[redo_s - 1]
+            step = redo_s
+        print(f'prev_level {prev_level} \nstep {step}\nsingle{single}')
         print(f'The validate result: \n {validate_outputs}\n')
         val_count += 1
         
