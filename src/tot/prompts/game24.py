@@ -466,6 +466,13 @@ Steps:
 Judge:
 No, invalid at step 2 - Should be:  4 * 5 = 20 (left: 4 20)
 
+Input: 4 5 10 10
+Steps:
+1. 4 + 10 = 14 (left: 14 10)    # 5 should be left
+2. 14 + 10 = 24 (left: 24) 
+Judge:
+No, invalid at step 1 - Should be:  4 + 10 = 14 (left: 14 10 5)
+
 TASK
 Input: {input}
 Steps:

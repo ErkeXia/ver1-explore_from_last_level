@@ -206,27 +206,27 @@ def solve_v1(args, task, idx):
             else:
                 prev_level = thoughts[redo_s - 1]
             step = redo_s
-        print(f'prev_level {prev_level} \nstep {step}\nsingle{single}')
+        print(f'prev_level {prev_level} \nstep {step}\nsingle{single if single else -1}')
         print(f'The validate result: \n {validate_outputs}\n')
         val_count += 1
         
-    print(f'Receive result from reasoning:\n{y} \n with index {idx}\n')
+        print(f'Receive result from reasoning:\n{y} \n with index {idx}\n')
     
-    print("Thoughts: \n")
-    for i,ts in enumerate(thoughts):
-        print(f'step {i} \n')
-        for t in ts:
-            print(f'{t} \n')
-        print(connection[i])
+        print("Thoughts: \n")
+        for i,ts in enumerate(thoughts):
+            print(f'step {i} \n')
+            for t in ts:
+                print(f'{t} \n')
+            print(connection[i])
         
-    print("Index: \n")
-    print(connection)
-    
-    print("Steps: \n")
-    for i,ts in enumerate(steps):
-        print(f'step {i} \n')
-        for t in ts:
-            print(f'{t} \n')
+        print("Index: \n")
+        print(connection)
+        
+        print("Steps: \n")
+        for i,ts in enumerate(steps):
+            print(f'step {i} \n')
+            for t in ts:
+                print(f'{t} \n')
             
     return y
         
