@@ -198,7 +198,7 @@ def solve_v1(args, task, idx):
         if(feedback != ""):
             prev_level = [feedback]
             step = redo_s + 1
-            single = chain_index[step]
+            single = chain_index[step - 1]
         else:
             if(redo_s == 0):
                 prev_level = ['']
