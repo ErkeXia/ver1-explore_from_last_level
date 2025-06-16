@@ -179,7 +179,6 @@ def solve_v1(args, task, idx):
     print(gpt)
     
     x = task.get_input(idx)  # input
-    x = "4 5 10 10"
     print(f'x = {x}\n')
     
     prev_level = ['']
@@ -199,6 +198,7 @@ def solve_v1(args, task, idx):
             prev_level = [feedback]
             step = redo_s + 1
             single = chain_index[step - 1]
+            thoughts[step][single] = feedback
         else:
             if(redo_s == 0):
                 prev_level = ['']
