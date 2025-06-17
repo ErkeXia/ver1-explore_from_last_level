@@ -186,6 +186,22 @@ def solve_v1(args, task, idx):
     step = 0
     while(val_count < 3): # call large model for at most three times
         idx, y, st = reasoning(task, step, x, prev_level, feedback = None, single = 0)
+        print(f'thoughts after reasoning:\n')
+        print("Thoughts: \n")
+        for i,ts in enumerate(thoughts):
+            print(f'step {i} \n')
+            for t in ts:
+                print(f'{t} \n')
+            print(connection[i])
+        
+        print("Index: \n")
+        print(connection)
+        
+        print("Steps: \n")
+        for i,ts in enumerate(steps):
+            print(f'step {i} \n')
+            for t in ts:
+                print(f'{t} \n')
         thought_chain, chain_index = retrieve_steps(st, idx, y)
         chain_index.reverse()
         print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
@@ -193,18 +209,20 @@ def solve_v1(args, task, idx):
         redo_s, feedback = task.validate_unwrap(validate_outputs[0])
         print(f'redo{redo_s} feedback: {feedback}')
         if(redo_s == -1):
-            return feedback
+            return x, feedback
         if(feedback != ""):
             prev_level = [feedback]
             step = redo_s + 1
             single = chain_index[step - 1]
-            thoughts[step][single] = feedback
+            thoughts[redo_s][single] = feedback
+            steps[redo_s][single] = feedback
         else:
             if(redo_s == 0):
                 prev_level = ['']
                 single = 0
             else:
                 prev_level = thoughts[redo_s - 1]
+                single = None
             step = redo_s
         print(f'prev_level {prev_level} \nstep {step}\nsingle{single if single else -1}')
         print(f'The validate result: \n {validate_outputs}\n')
@@ -228,7 +246,7 @@ def solve_v1(args, task, idx):
             for t in ts:
                 print(f'{t} \n')
             
-    return y
+    return x, y
         
 
 def solve(args, task, idx, to_print=True):

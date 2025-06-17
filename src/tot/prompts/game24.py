@@ -404,7 +404,8 @@ evaluate_prompt = """
 You are an expert verifier and coach for the Game of 24.
 
 Goal  
-Check a multi-step attempt that should turn four numbers into **24** using only + - * /.  
+Check a multi-step attempt that should turn four numbers into **24** using only + - * /. Each number can be used once. 
+Check if the numbers used in each step is available, if the left list is correct, if there is arithmetic problem. 
 Besides legality, detect the first step after which **no further legal moves can ever reach 24**.
 
 Required output
@@ -454,7 +455,7 @@ No, invalid at step 2 - Should be: 5 + 10 = 15 (left: 6 15)
 Input: 1 1 6 8
 Steps:
 1: 1 + 1 = 2 (left: 2 6 8)
-2: 2 + 6 = 8 (left: 8 8)        # 24 now impossible
+2: 2 + 6 = 8 (left: 8 8)        # 24 now impossible with 8 8 left
 Judge:
 No, invalid at step 2
 
@@ -468,10 +469,17 @@ No, invalid at step 2 - Should be:  4 * 5 = 20 (left: 4 20)
 
 Input: 4 5 10 10
 Steps:
-1. 4 + 10 = 14 (left: 14 10)    # 5 should be left
+1. 4 + 10 = 14 (left: 14 10)    # 5 should be in the left list
 2. 14 + 10 = 24 (left: 24) 
 Judge:
 No, invalid at step 1 - Should be:  4 + 10 = 14 (left: 14 10 5)
+
+Input: 1 2 4 7
+Steps:
+1: 7 - 1 = 6 (left: 2 6 4)
+2: 4 * 6 = 24 (left: 24)        # 2 should be in the left list
+Judge:
+No, invalid at step 2
 
 TASK
 Input: {input}

@@ -129,4 +129,27 @@ class Game24Task(Task):
         if('Should' in validate_output):
             return redo_s, validate_output[(validate_output.find('Should be:') + 10):].strip()
         return redo_s, ""
-            
+    
+    @staticmethod
+    def check_answer(number_str, expression):
+        numbers = list(map(float, number_str.strip().split()))
+        expression = expression.replace(' ', '')
+        match = re.fullmatch(r'(.+)=([\d\.]+)', expression)
+        if not match:
+            return False, "Expression must be of the form '<expr> = 24'"
+        expr_part, result_str = match.groups()
+        try:
+            target_result = float(result_str)
+            if abs(target_result - 24) > 1e-6:
+                return False, f"Right-hand side is not 24 (got {target_result})"
+            used_numbers = list(map(float, re.findall(r'\d+\.?\d*', expr_part)))
+            input_numbers = list(map(float, numbers))
+            if sorted(used_numbers) != sorted(input_numbers):
+                return False, f"Used numbers {used_numbers} do not match input numbers {input_numbers}"
+            result = eval(expr_part)
+            if abs(result - 24) > 1e-6:
+                return False, f"Expression evaluates to {result}, not 24"
+            return True, "Correct"
+        except Exception as e:
+            return False, f"Invalid math operation: {e}"
+                
