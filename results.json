@@ -1,0 +1,709 @@
+[
+  {
+    "index": 800,
+    "input": "1 5 9 11",
+    "output": "(11 - 1) + (5 + 9) = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 801,
+    "input": "2 10 11 11",
+    "output": "22 - 12 = 10 (left: 10)10 + 2 = 12 (left: 12)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 802,
+    "input": "7 12 12 13",
+    "output": "8 * 12 = 96 (left: 12 96)12 * 96 = 1152 (left: 1152)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 803,
+    "input": "5 10 10 12",
+    "output": "5 + 10 = 15 (left: 10 10 12)\n10 - 10 = 0 (left: 0 12)\n0 + 12 = 12 (left: 12)\n12 + 12 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 804,
+    "input": "1 5 6 8",
+    "output": "5 + 1 = 6 (left: 6 6 8)6 / 8 = 0.75 (left: 0.75 8)\n75 / 8 = 0.09375 (left: 0.09375)\n09375 * 256 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 805,
+    "input": "2 2 3 11",
+    "output": "((3 - 2) + 11) * 2 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 806,
+    "input": "2 2 5 11",
+    "output": "5 + 11 = 16 (left: 16 2 2)16 - 2 = 14 (left: 14 2)\n14 - 2 = 12 (left: 12)\n12 + 12 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 807,
+    "input": "2 5 8 9",
+    "output": "(2 + 5) + (8 + 9) = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 808,
+    "input": "2 3 4 11",
+    "output": "11 - 4 = 7 (left: 6 7)6 + 7 = 13 (left: 13)\nInput: 13",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 809,
+    "input": "2 3 6 10",
+    "output": "10 + 3 = 13 (left: 8 13)13 - 8 = 5 (left: 5)\nInput: 5",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 810,
+    "input": "1 3 5 7",
+    "output": "3 * 12 = 36 (left: 36)36 / 1 = 36 (left: 1)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 811,
+    "input": "1 5 10 13",
+    "output": "(13 - 1) * (10 / 5) = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 812,
+    "input": "5 7 8 9",
+    "output": "(5 + 7) * (12 - 9) = 24",
+    "correct": false,
+    "feedback": "Used numbers [5.0, 7.0, 12.0, 9.0] do not match input numbers [5.0, 7.0, 8.0, 9.0]"
+  },
+  {
+    "index": 813,
+    "input": "5 11 12 12",
+    "output": "12 - 2.4 = 9.6 (left: 9.6 12)6 / 12 = 0.8 (left: 0.8)\n8 * 0.5 = 0.4 (left: 0.4)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 814,
+    "input": "8 8 8 13",
+    "output": "8 + 8 = 16 (left: 8 16 8 13)\n8 + 8 = 16 (left: 16 16 8)\n16 - 8 = 8 (left: 8 16 8)\n8 + 16 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 815,
+    "input": "3 3 6 11",
+    "output": "((11 + 3) - 6) * 3 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 816,
+    "input": "3 7 8 9",
+    "output": "9 - 7 = 2 (left: 2 8 3)8 * 3 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 817,
+    "input": "2 8 8 10",
+    "output": "6 * 8 = 48 (left: 48)48 / 24 = 2 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 818,
+    "input": "4 7 7 11",
+    "output": "77 / 11 = 7 (left: 7)7 + 17 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 819,
+    "input": "2 3 8 12",
+    "output": "2 * 12 = 24",
+    "correct": false,
+    "feedback": "Used numbers [2.0, 12.0] do not match input numbers [2.0, 3.0, 8.0, 12.0]"
+  },
+  {
+    "index": 820,
+    "input": "3 5 5 9",
+    "output": "9 - 3 = 6 (left: 5 5 6)5 + 5 = 10 (left: 10 6)\n6 / 10 = 0.6 (left: 0.6)\n6 / 4 = 0.15 (left: 0.15)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 821,
+    "input": "5 6 7 12",
+    "output": "2 * 18 = 36 (left: 12 36)36 - 12 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 822,
+    "input": "2 3 4 4",
+    "output": "4 + 2 = 6 (left: 6 3 4)3 * 4 = 12 (left: 12 6)\n6 / 12 = 0.5 (left: 0.5)\n5 * 1 = 0.5 (left: 0.5)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 823,
+    "input": "3 3 3 9",
+    "output": "(3 * 9 - 3) = 24",
+    "correct": false,
+    "feedback": "Used numbers [3.0, 9.0, 3.0] do not match input numbers [3.0, 3.0, 3.0, 9.0]"
+  },
+  {
+    "index": 824,
+    "input": "1 2 7 9",
+    "output": "7 + 2 = 9 (left: 1 9 9)9 + 1 = 10 (left: 10 9)\n10 + 9 = 19 (left: 19)\nInput: 19",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 825,
+    "input": "1 9 11 13",
+    "output": "9 + 1 = 10 (left: 10 12)12 + 10 = 22 (left: 22)\n2 + 22 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 826,
+    "input": "2 2 6 8",
+    "output": "2 * 6 = 12 (left: 6 12)6 / 12 = 0.5 (left: 0.5)\n5 + 0 = 0.5 (left: 0.5)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 827,
+    "input": "5 8 9 12",
+    "output": "((8 - 5) + 9) + 12 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 828,
+    "input": "1 1 4 10",
+    "output": "10 * 6 = 60 (left: 60)60 * 0.2 = 12 (left: 12)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 829,
+    "input": "4 5 10 13",
+    "output": "(13 - 4 + 10) + 5 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 830,
+    "input": "2 3 3 9",
+    "output": "(2 + 3) * 3 + 9 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 831,
+    "input": "3 3 4 9",
+    "output": "(3 + 9) + (3 * 4) = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 832,
+    "input": "3 4 6 10",
+    "output": "4 * 4 = 16 (left: 16 7)16 + 7 = 23 (left: 7)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 833,
+    "input": "3 4 6 12",
+    "output": "12 * 6 = 72 (left: 12 72)72 / 12 = 6 (left: 6)\n6 * 4 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 834,
+    "input": "3 7 7 10",
+    "output": "(3 * 7) + (10 - 7) = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 835,
+    "input": "3 9 11 12",
+    "output": "3 - 9 = -6 (left: -6 11 12)\n12 / (-11) = -1.09 (left: -1.09)\nInput: -1.09\n-1.09 * 1 = -1.09 (left: -1.09)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 836,
+    "input": "2 4 4 7",
+    "output": "4 + 7 = 11 (left: 8 11)8 * 11 = 88 (left: 88)\n88 - 64 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 837,
+    "input": "3 4 5 9",
+    "output": "3 * 5 = 15 (left: 5 15)15 + 5 = 20 (left: 20)\n20 - 0.4 = 19.6 (left: 0.4)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 838,
+    "input": "4 5 7 12",
+    "output": "28 - 12 = 16 (left: 5 16)5 * 16 = 80 (left: 80)\n80 / 10 = 8 (left: 8)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 839,
+    "input": "2 7 9 13",
+    "output": "13 + 2 = 15 (left: 15 7 9)15 + 7 = 22 (left: 7 9 22)\n7 - 9 = -2 (left: -2 22)\n22 - (-2) = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 840,
+    "input": "5 9 9 11",
+    "output": "(9 - 5 + 11) + 9 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 841,
+    "input": "6 6 6 8",
+    "output": "12 + 8 = 20 (left: 20 6)20 - 6 = 14 (left: 14)\n14 + 10 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 842,
+    "input": "1 7 12 12",
+    "output": "8 * 12 = 96 (left: 24 96)24 * 4 = 96 (left: 96)\n96 / 4 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 843,
+    "input": "1 6 9 10",
+    "output": "(9 - 1) + (6 + 10) = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 844,
+    "input": "2 5 6 10",
+    "output": "70 / 10 = 7 (left: 6 7)6 + 7 = 13 (left: 13)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 845,
+    "input": "3 8 9 12",
+    "output": "(8 + 3 - 9) * 12 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 846,
+    "input": "2 3 6 11",
+    "output": "11 - 11 = 0 (left: 24 0)Input: 24 0",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 847,
+    "input": "2 4 5 9",
+    "output": "4 / 2 = 2 (left: 2 4)2 * 4 = 8 (left: 8)\nInput: 8",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 848,
+    "input": "4 7 11 12",
+    "output": "8 * 3 = 24 (left: 24)12 * 2 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 849,
+    "input": "2 2 4 9",
+    "output": "4 * 9 = 36 (left: 4 36)36 * 4 = 144 (left: 144)\n144 / 6 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 850,
+    "input": "2 6 8 8",
+    "output": "(2 + 6) + 8 + 8 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 851,
+    "input": "4 5 5 7",
+    "output": "10 * 4 = 40 (left: 40)40 + 40 = 80 (left: 80)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 852,
+    "input": "2 3 8 11",
+    "output": "(2 + 11) + (3 + 8) = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 853,
+    "input": "4 7 8 13",
+    "output": "(7 - 4 + 8) + 13 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 854,
+    "input": "6 6 8 12",
+    "output": "(8 - 6) * 12 = 24",
+    "correct": false,
+    "feedback": "Used numbers [8.0, 6.0, 12.0] do not match input numbers [6.0, 6.0, 8.0, 12.0]"
+  },
+  {
+    "index": 855,
+    "input": "5 6 8 9",
+    "output": "((5 - 8) - 6) + (9 - (-9)) = 24",
+    "correct": false,
+    "feedback": "Used numbers [5.0, 8.0, 6.0, 9.0, 9.0] do not match input numbers [5.0, 6.0, 8.0, 9.0]"
+  },
+  {
+    "index": 856,
+    "input": "3 3 5 9",
+    "output": "5 + 9 = 14 (left: 3 14)3 + 14 = 17 (left: 17)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 857,
+    "input": "4 5 7 11",
+    "output": "(4 * 5) + (11 - 7) = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 858,
+    "input": "4 9 12 12",
+    "output": "(12 / 4 + 9) + 12 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 859,
+    "input": "3 3 6 9",
+    "output": "(3 * 3 + 9) + 6 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 860,
+    "input": "3 5 9 13",
+    "output": "((9 - 3) + 5) + 13 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 861,
+    "input": "3 7 8 13",
+    "output": "(13 - 7) * (6 - 3) = 24",
+    "correct": false,
+    "feedback": "Used numbers [13.0, 7.0, 6.0, 3.0] do not match input numbers [3.0, 7.0, 8.0, 13.0]"
+  },
+  {
+    "index": 862,
+    "input": "4 4 5 7",
+    "output": "4 * 16 = 64 (left: 64)64 / 16 = 4 (left: 4)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 863,
+    "input": "1 5 5 11",
+    "output": "11 - 6 = 5 (left: 5 6)6 - 5 = 1 (left: 1)\n1 * 24 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 864,
+    "input": "2 4 6 13",
+    "output": "4 * 11 = 44 (left: 44 6)6 * 44 = 264 (left: 264)\n264 / 22 = 12 (left: 12)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 865,
+    "input": "6 7 9 12",
+    "output": "1 + 12 = 13 (left: 9 13)13 - 9 = 4 (left: 4)\n4 * 6 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 866,
+    "input": "1 5 6 13",
+    "output": "5 + 6 = 11 (left: 11 13)11 + 13 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 867,
+    "input": "3 8 8 11",
+    "output": "(11 - 3 + 8) + 8 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 868,
+    "input": "2 3 4 10",
+    "output": "(3 * 4 + 2) + 10 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 869,
+    "input": "6 6 8 8",
+    "output": "((8 - 6) * (6 + 6)) = 24",
+    "correct": false,
+    "feedback": "Used numbers [8.0, 6.0, 6.0, 6.0] do not match input numbers [6.0, 6.0, 8.0, 8.0]"
+  },
+  {
+    "index": 870,
+    "input": "4 9 9 10",
+    "output": "(9 - 4 + 9) + 10 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 871,
+    "input": "3 3 7 9",
+    "output": "(9 / 3) * 7 + 3 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 872,
+    "input": "1 7 9 10",
+    "output": "(9 - 1) * (10 - 7) = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 873,
+    "input": "2 3 9 13",
+    "output": "((13 - 9) * 2) * 3 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 874,
+    "input": "3 3 3 5",
+    "output": "(5 + 3) * 3 = 24",
+    "correct": false,
+    "feedback": "Used numbers [5.0, 3.0, 3.0] do not match input numbers [3.0, 3.0, 3.0, 5.0]"
+  },
+  {
+    "index": 875,
+    "input": "5 6 9 12",
+    "output": "(5 + (6 - 9)) * 12 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 876,
+    "input": "6 9 10 11",
+    "output": "(9 - 6 + 11) + 10 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 877,
+    "input": "2 4 5 11",
+    "output": "(4 * 2) + (5 + 11) = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 878,
+    "input": "1 2 5 10",
+    "output": "2 + 5 = 7 (left: 7 10)\n7 + 10 = 17 (left: 17)\n17 + 7 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 879,
+    "input": "2 2 2 5",
+    "output": "2 + 2 = 4 (left: 4 2 5)4 - 2 = 2 (left: 2 5)\n2 / 5 = 0.4 (left: 0.4)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 880,
+    "input": "6 12 13 13",
+    "output": "25 - 19 = 6 (left: 6 13)6 / 13 = 0.46 (left: 0.46)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 881,
+    "input": "3 3 6 10",
+    "output": "6 + 6 = 12 (left: 12 10)12 + 10 = 22 (left: 22)\n22 + 2 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 882,
+    "input": "3 4 8 11",
+    "output": "11 - 4 = 7 (left: 3 8 7)\n8 * 3 = 24 (left: 24 7)\n24 / 7 = 3.43 (left: 3.43)\n43 + 20.57 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 883,
+    "input": "4 4 6 13",
+    "output": "13 - 4 = 9 (left: 9 4 6)6 - 4 = 2 (left: 9 2)\n9 + 9 = 18 (left: 18)\n18 - 6 = 12 (left: 12)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 884,
+    "input": "4 6 7 10",
+    "output": "(6 - 4) * 7 + 10 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 885,
+    "input": "6 11 11 12",
+    "output": "11 - 12 = -1 (left: 6 -1 11)\n-1 - 6 = -7 (left: -7 11)\n-7 + 11 = 4 (left: 4)\n4 * 6 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 886,
+    "input": "3 6 9 11",
+    "output": "(11 - 6) * 3 + 9 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 887,
+    "input": "5 7 9 13",
+    "output": "((9 - 5) + 7) + 13 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 888,
+    "input": "2 4 12 12",
+    "output": "(12 / 2) * 4 = 24",
+    "correct": false,
+    "feedback": "Used numbers [12.0, 2.0, 4.0] do not match input numbers [2.0, 4.0, 12.0, 12.0]"
+  },
+  {
+    "index": 889,
+    "input": "4 9 11 12",
+    "output": "4 * 11 = 44 (left: 21 44)44 - 21 = 23 (left: 23)\n23 + 1 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 890,
+    "input": "7 8 9 13",
+    "output": "13 - 9 = 4 (left: 4 6)4 * 6 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 891,
+    "input": "2 6 12 12",
+    "output": "6 * 2 = 12 (left: 12)12 + 12 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 892,
+    "input": "3 4 5 6",
+    "output": "7 - 5 = 2 (left: 2 6)2 * 6 = 12 (left: 12)\n12 + 0 = 12 (left: 12)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 893,
+    "input": "6 10 12 12",
+    "output": "(12 / 6 + 10) * 12 = 24",
+    "correct": false,
+    "feedback": "Expression evaluates to 144.0, not 24"
+  },
+  {
+    "index": 894,
+    "input": "5 5 5 9",
+    "output": "(5 + 5 + 10) + 9 = 24",
+    "correct": false,
+    "feedback": "Used numbers [5.0, 5.0, 10.0, 9.0] do not match input numbers [5.0, 5.0, 5.0, 9.0]"
+  },
+  {
+    "index": 895,
+    "input": "5 5 6 11",
+    "output": "96 / 5 = 19.2 (left: 19.2)Input: 19.2",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 896,
+    "input": "6 8 9 9",
+    "output": "14 + 9 = 23 (left: 23 9)23 / 9 = 2.56 (left: 2.56)\n56 / 0.64 = 4 (left: 4)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 897,
+    "input": "3 3 6 13",
+    "output": "9 + 13 = 22 (left: 22 6)22 + 6 = 28 (left: 28)\n28 / 4 = 7 (left: 4)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 898,
+    "input": "6 8 9 11",
+    "output": "11 - 6 = 5 (left: 5 8 9)5 - 8 = -3 (left: -3 8 9)\n8 + 9 = 17 (left: 17)\n17 + 7 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  },
+  {
+    "index": 899,
+    "input": "1 3 3 11",
+    "output": "(11 - 3) * 3 * 1 = 24",
+    "correct": true,
+    "feedback": "Correct"
+  },
+  {
+    "index": 900,
+    "input": "4 5 6 10",
+    "output": "10 - 4 = 6 (left: 5 6 10)5 + 6 = 11 (left: 11 10)\n11 - 10 = 1 (left: 1)\n1 * 24 = 24 (left: 24)",
+    "correct": false,
+    "feedback": "Expression must be of the form '<expr> = 24'"
+  }
+]

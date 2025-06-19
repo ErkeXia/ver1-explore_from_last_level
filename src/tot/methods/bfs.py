@@ -55,26 +55,26 @@ def get_value(task, x, y, n_evaluate_sample, cache_value=True):
             if any(k in s.strip().split('\n')[-1] for k in keywords)
         ]
         valid_count = len(valid_outputs)
-        print(f'Number of value needed is {num}, this time we have {valid_count} valid output')
+        # print(f'Number of value needed is {num}, this time we have {valid_count} valid output')
         num -= valid_count
         value_outputs.extend(valid_outputs)
         attempt += 1
     if(attempt == max_attempts):
         print('Reach max attempts')
-    print(f'The valid outputs are {value_outputs}')
+    # print(f'The valid outputs are {value_outputs}')
     value = task.value_outputs_unwrap(x, y, value_outputs)
-    print(f'The value is {value}')
+    # print(f'The value is {value}')
     if cache_value:
         task.value_cache[user] = value
     return value
 
 def get_proposals_v1(task, x, y, index, feedback = None): 
-    print(f'Getting proposals from index {index} with y = {y}')
+    # print(f'Getting proposals from index {index} with y = {y}')
     system, user = task.propose_prompt_wrap(x, y)
     # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
     proposals = llama(user, system, n=1, stop=None)[0].split('\n')
     proposals = task.propose_prompt_unwrap(proposals)
-    print(f'The proposals for {y} is \n {proposals}')
+    # print(f'The proposals for {y} is \n {proposals}')
     return [(y + _ + '\n', index , _) for _ in proposals]
 
 def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
@@ -84,7 +84,7 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
         if y in local_value_cache:  # avoid duplicate candidates
             value = 0
         else:
-            print(f'getting value for {y}')
+            # print(f'getting value for {y}')
             value = get_value(task, x, y, n_evaluate_sample, cache_value=cache_value)
             local_value_cache[y] = value
         values.append(value)
@@ -93,9 +93,9 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
 def validate(task, x, f_step):
     f_step.reverse()
     validate_prompt = task.validate_prompt_wrap(x, f_step)
-    print(f'Validate prompt: {validate_prompt}')
+    # print(f'Validate prompt: {validate_prompt}')
     validate_outputs = gpt(validate_prompt, n=1, stop=None) 
-    print(validate_outputs)
+    # print(validate_outputs)
     return validate_outputs
 
 def get_current_numbers(y: str) -> str:
@@ -113,8 +113,8 @@ def reasoning(task, step, x, prev_level, feedback = None, single = None):
     #if prev_level only one element(first node or refinement), single signal the index of previous thoughts
     #this should be improved
     while step < task.steps:
-        print(f'Start reasoning with step {step}\n')
-        print(f'number of prev level{len(prev_level)}')
+        # print(f'Start reasoning with step {step}\n')
+        # print(f'number of prev level{len(prev_level)}')
         if(len(prev_level) > 5):
             print("Error! \n")
             print(prev_level)
@@ -135,9 +135,9 @@ def reasoning(task, step, x, prev_level, feedback = None, single = None):
         select_new_ys = [new_ys[select_id] for select_id in select_ids]
         
         #log
-        print(f'-- new step of {step}\n')
+        # print(f'-- new step of {step}\n')
         sorted_new_ys, sorted_values = zip(*sorted(zip(new_ys, values), key=lambda x: x[1], reverse=True))
-        print(f'-- new_ys --: {new_ys}\n-- values -- {values}\n-- sorted_new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
+        # print(f'-- new_ys --: {new_ys}\n-- values -- {values}\n-- sorted_new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
         
         #update thoughts tree
         prev_level = [y for (y,i,s) in select_new_ys]
@@ -186,22 +186,22 @@ def solve_v1(args, task, idx):
     step = 0
     while(val_count < 3): # call large model for at most three times
         idx, y, st = reasoning(task, step, x, prev_level, feedback = None, single = 0)
-        print(f'thoughts after reasoning:\n')
-        print("Thoughts: \n")
-        for i,ts in enumerate(thoughts):
-            print(f'step {i} \n')
-            for t in ts:
-                print(f'{t} \n')
-            print(connection[i])
+        # print(f'thoughts after reasoning:\n')
+        # print("Thoughts: \n")
+        # for i,ts in enumerate(thoughts):
+        #     print(f'step {i} \n')
+        #     for t in ts:
+        #         print(f'{t} \n')
+        #     print(connection[i])
         
-        print("Index: \n")
-        print(connection)
+        # print("Index: \n")
+        # print(connection)
         
-        print("Steps: \n")
-        for i,ts in enumerate(steps):
-            print(f'step {i} \n')
-            for t in ts:
-                print(f'{t} \n')
+        # print("Steps: \n")
+        # for i,ts in enumerate(steps):
+        #     print(f'step {i} \n')
+        #     for t in ts:
+        #         print(f'{t} \n')
         thought_chain, chain_index = retrieve_steps(st, idx, y)
         chain_index.reverse()
         print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
@@ -228,23 +228,23 @@ def solve_v1(args, task, idx):
         print(f'The validate result: \n {validate_outputs}\n')
         val_count += 1
         
-        print(f'Receive result from reasoning:\n{y} \n with index {idx}\n')
+        # print(f'Receive result from reasoning:\n{y} \n with index {idx}\n')
     
-        print("Thoughts: \n")
-        for i,ts in enumerate(thoughts):
-            print(f'step {i} \n')
-            for t in ts:
-                print(f'{t} \n')
-            print(connection[i])
+        # print("Thoughts: \n")
+        # for i,ts in enumerate(thoughts):
+        #     print(f'step {i} \n')
+        #     for t in ts:
+        #         print(f'{t} \n')
+        #     print(connection[i])
         
-        print("Index: \n")
-        print(connection)
+        # print("Index: \n")
+        # print(connection)
         
-        print("Steps: \n")
-        for i,ts in enumerate(steps):
-            print(f'step {i} \n')
-            for t in ts:
-                print(f'{t} \n')
+        # print("Steps: \n")
+        # for i,ts in enumerate(steps):
+        #     print(f'step {i} \n')
+        #     for t in ts:
+        #         print(f'{t} \n')
             
     return x, y
         

@@ -49,21 +49,24 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
                 pad_token_id=tokenizer.eos_token_id,
                 do_sample=True,
                 temperature=temperature,
-                top_p=0.9
+                top_p=0.9,
+                num_return_sequences=n
             )
-        raw_output_text = tokenizer.decode(res[0], skip_special_tokens=True)
-        output_text = raw_output_text
-        # print(f'Raw LLAMA output: {output_text}\n')
-        if prompt in output_text:
-            output_text = output_text.replace(prompt, "")
-        if "assistant" in output_text:
-            index = output_text.rfind("assistant")
-            output_text =  output_text[(index + 9):]
-        outputs.append(output_text)
-        # print(f'LLAMA output: {output_text}\n')
-        if(output_text == ""):
-            print(f'LLAMA output empty, raw output: {raw_output_text}')
-        n -= 1
+        responses = [tokenizer.decode(output, skip_special_tokens=True) for output in res]
+        # raw_output_text = tokenizer.decode(res[0], skip_special_tokens=True)
+        for raw_output_text in responses:
+            output_text = raw_output_text
+            # print(f'Raw LLAMA output: {output_text}\n')
+            if prompt in output_text:
+                output_text = output_text.replace(prompt, "")
+            if "assistant" in output_text:
+                index = output_text.rfind("assistant")
+                output_text =  output_text[(index + 9):]
+            outputs.append(output_text)
+            # print(f'LLAMA output: {output_text}\n')
+            if(output_text == ""):
+                print(f'LLAMA output empty, raw output: {raw_output_text}')
+            n -= 1
     return outputs
 
 @backoff.on_exception(backoff.expo, openai.error.OpenAIError)
