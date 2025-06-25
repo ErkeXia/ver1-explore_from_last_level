@@ -55,13 +55,13 @@ def get_value(task, x, y, n_evaluate_sample, cache_value=True):
             if any(k in s.strip().split('\n')[-1] for k in keywords)
         ]
         valid_count = len(valid_outputs)
-        # print(f'Number of value needed is {num}, this time we have {valid_count} valid output')
+        print(f'Number of value needed is {num}, this time we have {valid_count} valid output')
         num -= valid_count
         value_outputs.extend(valid_outputs)
         attempt += 1
     if(attempt == max_attempts):
         print('Reach max attempts')
-    # print(f'The valid outputs are {value_outputs}')
+    print(f'The valid outputs are {value_outputs}')
     value = task.value_outputs_unwrap(x, y, value_outputs)
     # print(f'The value is {value}')
     if cache_value:
@@ -69,12 +69,12 @@ def get_value(task, x, y, n_evaluate_sample, cache_value=True):
     return value
 
 def get_proposals_v1(task, x, y, index, feedback = None): 
-    # print(f'Getting proposals from index {index} with y = {y}')
+    print(f'Getting proposals from index {index} with y = {y}')
     system, user = task.propose_prompt_wrap(x, y)
     # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
     proposals = llama(user, system, n=1, stop=None)[0].split('\n')
     proposals = task.propose_prompt_unwrap(proposals)
-    # print(f'The proposals for {y} is \n {proposals}')
+    print(f'The proposals for {y} is \n {proposals}')
     return [(y + _ + '\n', index , _) for _ in proposals]
 
 def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
@@ -84,7 +84,7 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
         if y in local_value_cache:  # avoid duplicate candidates
             value = 0
         else:
-            # print(f'getting value for {y}')
+            print(f'getting value for {y}')
             value = get_value(task, x, y, n_evaluate_sample, cache_value=cache_value)
             local_value_cache[y] = value
         values.append(value)

@@ -5,6 +5,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
 completion_tokens = prompt_tokens = 0
+llama_tokens = prompt_llama_tokens = 0
 
 api_key = os.getenv("OPENAI_API_KEY", "")
 if api_key != "":
@@ -36,8 +37,11 @@ def format_chat_prompt(user_prompt: str, system_prompt: str = "You are a helpful
     )
 
 def llama(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=1000, n=1, stop=None) -> list:
+    global prompt_llama_tokens, llama_tokens
     prompt = format_chat_prompt(user_prompt, system_prompt)
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    prompt_token_count = inputs.input_ids.shape[-1]
+    prompt_llama_tokens += prompt_token_count
     outputs = []
     # print(f'LLAMA prompt: \n{prompt}')
     while n > 0:
@@ -52,9 +56,9 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
                 top_p=0.9,
                 num_return_sequences=n
             )
-        responses = [tokenizer.decode(output, skip_special_tokens=True) for output in res]
         # raw_output_text = tokenizer.decode(res[0], skip_special_tokens=True)
-        for raw_output_text in responses:
+        for output in res:
+            raw_output_text = tokenizer.decode(output, skip_special_tokens=True)
             output_text = raw_output_text
             # print(f'Raw LLAMA output: {output_text}\n')
             if prompt in output_text:
@@ -63,11 +67,17 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
                 index = output_text.rfind("assistant")
                 output_text =  output_text[(index + 9):]
             outputs.append(output_text)
+            generated_token_count = output.shape[-1] - prompt_token_count
+            llama_tokens += generated_token_count
             # print(f'LLAMA output: {output_text}\n')
             if(output_text == ""):
                 print(f'LLAMA output empty, raw output: {raw_output_text}')
             n -= 1
     return outputs
+
+def llmaa_usage():
+    global prompt_llama_tokens, llama_tokens
+    return {"llama completion_tokens": llama_tokens, "prompt_tokens": prompt_llama_tokens}
 
 @backoff.on_exception(backoff.expo, openai.error.OpenAIError)
 def completions_with_backoff(**kwargs):

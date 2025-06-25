@@ -1,5 +1,7 @@
-from tot.models import llama
+from tot.models import llama, llmaa_usage
 import sys
+import time
+
 
 propose_prompt = '''
 You aim to use numbers and basic arithmetic operations (+ - * /) to obtain 24.
@@ -153,6 +155,11 @@ TASK:
 Input: 9 10 10
 '''
 
+value_user_prompt2 = '''
+TASK:
+Input: 9 9 9
+'''
+
 cot_system_prompt = '''Use numbers and basic arithmetic operations (+ - * /) to obtain 24. 
 You are given the steps to obtain 24. 
 Return only the final answer
@@ -198,8 +205,12 @@ Answer:
 '''
 
 
-with open('output.txt', 'w', buffering=1) as f:
-    sys.stdout = f
-    # print(value_prompt)
-    output = llama(cot_user_prompt, cot_system_prompt, n=5, stop=None, temperature=0.7)
-    print(output)
+# print(value_prompt)
+output = llama(value_user_prompt, value_system_prompt, n=3, stop=None, temperature=0.7)
+print(llmaa_usage())
+start = time.perf_counter()
+output = llama(propose_user_prompt, propose_system_prompt, n=1, stop=None, temperature=0.7, max_tokens = 200)
+elapsed = time.perf_counter() - start
+print(llmaa_usage())
+print(f"{elapsed:.6f} seconds")
+print(output)
