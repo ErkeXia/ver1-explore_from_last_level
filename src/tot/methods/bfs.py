@@ -48,7 +48,7 @@ def get_value(task, x, y, n_evaluate_sample, cache_value=True):
     max_attempts = 5
     attempt = 0
     while(num > 0 and attempt < max_attempts):
-        outputs = llama(user, system, n=num, stop=None)
+        outputs = llama(user, system, n=num, stop=None, max_tokens = 200)
         keywords = {'likely', 'impossible', 'sure'}
         valid_outputs = [
             s for s in outputs

@@ -1,5 +1,6 @@
 import argparse
 import sys
+import time
 from tot.methods.bfs import solve, solve_v1
 from tot.tasks.game24 import Game24Task
 from tot.models import gpt_usage, llmaa_usage
@@ -10,7 +11,10 @@ with open('output.txt', 'w', buffering=1) as f:
     args = argparse.Namespace(backend=model, temperature=0.7, task='game24', naive_run=False, prompt_sample=None, method_generate='propose', method_evaluate='value', method_select='greedy', n_generate_sample=1, n_evaluate_sample=3, n_select_sample=5)
 
     task = Game24Task()
-    x, y = solve_v1(args, task, 800)
+    start = time.perf_counter()
+    x, y = solve_v1(args, task, 701)
+    elapsed = time.perf_counter() - start
+    print(f"{elapsed:.6f} seconds")
     if "Answer" in y:
         y = y[(y.find('Answer') + 7):].strip()
     # ys, infos = solve(args, task, 900)

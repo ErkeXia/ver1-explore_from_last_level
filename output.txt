@@ -1,571 +1,557 @@
-functools.partial(<function gpt at 0x7c72c7087e20>, model='gpt-4', temperature=0.7)
-x = 1 5 9 11
+functools.partial(<function gpt at 0x75a69ec6a9e0>, model='gpt-4', temperature=0.7)
+x = 6 6 9 11
 
 Getting proposals from index 0 with y = 
-Current number is: 1 5 9 11
+Current number is: 6 6 9 11
 
 The proposals for  is 
- ['1 + 5 = 6 (left: 6 9 11)', '5 - 1 = 4 (left: 4 9 11)', '9 + 1 = 10 (left: 5 10 11)', '11 - 5 = 6 (left: 1 6 9)', '1 * 9 = 9 (left: 5 11 9)', '11 + 1 = 12 (left: 5 9 12)', '9 - 5 = 4 (left: 1 4 11)', '11 / 1 = 11 (left: 5 9 11)']
-getting value for 1 + 5 = 6 (left: 6 9 11)
+ ['6 + 6 = 12 (left: 12 9 11)', '6 * 6 = 36 (left: 36 9 11)', '6 - 6 = 0 (left: 0 9 11)', '6 / 6 = 1 (left: 1 9 11)', '9 + 6 = 15 (left: 6 15 11)', '11 - 6 = 5 (left: 6 9 5)', '9 - 6 = 3 (left: 6 3 11)', '11 / 6 = 1.83 (left: 6 9 1.83)']
+getting value for 6 + 6 = 12 (left: 12 9 11)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n6 * 9 = 54\n(54 - 11) + 11 = 54\n11 - 6 = 5\n(5 + 9) = 14\n54 - 14 = 40\n(40 - 9) = 31\n(31 - 11) = 20\n20 + 9 = 29\n(29 - 11) = 18\n(18 - 9) = 9\n9 + 6 = 15\n(15 - 6) = 9\n(9 + 9) = 18\n(18 + 6) = 24\nsure', '\n6 + 9 + 11 = 26\n(11 - 9) * 6 = 2 * 6 = 12\n(9 - 6) * 11 = 3 * 11 = 33\n(11 - 6) * 9 = 5 * 9 = 45\n(9 - 6) * (11 - 6) = 3 * 5 = 15\n(6 + 9) - (11 - 6) = 15 - 5 = 10\n(9 - 6) * 11 - 6 = 3 * 11 - 6 = 33 - 6 = 27\nimpossible', '\n6 + 9 + 11 = 26\n(11 - 9) * 6 = 2 * 6 = 12\n(11 - 9) * (6 + 1) = 2 * 7 = 14\n(11 - 9) * (6 + 2) = 2 * 8 = 16\n(11 - 9) * (6 + 3) = 2 * 9 = 18\n(11 - 9) * (6 + 4) = 2 * 10 = 20\n(11 - 9) * (6 + 5) = 2 * 11 = 22\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 5 - 1 = 4 (left: 4 9 11)
+The valid outputs are ['\n12 + 9 + 11 = 32\n(9 - 11) + 12 = -2 + 12 = 10\n(12 + 11) * 9 = 23 * 9 = 207\n(11 - 12) * 9 = -1 * 9 = -9\n(9 - 11) + 12 = -2 + 12 = 10\n12 9 11 are all within a reasonable range\nlikely', '\n12 + 9 + 11 = 32\n(11 - 9) * 12 = 2 * 12 = 24\nsure', '\n12 + 9 + 11 = 32\n(11 - 9) * 12 = 2 * 12 = 24\nsure']
+getting value for 6 * 6 = 36 (left: 36 9 11)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n4 + 9 + 11 = 24\nsure', '\n4 + 9 + 11 = 24\nsure', '\n4 + 9 = 13\n13 + 11 = 24\nsure']
-getting value for 9 + 1 = 10 (left: 5 10 11)
+The valid outputs are ['\n36 - 9 = 27\n27 + 11 = 38\nimpossible', '\n36 + 9 + 11 = 56\n(11 - 9) * 36 = 2 * 36 = 72\n(9 - 11) * 36 = -2 * 36 = -72\n36 9 11 are all too big\nimpossible', '\n36 + 9 + 11 = 56\n(11 - 9) * 36 = 2 * 36 = 72\n36 / (9 - 11) = 36 / -4 = -9\n36 * (9 + 11) = 36 * 20 = 720\nimpossible']
+getting value for 6 - 6 = 0 (left: 0 9 11)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n5 + 10 + 11 = 26\n(10 - 5) * 11 = 5 * 11 = 55\n(11 - 10) * 10 + 5 = 1 * 10 + 5 = 15\n5 * 11 = 55\n(10 - 5) * 11 = 5 * 11 = 55\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n5 + 10 + 11 = 26\n(11 - 5) * 10 = 60\n(11 - 10) * 5 = 5\n5 10 11 are all too big\nimpossible', '\n5 + 10 + 11 = 26\n5 * 10 - 11 = 49 - 11 = 38\n(10 - 11) * 5 = -1 * 5 = -5\n(5 - 11) * 10 = -6 * 10 = -60\n(5 - 10) * 11 = -5 * 11 = -55\n(11 - 10) * 5 = 1 * 5 = 5\n(11 - 5) * 10 = 6 * 10 = 60\n(10 - 5) * 11 = 5 * 11 = 55\n5 10 11 are all too big\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
+The valid outputs are ['\n0 + 9 + 11 = 20\n(9 - 0) * 11 = 99\n(11 - 0) * 9 = 99\n(9 - 0) * 11 = 99\n0 9 11 are all too small\nimpossible', '\n0 9 + 11 = 20\n(9 + 11) * 0 = 0\n0 9 * 11 = 99\n(0 + 9) * 11 = 99\n(0 * 11) + 9 = 9\n0 11 * 9 = 99\nimpossible', '\n0 + 9 + 11 = 20\n(11 - 9) * 0 = 2 * 0 = 0\n(9 - 0) * 11 = 9 * 11 = 99\n0 9 11 are all too big\nimpossible']
+getting value for 6 / 6 = 1 (left: 1 9 11)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n1 * 6 = 6\n6 * 9 = 54\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n1 * 6 = 6\n6 * 9 = 54\n(9 - 1) * 6 = 8 * 6 = 48\n(6 - 1) * 9 = 5 * 9 = 45\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n1 * 6 = 6\n6 * 9 = 54\n6 + 9 = 15\n1 + 9 = 10\n9 - 1 = 8\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 1 * 9 = 9 (left: 5 11 9)
+The valid outputs are ['\n1 * 9 = 9\n9 * 11 = 99\n(9 + 1) * 11 = 10 * 11 = 110\n1 9 11 are all too small\nimpossible', '\n1 * 9 = 9\n(9 - 1) + 11 = 8 + 11 = 19\n(9 + 1) * 11 = 10 * 11 = 110\n(11 - 9) * 1 = 2 * 1 = 2\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n1 * 9 = 9\n9 + 11 = 20\n(9 - 1) * 11 = 8 * 11 = 88\n(11 - 9) * 1 = 2 * 1 = 2\n(9 - 1) * 11 = 8 * 11 = 88\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 9 + 6 = 15 (left: 6 15 11)
 
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n5 + 11 + 9 = 25\n(9 - 5) * 11 = 4 * 11 = 44\n(9 - 5) * 11 + 5 - 11 = 44 + 5 - 11 = 38\n(9 - 5) * 11 + 5 - 11 = 38\n(9 - 5) * 11 + 5 - 11 + 9 - 5 = 38 + 9 - 5 = 42\n(9 - 5) * 11 + 5 - 11 + 9 - 5 = 42\n11 + 9 + 5 - 5 = 20\n11 + 9 + 5 - 5 = 20\n11 + 9 + 5 - 5 + 9 - 5 = 20 + 9 - 5 = 24\n11 + 9 + 5 - 5 + 9 - 5 = 24\nsure', '\n5 + 11 + 9 = 25\n(9 - 5) * 11 = 4 * 11 = 44\n(11 - 9) + 5 = 2 + 5 = 7\n5 + (9 - 11) = 5 - 2 = 3\nimpossible', '\n5 + 11 = 16\n(9 - 5) * 11 = 4 * 11 = 44\n(11 - 9) * 5 = 2 * 5 = 10\n5 * 9 = 45\nimpossible']
-getting value for 11 + 1 = 12 (left: 5 9 12)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n5 + 9 = 14\n14 + 12 = 26\n(5 + 12) * 9 = 17 * 9 = 153\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n5 + 9 + 12 = 26\n(12 - 5) * 9 = 7 * 9 = 63\n(12 - 9) * 5 = 3 * 5 = 15\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n5 + 9 = 14\n14 + 12 = 26\n(9 + 5) * 12 = 14 * 12 = 168\n(12 - 5) * 9 = 7 * 9 = 63\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 9 - 5 = 4 (left: 1 4 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n1 + 4 + 11 = 16\n(11 - 4) * 1 = 7\n(4 - 1) * 11 = 33\n(11 - 1) * 4 = 40\nimpossible', '\n1 * 4 = 4\n(4 - 1) * 11 = 3 * 11 = 33\n(11 - 4) * 1 = 7 * 1 = 7\n(11 - 4) + 4 = 7 + 4 = 11\n(11 - 4) + 4 + 1 = 11 + 1 = 12\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n1 * 4 * 11 = 44\n(1 + 11) * 4 = 12 * 4 = 48\n(4 - 1) * 11 = 3 * 11 = 33\n(11 - 4) * 1 = 7 * 1 = 7\n(1 + 4) * 11 = 5 * 11 = 55\n(1 + 11) * 4 = 12 * 4 = 48\n1 * 4 * 11 = 44\n(11 - 4) * 1 = 7 * 1 = 7\n(4 - 1) * 11 = 3 * 11 = 33\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 11 / 1 = 11 (left: 5 9 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n5 + 9 + 11 = 25\n5 * 9 - 11 = 44 - 11 = 33\n(9 - 5) * 11 = 4 * 11 = 44\n5 9 11 are all too big\nimpossible', '\n5 + 9 + 11 = 25\n(11 - 9) * 5 = 2 * 5 = 10\n(5 + 9) * 11 = 14 * 11 = 154\n(11 - 5) * 9 = 6 * 9 = 54\nimpossible', '\n5 + 9 + 11 = 25\n(9 + 11) + 5 = 25 + 5 = 30\n(11 - 5) * 9 = 6 * 9 = 54\n(11 - 5) * 9 = 6 * 9 = 54\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-Getting proposals from index 0 with y = 5 - 1 = 4 (left: 4 9 11)
-
-Current number is: 4 9 11
-
-The proposals for 5 - 1 = 4 (left: 4 9 11)
- is 
- ['4 + 9 = 13 (left: 13 11)', '4 * 9 = 36 (left: 36 11)', '9 - 4 = 5 (left: 5 11)', '11 - 4 = 7 (left: 7 9)', '9 / 4 = 2.25 (left: 2.25 11)', '11 - 9 = 2 (left: 2 4)', '11 + 4 = 15 (left: 15 9)', '9 + 4 = 13 (left: 11 13)']
-Getting proposals from index 1 with y = 1 + 5 = 6 (left: 6 9 11)
-
-Current number is: 6 9 11
-
-The proposals for 1 + 5 = 6 (left: 6 9 11)
- is 
- ['6 + 9 = 15 (left: 15 11)', '6 * 9 = 54 (left: 54 11)', '9 - 6 = 3 (left: 3 11)', '11 - 6 = 5 (left: 5 9)', '11 + 6 = 17 (left: 17 9)', '6 / 9 = 0.67 (left: 0.67 11)', '9 / 6 = 1.5 (left: 1.5 11)', '11 - 9 = 2 (left: 2 6)']
-Getting proposals from index 2 with y = 1 * 9 = 9 (left: 5 11 9)
-
-Current number is: 5 11 9
-
-The proposals for 1 * 9 = 9 (left: 5 11 9)
- is 
- ['5 + 11 = 16 (left: 16 9)', '5 * 9 = 45 (left: 45 11)', '11 + 9 = 20 (left: 20 5)', '9 - 5 = 4 (left: 4 11)', '11 - 9 = 2 (left: 2 5)', '9 / 5 = 1.8 (left: 1.8 11)', '11 - 5 = 6 (left: 6 9)', '9 * 5 = 45 (left: 45 11)']
-Getting proposals from index 3 with y = 11 - 5 = 6 (left: 1 6 9)
-
-Current number is: 1 6 9
-
-The proposals for 11 - 5 = 6 (left: 1 6 9)
- is 
- ['1 * 6 = 6 (left: 6 9)', '6 + 1 = 7 (left: 7 9)', '9 + 1 = 10 (left: 6 10)', '9 * 1 = 9 (left: 6 9)', '1 + 9 = 10 (left: 6 10)', '9 - 1 = 8 (left: 6 8)', '6 * 1 = 6 (left: 6 9)', '1 / 6 = 0.17 (left: 0.17 9)', '6 - 1 = 5 (left: 5 9)', '1 + 6 = 7 (left: 7 9)', '9 - 6 = 3 (left: 1 3)', '6 / 1 = 6 (left: 6 9)', '1 + 6 = 7 (left: 7 9)', '9 - 6 = 3 (left: 1 3)', '9 + 6 = 15 (left: 1 15)', '1 * 9 = 9 (left: 9 6)', '1 - 6 = -5 (left: -5 9)', '1 / 9 = 0.11 (left: 0.11 6)', '6 - 9 = -3 (left: -3 1)', '6 + 9 = 15 (left: 1 15)', '9 + 6 = 15 (left: 1 15)', '1 + 9 = 10 (left: 6 10)']
-Getting proposals from index 4 with y = 11 + 1 = 12 (left: 5 9 12)
-
-Current number is: 5 9 12
-
-The proposals for 11 + 1 = 12 (left: 5 9 12)
- is 
- ['5 + 9 = 14 (left: 14 12)', '9 - 5 = 4 (left: 4 12)', '12 - 5 = 7 (left: 5 7)', '5 * 9 = 45 (left: 45 12)', '12 / 5 = 2.4 (left: 9 2.4)', '9 / 5 = 1.8 (left: 5 1.8)', '12 + 5 = 17 (left: 9 17)', '5 + 12 = 17 (left: 9 17)']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-4 + 9 = 13 (left: 13 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n13 + 11 = 24\nsure', '\n13 + 11 = 24\nsure', '\n13 + 11 = 24\nsure']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-4 * 9 = 36 (left: 36 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n36 11 = 47\n11 * 36 = 396\n36 - 11 = 25\n(11 + 36) = 47\nimpossible', '\n36 + 11 = 47\n11 + 36 = 47\n36 * 11 = 396\n(36 - 11) * 11 = 25 * 11 = 275\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n36 11 = 47\n(36 - 11) = 25\n25 + 11 = 36\n11 11 are too small\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-9 - 4 = 5 (left: 5 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n5 + 11 = 16\n5 * 11 = 55\n11 - 5 = 6\n5 11 are not within a reasonable range\nimpossible', '\n5 + 11 = 16\nimpossible', '\n5 + 11 = 16\n5 * 11 = 55\n11 - 5 = 6\n5 11 are too big\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-11 - 4 = 7 (left: 7 9)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n7 * 9 = 63\n9 + 7 = 16\n7 - 9 = -2\n9 / 7 = 1.29\nimpossible', '\n7 * 9 = 63\n(9 - 7) * 7 = 2 * 7 = 14\n7 9 are too big\nimpossible', '\n7 + 9 = 16\n9 - 7 = 2\n7 * 9 = 63\n7 / 9 = 0.78\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-9 / 4 = 2.25 (left: 2.25 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n2.25 * 11 = 24.75\nimpossible', '\n2.25 + 11 = 13.25\n(11 - 2.25) / (2.25 * 2.25) = (8.75) / 5.0625 = 1.73\n2.25 * (11 / 2.25) = 2.25 * 4.89 = 11\n2.25 * 11 = 24.75\n(11 - 2.25) + (2.25 * 2.25) = 8.75 + 5.0625 = 13.8125\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n2.25 + 11 = 13.25\n11 - 2.25 = 8.75\n2.25 * 11 = 24.75\n11 / 2.25 = 4.89\n2.25 11 = 24.75\n11 / 2.25 = 4.89\n11 2.25 = 24.75\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-11 - 9 = 2 (left: 2 4)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n2 + 4 = 6\nimpossible', '\n2 + 4 = 6\nimpossible', '\n2 + 4 = 6\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-11 + 4 = 15 (left: 15 9)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n15 + 9 = 24\nsure', '\n15 + 9 = 24\nsure', '\n15 + 9 = 24\nsure']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-9 + 4 = 13 (left: 11 13)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n11 + 13 = 24\nsure', '\n11 + 13 = 24\nsure', '\n11 + 13 = 24\nsure']
-getting value for 1 + 5 = 6 (left: 6 9 11)
-6 + 9 = 15 (left: 15 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n15 + 11 = 26\n(15 - 11) * 11 = 4 * 11 = 44\n(11 - 15) + 15 = -4 + 15 = 11\n(11 + 15) - 15 = 26 - 15 = 11\n(15 - 11) + 11 = 4 + 11 = 15\n(11 + 15) / 15 = 26 / 15 = 1.73\nimpossible', '\n15 + 11 = 26\n11 - 15 = -4\n15 * 11 = 165\n15 / 11 = 1.36\nimpossible', '\n15 + 11 = 26\nimpossible']
-getting value for 1 + 5 = 6 (left: 6 9 11)
-6 * 9 = 54 (left: 54 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n54 + 11 = 65\n(54 - 11) * 11 = 43 * 11 = 473\n(11 - 54) * 11 = -43 * 11 = -473\n(54 + 11) / 11 = 65 / 11 = 5.91\n(11 - 54) / 11 = -43 / 11 = -3.91\n(54 * 11) - 11 = 594 - 11 = 583\n(54 * 11) + 11 = 594 + 11 = 605\n54 * (11 - 11) = 54 * 0 = 0\n54 / (11 / 11) = 54 / 1 = 54\n54 / (11 + 11) = 54 / 22 = 2.45\n(54 / 11) * 11 = 4.91 * 11 = 53.81\n(54 / 11) + 11 = 4.91 + 11 = 15.91\n(54 + 11) / (11 + 11) = 65 / 22 = 2.95\nimpossible', '\n54 + 11 = 65\n11 - 54 = -43\n54 * 11 = 594\n54 / 11 = 4.91\nimpossible', '\n54 11 = 65 (too big)\n54 - 11 = 43\n11 * 43 = 473 (too big)\n54 + 11 = 65 (too big)\n54 / 11 = 4.91\n(11 + 54) / 11 = 65 / 11 (too big)\n(54 - 11) * 11 = 43 * 11 = 473 (too big)\n(54 / 11) * 11 = 4.91 * 11 (too big)\nimpossible']
-getting value for 1 + 5 = 6 (left: 6 9 11)
-9 - 6 = 3 (left: 3 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n3 * 11 = 33\n11 - 3 = 8\n3 11 are both too big\nimpossible', '\n3 * 11 = 33\n11 - 3 = 8\n3 + 8 + 8 = 19\n11 - 3 = 8\n3 + 8 = 11\nimpossible', '\n3 * 11 = 33\n11 - 3 = 8\n3 11 are both too big\nimpossible']
-getting value for 1 + 5 = 6 (left: 6 9 11)
-11 - 6 = 5 (left: 5 9)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n5 + 9 = 14\n9 - 5 = 4\n5 * 9 = 45\n5 / 9 = 0.55\nimpossible', '\n5 + 9 = 14\n9 - 5 = 4\n5 * 9 = 45\n5 / 9 = 0.55\n5 9 are all too small\nimpossible', '\n5 + 9 = 14\n9 - 5 = 4\n5 * 9 = 45\n5 / 9 = 0.55\nimpossible']
-getting value for 1 + 5 = 6 (left: 6 9 11)
-11 + 6 = 17 (left: 17 9)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n17 + 9 = 26\n17 * 9 = 153\n17 - 9 = 8\n9 / 17 = 0.53\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n17 + 9 = 26\n9 - 17 = -8\n17 * 9 = 153\n17 / 9 = 1.89\nimpossible', '\n17 + 9 = 26\n17 * 9 = 153\n(9 - 17) * -17 = 8 * -17 = -136\n(17 - 9) * 9 = 8 * 9 = 72\n(9 - 17) * (17 + 9) = -8 * 26 = -208\n(9 - 17) * (17 * 9) = -8 * 153 = -1224\n17 9 are all too big\nimpossible']
-getting value for 1 + 5 = 6 (left: 6 9 11)
-6 / 9 = 0.67 (left: 0.67 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n0.67 * 11 = 7.37\nimpossible', '\n0.67 + 11 = 11.67\n11 11.67 are not a reasonable combination for the remaining value\nimpossible', '\n0.67 * 11 = 7.37\n(11 - 0.67) * 0.67 = 10.33 * 0.67 = 6.91\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 1 + 5 = 6 (left: 6 9 11)
-9 / 6 = 1.5 (left: 1.5 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n1.5 * 11 = 16.5\nimpossible', '\n1.5 + 11 = 12.5\n1.5 * 11 = 16.5\n(11 - 1.5) * 1.5 = 9.75 * 1.5 = 14.625\n(11 - 1.5) / 1.5 = 9.5\n1.5 11 are too far apart\nimpossible', '\n1.5 * 11 = 16.5\n11 / 1.5 = 7.33\n1.5 + 11 = 12.5\n11 - 1.5 = 9.5\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 1 + 5 = 6 (left: 6 9 11)
-11 - 9 = 2 (left: 2 6)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n2 + 6 = 8\n(6 - 2) * 1 = 4 * 1 = 4\n6 / (2 + 1) = 6 / 3 = 2\nimpossible', '\n2 + 6 = 8\nimpossible', '\n2 + 6 = 8\n6 - 2 = 4\n2 * 6 = 12\n2 / 6 = 0.33\nimpossible']
-getting value for 1 * 9 = 9 (left: 5 11 9)
-5 + 11 = 16 (left: 16 9)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n16 + 9 = 25\n(16 - 9) * 9 = 7 * 9 = 63\n(9 - 16) * 9 = -7 * 9 = -63\n9 / (16 - 9) = 9 / 7 = 1.29\nimpossible', '\n16 9 = 25\n25 - 1 = 24\nsure', '\n16 9 = 25\n16 - 9 = 7\n(9 - 7) * 7 = 2 * 7 = 14\n(7 - 2) * 7 = 5 * 7 = 35\n(7 - 5) * 2 = 2 * 2 = 4\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 1 * 9 = 9 (left: 5 11 9)
-5 * 9 = 45 (left: 45 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n45 11 = 56\n(45 - 11) * 11 = 34 * 11 = 374\n(11 - 45) / 45 = -34 / 45 = -0.75\n(11 - 45) * (45 - 11) = -34 * 34 = -1156\nimpossible', '\n45 + 11 = 56\n11 * 4.5 = 49\n45 / 1.8 = 25\n11 / 2.18 = 5.05\n45 + 11 = 56\n(impossible to get 24 with given numbers)\nimpossible', '\n45 + 11 = 56\n(11 - 9) * 9 is not possible with 45 and 11\n(45 - 11) * 11 = 34 * 11 = 374\n(11 - 1) * 45 = 10 * 45 = 450\nimpossible']
-getting value for 1 * 9 = 9 (left: 5 11 9)
-11 + 9 = 20 (left: 20 5)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n20 + 5 = 25\n20 - 5 = 15\n20 * 5 = 100\n20 / 5 = 4\nimpossible', '\n20 + 5 = 25\n20 * 5 = 100\n(5 - 20) * 20 = -150\n20 / 5 = 4\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n20 5 = 25\n20 + 5 = 25\n(5 - 20) * 5 = -15 * 5 = -75\n20 / 5 = 4\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 1 * 9 = 9 (left: 5 11 9)
-9 - 5 = 4 (left: 4 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n4 + 11 = 15\n4 * 11 = 44\nimpossible', '\n4 + 11 = 15\n11 - 4 = 7\n4 * 11 = 44\n4 / 11 = 0.36\nimpossible', '\n4 + 11 = 15\nimpossible']
-getting value for 1 * 9 = 9 (left: 5 11 9)
-11 - 9 = 2 (left: 2 5)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n2 + 5 = 7\n5 * 2 = 10\n(5 - 2) * 2 = 3 * 2 = 6\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n2 + 5 = 7\n5 * 2 = 10\n2 5 are too small\nimpossible', '\n2 + 5 = 7\nimpossible']
-getting value for 1 * 9 = 9 (left: 5 11 9)
-9 / 5 = 1.8 (left: 1.8 11)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n1.8 * 11 = 19.8\n11 + 1.8 = 12.8\n(11 - 1.8) * 1.8 = 9.2 * 1.8 = 16.56\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n1.8 + 11 = 12.8\nimpossible', '\n1.8 * 11 = 19.8\n11 - 1.8 = 9.2\n1.8 + 9.2 = 11\n11 1.8 are all too small\nimpossible']
-getting value for 1 * 9 = 9 (left: 5 11 9)
-11 - 5 = 6 (left: 6 9)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n6 + 9 = 15\nimpossible', '\n6 + 9 = 15\n(9 - 6) * 6 = 3 * 6 = 18\n(9 - 6) * 6 = 3 * 6 = 18\n6 * 9 = 54\nimpossible', '\n6 + 9 = 15\n9 - 6 = 3\n6 * 9 = 54\n6 / 9 = 0.67\nimpossible']
-getting value for 1 * 9 = 9 (left: 5 11 9)
-9 * 5 = 45 (left: 45 11)
-
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 * 6 = 6 (left: 6 9)
-
-getting value for 11 - 5 = 6 (left: 1 6 9)
-6 + 1 = 7 (left: 7 9)
-
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 + 1 = 10 (left: 6 10)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n6 10 = 16\n16 + 8 = 24\nsure', '\n6 + 10 = 16\n10 - 6 = 4\n6 * 10 = 60\n6 / 10 = 0.6\n10 / 6 = 1.67\n6 10 are too big\nimpossible', '\n6 + 10 = 16\n(10 - 6) * 6 = 4 * 6 = 24\nsure']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 * 1 = 9 (left: 6 9)
-
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 + 9 = 10 (left: 6 10)
-
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 - 1 = 8 (left: 6 8)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n6 + 8 = 14\n8 - 6 = 2\n6 * 8 = 48\n6 / 8 = 0.75\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n6 + 8 = 14\nimpossible', '\n6 + 8 = 14\n8 - 6 = 2\n6 * 8 = 48\n6 / 8 = 0.75\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-6 * 1 = 6 (left: 6 9)
-
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 / 6 = 0.17 (left: 0.17 9)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n0.17 + 9 = 9.17\n9 9.17 are not within a reasonable range\nimpossible', '\n0.17 + 9 = 9.17\n9 9.17 = 18.17\n9 9.17 = 18.17\n9 9.17 = 18.17\nimpossible', '\n0.17 * 9 = 1.53\n9 / 0.17 = 52.94\n0.17 + 9 = 9.17\n9 0.17 are too far apart\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-6 - 1 = 5 (left: 5 9)
-
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 + 6 = 7 (left: 7 9)
-
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 - 6 = 3 (left: 1 3)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n1 + 3 = 4\nimpossible', '\n1 + 3 = 4\nimpossible', '\n1 + 3 = 4\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-6 / 1 = 6 (left: 6 9)
-
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 + 6 = 15 (left: 1 15)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n1 * 15 = 15\n15 + 1 = 16\n1 15 are too small\nimpossible', '\n1 * 15 = 15\n(15 - 1) * 1 = 14 * 1 = 14\n1 15 are all too small\nimpossible', '\n1 * 15 = 15\n15 + 1 = 16\n15 - 1 = 14\n1 / 15 = 0.06666666666666667\n1 15 are too small\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 * 9 = 9 (left: 9 6)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n9 + 6 = 15\n6 * 9 = 54\nimpossible', '\n9 + 6 = 15\n9 * 6 = 54\n6 - 9 = -3\n9 / 6 = 1.5\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n9 + 6 = 15\n9 * 6 = 54\n6 - 9 = -3\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 - 6 = -5 (left: -5 9)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n-5 + 9 = 4\n(9 - (-5)) = 14\n(9 - (-5)) * -5 = -70\n(9 + (-5)) = 4\n(-5 + 9) = 4\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n-5 + 9 = 4\n(9 - (-5)) = 14\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n-5 + 9 = 4\n9 - (-5) = 14\n-5 * 9 = -45\n-5 / 9 = -0.55\n-5 9 are not within a reasonable range\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 / 9 = 0.11 (left: 0.11 6)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n0.11 + 6 = 6.11\n6 6.11 are too far apart\nimpossible', '\n0.11 + 6 = 6.11        (remaining: 17.89)\n6 6.11 = 12.11        (remaining: 11.89)\n6.11 * 6 = 36.66        (remaining: -22.66)\n6.11 / 6 = 1.0183        (remaining: 10.8817)\nimpossible', '\n0.11 + 6 = 6.11\n(6 - 0.11) * 0.11 = 5.89 * 0.11 = 6.479\n(6 - 0.11) * 0.11 = 5.89 * 0.11 = 6.479\n6 0.11 0.11 are all too small\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-6 - 9 = -3 (left: -3 1)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n-3 + 1 = 0\n1 - (-3) = 4\n(-3 * 1) + 1 = -2 + 1 = -1\n(-3 / 1) + 1 = -3 + 1 = -2\nimpossible', '\n-3 1 = 24\nsure', '\n-3 + 1 = 0\n(-3 + 1) * (-3 + 1) = 0 * 0 = 0\n(-3 * 1) - 3 = -3 - 3 = -6\n(-3 + 1) / 1 = 0 / 1 = 0\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-6 + 9 = 15 (left: 1 15)
-
-getting value for 11 + 1 = 12 (left: 5 9 12)
-5 + 9 = 14 (left: 14 12)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n14 + 12 = 26\n12 - 14 = -2\n14 * 12 = 168\n14 / 12 = 1.17\nimpossible', '\n14 + 12 = 26\n12 - 14 = -2\n14 * 12 = 168\n14 / 12 = 1.17\nimpossible', '\n14 + 12 = 26\n12 - 14 = -2\n14 * 12 = 168\n14 / 12 = 1.16\nimpossible']
-getting value for 11 + 1 = 12 (left: 5 9 12)
-9 - 5 = 4 (left: 4 12)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n4 + 12 = 16\n12 - 4 = 8\n4 * 12 = 48\n12 / 4 = 3\nimpossible', '\n4 + 12 = 16\n(12 - 4) * 4 = 8 * 4 = 32\n(4 - 1) * (12 - 1) = 3 * 11 = 33\n(12 - 4) / (4 - 1) = 8 / 3 = 2.67\n(4 - 2) * (12 - 2) = 2 * 10 = 20\n(4 - 2) * (12 / 2) = 2 * 6 = 12\nimpossible', '\n4 + 12 = 16\n12 - 4 = 8\n4 * 12 = 48\n4 / 12 = 0.33\nimpossible']
-getting value for 11 + 1 = 12 (left: 5 9 12)
-12 - 5 = 7 (left: 5 7)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n5 + 7 = 12\n5 * 7 = 35\n7 - 5 = 2\nimpossible', '\n5 + 7 = 12\n7 - 5 = 2\n5 * 7 = 35\nimpossible', '\n5 + 7 = 12\n7 - 5 = 2\n5 * 7 = 35\n5 / 7 = 0.71\nimpossible']
-getting value for 11 + 1 = 12 (left: 5 9 12)
-5 * 9 = 45 (left: 45 12)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n45 + 12 = 57\n(45 - 12) + 12 = 45 + 0 = 45\n(12 - 45) * 12 = -33 * 12 = -396\n45 / 12 = 3.75\n(45 + 12) / 12 = 57 / 12 = 4.75\n(45 - 12) / 12 = 33 / 12 = 2.75\nimpossible', '\n45 + 12 = 57\n(45 - 12) * 12 = 33 * 12 = 396\n(12 - 45) * 45 = -33 * 45 = -1485\nimpossible', '\n45 12 = 57\n12 - 45 = -33\n45 / 12 = 3.75\n45 12 = 57\n45 + (-33) = 12\n12 * 3.75 = 45\nimpossible']
-getting value for 11 + 1 = 12 (left: 5 9 12)
-12 / 5 = 2.4 (left: 9 2.4)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n9 * 2.4 = 21.6\n(2.4 * 9) + 2.4 = 21.6 + 2.4 = 24\nsure', '\n9 * 2.4 = 21.6\n(9 + 2.4) * 2.4 = 11.4 * 2.4 = 27.36\n(9 - 2.4) * 2.4 = 6.6 * 2.4 = 15.84\n9 / 2.4 = 3.75\n2.4 / 9 = 0.2667\n9 2.4 are all too small or too big, and/or too far from 24\nimpossible', '\n9 + 2.4 = 11.4\n(9 - 2.4) * 2.4 = 6.6 * 2.4 = 15.84\n9 * 2.4 = 21.6\n(9 / 2.4) * 2.4 = 3.75 * 2.4 = 9\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 11 + 1 = 12 (left: 5 9 12)
-9 / 5 = 1.8 (left: 5 1.8)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n5 * 1.8 = 9\n5 + 1.8 = 6.8\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n5 * 1.8 = 9\n(1.8 - 1) * 5 = 0.8 * 5 = 4\n(5 - 1.8) * 1.8 = 3.2 * 1.8 = 5.76\n(1.8 - 0.8) * 5 = 1 * 5 = 5\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n5 * 1.8 = 9\n5 + 1.8 = 6.8\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 11 + 1 = 12 (left: 5 9 12)
-12 + 5 = 17 (left: 9 17)
-
-Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n9 + 17 = 26\n17 - 9 = 8\n9 * 17 = 153\n9 / 17 = 0.53\nimpossible', '\n9 + 17 = 26\n17 - 9 = 8\n9 * 17 = 153\n9 / 17 = 0.53\nimpossible', '\n9 + 17 = 26\n17 - 9 = 8\n9 * 17 = 153\n9 / 17 = 0.53\nimpossible']
-getting value for 11 + 1 = 12 (left: 5 9 12)
-5 + 12 = 17 (left: 9 17)
-
-Getting proposals from index 0 with y = 5 - 1 = 4 (left: 4 9 11)
-4 + 9 = 13 (left: 13 11)
-
-Current number is: 13 11
-
-The proposals for 5 - 1 = 4 (left: 4 9 11)
-4 + 9 = 13 (left: 13 11)
- is 
- ['Input: 13 11', '13 + 11 = 24 (left: 24)', '11 + 13 = 24 (left: 24)', '13 - 11 = 2 (left: 2 11)', '11 - 13 = -2 (left: -2 13)', '13 * 11 = 143 (left: 143)', '11 * 13 = 143 (left: 143)', '13 / 11 = 1.18 (left: 1.18 11)', '11 / 13 = 0.85 (left: 0.85 13)']
-Getting proposals from index 1 with y = 5 - 1 = 4 (left: 4 9 11)
-11 + 4 = 15 (left: 15 9)
-
-Current number is: 15 9
-
-The proposals for 5 - 1 = 4 (left: 4 9 11)
-11 + 4 = 15 (left: 15 9)
- is 
- ['15 + 9 = 24 (left: 24)', '15 * 9 = 135 (left: 135)', '9 - 15 = -6 (left: -6)', '9 / 15 = 0.6 (left: 0.6)', '15 - 9 = 6 (left: 6)', '9 + 15 = 24 (left: 24)', '15 / 9 = 1.67 (left: 1.67)', '9 * 15 = 135 (left: 135)']
-Getting proposals from index 2 with y = 5 - 1 = 4 (left: 4 9 11)
-9 + 4 = 13 (left: 11 13)
-
-Current number is: 11 13
-
-The proposals for 5 - 1 = 4 (left: 4 9 11)
-9 + 4 = 13 (left: 11 13)
- is 
- ['11 + 13 = 24 (left: 24)', '13 - 11 = 2 (left: 2)', '11 * 13 = 143 (left: 143)', '13 / 11 = 1.18 (left: 1.18)', '11 - 13 = -2 (left: -2)', '13 + 11 = 24 (left: 24)', '11 / 13 = 0.85 (left: 0.85)', '13 - 11 = 2 (left: 2)']
-Getting proposals from index 3 with y = 11 - 5 = 6 (left: 1 6 9)
-9 + 1 = 10 (left: 6 10)
-
-Current number is: 6 10
-
-The proposals for 11 - 5 = 6 (left: 1 6 9)
-9 + 1 = 10 (left: 6 10)
- is 
- ['6 + 10 = 16 (left: 16)', '6 * 10 = 60 (left: 60)', '10 - 6 = 4 (left: 4)', '10 / 6 = 1.67 (left: 1.67)', '6 - 10 = -4 (left: -4)', '10 + 6 = 16 (left: 16)', '6 / 10 = 0.6 (left: 0.6)', '10 * 6 = 60 (left: 60)']
-Getting proposals from index 4 with y = 11 - 5 = 6 (left: 1 6 9)
-1 + 9 = 10 (left: 6 10)
-
-Current number is: 6 10
-
-The proposals for 11 - 5 = 6 (left: 1 6 9)
-1 + 9 = 10 (left: 6 10)
- is 
- ['6 + 10 = 16 (left: 16)', '10 - 6 = 4 (left: 4)', '6 - 10 = -4 (left: -4)', '10 / 6 = 1.67 (left: 1.67)', '10 * 6 = 60 (left: 60)', '6 / 10 = 0.6 (left: 0.6)', '10 + 6 = 16 (left: 16)', '6 * 10 = 60 (left: 60)']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-4 + 9 = 13 (left: 13 11)
-Input: 13 11
-
-Number of value needed is 3, this time we have 1 valid output
-Number of value needed is 2, this time we have 1 valid output
-Number of value needed is 1, this time we have 0 valid output
+Number of value needed is 3, this time we have 2 valid output
 Number of value needed is 1, this time we have 1 valid output
-The valid outputs are ["\nIt seems like there's a misunderstanding. The input provided is 1, 5, 9, 11, but the answer is 13 11, which is not a correct mathematical expression using the input numbers exactly once.\n\nHowever, if we try to form an expression using the input numbers, here's a possible answer:\n\nAnswer: (9 + 5) * (11 - 1) = 24\n\nJudge: \nsure", "\nTo determine if the answer is correct, we need to check if it uses each input exactly once and reaches 24.\n\nHowever, the answer is not an equation, but rather a pair of numbers (13, 11). Let's check if 13 and 11 can be used to reach 24 using basic arithmetic operations.\n\n13 + 11 = 24\n\nSince the answer uses each input exactly once and reaches 24, the judge is:\n\nsure", '\nThe answer is not correct. The input numbers are 1, 5, 9, and 11, but the answer is 13 and 11, which are not derived from the given input numbers using basic arithmetic operations (+ - * /) and each number is used exactly once.\n\nJudge: \nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-4 + 9 = 13 (left: 13 11)
-13 + 11 = 24 (left: 24)
+The valid outputs are ['\n6 + 15 + 11 = 32\n(15 - 6) * 11 = 9 * 11 = 99\n(11 - 6) * 15 = 5 * 15 = 75\n(15 - 11) * 6 = 4 * 6 = 24\nsure', '\n6 * 15 = 90\n(11 + 15) * 6 = 26 * 6 = 156\n15 - 11 = 4\n6 + 15 + 11 = 32\n11 * 6 = 66\nimpossible', '\n6 15 11\n6 + 15 = 21\n(11 - 6) * 15 = 5 * 15 = 75\n(15 - 11) * 6 = 4 * 6 = 24\nsure']
+getting value for 11 - 6 = 5 (left: 6 9 5)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n24 24 = 24\nsure', '\n24  = 24        (remaining: 0)   # optional\n24 / 24 = 1\n24  = 24        (remaining: 0)   # optional\n24  = 24        (remaining: 0)   # optional\nsure', '\n24 0 + 24 = 24\nsure']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-4 + 9 = 13 (left: 13 11)
-11 + 13 = 24 (left: 24)
-
-getting value for 5 - 1 = 4 (left: 4 9 11)
-4 + 9 = 13 (left: 13 11)
-13 - 11 = 2 (left: 2 11)
+The valid outputs are ['\n6 + 9 + 5 = 20\n(5 - 6) * 9 = -1 * 9 = -9\n(9 - 5) * 6 = 4 * 6 = 24\nsure', '\n6 + 9 + 5 = 20\n(9 - 5) * 6 = 4 * 6 = 24\nsure', '\n6 + 9 + 5 = 20\n(9 - 5) + 6 = 4 + 6 = 10\n(5 - 6) + 9 = -1 + 9 = 8\n(5 + 6) - 9 = 11 - 9 = 2\n(9 - 6) + 5 = 3 + 5 = 8\n(9 + 5) - 6 = 14 - 6 = 8\n(6 - 5) + 9 = 1 + 9 = 10\n(9 - 6) * 5 = 3 * 5 = 15\n(9 - 5) * 6 = 4 * 6 = 24\nsure']
+getting value for 9 - 6 = 3 (left: 6 3 11)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n2 + 11 = 13\nimpossible', '\n2 + 11 = 13\n2 * 11 = 22\n2 / 11 = 0.18\nimpossible', '\n2 + 11 = 13\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-4 + 9 = 13 (left: 13 11)
-11 - 13 = -2 (left: -2 13)
+The valid outputs are ['\n6 + 3 + 11 = 20\n(11 - 3) * 6 = 8 * 6 = 48\n(6 - 3) * 11 = 3 * 11 = 33\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n6 + 3 + 11 = 20\n(11 - 3) * 6 = 48\n(11 - 3) + 6 + 6 = 14 + 6 + 6 = 26\n(3 * 6) + 11 = 18 + 11 = 29\n11 + (3 * 6) = 11 + 18 = 29\n11 6 3 are all too big\nimpossible', '\n6 + 3 + 11 = 20\n(11 - 3) * 6 = 48\n(6 + 3) * 11 = 99\n(11 - 6) * 3 = 3\n6 3 11 are all too big\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+
+Number of value needed is 3, this time we have 2 valid output
+Number of value needed is 1, this time we have 1 valid output
+The valid outputs are ['\n6 + 9 + 1.83 = 16.83 + 1.83 = 18.66\n(9 - 1.83) * 6 = 7.17 * 6 = 42.99\n(1.83 + 6) * 9 = 7.83 * 9 = 70.47\n(9 - 6) * 1.83 = 3 * 1.83 = 5.49\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n6 * 9 * 1.83 = 94.94\n(9 - 6) * 1.83 = 3.83 * 1.83 = 7.00\n(6 - 1.83) * 9 = 4.17 * 9 = 37.53\n(9 - 1.83) * 6 = 7.17 * 6 = 42.99\n(1.83 - 0.5) * 9 = 1.33 * 9 = 11.97\n(6 - 1.83) * (9 - 1.83) = 4.17 * 7.17 = 29.84\n(9 - 6) * (1.83 - 0.5) = 3.83 * 1.33 = 5.11\n1.83 6 9 are all within a reasonable range\nlikely', '\n6 * 9 * 1.83 = 94.97\n(6 * 1.83) * 9 = 33.18 * 9 = 298.62\n(9 - 1.83) * 6 = 7.17 * 6 = 42.99\n6 + (9 * 1.83) = 6 + 16.47 = 22.47\n6 1.83 9 are all too big\nimpossible']
+Getting proposals from index 0 with y = 11 - 6 = 5 (left: 6 9 5)
+
+Current number is: 6 9 5
+
+The proposals for 11 - 6 = 5 (left: 6 9 5)
+ is 
+ ['6 + 9 = 15 (left: 5 15)', '9 * 5 = 45 (left: 6 45)', '6 - 5 = 1 (left: 1 9)', '9 - 6 = 3 (left: 3 5)', '6 / 5 = 1.2 (left: 5 1.2)', '5 + 6 = 11 (left: 9 11)', '9 + 5 = 14 (left: 6 14)', '5 * 9 = 45 (left: 6 45)']
+Getting proposals from index 1 with y = 6 + 6 = 12 (left: 12 9 11)
+
+Current number is: 12 9 11
+
+The proposals for 6 + 6 = 12 (left: 12 9 11)
+ is 
+ ['12 + 9 = 21 (left: 9 11 21)', '12 * 9 = 108 (left: 11 108)', '9 + 12 = 21 (left: 11 21)', '12 - 9 = 3 (left: 3 11 9)', '11 + 12 = 23 (left: 9 23)', '9 - 12 = -3 (left: 11 -3)', '12 / 9 = 1.33 (left: 9 11 1.33)', '11 - 12 = -1 (left: 9 12 -1)']
+Getting proposals from index 2 with y = 9 + 6 = 15 (left: 6 15 11)
+
+Current number is: 6 15 11
+
+The proposals for 9 + 6 = 15 (left: 6 15 11)
+ is 
+ ['6 + 15 = 21 (left: 21 11)', '15 * 6 = 90 (left: 90 11)', '11 + 6 = 17 (left: 17 15)', '6 - 15 = -9 (left: -9 11)', '11 - 6 = 5 (left: 5 15)', '15 - 11 = 4 (left: 4 6)', '11 * 6 = 66 (left: 66 15)', '6 / 11 = 0.55 (left: 0.55 15)']
+Getting proposals from index 3 with y = 6 / 6 = 1 (left: 1 9 11)
+
+Current number is: 1 9 11
+
+The proposals for 6 / 6 = 1 (left: 1 9 11)
+ is 
+ ['1 + 9 = 10 (left: 10 11)', '9 + 1 = 10 (left: 10 11)', '1 * 11 = 11 (left: 9 11)', '11 - 1 = 10 (left: 1 10)', '1 - 9 = -8 (left: -8 11)', '11 + 1 = 12 (left: 9 12)', '9 * 1 = 9 (left: 1 9)', '11 / 1 = 11 (left: 1 11)']
+Getting proposals from index 4 with y = 11 / 6 = 1.83 (left: 6 9 1.83)
+
+Current number is: 6 9 1.83
+
+The proposals for 11 / 6 = 1.83 (left: 6 9 1.83)
+ is 
+ ['6 + 9 = 15 (left: 15 1.83)', '6 * 1.83 = 10.98 (left: 10.98 9)', '9 - 1.83 = 7.17 (left: 7.17 6)', '83 + 6 = 7.83 (left: 7.83 9)', '9 / 1.83 = 4.91 (left: 4.91 6)', '6 / 1.83 = 3.28 (left: 3.28 9)', '9 + 1.83 = 10.83 (left: 10.83 6)', '83 + 9 = 10.83 (left: 10.83 6)']
+getting value for 11 - 6 = 5 (left: 6 9 5)
+6 + 9 = 15 (left: 5 15)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n-2 + 13 = 11\nimpossible', '\n-2 + 13 = 11\nimpossible', '\n-2 13 = 11\n(13 - (-2)) = 15\n-2 * 13 = -26\n-2 / 13 = -0.15\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-4 + 9 = 13 (left: 13 11)
-13 * 11 = 143 (left: 143)
+The valid outputs are ['\n5 + 15 = 20\n5 * 15 = 75\n15 - 5 = 10\nimpossible', '\n5 + 15 = 20\n5 * 15 = 75\n15 - 5 = 10\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n5 + 15 = 20\n(15 - 5) * 5 = 10 * 5 = 50\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 11 - 6 = 5 (left: 6 9 5)
+9 * 5 = 45 (left: 6 45)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n143 + 0 = 143\n143 * 1 = 143\n143 / 1 = 143\n143 - 1 = 142\n143  cannot be reached by adding any of the numbers\nimpossible', '\n143 / 5 = 28.6\n28.6 * 4 = 114.4\n(114.4 - 90) * 1.33 = 24.4\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n143 / 1 = 143\n143 / 1 = 143\n143 is too big\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-4 + 9 = 13 (left: 13 11)
-11 * 13 = 143 (left: 143)
-
-getting value for 5 - 1 = 4 (left: 4 9 11)
-4 + 9 = 13 (left: 13 11)
-13 / 11 = 1.18 (left: 1.18 11)
+The valid outputs are ['\n6 * 45 = 270\n45 - 6 = 39\n(45 - 6) / (6 - 1) = 39 / 5 = 7.8\nimpossible', '\n6 + 45 = 51\n45 - 6 = 39\n6 * 45 = 270\n6 / 45 = 0.13\nimpossible', '\n6 * 45 = 270\n(45 - 6) * 6 = 39 * 6 = 234\n6 + 45 = 51\n(45 - 6) * 6 = 39 * 6 = 234\nimpossible']
+getting value for 11 - 6 = 5 (left: 6 9 5)
+6 - 5 = 1 (left: 1 9)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n1.18 + 11 = 12.18\n(11 - 1.18) * 1.18 = 9.86 * 1.18 = 11.58\n1.18 * 11 = 12.98\n1.18 / 11 = 0.107\nimpossible', '\n1.18 + 11 = 12.18\n(11 - 1.18) * 1.18 = 9.82 * 1.18 = 11.54\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n1.18 * 11 = 12.98\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-4 + 9 = 13 (left: 13 11)
-11 / 13 = 0.85 (left: 0.85 13)
+The valid outputs are ['\n1 + 9 = 10\nimpossible', '\n1 + 9 = 10\nimpossible', '\n1 * 9 = 9\n9 * 1 = 9\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 11 - 6 = 5 (left: 6 9 5)
+9 - 6 = 3 (left: 3 5)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n0.85 + 13 = 13.85\n(13 - 0.85) / 0.85 = 14 / 0.85 = 16.47\n0.85 * 13 = 11.05\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n0.85 + 13 = 13.85\n(13 - 0.85) * 0.85 = 12.15 * 0.85 = 10.3625\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n0.85 * 13 = 11.05\n13 - 0.85 = 12.15\n11.05 + 12.15 = 23.2\n13 / 0.85 = 15.29\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-11 + 4 = 15 (left: 15 9)
-15 + 9 = 24 (left: 24)
+The valid outputs are ['\n3 + 5 = 8\nimpossible', '\n3 + 5 = 8\nimpossible', '\n3 + 5 = 8\nimpossible']
+getting value for 11 - 6 = 5 (left: 6 9 5)
+6 / 5 = 1.2 (left: 5 1.2)
 
-getting value for 5 - 1 = 4 (left: 4 9 11)
-11 + 4 = 15 (left: 15 9)
-15 * 9 = 135 (left: 135)
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n5 + 1.2 = 6.2\n5 * 1.2 = 6\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n5 + 1.2 = 6.2\nimpossible', '\n5 + 1.2 = 6.2\n5 * 1.2 = 6\nimpossible']
+getting value for 11 - 6 = 5 (left: 6 9 5)
+5 + 6 = 11 (left: 9 11)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n9 + 11 = 20\n9 * 11 = 99\n11 - 9 = 2\n9 / 11 = 0.82\nimpossible', '\n9 + 11 = 20\n9 * 11 = 99\n11 - 9 = 2\n9 / 11 = 0.82\nimpossible', '\n9 + 11 = 20\nimpossible']
+getting value for 11 - 6 = 5 (left: 6 9 5)
+9 + 5 = 14 (left: 6 14)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n6 + 14 = 20\n14 - 6 = 8\n6 * 14 = 84\n6 / 14 = 0.43\nimpossible', '\n6 + 14 = 20\nimpossible', '\n6 + 14 = 20\n(14 - 6) * 6 = 8 * 6 = 48\n(6 - 14) * 6 = -8 * 6 = -48\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 11 - 6 = 5 (left: 6 9 5)
+5 * 9 = 45 (left: 6 45)
+
+getting value for 6 + 6 = 12 (left: 12 9 11)
+12 + 9 = 21 (left: 9 11 21)
 
 Number of value needed is 3, this time we have 2 valid output
 Number of value needed is 1, this time we have 0 valid output
 Number of value needed is 1, this time we have 0 valid output
 Number of value needed is 1, this time we have 1 valid output
-The valid outputs are ['\n135 * 1 = 135\n135 / 1 = 135\nimpossible', '\n135 / 5 = 27\n27 * 5 = 135\n135 / 5 = 27\n27 * 5 = 135\n135 / 5 = 27\n27 5 / = 13.4\n135 5 - = 130\n(130 - 5) / 5 = 25\nimpossible', '\n135 * 1 = 135\n135 / 1 = 135\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-11 + 4 = 15 (left: 15 9)
-9 - 15 = -6 (left: -6)
+The valid outputs are ['\n9 * 11 = 99\n(21 - 9) * 11 = 12 * 11 = 132\n(21 - 9) * (11 - 9) = 12 * 2 = 24\nsure', '\n9 + 11 + 21 = 41\n(21 - 9) * 11 = 12 * 11 = 132\n(11 - 9) * 21 = 2 * 21 = 42\n(21 - 11) * 9 = 10 * 9 = 90\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n9 + 11 + 21 = 41\n21 - 9 = 12\n11 * 12 = 132\n(21 - 11) * 9 = 10 * 9 = 90\n(21 - 11) * 9 + 9 = 90 + 9 = 99\n(21 - 11) * 9 + (11 - 9) = 90 + 2 = 92\n(21 - 11) * 9 + (11 - 9) * 9 = 90 + 18 = 108\n(21 - 11) * 9 + (11 - 9) * 9 + 9 = 108 + 9 = 117\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+12 * 9 = 108 (left: 11 108)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n-6  - 6  =  0\n0  +  6  =  6\n6  +  6  =  12\n12  +  6  =  18\n18  +  6  =  24\nsure', '\n-6 + -6 = -12\n-6 - -6 = 0\n-6 * -6 = 36\nimpossible', '\n-6 + 6 = 0\n-6 6 = 0\n-6 + (-6) = -12\n-6 - (-6) = 0\n-6 * 6 = -36\n-6 / 6 = -1\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-11 + 4 = 15 (left: 15 9)
-9 / 15 = 0.6 (left: 0.6)
+The valid outputs are ['\n11 + 108 = 119\n108 - 11 = 97\n(108 / 11) * 11 = 9 * 11 = 99\n(108 - 11) + 11 = 97 + 11 = 108\n11 * (108 / 11) = 11 * 9 = 99\nimpossible', '\n11 108 = 11 + 108 = 119\n(108 - 11) * 11 = 97 * 11 = 1067\n(108 / 11) * 11 = 9.82 * 11 = 108.22\n108 - 11 = 97\n11 + 97 = 108\n108 - 97 = 11\nimpossible', '\n11 108\n11 + 108 = 119\n108 - 11 = 97\n11 * 108 = 1188\n11 / 108 = 0.1019\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+9 + 12 = 21 (left: 11 21)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n0.6 + 0 = 0.6\n0.6 0 = 0\nimpossible', '\n0.6 + 0 = 0.6        (remaining: 24.4)   \n0.6 * 40.6667 = 24.4\nimpossible', '\n0.6 * 40 = 24\nsure']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-11 + 4 = 15 (left: 15 9)
-15 - 9 = 6 (left: 6)
+The valid outputs are ['\n11 + 21 = 32\n(21 - 11) * 11 = 110\n11 21 are too big\nimpossible', '\n11 + 21 = 32\n21 - 11 = 10\n11 * 21 = 231\n11 / 21 = 0.52\nimpossible', '\n11 21 = 32        (remaining: 8)\n21 - 11 = 10\n11 10 = 21        (remaining: -8)\nimpossible']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+12 - 9 = 3 (left: 3 11 9)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n6  + 6  =  12\n12  + 6  =  18\n18  + 6  =  24\nsure', '\n6 + 6 = 12\n6 * 6 = 36\n6 / 6 = 1\n6 - 6 = 0\nimpossible', '\n6  *  4  =  24\nsure']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-11 + 4 = 15 (left: 15 9)
-9 + 15 = 24 (left: 24)
-
-getting value for 5 - 1 = 4 (left: 4 9 11)
-11 + 4 = 15 (left: 15 9)
-15 / 9 = 1.67 (left: 1.67)
+The valid outputs are ['\n3 11 9\n3 + 11 + 9 = 23\n9 * 11 = 99\n(11 - 3) * 9 = 8 * 9 = 72\n(9 - 3) * 11 = 6 * 11 = 66\n(3 + 9) * 11 = 12 * 11 = 132\n(11 - 9) * 3 = 2 * 3 = 6\n3 * 9 * 11 = 297\nimpossible', '\n3 + 11 + 9 = 23\n(11 - 9) + 3 = 5 + 3 = 8\n(9 - 3) * 11 = 6 * 11 = 66\n3 * (9 - 11) = 3 * -2 = -6\nimpossible', '\n3 11 9\n3 + 11 + 9 = 23\n(9 - 3) * 11 = 6 * 11 = 66\n(11 - 3) * 9 = 8 * 9 = 72\n(9 - 3) + 11 + 9 = 5 + 11 + 9 = 25\n(3 + 9) * 11 = 12 * 11 = 132\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+11 + 12 = 23 (left: 9 23)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n1.67  =  1.67\n1.67 * 1.67 = 2.80\n1.67 / 1.67 = 1\n1.67 1.67 are all too small\nimpossible', '\n1.67 + 0 = 1.67        (remaining: 0)   # optional\n1.67 0 + 1.67 = 3.34\n1.67 * 1.67 = 2.80\n1.67 / 1.67 = 1.00\n1.67 cannot be multiplied or added to itself to get 24\nimpossible', '\n1.67 * 1.67 = 2.79\n(1.67 * 1) = 1.67\n1.67 + 1 = 2.67\n1.67 1.67 are all too small\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-11 + 4 = 15 (left: 15 9)
-9 * 15 = 135 (left: 135)
-
-getting value for 5 - 1 = 4 (left: 4 9 11)
-9 + 4 = 13 (left: 11 13)
-11 + 13 = 24 (left: 24)
-
-getting value for 5 - 1 = 4 (left: 4 9 11)
-9 + 4 = 13 (left: 11 13)
-13 - 11 = 2 (left: 2)
+The valid outputs are ['\n9 + 23 = 32\n23 - 9 = 14\n9 * 23 = 207\n9 / 23 = 0.391\nimpossible', '\n9 23 \n9 + 23 = 32\n23 - 9 = 14\n9 * 23 = 207\n9 / 23 = 0.391\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n9 + 23 = 32\n(23 - 9) * 9 = 14 * 9 = 126\n(23 / 9) * 9 = 2 * 9 = 18\n(9 - 23) * 23 = -14 * 23 = -322\nimpossible']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+9 - 12 = -3 (left: 11 -3)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n2 + 2 = 4\n2 * 2 = 4\n2 2 are all too small\nimpossible', '\n2 * 12 = 24\n2 12 = 12\n2 * 12 = 24\nsure', '\n2 + 2 = 4\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-9 + 4 = 13 (left: 11 13)
-11 * 13 = 143 (left: 143)
-
-getting value for 5 - 1 = 4 (left: 4 9 11)
-9 + 4 = 13 (left: 11 13)
-13 / 11 = 1.18 (left: 1.18)
+The valid outputs are ['\n11 - 3 = 8\n8 + 3 = 11\n11 + 3 = 14\n14 + 3 = 17\n17 + 3 = 20\n20 + 3 = 23\n23 + 3 = 26\n26 + (-3) = 23\n23 + (-3) = 20\n20 + (-3) = 17\n17 + (-3) = 14\n14 + (-3) = 11\n11 + (-3) = 8\n8 + (-3) = 5\n5 + (-3) = 2\n2 + (-3) = -1\n-1 + (-3) = -4\nimpossible', '\n11 - 3 = 8\nimpossible', '\n11 - 3 = 8\n8 + 3 = 11\n8 * 3 = 24\nsure']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+12 / 9 = 1.33 (left: 9 11 1.33)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n1.18 + 0 = 1.18\n1.18 = 1.18\nimpossible', '\n1.18 * 1.18 = 1.38\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n1.18 * 1.18 = 1.3824\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-9 + 4 = 13 (left: 11 13)
-11 - 13 = -2 (left: -2)
+The valid outputs are ['\n9 * 1.33 = 12\n12 + 11 = 23\n11 + 9 = 20\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n9 11 * 1.33 = 29.63\n(11 - 1.33) * 9 = 9.67 * 9 = 87.03\n(9 - 1.33) * 11 = 7.67 * 11 = 84.37\n(9 - 11) * 1.33 = -2 * 1.33 = -2.66\n1.33 * (9 - 11) = 1.33 * -2 = -2.66\n1.33 * (11 - 9) = 1.33 * 2 = 2.66\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n9 11 * 1.33 = 33.63\n(1.33 - 1) * 9 * 11 = 0.33 * 9 * 11 = 33.33\n(9 - 1.33) * 11 * 1.33 = 7.67 * 11 * 1.33 = 106.43\n(11 - 9) * 1.33 * 9 = 2 * 1.33 * 9 = 23.94\nimpossible']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+11 - 12 = -1 (left: 9 12 -1)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n-2 + 0 = 0        (remaining: 24)   # optional\nimpossible', '\n-2 + (-2) = -4\n-2 - (-2) = 0\n-2 * (-2) = 4\n-2 / (-2) = -1\n-2 cannot reach 24 with basic arithmetic operations\nimpossible', '\n-2  + 0 = 0        (remaining: -2)   # optional\n-2  * 0 = 0\n-2  / 0 = impossible\nimpossible']
-getting value for 5 - 1 = 4 (left: 4 9 11)
-9 + 4 = 13 (left: 11 13)
-13 + 11 = 24 (left: 24)
-
-getting value for 5 - 1 = 4 (left: 4 9 11)
-9 + 4 = 13 (left: 11 13)
-11 / 13 = 0.85 (left: 0.85)
+The valid outputs are ['\n9 + 12 + (-1) = 20\n(12 - 9) + (-1) = 4 + (-1) = 3\n9 * 12 = 108\n9 / 12 = 0.75\n(-1) * 12 = -12\n(-1) / 12 = -0.083\n(-1) + 9 + 12 = 20\n9 12 -1 are all within a reasonable range\nlikely', '\n9 + 12 = 21\n(21 + -1) = 20\n9 12 -1 are all too small\nimpossible', '\n9 + 12 + (-1) = 20 + (-1) = 19\n9 * 12 + (-1) = 108 + (-1) = 107\n9 - 12 + (-1) = -4 + (-1) = -5\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+6 + 15 = 21 (left: 21 11)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n0.85 * 10 = 8.5\n8.5 * 3 = 25.5\nimpossible', '\n0.85 * 28.24 = 24.0096\n24.0096 is close enough\nlikely', '\n0.85 * 28.8235294117647 = 24.5\n0.85 * 28.8235294117647 = 24.5\n(28.8235294117647 - 0.85) * 0.85 = 0.0 * 0.85 = 0.0\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 + 1 = 10 (left: 6 10)
-6 + 10 = 16 (left: 16)
+The valid outputs are ['\n21 + 11 = 32\n(11 - 21) * -21 = -10 * -21 = 210\n(21 - 11) * 11 = 10 * 11 = 110\n(21 + 11) * -21 = 32 * -21 = -672\n21 / 11 = 1.91\nimpossible', '\n21 + 11 = 32\n21 - 11 = 10\n11 * 21 = 231\n21 / 11 = 1.91\nimpossible', '\n21 11 = 32\n11 + 21 = 32\n21 - 11 = 10\n21 * 11 = 231\n21 / 11 = 1.91\nimpossible']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+15 * 6 = 90 (left: 90 11)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n16 16 = 32\n32 - 16 = 16\n16 16 are all too big\nimpossible', '\n16 8 = 8\n8 3 = 1\nimpossible', '\n16 * 1 = 16\n16 / 1 = 16\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 + 1 = 10 (left: 6 10)
-6 * 10 = 60 (left: 60)
+The valid outputs are ['\n90 + 11 = 101\n(11 - 90) * 11 = -79 * 11 = -869\n90 / 11 = 8.18\nimpossible', '\n90 + 11 = 101\n(11 - 11) * 90 = 0\n90 / 11 = 8.18\n11 * 8.18 = 90.98\nimpossible', '\n90 + 11 = 101\n(11 * 90) / 11 = 90\n(90 - 11) * 11 = 79 * 11 = 869\n(90 / 11) * 11 = 8 * 11 = 88\nimpossible']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+11 + 6 = 17 (left: 17 15)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n60 60 = 3600\n60 / 60 = 1\n60 60 60 are all too big\nimpossible', '\n60 + 60 = 120\n60 * 0.4 = 24\nsure', '\n60 + 60 = 120\n60 - 60 = 0\n60 * 1 = 60\n60 / 1 = 60\n60 0 are all too small\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 + 1 = 10 (left: 6 10)
-10 - 6 = 4 (left: 4)
+The valid outputs are ['\n17 + 15 = 32\nimpossible', '\n17 + 15 = 32\n(17 - 15) * 15 = 2 * 15 = 30\n(15 - 17) * 17 = -2 * 17 = -34\n(17 - 15) / (15 / 17) = 2 / 0.88 = 2.27\nimpossible', '\n17 + 15 = 32\nimpossible']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+6 - 15 = -9 (left: -9 11)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n4  + 4  = 8\n4  * 4  = 16\n4  + 4  = 8\n4  * 4  = 16\nimpossible', '\n4  =  4        (remaining: 20)   # optional\nimpossible', '\n4  =  4        (remaining: 20)   # optional\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 + 1 = 10 (left: 6 10)
-10 / 6 = 1.67 (left: 1.67)
+The valid outputs are ['\n-9 + 11 = 2\n11 - (-9) = 11 + 9 = 20\n-9 * 11 = -99\n-9 / 11 = -0.82\n-9 11 are all too small\nimpossible', '\n-9 11 = 2\n(11 - (-9)) = 20\nimpossible', '\n-9 + 11 = 2\n11 - (-9) = 20\n-9 11 are within a reasonable range\nlikely']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+11 - 6 = 5 (left: 5 15)
 
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 + 1 = 10 (left: 6 10)
-6 - 10 = -4 (left: -4)
+getting value for 9 + 6 = 15 (left: 6 15 11)
+15 - 11 = 4 (left: 4 6)
 
 Number of value needed is 3, this time we have 3 valid output
-The valid outputs are ['\n-4 + -4 = -8\n-4 - -4 = 0\n-4 * -4 = 16\n-4 / -4 = -1\nimpossible', '\n-4  = -4        (remaining: 0)   # optional\nimpossible', '\n-4  = -4        (remaining: 0)   # optional\nimpossible']
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 + 1 = 10 (left: 6 10)
-10 + 6 = 16 (left: 16)
+The valid outputs are ['\n4 + 6 = 10\nimpossible', '\n4 + 6 = 10\nimpossible', '\n4 + 6 = 10\n4 * 6 = 24\nsure']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+11 * 6 = 66 (left: 66 15)
 
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 + 1 = 10 (left: 6 10)
-6 / 10 = 0.6 (left: 0.6)
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n66 15\n66 + 15 = 81\n(66 - 15) * 15 = 51 * 15 = 765\n(15 + 66) * 15 = 81 * 15 = 1215\n(15 - 66) * 15 = -51 * 15 = -765\nimpossible', '\n66 - 15 = 51\n51 + 15 + 15 = 81\n(15 - 15) * 66 = 0 * 66 = 0\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n66 + 15 = 81\n(15 - 6) * 6 + 6 = 9 * 6 + 6 = 60 + 6 = 66\n(66 - 15) * 1 = 51 * 1 = 51\n(15 - 6) * 6 + 6  is not the right way, but I see the problem now\nimpossible']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+6 / 11 = 0.55 (left: 0.55 15)
 
-getting value for 11 - 5 = 6 (left: 1 6 9)
-9 + 1 = 10 (left: 6 10)
-10 * 6 = 60 (left: 60)
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n0.55 + 15 = 15.55\n15 15.55 are too far apart\nimpossible', '\n0.55 * 15 = 8.25\n15 - 8.25 = 6.75\n6.75 + 6.75 = 13.5\n6.75 * 4 = 27\n(4 - 0.55) * 6.75 = 3.45 * 6.75 = 23.37\n(0.55 + 6.75) * 4 = 7.3 * 4 = 29.2\n(15 - 0.55) * 0.55 = 14.45 * 0.55 = 7.97\nimpossible', '\n0.55 + 15 = 15.55\n(15 - 0.55) * 0.55 = 14.45 * 0.55 = 7.9475\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 6 / 6 = 1 (left: 1 9 11)
+1 + 9 = 10 (left: 10 11)
 
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 + 9 = 10 (left: 6 10)
-6 + 10 = 16 (left: 16)
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n10 + 11 = 21\n10 * 11 = 110\n11 - 10 = 1\n10 / 11 = 0.91\nimpossible', '\n10 + 11 = 21\n10 * 11 = 110\nimpossible', '\n10 + 11 = 21\n10 * 11 = 110\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 6 / 6 = 1 (left: 1 9 11)
+9 + 1 = 10 (left: 10 11)
 
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 + 9 = 10 (left: 6 10)
-10 - 6 = 4 (left: 4)
+getting value for 6 / 6 = 1 (left: 1 9 11)
+1 * 11 = 11 (left: 9 11)
 
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 + 9 = 10 (left: 6 10)
-6 - 10 = -4 (left: -4)
+getting value for 6 / 6 = 1 (left: 1 9 11)
+11 - 1 = 10 (left: 1 10)
 
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 + 9 = 10 (left: 6 10)
-10 / 6 = 1.67 (left: 1.67)
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n1 + 10 = 11\nimpossible', '\n1 + 10 = 11\nimpossible', '\n1 + 10 = 11\nimpossible']
+getting value for 6 / 6 = 1 (left: 1 9 11)
+1 - 9 = -8 (left: -8 11)
 
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 + 9 = 10 (left: 6 10)
-10 * 6 = 60 (left: 60)
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n-8 11 = -15\n-8 + 11 = 3\n11 - (-8) = 11 + 8 = 19\n(11 - (-8)) * (-8) = 19 * (-8) = -152\nimpossible', '\n-8 + 11 = 3\n(11 - (-8)) = 19\n(11 - (-8)) * 1 = 19\n-8 / 11 = -0.73\nimpossible', '\n-8 + 11 = 3\n11 - (-8) = 19\n-8 * 11 = -88\n-8 / 11 = -0.72\nimpossible']
+getting value for 6 / 6 = 1 (left: 1 9 11)
+11 + 1 = 12 (left: 9 12)
 
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 + 9 = 10 (left: 6 10)
-6 / 10 = 0.6 (left: 0.6)
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n9 + 12 = 21\n12 - 9 = 3\n9 * 12 = 108\n9 / 12 = 0.75\nimpossible', '\n9 + 12 = 21\n9 * 12 = 108\n(12 - 9) * 9 = 3 * 9 = 27\n9 12 are too big\nimpossible', '\n9 + 12 = 21\n12 - 9 = 3\n9 * 12 = 108\n9 / 12 = 0.75\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 6 / 6 = 1 (left: 1 9 11)
+9 * 1 = 9 (left: 1 9)
 
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 + 9 = 10 (left: 6 10)
-10 + 6 = 16 (left: 16)
+getting value for 6 / 6 = 1 (left: 1 9 11)
+11 / 1 = 11 (left: 1 11)
 
-getting value for 11 - 5 = 6 (left: 1 6 9)
-1 + 9 = 10 (left: 6 10)
-6 * 10 = 60 (left: 60)
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n1 + 11 = 12\n1 * 11 = 11\nimpossible', '\n1 + 11 = 12\n1 * 11 = 11\nimpossible', '\n1 + 11 = 12\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+6 + 9 = 15 (left: 15 1.83)
 
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n15 + 1.83 = 16.83\nimpossible', '\n15 + 1.83 = 16.83\nimpossible', '\n15 + 1.83 = 16.83\n(15 - 1.83) * 1.83 = 13.07 * 1.83 = 23.93\n(1.83 - 1) * 15 = 0.83 * 15 = 12.45\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+6 * 1.83 = 10.98 (left: 10.98 9)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n10.98 + 9 = 19.98\n(9 - 10.98) * 10.98 = -1.98 * 10.98 = -21.5664\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n10.98 + 9 = 19.98\n(9 - 10.98) * 9 = (-1.98) * 9 = -17.82\n(9 - 10.98) * 9 = -1.98 9 = -17.82\n10.98 - 9 = 1.98\n1.98 9 = 17.82\n17.82 1.98 = 35.82\n10.98 * 9 = 98.82\n10.98 9 = 98.82\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n10.98 + 9 = 19.98\n(9 - 10.98) * 9 = -1.98 * 9 = -17.82\n(9 / 10.98) * 9 = 0.819 * 9 = 7.37\n(9 * 10.98) - 9 = 100.82 - 9 = 91.82\n(9 * 10.98) = 98.82\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+9 - 1.83 = 7.17 (left: 7.17 6)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n7.17 + 6 = 13.17\n(6 - 7.17) * 7.17 = -1.17 * 7.17 = -8.38\n(6 - 7.17) * 7.17 = -1.17 * 7.17 = -8.38\n(7.17 - 6) * 6 = 1.17 * 6 = 7.02\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n7.17 + 6 = 13.17\n(6 - 7.17) * 7.17 = -1.17 * 7.17 = -8.40\n7.17 * 6 = 42.99\n(7.17 - 6) / 6 = 1.17 / 6 = 0.195\nimpossible', '\n7.17 + 6 = 13.17\n6 - 7.17 = -1.17\n7.17 * 6 = 42.92\n7.17 / 6 = 1.19\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+83 + 6 = 7.83 (left: 7.83 9)
+
+Number of value needed is 3, this time we have 2 valid output
+Number of value needed is 1, this time we have 1 valid output
+The valid outputs are ['\n7.83 + 9 = 16.83\n9 - 7.83 = 1.17\n7.83 * 9 = 70.47\n7.83 / 9 = 0.87\n7.83 * (9 - 7.83) = 0.17\n7.83 * 9 = 70.47\n(7.83 + 9) * 9 = 96.72\n(9 - 7.83) + 7.83 = 9\n(9 - 7.83) + 7.83 = 9\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n7.83 + 9 = 16.83\n(9 - 7.83) * 7.83 = 1.17 * 7.83 = 9.16\n(9 - 7.83) + 7.83 = 1.17 + 7.83 = 9\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n7.83 + 9 = 16.83\n(9 - 7.83) * 7.83 = 1.17 * 7.83 = 9.13\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+9 / 1.83 = 4.91 (left: 4.91 6)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n4.91 + 6 = 10.91\n(6 - 4.91) * 4.91 = 1.09 * 4.91 = 5.35\n(4.91 - 6) / 6 = -1.09 / 6 = -0.18\nimpossible', '\n4.91 + 6 = 10.91\nimpossible', '\n4.91 + 6 = 10.91\n(6 - 4.91) * 4.91 = 1.09 * 4.91 = 5.34\n4.91 6 are too small to reach 24\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+6 / 1.83 = 3.28 (left: 3.28 9)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n3.28 + 9 = 12.28\n9 - 3.28 = 5.72\n(3.28 * 9) / 9 = 3.28\n(9 - 3.28) * 3.28 = 2.72 * 3.28 = 8.89\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n3.28 + 9 = 12.28\n9 - 3.28 = 5.72\n3.28 * 9 = 29.52\n3.28 / 9 = 0.36\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n3.28 * 9 = 29.52\n9 - 3.28 = 5.72\n(9 - 3.28) / 3.28 = 1.72 + 3.28 = 4.99 + 5.72 = 10.71 + 5.72 = 16.43 + 7.81 = 24.24\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+9 + 1.83 = 10.83 (left: 10.83 6)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n10.83 + 6 = 16.83\n16.83 * 1.44 = 24.21\n(6 - 0.83) * 10.83 = 5.17 * 10.83 = 55.93\n(10.83 / 0.83) * 6 = 13.0 * 6 = 78\n(10.83 / 6) * 6 = 1.805 * 6 = 10.83\nimpossible', '\n10.83 + 6 = 16.83\n(6 - 10.83) * 10.83 = -4.83 * 10.83 = -52.19\n10.83 * 6 = 64.98\n10.83 / 6 = 1.805\nimpossible', '\n10.83 + 6 = 16.83\n(6 - 10.83) = -4.83, cannot get positive result with multiplication or division\n(10.83 - 6) = 4.83, cannot get 24 with this number\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+83 + 9 = 10.83 (left: 10.83 6)
+
+Getting proposals from index 0 with y = 6 + 6 = 12 (left: 12 9 11)
+12 + 9 = 21 (left: 9 11 21)
+
+Current number is: 9 11 21
+
+The proposals for 6 + 6 = 12 (left: 12 9 11)
+12 + 9 = 21 (left: 9 11 21)
+ is 
+ ['9 * 11 = 99 (left: 21)', '9 + 11 = 20 (left: 21)', '11 - 9 = 2 (left: 2 21)', '21 + 9 = 30 (left: 11)', '21 - 11 = 10 (left: 9)', '21 / 9 = 2.33 (left: 11)', '21 / 11 = 1.91 (left: 9)', '11 * 9 = 99 (left: 21)']
+Getting proposals from index 1 with y = 6 + 6 = 12 (left: 12 9 11)
+9 - 12 = -3 (left: 11 -3)
+
+Current number is: 11 -3
+
+The proposals for 6 + 6 = 12 (left: 12 9 11)
+9 - 12 = -3 (left: 11 -3)
+ is 
+ ['Input: 11 -3', '11 + 3 = 14 (left: 14)', '11 * -3 = -33 (left: -33)', '11 - (-3) = 14 (left: 14)', '11 / -3 = -3.67 (left: -3.67)', '11 + (-3) = 8 (left: 8)', '-3 + 11 = 8 (left: 8)', '-3 * 11 = -33 (left: -33)', '-3 - 11 = -14 (left: -14)']
+Getting proposals from index 2 with y = 9 + 6 = 15 (left: 6 15 11)
+15 - 11 = 4 (left: 4 6)
+
+Current number is: 4 6
+
+The proposals for 9 + 6 = 15 (left: 6 15 11)
+15 - 11 = 4 (left: 4 6)
+ is 
+ ['4 + 6 = 10 (left: 10)', '4 * 6 = 24 (left: 24)', '6 - 4 = 2 (left: 2)', '4 - 6 = -2 (left: -2)', '6 / 4 = 1.5 (left: 1.5)', '6 + 4 = 10 (left: 10)', '4 / 6 = 0.67 (left: 0.67)', '6 * 4 = 24 (left: 24)']
+Getting proposals from index 3 with y = 11 / 6 = 1.83 (left: 6 9 1.83)
+6 * 1.83 = 10.98 (left: 10.98 9)
+
+Current number is: 10.98 9
+
+The proposals for 11 / 6 = 1.83 (left: 6 9 1.83)
+6 * 1.83 = 10.98 (left: 10.98 9)
+ is 
+ ['98 + 9 = 19.98 (left: 19.98)', '9 * 10.98 = 99.82 (left: 99.82)', '9 - 10.98 = -1.98 (left: -1.98)', '98 / 9 = 1.21 (left: 1.21)', '9 + 10.98 = 19.98 (left: 19.98)', '98 * 9 = 98.62 (left: 98.62)', '9 / 10.98 = 0.82 (left: 0.82)', '98 - 9 = 1.98 (left: 1.98)']
+Getting proposals from index 4 with y = 11 / 6 = 1.83 (left: 6 9 1.83)
+83 + 6 = 7.83 (left: 7.83 9)
+
+Current number is: 7.83 9
+
+The proposals for 11 / 6 = 1.83 (left: 6 9 1.83)
+83 + 6 = 7.83 (left: 7.83 9)
+ is 
+ ['83 + 9 = 16.83 (left: 16.83)', '9 * 7.83 = 70.47 (left: 70.47)', '83 - 9 = -1.17 (left: -1.17)', '9 / 7.83 = 1.15 (left: 1.15)', '83 * 9 = 70.47 (left: 70.47)', '83 + 0.9 = 8.73 (left: 8.73)', '9 + 7.83 = 16.83 (left: 16.83)', '83 / 9 = 0.87 (left: 0.87)']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+12 + 9 = 21 (left: 9 11 21)
+9 * 11 = 99 (left: 21)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n21 21 = 42\n21 / 21 = 1\n21 * 1 = 21\n21 21 are all too big\nimpossible', '\n21 * 1 = 21\n21 + 3 = 24\nsure', '\n21 21 = 42\n42 - 18 = 24\nsure']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+12 + 9 = 21 (left: 9 11 21)
+9 + 11 = 20 (left: 21)
+
+getting value for 6 + 6 = 12 (left: 12 9 11)
+12 + 9 = 21 (left: 9 11 21)
+11 - 9 = 2 (left: 2 21)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n2 21 = 23\n21 - 2 = 19\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n2 * 21 = 42\n(21 - 2) * 2 = 19 * 2 = 38\n2 21 are both too big\nimpossible', '\n2 + 21 = 23\n21 - 2 = 19\n2 * 21 = 42\n2 / 21 = 0.095\nimpossible']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+12 + 9 = 21 (left: 9 11 21)
+21 + 9 = 30 (left: 11)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n11 + 11 = 22\n22 + 2 = 24\nsure', '\n11 11 = 121\nimpossible', '\n11 11 = 121\nimpossible']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+12 + 9 = 21 (left: 9 11 21)
+21 - 11 = 10 (left: 9)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n9 9 = 81\n9 9 9 are all too big\nimpossible', '\n9 9 = 18\n9 9 = 18\n(9 + 9) = 18 is not 24, but 18 is within a reasonable range of 24\nlikely', '\n9 cannot be used to obtain 24\nimpossible']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+12 + 9 = 21 (left: 9 11 21)
+21 / 9 = 2.33 (left: 11)
+
+getting value for 6 + 6 = 12 (left: 12 9 11)
+12 + 9 = 21 (left: 9 11 21)
+21 / 11 = 1.91 (left: 9)
+
+getting value for 6 + 6 = 12 (left: 12 9 11)
+12 + 9 = 21 (left: 9 11 21)
+11 * 9 = 99 (left: 21)
+
+getting value for 6 + 6 = 12 (left: 12 9 11)
+9 - 12 = -3 (left: 11 -3)
+Input: 11 -3
+
+Number of value needed is 3, this time we have 0 valid output
+Number of value needed is 3, this time we have 1 valid output
+Number of value needed is 2, this time we have 2 valid output
+The valid outputs are ['\nTo reach 24, the answer should use each input exactly once and no other numbers. \n\nHowever, the answer "11 - 3" uses the input 6 only once, and uses the number 3, which is not in the input. \n\nSo, I would judge it as:\nimpossible', '\nYou are trying to subtract 3 from 11, but the numbers 6 and 9 are not used in the calculation. Also, you are supposed to use each input exactly once.\n\nSo, I would judge this as:\nimpossible', '\nJudge: \nimpossible']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+9 - 12 = -3 (left: 11 -3)
+11 + 3 = 14 (left: 14)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n14  = 14        (remaining: 0)   # optional\n<final>    sure # 14 is exactly 24', '\n14 + 14 = 28\n14 * 1 = 14\n14 / 1 = 14\nimpossible', '\n14 = 14\nsure']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+9 - 12 = -3 (left: 11 -3)
+11 * -3 = -33 (left: -33)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n-33  =  -33\nimpossible', '\n-33  * -33 = 1089\n-33 / -33 = 1\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n-33 + 33 = 0\n-33 * -33 = 1089\n-33 / -33 = 1\n-33 + (-33) = -66\n-33 - (-33) = 0\n-33 * (-33) = 1089\n-33 / (-33) = 1\nimpossible']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+9 - 12 = -3 (left: 11 -3)
+11 - (-3) = 14 (left: 14)
+
+getting value for 6 + 6 = 12 (left: 12 9 11)
+9 - 12 = -3 (left: 11 -3)
+11 / -3 = -3.67 (left: -3.67)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n-3.67 * -3.67 = 13.35\n-3.67 / -3.67 = 1\n-3.67  is too small\nimpossible', '\n-3.67  + 3.67 = 0\n-3.67 - 3.67 = -7.34\n-3.67 * 3.67 = -13.55\n-3.67 / 3.67 = -1\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n-3.67  *  -1.00  =  3.67        (remaining: 24 - 3.67 = 20.33)   # optional\n-3.67 / -1.00  =  3.67\n-3.67  +  3.67  =  0.00\n-3.67  -  3.67  =  -7.34\n-3.67  +  20.00  =  16.33\n-3.67  *  6.78  =  -24.96\nimpossible']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+9 - 12 = -3 (left: 11 -3)
+11 + (-3) = 8 (left: 8)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n8 * 3 = 24\nsure', '\n8 8 = 16\n8 + 8 = 16\n8 8 = 8 + 8 = 16\n8 8 = 8 * 8 / 8 = 8\n8 8 = 8 * 8 / 8 = 8\nimpossible', '\n8 + 8 = 16\n8 * 3 = 24\nsure']
+getting value for 6 + 6 = 12 (left: 12 9 11)
+9 - 12 = -3 (left: 11 -3)
+-3 + 11 = 8 (left: 8)
+
+getting value for 6 + 6 = 12 (left: 12 9 11)
+9 - 12 = -3 (left: 11 -3)
+-3 * 11 = -33 (left: -33)
+
+getting value for 6 + 6 = 12 (left: 12 9 11)
+9 - 12 = -3 (left: 11 -3)
+-3 - 11 = -14 (left: -14)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n-14 + 14 = 0        (remaining: 24)   # optional\nimpossible', '\n-14  +  =  -14        (remaining: 38)   # optional\n-14  -  =  0\n-14  *  =  -140\n-14  /  =  -1.07\nimpossible', '\n-14  + 14 = 0\nimpossible']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+15 - 11 = 4 (left: 4 6)
+4 + 6 = 10 (left: 10)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n10 + 10 = 20\n20 + 10 = 30\n(10 + 10) + 4 = 24\n10 * (10 / 10) = 10\nimpossible', '\n10 + 10 = 20\n10 * 2 = 20\n10 * 10 / 5 = 20\n10 * 10 / 10 = 10\n10 + 10 = 20\n10 10 are all too small\nimpossible', '\n10  =  10\n\nimpossible']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+15 - 11 = 4 (left: 4 6)
+4 * 6 = 24 (left: 24)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n24 24 = 24\nsure', '\n24 0 0 = 24\nsure', '\n24  = 24\nsure']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+15 - 11 = 4 (left: 4 6)
+6 - 4 = 2 (left: 2)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n2  * 2  =  4        (remaining: 20)   \nimpossible', '\n2 + 2 = 4\nimpossible', '\n2 + 2 = 4\nimpossible']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+15 - 11 = 4 (left: 4 6)
+4 - 6 = -2 (left: -2)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n-2 + (-2) = -4        (remaining: 30)   # optional\n-2 - (-2) = 0\n-2 * (-2) = 4\n-2 / (-2) = -1\nimpossible', '\n-2 + -2 = -4\n-2 - -2 = 0\n-2 * -2 = 4\n-2 / -2 = -1\nimpossible', '\n-2  =  -2        (remaining: 26)   \nimpossible']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+15 - 11 = 4 (left: 4 6)
+6 / 4 = 1.5 (left: 1.5)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n1.5 * 16 = 24\nsure', '\n1.5 * 16 = 24\nsure', '\n1.5 1.5 = 3\nimpossible']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+15 - 11 = 4 (left: 4 6)
+6 + 4 = 10 (left: 10)
+
+getting value for 9 + 6 = 15 (left: 6 15 11)
+15 - 11 = 4 (left: 4 6)
+4 / 6 = 0.67 (left: 0.67)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n0.67 * 36 = 24.12\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n0.67 * 36 = 24.12\n0.67 + 0.67 = 1.34\n(0.67 * 36) / 1.34 = 24\n24.12 / 1.34 = 18\n(0.67 * 36) - 0.67 = 24.12 - 0.67 = 23.45\n(36 / 0.67) * 0.67 = 54 * 0.67 = 36.18\n(36 / 0.67) + 0.67 = 54 + 0.67 = 54.67\n(36 / 0.67) - 0.67 = 54 - 0.67 = 53.33\nimpossible', '\n0.67 * 36 = 24.12\n(36 - 0.67) = 35.33\nimpossible']
+getting value for 9 + 6 = 15 (left: 6 15 11)
+15 - 11 = 4 (left: 4 6)
+6 * 4 = 24 (left: 24)
+
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+6 * 1.83 = 10.98 (left: 10.98 9)
+98 + 9 = 19.98 (left: 19.98)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n19.98 * 1.24 = 24.59\n19.98 / 0.98 = 20.4\n19.98 * 0.98 = 19.5\n19.98 / 1.24 = 16.0\nimpossible', '\n19.98 cannot be reached with the given numbers. \nimpossible', '\n19.98 + 4.02 = 23.99\n19.98 - 4.02 = 15.96\n19.98 * 4.02 = 80.00\n19.98 / 4.02 = 4.95\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+6 * 1.83 = 10.98 (left: 10.98 9)
+9 * 10.98 = 99.82 (left: 99.82)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n99.82  =  99.82\n99.82 / 1 = 99.82\n99.82  =  99.82        (remaining: 0)   # optional\n<final>    impossible', '\n99.82 + 0 = 99.82\n99.82 * 0.24 = 23.8968\n99.82 - 23.8968 = 75.9232\n75.9232 + 0 = 75.9232\n(75.9232 - 24) + 24 = 75.9232\n75.9232 - 24 = 51.9232\n51.9232 - 24 = 27.9232\n27.9232 - 24 = 3.9232\nimpossible', '\n99.82 / 1 = 99.82\n(1 + 99.82) / 1 = 100.82 / 1\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+6 * 1.83 = 10.98 (left: 10.98 9)
+9 - 10.98 = -1.98 (left: -1.98)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n-1.98 + 24 = 22.02\n-1.98 + 24.02 = 22.04\n-1.98 + 24.04 = 22.06\n-1.98 * 12.2 = 24.036\nsure', '\n-1.98 + (-1.98) = -3.96\n(-1.98) * (-1.98) = 3.92\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n-1.98 + 1.98 = 0        (remaining: 24)   # optional\n-1.98 * -1.98 = 3.92\n-1.98 1.98 = 0        (remaining: 24)   # optional\n-1.98 * -1.98 = 3.92\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+6 * 1.83 = 10.98 (left: 10.98 9)
+98 / 9 = 1.21 (left: 1.21)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n1.21 * 1.21 = 1.4841\nimpossible', '\n1.21 + 0 = 1.21\n1.21 - 0 = 1.21\n1.21 * 0 = 0\n1.21 / 0 = impossible\nimpossible', '\n1.21  = 1.21        (remaining: 0)   # optional\n1.21 * 1.21 = 1.4641\n1.21 / 1.21 = 1\n1.21  = 1.21        (remaining: 0)   # optional\n1.21  = 1.21        (remaining: 0)   # optional\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+6 * 1.83 = 10.98 (left: 10.98 9)
+9 + 10.98 = 19.98 (left: 19.98)
+
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+6 * 1.83 = 10.98 (left: 10.98 9)
+98 * 9 = 98.62 (left: 98.62)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n98.62 + 0 = 98.62\n(98.62 - 0) * 1 = 98.62\n(0.62 + 0) * 100 = 62 * 1 = 62\n(98 + 0) + (0.62 * 100) = 98 + 62 = 160\n(98.62 - 98) * 100 = 0.62 * 100 = 62\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n98.62 + 0 = 98.62        (remaining: 25.38)\nimpossible', '\n98.62 + 0 = 98.62\n(0 - 0) * 98.62 = 0 * 98.62 = 0\n98.62 0 0 are all too big\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+6 * 1.83 = 10.98 (left: 10.98 9)
+9 / 10.98 = 0.82 (left: 0.82)
+
+Number of value needed is 3, this time we have 2 valid output
+Number of value needed is 1, this time we have 1 valid output
+The valid outputs are ['\n0.82 + 0 = 0.82\nimpossible', '\n0.82 * 30 = 24.6\n24 / 0.82 = 29.27\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n0.82 * 30 = 24.6\n0.82 / 0.1 = 8.2\n0.82 * 30 = 24.6\n0.82 * 3 = 2.46\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+6 * 1.83 = 10.98 (left: 10.98 9)
+98 - 9 = 1.98 (left: 1.98)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n1.98 + 1.98 = 3.96\n(1.98 - 1.98) * 1.98 = 0 * 1.98 = 0\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n1.98 cannot be used as an operand for any basic arithmetic operation, as it is a decimal number\nimpossible', '\n1.98 + 1.98 = 3.96\n(1.98 - 1) * 1.98 = 0.98 * 1.98 = 1.94\n(1.98 - 0.98) * 0.98 = 1 * 0.98 = 0.98\n(0.98 - 0.98) * 0.98 = 0 * 0.98 = 0\n(0.98 - 0.98) * 0.98 = 0 * 0.98 = 0\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+83 + 6 = 7.83 (left: 7.83 9)
+83 + 9 = 16.83 (left: 16.83)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n16.83 / 1 = 16.83\nimpossible', '\n16.83  =  16.83        (remaining: 0.00)   # optional\nimpossible', '\n16.83 + 7.17 = 24\nsure']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+83 + 6 = 7.83 (left: 7.83 9)
+9 * 7.83 = 70.47 (left: 70.47)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n70.47 + 0 = 70.47\n70.47 - 0 = 70.47\n70.47 * 0 = 0\n70.47 / 0 = impossible\n70.47  op  0  =  70.47        (remaining: 0)\nimpossible', '\n70.47  = 70.47        (remaining: 0)   \nimpossible', '\n70.47 + 0 = 70.47\n70.47 * 0 = 0\n70.47 / 0 = impossible\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+83 + 6 = 7.83 (left: 7.83 9)
+83 - 9 = -1.17 (left: -1.17)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n-1.17 + 24.17 = 23.00\nimpossible', '\n-1.17 1.17 = 0        (remaining: 24)   # optional\nimpossible', '\n-1.17  0.00  =  -1.17        (remaining: 24)   # optional\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+83 + 6 = 7.83 (left: 7.83 9)
+9 / 7.83 = 1.15 (left: 1.15)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n1.15 + 0 = 1.15        (remaining: 23)\n1.15 * 20 = 23\n1.15 + 1 = 2.15\n1.15 * 20 = 23\n2.15 - 1.15 = 1\n1.15 1.15 are all too small\nimpossible', '\n1.15  =  1.15        (remaining: 23.00)   # optional\nimpossible', '\n1.15 + 0 = 1.15\n1.15 0 = 1.15\n1.15 is too small\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+83 + 6 = 7.83 (left: 7.83 9)
+83 * 9 = 70.47 (left: 70.47)
+
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+83 + 6 = 7.83 (left: 7.83 9)
+83 + 0.9 = 8.73 (left: 8.73)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n8.73 = 8.73        (remaining: 0)   # optional\nimpossible', '\n8.73 1 = 9.73        (remaining: 15.27)   #\n9.73 1 = 10.73\n10.73 1 = 11.73\n11.73 1 = 12.73\n12.73 1 = 13.73\n13.73 1 = 14.73\n14.73 1 = 15.73\n15.73 1 = 16.73\n16.73 1 = 17.73\n17.73 1 = 18.73\n18.73 1 = 19.73\n19.73 1 = 20.73\n20.73 1 = 21.73\n21.73 1 = 22.73\n22.73 1 = 23.73\n23.73 1 = 24.73\n24.73 0.73 = 24\nsure', '\n8.73 cannot be reached by basic arithmetic operations with a single number.\nimpossible']
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+83 + 6 = 7.83 (left: 7.83 9)
+9 + 7.83 = 16.83 (left: 16.83)
+
+getting value for 11 / 6 = 1.83 (left: 6 9 1.83)
+83 + 6 = 7.83 (left: 7.83 9)
+83 / 9 = 0.87 (left: 0.87)
+
+Number of value needed is 3, this time we have 3 valid output
+The valid outputs are ['\n0.87 + 0 = 0.87\n0.87 * 0 = 0\nimpossible', '\n0.87 * 28 = 24.36\n0.87 + 28 = 28.87\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely', '\n0.87 * 28 = 24.36\n(28 - 0.87) * 0.87 = 27.49 * 0.87 = 23.81\nI cannot obtain 24 now, but numbers are within a reasonable range\nlikely']
 Found the answer! 
 
 Find final answer!
 
-Retrieve steps: ['13 + 11 = 24 (left: 24)', '4 + 9 = 13 (left: 13 11)', '5 - 1 = 4 (left: 4 9 11)'] 
- Chainindex: [0, 0, 0]
+Retrieve steps: ['4 * 6 = 24 (left: 24)', '15 - 11 = 4 (left: 4 6)', '9 + 6 = 15 (left: 6 15 11)'] 
+ Chainindex: [2, 2, 0]
 numbered steps : 
-1: 5 - 1 = 4 (left: 4 9 11)
-2: 4 + 9 = 13 (left: 13 11)
-3: 13 + 11 = 24 (left: 24)
-redo-1 feedback: Answer: (5 - 1 + 9) + 11 = 24
+1: 9 + 6 = 15 (left: 6 15 11)
+2: 15 - 11 = 4 (left: 4 6)
+3: 4 * 6 = 24 (left: 24)
+redo-1 feedback: Answer: (9 + 6 - 11) * 6 = 24
+389.035130 seconds
 check answer: (True, 'Correct')
 The final answer is: 
 
-(5 - 1 + 9) + 11 = 24
+(9 + 6 - 11) * 6 = 24
 {'completion_tokens': 19, 'prompt_tokens': 946, 'cost': 0.029519999999999998}
-{'llama completion_tokens': 19551, 'prompt_tokens': 38197}
+{'llama completion_tokens': 20482, 'prompt_tokens': 41777}

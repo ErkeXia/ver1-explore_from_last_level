@@ -206,10 +206,10 @@ Answer:
 
 
 # print(value_prompt)
-output = llama(value_user_prompt, value_system_prompt, n=3, stop=None, temperature=0.7)
+output = llama(value_user_prompt, value_system_prompt, n=1, stop=None, temperature=0.7)
 print(llmaa_usage())
 start = time.perf_counter()
-output = llama(propose_user_prompt, propose_system_prompt, n=1, stop=None, temperature=0.7, max_tokens = 200)
+output = llama(value_user_prompt, value_system_prompt, n=1, stop=None, temperature=0.7, max_tokens = 200)
 elapsed = time.perf_counter() - start
 print(llmaa_usage())
 print(f"{elapsed:.6f} seconds")
