@@ -4,6 +4,11 @@ import time
 from tot.methods.bfs import solve, solve_v1
 from tot.tasks.game24 import Game24Task
 from tot.models import gpt_usage, llmaa_usage
+import torch
+print(torch.cuda.is_available())          # should be True
+print(torch.cuda.get_device_name(0))      # should print your GPU model
+
+
 
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
