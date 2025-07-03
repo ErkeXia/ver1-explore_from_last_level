@@ -152,4 +152,55 @@ class Game24Task(Task):
             return True, "Correct"
         except Exception as e:
             return False, f"Invalid math operation: {e}"
+        
+    @staticmethod
+    def check_multistep_solution(initial_numbers_str: str, steps_str: str):
+        try:
+            initial_numbers = list(map(float, initial_numbers_str.strip().split()))
+        except:
+            return False, "Invalid initial numbers format"
+        available = initial_numbers[:]
+        steps = steps_str.strip().splitlines()
+        for i, line in enumerate(steps):
+            line = line.strip()
+            match = re.fullmatch(r'\s*(.+?)\s*=\s*([\d\.]+)\s*\(left:\s*([\d\s]+)\s*\)', line)
+            if not match:
+                return False, f"Line {i+1} format invalid: '{line}'"
+            expr_str, result_str, left_str = match.groups()
+            try:
+                expr_match = re.fullmatch(r'(\d+\.?\d*)\s*([\+\-\*/])\s*(\d+\.?\d*)', expr_str.strip())
+                if not expr_match:
+                    return False, f"Line {i+1} has invalid expression format: '{expr_str.strip()}'"
+                a, op, b = expr_match.groups()
+                a = float(a)
+                b = float(b)
+                result = float(result_str)
+            except Exception as e:
+                return False, f"Line {i+1} expression error: {e}"
+            if op == '+':
+                expected = a + b
+            elif op == '-':
+                expected = a - b
+            elif op == '*':
+                expected = a * b
+            elif op == '/':
+                if abs(b) < 1e-8:
+                    return False, f"Line {i+1}: Division by zero"
+                expected = a / b
+            else:
+                return False, f"Line {i+1}: Unsupported operator '{op}'"
+            if abs(expected - result) > 1e-6:
+                return False, f"Line {i+1}: {a} {op} {b} = {expected}, not {result}"
+            try:
+                available.remove(a)
+                available.remove(b)
+            except ValueError:
+                return False, f"Line {i+1}: Tried to use {a} or {b}, which are not in available numbers {available}"
+            available.append(result)
+            expected_remaining = list(map(float, left_str.strip().split()))
+            if sorted(available) != sorted(expected_remaining):
+                return False, f"Line {i+1}: Remaining mismatch. Got {sorted(available)}, expected {sorted(expected_remaining)}"
+        if len(available) != 1 or abs(available[0] - 24) > 1e-6:
+            return False, f"Final result is {available[0]}, not 24"
+        return True, "Correct solution"
                 

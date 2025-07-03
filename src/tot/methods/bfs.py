@@ -1,9 +1,12 @@
 import itertools
+import time
 import numpy as np
 from functools import partial
 from tot.models import gpt
 from tot.models import llama
 
+propose_num = value_num = 0
+propose_time = value_time = 0
 
 def get_values(task, x, ys, n_evaluate_sample, cache_value=True):
     values = []
@@ -39,6 +42,9 @@ def get_samples(task, x, y, n_generate_sample, prompt_sample, stop):
     return [y + _ for _ in samples]
 
 def get_value(task, x, y, n_evaluate_sample, cache_value=True):
+    global value_num, value_time
+    value_num += 1
+    
     system, user = task.value_prompt_wrap(x, y)
     if cache_value and user in task.value_cache:
         return task.value_cache[user]
@@ -47,6 +53,9 @@ def get_value(task, x, y, n_evaluate_sample, cache_value=True):
     value_outputs = []
     max_attempts = 5
     attempt = 0
+    
+    start = time.perf_counter()
+    
     while(num > 0 and attempt < max_attempts):
         outputs = llama(user, system, n=num, stop=None, max_tokens = 200)
         keywords = {'likely', 'impossible', 'sure'}
@@ -55,13 +64,18 @@ def get_value(task, x, y, n_evaluate_sample, cache_value=True):
             if any(k in s.strip().split('\n')[-1] for k in keywords)
         ]
         valid_count = len(valid_outputs)
-        print(f'Number of value needed is {num}, this time we have {valid_count} valid output')
+        # print(f'Number of value needed is {num}, this time we have {valid_count} valid output')
         num -= valid_count
         value_outputs.extend(valid_outputs)
         attempt += 1
+        
     if(attempt == max_attempts):
         print('Reach max attempts')
-    print(f'The valid outputs are {value_outputs}')
+        
+    elapsed = time.perf_counter() - start
+    value_time += elapsed
+    
+    # print(f'The valid outputs are {value_outputs}')
     value = task.value_outputs_unwrap(x, y, value_outputs)
     # print(f'The value is {value}')
     if cache_value:
@@ -69,12 +83,18 @@ def get_value(task, x, y, n_evaluate_sample, cache_value=True):
     return value
 
 def get_proposals_v1(task, x, y, index, feedback = None): 
-    print(f'Getting proposals from index {index} with y = {y}')
+    # print(f'Getting proposals from index {index} with y = {y}')
+    global propose_num, propose_time
+    propose_num += 1
+    
     system, user = task.propose_prompt_wrap(x, y)
     # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
+    start = time.perf_counter()
     proposals = llama(user, system, n=1, stop=None)[0].split('\n')
+    elapsed = time.perf_counter() - start
+    propose_time += elapsed
     proposals = task.propose_prompt_unwrap(proposals)
-    print(f'The proposals for {y} is \n {proposals}')
+    # print(f'The proposals for {y} is \n {proposals}')
     return [(y + _ + '\n', index , _) for _ in proposals]
 
 def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
@@ -84,7 +104,7 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
         if y in local_value_cache:  # avoid duplicate candidates
             value = 0
         else:
-            print(f'getting value for {y}')
+            # print(f'getting value for {y}')
             value = get_value(task, x, y, n_evaluate_sample, cache_value=cache_value)
             local_value_cache[y] = value
         values.append(value)
@@ -167,12 +187,18 @@ def retrieve_steps(num_steps, idx, y):
         step -= 1
     return thought_chain, chain_index
 
-def solve_v1(args, task, idx):
+def solve_v1(args, task, idx, do_validate = True):
     global gpt
     global thoughts
     global connection
     global steps
+    global value_num, value_time
+    global propose_num, propose_time
     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
+    
+    propose_num = value_num = 0
+    propose_time = value_time = 0
+    
     thoughts = [[] for _ in range(task.steps)]
     connection = [[] for _ in range(task.steps)]
     steps = [[] for _ in range(task.steps)]
@@ -186,22 +212,10 @@ def solve_v1(args, task, idx):
     step = 0
     while(val_count < 3): # call large model for at most three times
         idx, y, st = reasoning(task, step, x, prev_level, feedback = None, single = 0)
-        # print(f'thoughts after reasoning:\n')
-        # print("Thoughts: \n")
-        # for i,ts in enumerate(thoughts):
-        #     print(f'step {i} \n')
-        #     for t in ts:
-        #         print(f'{t} \n')
-        #     print(connection[i])
         
-        # print("Index: \n")
-        # print(connection)
-        
-        # print("Steps: \n")
-        # for i,ts in enumerate(steps):
-        #     print(f'step {i} \n')
-        #     for t in ts:
-        #         print(f'{t} \n')
+        if not do_validate:
+            print(f"Output from reasoning! idx: {idx} \n y: {y} \n st: {st}")
+            return x, y, thoughts
         thought_chain, chain_index = retrieve_steps(st, idx, y)
         chain_index.reverse()
         print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
@@ -209,7 +223,7 @@ def solve_v1(args, task, idx):
         redo_s, feedback = task.validate_unwrap(validate_outputs[0])
         print(f'redo{redo_s} feedback: {feedback}')
         if(redo_s == -1):
-            return x, feedback
+            return x, feedback, thoughts
         if(feedback != ""):
             prev_level = [feedback]
             step = redo_s + 1
@@ -246,53 +260,58 @@ def solve_v1(args, task, idx):
         #     for t in ts:
         #         print(f'{t} \n')
             
-    return x, y
+    return x, y, thoughts
+      
+def get_time():
+    global propose_num, propose_time, value_num, value_time
+    print(f"propose num: {propose_num}, propose time per num: {(propose_time/propose_num):.6f}")
+    print(f"value num: {value_num}, value time per num: {(value_time/value_num):.6f}")
+    return propose_num, value_num, (propose_time/propose_num), (value_time/value_num)  
+
+# def solve(args, task, idx, to_print=True):
+#     global gpt
+#     global thoughts
+#     global connection
+#     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
+#     thoughts = [[] for _ in range(task.steps)]
+#     connection = [[] for _ in range(task.steps)]
+#     print(gpt)
+#     x = task.get_input(idx)  # input
+#     ys = ['']  # current output candidates
+#     infos = []
+#     for step in range(task.steps):
+#         # generation
+#         if args.method_generate == 'sample':
+#             new_ys = [get_samples(task, x, y, args.n_generate_sample, prompt_sample=args.prompt_sample, stop=task.stops[step]) for y in ys]
+#         elif args.method_generate == 'propose':
+#             new_ys = [get_proposals(task, x, y) for y in ys]
+#         new_ys = list(itertools.chain(*new_ys))
+#         ids = list(range(len(new_ys)))
+#         # evaluation
+#         if args.method_evaluate == 'vote':
+#             values = get_votes(task, x, new_ys, args.n_evaluate_sample)
+#         elif args.method_evaluate == 'value':
+#             values = get_values(task, x, new_ys, args.n_evaluate_sample)
+
+#         # selection
+#         if args.method_select == 'sample':
+#             ps = np.array(values) / sum(values)
+#             select_ids = np.random.choice(ids, size=args.n_select_sample, p=ps).tolist()
+#         elif args.method_select == 'greedy':
+#             select_ids = sorted(ids, key=lambda x: values[x], reverse=True)[:args.n_select_sample]
+#         select_new_ys = [new_ys[select_id] for select_id in select_ids]
+
+#         # log
+#         if to_print: 
+#             sorted_new_ys, sorted_values = zip(*sorted(zip(new_ys, values), key=lambda x: x[1], reverse=True))
+#             print(f'-- new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
         
-
-def solve(args, task, idx, to_print=True):
-    global gpt
-    global thoughts
-    global connection
-    gpt = partial(gpt, model=args.backend, temperature=args.temperature)
-    thoughts = [[] for _ in range(task.steps)]
-    connection = [[] for _ in range(task.steps)]
-    print(gpt)
-    x = task.get_input(idx)  # input
-    ys = ['']  # current output candidates
-    infos = []
-    for step in range(task.steps):
-        # generation
-        if args.method_generate == 'sample':
-            new_ys = [get_samples(task, x, y, args.n_generate_sample, prompt_sample=args.prompt_sample, stop=task.stops[step]) for y in ys]
-        elif args.method_generate == 'propose':
-            new_ys = [get_proposals(task, x, y) for y in ys]
-        new_ys = list(itertools.chain(*new_ys))
-        ids = list(range(len(new_ys)))
-        # evaluation
-        if args.method_evaluate == 'vote':
-            values = get_votes(task, x, new_ys, args.n_evaluate_sample)
-        elif args.method_evaluate == 'value':
-            values = get_values(task, x, new_ys, args.n_evaluate_sample)
-
-        # selection
-        if args.method_select == 'sample':
-            ps = np.array(values) / sum(values)
-            select_ids = np.random.choice(ids, size=args.n_select_sample, p=ps).tolist()
-        elif args.method_select == 'greedy':
-            select_ids = sorted(ids, key=lambda x: values[x], reverse=True)[:args.n_select_sample]
-        select_new_ys = [new_ys[select_id] for select_id in select_ids]
-
-        # log
-        if to_print: 
-            sorted_new_ys, sorted_values = zip(*sorted(zip(new_ys, values), key=lambda x: x[1], reverse=True))
-            print(f'-- new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
-        
-        infos.append({'step': step, 'x': x, 'ys': ys, 'new_ys': new_ys, 'values': values, 'select_new_ys': select_new_ys})
-        ys = select_new_ys
+#         infos.append({'step': step, 'x': x, 'ys': ys, 'new_ys': new_ys, 'values': values, 'select_new_ys': select_new_ys})
+#         ys = select_new_ys
     
-    if to_print: 
-        print(ys)
-    return ys, {'steps': infos}
+#     if to_print: 
+#         print(ys)
+#     return ys, {'steps': infos}
 
 def naive_solve(args, task, idx, to_print=True):
     global gpt

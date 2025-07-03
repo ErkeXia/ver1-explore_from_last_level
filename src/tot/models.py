@@ -99,6 +99,11 @@ def chatgpt(messages, model="gpt-4", temperature=0.7, max_tokens=1000, n=1, stop
         completion_tokens += res.usage.completion_tokens
         prompt_tokens += res.usage.prompt_tokens
     return outputs
+
+def reset():
+    global completion_tokens, prompt_tokens, llama_tokens, prompt_llama_tokens
+    completion_tokens = prompt_tokens = 0
+    llama_tokens = prompt_llama_tokens = 0
     
 def gpt_usage(backend="gpt-4"):
     global completion_tokens, prompt_tokens

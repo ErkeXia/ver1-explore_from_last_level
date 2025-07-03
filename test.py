@@ -5,25 +5,26 @@ from tot.methods.bfs import solve, solve_v1
 from tot.tasks.game24 import Game24Task
 from tot.models import gpt_usage, llmaa_usage
 import torch
+import transformers
+print(f"!!!Version:{transformers.__version__}")
+
 print(torch.cuda.is_available())          # should be True
 print(torch.cuda.get_device_name(0))      # should print your GPU model
-
-
-
+model = 'gpt-4'
+args = argparse.Namespace(backend=model, temperature=0.7, task='game24', naive_run=False, prompt_sample=None, method_generate='propose', method_evaluate='value', method_select='greedy', n_generate_sample=1, n_evaluate_sample=3, n_select_sample=5)
+task = Game24Task()
+y = "13 - 11 = 2 (left: 1 2 12)\n2 * 12 = 24 (left: 1 24)\n1 * 24 = 24 (left: 24)"
+print(task.check_multistep_solution("1 11 12 13", y))
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
-    model = 'gpt-4'
-    args = argparse.Namespace(backend=model, temperature=0.7, task='game24', naive_run=False, prompt_sample=None, method_generate='propose', method_evaluate='value', method_select='greedy', n_generate_sample=1, n_evaluate_sample=3, n_select_sample=5)
-
-    task = Game24Task()
     start = time.perf_counter()
-    x, y = solve_v1(args, task, 701)
+    x, y = solve_v1(args, task, 500, do_validate = False)
     elapsed = time.perf_counter() - start
     print(f"{elapsed:.6f} seconds")
-    if "Answer" in y:
-        y = y[(y.find('Answer') + 7):].strip()
+    # if "Answer" in y:
+    #     y = y[(y.find('Answer') + 7):].strip()
     # ys, infos = solve(args, task, 900)
-    print(f'check answer: {task.check_answer(x, y)}')
+    # print(f'check answer: {task.check_answer(x, y)}')
     print("The final answer is: \n")
     print(y)
     print(gpt_usage(model))
