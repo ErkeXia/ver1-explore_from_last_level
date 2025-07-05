@@ -77,7 +77,7 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
 
 def llmaa_usage():
     global prompt_llama_tokens, llama_tokens
-    return {"llama completion_tokens": llama_tokens, "prompt_tokens": prompt_llama_tokens}
+    return {"llama_completion_tokens": llama_tokens, "llama_prompt_tokens": prompt_llama_tokens}
 
 @backoff.on_exception(backoff.expo, openai.error.OpenAIError)
 def completions_with_backoff(**kwargs):

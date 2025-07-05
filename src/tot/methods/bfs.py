@@ -116,7 +116,7 @@ def validate(task, x, f_step):
     # print(f'Validate prompt: {validate_prompt}')
     validate_outputs = gpt(validate_prompt, n=1, stop=None) 
     # print(validate_outputs)
-    return validate_outputs
+    return validate_outputs[0]
 
 def get_current_numbers(y: str) -> str:
     last_line = y.strip().split('\n')[-1]
@@ -202,6 +202,10 @@ def solve_v1(args, task, idx, do_validate = True):
     thoughts = [[] for _ in range(task.steps)]
     connection = [[] for _ in range(task.steps)]
     steps = [[] for _ in range(task.steps)]
+    
+    validators = []
+    all_thoughts = []
+    
     print(gpt)
     
     x = task.get_input(idx)  # input
@@ -212,18 +216,19 @@ def solve_v1(args, task, idx, do_validate = True):
     step = 0
     while(val_count < 3): # call large model for at most three times
         idx, y, st = reasoning(task, step, x, prev_level, feedback = None, single = 0)
-        
+        all_thoughts.append(thoughts)
         if not do_validate:
             print(f"Output from reasoning! idx: {idx} \n y: {y} \n st: {st}")
-            return x, y, thoughts
+            return x, y, all_thoughts, validators
         thought_chain, chain_index = retrieve_steps(st, idx, y)
         chain_index.reverse()
         print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
         validate_outputs = validate(task, x, thought_chain)
-        redo_s, feedback = task.validate_unwrap(validate_outputs[0])
+        validators.append(validate_outputs)
+        redo_s, feedback = task.validate_unwrap(validate_outputs)
         print(f'redo{redo_s} feedback: {feedback}')
         if(redo_s == -1):
-            return x, feedback, thoughts
+            return x, feedback, all_thoughts, validators
         if(feedback != ""):
             prev_level = [feedback]
             step = redo_s + 1
@@ -260,7 +265,7 @@ def solve_v1(args, task, idx, do_validate = True):
         #     for t in ts:
         #         print(f'{t} \n')
             
-    return x, y, thoughts
+    return x, y, all_thoughts, validators
       
 def get_time():
     global propose_num, propose_time, value_num, value_time
