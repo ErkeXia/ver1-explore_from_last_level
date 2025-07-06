@@ -1,5 +1,6 @@
 import itertools
 import time
+import copy
 import numpy as np
 from functools import partial
 from tot.models import gpt
@@ -129,7 +130,8 @@ def check_answer(prev_level): #This is only for game of 24
             return i,y
     return 0,None
 
-def reasoning(task, step, x, prev_level, feedback = None, single = None): 
+def reasoning(task, step, x, prev_level, feedback = None, single = None):
+    global nodes
     #if prev_level only one element(first node or refinement), single signal the index of previous thoughts
     #this should be improved
     while step < task.steps:
@@ -167,6 +169,7 @@ def reasoning(task, step, x, prev_level, feedback = None, single = None):
         thoughts[step] = prev_level
         connection[step] = indices
         steps[step] = reasoning_steps
+        nodes += len(prev_level)
         
         step += 1
         idx, ans = check_answer(prev_level)
@@ -194,8 +197,10 @@ def solve_v1(args, task, idx, do_validate = True):
     global steps
     global value_num, value_time
     global propose_num, propose_time
+    global nodes
     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
     
+    nodes = 1
     propose_num = value_num = 0
     propose_time = value_time = 0
     
@@ -205,6 +210,7 @@ def solve_v1(args, task, idx, do_validate = True):
     
     validators = []
     all_thoughts = []
+    llama_ans = []
     
     print(gpt)
     
@@ -214,21 +220,26 @@ def solve_v1(args, task, idx, do_validate = True):
     prev_level = ['']
     val_count = 0
     step = 0
+    single = 0
     while(val_count < 3): # call large model for at most three times
-        idx, y, st = reasoning(task, step, x, prev_level, feedback = None, single = 0)
-        all_thoughts.append(thoughts)
-        if not do_validate:
-            print(f"Output from reasoning! idx: {idx} \n y: {y} \n st: {st}")
-            return x, y, all_thoughts, validators
+        idx, y, st = reasoning(task, step, x, prev_level, feedback = None, single = single)
+        all_thoughts.append(copy.deepcopy(thoughts))
+        
         thought_chain, chain_index = retrieve_steps(st, idx, y)
         chain_index.reverse()
+        llama_ans.append(thought_chain)
         print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
+        
+        if not do_validate:
+            print(f"Output from reasoning! idx: {idx} \n y: {y} \n st: {st}")
+            return x, y, all_thoughts, validators, llama_ans, nodes
+
         validate_outputs = validate(task, x, thought_chain)
         validators.append(validate_outputs)
         redo_s, feedback = task.validate_unwrap(validate_outputs)
         print(f'redo{redo_s} feedback: {feedback}')
         if(redo_s == -1):
-            return x, feedback, all_thoughts, validators
+            return x, feedback, all_thoughts, validators, llama_ans, nodes
         if(feedback != ""):
             prev_level = [feedback]
             step = redo_s + 1
@@ -265,7 +276,7 @@ def solve_v1(args, task, idx, do_validate = True):
         #     for t in ts:
         #         print(f'{t} \n')
             
-    return x, y, all_thoughts, validators
+    return x, feedback, all_thoughts, validators, llama_ans, nodes
       
 def get_time():
     global propose_num, propose_time, value_num, value_time

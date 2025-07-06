@@ -75,10 +75,6 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
             n -= 1
     return outputs
 
-def llmaa_usage():
-    global prompt_llama_tokens, llama_tokens
-    return {"llama_completion_tokens": llama_tokens, "llama_prompt_tokens": prompt_llama_tokens}
-
 @backoff.on_exception(backoff.expo, openai.error.OpenAIError)
 def completions_with_backoff(**kwargs):
     return openai.ChatCompletion.create(**kwargs)
@@ -114,3 +110,7 @@ def gpt_usage(backend="gpt-4"):
     elif backend == "gpt-4o":
         cost = completion_tokens / 1000 * 0.00250 + prompt_tokens / 1000 * 0.01
     return {"completion_tokens": completion_tokens, "prompt_tokens": prompt_tokens, "cost": cost}
+
+def llama_usage():
+    global prompt_llama_tokens, llama_tokens
+    return {"llama_completion_tokens": llama_tokens, "llama_prompt_tokens": prompt_llama_tokens}
