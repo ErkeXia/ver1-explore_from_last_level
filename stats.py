@@ -76,9 +76,9 @@ def compute_average_stats_lazy(jsonl_path):
     averages = {key: total / count for key, total in stats_sum.items()}
 
     # Print results for each problem
-    print(f"\n{'Seed':<10} {'Input':<15} {'Correct':<10} {'Explore Count':<15} {'nodes':<10} {'gpt_prompt_tokens':<20} {'gpt_completion_tokens':<25} {'llama_prompt_tokens':<20} {'llama_completion_tokens':<25} {'Answer':<35}  {'Feedback':<30} ")
+    print(f"\n{'Seed':<10} {'Input':<15} {'Correct':<10} {'Explore Count':<15} {'nodes':<10} {'Time':<10} {'gpt_prompt_tokens':<20} {'gpt_completion_tokens':<25} {'llama_prompt_tokens':<20} {'llama_completion_tokens':<25} {'Answer':<35}  {'Feedback':<30} ")
     for stat in problem_stats:
-        print(f"{stat['seed']:<10} {stat['x']:<15} {stat['is_correct']:<10} {stat['explore_count']:<15} {stat['nodes']:<10} {stat.get('gpt_prompt_tokens', 'N/A'):<20} {stat.get('gpt_completion_tokens', 'N/A'):<25} {stat.get('llama_prompt_tokens', 'N/A'):<20} {stat.get('llama_completion_tokens', 'N/A'):<25} {stat['answer']:<35} {stat['feedback']:<30}")
+        print(f"{stat['seed']:<10} {stat['x']:<15} {stat['is_correct']:<10} {stat['explore_count']:<15} {stat['nodes']:<10} {stat['total_time']:<10.2f} {stat.get('gpt_prompt_tokens', 'N/A'):<20} {stat.get('gpt_completion_tokens', 'N/A'):<25} {stat.get('llama_prompt_tokens', 'N/A'):<20} {stat.get('llama_completion_tokens', 'N/A'):<25} {stat['answer']:<35} {stat['feedback']:<30}")
 
     # Print summary stats for the entire dataset
     print("\nSummary of the Dataset:")
@@ -137,9 +137,9 @@ def compute_average_stats_llama(jsonl_path):
     averages = {key: total / count for key, total in stats_sum.items()}
 
     # Print results for each problem
-    print(f"\n{'Seed':<10} {'Input':<15} {'Correct':<10} {'Explore Layer':<15} {'nodes':<10} {'llama_prompt_tokens':<20} {'llama_completion_tokens':<25} {'Feedback':<80} {'Answer':<35} ")
+    print(f"\n{'Seed':<10} {'Input':<15} {'Correct':<10} {'Explore Layer':<15} {'nodes':<10} {'Time':<10} {'llama_prompt_tokens':<20} {'llama_completion_tokens':<25} {'Feedback':<80} {'Answer':<35} ")
     for stat in problem_stats:
-        print(f"{stat['seed']:<10} {stat['x']:<15} {stat['is_correct']:<10} {stat['explore_layers']:<15} {stat['nodes']:<10} {stat.get('llama_prompt_tokens', 'N/A'):<20} {stat.get('llama_completion_tokens', 'N/A'):<25} {stat['feedback']:<80}  {stat['answer']:<35}")
+        print(f"{stat['seed']:<10} {stat['x']:<15} {stat['is_correct']:<10} {stat['explore_layers']:<15} {stat['nodes']:<10} {stat['total_time']:<10.2f} {stat.get('llama_prompt_tokens', 'N/A'):<20} {stat.get('llama_completion_tokens', 'N/A'):<25} {stat['feedback']:<80}  {stat['answer']:<35}")
 
     # Print summary stats for the entire dataset
     print("\nSummary of the Dataset:")
@@ -150,12 +150,12 @@ def compute_average_stats_llama(jsonl_path):
 
 
 # Example usage
-jsonl_path = "llama_tot_results_ver2.jsonl"  # Replace with your path
+jsonl_path = "lazy_game24_results.jsonl"  # Replace with your path
 
-with open('llama_tot_stats.txt', 'w', buffering=1) as f:
+with open('lazy_stats.txt', 'w', buffering=1) as f:
     sys.stdout = f
 
-    averages = compute_average_stats_llama(jsonl_path)
+    averages = compute_average_stats_lazy(jsonl_path)
 
     # Print averages to file
     print("\nAverages for each statistic:")
