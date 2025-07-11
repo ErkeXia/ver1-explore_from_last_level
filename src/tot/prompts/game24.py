@@ -150,6 +150,33 @@ Possible next steps:
 2 / 12 = 0.17 (left: 0.17)
 '''
 
+propose_system_prompt_act = '''
+You aim to use numbers and basic arithmetic operations (+ - * /) to obtain 24.
+You now should provide eight possible next steps for the given input like the example.
+EXAMPLE1:
+Input: 2 8 8 14
+Possible next steps:
+2 + 8 = 10
+8 / 2 = 4
+14 + 2 = 16
+2 * 8 = 16
+8 - 2 = 6
+14 - 8 = 6
+14 /  2 = 7
+14 - 2 = 12
+EXAMPLE2:
+Input: 2 12
+Possible next steps:
+2 * 12 = 24
+2 + 12 = 14
+12 - 2 = 10
+2 - 12 = -10
+12 / 2 = 6
+12 + 2 = 14
+12 * 2 = 24
+2 / 12 = 0.17
+'''
+
 propose_user_prompt = '''
 TASK:
 Input: {input}

@@ -85,9 +85,36 @@ class Game24Task(Task):
         return system, prompt
     
     @staticmethod
-    def propose_prompt_unwrap(value_outputs: list) -> list:
+    def propose_sys_prompt_wrap(current_numbers: list) -> str:
+        print(f'Current number is: {current_numbers}\n')
+        current_numbers = ' '.join(str(num) for num in current_numbers)
+        prompt = propose_user_prompt.format(input=current_numbers)
+        system = propose_system_prompt_act
+    
+    
+    def update_list(nums, expr):
+        match = re.fullmatch(r'\s*(-?\d+)\s*([+\-*/])\s*(-?\d+)\s*=\s*(-?\d+)\s*', expr)
+        if not match:
+            return []
+        parts = expr.replace('=', '').split()
+        a = int(parts[0])
+        b = int(parts[2])
+        c = int(parts[4])
+        result = nums[:]
+        if a in result:
+            result.remove(a)
+        if b in result:
+            result.remove(b)
+        result.append(c)
+        return result
+
+    
+    @staticmethod
+    def propose_prompt_unwrap(current, value_outputs: list) -> list:
         filtered = [clean(s) for s in value_outputs if s and 'are' not in s and 'steps' not in s]
-        return filtered
+        states_new = [update_list(current, expr) for expr in filtered]
+        print(f"Possible next step: {filtered} \nNew states: {states_new}")
+        return filtered, states_new
     
     @staticmethod
     def value_prompt_wrap(x: str, y: str) -> str:
