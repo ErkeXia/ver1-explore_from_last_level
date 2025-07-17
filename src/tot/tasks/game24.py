@@ -19,6 +19,23 @@ def clean(text: str) -> str:
         if line.strip()
     )
 
+def update_list(nums, expr):
+    match = re.fullmatch(r'\s*(-?\d+)\s*([+\-*/])\s*(-?\d+)\s*=\s*(-?\d+)\s*', expr)
+    if not match:
+        return []
+    parts = expr.replace('=', '').split()
+    a = int(parts[0])
+    b = int(parts[2])
+    c = int(parts[4])
+    result = nums[:]
+    if a in result:
+        result.remove(a)
+    if b in result:
+        result.remove(b)
+    result.append(c)
+    return result
+
+
 class Game24Task(Task):
     """
     Input (x)   : a string of 4 numbers
@@ -91,24 +108,6 @@ class Game24Task(Task):
         prompt = propose_user_prompt.format(input=current_numbers)
         system = propose_system_prompt_act
     
-    
-    def update_list(nums, expr):
-        match = re.fullmatch(r'\s*(-?\d+)\s*([+\-*/])\s*(-?\d+)\s*=\s*(-?\d+)\s*', expr)
-        if not match:
-            return []
-        parts = expr.replace('=', '').split()
-        a = int(parts[0])
-        b = int(parts[2])
-        c = int(parts[4])
-        result = nums[:]
-        if a in result:
-            result.remove(a)
-        if b in result:
-            result.remove(b)
-        result.append(c)
-        return result
-
-    
     @staticmethod
     def propose_prompt_unwrap(current, value_outputs: list) -> list:
         filtered = [clean(s) for s in value_outputs if s and 'are' not in s and 'steps' not in s]
@@ -127,6 +126,11 @@ class Game24Task(Task):
         current_numbers = get_current_numbers(y)
         # print(current_numbers)
         return value_system_prompt, value_user_prompt.format(input=current_numbers)
+    
+    @staticmethod
+    def value_sys_prompt_wrap(x: str, y: str) -> str:
+        # print(current_numbers)
+        return value_system_prompt, value_user_prompt.format(input=y)
     
     @staticmethod
     def value_outputs_unwrap(x: str, y: str, value_outputs: list) -> float:

@@ -9,11 +9,11 @@ from tot.models import llama
 propose_num = value_num = 0
 propose_time = value_time = 0
 
-def get_value(task, x, y, n_evaluate_sample, cache_value=True):
+def get_value(task, x, s, n_evaluate_sample, cache_value=True):
     global value_num, value_time
     value_num += 1
     
-    system, user = task.value_prompt_wrap(x, y)
+    system, user = task.value_sys_prompt_wrap(x, s)
     if cache_value and user in task.value_cache:
         return task.value_cache[user]
     # value_outputs = gpt(value_prompt, n=n_evaluate_sample, stop=None)
@@ -28,8 +28,8 @@ def get_value(task, x, y, n_evaluate_sample, cache_value=True):
         outputs = llama(user, system, n=num, stop=None, max_tokens = 200)
         keywords = {'likely', 'impossible', 'sure'}
         valid_outputs = [
-            s for s in outputs
-            if any(k in s.strip().split('\n')[-1] for k in keywords)
+            o for o in outputs
+            if any(k in o.strip().split('\n')[-1] for k in keywords)
         ]
         valid_count = len(valid_outputs)
         # print(f'Number of value needed is {num}, this time we have {valid_count} valid output')
@@ -68,13 +68,13 @@ def get_proposals_v1(task, current, index, feedback = None):
 def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
     values = []
     local_value_cache = {}
-    for y,i,s in ys:  # each partial output
-        if y in local_value_cache:  # avoid duplicate candidates
+    for p,i,s in ys:  # each partial output
+        if s in local_value_cache:  # avoid duplicate candidates
             value = 0
         else:
             # print(f'getting value for {y}')
-            value = get_value(task, x, y, n_evaluate_sample, cache_value=cache_value)
-            local_value_cache[y] = value
+            value = get_value(task, x, s, n_evaluate_sample, cache_value=cache_value)
+            local_value_cache[s] = value
         values.append(value)
     return values
 
@@ -126,7 +126,7 @@ def reasoning(task, step, x, prev_level, feedback = None, single = None):
         #log
         # print(f'-- new step of {step}\n')
         sorted_new_ys, sorted_values = zip(*sorted(zip(new_ys, values), key=lambda x: x[1], reverse=True))
-        # print(f'-- new_ys --: {new_ys}\n-- values -- {values}\n-- sorted_new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
+        print(f'-- new_ys --: {new_ys}\n-- values -- {values}\n-- sorted_new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
         
         #update thoughts tree
         prev_level = [y for (y,i,s) in select_new_ys]

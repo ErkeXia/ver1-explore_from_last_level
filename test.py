@@ -1,7 +1,8 @@
 import argparse
 import sys
 import time
-from tot.methods.bfs import solve, solve_v1
+# from tot.methods.bfs import solve, solve_v1
+from tot.methods.bfs_sys import solve, solve_v1
 from tot.tasks.game24 import Game24Task
 from tot.models import gpt_usage, llmaa_usage
 import torch
