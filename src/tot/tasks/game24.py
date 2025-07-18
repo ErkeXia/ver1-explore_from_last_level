@@ -23,7 +23,7 @@ def update_list(nums, expr):
     match = re.fullmatch(r'\s*(-?\d+)\s*([+\-*/])\s*(-?\d+)\s*=\s*(-?\d+)\s*', expr)
     if not match:
         return []
-    parts = expr.replace('=', '').split()
+    parts = expr.replace('=', ' ').split()
     a = int(parts[0])
     b = int(parts[2])
     c = int(parts[4])
@@ -107,6 +107,7 @@ class Game24Task(Task):
         current_numbers = ' '.join(str(num) for num in current_numbers)
         prompt = propose_user_prompt.format(input=current_numbers)
         system = propose_system_prompt_act
+        return system, prompt
     
     @staticmethod
     def propose_prompt_unwrap(current, value_outputs: list) -> list:

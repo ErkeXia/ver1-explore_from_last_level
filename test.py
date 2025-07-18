@@ -2,9 +2,9 @@ import argparse
 import sys
 import time
 # from tot.methods.bfs import solve, solve_v1
-from tot.methods.bfs_sys import solve, solve_v1
+from tot.methods.bfs_sys import solve_v1
 from tot.tasks.game24 import Game24Task
-from tot.models import gpt_usage, llmaa_usage
+from tot.models import gpt_usage, llama_usage
 import torch
 import transformers
 print(f"!!!Version:{transformers.__version__}")
@@ -29,4 +29,4 @@ with open('output.txt', 'w', buffering=1) as f:
     print("The final answer is: \n")
     print(y)
     print(gpt_usage(model))
-    print(llmaa_usage())
+    print(llama_usage())

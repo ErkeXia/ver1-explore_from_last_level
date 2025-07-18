@@ -190,7 +190,7 @@ def solve_v1(args, task, idx, do_validate = True):
     states[0].append({'step': '', 'connect': 0, 'current': [int(num) for num in x.split()]})
     print(states[0])
     
-    # prev_level = ['']
+    prev_level = ['']
     val_count = 0
     step = 0
     single = 0
