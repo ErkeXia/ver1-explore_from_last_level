@@ -97,7 +97,7 @@ def check_answer(prev_level): #This is only for game of 24
             return i,y
     return 0,None
 
-def reasoning(task, step, x, prev_level, feedback = None, single = None):
+def reasoning(task, step, x, feedback = None, single = None):
     global nodes
     #if prev_level only one element(first node or refinement), single signal the index of previous thoughts
     #this should be improved
@@ -190,12 +190,12 @@ def solve_v1(args, task, idx, do_validate = True):
     states[0].append({'step': '', 'connect': 0, 'current': [int(num) for num in x.split()]})
     print(states[0])
     
-    prev_level = ['']
+    # prev_level = ['']
     val_count = 0
     step = 0
     single = 0
     while(val_count < 3): # call large model for at most three times
-        idx, y, st = reasoning(task, step, x, prev_level, feedback = None, single = single)
+        idx, y, st = reasoning(task, step, x, feedback = None, single = single)
         all_thoughts.append(copy.deepcopy(thoughts))
         
         thought_chain, chain_index = retrieve_steps(st, idx, y)

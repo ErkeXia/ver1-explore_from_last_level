@@ -24,16 +24,19 @@ def update_list(nums, expr):
     if not match:
         return []
     parts = expr.replace('=', ' ').split()
+    print(parts)
     a = int(parts[0])
     b = int(parts[2])
-    c = int(parts[4])
-    result = nums[:]
+    c = int(parts[3])
+    result = [int(n) for n in nums.split()]
+    print(result)
     if a in result:
         result.remove(a)
     if b in result:
         result.remove(b)
     result.append(c)
-    return result
+    left_lst = ' '.join(str(num) for num in result)
+    return left_lst
 
 
 class Game24Task(Task):
