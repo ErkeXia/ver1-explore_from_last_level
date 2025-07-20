@@ -44,14 +44,14 @@ def get_value(task, x, s, n_evaluate_sample, cache_value=True):
     value_time += elapsed
     
     # print(f'The valid outputs are {value_outputs}')
-    value = task.value_outputs_unwrap(x, y, value_outputs)
+    value = task.value_outputs_unwrap(x, "", value_outputs)
     # print(f'The value is {value}')
     if cache_value:
         task.value_cache[user] = value
     return value
 
 def get_proposals_v1(task, current, index, feedback = None): 
-    # print(f'Getting proposals from index {index} with y = {y}')
+    print(f'Getting proposals for index {index} with current = {current}')
     global propose_num, propose_time
     propose_num += 1
     
@@ -69,6 +69,7 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
     values = []
     local_value_cache = {}
     for p,i,s in ys:  # each partial output
+        print(f'Get value for p: {p}  s: {s}')
         if s in local_value_cache:  # avoid duplicate candidates
             value = 0
         else:
@@ -90,11 +91,11 @@ def get_current_numbers(y: str) -> str:
     last_line = y.strip().split('\n')[-1]
     return last_line.split('left: ')[-1].split(')')[0]
 
-def check_answer(prev_level): #This is only for game of 24
-    for i,y in enumerate(prev_level):
-        if get_current_numbers(y) == '24' or 'Answer' in y or 'answer' in y:
+def check_answer(reasoning_steps): #This is only for game of 24
+    for i,s in enumerate(reasoning_steps):
+        if len(s.split()) == 1 and int(s.strip()) == 24:
             print("Found the answer! \n")
-            return i,y
+            return i,s
     return 0,None
 
 def reasoning(task, step, x, feedback = None, single = None):
@@ -118,20 +119,24 @@ def reasoning(task, step, x, feedback = None, single = None):
         ids = list(range(len(new_ys)))
         
         #SLM evaluate
+        print(f'--Get value for--: {new_ys}')
         values = get_values_v1(task, x, new_ys, 3)  #n_evaluate_sample=3
         #Select top ans
         select_ids = sorted(ids, key=lambda x: values[x], reverse=True)[:5] #n_select_sample=5
         select_new_ys = [new_ys[select_id] for select_id in select_ids]
-        
+
         #log
         # print(f'-- new step of {step}\n')
         sorted_new_ys, sorted_values = zip(*sorted(zip(new_ys, values), key=lambda x: x[1], reverse=True))
         print(f'-- new_ys --: {new_ys}\n-- values -- {values}\n-- sorted_new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
         
         #update thoughts tree
+        states[step + 1] = [{'step': p, 'connect': i, 'current': s} for (p, i, s) in select_new_ys]
         prev_level = [y for (y,i,s) in select_new_ys]
         indices = [i for (y,i,s) in select_new_ys]
         reasoning_steps = [s for (y,i,s) in select_new_ys]
+        
+        print(f"--Reasoning-- {reasoning_steps}")
         
         thoughts[step] = prev_level
         connection[step] = indices
@@ -139,7 +144,8 @@ def reasoning(task, step, x, feedback = None, single = None):
         nodes += len(prev_level)
         
         step += 1
-        idx, ans = check_answer(prev_level)
+        print(f'--Step--: {step}')
+        idx, ans = check_answer(reasoning_steps)
         if ans != None:
             print("Find final answer!\n")
             return idx, ans, step
@@ -151,7 +157,7 @@ def retrieve_steps(num_steps, idx, y):
     thought_chain = []
     chain_index = []
     while step >= 0:
-        thought_chain.append(steps[step][idx])
+        thought_chain.append(thoughts[step][idx])
         chain_index.append(idx)
         idx = connection[step][idx]
         step -= 1
@@ -173,9 +179,9 @@ def solve_v1(args, task, idx, do_validate = True):
     propose_num = value_num = 0
     propose_time = value_time = 0
     
-    # thoughts = [[] for _ in range(task.steps)]
-    # connection = [[] for _ in range(task.steps)]
-    # steps = [[] for _ in range(task.steps)]
+    thoughts = [[] for _ in range(task.steps)]
+    connection = [[] for _ in range(task.steps)]
+    steps = [[] for _ in range(task.steps)]
     states = [[] for _ in range(task.steps + 1)]
     
     validators = []
@@ -187,7 +193,7 @@ def solve_v1(args, task, idx, do_validate = True):
     x = task.get_input(idx)  # input
     print(f'x = {x}\n')
     
-    states[0].append({'step': '', 'connect': 0, 'current': [int(num) for num in x.split()]})
+    states[0].append({'step': '', 'connect': 0, 'current': x})
     print(states[0])
     
     # prev_level = ['']

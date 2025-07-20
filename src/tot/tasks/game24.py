@@ -19,17 +19,27 @@ def clean(text: str) -> str:
         if line.strip()
     )
 
+def convert_to_number(s):
+    try:
+        return int(s)
+    except ValueError:
+        try:
+            return float(s)
+        except ValueError:
+            return None
+
+
 def update_list(nums, expr):
-    match = re.fullmatch(r'\s*(-?\d+)\s*([+\-*/])\s*(-?\d+)\s*=\s*(-?\d+)\s*', expr)
+    match = re.fullmatch(r'\s*(-?\d*\.?\d+)\s*([+\-*/])\s*(-?\d*\.?\d+)\s*=\s*(-?\d*\.?\d+)\s*', expr)
     if not match:
-        return []
+        return nums
     parts = expr.replace('=', ' ').split()
-    print(parts)
-    a = int(parts[0])
-    b = int(parts[2])
-    c = int(parts[3])
-    result = [int(n) for n in nums.split()]
-    print(result)
+    # print(parts)
+    a = convert_to_number(parts[0])
+    b = convert_to_number(parts[2])
+    c = convert_to_number(parts[3])
+    result = [convert_to_number(n) for n in nums.split()]
+    # print(result)
     if a in result:
         result.remove(a)
     if b in result:
@@ -107,7 +117,6 @@ class Game24Task(Task):
     @staticmethod
     def propose_sys_prompt_wrap(current_numbers: list) -> str:
         print(f'Current number is: {current_numbers}\n')
-        current_numbers = ' '.join(str(num) for num in current_numbers)
         prompt = propose_user_prompt.format(input=current_numbers)
         system = propose_system_prompt_act
         return system, prompt

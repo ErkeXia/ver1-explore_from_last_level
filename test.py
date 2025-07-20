@@ -2,7 +2,7 @@ import argparse
 import sys
 import time
 # from tot.methods.bfs import solve, solve_v1
-from tot.methods.bfs_sys import solve_v1
+from tot.methods.bfs_sys import solve_v1, check_answer
 from tot.tasks.game24 import Game24Task
 from tot.models import gpt_usage, llama_usage
 import torch
@@ -15,11 +15,12 @@ model = 'gpt-4'
 args = argparse.Namespace(backend=model, temperature=0.7, task='game24', naive_run=False, prompt_sample=None, method_generate='propose', method_evaluate='value', method_select='greedy', n_generate_sample=1, n_evaluate_sample=3, n_select_sample=5)
 task = Game24Task()
 y = "13 - 11 = 2 (left: 1 2 12)\n2 * 12 = 24 (left: 1 24)\n1 * 24 = 24 (left: 24)"
-print(task.check_multistep_solution("1 11 12 13", y))
+# print(task.check_multistep_solution("1 11 12 13", y))
+# check_answer(['24', '12', '576', '10', '6'])
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
     start = time.perf_counter()
-    x, y = solve_v1(args, task, 500, do_validate = False)
+    x, y, all_thoughts, validators, llama_ans, nodes = solve_v1(args, task, 500, do_validate = False)
     elapsed = time.perf_counter() - start
     print(f"{elapsed:.6f} seconds")
     # if "Answer" in y:
@@ -28,5 +29,6 @@ with open('output.txt', 'w', buffering=1) as f:
     # print(f'check answer: {task.check_answer(x, y)}')
     print("The final answer is: \n")
     print(y)
+    print(llama_ans)
     print(gpt_usage(model))
     print(llama_usage())
