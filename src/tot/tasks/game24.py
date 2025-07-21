@@ -28,27 +28,6 @@ def convert_to_number(s):
         except ValueError:
             return None
 
-
-def update_list(nums, expr):
-    match = re.fullmatch(r'\s*(-?\d*\.?\d+)\s*([+\-*/])\s*(-?\d*\.?\d+)\s*=\s*(-?\d*\.?\d+)\s*', expr)
-    if not match:
-        return nums
-    parts = expr.replace('=', ' ').split()
-    # print(parts)
-    a = convert_to_number(parts[0])
-    b = convert_to_number(parts[2])
-    c = convert_to_number(parts[3])
-    result = [convert_to_number(n) for n in nums.split()]
-    # print(result)
-    if a in result:
-        result.remove(a)
-    if b in result:
-        result.remove(b)
-    result.append(c)
-    left_lst = ' '.join(str(num) for num in result)
-    return left_lst
-
-
 class Game24Task(Task):
     """
     Input (x)   : a string of 4 numbers
@@ -124,7 +103,7 @@ class Game24Task(Task):
     @staticmethod
     def propose_prompt_unwrap(current, value_outputs: list) -> list:
         filtered = [clean(s) for s in value_outputs if s and 'are' not in s and 'steps' not in s]
-        states_new = [update_list(current, expr) for expr in filtered]
+        states_new = [Game24Task.manage_state(current, expr) for expr in filtered]
         print(f"Possible next step: {filtered} \nNew states: {states_new}")
         return filtered, states_new
     
@@ -173,6 +152,27 @@ class Game24Task(Task):
         if('Should' in validate_output):
             return redo_s, validate_output[(validate_output.find('Should be:') + 10):].strip()
         return redo_s, ""
+    
+    @staticmethod
+    def manage_state(nums, expr):
+        match = re.fullmatch(r'\s*(-?\d*\.?\d+)\s*([+\-*/])\s*(-?\d*\.?\d+)\s*=\s*(-?\d*\.?\d+)\s*', expr)
+        if not match:
+            print(f'Possible next step mismatch, expr: {expr}, current num: {nums}')
+            return '-1'
+        parts = expr.replace('=', ' ').split()
+        # print(parts)
+        a = convert_to_number(parts[0])
+        b = convert_to_number(parts[2])
+        c = convert_to_number(parts[3])
+        result = [convert_to_number(n) for n in nums.split()]
+        # print(result)
+        if a in result:
+            result.remove(a)
+        if b in result:
+            result.remove(b)
+        result.append(c)
+        left_lst = ' '.join(str(num) for num in result)
+        return left_lst
     
     @staticmethod
     def check_answer(number_str, expression):

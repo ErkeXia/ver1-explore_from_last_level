@@ -102,7 +102,7 @@ def reasoning(task, step, x, feedback = None, single = None):
     global nodes
     #if prev_level only one element(first node or refinement), single signal the index of previous thoughts
     #this should be improved
-    while step < task.steps:
+    while step < 3:
         # print(f'Start reasoning with step {step}\n')
         # print(f'number of prev level{len(prev_level)}')
         # if(len(prev_level) > 5):
@@ -208,7 +208,7 @@ def solve_v1(args, task, idx, do_validate = True):
         chain_index.reverse()
         llama_ans.append(thought_chain)
         print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
-        
+        print(f'--States-- {states}')
         if not do_validate:
             print(f"Output from reasoning! idx: {idx} \n y: {y} \n st: {st}")
             return x, y, all_thoughts, validators, llama_ans, nodes
@@ -222,6 +222,7 @@ def solve_v1(args, task, idx, do_validate = True):
         if(feedback != ""):
             prev_level = [feedback]
             step = redo_s + 1
+            states[step] = [{'step': feedback, 'connect': chain_index[redo_s - 1], 'current': task.manage_state(states[step], feedback)}]
             single = chain_index[step - 1]
             thoughts[redo_s][single] = feedback
             steps[redo_s][single] = feedback
