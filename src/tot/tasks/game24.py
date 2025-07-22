@@ -144,6 +144,12 @@ class Game24Task(Task):
         return evaluate_prompt.format(input = x, f_step = numbered_steps)
     
     @staticmethod
+    def validate_sys_prompt_wrap(x: str, ys: list) -> str:
+        numbered_steps = '\n'.join(f"{i + 1}: {step}" for i, step in enumerate(ys))
+        print(f'numbered steps : \n{numbered_steps}')
+        return evaluate_prompt_sys.format(input = x, f_step = numbered_steps)
+    
+    @staticmethod
     def validate_unwrap(validate_output: str) ->  tuple[int, str]:
         if('Yes' in validate_output or 'yes' in validate_output):
             return -1, validate_output[validate_output.find('Ans'):]

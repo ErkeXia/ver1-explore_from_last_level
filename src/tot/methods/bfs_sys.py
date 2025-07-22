@@ -80,7 +80,6 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
     return values
 
 def validate(task, x, f_step):
-    f_step.reverse()
     validate_prompt = task.validate_prompt_wrap(x, f_step)
     # print(f'Validate prompt: {validate_prompt}')
     validate_outputs = gpt(validate_prompt, n=1, stop=None) 
@@ -156,12 +155,18 @@ def retrieve_steps(num_steps, idx, y):
     step = num_steps - 1
     thought_chain = []
     chain_index = []
+    intermediate_state = []
     while step >= 0:
         thought_chain.append(thoughts[step][idx])
+        intermediate_state.appemd(states[step][idx]["current"])
+        assert(states[step][idx]["connect"] == thoughts[step][idx])
         chain_index.append(idx)
         idx = connection[step][idx]
         step -= 1
-    return thought_chain, chain_index
+    chain_index.reverse()
+    thought_chain.reverse()
+    intermediate_state.reverse()
+    return intermediate_state, thought_chain, chain_index
 
 def solve_v1(args, task, idx, do_validate = True):
     global gpt
@@ -203,9 +208,7 @@ def solve_v1(args, task, idx, do_validate = True):
     while(val_count < 3): # call large model for at most three times
         idx, y, st = reasoning(task, step, x, feedback = None, single = single)
         all_thoughts.append(copy.deepcopy(thoughts))
-        
-        thought_chain, chain_index = retrieve_steps(st, idx, y)
-        chain_index.reverse()
+        intermediate_state, thought_chain, chain_index = retrieve_steps(st, idx, y)
         llama_ans.append(thought_chain)
         print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
         print(f'--States-- {states}')
@@ -222,7 +225,8 @@ def solve_v1(args, task, idx, do_validate = True):
         if(feedback != ""):
             prev_level = [feedback]
             step = redo_s + 1
-            states[step] = [{'step': feedback, 'connect': chain_index[redo_s - 1], 'current': task.manage_state(states[step], feedback)}]
+            prev_idx = chain_index[redo_s - 1]
+            states[step] = [{'step': feedback, 'connect': prev_idx, 'current': task.manage_state(states[step-1][prev_idx], feedback)}]
             single = chain_index[step - 1]
             thoughts[redo_s][single] = feedback
             steps[redo_s][single] = feedback
