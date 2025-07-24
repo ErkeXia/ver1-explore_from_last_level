@@ -80,8 +80,8 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
     return values
 
 def validate(task, x, f_step):
-    validate_prompt = task.validate_prompt_wrap(x, f_step)
-    # print(f'Validate prompt: {validate_prompt}')
+    validate_prompt = task.validate_sys_prompt_wrap(x, f_step)
+    print(f'Validate prompt: {validate_prompt}')
     validate_outputs = gpt(validate_prompt, n=1, stop=None) 
     # print(validate_outputs)
     return validate_outputs[0]
@@ -92,7 +92,7 @@ def get_current_numbers(y: str) -> str:
 
 def check_answer(reasoning_steps): #This is only for game of 24
     for i,s in enumerate(reasoning_steps):
-        if len(s.split()) == 1 and int(s.strip()) == 24:
+        if len(s.split()) == 1 and float(s.strip()) == 24:
             print("Found the answer! \n")
             return i,s
     return 0,None
@@ -149,7 +149,7 @@ def reasoning(task, step, x, feedback = None, single = None):
             print("Find final answer!\n")
             return idx, ans, step
     print("Could not find answer, return most probable steps\n")
-    return 0, prev_level[0], step
+    return 0, states[step][0]['step'], step
 
 def retrieve_steps(num_steps, idx, y):
     step = num_steps - 1
@@ -157,11 +157,13 @@ def retrieve_steps(num_steps, idx, y):
     chain_index = []
     intermediate_state = []
     while step >= 0:
-        thought_chain.append(thoughts[step][idx])
-        intermediate_state.appemd(states[step][idx]["current"])
-        assert(states[step][idx]["connect"] == thoughts[step][idx])
+        print(f'step: {step}, idx: {idx}')
+        thought_chain.append(states[step+1][idx]["step"])
+        next_idx = states[step+1][idx]['connect']
+        intermediate_state.append(states[step][next_idx]["current"])
+        # assert(states[step][idx]["connect"] == thoughts[step][idx])
         chain_index.append(idx)
-        idx = connection[step][idx]
+        idx = next_idx
         step -= 1
     chain_index.reverse()
     thought_chain.reverse()
@@ -189,6 +191,7 @@ def solve_v1(args, task, idx, do_validate = True):
     steps = [[] for _ in range(task.steps)]
     states = [[] for _ in range(task.steps + 1)]
     
+    all_states = []
     validators = []
     all_thoughts = []
     llama_ans = []
@@ -207,26 +210,28 @@ def solve_v1(args, task, idx, do_validate = True):
     single = 0
     while(val_count < 3): # call large model for at most three times
         idx, y, st = reasoning(task, step, x, feedback = None, single = single)
+        print(f'--States-- {states}')
+        
         all_thoughts.append(copy.deepcopy(thoughts))
+        all_states.append(copy.deepcopy(states))
         intermediate_state, thought_chain, chain_index = retrieve_steps(st, idx, y)
         llama_ans.append(thought_chain)
         print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
-        print(f'--States-- {states}')
         if not do_validate:
             print(f"Output from reasoning! idx: {idx} \n y: {y} \n st: {st}")
-            return x, y, all_thoughts, validators, llama_ans, nodes
+            return x, thought_chain, all_thoughts, validators, llama_ans, nodes, all_states
 
         validate_outputs = validate(task, x, thought_chain)
         validators.append(validate_outputs)
         redo_s, feedback = task.validate_unwrap(validate_outputs)
         print(f'redo{redo_s} feedback: {feedback}')
         if(redo_s == -1):
-            return x, feedback, all_thoughts, validators, llama_ans, nodes
+            return x, feedback, all_thoughts, validators, llama_ans, nodes, all_states
         if(feedback != ""):
             prev_level = [feedback]
             step = redo_s + 1
             prev_idx = chain_index[redo_s - 1]
-            states[step] = [{'step': feedback, 'connect': prev_idx, 'current': task.manage_state(states[step-1][prev_idx], feedback)}]
+            states[step] = [{'step': feedback, 'connect': prev_idx, 'current': task.manage_state(states[step-1][prev_idx]["current"], feedback)}]
             single = chain_index[step - 1]
             thoughts[redo_s][single] = feedback
             steps[redo_s][single] = feedback
@@ -260,7 +265,7 @@ def solve_v1(args, task, idx, do_validate = True):
         #     for t in ts:
         #         print(f'{t} \n')
             
-    return x, feedback, all_thoughts, validators, llama_ans, nodes
+    return x, feedback, all_thoughts, validators, llama_ans, nodes, all_states
       
 def get_time():
     global propose_num, propose_time, value_num, value_time

@@ -1,0 +1,11 @@
+nohup: ignoring input
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.13it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.13it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.14it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.64it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.41it/s]
+Testing lazy:   0%|          | 0/25 [00:00<?, ?it/s]Testing lazy:   4%|▍         | 1/25 [06:20<2:32:11, 380.47s/it]Testing lazy:   8%|▊         | 2/25 [18:09<3:39:54, 573.66s/it]Testing lazy:  12%|█▏        | 3/25 [23:21<2:46:38, 454.47s/it]Testing lazy:  16%|█▌        | 4/25 [33:01<2:56:16, 503.65s/it]Testing lazy:  16%|█▌        | 4/25 [38:58<3:24:35, 584.53s/it]
+Traceback (most recent call last):
+  File "/home/ubuntu/work/ver1-explore_from_last_level/experiments/test_game24_lazy_sys.py", line 47, in <module>
+    test_game24_lazy(351,375)
+  File "/home/ubuntu/work/ver1-explore_from_last_level/experiments/test_game24_lazy_sys.py", line 18, in test_game24_lazy
+    x, y, thoughts, validators, llama_ans, nodes, all_states = solve_v1(args, task, i, do_validate = True)
+  File "/home/ubuntu/work/ver1-explore_from_last_level/src/tot/methods/bfs_sys.py", line 234, in solve_v1
+    states[step] = [{'step': feedback, 'connect': prev_idx, 'current': task.manage_state(states[step-1][prev_idx]["current"], feedback)}]
+IndexError: list index out of range

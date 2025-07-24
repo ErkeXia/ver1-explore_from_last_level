@@ -1,12 +1,16 @@
 import argparse
 import sys
 import time
+import openai
 # from tot.methods.bfs import solve, solve_v1
-from tot.methods.bfs_sys import solve_v1, check_answer
+from tot.methods.bfs import solve_v1, check_answer
 from tot.tasks.game24 import Game24Task
 from tot.models import gpt_usage, llama_usage
 import torch
 import transformers
+# models = openai.Model.list()
+# for model in models['data']:
+#     print(f"Model ID: {model['id']}")
 print(f"!!!Version:{transformers.__version__}")
 
 print(torch.cuda.is_available())          # should be True
@@ -20,15 +24,25 @@ y = "13 - 11 = 2 (left: 1 2 12)\n2 * 12 = 24 (left: 1 24)\n1 * 24 = 24 (left: 24
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
     start = time.perf_counter()
-    x, y, all_thoughts, validators, llama_ans, nodes = solve_v1(args, task, 500, do_validate = False)
+    x, y, all_thoughts, validators, llama_ans, nodes = solve_v1(args, task, 900, slm = 'gpt-4.1-mini', do_validate = True)
     elapsed = time.perf_counter() - start
     print(f"{elapsed:.6f} seconds")
     # if "Answer" in y:
     #     y = y[(y.find('Answer') + 7):].strip()
     # ys, infos = solve(args, task, 900)
-    # print(f'check answer: {task.check_answer(x, y)}')
+    if "Answer" in y:
+        y_clean = y[(y.find('Answer') + 7):].strip()
+    else:
+        y_clean = y.strip()
+    print(f'check answer: {task.check_answer(x, y_clean)}')
     print("The final answer is: \n")
     print(y)
+    gpt_stats = gpt_usage(model)
+    llama_stats = llama_usage()
+    propose_num, value_num, propose_avg, value_avg = get_time()
+    print(f'gpt_stats: {gpt_stats}')
+    print(f'llama_stats: {llama_stats}')
+    print(f'propose_num:{propose_num} value_num {value_num}, propose_avg {propose_avg}, value_avg{value_avg}')
     print(llama_ans)
     print(gpt_usage(model))
     print(llama_usage())

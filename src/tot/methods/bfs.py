@@ -42,10 +42,27 @@ def get_samples(task, x, y, n_generate_sample, prompt_sample, stop):
     samples = gpt(prompt, n=n_generate_sample, stop=stop)
     return [y + _ for _ in samples]
 
-def get_value(task, x, y, n_evaluate_sample, cache_value=True):
+def get_value_gpt(task, x, y, n_evaluate_sample, cache_value=True):
     global value_num, value_time
     value_num += 1
-    
+    value_prompt = task.gpt_value_prompt_wrap(x, y)
+    if cache_value and value_prompt in task.value_cache:
+        return task.value_cache[value_prompt]
+    start = time.perf_counter()
+    value_outputs = gpt_e(value_prompt, n=n_evaluate_sample, stop=None, max_tokens=200)
+    # print(value_outputs)
+    elapsed = time.perf_counter() - start
+    value_time += elapsed
+    value = task.gpt_value_outputs_unwrap(x, y, value_outputs)
+    if cache_value:
+        task.value_cache[value_prompt] = value
+    return value
+
+def get_value(task, x, y, n_evaluate_sample, model, cache_value=True):
+    global value_num, value_time
+    if model == 'gpt-4.1-mini':
+        return get_value_gpt(task, x, y, n_evaluate_sample, cache_value=True)
+    value_num += 1
     system, user = task.value_prompt_wrap(x, y)
     if cache_value and user in task.value_cache:
         return task.value_cache[user]
@@ -83,22 +100,31 @@ def get_value(task, x, y, n_evaluate_sample, cache_value=True):
         task.value_cache[user] = value
     return value
 
-def get_proposals_v1(task, x, y, index, feedback = None): 
+def get_proposals_v1(task, x, y, index, model, feedback = None): 
     # print(f'Getting proposals from index {index} with y = {y}')
     global propose_num, propose_time
     propose_num += 1
-    
-    system, user = task.propose_prompt_wrap(x, y)
-    # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
-    start = time.perf_counter()
-    proposals = llama(user, system, n=1, stop=None)[0].split('\n')
-    elapsed = time.perf_counter() - start
-    propose_time += elapsed
-    proposals = task.propose_prompt_unwrap(proposals)
-    # print(f'The proposals for {y} is \n {proposals}')
+    if model == 'llama':
+        system, user = task.propose_prompt_wrap(x, y)
+        # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
+        start = time.perf_counter()
+        proposals = llama(user, system, n=1, stop=None)[0].split('\n')
+        elapsed = time.perf_counter() - start
+        propose_time += elapsed
+        proposals = task.propose_prompt_unwrap(proposals)
+    elif model == 'gpt-4.1-mini':
+        propose_prompt = task.propose_prompt_wrap_4_1(x, y)
+        start = time.perf_counter()
+        proposals = gpt_e(propose_prompt, n=1, stop=None, max_tokens=200)[0].split('\n')
+        elapsed = time.perf_counter() - start
+        propose_time += elapsed
+        proposals = [s for s in proposals if not ("Input" in s or "steps" in s)]
+    else:
+        print("Error! Model invalid!")
+    print(f'The proposals for {y} is \n {proposals}')
     return [(y + _ + '\n', index , _) for _ in proposals]
 
-def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
+def get_values_v1(task, x, ys, n_evaluate_sample, model, cache_value=True):
     values = []
     local_value_cache = {}
     for y,i,s in ys:  # each partial output
@@ -106,7 +132,7 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
             value = 0
         else:
             # print(f'getting value for {y}')
-            value = get_value(task, x, y, n_evaluate_sample, cache_value=cache_value)
+            value = get_value(task, x, y, n_evaluate_sample, model = model, cache_value=cache_value)
             local_value_cache[y] = value
         values.append(value)
     return values
@@ -114,8 +140,8 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
 def validate(task, x, f_step):
     f_step.reverse()
     validate_prompt = task.validate_prompt_wrap(x, f_step)
-    # print(f'Validate prompt: {validate_prompt}')
-    validate_outputs = gpt(validate_prompt, n=1, stop=None) 
+    print(f'Validate prompt: {validate_prompt}')
+    validate_outputs = gpt_v(validate_prompt, n=1, stop=None) 
     # print(validate_outputs)
     return validate_outputs[0]
 
@@ -130,7 +156,7 @@ def check_answer(prev_level): #This is only for game of 24
             return i,y
     return 0,None
 
-def reasoning(task, step, x, prev_level, feedback = None, single = None):
+def reasoning(task, step, x, prev_level, feedback = None, single = None, model = 'llama'):
     global nodes
     #if prev_level only one element(first node or refinement), single signal the index of previous thoughts
     #this should be improved
@@ -142,24 +168,24 @@ def reasoning(task, step, x, prev_level, feedback = None, single = None):
             print(prev_level)
             return 0
         if single == None:
-            new_ys = [get_proposals_v1(task, x, y, i, feedback) for i,y in enumerate(prev_level)]
+            new_ys = [get_proposals_v1(task, x, y, i, model = model, feedback = feedback) for i,y in enumerate(prev_level)]
         else:
-            new_ys = [get_proposals_v1(task, x, y, single, feedback) for y in prev_level]
+            new_ys = [get_proposals_v1(task, x, y, single, model = model, feedback = feedback) for y in prev_level]
         feedback = None
         single = None
         new_ys = list(itertools.chain(*new_ys))
         ids = list(range(len(new_ys)))
         
         #SLM evaluate
-        values = get_values_v1(task, x, new_ys, 3)  #n_evaluate_sample=3
+        values = get_values_v1(task, x, new_ys, 3, model = model)  #n_evaluate_sample=3
         #Select top ans
         select_ids = sorted(ids, key=lambda x: values[x], reverse=True)[:5] #n_select_sample=5
         select_new_ys = [new_ys[select_id] for select_id in select_ids]
         
         #log
-        # print(f'-- new step of {step}\n')
+        print(f'-- new step of {step}\n')
         sorted_new_ys, sorted_values = zip(*sorted(zip(new_ys, values), key=lambda x: x[1], reverse=True))
-        # print(f'-- new_ys --: {new_ys}\n-- values -- {values}\n-- sorted_new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
+        print(f'-- new_ys --: {new_ys}\n-- values -- {values}\n-- sorted_new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
         
         #update thoughts tree
         prev_level = [y for (y,i,s) in select_new_ys]
@@ -190,15 +216,17 @@ def retrieve_steps(num_steps, idx, y):
         step -= 1
     return thought_chain, chain_index
 
-def solve_v1(args, task, idx, do_validate = True):
-    global gpt
+def solve_v1(args, task, idx, do_validate = True, slm = 'llama'):
+    global gpt_e, gpt_v
     global thoughts
     global connection
     global steps
     global value_num, value_time
     global propose_num, propose_time
     global nodes
-    gpt = partial(gpt, model=args.backend, temperature=args.temperature)
+    if slm != 'llama':
+        gpt_e = partial(gpt, model=slm, temperature=args.temperature)
+    gpt_v = partial(gpt, model=args.backend, temperature=args.temperature)
     
     nodes = 1
     propose_num = value_num = 0
@@ -212,7 +240,7 @@ def solve_v1(args, task, idx, do_validate = True):
     all_thoughts = []
     llama_ans = []
     
-    print(gpt)
+    print(gpt_e)
     
     x = task.get_input(idx)  # input
     print(f'x = {x}\n')
@@ -222,7 +250,7 @@ def solve_v1(args, task, idx, do_validate = True):
     step = 0
     single = 0
     while(val_count < 3): # call large model for at most three times
-        idx, y, st = reasoning(task, step, x, prev_level, feedback = None, single = single)
+        idx, y, st = reasoning(task, step, x, prev_level, feedback = None, single = single, model = slm)
         all_thoughts.append(copy.deepcopy(thoughts))
         
         thought_chain, chain_index = retrieve_steps(st, idx, y)

@@ -94,8 +94,19 @@ class Game24Task(Task):
         return system, prompt
     
     @staticmethod
+    def propose_prompt_wrap_4_1(x: str, y: str='') -> str:
+        current_numbers = get_current_numbers(y if y else x)
+        if current_numbers.strip() == '24':
+            prompt = cot_prompt.format(input=x) + 'Steps:' + y
+            # print([prompt])
+        else:
+            # prompt = propose_prompt.format(input=current_numbers)
+            prompt = propose_gpt_4_1.format(input=current_numbers)
+        return prompt
+    
+    @staticmethod
     def propose_sys_prompt_wrap(current_numbers: list) -> str:
-        print(f'Current number is: {current_numbers}\n')
+        print(f'\nCurrent number is: {current_numbers}')
         prompt = propose_user_prompt.format(input=current_numbers)
         system = propose_system_prompt_act
         return system, prompt
@@ -103,6 +114,8 @@ class Game24Task(Task):
     @staticmethod
     def propose_prompt_unwrap(current, value_outputs: list) -> list:
         filtered = [clean(s) for s in value_outputs if s and 'are' not in s and 'steps' not in s]
+        if len(filtered) > 8:
+            filtered = filtered[:8]
         states_new = [Game24Task.manage_state(current, expr) for expr in filtered]
         print(f"Possible next step: {filtered} \nNew states: {states_new}")
         return filtered, states_new
@@ -135,6 +148,33 @@ class Game24Task(Task):
             value * sum(s.count(name) for s in value_outputs)
             for name, value in value_map.items()
         )
+        return value
+    
+    @staticmethod
+    def gpt_value_prompt_wrap(x: str, y: str) -> str:
+        last_line = y.strip().split('\n')[-1]
+        if 'left: ' not in last_line:  # last step
+            ans = last_line.lower().replace('answer: ', '')
+            # print([value_last_step_prompt.format(input=x, answer=ans)])
+            return value_last_step_prompt.format(input=x, answer=ans)
+        current_numbers = get_current_numbers(y)
+        return value_prompt.format(input=current_numbers)
+    
+    @staticmethod
+    def gpt_value_outputs_unwrap(x: str, y: str, value_outputs: list) -> float:
+        if len(y.strip().split('\n')) == 4 and 'answer' not in y.lower():
+            print(f"y = {y}\n")
+            return 0
+        value_names = [_.split('\n')[-1] for _ in value_outputs]
+        # print(f"value name: {value_names}")
+        value_map = {'impossible': 0.001, 'likely': 1, 'sure': 20}  # TODO: ad hoc
+        # value = sum(value * value_names.count(name) for name, value in value_map.items())
+        value = 0
+        for name in value_names:
+            for keyword, score in value_map.items():
+                if keyword in name:
+                    value += score
+                    break
         return value
     
     @staticmethod

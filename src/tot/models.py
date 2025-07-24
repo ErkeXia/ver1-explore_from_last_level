@@ -85,6 +85,7 @@ def gpt(prompt, model="gpt-4", temperature=0.7, max_tokens=1000, n=1, stop=None)
     
 def chatgpt(messages, model="gpt-4", temperature=0.7, max_tokens=1000, n=1, stop=None) -> list:
     global completion_tokens, prompt_tokens
+    # print(f"Messages: {messages}")
     outputs = []
     while n > 0:
         cnt = min(n, 20)
