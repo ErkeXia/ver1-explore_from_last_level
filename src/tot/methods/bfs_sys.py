@@ -231,6 +231,7 @@ def solve_v1(args, task, idx, do_validate = True):
             prev_level = [feedback]
             step = redo_s + 1
             prev_idx = chain_index[redo_s - 1]
+            print(f'step: {feedback}, connect: {prev_idx}')
             states[step] = [{'step': feedback, 'connect': prev_idx, 'current': task.manage_state(states[step-1][prev_idx]["current"], feedback)}]
             single = chain_index[step - 1]
             thoughts[redo_s][single] = feedback
