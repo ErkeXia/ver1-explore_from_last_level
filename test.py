@@ -3,7 +3,7 @@ import sys
 import time
 import openai
 # from tot.methods.bfs import solve, solve_v1
-from tot.methods.bfs import solve_v1, check_answer
+from tot.methods.bfs_sys import solve_v1, check_answer, get_time
 from tot.tasks.game24 import Game24Task
 from tot.models import gpt_usage, llama_usage
 import torch
@@ -24,7 +24,7 @@ y = "13 - 11 = 2 (left: 1 2 12)\n2 * 12 = 24 (left: 1 24)\n1 * 24 = 24 (left: 24
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
     start = time.perf_counter()
-    x, y, all_thoughts, validators, llama_ans, nodes = solve_v1(args, task, 900, slm = 'gpt-4.1-mini', do_validate = True)
+    x, y, all_thoughts, validators, llama_ans, nodes, all_states = solve_v1(args, task, 900, slm = 'mistral', do_validate = True)
     elapsed = time.perf_counter() - start
     print(f"{elapsed:.6f} seconds")
     # if "Answer" in y:

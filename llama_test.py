@@ -1,4 +1,4 @@
-from tot.models import llama, llmaa_usage
+from tot.models import model_setup, llama, llama_usage
 import sys
 import time
 
@@ -40,7 +40,7 @@ Possible next steps:
 
 propose_user_prompt = '''
 TASK:
-Input: 1 5 5 5
+Input: 4 5 6 10
 Possible next steps:
 '''
 
@@ -204,13 +204,51 @@ Steps:10 + 6 = 16 (left: 4 5 16)
 Answer: 
 '''
 
+propose_system_prompt_act = '''
+You are playing the Game of 24, where you use numbers and basic arithmetic operations (+, -, *, /) to obtain 24. 
+Given the current set of available numbers, your task is to go one step further.
+Provide a list of eight possible *next steps*, where each step involves applying one arithmetic operation to two numbers from the list and showing the result.
+
+**Respond with the possible next steps** that you think are most likely to help achieve 24.
+Respond **only** with the possible next steps in the format below. Do **not** include any extra commentary or explanations.
+
+Your response should be in the following format:
+
+EXAMPLE1:
+Input: 2 8 8 14
+Possible next steps:
+2 + 8 = 10
+8 / 2 = 4
+14 + 2 = 16
+2 * 8 = 16
+8 - 2 = 6
+14 - 8 = 6
+14 / 2 = 7
+14 - 2 = 12
+
+EXAMPLE2:
+Input: 2 12
+Possible next steps:
+2 * 12 = 24
+2 + 12 = 14
+12 - 2 = 10
+2 - 12 = -10
+12 / 2 = 6
+12 + 2 = 14
+12 * 2 = 24
+2 / 12 = 0.17
+
+'''
+
 
 # print(value_prompt)
-output = llama(value_user_prompt, value_system_prompt, n=1, stop=None, temperature=0.7)
-print(llmaa_usage())
+model_setup('mistral')
+print(llama_usage())
 start = time.perf_counter()
-output = llama(value_user_prompt, value_system_prompt, n=1, stop=None, temperature=0.7, max_tokens = 200)
+output = llama(propose_user_prompt, propose_system_prompt_act, n=1, stop=None, temperature=0.7)
+
+# output = llama(value_user_prompt, value_system_prompt, n=1, stop=None, temperature=0.7, max_tokens = 200)
 elapsed = time.perf_counter() - start
-print(llmaa_usage())
+# print(llmaa_usage())
 print(f"{elapsed:.6f} seconds")
 print(output)

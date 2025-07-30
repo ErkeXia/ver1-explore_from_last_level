@@ -44,4 +44,4 @@ def test_game24_lazy(start=400, end=449):
 
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
-    test_game24_lazy(351,375)
+    test_game24_lazy(376,400)

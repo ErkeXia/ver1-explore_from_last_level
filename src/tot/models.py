@@ -7,6 +7,10 @@ import torch
 completion_tokens = prompt_tokens = 0
 llama_tokens = prompt_llama_tokens = 0
 
+model_name = None
+model = None
+tokenizer = None
+
 api_key = os.getenv("OPENAI_API_KEY", "")
 if api_key != "":
     openai.api_key = api_key
@@ -18,61 +22,78 @@ if api_base != "":
     print("Warning: OPENAI_API_BASE is set to {}".format(api_base))
     openai.api_base = api_base
     
+    
+def model_setup(model_name_arg, has_load = False):
+    global tokenizer, model, model_name
+    
+    model_name = model_name_arg
+    if has_load:
+        return
+    
+    torch.cuda.empty_cache()
+    if model_name == 'llama':
+        model_id = "meta-llama/Llama-3.1-8B-Instruct"
+    elif model_name == 'mistral':
+        model_id = "mistralai/Mistral-7B-Instruct-v0.2"
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    model = AutoModelForCausalLM.from_pretrained(
+        model_id,
+        torch_dtype=torch.float16,
+        device_map="auto"
+    )
+
 #llama setup
-model_id = "meta-llama/Llama-3.1-8B-Instruct"
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForCausalLM.from_pretrained(
-    model_id,
-    torch_dtype=torch.float16,
-    device_map="auto"
-)
 
 def format_chat_prompt(user_prompt: str, system_prompt: str = "You are a helpful assistant.") -> str:
-    return (
-        "<|start_header_id|>system<|end_header_id|>\n"
-        f"{system_prompt}<|eot_id|>\n"
-        "<|start_header_id|>user<|end_header_id|>\n"
-        f"{user_prompt}<|eot_id|>\n"
-        "<|start_header_id|>assistant<|end_header_id|>\n"
-    )
+    if model_name == 'llama':
+        return (
+            "<|start_header_id|>system<|end_header_id|>\n"
+            f"{system_prompt}<|eot_id|>\n"
+            "<|start_header_id|>user<|end_header_id|>\n"
+            f"{user_prompt}<|eot_id|>\n"
+            "<|start_header_id|>assistant<|end_header_id|>\n"
+        )
+    elif model_name == 'mistral':
+        return f"<s>[INST] <<SYS>>\n{system_prompt}\n<</SYS>>\n{user_prompt} [/INST]"
 
 def llama(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=1000, n=1, stop=None) -> list:
     global prompt_llama_tokens, llama_tokens
     prompt = format_chat_prompt(user_prompt, system_prompt)
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-    prompt_token_count = inputs.input_ids.shape[-1]
-    prompt_llama_tokens += prompt_token_count
+    # prompt_token_count = inputs.input_ids.shape[-1]
     outputs = []
     # print(f'LLAMA prompt: \n{prompt}')
-    while n > 0:
-        with torch.no_grad():
-            res = model.generate(
-                **inputs,
-                max_new_tokens=max_tokens,
-                eos_token_id=tokenizer.eos_token_id,
-                pad_token_id=tokenizer.eos_token_id,
-                do_sample=True,
-                temperature=temperature,
-                top_p=0.9,
-                num_return_sequences=n
-            )
+    prompt_len = inputs["input_ids"].shape[1]
+    prompt_llama_tokens += prompt_len
+    # print(f'len {prompt_len} \n prompt tokens {prompt_token_count}')
+    with torch.no_grad():
+        res = model.generate(
+            **inputs,
+            max_new_tokens=max_tokens,
+            eos_token_id=tokenizer.eos_token_id,
+            pad_token_id=tokenizer.eos_token_id,
+            do_sample=True,
+            temperature=temperature,
+            top_p=0.9,
+            num_return_sequences=n
+        )
         # raw_output_text = tokenizer.decode(res[0], skip_special_tokens=True)
-        for output in res:
-            raw_output_text = tokenizer.decode(output, skip_special_tokens=True)
-            output_text = raw_output_text
+    for output in res:
+        generated_tokens = output[prompt_len:]
+        raw_output_text = tokenizer.decode(generated_tokens, skip_special_tokens=True)
+        output_text = raw_output_text
             # print(f'Raw LLAMA output: {output_text}\n')
-            if prompt in output_text:
-                output_text = output_text.replace(prompt, "")
-            if "assistant" in output_text:
-                index = output_text.rfind("assistant")
-                output_text =  output_text[(index + 9):]
-            outputs.append(output_text)
-            generated_token_count = output.shape[-1] - prompt_token_count
-            llama_tokens += generated_token_count
+        if prompt in output_text:
+            output_text = output_text.replace(prompt, "")
+        if "assistant" in output_text:
+            index = output_text.rfind("assistant")
+            output_text =  output_text[(index + 9):]
+        outputs.append(output_text)
+        generated_token_count = output.shape[-1] - prompt_len
+        llama_tokens += generated_token_count
             # print(f'LLAMA output: {output_text}\n')
-            if(output_text == ""):
-                print(f'LLAMA output empty, raw output: {raw_output_text}')
-            n -= 1
+        if(output_text == ""):
+            print(f'LLAMA output empty, raw output: {raw_output_text}')
     return outputs
 
 @backoff.on_exception(backoff.expo, openai.error.OpenAIError)

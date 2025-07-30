@@ -3,8 +3,7 @@ import time
 import copy
 import numpy as np
 from functools import partial
-from tot.models import gpt
-from tot.models import llama
+from tot.models import gpt, llama, model_setup
 
 propose_num = value_num = 0
 propose_time = value_time = 0
@@ -170,7 +169,7 @@ def retrieve_steps(num_steps, idx, y):
     intermediate_state.reverse()
     return intermediate_state, thought_chain, chain_index
 
-def solve_v1(args, task, idx, do_validate = True):
+def solve_v1(args, task, idx, slm = 'llama', has_load = False, do_validate = True):
     global gpt
     global thoughts
     global connection
@@ -181,6 +180,7 @@ def solve_v1(args, task, idx, do_validate = True):
     global states
     
     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
+    model_setup(slm, has_load)
     
     nodes = 1
     propose_num = value_num = 0

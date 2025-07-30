@@ -150,9 +150,9 @@ def compute_average_stats_llama(jsonl_path):
 
 
 # Example usage
-jsonl_path = "lazy_game24_results.jsonl"  # Replace with your path
+jsonl_path = "./results/lazy_sys_game24_results.jsonl"  # Replace with your path
 
-with open('lazy_stats.txt', 'w', buffering=1) as f:
+with open('./stats/sys_lazy_stats.txt', 'w', buffering=1) as f:
     sys.stdout = f
 
     averages = compute_average_stats_lazy(jsonl_path)
