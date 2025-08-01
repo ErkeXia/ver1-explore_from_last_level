@@ -39,7 +39,8 @@ def model_setup(model_name_arg, has_load = False):
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
         torch_dtype=torch.float16,
-        device_map="auto"
+        device_map="auto",
+        use_cache=True
     )
 
 #llama setup
