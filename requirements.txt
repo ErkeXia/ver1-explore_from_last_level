@@ -21,3 +21,8 @@ transformers==4.53.0
 torch==2.1.0
 accelerate==1.8.1
 psutil==7.0.0
+annotated-types==0.7.0 
+pydantic==2.11.7 
+pydantic-core==2.33.2 
+text-generation==0.7.0 
+typing-inspection==0.4.1

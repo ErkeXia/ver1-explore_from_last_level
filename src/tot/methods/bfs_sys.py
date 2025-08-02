@@ -50,7 +50,7 @@ def get_value(task, x, s, n_evaluate_sample, cache_value=True):
     return value
 
 def get_proposals_v1(task, current, index, feedback = None): 
-    print(f'Getting proposals for index {index} with current = {current}')
+    print(f'\nGetting proposals for index {index} with current = {current}')
     global propose_num, propose_time
     propose_num += 1
     
@@ -68,13 +68,13 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
     values = []
     local_value_cache = {}
     for p,i,s in ys:  # each partial output
-        print(f'Get value for p: {p}  s: {s}')
         if s in local_value_cache:  # avoid duplicate candidates
             value = 0
         else:
             # print(f'getting value for {y}')
             value = get_value(task, x, s, n_evaluate_sample, cache_value=cache_value)
             local_value_cache[s] = value
+        print(f'Get value for p: {p}  s: {s} value: {value}')
         values.append(value)
     return values
 
@@ -180,7 +180,7 @@ def solve_v1(args, task, idx, slm = 'llama', has_load = False, do_validate = Tru
     global states
     
     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
-    model_setup(slm, has_load)
+    model_setup(slm, TGI = True, has_load = has_load)
     
     nodes = 1
     propose_num = value_num = 0

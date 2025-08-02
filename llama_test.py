@@ -95,24 +95,27 @@ impossible
 TASK:
 Input: 5 9 9
 '''
-value_system_prompt = '''Evaluate if given numbers can reach 24 with basic arithmetic operations (+ - * /) 
-THINK step-by-step **internally**
-Produce output in *exactly* this format:
-a  op  b  =  c        (remaining: …)   # optional
-c  op  d  =  e                         # optional
-<final>    sure | likely | impossible
-You may write at most five lines total
+value_system_prompt2 = '''
+Evaluate if the given numbers can reach 24 using basic arithmetic operations (+, -, *, /).
+**Think step-by-step internally** and perform calculations logically.
+Produce output **in exactly this format**:
+
+a op b = c         # optional  
+Analysis           # optional  
+<final> sure | likely | impossible
+
+You may write at most **five lines** in total. The <final> decision must be on the last line.
 
 EXAMPLES:
 Input: 10 14
-10 + 14 = 24
+10 + 14 = 24  
 sure
 
 Input: 11 12
-11 + 12 = 23
-12 - 11 = 1
-11 * 12 = 132
-11 / 12 = 0.91
+11 + 12 = 23  
+12 - 11 = 1  
+11 * 12 = 132  
+11 / 12 = 0.91  
 impossible
 
 Input: 4 4 10
@@ -140,7 +143,7 @@ likely
 Input: 10 10 11
 10 + 10 + 11 = 31
 (11 - 10) * 10 = 10
-10 10 10 are all too big
+10 10 11 are all too big
 impossible
 
 Input: 1 3 3
@@ -150,9 +153,75 @@ Input: 1 3 3
 impossible
 '''
 
+value_system_prompt_m = '''
+You are given a set of numbers. Your task is to evaluate if these numbers can reach 24 using basic arithmetic operations (+, -, *, /).
+Think step-by-step by trying some further operations, and give your final answer in the last line.
+
+Format for your response:
+Analysis           # optional  
+<final> sure | likely | impossible
+
+The last line must contain your final decision in the above format.
+
+### EXAMPLES:
+
+Input: 10 14  
+10 + 14 = 24  
+sure
+
+Input: 11 12  
+11 + 12 = 23  
+12 - 11 = 1  
+11 * 12 = 132  
+11 / 12 = 0.91  
+impossible
+
+Input: 5 6 6
+5 + 6 + 6 = 17
+(6 - 5) * 6 = 1 * 6 = 6
+I cannot obtain 24 now, but numbers are within a reasonable range
+likely
+'''
+
+value_system_prompt = '''
+You are given a set of numbers. Your task is to evaluate if these numbers can reach 24 using basic arithmetic operations (+, -, *, /).
+**Think step-by-step internally**, and provide a **logical breakdown** of your reasoning.
+
+**Follow these specific instructions**:
+1. Perform arithmetic operations on the numbers to check if 24 can be obtained.
+2. Write your steps in this **exact format**. No extra commentary or explanations. Only perform arithmetic and show the result in the specified format.
+
+Format for your response:
+a op b = c        (remaining: …)   # optional  
+Analysis           # optional  
+<final> sure | likely | impossible
+
+You may write at most **five lines** total. The last line must contain your final decision.
+
+### EXAMPLES:
+
+Input: 10 14  
+10 + 14 = 24  
+sure
+
+Input: 11 12  
+11 + 12 = 23  
+12 - 11 = 1  
+11 * 12 = 132  
+11 / 12 = 0.91  
+impossible
+
+Input: 5 6 6
+5 + 6 + 6 = 17
+(6 - 5) * 6 = 1 * 6 = 6
+I cannot obtain 24 now, but numbers are within a reasonable range
+likely
+'''
+
+
 value_user_prompt = '''
 TASK:
-Input: 9 10 10
+Input: 4 10 30
 '''
 
 value_user_prompt2 = '''
@@ -242,10 +311,11 @@ Possible next steps:
 
 
 # print(value_prompt)
-model_setup('mistral')
+model_setup('llama')
 print(llama_usage())
 start = time.perf_counter()
-output = llama(propose_user_prompt, propose_system_prompt_act, n=1, stop=None, temperature=0.7)
+output = llama(value_user_prompt, value_system_prompt_m, n=1, stop=None, temperature=0.7)
+output = llama(value_user_prompt, value_system_prompt_m, n=1, stop=None, temperature=0.7)
 
 # output = llama(value_user_prompt, value_system_prompt, n=1, stop=None, temperature=0.7, max_tokens = 200)
 elapsed = time.perf_counter() - start

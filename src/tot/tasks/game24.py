@@ -106,7 +106,7 @@ class Game24Task(Task):
     
     @staticmethod
     def propose_sys_prompt_wrap(current_numbers: list) -> str:
-        print(f'\nCurrent number is: {current_numbers}')
+        print(f'Current number is: {current_numbers}')
         prompt = propose_user_prompt.format(input=current_numbers)
         system = propose_system_prompt_act
         return system, prompt
