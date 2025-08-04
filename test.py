@@ -24,7 +24,7 @@ y = "13 - 11 = 2 (left: 1 2 12)\n2 * 12 = 24 (left: 1 24)\n1 * 24 = 24 (left: 24
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
     start = time.perf_counter()
-    x, y, all_thoughts, validators, llama_ans, nodes, all_states = solve_v1(args, task, 900, slm = 'llama', do_validate = True)
+    x, y, all_thoughts, validators, llama_ans, nodes, all_states = solve_v1(args, task, 800, slm = 'llama', do_validate = True)
     elapsed = time.perf_counter() - start
     print(f"{elapsed:.6f} seconds")
     # if "Answer" in y:

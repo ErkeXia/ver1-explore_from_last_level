@@ -8,12 +8,60 @@ from tot.models import gpt, llama, model_setup
 propose_num = value_num = 0
 propose_time = value_time = 0
 
-def get_value(task, x, s, n_evaluate_sample, cache_value=True):
+def get_value_batch(task, x, s_list, n_evaluate_sample, cache_value=True):
     global value_num, value_time
+    value_num += len(s_list)
+
+    system_prompts = []
+    user_prompts = []
+    uncached_indices = []
+    cached_values = [None] * len(s_list)
+
+    for i, s in enumerate(s_list):
+        system, user = task.value_sys_prompt_wrap(x, s)
+        if cache_value and user in task.value_cache:
+            cached_values[i] = task.value_cache[user]
+        else:
+            system_prompts.append(system)
+            user_prompts.append(user)
+            uncached_indices.append(i)
+
+    start = time.perf_counter()
+    results = [None] * len(s_list)
+
+    if user_prompts:
+        outputs = llama(
+            user_prompt=user_prompts,
+            system_prompt=system_prompts,
+            n=n_evaluate_sample,
+            stop=None,
+            max_tokens=200
+        )  # → List[List[str]]: one list of completions per input
+
+        for idx, uncached_i in enumerate(uncached_indices):
+            value = task.value_outputs_unwrap(x, "", outputs[idx])
+            results[uncached_i] = value
+            if cache_value:
+                task.value_cache[user_prompts[idx]] = value
+
+    elapsed = time.perf_counter() - start
+    value_time += elapsed
+
+    # Fill in cached values
+    for i, val in enumerate(cached_values):
+        if val is not None:
+            results[i] = val
+
+    return results
+
+
+def get_value(task, x, s, n_evaluate_sample, cache_value=True):
+    global value_num, value_time, repeat_value
     value_num += 1
     
     system, user = task.value_sys_prompt_wrap(x, s)
     if cache_value and user in task.value_cache:
+        print(f'cache')
         return task.value_cache[user]
     # value_outputs = gpt(value_prompt, n=n_evaluate_sample, stop=None)
     num = n_evaluate_sample
@@ -24,7 +72,7 @@ def get_value(task, x, s, n_evaluate_sample, cache_value=True):
     start = time.perf_counter()
     
     while(num > 0 and attempt < max_attempts):
-        outputs = llama(user, system, n=num, stop=None, max_tokens = 200)
+        outputs = llama(user, system, n=num, stop=None, max_tokens = 200, query_task = 'value')
         keywords = {'likely', 'impossible', 'sure'}
         valid_outputs = [
             o for o in outputs
@@ -35,7 +83,8 @@ def get_value(task, x, s, n_evaluate_sample, cache_value=True):
         num -= valid_count
         value_outputs.extend(valid_outputs)
         attempt += 1
-        
+    
+    repeat_value += (attempt - 1)    
     if(attempt == max_attempts):
         print('Reach max attempts')
         
@@ -57,7 +106,7 @@ def get_proposals_v1(task, current, index, feedback = None):
     system, user = task.propose_sys_prompt_wrap(current)
     # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
     start = time.perf_counter()
-    proposals = llama(user, system, n=1, stop=None)[0].split('\n')
+    proposals = llama(user, system, n=1, stop=None, query_task = 'propose')[0].split('\n')
     elapsed = time.perf_counter() - start
     propose_time += elapsed
     proposals, states_new = task.propose_prompt_unwrap(current, proposals)
@@ -171,20 +220,19 @@ def retrieve_steps(num_steps, idx, y):
 
 def solve_v1(args, task, idx, slm = 'llama', has_load = False, do_validate = True):
     global gpt
-    global thoughts
-    global connection
-    global steps
+    global thoughts, connection, steps
     global value_num, value_time
     global propose_num, propose_time
     global nodes
-    global states
+    global states, repeat_value
     
     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
-    model_setup(slm, TGI = True, has_load = has_load)
+    model_setup(slm, TGI_arg = False)
     
     nodes = 1
     propose_num = value_num = 0
     propose_time = value_time = 0
+    repeat_value = 0
     
     thoughts = [[] for _ in range(task.steps)]
     connection = [[] for _ in range(task.steps)]
@@ -226,6 +274,7 @@ def solve_v1(args, task, idx, slm = 'llama', has_load = False, do_validate = Tru
         redo_s, feedback = task.validate_unwrap(validate_outputs)
         print(f'redo{redo_s} feedback: {feedback}')
         if(redo_s == -1):
+            print(f'Repeat value time: {repeat_value}')
             return x, feedback, all_thoughts, validators, llama_ans, nodes, all_states
         if(feedback != ""):
             prev_level = [feedback]
@@ -265,7 +314,7 @@ def solve_v1(args, task, idx, slm = 'llama', has_load = False, do_validate = Tru
         #     print(f'step {i} \n')
         #     for t in ts:
         #         print(f'{t} \n')
-            
+    print(f'Repeat value time: {repeat_value}')
     return x, feedback, all_thoughts, validators, llama_ans, nodes, all_states
       
 def get_time():

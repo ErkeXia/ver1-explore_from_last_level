@@ -10,10 +10,13 @@ client = Client("http://localhost:8080", timeout=60)
 
 completion_tokens = prompt_tokens = 0
 llama_tokens = prompt_llama_tokens = 0
+cached_system_prompts = {}
 
 model_name = None
 model = None
 tokenizer = None
+TGI = False
+has_load = False
 
 api_key = os.getenv("OPENAI_API_KEY", "")
 if api_key != "":
@@ -27,9 +30,10 @@ if api_base != "":
     openai.api_base = api_base
     
     
-def model_setup(model_name_arg, TGI = True, has_load = False):
-    global tokenizer, model, model_name
+def model_setup(model_name_arg, TGI_arg = True):
+    global tokenizer, model, model_name, TGI, has_load
     
+    TGI = TGI_arg
     model_name = model_name_arg
     if TGI or has_load:
         return
@@ -44,14 +48,15 @@ def model_setup(model_name_arg, TGI = True, has_load = False):
         model_id,
         torch_dtype=torch.float16,
         device_map="auto",
-        use_cache=True,
-        attn_implementation="flash_attention_2"
+        use_cache=False,
+        # attn_implementation="flash_attention_2"
     )
     model = torch.compile(model)
+    has_load = True
 
 #llama setup
 
-def format_chat_prompt(user_prompt: str, system_prompt: str = "You are a helpful assistant.") -> str:
+def format_chat_prompt_TGI(user_prompt: str, system_prompt: str = "You are a helpful assistant.") -> str:
     if model_name == 'llama':
         return (
             "<|start_header_id|>system<|end_header_id|>\n"
@@ -62,16 +67,33 @@ def format_chat_prompt(user_prompt: str, system_prompt: str = "You are a helpful
         )
     elif model_name == 'mistral':
         return f"<s>[INST] <<SYS>>\n{system_prompt}\n<</SYS>>\n{user_prompt} [/INST]"
+    
+def format_chat_prompt(user_prompt: str, system_prompt: str = "You are a helpful assistant.") -> tuple[str, str]:
+    if model_name == 'llama':
+        system_part = (
+            "<|start_header_id|>system<|end_header_id|>\n"
+            f"{system_prompt}<|eot_id|>\n"
+        )
+        user_part = (
+            "<|start_header_id|>user<|end_header_id|>\n"
+            f"{user_prompt}<|eot_id|>\n"
+            "<|start_header_id|>assistant<|end_header_id|>\n"
+        )
+    elif model_name == 'mistral':
+        system_part = f"<s>[INST] <<SYS>>\n{system_prompt}\n<</SYS>>\n"
+        user_part = f"{user_prompt} [/INST]"
+    return system_part, user_part
 
-def llama(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=1000, n=1, stop=None, TGI = True) -> list:
+
+def llama(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=1000, n=1, stop=None, query_task = None) -> list:
     global prompt_llama_tokens, llama_tokens
-    prompt = format_chat_prompt(user_prompt, system_prompt)
     outputs = []
     
     if TGI:
+        TGI_prompt = format_chat_prompt_TGI(user_prompt, system_prompt)
         for _ in range(n):
             response = client.generate(
-                prompt,
+                TGI_prompt,
                 max_new_tokens=max_tokens,
                 temperature=temperature,
                 top_p=0.9,
@@ -90,7 +112,23 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
             outputs.append(output_text)
         return outputs
     
-    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    system_part, user_part = format_chat_prompt(user_prompt, system_prompt)
+    
+    if query_task != None and query_task in cached_system_prompts:
+        system_tokens_cache = cached_system_prompts[query_task]
+    else:
+        system_tokens_cache = tokenizer(system_part, return_tensors="pt", add_special_tokens=False).input_ids
+        cached_system_prompts[query_task] = system_tokens_cache
+    user_tokens = tokenizer(user_part, return_tensors="pt", add_special_tokens=False).input_ids
+    full_tokens = torch.cat([system_tokens_cache, user_tokens], dim=-1).to(model.device)
+    attention_mask = torch.ones_like(full_tokens)
+    inputs = {
+        "input_ids": full_tokens.to(model.device),
+        "attention_mask": attention_mask.to(model.device)
+    }
+
+    
+    # inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     # prompt_token_count = inputs.input_ids.shape[-1]
 
     # print(f'LLAMA prompt: \n{prompt}')
