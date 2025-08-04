@@ -44,7 +44,8 @@ def model_setup(model_name_arg, TGI = True, has_load = False):
         model_id,
         torch_dtype=torch.float16,
         device_map="auto",
-        use_cache=True
+        use_cache=True,
+        attn_implementation="flash_attention_2"
     )
     model = torch.compile(model)
 
@@ -105,7 +106,7 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
             do_sample=True,
             temperature=temperature,
             top_p=0.9,
-            num_return_sequences=n
+            num_return_sequences=n,
         )
         # raw_output_text = tokenizer.decode(res[0], skip_special_tokens=True)
     for output in res:
