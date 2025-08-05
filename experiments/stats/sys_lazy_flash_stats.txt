@@ -1,0 +1,48 @@
+
+Seed       Input           Correct    Explore Count   nodes      Time       gpt_prompt_tokens    gpt_completion_tokens     llama_prompt_tokens  llama_completion_tokens   Answer                               Feedback                       
+351        3 4 5 7         1          1               16         214.32     686                  20                        35163                11299                     Answer: (3 * 4) + (5 + 7) = 24      Correct                       
+352        4 7 13 13       0          3               36         597.32     2068                 57                        74406                32275                     17 * 6 = 102                        Right-hand side is not 24 (got 102.0)
+353        4 8 8 8         1          1               16         201.05     686                  19                        29384                11392                     Answer: (8 * 8 / 4) + 8 = 24        Correct                       
+354        5 6 13 13       0          3               31         272.76     2068                 57                        38218                13998                     Answer: (13 / 13 + 5) * 6 = 24      Expression evaluates to 36.0, not 24
+355        8 9 11 12       1          1               16         182.91     686                  20                        27505                10027                     Answer: (9 - 8) + (11 + 12) = 24    Correct                       
+356        1 1 2 9         1          1               16         153.00     686                  20                        25087                7935                      Answer: (9 - 1) * (1 + 2) = 24      Correct                       
+357        2 4 4 8         1          1               16         116.24     686                  20                        17887                5945                      Answer: (2 * 8) + (4 + 4) = 24      Correct                       
+358        4 4 4 8         1          1               16         98.81      686                  19                        12113                4739                      Answer: (4 + 4) * 4 - 8 = 24        Correct                       
+359        2 4 13 13       1          1               16         177.25     686                  20                        26567                9656                      Answer: (13 - 4) + (2 + 13) = 24    Correct                       
+360        4 7 7 7         0          3               31         235.42     2058                 57                        33396                11886                     7 * 4 = 28                          Right-hand side is not 24 (got 28.0)
+361        7 9 13 13       1          1               16         204.62     686                  20                        27527                10854                     Answer: (7 - 9) + (13 + 13) = 24    Correct                       
+362        9 11 11 11      1          1               16         181.19     686                  19                        23659                9680                      Answer: (11 + 11 - 9) + 11 = 24     Correct                       
+363        1 6 8 11        1          1               16         166.74     686                  20                        25093                8750                      Answer: (8 - 1) + (6 + 11) = 24     Correct                       
+364        1 1 3 5         0          3               26         157.00     2058                 57                        19323                7752                      3 * 2 = 6                           Right-hand side is not 24 (got 6.0)
+365        2 6 6 8         0          3               21         140.23     2063                 63                        18594                7268                      24 / 6 = 4                          Right-hand side is not 24 (got 4.0)
+366        1 3 4 4         1          1               16         99.10      686                  20                        10211                4704                      Answer: (4 + 4) * (1 * 3) = 24      Correct                       
+367        1 3 10 11       1          1               16         183.37     686                  20                        27485                9973                      Answer: (11 * 1) + (3 + 10) = 24    Correct                       
+368        1 9 10 12       1          1               16         192.00     686                  19                        27029                9686                      Answer: (10 + 1 - 9) * 12 = 24      Correct                       
+369        7 8 12 13       1          1               16         162.91     686                  20                        20297                8447                      Answer: (13 - 8) + (7 + 12) = 24    Correct                       
+370        8 9 10 13       1          1               16         162.40     686                  20                        20329                8902                      Answer: (9 - 8) + (10 + 13) = 24    Correct                       
+371        1 1 4 9         0          3               21         179.12     2066                 57                        20533                8720                      4 + 9 = 13                          Right-hand side is not 24 (got 13.0)
+372        2 5 5 8         0          3               21         228.29     2058                 57                        24354                9928                      3 * 8 = 24                          Used numbers [3.0, 8.0] do not match input numbers [2.0, 5.0, 5.0, 8.0]
+373        6 9 12 12       1          1               16         256.20     686                  19                        30851                14132                     Answer: (12 + 6) / 9 * 12 = 24      Correct                       
+374        2 5 5 13        1          1               16         163.86     686                  20                        22274                8577                      Answer: (13 - 5) * (5 - 2) = 24     Correct                       
+375        2 8 12 12       0          3               26         201.51     2060                 59                        24039                10328                     8 - 2 = 6                           Right-hand side is not 24 (got 6.0)
+
+Summary of the Dataset:
+Correct count: 17
+Incorrect count: 8
+Valid response: 18
+Invalid response: 0
+Suggest response: 23
+Explore time distribution: [17, 0, 8]
+
+Averages for each statistic:
+seed: 363.0000
+gpt_prompt_tokens: 1126.4400
+gpt_completion_tokens: 31.9600
+llama_prompt_tokens: 26452.9600
+llama_completion_tokens: 10274.1200
+propose_num: 12.4800
+value_num: 69.4000
+propose_avg: 3.8646
+value_avg: 2.0553
+total_time: 197.1042
+nodes: 19.4000

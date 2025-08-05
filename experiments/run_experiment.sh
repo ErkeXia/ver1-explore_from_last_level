@@ -1,0 +1,1 @@
+nohup python -u game24_lazy_sys_flash.py > ./logs/flash.log 2>&1 &

@@ -4,6 +4,8 @@ import backoff
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 from text_generation import Client
+import flash_attn
+
 
 #TGI endpoint
 client = Client("http://localhost:8080", timeout=60)
@@ -49,6 +51,7 @@ def model_setup(model_name_arg, TGI_arg = True):
         torch_dtype=torch.float16,
         device_map="auto",
         use_cache=False,
+        attn_implementation="flash_attention_2"
         # attn_implementation="flash_attention_2"
     )
     model = torch.compile(model)
@@ -87,6 +90,8 @@ def format_chat_prompt(user_prompt: str, system_prompt: str = "You are a helpful
 
 def llama(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=1000, n=1, stop=None, query_task = None) -> list:
     global prompt_llama_tokens, llama_tokens
+    # print(model.config._attn_implementation)
+
     outputs = []
     
     if TGI:

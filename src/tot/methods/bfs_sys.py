@@ -218,7 +218,7 @@ def retrieve_steps(num_steps, idx, y):
     intermediate_state.reverse()
     return intermediate_state, thought_chain, chain_index
 
-def solve_v1(args, task, idx, slm = 'llama', has_load = False, do_validate = True):
+def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
     global gpt
     global thoughts, connection, steps
     global value_num, value_time
