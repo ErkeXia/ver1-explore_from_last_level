@@ -55,6 +55,11 @@ def model_setup(model_name_arg, TGI_arg = True):
         # attn_implementation="flash_attention_2"
     )
     model = torch.compile(model)
+    
+    tokenizer.pad_token = tokenizer.eos_token
+    model.config.pad_token_id = tokenizer.eos_token_id
+    tokenizer.padding_side = "left"
+    
     has_load = True
 
 #llama setup
@@ -71,75 +76,84 @@ def format_chat_prompt_TGI(user_prompt: str, system_prompt: str = "You are a hel
     elif model_name == 'mistral':
         return f"<s>[INST] <<SYS>>\n{system_prompt}\n<</SYS>>\n{user_prompt} [/INST]"
     
-def format_chat_prompt(user_prompt: str, system_prompt: str = "You are a helpful assistant.") -> tuple[str, str]:
+def format_chat_prompt(user_prompts, system_prompt: str = "You are a helpful assistant.") -> tuple[str, str]:
     if model_name == 'llama':
         system_part = (
             "<|start_header_id|>system<|end_header_id|>\n"
             f"{system_prompt}<|eot_id|>\n"
         )
-        user_part = (
+        user_parts = [(
             "<|start_header_id|>user<|end_header_id|>\n"
             f"{user_prompt}<|eot_id|>\n"
             "<|start_header_id|>assistant<|end_header_id|>\n"
-        )
+        ) for user_prompt in user_prompts]
     elif model_name == 'mistral':
         system_part = f"<s>[INST] <<SYS>>\n{system_prompt}\n<</SYS>>\n"
-        user_part = f"{user_prompt} [/INST]"
-    return system_part, user_part
+        user_parts = [f"{user_prompt} [/INST]" for user_prompt in user_prompts]
+    return system_part, user_parts
 
 
-def llama(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=1000, n=1, stop=None, query_task = None) -> list:
+def llama(user_prompts, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=1000, n=1, stop=None, query_task = None) -> list:
     global prompt_llama_tokens, llama_tokens
     # print(model.config._attn_implementation)
 
     outputs = []
     
     if TGI:
-        TGI_prompt = format_chat_prompt_TGI(user_prompt, system_prompt)
-        for _ in range(n):
-            response = client.generate(
-                TGI_prompt,
-                max_new_tokens=max_tokens,
-                temperature=temperature,
-                top_p=0.9,
-                do_sample=True,
-                return_full_text=False
-            )
-            output_text = response.generated_text
+        for user_prompt in user_prompts:
+            TGI_prompt = format_chat_prompt_TGI(user_prompt, system_prompt)
+            for _ in range(n):
+                response = client.generate(
+                    TGI_prompt,
+                    max_new_tokens=max_tokens,
+                    temperature=temperature,
+                    top_p=0.9,
+                    do_sample=True,
+                    return_full_text=False
+                )
+                output_text = response.generated_text
 
-            # prompt_token_count = len(tokenizer.encode(prompt))
-            # completion_token_count = len(tokenizer.encode(output_text))
-            # prompt_llama_tokens += prompt_token_count
-            # llama_tokens += completion_token_count
+                # prompt_token_count = len(tokenizer.encode(prompt))
+                # completion_token_count = len(tokenizer.encode(output_text))
+                # prompt_llama_tokens += prompt_token_count
+                # llama_tokens += completion_token_count
 
-            if output_text.strip() == "":
-                print(f"TGI output empty for prompt: {prompt}")
-            outputs.append(output_text)
+                if output_text.strip() == "":
+                    print(f"TGI output empty for prompt: {prompt}")
+                outputs.append(output_text)
         return outputs
     
-    system_part, user_part = format_chat_prompt(user_prompt, system_prompt)
+    # system_part, user_parts = format_chat_prompt(user_prompts, system_prompt)
     
-    if query_task != None and query_task in cached_system_prompts:
-        system_tokens_cache = cached_system_prompts[query_task]
-    else:
-        system_tokens_cache = tokenizer(system_part, return_tensors="pt", add_special_tokens=False).input_ids
-        cached_system_prompts[query_task] = system_tokens_cache
-    user_tokens = tokenizer(user_part, return_tensors="pt", add_special_tokens=False).input_ids
-    full_tokens = torch.cat([system_tokens_cache, user_tokens], dim=-1).to(model.device)
-    attention_mask = torch.ones_like(full_tokens)
-    inputs = {
-        "input_ids": full_tokens.to(model.device),
-        "attention_mask": attention_mask.to(model.device)
-    }
+    # if query_task != None and query_task in cached_system_prompts:
+    #     system_tokens_cache = cached_system_prompts[query_task]
+    # else:
+    #     system_tokens_cache = tokenizer(system_part, return_tensors="pt", add_special_tokens=False).input_ids
+    #     cached_system_prompts[query_task] = system_tokens_cache
+
+    # user_tokens = tokenizer(user_parts, return_tensors="pt", add_special_tokens=False).input_ids
+    # full_tokens = torch.cat([system_tokens_cache.repeat(user_tokens.shape[0], 1), user_tokens], dim=-1).to(model.device)
+
+    # attention_mask = torch.ones_like(full_tokens)
+    # inputs = {
+    #     "input_ids": full_tokens.to(model.device),
+    #     "attention_mask": attention_mask.to(model.device)
+    # }
+    
+    prompts = [format_chat_prompt_TGI(system_prompt, u) for u in user_prompts]
+    inputs = tokenizer(prompts, return_tensors="pt", padding=True, truncation=True).to(model.device)
 
     
     # inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     # prompt_token_count = inputs.input_ids.shape[-1]
 
     # print(f'LLAMA prompt: \n{prompt}')
-    prompt_len = inputs["input_ids"].shape[1]
-    prompt_llama_tokens += prompt_len
+    # prompt_len = inputs["input_ids"].shape[1]
     # print(f'len {prompt_len} \n prompt tokens {prompt_token_count}')
+    
+    input_seq_len = inputs.input_ids.shape[1]
+    prompt_lens = inputs.attention_mask.sum(dim=1).tolist()
+    
     with torch.no_grad():
         res = model.generate(
             **inputs,
@@ -152,22 +166,44 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
             num_return_sequences=n,
         )
         # raw_output_text = tokenizer.decode(res[0], skip_special_tokens=True)
-    for output in res:
-        generated_tokens = output[prompt_len:]
-        raw_output_text = tokenizer.decode(generated_tokens, skip_special_tokens=True)
-        output_text = raw_output_text
-            # print(f'Raw LLAMA output: {output_text}\n')
-        # if prompt in output_text:
-        #     output_text = output_text.replace(prompt, "")
-        # if "assistant" in output_text:
-        #     index = output_text.rfind("assistant")
-        #     output_text =  output_text[(index + 9):]
-        outputs.append(output_text)
-        generated_token_count = output.shape[-1] - prompt_len
-        llama_tokens += generated_token_count
-            # print(f'LLAMA output: {output_text}\n')
-        if(output_text == ""):
-            print(f'LLAMA output empty, raw output: {raw_output_text}')
+        
+    B = inputs.input_ids.size(0)
+
+    for i in range(B):
+        per_input = []
+        prompt_llama_tokens += int(prompt_lens[i])
+        for j in range(n):
+            row = i * n + j
+            gen = res[row]
+            
+            gen_only = gen[input_seq_len:]
+            text = tokenizer.decode(gen_only, skip_special_tokens=True)
+            per_input.append(text)
+            
+            generated_token_count = int(gen.shape[-1] - input_seq_len)
+            llama_tokens += generated_token_count
+            
+        outputs.append(per_input)
+
+    # for idx, output in enumerate(res):
+    #     prompt_len = full_tokens[idx].shape[0]
+    #     prompt_llama_tokens += prompt_len
+        
+    #     generated_tokens = output[prompt_len:]
+    #     raw_output_text = tokenizer.decode(generated_tokens, skip_special_tokens=True)
+    #     output_text = raw_output_text
+    #         # print(f'Raw LLAMA output: {output_text}\n')
+    #     # if prompt in output_text:
+    #     #     output_text = output_text.replace(prompt, "")
+    #     # if "assistant" in output_text:
+    #     #     index = output_text.rfind("assistant")
+    #     #     output_text =  output_text[(index + 9):]
+    #     outputs.append(output_text)
+    #     generated_token_count = output.shape[-1] - prompt_len
+    #     llama_tokens += generated_token_count
+    #         # print(f'LLAMA output: {output_text}\n')
+    #     if(output_text == ""):
+    #         print(f'LLAMA output empty, raw output: {raw_output_text}')
     return outputs
 
 @backoff.on_exception(backoff.expo, openai.error.OpenAIError)

@@ -8,61 +8,55 @@ from tot.models import gpt, llama, model_setup
 propose_num = value_num = 0
 propose_time = value_time = 0
 
-def get_value_batch(task, x, s_list, n_evaluate_sample, cache_value=True):
-    global value_num, value_time
+def chunk_list(input_list, ind = 2):
+    for i in range(0, len(input_list), ind):
+        yield input_list[i:i+ind]
+
+def get_value_batch(task, x, s_list, n_evaluate_sample):
+    global value_num, value_time, repeat_value
     value_num += len(s_list)
-
-    system_prompts = []
-    user_prompts = []
-    uncached_indices = []
-    cached_values = [None] * len(s_list)
-
-    for i, s in enumerate(s_list):
-        system, user = task.value_sys_prompt_wrap(x, s)
-        if cache_value and user in task.value_cache:
-            cached_values[i] = task.value_cache[user]
-        else:
-            system_prompts.append(system)
-            user_prompts.append(user)
-            uncached_indices.append(i)
-
-    start = time.perf_counter()
-    results = [None] * len(s_list)
-
-    if user_prompts:
-        outputs = llama(
-            user_prompt=user_prompts,
-            system_prompt=system_prompts,
-            n=n_evaluate_sample,
-            stop=None,
-            max_tokens=200
-        )  # → List[List[str]]: one list of completions per input
-
-        for idx, uncached_i in enumerate(uncached_indices):
-            value = task.value_outputs_unwrap(x, "", outputs[idx])
-            results[uncached_i] = value
-            if cache_value:
-                task.value_cache[user_prompts[idx]] = value
-
-    elapsed = time.perf_counter() - start
-    value_time += elapsed
-
-    # Fill in cached values
-    for i, val in enumerate(cached_values):
-        if val is not None:
-            results[i] = val
-
-    return results
+    
+    if len(s_list) == 0:
+        return [], [] 
+    
+    prompts = [task.value_sys_prompt_wrap(x, s) for s in s_list]
+    # if cache_value and user in task.value_cache:
+    #     print(f'cache')
+    #     return task.value_cache[user]
+    # value_outputs = gpt(value_prompt, n=n_evaluate_sample, stop=None)
+    system, _ = prompts[0]
+    
+    users = [user for _, user in prompts]
+    
+    valid_counts = []
+    valid_outputs_lst = []
+    
+    
+    keywords = {'likely', 'impossible', 'sure'}
+    for user_list in chunk_list(users):
+        print(f'Batch value for {user_list}')
+        outputs_B = llama(user_list, system, n=n_evaluate_sample, stop=None, max_tokens = 200, query_task = 'value')
+        for outputs in outputs_B:
+            valid_outputs = [
+                o for o in outputs
+                if any(k in o.strip().split('\n')[-1] for k in keywords)
+            ]
+            valid_counts.append(len(valid_outputs))
+            valid_outputs_lst.append(valid_outputs)
+            
+    assert(len(users) == len(valid_counts))
+    remains = [n_evaluate_sample - a for a in valid_counts]
+    return valid_outputs_lst, remains
 
 
 def get_value(task, x, s, n_evaluate_sample, cache_value=True):
     global value_num, value_time, repeat_value
-    value_num += 1
+    # value_num += 1
     
     system, user = task.value_sys_prompt_wrap(x, s)
-    if cache_value and user in task.value_cache:
-        print(f'cache')
-        return task.value_cache[user]
+    # if cache_value and user in task.value_cache:
+    #     print(f'cache')
+    #     return task.value_cache[user]
     # value_outputs = gpt(value_prompt, n=n_evaluate_sample, stop=None)
     num = n_evaluate_sample
     value_outputs = []
@@ -72,7 +66,7 @@ def get_value(task, x, s, n_evaluate_sample, cache_value=True):
     start = time.perf_counter()
     
     while(num > 0 and attempt < max_attempts):
-        outputs = llama(user, system, n=num, stop=None, max_tokens = 200, query_task = 'value')
+        outputs = llama([user], system, n=num, stop=None, max_tokens = 200, query_task = 'value')[0]
         keywords = {'likely', 'impossible', 'sure'}
         valid_outputs = [
             o for o in outputs
@@ -92,11 +86,42 @@ def get_value(task, x, s, n_evaluate_sample, cache_value=True):
     value_time += elapsed
     
     # print(f'The valid outputs are {value_outputs}')
-    value = task.value_outputs_unwrap(x, "", value_outputs)
+    # value = task.value_outputs_unwrap(x, "", value_outputs)
     # print(f'The value is {value}')
-    if cache_value:
-        task.value_cache[user] = value
-    return value
+    # if cache_value:
+    #     task.value_cache[user] = value
+    return value_outputs
+
+def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
+    global value_num
+    value_num += len(ys)
+    
+    s_list = [s for _,_,s in ys]
+    valid_outputs_lst, remains = get_value_batch(task, x, s_list, n_evaluate_sample)
+    
+    values = []
+    
+    print(f'--Remains-- {remains}')
+
+    for idx, remain in enumerate(remains):
+        if remain > 0:
+            value_outputs = get_value(task, x, s_list[idx], remain, cache_value=cache_value)
+            valid_outputs_lst[idx].extend(value_outputs)
+        assert(len(valid_outputs_lst[idx]) == n_evaluate_sample)
+        value = task.value_outputs_unwrap(x, "", valid_outputs_lst[idx])
+        print(f'Get value for s: {s_list[idx]} value: {value}')
+        values.append(value)
+
+    # for p,i,s in ys:  # each partial output
+    #     # if s in local_value_cache:  # avoid duplicate candidates
+    #     #     value = 0
+    #     # else:
+    #     #     # print(f'getting value for {y}')
+    #     value = get_value(task, x, s, n_evaluate_sample, cache_value=cache_value)
+    #     local_value_cache[s] = value
+    #     print(f'Get value for p: {p}  s: {s} value: {value}')
+    #     values.append(value)
+    return values
 
 def get_proposals_v1(task, current, index, feedback = None): 
     print(f'\nGetting proposals for index {index} with current = {current}')
@@ -106,26 +131,12 @@ def get_proposals_v1(task, current, index, feedback = None):
     system, user = task.propose_sys_prompt_wrap(current)
     # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
     start = time.perf_counter()
-    proposals = llama(user, system, n=1, stop=None, query_task = 'propose')[0].split('\n')
+    proposals = llama([user], system, n=1, stop=None, query_task = 'propose')[0][0].split('\n')
     elapsed = time.perf_counter() - start
     propose_time += elapsed
     proposals, states_new = task.propose_prompt_unwrap(current, proposals)
     # print(f'The proposals for {y} is \n {proposals}')
     return [(proposal, index, state_new) for proposal, state_new in zip(proposals, states_new)]
-
-def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
-    values = []
-    local_value_cache = {}
-    for p,i,s in ys:  # each partial output
-        if s in local_value_cache:  # avoid duplicate candidates
-            value = 0
-        else:
-            # print(f'getting value for {y}')
-            value = get_value(task, x, s, n_evaluate_sample, cache_value=cache_value)
-            local_value_cache[s] = value
-        print(f'Get value for p: {p}  s: {s} value: {value}')
-        values.append(value)
-    return values
 
 def validate(task, x, f_step):
     validate_prompt = task.validate_sys_prompt_wrap(x, f_step)
