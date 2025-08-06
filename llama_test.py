@@ -311,14 +311,25 @@ Possible next steps:
 
 
 # print(value_prompt)
-model_setup('llama')
-print(llama_usage())
+model_setup('llama', TGI_arg = False)
 start = time.perf_counter()
+# output = llama_B([value_user_prompt], value_system_prompt_m, n=3, stop=None, temperature=0.7)
+# elapsed = time.perf_counter() - start
+# start = time.perf_counter()
+# print(f"{elapsed:.6f} seconds")
+# output = llama_B([value_user_prompt], value_system_prompt_m, n=3, stop=None, temperature=0.7)
+# elapsed = time.perf_counter() - start
+# start = time.perf_counter()
+# print(f"{elapsed:.6f} seconds")
+output = llama(value_user_prompt, value_system_prompt_m, n=1, stop=None, temperature=0.7, max_tokens = 200)
+print(output)
+elapsed = time.perf_counter() - start
+start = time.perf_counter()
+print(f"{elapsed:.6f} seconds")
 output = llama(value_user_prompt, value_system_prompt_m, n=1, stop=None, temperature=0.7)
-output = llama(value_user_prompt, value_system_prompt_m, n=1, stop=None, temperature=0.7)
+elapsed = time.perf_counter() - start
+start = time.perf_counter()
+print(f"{elapsed:.6f} seconds")
 
 # output = llama(value_user_prompt, value_system_prompt, n=1, stop=None, temperature=0.7, max_tokens = 200)
-elapsed = time.perf_counter() - start
-# print(llmaa_usage())
-print(f"{elapsed:.6f} seconds")
 print(output)

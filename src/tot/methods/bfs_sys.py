@@ -49,7 +49,7 @@ def get_value_batch(task, x, s_list, n_evaluate_sample):
     return valid_outputs_lst, remains
 
 
-def get_value(task, x, s, n_evaluate_sample, cache_value=True):
+def get_value_outputs(task, x, s, n_evaluate_sample, cache_value=True):
     global value_num, value_time, repeat_value
     # value_num += 1
     
@@ -92,7 +92,7 @@ def get_value(task, x, s, n_evaluate_sample, cache_value=True):
     #     task.value_cache[user] = value
     return value_outputs
 
-def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
+def get_values_v2(task, x, ys, n_evaluate_sample, cache_value=True):
     global value_num
     value_num += len(ys)
     
@@ -105,22 +105,65 @@ def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
 
     for idx, remain in enumerate(remains):
         if remain > 0:
-            value_outputs = get_value(task, x, s_list[idx], remain, cache_value=cache_value)
+            value_outputs = get_value_outputs(task, x, s_list[idx], remain, cache_value=cache_value)
             valid_outputs_lst[idx].extend(value_outputs)
         assert(len(valid_outputs_lst[idx]) == n_evaluate_sample)
         value = task.value_outputs_unwrap(x, "", valid_outputs_lst[idx])
         print(f'Get value for s: {s_list[idx]} value: {value}')
         values.append(value)
 
-    # for p,i,s in ys:  # each partial output
-    #     # if s in local_value_cache:  # avoid duplicate candidates
-    #     #     value = 0
-    #     # else:
-    #     #     # print(f'getting value for {y}')
-    #     value = get_value(task, x, s, n_evaluate_sample, cache_value=cache_value)
-    #     local_value_cache[s] = value
-    #     print(f'Get value for p: {p}  s: {s} value: {value}')
-    #     values.append(value)
+    return values
+
+def get_value(task, x, s, n_evaluate_sample, cache_value=True):
+    global value_num, value_time, repeat_value
+    value_num += 1
+    
+    system, user = task.value_sys_prompt_wrap(x, s)
+    if cache_value and user in task.value_cache:
+        print(f'cache')
+        return task.value_cache[user]
+    num = n_evaluate_sample
+    value_outputs = []
+    max_attempts = 5
+    attempt = 0
+    
+    start = time.perf_counter()
+    
+    while(num > 0 and attempt < max_attempts):
+        outputs = llama(user, system, n=num, stop=None, max_tokens = 200, query_task = 'value')
+        keywords = {'likely', 'impossible', 'sure'}
+        valid_outputs = [
+            o for o in outputs
+            if any(k in o.strip().split('\n')[-1] for k in keywords)
+        ]
+        valid_count = len(valid_outputs)
+        num -= valid_count
+        value_outputs.extend(valid_outputs)
+        attempt += 1
+    
+    repeat_value += (attempt - 1)    
+    if(attempt == max_attempts):
+        print('Reach max attempts')
+        
+    elapsed = time.perf_counter() - start
+    value_time += elapsed
+    
+    value = task.value_outputs_unwrap(x, "", value_outputs)
+    if cache_value:
+        task.value_cache[user] = value
+    return value
+
+def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
+    values = []
+    local_value_cache = {}
+    for p,i,s in ys:  # each partial output
+        if s in local_value_cache:  # avoid duplicate candidates
+            value = 0
+        else:
+            value = get_value(task, x, s, n_evaluate_sample, cache_value=cache_value)
+            local_value_cache[s] = value
+        print(f'Get value for p: {p}  s: {s} value: {value}')
+        values.append(value)
     return values
 
 def get_proposals_v1(task, current, index, feedback = None): 
@@ -161,13 +204,6 @@ def reasoning(task, step, x, feedback = None, single = None):
     #if prev_level only one element(first node or refinement), single signal the index of previous thoughts
     #this should be improved
     while step < 3:
-        # print(f'Start reasoning with step {step}\n')
-        # print(f'number of prev level{len(prev_level)}')
-        # if(len(prev_level) > 5):
-        #     print("Error! \n")
-        #     print(prev_level)
-        #     return 0
-        # if single == None:
         new_ys = [get_proposals_v1(task, state['current'], i, feedback) for i, state in enumerate(states[step])]
         # else:
         # new_ys = [get_proposals_v1(task, x, y, single, feedback) for state in states[step]]
