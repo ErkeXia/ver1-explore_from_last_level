@@ -737,82 +737,80 @@ Judge:
 
 """
 
+evaluate_prompt_sys_math = """
+You are an expert verifier and coach for the Game of 24.
 
+Goal  
+Check a multi-step attempt that should turn four numbers into **24** using only + - * /. Each number can be used once. 
+Check if the numbers used in each step is available and if there are arithmetic problems. 
+Besides legality, detect the first step after which **no further legal moves can ever reach 24**.
 
-# evaluate_prompt = '''
-# You are an expert verifier and coach for the Game of 24.
+Required output
+---------------
+Return **one line** in **one** of these two forms:
 
-# Goal  
-# Evaluate a multi-step attempt that should turn four numbers into **24** using only + - * /.  
-# Besides legality, detect the first step that makes 24 unreachable, **then give one short tip** the next
-# model can use.
+1. Yes - Answer: a op b op c op d = 24  
+   # all steps legal, final remaining number is 24
 
-# Definitions
-# -----------
-# • blocking step = legal step after which **no sequence** of further legal operations can yield 24.
+2. No, invalid at step N - Should be: x op y = z (left: …)  
+   # first illegal or blocking step **and** you can suggest a concrete fix
 
-# Required output
-# ---------------
-# Exactly **two lines**:
+Procedure
+---------
+• Walk through the steps in order, ensuring 
+   the step is in the form of x op y = z,
+   x and y are available,
+   z is the correct result of x op y (no ÷0).
 
-# 1. One of
-#    • Yes                              # all steps legal, final left number = 24  
-#    • No, invalid at step N            # first illegal step  
-#    • No, blocking at step N           # first legal but hopeless step  
+• If any check fails or after this step, available numbers can never make 24, emit form 2.  
 
-# 2. ≤ 20 words of advice (no extra lines).  
-#    • If verdict is Yes → a brief praise (“Good job”).  
-#    • If verdict is No → a concrete, actionable hint (e.g.  
-#      “Step 2 uses 8,2 not present” or  
-#      “Avoid merging 1 and 6; keep 6*4”)
+• When all steps finish:  
+   one remaining number = 24 → form 1  
+   otherwise → form 2, give your suggestion.
 
-# Procedure
-# ---------
-# 1. Walk through the steps in order, checking  
-#    • operands are in the remaining set,  
-#    • result is correct (no division by zero),  
-#    • “left” list matches the updated multiset.  
-#    If a check fails → verdict form 2.
+Examples
+Input: 4 4 6 8
+Steps:
+1: 4 + 8 = 12
+2: 6 - 4 = 2
+3: 2 * 12 = 24
+Judge:
+Yes - Answer: (4 + 8) * (6 - 4) = 24
 
-# 2. After each legal step, decide whether 24 is reachable from the new multiset.  
-#    If unreachable → verdict form 3 for this step.
+Input: 4 5 10 10
+Steps:
+1: 10 - 4 = 6
+2: 8 / 2 = 4        # 8 and 2 not present
+3: 4 * 6 = 24
+Judge:
+No, invalid at step 2 - Should be: 5 + 10 = 15
 
-# 3. When the steps end  
-#    • single number = 24 → Yes  
-#    • single number ≠ 24 → No, blocking at last step
+Input: 1 1 6 8
+Steps:
+1: 1 + 1 = 2
+2: 2 + 6 = 8        # 24 now impossible with 8 8 left
+Judge:
+No, invalid at step 2 - Should be: 6 / 2 = 3
 
-# Remember: **only two lines** of output—no code fences, no commentary.
+Input: 4 5 6 10
+Steps:
+1: 10 - 6 = 4
+2: 4 * 5 = 20
+3: 4 + 20 = 24
+Judge:
+No, invalid at step 2 - Should be:  4 * 5 = 20
 
-# Examples
-# --------
-# Input: 4 4 6 8
-# Steps:
-# 1: 4 + 8 = 12 (left: 4 6 12)
-# 2: 6 - 4 = 2  (left: 2 12)
-# 3: 2 * 12 = 24 (left: 24)
-# Judge:
-# Yes
-# Good job
+Input: 4 5 10 10
+Steps:
+1. 4 + 10 = 14    
+2. 14 + 10 = 24      # 5 should be used for once
+Judge:
+No, invalid at step 2 - Should be:  5 + 14 = 19
 
-# Input: 4 5 10 10
-# Steps:
-# 1: 10 - 4 = 6  (left: 6 5 10)
-# 2: 8 / 2 = 4  (left: 4 6)          # 8 and 2 not present
-# 3: 4 * 6 = 24 (left: 24)
-# Judge:
-# No, invalid at step 2
-# Step 2 uses numbers not in set
+TASK
+Input: {input}
+Steps:
+{f_step}
+Judge:
 
-# Input: 1 1 6 8
-# Steps:
-# 1: 1 + 1 = 2  (left: 2 6 8)
-# 2: 2 + 6 = 8  (left: 8 8)          # 24 now impossible
-# Judge:
-# No, blocking at step 2
-# Keep 6 for 6*4 later
-
-# Input: {input}
-# Steps:
-# {f_step}
-# Judge:
-# '''
+"""

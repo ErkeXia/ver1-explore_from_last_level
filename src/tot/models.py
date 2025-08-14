@@ -411,6 +411,7 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
         return outputs
     
     system_part, user_part = format_chat_prompt(user_prompt, system_prompt)
+    # print(f"system: {system_part} user: {user_part}")
     
     if query_task != None and query_task in cached_system_prompts:
         system_tokens_cache = cached_system_prompts[query_task]
@@ -461,6 +462,8 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
             # print(f'LLAMA output: {output_text}\n')
         if(output_text == ""):
             print(f'LLAMA output empty, raw output: {raw_output_text}')
+    # print(f"output: {outputs}")
+
     return outputs
 
 @backoff.on_exception(backoff.expo, openai.error.OpenAIError)

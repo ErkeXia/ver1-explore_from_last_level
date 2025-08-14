@@ -174,7 +174,8 @@ def get_proposals_v1(task, current, index, feedback = None):
     system, user = task.propose_sys_prompt_wrap(current)
     # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
     start = time.perf_counter()
-    proposals = llama([user], system, n=1, stop=None, query_task = 'propose')[0][0].split('\n')
+    proposals = llama(user, system, n=1, stop=None, query_task = 'propose')[0].split('\n')
+    # print(proposals)
     elapsed = time.perf_counter() - start
     propose_time += elapsed
     proposals, states_new = task.propose_prompt_unwrap(current, proposals)
