@@ -737,36 +737,95 @@ Judge:
 
 """
 
-evaluate_prompt_sys_math = """
-You are an expert verifier and coach for the Game of 24.
+suggest_prompt_sys = """
+You are a coach for the Game of 24.
+
+Goal  
+You are given an incorrect answer to a game of 24.
+Detect the first step after which **no further legal moves can ever reach 24**, either due to illegal or wrong steps taken.
+
+Required output
+---------------
+Think step by step (you may show your reasoning).  
+Return your **final decision in the last line** in this exact form:
+
+   Invalid at step N - Should be: x op y = z (left: …)  
+      # first illegal or blocking step **and** a concrete fix
+
+Procedure
+---------
+• Walk through the steps in order, ensuring after this step, it is still possible to get 24.
+• For each step, check:
+   - Format is exactly: x op y = z (ops allowed: + - * /; division by zero is illegal).  
+   - x and y are available in the current multiset (numbers used once each).  
+   - Arithmetic is correct (use tolerance 1e-6 for floats).  
+• If any check fails, or after applying this step the remaining numbers can never reach 24, stop and give your suggestion.
+• Your suggestion must be legal from the state **before** step N
+
+Examples
+Input: 4 5 10 10
+Steps:
+1: 10 - 4 = 6
+2: 8 / 2 = 4       
+3: 4 * 6 = 24
+Judge:
+--your reasoning steps--
+Invalid at step 2 - Should be: 5 + 10 = 15
+
+Input: 1 1 6 8
+Steps:
+1: 1 + 1 = 2
+2: 2 + 6 = 8       
+3: 8 + 8 = 16
+Judge:
+--your reasoning steps--
+Invalid at step 2 - Should be: 6 / 2 = 3
+
+Input: 4 5 10 10
+Steps:
+1. 4 + 10 = 14    
+2. 14 + 10 = 24      # 5 should be used for once
+Judge:
+--your reasoning steps--
+Invalid at step 2 - Should be:  5 + 14 = 19
+
+TASK
+Input: {input}
+Steps:
+{f_step}
+Judge:
+"""
+
+correctness_prompt_sys = """
+You are an expert verifier for the Game of 24.
 
 Goal  
 Check a multi-step attempt that should turn four numbers into **24** using only + - * /. Each number can be used once. 
 Check if the numbers used in each step is available and if there are arithmetic problems. 
-Besides legality, detect the first step after which **no further legal moves can ever reach 24**.
 
 Required output
 ---------------
-Return **one line** in **one** of these two forms:
+Think step by step. 
+Return your final decision in the last line in **one** of these two forms:
 
 1. Yes - Answer: a op b op c op d = 24  
    # all steps legal, final remaining number is 24
 
-2. No, invalid at step N - Should be: x op y = z (left: …)  
-   # first illegal or blocking step **and** you can suggest a concrete fix
+2. No
+   # This is not a valid answer
 
 Procedure
 ---------
 • Walk through the steps in order, ensuring 
    the step is in the form of x op y = z,
    x and y are available,
-   z is the correct result of x op y (no ÷0).
+   z is the correct result of x op y (no ÷0),
 
-• If any check fails or after this step, available numbers can never make 24, emit form 2.  
+• If any check fails emit form 2.  
 
 • When all steps finish:  
    one remaining number = 24 → form 1  
-   otherwise → form 2, give your suggestion.
+   otherwise → form 2
 
 Examples
 Input: 4 4 6 8
@@ -780,32 +839,25 @@ Yes - Answer: (4 + 8) * (6 - 4) = 24
 Input: 4 5 10 10
 Steps:
 1: 10 - 4 = 6
-2: 8 / 2 = 4        # 8 and 2 not present
+2: 8 / 2 = 4       
 3: 4 * 6 = 24
 Judge:
-No, invalid at step 2 - Should be: 5 + 10 = 15
+No
 
 Input: 1 1 6 8
 Steps:
 1: 1 + 1 = 2
-2: 2 + 6 = 8        # 24 now impossible with 8 8 left
+2: 2 + 6 = 8       
+3: 8 + 8 = 16
 Judge:
-No, invalid at step 2 - Should be: 6 / 2 = 3
-
-Input: 4 5 6 10
-Steps:
-1: 10 - 6 = 4
-2: 4 * 5 = 20
-3: 4 + 20 = 24
-Judge:
-No, invalid at step 2 - Should be:  4 * 5 = 20
+No
 
 Input: 4 5 10 10
 Steps:
 1. 4 + 10 = 14    
 2. 14 + 10 = 24      # 5 should be used for once
 Judge:
-No, invalid at step 2 - Should be:  5 + 14 = 19
+No
 
 TASK
 Input: {input}
@@ -814,3 +866,4 @@ Steps:
 Judge:
 
 """
+

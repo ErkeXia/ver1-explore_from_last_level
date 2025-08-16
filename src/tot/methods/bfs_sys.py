@@ -182,13 +182,6 @@ def get_proposals_v1(task, current, index, feedback = None):
     # print(f'The proposals for {y} is \n {proposals}')
     return [(proposal, index, state_new) for proposal, state_new in zip(proposals, states_new)]
 
-def validate(task, x, f_step):
-    validate_prompt = task.validate_sys_prompt_wrap(x, f_step)
-    print(f'Validate prompt: {validate_prompt}')
-    validate_outputs = gpt(validate_prompt, n=1, stop=None) 
-    # print(validate_outputs)
-    return validate_outputs[0]
-
 def get_current_numbers(y: str) -> str:
     last_line = y.strip().split('\n')[-1]
     return last_line.split('left: ')[-1].split(')')[0]
@@ -247,6 +240,41 @@ def reasoning(task, step, x, feedback = None, single = None):
     print("Could not find answer, return most probable steps\n")
     return 0, states[step][0]['step'], step
 
+def validate(task, x, f_step):
+    global validate_time, validators
+    start = time.perf_counter()
+    validate_prompt = task.validate_sys_prompt_wrap(x, f_step)
+    print(f'Validate prompt: {validate_prompt}')
+    validate_outputs = gpt(validate_prompt, n=1, stop=None)
+    elapsed = time.perf_counter() - start
+    validate_time += elapsed
+    # print(validate_outputs)
+    validators.append(validate_outputs[0])
+    redo_s, feedback = task.validate_unwrap(validate_outputs[0])
+    return redo_s, feedback
+
+def evaluate(task, x, f_step):
+    global validate_time, validators
+    start = time.perf_counter()
+    correctness_prompt, suggest_prompt = task.evaluate_sys_prompt_wrap(x, f_step)
+    print(f'Correctness prompt: {correctness_prompt} \n suggest_prompt: {suggest_prompt}')
+    correctness_output = gpt(correctness_prompt, n=1, stop=None)[0]
+    print(f'correctness output: {correctness_output}')
+    validators.append(correctness_output)
+    correctness = task.correctness_unwrap(correctness_output)
+    if correctness == 'No':
+        suggest_output = gpt(suggest_prompt, n=1, stop=None)[0]
+        print(f'suggest output: {suggest_output}')
+        redo_s, feedback = task.suggest_unwrap(suggest_output)
+        validators.append(suggest_output)
+    else:
+        redo_s = -1
+        feedback = correctness
+    elapsed = time.perf_counter() - start
+    validate_time += elapsed
+    return redo_s, feedback
+
+
 def retrieve_steps(num_steps, idx, y):
     step = num_steps - 1
     thought_chain = []
@@ -268,9 +296,10 @@ def retrieve_steps(num_steps, idx, y):
 
 def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
     global gpt
-    global thoughts, connection, steps
+    global thoughts, connection, steps, validators
     global value_num, value_time
     global propose_num, propose_time
+    global validate_num, validate_time
     global nodes
     global states, repeat_value
     
@@ -280,6 +309,7 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
     nodes = 1
     propose_num = value_num = 0
     propose_time = value_time = 0
+    validate_num = validate_time = 0
     repeat_value = 0
     
     thoughts = [[] for _ in range(task.steps)]
@@ -317,13 +347,15 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
             print(f"Output from reasoning! idx: {idx} \n y: {y} \n st: {st}")
             return x, thought_chain, all_thoughts, validators, llama_ans, nodes, all_states
 
-        validate_outputs = validate(task, x, thought_chain)
-        validators.append(validate_outputs)
-        redo_s, feedback = task.validate_unwrap(validate_outputs)
+        validate_num += 1
+        # validate_outputs = validate(task, x, thought_chain)
+        # validators.append(validate_outputs)
+        # redo_s, feedback = task.validate_unwrap(validate_outputs)
+        # redo_s, feedback = validate(task, x, thought_chain)
+        redo_s, feedback = evaluate(task, x, thought_chain)
         print(f'redo{redo_s} feedback: {feedback}')
         if(redo_s == -1):
-            print(f'Repeat value time: {repeat_value}')
-            return x, feedback, all_thoughts, validators, llama_ans, nodes, all_states
+            break
         if(feedback != ""):
             prev_level = [feedback]
             step = redo_s + 1
@@ -342,7 +374,7 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
                 single = None
             step = redo_s
         print(f'prev_level {prev_level} \nstep {step}\nsingle{single if single else -1}')
-        print(f'The validate result: \n {validate_outputs}\n')
+        # print(f'The validate result: \n {validate_outputs}\n')
         val_count += 1
         
         # print(f'Receive result from reasoning:\n{y} \n with index {idx}\n')
@@ -363,6 +395,8 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
         #     for t in ts:
         #         print(f'{t} \n')
     print(f'Repeat value time: {repeat_value}')
+    avg_validate = validate_time/validate_num
+    print(f'validate average time: {avg_validate}')
     return x, feedback, all_thoughts, validators, llama_ans, nodes, all_states
       
 def get_time():
