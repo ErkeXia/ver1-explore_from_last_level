@@ -867,3 +867,148 @@ Judge:
 
 """
 
+
+correctness_prompt_sys_R = """
+You are an expert verifier for the Game of 24.
+
+Goal  
+Check a multi-step attempt that should turn four numbers into **24** using only + - * /. Each number can be used once. 
+Check if the numbers used in each step is available and if there are arithmetic problems. 
+
+Required output
+---------------
+Think step by step. 
+Return your final decision in the last line in **one** of these two forms:
+
+1. Yes - Answer: a op b op c op d = 24  
+   # all steps legal, final remaining number is 24
+
+2. No
+   # This is not a valid answer
+
+Procedure
+---------
+• Walk through the steps in order, ensuring 
+   the step is in the form of x op y = z,
+   x and y are available,
+   z is the correct result of x op y (no ÷0),
+
+• If any check fails emit form 2.  
+
+• When all steps finish:  
+   one remaining number = 24 → form 1  
+   otherwise → form 2
+
+Examples
+Input: 4 4 6 8
+Steps:
+1: 4 + 8 = 12
+2: 6 - 4 = 2
+3: 2 * 12 = 24
+Judge:
+Step 1: 4 and 8 available. 4 + 8 = 12 is correct. Left 4 6 12.
+Step 2: 6 and 4 available. 6 - 4 = 2 is correct. Left 12 2.
+Step 3: 2 and 12 available. 2 * 12 = 24 is correct. Left 24.
+Only 24 left, correct answer. 
+Yes - Answer: (4 + 8) * (6 - 4) = 24
+
+Input: 4 5 10 10
+Steps:
+1: 10 - 4 = 6
+2: 8 / 2 = 4       
+3: 4 * 6 = 24
+Judge:
+Step 1: 10 and 4 available. 10 - 4 = 6 is correct. Left 5 10 6.
+Step 2: 8 and 2 not available. Invalid. 
+No
+
+Input: 1 1 6 8
+Steps:
+1: 1 + 1 = 2
+2: 2 + 6 = 8       
+3: 8 + 8 = 16
+Judge:
+Step 1: 1 and 1 available. 1 + 1 = 2 is correct. Left 6 8 2.
+Step 2: 2 and 6 available. 2 + 6 = 8 is correct. Left 8 8.
+Step 3: 8 and 8 available. 8 + 8 = 16 is correct. Left 16.
+Only 16 left, incorrect answer. Invalid.
+No
+
+Input: 4 5 10 10
+Steps:
+1. 4 + 10 = 14    
+2. 14 + 10 = 24
+Judge:
+Step 1: 4 and 10 available. 4 + 10 = 14 is correct. Left 5 10 14.
+Step 2: 14 and 10 available. 14 + 10 = 24 is correct. Left 5 24.
+More than one number left. Invalid.
+No
+
+TASK
+Input: {input}
+Steps:
+{f_step}
+Judge:
+
+"""
+
+
+suggest_prompt_sys_R = """
+You are a coach for the Game of 24.
+
+Goal  
+You are given an incorrect answer to a game of 24.
+Detect the first step after which **no further legal moves can ever reach 24**, either due to illegal or wrong steps taken.
+
+Required output
+---------------
+Think step by step (you may show your reasoning).  
+Return your **final decision in the last line** in this exact form:
+
+   Invalid at step N - Should be: x op y = z (left: …)  
+      # first illegal or blocking step **and** a concrete fix
+
+Procedure
+---------
+• Walk through the steps in order, ensuring after this step, it is still possible to get 24.
+• For each step, check:
+   - Format is exactly: x op y = z (ops allowed: + - * /; division by zero is illegal).  
+   - x and y are available in the current multiset (numbers used once each).  
+   - Arithmetic is correct (use tolerance 1e-6 for floats).  
+• If any check fails, or after applying this step the remaining numbers can never reach 24, stop and give your suggestion.
+• Your suggestion must be legal from the state **before** step N
+
+Examples
+Input: 4 5 10 10
+Steps:
+1: 10 - 4 = 6
+2: 8 / 2 = 4       
+3: 4 * 6 = 24
+Judge:
+Step 1: 10 and 4 available. 10 - 4 = 6 is correct. Left 5 10 6. Impossible to reach 24 with 5 6 10.
+Invalid at step 1 - Should be: 10 / 5 = 2
+
+Input: 1 1 6 8
+Steps:
+1: 1 + 1 = 2
+2: 2 + 6 = 8       
+3: 8 + 8 = 16
+Judge:
+Step 1: 1 and 1 available. 1 + 1 = 2 is correct. Left 6 8 2. Likely to reach 24 with 6 8 2.
+Step 2: 2 and 6 available. 2 + 6 = 8 is correct. Left 8 8. Impossible to reach 24 with 8 8.
+Invalid at step 2 - Should be: 6 * 8 = 48
+
+Input: 4 5 10 10
+Steps:
+1. 4 + 10 = 14    
+2. 14 + 10 = 24
+Judge:
+Step 1: 4 and 10 available. 4 + 10 = 14 is correct. Left 5 10 14. Impossible to reach 24 with 5 10 14.
+Invalid at step 1 - Should be: 10 / 5 = 2
+
+TASK
+Input: {input}
+Steps:
+{f_step}
+Judge:
+"""

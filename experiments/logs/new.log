@@ -1,0 +1,8 @@
+nohup: ignoring input
+Testing lazy:   0%|          | 0/25 [00:00<?, ?it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][A
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.12it/s][A
+Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.12it/s][A
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.13it/s][A
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.63it/s][ALoading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.40it/s]
+Testing lazy:   4%|▍         | 1/25 [05:43<2:17:29, 343.71s/it]Testing lazy:   8%|▊         | 2/25 [12:02<2:19:46, 364.63s/it]Testing lazy:  12%|█▏        | 3/25 [16:27<1:56:59, 319.07s/it]

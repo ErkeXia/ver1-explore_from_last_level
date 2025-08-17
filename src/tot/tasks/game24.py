@@ -204,7 +204,7 @@ class Game24Task(Task):
     def evaluate_sys_prompt_wrap(x: str, ys: list) -> tuple[str, str]:
         numbered_steps = '\n'.join(f"{i + 1}: {step}" for i, step in enumerate(ys))
         print(f'numbered steps : \n{numbered_steps}')
-        return correctness_prompt_sys.format(input = x, f_step = numbered_steps), suggest_prompt_sys.format(input = x, f_step = numbered_steps)
+        return correctness_prompt_sys_R.format(input = x, f_step = numbered_steps), suggest_prompt_sys_R.format(input = x, f_step = numbered_steps)
         # return evaluate_prompt_sys.format(input = x, f_step = numbered_steps)
         
     @staticmethod
@@ -217,7 +217,7 @@ class Game24Task(Task):
     @staticmethod
     def suggest_unwrap(validate_output: str) -> tuple[int, str]:
         validate_output = validate_output.strip().split('\n')[-1]
-        match = re.search(r"No, invalid at step (\d+)", validate_output)
+        match = re.search(r"Invalid at step (\d+)", validate_output)
         redo_s = int(match.group(1)) - 1
         if('Should' in validate_output):
             return redo_s, validate_output[(validate_output.find('Should be:') + 10):].strip()

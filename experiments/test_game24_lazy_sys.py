@@ -39,7 +39,7 @@ def test_game24_lazy(start=400, end=449):
             "validation": validators,
             "nodes": nodes
         }
-        with open("./results/lazy_sys_game24_results.jsonl", "a") as f:
+        with open("./results/lazy_sys_game24_new_results.jsonl", "a") as f:
             f.write(json.dumps(result) + "\n")
 
 with open('output.txt', 'w', buffering=1) as f:
