@@ -53,17 +53,17 @@ def compute_average_stats_lazy(jsonl_path):
                 incorrect += 1
             count += 1
 
-            validations = data["validation"]
-            for validation in validations:
-                redo_s, feedback = task.validate_unwrap(validation)
-                if (redo_s == -1):
-                    valid_res += 1
-                elif (feedback != ""):
-                    suggest_res += 1
-                else:
-                    invalid_res += 1
+            # validations = data["validation"]
+            # for validation in validations:
+            #     redo_s, feedback = task.validate_unwrap(validation)
+            #     if (redo_s == -1):
+            #         valid_res += 1
+            #     elif (feedback != ""):
+            #         suggest_res += 1
+            #     else:
+            #         invalid_res += 1
 
-            explore_time[len(validations)-1] += 1
+            # explore_time[len(validations)-1] += 1
 
             for key, value in data.items():
                 if isinstance(value, (int, float)):
@@ -150,7 +150,7 @@ def compute_average_stats_llama(jsonl_path):
 
 
 # Example usage
-jsonl_path = "./results/lazy_sys_game24_flash_results.jsonl"  # Replace with your path
+jsonl_path = "./results/lazy_sys_game24_flash_new_results.jsonl"  # Replace with your path
 
 with open('./stats/sys_lazy_flash_stats.txt', 'w', buffering=1) as f:
     sys.stdout = f
