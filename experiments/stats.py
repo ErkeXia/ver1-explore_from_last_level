@@ -149,10 +149,110 @@ def compute_average_stats_llama(jsonl_path):
     return averages
 
 
-# Example usage
-jsonl_path = "./results/lazy_sys_game24_flash_new_results.jsonl"  # Replace with your path
 
-with open('./stats/sys_lazy_flash_stats.txt', 'w', buffering=1) as f:
+def compute_average_stats_MS(jsonl_path):
+    stats_sum = {}
+    count = 0
+
+    # Store problem-wise stats for better formatting
+    problem_stats = []
+
+    with open(jsonl_path, 'r') as file:
+        correct = 0
+        incorrect = 0
+        # valid_res = 0
+        # invalid_res = 0
+        # suggest_res = 0
+        valid_suggest = 0
+        gpt_fault = 0
+        
+        explore_time = [0, 0, 0]
+        
+        for line in file:
+            data = json.loads(line)
+            x = data["x"]
+            y = data["answer"]
+            raw_ans = data["llama_ans"][-1]
+            if "answer" in y:
+                y_clean = y[(y.find('Answer') + 7):].strip()
+            else:
+                y_clean = y.strip()
+            is_correct, feedback = task.check_answer(x, y_clean)
+            raw_ans = "".join(raw_ans)
+            is_correct_r, feedback_r = task.check_multistep_solution(x, raw_ans.strip())
+            seed = data["seed"]
+
+            # Track stats for each problem in one line
+            problem_stat = {
+                "seed": seed,
+                "x": x,
+                "is_correct": is_correct,
+                "is_correct_r": is_correct_r,
+                "explore_count": len(data["correctness_r"]),
+                "answer": data["answer"],
+                "raw_ans": data["llama_ans"][-1],
+                "feedback": feedback,
+            }
+
+            if is_correct:
+                correct += 1
+            else:
+                incorrect += 1
+            count += 1
+            
+            if is_correct and (len(data["correctness_r"]) != 1):
+                valid_suggest += 1
+                
+            if (not is_correct) and is_correct_r:
+                gpt_fault += 1
+                
+
+            # validations = data["validation"]
+            # for validation in validations:
+            #     redo_s, feedback = task.validate_unwrap(validation)
+            #     if (redo_s == -1):
+            #         valid_res += 1
+            #     elif (feedback != ""):
+            #         suggest_res += 1
+            #     else:
+            #         invalid_res += 1
+
+            # explore_time[len(validations)-1] += 1
+
+            for key, value in data.items():
+                if isinstance(value, (int, float)):
+                    stats_sum[key] = stats_sum.get(key, 0) + value
+                    problem_stat[key] = value  # Store key-value pair for the problem
+
+            problem_stats.append(problem_stat)
+
+    # Compute averages
+    averages = {key: total / count for key, total in stats_sum.items()}
+
+    # Print results for each problem
+    print(f"\n{'Seed':<10} {'Input':<15} {'Correct':<10} {'Raw Correct':<15} {'Explore Count':<15} {'nodes':<10} {'Time':<10} {'gpt_prompt_tokens':<20} {'gpt_completion_tokens':<25} {'llama_prompt_tokens':<20} {'llama_completion_tokens':<25} {'Answer':<35}  {'Feedback':<30} ")
+    for stat in problem_stats:
+        print(f"{stat['seed']:<10} {stat['x']:<15} {stat['is_correct']:<10} {stat['is_correct_r']:<15} {stat['explore_count']:<15} {stat['nodes']:<10} {stat['total_time']:<10.2f} {stat.get('gpt_prompt_tokens', 'N/A'):<20} {stat.get('gpt_completion_tokens', 'N/A'):<25} {stat.get('llama_prompt_tokens', 'N/A'):<20} {stat.get('llama_completion_tokens', 'N/A'):<25} {stat['answer']:<35} {stat['feedback']:<30}")
+
+    # Print summary stats for the entire dataset
+    print("\nSummary of the Dataset:")
+    print(f"Correct count: {correct}")
+    print(f"Incorrect count: {incorrect}")
+    print(f"Valid suggest: {valid_suggest}")
+    print(f"GPT incorrect: {gpt_fault}")
+    
+    # print(f"Valid response: {valid_res}")
+    # print(f"Invalid response: {invalid_res}")
+    # print(f"Suggest response: {suggest_res}")
+    print(f"Explore time distribution: {explore_time}")
+
+    return averages
+
+
+# Example usage
+jsonl_path = "./results/game24_sys_MS_eval_results.jsonl"  # Replace with your path
+
+with open('./stats/sys_MS_stats.txt', 'w', buffering=1) as f:
     sys.stdout = f
 
     averages = compute_average_stats_lazy(jsonl_path)
