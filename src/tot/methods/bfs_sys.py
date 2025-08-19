@@ -254,19 +254,19 @@ def validate(task, x, f_step):
     return redo_s, feedback
 
 def evaluate(task, x, f_step):
-    global validate_time, validators
+    global validate_time, correctness_r, suggestion_r
     start = time.perf_counter()
     correctness_prompt, suggest_prompt = task.evaluate_sys_prompt_wrap(x, f_step)
-    print(f'Correctness prompt: {correctness_prompt} \n suggest_prompt: {suggest_prompt}')
+    # print(f'Correctness prompt: {correctness_prompt} \n suggest_prompt: {suggest_prompt}')
     correctness_output = gpt(correctness_prompt, n=1, stop=None)[0]
     print(f'correctness output: {correctness_output}')
-    validators.append(correctness_output)
+    correctness_r.append(correctness_output)
     correctness = task.correctness_unwrap(correctness_output)
     if correctness == 'No':
         suggest_output = gpt(suggest_prompt, n=1, stop=None)[0]
         print(f'suggest output: {suggest_output}')
         redo_s, feedback = task.suggest_unwrap(suggest_output)
-        validators.append(suggest_output)
+        suggestion_r.append(suggest_output)
     else:
         redo_s = -1
         feedback = correctness
@@ -296,7 +296,7 @@ def retrieve_steps(num_steps, idx, y):
 
 def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
     global gpt
-    global thoughts, connection, steps, validators
+    global thoughts, connection, steps, validators, correctness_r, suggestion_r
     global value_num, value_time
     global propose_num, propose_time
     global validate_num, validate_time
@@ -319,6 +319,8 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
     
     all_states = []
     validators = []
+    correctness_r = []
+    suggestion_r = []
     all_thoughts = []
     llama_ans = []
     
@@ -345,7 +347,8 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
         print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
         if not do_validate:
             print(f"Output from reasoning! idx: {idx} \n y: {y} \n st: {st}")
-            return x, thought_chain, all_thoughts, validators, llama_ans, nodes, all_states
+            evaluation = {'validators': validators, 'correctness': correctness_r, 'suggestions': suggestion_r}
+            return x, thought_chain, all_thoughts, evaluation, llama_ans, nodes, all_states
 
         validate_num += 1
         # validate_outputs = validate(task, x, thought_chain)
@@ -397,11 +400,12 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
     print(f'Repeat value time: {repeat_value}')
     avg_validate = validate_time/validate_num
     print(f'validate average time: {avg_validate}')
-    return x, feedback, all_thoughts, validators, llama_ans, nodes, all_states
+    evaluation = {'validators': validators, 'correctness': correctness_r, 'suggestions': suggestion_r}
+    return x, feedback, all_thoughts, evaluation, llama_ans, nodes, all_states
       
 def get_time():
     global propose_num, propose_time, value_num, value_time
     print(f"propose num: {propose_num}, propose time per num: {(propose_time/propose_num):.6f}")
     print(f"value num: {value_num}, value time per num: {(value_time/value_num):.6f}")
-    return propose_num, value_num, (propose_time/propose_num), (value_time/value_num)  
+    return propose_num, value_num, validate_num, (propose_time/propose_num), (value_time/value_num), (validate_time/validate_num)
 

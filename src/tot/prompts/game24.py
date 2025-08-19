@@ -1012,3 +1012,76 @@ Steps:
 {f_step}
 Judge:
 """
+
+
+suggest_prompt_sys_ReasonState = """
+You are a coach for the Game of 24.
+
+Goal  
+You are given an incorrect answer to a game of 24.
+Focus on the available numbers after each step and detect the first step after which **no further legal moves can ever reach 24**, either due to illegal or wrong steps taken.
+
+Required output
+---------------
+Think step by step (you may show your reasoning).  
+Return your **final decision in the last line** in this exact form:
+
+   Invalid at step N - Should be: x op y = z (left: …)  
+      # first illegal or blocking step **and** a concrete fix
+
+Procedure
+---------
+• Walk through the steps in order, ensuring after this step, it is still possible to get 24.
+• For each step, check:
+   - x and y are available in the current multiset (numbers used once each).  
+   - Arithmetic is correct (use tolerance 1e-6 for floats).
+• Reason about the numbers available after this step. Check if it is still possible to get 24. 
+• If any check fails, or after applying this step the remaining numbers can never reach 24, stop and give your suggestion.
+• Your suggestion must be legal from the state **before** step N
+
+Examples
+Input: 4 5 10 10
+Steps:
+1: 10 - 4 = 6
+2: 8 / 2 = 4       
+3: 4 * 6 = 24
+Judge:
+Step 1: 10 and 4 available. 10 - 4 = 6 is correct. Left 5 10 6.
+5 * 6 - 10 = 20
+(10 / 5) * 6 = 12
+Impossible to reach 24 with 5 6 10.
+Invalid at step 1 - Given 4 5 10 10, should be: 10 / 5 = 2
+
+Input: 1 1 6 8
+Steps:
+1: 1 + 1 = 2
+2: 2 + 6 = 8       
+3: 8 + 8 = 16
+Judge:
+Step 1: 1 and 1 available. 1 + 1 = 2 is correct. Left 6 8 2. 
+2 * 8 + 6 = 22
+6 * 8 / 2 = 24
+Likely to reach 24 with 6 8 2.
+Step 2: 2 and 6 available. 2 + 6 = 8 is correct. Left 8 8. 
+8 + 8 = 16
+8 * 8 = 64
+Impossible to reach 24 with 8 8.
+Invalid at step 2 - Given 6 8 2, should be: 6 * 8 = 48
+
+Input: 4 5 10 10
+Steps:
+1. 4 + 10 = 14    
+2. 14 + 10 = 24
+Judge:
+Step 1: 4 and 10 available. 4 + 10 = 14 is correct. Left 5 10 14. 
+5 + 10 + 14 = 29
+10 / 5 + 14 = 16
+Impossible to reach 24 with 5 10 14.
+Invalid at step 1 - Given 4 5 10 10, should be: 10 / 5 = 2
+
+TASK
+Input: {input}
+Steps:
+{f_step}
+Judge:
+"""
