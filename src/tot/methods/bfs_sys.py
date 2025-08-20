@@ -358,17 +358,25 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
         # redo_s, feedback = validate(task, x, thought_chain)
         redo_s, feedback = evaluate(task, x, thought_chain)
         print(f'redo {redo_s} feedback: {feedback}')
+        
+        possible_steps = [p for p in feedback.split("\n") if any(ch.isdigit() for ch in p)]
+        
         if(redo_s == -1):
             break
         if(feedback != ""):
-            prev_level = [feedback]
+            # prev_level = [feedback]
+            prev_level = possible_steps
             step = redo_s + 1
             prev_idx = chain_index[redo_s]
-            print(f'step: {feedback}, connect: {prev_idx}')
-            states[step] = [{'step': feedback, 'connect': prev_idx, 'current': task.manage_state(states[redo_s][prev_idx]["current"], feedback)}]
-            single = chain_index[step - 1]
-            thoughts[redo_s][single] = feedback
-            steps[redo_s][single] = feedback
+            print(f'possible steps: {possible_steps}, connect: {prev_idx}')
+            # states[step] = [{'step': feedback, 'connect': prev_idx, 'current': task.manage_state(states[redo_s][prev_idx]["current"], feedback)}]
+            states[step] = [{'step': possible_step, 'connect': prev_idx, 'current': task.manage_state(states[redo_s][prev_idx]["current"], possible_step)} for possible_step in possible_steps]
+            print(f"before thoughts{thoughts} steps{steps}")
+            # thoughts[redo_s][prev_idx] = feedback
+            # steps[redo_s][prev_idx] = feedback
+            thoughts[redo_s] = possible_steps
+            steps[redo_s] = possible_steps
+            print(f"after thoughts{thoughts} steps{steps}")
         else:
             if(redo_s == 0):
                 prev_level = ['']
