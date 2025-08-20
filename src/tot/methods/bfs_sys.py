@@ -289,6 +289,7 @@ def retrieve_steps(num_steps, idx, y):
         chain_index.append(idx)
         idx = next_idx
         step -= 1
+    chain_index.append(0)
     chain_index.reverse()
     thought_chain.reverse()
     intermediate_state.reverse()
@@ -356,15 +357,15 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
         # redo_s, feedback = task.validate_unwrap(validate_outputs)
         # redo_s, feedback = validate(task, x, thought_chain)
         redo_s, feedback = evaluate(task, x, thought_chain)
-        print(f'redo{redo_s} feedback: {feedback}')
+        print(f'redo {redo_s} feedback: {feedback}')
         if(redo_s == -1):
             break
         if(feedback != ""):
             prev_level = [feedback]
             step = redo_s + 1
-            prev_idx = chain_index[redo_s - 1]
+            prev_idx = chain_index[redo_s]
             print(f'step: {feedback}, connect: {prev_idx}')
-            states[step] = [{'step': feedback, 'connect': prev_idx, 'current': task.manage_state(states[step-1][prev_idx]["current"], feedback)}]
+            states[step] = [{'step': feedback, 'connect': prev_idx, 'current': task.manage_state(states[redo_s][prev_idx]["current"], feedback)}]
             single = chain_index[step - 1]
             thoughts[redo_s][single] = feedback
             steps[redo_s][single] = feedback

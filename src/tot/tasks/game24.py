@@ -216,11 +216,11 @@ class Game24Task(Task):
     
     @staticmethod
     def suggest_unwrap(validate_output: str) -> tuple[int, str]:
-        validate_output = validate_output.strip().split('\n')[-1]
-        match = re.search(r"Invalid at step (\d+)", validate_output)
+        validate_output = validate_output.strip().split('\n')[-1].lower()
+        match = re.search(r"invalid at step (\d+)", validate_output)
         redo_s = int(match.group(1)) - 1
-        if('Should' in validate_output):
-            return redo_s, validate_output[(validate_output.find('Should be:') + 10):].strip()
+        if('should' in validate_output):
+            return redo_s, validate_output[(validate_output.find('should be:') + 10):].strip()
         return redo_s, ""
     
     @staticmethod

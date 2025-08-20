@@ -39,7 +39,7 @@ with open('output.txt', 'w', buffering=1) as f:
     print(y)
     gpt_stats = gpt_usage(model)
     llama_stats = llama_usage()
-    propose_num, value_num, propose_avg, value_avg = get_time()
+    propose_num, value_num, validate_num, propose_avg, value_avg, validate_avg = get_time()
     print(f'gpt_stats: {gpt_stats}')
     print(f'llama_stats: {llama_stats}')
     print(f'propose_num:{propose_num} value_num {value_num}, propose_avg {propose_avg}, value_avg{value_avg}')
