@@ -43,9 +43,9 @@ def test_game24_lazy(start=400, end=449):
             "suggestion_r": evaluation["suggestions"],
             "nodes": nodes
         }
-        with open("./results/game24_sys_MS_eval_results.jsonl", "a") as f:
+        with open("./results/game24_sys_MS_eval2_results.jsonl", "a") as f:
             f.write(json.dumps(result) + "\n")
 
 # with open('output.txt', 'w', buffering=1) as f:
 #     sys.stdout = f
-test_game24_lazy(376,400)
+test_game24_lazy(351,375)
