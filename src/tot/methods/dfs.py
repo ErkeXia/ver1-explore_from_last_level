@@ -8,111 +8,6 @@ from tot.models import gpt, llama, model_setup
 propose_num = value_num = 0
 propose_time = value_time = 0
 
-def chunk_list(input_list, ind = 2):
-    for i in range(0, len(input_list), ind):
-        yield input_list[i:i+ind]
-
-def get_value_batch(task, x, s_list, n_evaluate_sample):
-    global value_num, value_time, repeat_value
-    value_num += len(s_list)
-    
-    if len(s_list) == 0:
-        return [], [] 
-    
-    prompts = [task.value_sys_prompt_wrap(x, s) for s in s_list]
-    # if cache_value and user in task.value_cache:
-    #     print(f'cache')
-    #     return task.value_cache[user]
-    # value_outputs = gpt(value_prompt, n=n_evaluate_sample, stop=None)
-    system, _ = prompts[0]
-    
-    users = [user for _, user in prompts]
-    
-    valid_counts = []
-    valid_outputs_lst = []
-    
-    
-    keywords = {'likely', 'impossible', 'sure'}
-    for user_list in chunk_list(users):
-        print(f'Batch value for {user_list}')
-        outputs_B = llama(user_list, system, n=n_evaluate_sample, stop=None, max_tokens = 200, query_task = 'value')
-        for outputs in outputs_B:
-            valid_outputs = [
-                o for o in outputs
-                if any(k in o.strip().split('\n')[-1] for k in keywords)
-            ]
-            valid_counts.append(len(valid_outputs))
-            valid_outputs_lst.append(valid_outputs)
-            
-    assert(len(users) == len(valid_counts))
-    remains = [n_evaluate_sample - a for a in valid_counts]
-    return valid_outputs_lst, remains
-
-
-def get_value_outputs(task, x, s, n_evaluate_sample, cache_value=True):
-    global value_num, value_time, repeat_value
-    # value_num += 1
-    
-    system, user = task.value_sys_prompt_wrap(x, s)
-    # if cache_value and user in task.value_cache:
-    #     print(f'cache')
-    #     return task.value_cache[user]
-    # value_outputs = gpt(value_prompt, n=n_evaluate_sample, stop=None)
-    num = n_evaluate_sample
-    value_outputs = []
-    max_attempts = 5
-    attempt = 0
-    
-    start = time.perf_counter()
-    
-    while(num > 0 and attempt < max_attempts):
-        outputs = llama([user], system, n=num, stop=None, max_tokens = 200, query_task = 'value')[0]
-        keywords = {'likely', 'impossible', 'sure'}
-        valid_outputs = [
-            o for o in outputs
-            if any(k in o.strip().split('\n')[-1] for k in keywords)
-        ]
-        valid_count = len(valid_outputs)
-        # print(f'Number of value needed is {num}, this time we have {valid_count} valid output')
-        num -= valid_count
-        value_outputs.extend(valid_outputs)
-        attempt += 1
-    
-    repeat_value += (attempt - 1)    
-    if(attempt == max_attempts):
-        print('Reach max attempts')
-        
-    elapsed = time.perf_counter() - start
-    value_time += elapsed
-    
-    # print(f'The valid outputs are {value_outputs}')
-    # value = task.value_outputs_unwrap(x, "", value_outputs)
-    # print(f'The value is {value}')
-    # if cache_value:
-    #     task.value_cache[user] = value
-    return value_outputs
-
-def get_values_v2(task, x, ys, n_evaluate_sample, cache_value=True):
-    global value_num
-    value_num += len(ys)
-    
-    s_list = [s for _,_,s in ys]
-    valid_outputs_lst, remains = get_value_batch(task, x, s_list, n_evaluate_sample)
-    
-    values = []
-    
-    print(f'--Remains-- {remains}')
-
-    for idx, remain in enumerate(remains):
-        if remain > 0:
-            value_outputs = get_value_outputs(task, x, s_list[idx], remain, cache_value=cache_value)
-            valid_outputs_lst[idx].extend(value_outputs)
-        assert(len(valid_outputs_lst[idx]) == n_evaluate_sample)
-        value = task.value_outputs_unwrap(x, "", valid_outputs_lst[idx])
-        print(f'Get value for s: {s_list[idx]} value: {value}')
-        values.append(value)
-
-    return values
 
 def get_value(task, x, s, n_evaluate_sample, cache_value=True):
     global value_num, value_time, repeat_value
@@ -418,3 +313,67 @@ def get_time():
     print(f"value num: {value_num}, value time per num: {(value_time/value_num):.6f}")
     return propose_num, value_num, validate_num, (propose_time/propose_num), (value_time/value_num), (validate_time/validate_num)
 
+def get_proposals(task, x, y): 
+    global propose_num, propose_time
+    propose_num += 1
+    propose_prompt = task.propose_prompt_wrap(x, y)
+    start = time.perf_counter()
+    proposals = gpt(propose_prompt, n=1, stop=None, max_tokens=200)[0].split('\n')
+    elapsed = time.perf_counter() - start
+    propose_time += elapsed
+    proposals = [s for s in proposals if not ("Input" in s or "steps" in s)]
+    return [y + _ + '\n' for _ in proposals]
+
+def solve(args, task, idx, to_print=True):
+    global gpt
+    global thoughts
+    global value_num, value_time
+    global propose_num, propose_time
+    nodes_num = 1
+    
+    thoughts = [[] for _ in range(task.steps)]
+    gpt = partial(gpt, model=args.backend, temperature=args.temperature)
+    propose_num = value_num = 0
+    propose_time = value_time = 0
+    print(gpt)
+    x = task.get_input(idx)  # input
+    print(f"x = {x}")
+    ys = ['']  # current output candidates
+    infos = []
+    for step in range(task.steps):
+        # generation
+        new_ys = [get_proposals(task, x, y) for y in ys]
+        new_ys = list(itertools.chain(*new_ys))
+        ids = list(range(len(new_ys)))
+        # evaluation
+        if args.method_evaluate == 'vote':
+            values = get_votes(task, x, new_ys, args.n_evaluate_sample)
+        elif args.method_evaluate == 'value':
+            values = get_values(task, x, new_ys, args.n_evaluate_sample)
+
+        # if step == task.steps - 1:
+        #     print(f"Reach final layer! \n x = {x} \n new_ys = {new_ys} \n value = {values}")
+        # selection
+        if args.method_select == 'sample':
+            ps = np.array(values) / sum(values)
+            select_ids = np.random.choice(ids, size=args.n_select_sample, p=ps).tolist()
+        elif args.method_select == 'greedy':
+            select_ids = sorted(ids, key=lambda x: values[x], reverse=True)[:args.n_select_sample]
+        select_new_ys = [new_ys[select_id] for select_id in select_ids]
+
+        # log
+        if to_print: 
+            sorted_new_ys, sorted_values = zip(*sorted(zip(new_ys, values), key=lambda x: x[1], reverse=True))
+            print(f'-- new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
+        
+        infos.append({'step': step, 'x': x, 'ys': ys, 'new_ys': new_ys, 'values': values, 'select_new_ys': select_new_ys})
+        ys = select_new_ys
+        thoughts[step] = ys
+        nodes_num += len(ys)
+        ans = check_answer(ys)
+        if ans != None:
+            print("Find final answer!\n")
+            return x, [ans], {'steps': infos}, thoughts, nodes_num
+    if to_print: 
+        print(ys)
+    return x, ys, {'steps': infos}, thoughts, nodes_num
