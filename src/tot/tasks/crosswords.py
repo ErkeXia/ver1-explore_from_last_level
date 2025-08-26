@@ -224,7 +224,7 @@ class MiniCrosswordsTask(Task):
             lines = output.split('\n')
             pattern = r'^([hv][1-5])\. ([a-zA-Z]{5,5}) \((certain|high|medium|low)\).*$'
             for line in lines:
-                match = re.match(pattern, line)
+                match = re.match(pattern, line.lower())
                 if match:
                     parts = [match.group(1), match.group(2), match.group(3)]
                     proposal = parts[0].lower() + '. ' + parts[1].lower()

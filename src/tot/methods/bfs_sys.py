@@ -274,6 +274,34 @@ def evaluate(task, x, f_step):
     validate_time += elapsed
     return redo_s, feedback
 
+def evaluate_3steps(task, x, f_step):
+    global validate_time, correctness_r
+    start = time.perf_counter()
+    correctness_prompt, locate_prompt = task.s3_evaluate_sys_prompt_wrap(x, f_step)
+    
+    correctness_output = gpt(correctness_prompt, n=1, stop=None)[0]
+    print(f'correctness output: {correctness_output}')
+    correctness_r.append(correctness_output)
+    correctness = task.correctness_unwrap(correctness_output)
+    
+    if correctness == 'No':
+        locate_output = gpt(locate_prompt, n=1, stop=None)[0]
+        print(f'locate output: {locate_output}')
+        wrong_step, current_numbers = task.locate_unwrap(locate_output)
+        print(f'wrong step: {wrong_step}, current numbers: {current_numbers}')
+        
+        gpt_propose_prompt = task.eval_gpt_propose_prompt_wrap(current_numbers)
+        proposals = gpt(gpt_propose_prompt, n=1, stop = None)[0]
+        print(f"Gpt proposals {proposals}")
+        redo_s = wrong_step - 1
+        feedback = proposals
+        
+    else:
+        redo_s = -1
+        feedback = correctness
+    elapsed = time.perf_counter() - start
+    validate_time += elapsed
+    return redo_s, feedback
 
 def retrieve_steps(num_steps, idx, y):
     step = num_steps - 1
@@ -356,7 +384,7 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
         # validators.append(validate_outputs)
         # redo_s, feedback = task.validate_unwrap(validate_outputs)
         # redo_s, feedback = validate(task, x, thought_chain)
-        redo_s, feedback = evaluate(task, x, thought_chain)
+        redo_s, feedback = evaluate_3steps(task, x, thought_chain)
         print(f'redo {redo_s} feedback: {feedback}')
         
         possible_steps = [p for p in feedback.split("\n") if any(ch.isdigit() for ch in p)]

@@ -207,7 +207,8 @@ class Game24Task(Task):
         # return correctness_prompt_sys_R.format(input = x, f_step = numbered_steps), suggest_prompt_sys_ReasonState.format(input = x, f_step = numbered_steps)
         return correctness_prompt_sys_R.format(input = x, f_step = numbered_steps), suggest_prompt_sys_RS_M.format(input = x, f_step = numbered_steps)
         # return evaluate_prompt_sys.format(input = x, f_step = numbered_steps)
-        
+          
+    
     @staticmethod
     def correctness_unwrap(validate_output: str) -> str:
         validate_output = validate_output.strip().split('\n')[-1]
@@ -224,6 +225,27 @@ class Game24Task(Task):
         if('should' in validate_output):
             return redo_s, validate_output[(validate_output.find('should try:') + 11):].strip()
         return redo_s, ""
+    
+    @staticmethod
+    def s3_evaluate_sys_prompt_wrap(x: str, ys: list) -> tuple[str, str]:
+        numbered_steps = '\n'.join(f"{i + 1}: {step}" for i, step in enumerate(ys))
+        print(f'numbered steps : \n{numbered_steps}')
+        return correctness_prompt_sys_R.format(input = x, f_step = numbered_steps), locate_prompt_sys.format(input = x, f_step = numbered_steps)
+    
+    @staticmethod
+    def eval_gpt_propose_prompt_wrap(current_numbers) -> str:
+        return eval_propose_prompt_sys.format(input=current_numbers)
+    
+    @staticmethod
+    def locate_unwrap(validate_output: str) -> tuple[int, str]:
+        validate_output = validate_output.strip().lower()
+        match = re.search(r"invalid at step (\d+)", validate_output)
+        nums_str = ""
+        m = re.search(r'\bretry\s*with\b([^.;\n]*)', validate_output, flags=re.IGNORECASE)
+        if m:
+            nums_list = re.findall(r'[+-]?\d+(?:\.\d+)?', m.group(1))
+            nums_str = " ".join(nums_list)
+        return int(match.group(1)), nums_str
     
     @staticmethod
     def manage_state(nums, expr):
