@@ -40,10 +40,11 @@ def test_game24_lazy(start=400, end=449):
             "total_time": elapsed,
             "validation": evaluation["validators"],
             "correctness_r": evaluation["correctness"],
-            "suggestion_r": evaluation["suggestions"],
+            "locate": evaluation["locate"],
+            "suggestions": evaluation["suggestions"],
             "nodes": nodes
         }
-        with open("./results/game24_sys_MS_eval2_results.jsonl", "a") as f:
+        with open("./results/game24_sys_3steps_eval_results.jsonl", "a") as f:
             f.write(json.dumps(result) + "\n")
 
 # with open('output.txt', 'w', buffering=1) as f:

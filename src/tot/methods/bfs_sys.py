@@ -275,7 +275,7 @@ def evaluate(task, x, f_step):
     return redo_s, feedback
 
 def evaluate_3steps(task, x, f_step):
-    global validate_time, correctness_r
+    global validate_time, correctness_r, locate_r, suggestion_r
     start = time.perf_counter()
     correctness_prompt, locate_prompt = task.s3_evaluate_sys_prompt_wrap(x, f_step)
     
@@ -295,6 +295,9 @@ def evaluate_3steps(task, x, f_step):
         print(f"Gpt proposals {proposals}")
         redo_s = wrong_step - 1
         feedback = proposals
+        
+        locate_r.append(locate_output)
+        suggestion_r.append(proposals)
         
     else:
         redo_s = -1
@@ -325,7 +328,7 @@ def retrieve_steps(num_steps, idx, y):
 
 def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
     global gpt
-    global thoughts, connection, steps, validators, correctness_r, suggestion_r
+    global thoughts, connection, steps, validators, correctness_r, suggestion_r, locate_r
     global value_num, value_time
     global propose_num, propose_time
     global validate_num, validate_time
@@ -350,6 +353,7 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
     validators = []
     correctness_r = []
     suggestion_r = []
+    locate_r = []
     all_thoughts = []
     llama_ans = []
     
@@ -376,7 +380,7 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
         print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
         if not do_validate:
             print(f"Output from reasoning! idx: {idx} \n y: {y} \n st: {st}")
-            evaluation = {'validators': validators, 'correctness': correctness_r, 'suggestions': suggestion_r}
+            evaluation = {'validators': validators, 'correctness': correctness_r,'locate': locate_r, 'suggestions': suggestion_r}
             return x, thought_chain, all_thoughts, evaluation, llama_ans, nodes, all_states
 
         validate_num += 1
@@ -437,7 +441,7 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
     print(f'Repeat value time: {repeat_value}')
     avg_validate = validate_time/validate_num
     print(f'validate average time: {avg_validate}')
-    evaluation = {'validators': validators, 'correctness': correctness_r, 'suggestions': suggestion_r}
+    evaluation = {'validators': validators, 'correctness': correctness_r, 'locate': locate_r, 'suggestions': suggestion_r}
     return x, feedback, all_thoughts, evaluation, llama_ans, nodes, all_states
       
 def get_time():
