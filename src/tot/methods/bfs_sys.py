@@ -3,7 +3,7 @@ import time
 import copy
 import numpy as np
 from functools import partial
-from tot.models import gpt, llama, model_setup
+from tot.models import gpt, llama_instruct, model_setup, base_model
 
 propose_num = value_num = 0
 propose_time = value_time = 0
@@ -35,7 +35,7 @@ def get_value_batch(task, x, s_list, n_evaluate_sample):
     keywords = {'likely', 'impossible', 'sure'}
     for user_list in chunk_list(users):
         print(f'Batch value for {user_list}')
-        outputs_B = llama(user_list, system, n=n_evaluate_sample, stop=None, max_tokens = 200, query_task = 'value')
+        outputs_B = llama_instruct(user_list, system, n=n_evaluate_sample, stop=None, max_tokens = 200, query_task = 'value')
         for outputs in outputs_B:
             valid_outputs = [
                 o for o in outputs
@@ -66,7 +66,7 @@ def get_value_outputs(task, x, s, n_evaluate_sample, cache_value=True):
     start = time.perf_counter()
     
     while(num > 0 and attempt < max_attempts):
-        outputs = llama([user], system, n=num, stop=None, max_tokens = 200, query_task = 'value')[0]
+        outputs = llama_instruct([user], system, n=num, stop=None, max_tokens = 200, query_task = 'value')[0]
         keywords = {'likely', 'impossible', 'sure'}
         valid_outputs = [
             o for o in outputs
@@ -118,10 +118,6 @@ def get_value(task, x, s, n_evaluate_sample, cache_value=True):
     global value_num, value_time, repeat_value
     value_num += 1
     
-    system, user = task.value_sys_prompt_wrap(x, s)
-    if cache_value and user in task.value_cache:
-        print(f'cache')
-        return task.value_cache[user]
     num = n_evaluate_sample
     value_outputs = []
     max_attempts = 5
@@ -129,12 +125,28 @@ def get_value(task, x, s, n_evaluate_sample, cache_value=True):
     
     start = time.perf_counter()
     
-    while(num > 0 and attempt < max_attempts):
-        outputs = llama(user, system, n=num, stop=None, max_tokens = 200, query_task = 'value')
-        keywords = {'likely', 'impossible', 'sure'}
+    KEYWORDS = {"likely", "impossible", "sure"}
+
+    if instruct_model:
+        system, user = task.value_sys_prompt_wrap_instruct(x, s)
+        if cache_value and user in task.value_cache:
+            print("cache")
+            return task.value_cache[user]
+
+        gen = lambda n: llama_instruct(user, system, n=n, stop=None, max_tokens=200, query_task="value")
+    else:
+        prompt = task.value_sys_prompt_wrap(x, s)
+        if cache_value and s in task.value_cache:
+            print("cache")
+            return task.value_cache[s]
+
+        gen = lambda n: base_model(prompt, n=n, max_tokens=200)
+
+    while num > 0 and attempt < max_attempts:
+        outputs = gen(num)
         valid_outputs = [
             o for o in outputs
-            if any(k in o.strip().split('\n')[-1] for k in keywords)
+            if any(k in o.strip().split("\n")[-1] for k in KEYWORDS)
         ]
         valid_count = len(valid_outputs)
         num -= valid_count
@@ -170,11 +182,15 @@ def get_proposals_v1(task, current, index, feedback = None):
     print(f'\nGetting proposals for index {index} with current = {current}')
     global propose_num, propose_time
     propose_num += 1
-    
-    system, user = task.propose_sys_prompt_wrap(current)
-    # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
     start = time.perf_counter()
-    proposals = llama(user, system, n=1, stop=None, query_task = 'propose')[0].split('\n')
+    
+    if instruct_model:
+        
+        system, user = task.propose_sys_prompt_wrap_instruct(current)
+        proposals = llama_instruct(user, system, n=1, stop=None, query_task = 'propose')[0].split('\n')
+    else:
+        prompt = task.propose_sys_prompt_wrap(current)
+        proposals = base_model(prompt, n=1, max_tokens=200)[0].split('\n')
     # print(proposals)
     elapsed = time.perf_counter() - start
     propose_time += elapsed
@@ -274,6 +290,18 @@ def evaluate(task, x, f_step):
     validate_time += elapsed
     return redo_s, feedback
 
+def correctness_check(task, x, f_step):
+    global validate_time, correctness_r
+    correctness_prompt, locate_prompt = task.s3_evaluate_sys_prompt_wrap(x, f_step)
+    correctness_output = gpt(correctness_prompt, n=1, stop=None)[0]
+    print(f'correctness output: {correctness_output}')
+    correctness_r.append(correctness_output)
+    correctness = task.correctness_unwrap(correctness_output)
+    if correctness == 'No':
+        return 0, ""
+    return -1, correctness
+    
+
 def evaluate_3steps(task, x, f_step):
     global validate_time, correctness_r, locate_r, suggestion_r
     start = time.perf_counter()
@@ -334,9 +362,14 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
     global validate_num, validate_time
     global nodes
     global states, repeat_value
+    global instruct_model
     
+    instruct_model = False
     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
     model_setup(slm, TGI_arg = False)
+    if 'instruct' in slm.lower():
+        instruct_model = True
+        
     
     nodes = 1
     propose_num = value_num = 0
@@ -384,10 +417,6 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
             return x, thought_chain, all_thoughts, evaluation, llama_ans, nodes, all_states
 
         validate_num += 1
-        # validate_outputs = validate(task, x, thought_chain)
-        # validators.append(validate_outputs)
-        # redo_s, feedback = task.validate_unwrap(validate_outputs)
-        # redo_s, feedback = validate(task, x, thought_chain)
         redo_s, feedback = evaluate_3steps(task, x, thought_chain)
         print(f'redo {redo_s} feedback: {feedback}')
         

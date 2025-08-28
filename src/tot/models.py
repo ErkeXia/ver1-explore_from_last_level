@@ -337,7 +337,7 @@ def model_setup(model_name_arg, TGI_arg = True):
     if model_name == 'llama':
         model_id = "meta-llama/Llama-3.1-8B-Instruct"
     elif model_name == 'mistral':
-        model_id = "mistralai/Mistral-7B-Instruct-v0.2"
+        model_id = "mistralai/Mistral-7B-v0.3"
     tokenizer = AutoTokenizer.from_pretrained(model_id)
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
@@ -381,34 +381,34 @@ def format_chat_prompt(user_prompt: str, system_prompt: str = "You are a helpful
     return system_part, user_part
 
 
-def llama(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=1000, n=1, stop=None, query_task = None) -> list:
+def llama_instruct(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=1000, n=1, stop=None, query_task = None) -> list:
     global prompt_llama_tokens, llama_tokens
     # print(model.config._attn_implementation)
 
     outputs = []
     
-    if TGI:
-        TGI_prompt = format_chat_prompt_TGI(user_prompt, system_prompt)
-        for _ in range(n):
-            response = client.generate(
-                TGI_prompt,
-                max_new_tokens=max_tokens,
-                temperature=temperature,
-                top_p=0.9,
-                do_sample=True,
-                return_full_text=False
-            )
-            output_text = response.generated_text
+    # if TGI:
+    #     TGI_prompt = format_chat_prompt_TGI(user_prompt, system_prompt)
+    #     for _ in range(n):
+    #         response = client.generate(
+    #             TGI_prompt,
+    #             max_new_tokens=max_tokens,
+    #             temperature=temperature,
+    #             top_p=0.9,
+    #             do_sample=True,
+    #             return_full_text=False
+    #         )
+    #         output_text = response.generated_text
 
-            # prompt_token_count = len(tokenizer.encode(prompt))
-            # completion_token_count = len(tokenizer.encode(output_text))
-            # prompt_llama_tokens += prompt_token_count
-            # llama_tokens += completion_token_count
+    #         # prompt_token_count = len(tokenizer.encode(prompt))
+    #         # completion_token_count = len(tokenizer.encode(output_text))
+    #         # prompt_llama_tokens += prompt_token_count
+    #         # llama_tokens += completion_token_count
 
-            if output_text.strip() == "":
-                print(f"TGI output empty for prompt: {prompt}")
-            outputs.append(output_text)
-        return outputs
+    #         if output_text.strip() == "":
+    #             print(f"TGI output empty for prompt: {TGI_prompt}")
+    #         outputs.append(output_text)
+    #     return outputs
     
     system_part, user_part = format_chat_prompt(user_prompt, system_prompt)
     # print(f"system: {system_part} user: {user_part}")
@@ -426,14 +426,9 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
         "attention_mask": attention_mask.to(model.device)
     }
 
-    
-    # inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-    # prompt_token_count = inputs.input_ids.shape[-1]
-
-    # print(f'LLAMA prompt: \n{prompt}')
     prompt_len = inputs["input_ids"].shape[1]
     prompt_llama_tokens += prompt_len
-    # print(f'len {prompt_len} \n prompt tokens {prompt_token_count}')
+    
     with torch.no_grad():
         res = model.generate(
             **inputs,
@@ -445,26 +440,51 @@ def llama(user_prompt, system_prompt = "You are a helpful assistant", temperatur
             top_p=0.9,
             num_return_sequences=n,
         )
-        # raw_output_text = tokenizer.decode(res[0], skip_special_tokens=True)
     for output in res:
         generated_tokens = output[prompt_len:]
         raw_output_text = tokenizer.decode(generated_tokens, skip_special_tokens=True)
         output_text = raw_output_text
-            # print(f'Raw LLAMA output: {output_text}\n')
-        # if prompt in output_text:
-        #     output_text = output_text.replace(prompt, "")
-        # if "assistant" in output_text:
-        #     index = output_text.rfind("assistant")
-        #     output_text =  output_text[(index + 9):]
+            
         outputs.append(output_text)
         generated_token_count = output.shape[-1] - prompt_len
         llama_tokens += generated_token_count
-            # print(f'LLAMA output: {output_text}\n')
         if(output_text == ""):
             print(f'LLAMA output empty, raw output: {raw_output_text}')
-    # print(f"output: {outputs}")
 
     return outputs
+
+
+def base_model(prompt: str, temperature: float = 0.7, max_tokens: int = 1000, n: int = 1, tokenizer=None, model=None) -> list[str]:
+    # Encode
+    enc = tokenizer(prompt, return_tensors="pt", add_special_tokens=True)
+    input_ids = enc["input_ids"].to(model.device)
+    attention_mask = enc.get("attention_mask", torch.ones_like(input_ids)).to(model.device)
+
+    prompt_len = input_ids.shape[1]
+
+    # Generate
+    with torch.no_grad():
+        res = model.generate(
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            max_new_tokens=max_tokens,
+            do_sample=True,
+            temperature=temperature,
+            top_p=0.9,
+            num_return_sequences=n,
+            eos_token_id=tokenizer.eos_token_id,
+            pad_token_id=tokenizer.eos_token_id,
+        )
+
+    # Decode
+    outputs: list[str] = []
+    for seq in res:
+        gen = seq[prompt_len:]
+        text = tokenizer.decode(gen, skip_special_tokens=True)
+        outputs.append(text)
+
+    return outputs
+
 
 @backoff.on_exception(backoff.expo, openai.error.OpenAIError)
 def completions_with_backoff(**kwargs):

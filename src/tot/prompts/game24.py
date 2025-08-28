@@ -249,6 +249,26 @@ Input: {input}
 Possible next steps:
 '''
 
+propose_prompt_sys = '''
+You aim to use numbers and basic arithmetic operations (+ - * /) to obtain 24.
+You now should provide eight possible next steps for the given input.
+EXAMPLE:
+Input: 2 8 8 14
+Possible next steps:
+2 + 8 = 10
+8 / 2 = 4
+14 + 2 = 16
+2 * 8 = 16
+8 - 2 = 6
+14 - 8 = 6
+14 /  2 = 7
+14 - 2 = 12
+TASK:
+Input: {input}
+Possible next steps:
+'''
+
+
 value_prompt = '''Evaluate if given numbers can reach 24 (sure/likely/impossible)
 10 14
 10 + 14 = 24

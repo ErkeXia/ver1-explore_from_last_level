@@ -105,11 +105,17 @@ class Game24Task(Task):
         return prompt
     
     @staticmethod
-    def propose_sys_prompt_wrap(current_numbers: list) -> str:
+    def propose_sys_prompt_wrap_instruct(current_numbers: list) -> str:
         print(f'Current number is: {current_numbers}')
         prompt = propose_user_prompt.format(input=current_numbers)
         system = propose_system_prompt_act
         return system, prompt
+    
+    @staticmethod
+    def propose_sys_prompt_wrap(current_numbers: list) -> str:
+        print(f'Current number is: {current_numbers}')
+        prompt = propose_prompt_sys.format(input=current_numbers)
+        return prompt
     
     @staticmethod
     def propose_prompt_unwrap(current, value_outputs: list) -> list:
@@ -133,9 +139,13 @@ class Game24Task(Task):
         return value_system_prompt, value_user_prompt.format(input=current_numbers)
     
     @staticmethod
-    def value_sys_prompt_wrap(x: str, y: str) -> str:
+    def value_sys_prompt_wrap_instruct(x: str, y: str) -> str:
         # print(current_numbers)
         return value_system_prompt, value_user_prompt.format(input=y)
+    
+    @staticmethod
+    def value_sys_prompt_wrap(x: str, y: str) -> str:
+        return value_prompt.format(input=y)
     
     @staticmethod
     def value_outputs_unwrap(x: str, y: str, value_outputs: list) -> float:
