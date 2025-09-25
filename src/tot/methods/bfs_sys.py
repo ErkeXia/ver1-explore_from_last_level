@@ -7,6 +7,7 @@ from tot.models import gpt, llama_instruct, model_setup, base_model
 
 propose_num = value_num = 0
 propose_time = value_time = 0
+stop = ['\n\n']
 
 def chunk_list(input_list, ind = 2):
     for i in range(0, len(input_list), ind):
@@ -129,10 +130,9 @@ def get_value(task, x, s, n_evaluate_sample, cache_value=True):
 
     if instruct_model:
         system, user = task.value_sys_prompt_wrap_instruct(x, s)
-        if cache_value and user in task.value_cache:
+        if cache_value and s in task.value_cache:
             print("cache")
-            return task.value_cache[user]
-
+            return task.value_cache[s]
         gen = lambda n: llama_instruct(user, system, n=n, stop=None, max_tokens=200, query_task="value")
     else:
         prompt = task.value_sys_prompt_wrap(x, s)
@@ -140,7 +140,7 @@ def get_value(task, x, s, n_evaluate_sample, cache_value=True):
             print("cache")
             return task.value_cache[s]
 
-        gen = lambda n: base_model(prompt, n=n, max_tokens=200)
+        gen = lambda n: base_model(prompt, n=n, max_tokens=200, stop = stop)
 
     while num > 0 and attempt < max_attempts:
         outputs = gen(num)
@@ -158,11 +158,12 @@ def get_value(task, x, s, n_evaluate_sample, cache_value=True):
         print('Reach max attempts')
         
     elapsed = time.perf_counter() - start
+    print(f'Get value time: {elapsed}')
     value_time += elapsed
     
     value = task.value_outputs_unwrap(x, "", value_outputs)
     if cache_value:
-        task.value_cache[user] = value
+        task.value_cache[s] = value
     return value
 
 def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
@@ -184,13 +185,12 @@ def get_proposals_v1(task, current, index, feedback = None):
     propose_num += 1
     start = time.perf_counter()
     
-    if instruct_model:
-        
+    if instruct_model:    
         system, user = task.propose_sys_prompt_wrap_instruct(current)
         proposals = llama_instruct(user, system, n=1, stop=None, query_task = 'propose')[0].split('\n')
     else:
         prompt = task.propose_sys_prompt_wrap(current)
-        proposals = base_model(prompt, n=1, max_tokens=200)[0].split('\n')
+        proposals = base_model(prompt, n=1, max_tokens=200, stop = stop)[0].split('\n')
     # print(proposals)
     elapsed = time.perf_counter() - start
     propose_time += elapsed
@@ -354,7 +354,7 @@ def retrieve_steps(num_steps, idx, y):
     intermediate_state.reverse()
     return intermediate_state, thought_chain, chain_index
 
-def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
+def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = True, do_validate = True):
     global gpt
     global thoughts, connection, steps, validators, correctness_r, suggestion_r, locate_r
     global value_num, value_time
@@ -364,12 +364,8 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
     global states, repeat_value
     global instruct_model
     
-    instruct_model = False
     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
-    model_setup(slm, TGI_arg = False)
-    if 'instruct' in slm.lower():
-        instruct_model = True
-        
+    instruct_model = model_setup(slm, instruct_model_arg, TGI_arg = False)        
     
     nodes = 1
     propose_num = value_num = 0

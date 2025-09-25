@@ -298,7 +298,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 from text_generation import Client
 import flash_attn
-
+from transformers import StoppingCriteria, StoppingCriteriaList
 
 #TGI endpoint
 client = Client("http://localhost:8080", timeout=60)
@@ -325,30 +325,36 @@ if api_base != "":
     openai.api_base = api_base
     
     
-def model_setup(model_name_arg, TGI_arg = True):
+def model_setup(model_name_arg, instruct_model = True, TGI_arg = True):
     global tokenizer, model, model_name, TGI, has_load
-    
     TGI = TGI_arg
     model_name = model_name_arg
     if TGI or has_load:
-        return
+        return True
     
+    # instruct_model = False
     torch.cuda.empty_cache()
     if model_name == 'llama':
-        model_id = "meta-llama/Llama-3.1-8B-Instruct"
+        if instruct_model:
+            model_id = "meta-llama/Llama-3.1-8B-Instruct"
     elif model_name == 'mistral':
-        model_id = "mistralai/Mistral-7B-v0.3"
+        if instruct_model:
+            model_id = "mistralai/Mistral-7B-Instruct-v0.3"
+        else:
+            model_id = "mistralai/Mistral-7B-v0.3"
     tokenizer = AutoTokenizer.from_pretrained(model_id)
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
         torch_dtype=torch.float16,
         device_map="auto",
-        use_cache=False,
+        use_cache=True,
         attn_implementation="flash_attention_2"
         # attn_implementation="flash_attention_2"
     )
-    model = torch.compile(model)
+    # model = torch.compile(model)
+    model.eval()
     has_load = True
+    return instruct_model
 
 #llama setup
 
@@ -454,13 +460,41 @@ def llama_instruct(user_prompt, system_prompt = "You are a helpful assistant", t
     return outputs
 
 
-def base_model(prompt: str, temperature: float = 0.7, max_tokens: int = 1000, n: int = 1, tokenizer=None, model=None) -> list[str]:
-    # Encode
+class StopOnSequences(StoppingCriteria):
+    def __init__(self, stop_seqs_token_ids: list[list[int]]):
+        super().__init__()
+        self.stop_seqs = stop_seqs_token_ids
+        self.max_len = max((len(s) for s in stop_seqs_token_ids), default=0)
+
+    def __call__(self, input_ids, scores, **kwargs) -> bool:
+        if self.max_len == 0:
+            return False
+        # input_ids shape: (batch, seq_len); we support num_return_sequences=n so batch>=1
+        for seq in input_ids:
+            # Only need to check the tail up to the longest stop sequence
+            tail = seq[-self.max_len:].tolist()
+            for stop in self.stop_seqs:
+                L = len(stop)
+                if L <= len(tail) and tail[-L:] == stop:
+                    return True
+        return False
+
+
+
+def base_model(prompt: str, temperature: float = 0.7, max_tokens: int = 1000, n: int = 1, stop: list[str] | None = None) -> list[str]:
     enc = tokenizer(prompt, return_tensors="pt", add_special_tokens=True)
     input_ids = enc["input_ids"].to(model.device)
     attention_mask = enc.get("attention_mask", torch.ones_like(input_ids)).to(model.device)
 
     prompt_len = input_ids.shape[1]
+
+    stopping_criteria = StoppingCriteriaList()
+    if stop:
+        stop_token_seqs = [tokenizer.encode(s, add_special_tokens=False) for s in stop]
+        # Filter out any empty encodings
+        stop_token_seqs = [s for s in stop_token_seqs if len(s) > 0]
+        if stop_token_seqs:
+            stopping_criteria.append(StopOnSequences(stop_token_seqs))
 
     # Generate
     with torch.no_grad():
@@ -474,6 +508,7 @@ def base_model(prompt: str, temperature: float = 0.7, max_tokens: int = 1000, n:
             num_return_sequences=n,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
+            stopping_criteria=stopping_criteria,
         )
 
     # Decode
@@ -481,8 +516,15 @@ def base_model(prompt: str, temperature: float = 0.7, max_tokens: int = 1000, n:
     for seq in res:
         gen = seq[prompt_len:]
         text = tokenizer.decode(gen, skip_special_tokens=True)
-        outputs.append(text)
 
+        # Light belt-and-suspenders in case decode fused spaces around stop strings
+        if stop:
+            for s in stop:
+                idx = text.find(s)
+                if idx != -1:
+                    text = text[:idx]
+                    break
+        outputs.append(text.strip())
     return outputs
 
 

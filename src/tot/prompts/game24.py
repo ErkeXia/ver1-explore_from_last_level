@@ -250,8 +250,12 @@ Possible next steps:
 '''
 
 propose_prompt_sys = '''
-You aim to use numbers and basic arithmetic operations (+ - * /) to obtain 24.
-You now should provide eight possible next steps for the given input.
+You are playing the Game of 24, where you use numbers and basic arithmetic operations (+, -, *, /) to obtain 24. 
+Given the current set of available numbers, your task is to output **exactly eight possible next steps with 2 available numbers**, nothing else.
+
+Format:
+<expression> = <result>
+
 EXAMPLE:
 Input: 2 8 8 14
 Possible next steps:
@@ -261,53 +265,65 @@ Possible next steps:
 2 * 8 = 16
 8 - 2 = 6
 14 - 8 = 6
-14 /  2 = 7
+14 / 2 = 7
 14 - 2 = 12
+
 TASK:
 Input: {input}
 Possible next steps:
 '''
 
 
-value_prompt = '''Evaluate if given numbers can reach 24 (sure/likely/impossible)
-10 14
+value_prompt = '''Evaluate if given numbers can reach 24 with basic arithmetic operations (+ - * /) 
+You should reason and response (sure/likely/impossible)
+EXAMPLES:
+Input: 10 14
 10 + 14 = 24
 sure
-11 12
+
+Input: 11 12
 11 + 12 = 23
 12 - 11 = 1
 11 * 12 = 132
 11 / 12 = 0.91
 impossible
-4 4 10
+
+Input: 4 4 10
 4 + 4 + 10 = 8 + 10 = 18
 4 * 10 - 4 = 40 - 4 = 36
 (10 - 4) * 4 = 6 * 4 = 24
 sure
-4 9 11
+
+Input: 4 9 11
 9 + 11 + 4 = 20 + 4 = 24
 sure
-5 7 8
+
+Input: 5 7 8
 5 + 7 + 8 = 12 + 8 = 20
 (8 - 5) * 7 = 3 * 7 = 21
 I cannot obtain 24 now, but numbers are within a reasonable range
 likely
-5 6 6
+
+Input: 5 6 6
 5 + 6 + 6 = 17
 (6 - 5) * 6 = 1 * 6 = 6
 I cannot obtain 24 now, but numbers are within a reasonable range
 likely
-10 10 11
+
+Input: 10 10 11
 10 + 10 + 11 = 31
 (11 - 10) * 10 = 10
 10 10 10 are all too big
 impossible
-1 3 3
+
+Input: 1 3 3
 1 * 3 * 3 = 9
 (1 + 3) * 3 = 12
 1 3 3 are all too small
 impossible
-{input}
+
+TASK:
+Input: {input}
 '''
 
 value_system_prompt = '''Evaluate if given numbers can reach 24 with basic arithmetic operations (+ - * /) 
