@@ -3,137 +3,138 @@ import time
 import copy
 import numpy as np
 from functools import partial
-from tot.models import gpt, llama, model_setup
+# from tot.models import gpt
+from tot.models import gpt, base_model, model_setup
 
 propose_num = value_num = 0
 propose_time = value_time = 0
 
+def y_output_from_env(env):
+    rows = []
+    for i in range(5):
+        rows.append([env.board[i*5 + j] for j in range(5)])
+    return "Output:\n" + "\n".join(" ".join(r) for r in rows) + "\n"
 
-def get_value(task, x, s, n_evaluate_sample, cache_value=True):
-    global value_num, value_time, repeat_value
-    value_num += 1
-    
-    system, user = task.value_sys_prompt_wrap(x, s)
-    if cache_value and user in task.value_cache:
-        print(f'cache')
-        return task.value_cache[user]
-    num = n_evaluate_sample
-    value_outputs = []
-    max_attempts = 5
-    attempt = 0
-    
-    start = time.perf_counter()
-    
-    while(num > 0 and attempt < max_attempts):
-        outputs = llama(user, system, n=num, stop=None, max_tokens = 200, query_task = 'value')
-        keywords = {'likely', 'impossible', 'sure'}
-        valid_outputs = [
-            o for o in outputs
-            if any(k in o.strip().split('\n')[-1] for k in keywords)
-        ]
-        valid_count = len(valid_outputs)
-        num -= valid_count
-        value_outputs.extend(valid_outputs)
-        attempt += 1
-    
-    repeat_value += (attempt - 1)    
-    if(attempt == max_attempts):
-        print('Reach max attempts')
+# ---------------- apply single action ----------------
+def apply_action_to_y(task, x, parent_y, action_line):
+    task.set_status(x, parent_y)                    # sync env to current y
+    _msg, _r_all, _done, _info = task.env.step(action_line)  # apply 'h3. apple' or 'v2. water'
+    return y_output_from_env(task.env)              # serialize back to Output-grid
+
+# ---------------- propose children ----------------
+def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=5, M=3):
+    y_parent = parent_state['current']
+
+    propose_prompt = task.propose_prompt_wrap(x, y_parent)
+    raw = base_model(propose_prompt, n=K, stop=None, max_tokens=200)
+    # raw = gpt(propose_prompt, n=K, stop=None, max_tokens=200)  # ask for K samples
+    print(f"raw proposals from llama {raw}")
+
+    # Parse lines like "h3. apple (high)" into y+action strings
+    y_action_variants = task.propose_outputs_unwrap(x, y_parent, raw, n_max_propose=M)
+    print(f"Actions applied {y_action_variants}")
+    children = []
+    for action in y_action_variants:
+        last = [ln for ln in action.strip().split("\n") if ln]
+        last = last[-1] if last else ""
+        if not last or (last[0] not in ("h", "v")):
+            continue
+        y_child = apply_action_to_y(task, x, y_parent, last)
+        children.append((y_parent, parent_index, y_child))
+    return children
+
+# ---------------- score children ----------------
+def get_values_v1(task, x, ys, n_eval=1):
+    vals = []
+    for y in ys:
+        print(f"Evaluation \n" + y)
+        score_obj = task.evaluate(x, y, n_evaluate_sample=n_eval)  # {'sure','maybe','impossible'}
+        s = score_obj.get('sure', 0)
+        m = score_obj.get('maybe', 0)
+        i = score_obj.get('impossible', 0)
+        vals.append(s + 0.5*m - i)
+    return vals
+
+# ---------------- check solved ----------------
+def check_answer(candidates, task=None, x=None):
+    for i, y in enumerate(candidates):
+        info = task.test_output(task.xs.index(x), y)  # uses env internally
+        if info.get('r_game', 0) == 1:
+            return i, y
+        if "_" not in y:
+            return i, y
+    return None, None
+
+# ---------------- DFS core ----------------
+def reasoning_dfs(task, x, max_depth=12, branch=5, K=5, M=3):
+    global nodes, states
+
+    # init storage if needed
+    if 0 not in states:
+        states[0] = []
+
+    # root node (blank grid) if none exists at depth 0
+    if not states[0]:
+        y0 = "Output:\n" + "\n".join(["_ _ _ _ _"]*5) + "\n"
+        root = {'step': None, 'connect': None, 'current': y0}
+        states[0] = [root]
+        nodes = 1
+
+    stack = [(0, 0)]
+
+    while stack:
+        depth, idx_in_level = stack.pop()
+        parent_state = states[depth][idx_in_level]
+        print(f"depth {depth} with idx {idx_in_level} parent state {parent_state}")
+
+        if depth >= max_depth:
+            continue
+
+        new_ys_triplets = []
+        attempt = 0 
+        while(new_ys_triplets == [] and attempt < 3):
+            new_ys_triplets = get_proposals_v1(task, parent_state, idx_in_level, x=x, K=K, M=M)
+            attempt += 1
         
-    elapsed = time.perf_counter() - start
-    value_time += elapsed
-    
-    value = task.value_outputs_unwrap(x, "", value_outputs)
-    if cache_value:
-        task.value_cache[user] = value
-    return value
+        print(f'__new ys__ {new_ys_triplets}')
+        if not new_ys_triplets:
+            continue
 
-def get_values_v1(task, x, ys, n_evaluate_sample, cache_value=True):
-    values = []
-    local_value_cache = {}
-    for p,i,s in ys:  # each partial output
-        if s in local_value_cache:  # avoid duplicate candidates
-            value = 0
-        else:
-            value = get_value(task, x, s, n_evaluate_sample, cache_value=cache_value)
-            local_value_cache[s] = value
-        print(f'Get value for p: {p}  s: {s} value: {value}')
-        values.append(value)
-    return values
+        child_ys = [t[2] for t in new_ys_triplets]
+        values = get_values_v1(task, x, child_ys, n_eval=1)
 
-def get_proposals_v1(task, current, index, feedback = None): 
-    print(f'\nGetting proposals for index {index} with current = {current}')
-    global propose_num, propose_time
-    propose_num += 1
-    
-    system, user = task.propose_sys_prompt_wrap(current)
-    # proposals = gpt(propose_prompt, n=1, stop=None)[0].split('\n')
-    start = time.perf_counter()
-    proposals = llama(user, system, n=1, stop=None, query_task = 'propose')[0].split('\n')
-    # print(proposals)
-    elapsed = time.perf_counter() - start
-    propose_time += elapsed
-    proposals, states_new = task.propose_prompt_unwrap(current, proposals)
-    # print(f'The proposals for {y} is \n {proposals}')
-    return [(proposal, index, state_new) for proposal, state_new in zip(proposals, states_new)]
+        ranked = sorted(zip(new_ys_triplets, values), key=lambda z: z[1], reverse=True)[:branch]
 
-def get_current_numbers(y: str) -> str:
-    last_line = y.strip().split('\n')[-1]
-    return last_line.split('left: ')[-1].split(')')[0]
+        # ensure next layer
+        if (depth + 1) not in states:
+            states[depth + 1] = []
 
-def check_answer(reasoning_steps): #This is only for game of 24
-    for i,s in enumerate(reasoning_steps):
-        if len(s.split()) == 1 and float(s.strip()) == 24:
-            print("Found the answer! \n")
-            return i,s
-    return 0,None
-
-def reasoning(task, step, x, feedback = None, single = None):
-    global nodes
-    #if prev_level only one element(first node or refinement), single signal the index of previous thoughts
-    #this should be improved
-    while step < 3:
-        new_ys = [get_proposals_v1(task, state['current'], i, feedback) for i, state in enumerate(states[step])]
-        # else:
-        # new_ys = [get_proposals_v1(task, x, y, single, feedback) for state in states[step]]
-        feedback = None
-        single = None
-        new_ys = list(itertools.chain(*new_ys))
-        ids = list(range(len(new_ys)))
+        print(f"rank: {ranked}")
         
-        #SLM evaluate
-        print(f'--Get value for--: {new_ys}')
-        values = get_values_v1(task, x, new_ys, 3)  #n_evaluate_sample=3
-        #Select top ans
-        select_ids = sorted(ids, key=lambda x: values[x], reverse=True)[:5] #n_select_sample=5
-        select_new_ys = [new_ys[select_id] for select_id in select_ids]
+        # store children nodes
+        states[depth + 1].extend([
+            {'step': trip[0], 'connect': trip[1], 'current': trip[2]} for (trip, _v) in ranked
+        ])
+        nodes += len(ranked)
 
-        #log
-        # print(f'-- new step of {step}\n')
-        sorted_new_ys, sorted_values = zip(*sorted(zip(new_ys, values), key=lambda x: x[1], reverse=True))
-        print(f'-- new_ys --: {new_ys}\n-- values -- {values}\n-- sorted_new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
-        
-        #update thoughts tree
-        states[step + 1] = [{'step': p, 'connect': i, 'current': s} for (p, i, s) in select_new_ys]
-        prev_level = [y for (y,i,s) in select_new_ys]
-        indices = [i for (y,i,s) in select_new_ys]
-        reasoning_steps = [s for (y,i,s) in select_new_ys]
-        
-        print(f"--Reasoning-- {reasoning_steps}")
-        
-        thoughts[step] = prev_level
-        connection[step] = indices
-        steps[step] = reasoning_steps
-        nodes += len(prev_level)
-        
-        step += 1
-        print(f'--Step--: {step}')
-        idx, ans = check_answer(reasoning_steps)
-        if ans != None:
-            print("Find final answer!\n")
-            return idx, ans, step
-    print("Could not find answer, return most probable steps\n")
-    return 0, states[step][0]['step'], step
+        # check if solved
+        cand_y = [trip[2] for (trip, _v) in ranked]
+        idx_sol, ans = check_answer(cand_y, task=task, x=x)
+        if ans is not None:
+            return idx_sol, ans, depth + 1
+
+        # push onto DFS stack (highest score explored first)
+
+        start_idx = len(states[depth + 1]) - len(ranked)
+        for local_pos in range(len(ranked) - 1, -1, -1):
+            child_idx_global = start_idx + local_pos
+            stack.append((depth + 1, child_idx_global))
+
+    # fallback
+    last_depth = max((d for d in states if states[d]), default=0)
+    fallback_y = states[last_depth][0]['current'] if states[last_depth] else "Output:\n" + "\n".join(["_ _ _ _ _"]*5) + "\n"
+    print("DFS could not find exact solution, returning a likely candidate.")
+    return 0, fallback_y, last_depth
 
 def validate(task, x, f_step):
     global validate_time, validators
@@ -190,7 +191,7 @@ def retrieve_steps(num_steps, idx, y):
     intermediate_state.reverse()
     return intermediate_state, thought_chain, chain_index
 
-def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
+def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = False, do_validate = True):
     global gpt
     global thoughts, connection, steps, validators, correctness_r, suggestion_r
     global value_num, value_time
@@ -198,91 +199,95 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
     global validate_num, validate_time
     global nodes
     global states, repeat_value
+    global instruct_model
     
     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
-    model_setup(slm, TGI_arg = False)
+    instruct_model = model_setup(slm, instruct_model_arg, TGI_arg = False)
     
-    nodes = 1
-    propose_num = value_num = 0
-    propose_time = value_time = 0
-    validate_num = validate_time = 0
-    repeat_value = 0
+    # nodes = 1
+    # propose_num = value_num = 0
+    # propose_time = value_time = 0
+    # validate_num = validate_time = 0
+    # repeat_value = 0
     
-    thoughts = [[] for _ in range(task.steps)]
-    connection = [[] for _ in range(task.steps)]
-    steps = [[] for _ in range(task.steps)]
-    states = [[] for _ in range(task.steps + 1)]
+    # thoughts = [[] for _ in range(task.steps)]
+    # connection = [[] for _ in range(task.steps)]
+    # steps = [[] for _ in range(task.steps)]
+    # states = [[] for _ in range(task.steps + 1)]
     
-    all_states = []
-    validators = []
-    correctness_r = []
-    suggestion_r = []
-    all_thoughts = []
-    llama_ans = []
+    # all_states = []
+    # validators = []
+    # correctness_r = []
+    # suggestion_r = []
+    # all_thoughts = []
+    # llama_ans = []
     
-    print(gpt)
+    # print(gpt)
     
+    states = {}   # depth -> list[{'step','connect','current'}]
+    nodes = 0
+    
+    idx = 1
     x = task.get_input(idx)  # input
     print(f'x = {x}\n')
     
-    states[0].append({'step': '', 'connect': 0, 'current': x})
-    print(states[0])
+    # states[0].append({'step': '', 'connect': 0, 'current': x})
     
     # prev_level = ['']
-    val_count = 0
-    step = 0
-    single = 0
-    while(val_count < 3): # call large model for at most three times
-        idx, y, st = reasoning(task, step, x, feedback = None, single = single)
-        print(f'--States-- {states}')
+    # val_count = 0
+    # step = 0
+    # single = 0
+    # while(val_count < 1): # call large model for at most three times
+    #     idx, y, st = reasoning(task, step, x, feedback = None, single = single)
+    #     print(f'--States-- {states}')
         
-        all_thoughts.append(copy.deepcopy(thoughts))
-        all_states.append(copy.deepcopy(states))
-        intermediate_state, thought_chain, chain_index = retrieve_steps(st, idx, y)
-        llama_ans.append(thought_chain)
-        print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
-        if not do_validate:
-            print(f"Output from reasoning! idx: {idx} \n y: {y} \n st: {st}")
-            evaluation = {'validators': validators, 'correctness': correctness_r, 'suggestions': suggestion_r}
-            return x, thought_chain, all_thoughts, evaluation, llama_ans, nodes, all_states
+    #     all_thoughts.append(copy.deepcopy(thoughts))
+    #     all_states.append(copy.deepcopy(states))
+    #     intermediate_state, thought_chain, chain_index = retrieve_steps(st, idx, y)
+    #     llama_ans.append(thought_chain)
+    #     print(f'Retrieve steps: {thought_chain} \n Chainindex: {chain_index}')
+    #     if not do_validate:
+    #         print(f"Output from reasoning! idx: {idx} \n y: {y} \n st: {st}")
+    #         evaluation = {'validators': validators, 'correctness': correctness_r, 'suggestions': suggestion_r}
+    #         return x, thought_chain, all_thoughts, evaluation, llama_ans, nodes, all_states
 
-        validate_num += 1
-        # validate_outputs = validate(task, x, thought_chain)
-        # validators.append(validate_outputs)
-        # redo_s, feedback = task.validate_unwrap(validate_outputs)
-        # redo_s, feedback = validate(task, x, thought_chain)
-        redo_s, feedback = evaluate(task, x, thought_chain)
-        print(f'redo {redo_s} feedback: {feedback}')
+    #     validate_num += 1
+    #     # validate_outputs = validate(task, x, thought_chain)
+    #     # validators.append(validate_outputs)
+    #     # redo_s, feedback = task.validate_unwrap(validate_outputs)
+    #     # redo_s, feedback = validate(task, x, thought_chain)
+    #     redo_s, feedback = evaluate(task, x, thought_chain)
+    #     print(f'redo {redo_s} feedback: {feedback}')
         
-        possible_steps = [p for p in feedback.split("\n") if any(ch.isdigit() for ch in p)]
+    #     possible_steps = [p for p in feedback.split("\n") if any(ch.isdigit() for ch in p)]
         
-        if(redo_s == -1):
-            break
-        if(feedback != ""):
-            # prev_level = [feedback]
-            prev_level = possible_steps
-            step = redo_s + 1
-            prev_idx = chain_index[redo_s]
-            print(f'possible steps: {possible_steps}, connect: {prev_idx}')
-            # states[step] = [{'step': feedback, 'connect': prev_idx, 'current': task.manage_state(states[redo_s][prev_idx]["current"], feedback)}]
-            states[step] = [{'step': possible_step, 'connect': prev_idx, 'current': task.manage_state(states[redo_s][prev_idx]["current"], possible_step)} for possible_step in possible_steps]
-            print(f"before thoughts{thoughts} steps{steps}")
-            # thoughts[redo_s][prev_idx] = feedback
-            # steps[redo_s][prev_idx] = feedback
-            thoughts[redo_s] = possible_steps
-            steps[redo_s] = possible_steps
-            print(f"after thoughts{thoughts} steps{steps}")
-        else:
-            if(redo_s == 0):
-                prev_level = ['']
-                single = 0
-            else:
-                prev_level = thoughts[redo_s - 1]
-                single = None
-            step = redo_s
-        print(f'prev_level {prev_level} \nstep {step}\nsingle{single if single else -1}')
-        # print(f'The validate result: \n {validate_outputs}\n')
-        val_count += 1
+    #     if(redo_s == -1):
+    #         break
+    #     if(feedback != ""):
+    #         # prev_level = [feedback]
+    #         prev_level = possible_steps
+    #         step = redo_s + 1
+    #         prev_idx = chain_index[redo_s]
+    #         print(f'possible steps: {possible_steps}, connect: {prev_idx}')
+    #         # states[step] = [{'step': feedback, 'connect': prev_idx, 'current': task.manage_state(states[redo_s][prev_idx]["current"], feedback)}]
+    #         states[step] = [{'step': possible_step, 'connect': prev_idx, 'current': task.manage_state(states[redo_s][prev_idx]["current"], possible_step)} for possible_step in possible_steps]
+    #         print(f"before thoughts{thoughts} steps{steps}")
+    #         # thoughts[redo_s][prev_idx] = feedback
+    #         # steps[redo_s][prev_idx] = feedback
+    #         thoughts[redo_s] = possible_steps
+    #         steps[redo_s] = possible_steps
+    #         print(f"after thoughts{thoughts} steps{steps}")
+    #     else:
+    #         if(redo_s == 0):
+    #             prev_level = ['']
+    #             single = 0
+    #         else:
+    #             prev_level = thoughts[redo_s - 1]
+    #             single = None
+    #         step = redo_s
+    #     print(f'prev_level {prev_level} \nstep {step}\nsingle{single if single else -1}')
+    #     # print(f'The validate result: \n {validate_outputs}\n')
+    #     val_count += 1
         
         # print(f'Receive result from reasoning:\n{y} \n with index {idx}\n')
     
@@ -301,11 +306,39 @@ def solve_v1(args, task, idx, slm = 'llama', do_validate = True):
         #     print(f'step {i} \n')
         #     for t in ts:
         #         print(f'{t} \n')
-    print(f'Repeat value time: {repeat_value}')
-    avg_validate = validate_time/validate_num
-    print(f'validate average time: {avg_validate}')
-    evaluation = {'validators': validators, 'correctness': correctness_r, 'suggestions': suggestion_r}
-    return x, feedback, all_thoughts, evaluation, llama_ans, nodes, all_states
+    # print(f'Repeat value time: {repeat_value}')
+    # avg_validate = validate_time/validate_num
+    # print(f'validate average time: {avg_validate}')
+    # evaluation = {'validators': validators, 'correctness': correctness_r, 'suggestions': suggestion_r}
+    sol_idx, sol_y, depth = reasoning_dfs(task, x, max_depth=12, branch=5, K=5, M=3)
+    info = task.test_output(idx, sol_y)
+
+    # results.append({
+    #     'idx': idx,
+    #     'depth': depth,
+    #     'nodes': nodes,
+    #     'y': sol_y,
+    #     'info': info
+    # })
+    print(f"__state__ {states}")
+    
+    print(f"__my ans_ \n" + sol_y)
+    
+    
+    correct_words = task.env.ans_gt
+    
+    print("__Correct Answer Key__")
+    
+    print("Horizontal:")
+    for i in range(5):
+        print(f"  h{i+1}. {correct_words[i]}")
+
+    print("Vertical:")
+    for i in range(5, 10):
+        print(f"  v{i-5+1}. {correct_words[i]}")
+
+    print(f"[{idx}] depth={depth} nodes={nodes}  r_word={info['r_word']:.3f}  r_letter={info['r_letter']:.3f}  r_game={info['r_game']}")
+    return sol_idx, sol_y, depth, states
       
 def get_time():
     global propose_num, propose_time, value_num, value_time
@@ -313,67 +346,67 @@ def get_time():
     print(f"value num: {value_num}, value time per num: {(value_time/value_num):.6f}")
     return propose_num, value_num, validate_num, (propose_time/propose_num), (value_time/value_num), (validate_time/validate_num)
 
-def get_proposals(task, x, y): 
-    global propose_num, propose_time
-    propose_num += 1
-    propose_prompt = task.propose_prompt_wrap(x, y)
-    start = time.perf_counter()
-    proposals = gpt(propose_prompt, n=1, stop=None, max_tokens=200)[0].split('\n')
-    elapsed = time.perf_counter() - start
-    propose_time += elapsed
-    proposals = [s for s in proposals if not ("Input" in s or "steps" in s)]
-    return [y + _ + '\n' for _ in proposals]
+# def get_proposals(task, x, y): 
+#     global propose_num, propose_time
+#     propose_num += 1
+#     propose_prompt = task.propose_prompt_wrap(x, y)
+#     start = time.perf_counter()
+#     proposals = gpt(propose_prompt, n=1, stop=None, max_tokens=200)[0].split('\n')
+#     elapsed = time.perf_counter() - start
+#     propose_time += elapsed
+#     proposals = [s for s in proposals if not ("Input" in s or "steps" in s)]
+#     return [y + _ + '\n' for _ in proposals]
 
-def solve(args, task, idx, to_print=True):
-    global gpt
-    global thoughts
-    global value_num, value_time
-    global propose_num, propose_time
-    nodes_num = 1
+# def solve(args, task, idx, to_print=True):
+#     global gpt
+#     global thoughts
+#     global value_num, value_time
+#     global propose_num, propose_time
+#     nodes_num = 1
     
-    thoughts = [[] for _ in range(task.steps)]
-    gpt = partial(gpt, model=args.backend, temperature=args.temperature)
-    propose_num = value_num = 0
-    propose_time = value_time = 0
-    print(gpt)
-    x = task.get_input(idx)  # input
-    print(f"x = {x}")
-    ys = ['']  # current output candidates
-    infos = []
-    for step in range(task.steps):
-        # generation
-        new_ys = [get_proposals(task, x, y) for y in ys]
-        new_ys = list(itertools.chain(*new_ys))
-        ids = list(range(len(new_ys)))
-        # evaluation
-        if args.method_evaluate == 'vote':
-            values = get_votes(task, x, new_ys, args.n_evaluate_sample)
-        elif args.method_evaluate == 'value':
-            values = get_values(task, x, new_ys, args.n_evaluate_sample)
+#     thoughts = [[] for _ in range(task.steps)]
+#     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
+#     propose_num = value_num = 0
+#     propose_time = value_time = 0
+#     print(gpt)
+#     x = task.get_input(idx)  # input
+#     print(f"x = {x}")
+#     ys = ['']  # current output candidates
+#     infos = []
+#     for step in range(task.steps):
+#         # generation
+#         new_ys = [get_proposals(task, x, y) for y in ys]
+#         new_ys = list(itertools.chain(*new_ys))
+#         ids = list(range(len(new_ys)))
+#         # evaluation
+#         if args.method_evaluate == 'vote':
+#             values = get_votes(task, x, new_ys, args.n_evaluate_sample)
+#         elif args.method_evaluate == 'value':
+#             values = get_values(task, x, new_ys, args.n_evaluate_sample)
 
-        # if step == task.steps - 1:
-        #     print(f"Reach final layer! \n x = {x} \n new_ys = {new_ys} \n value = {values}")
-        # selection
-        if args.method_select == 'sample':
-            ps = np.array(values) / sum(values)
-            select_ids = np.random.choice(ids, size=args.n_select_sample, p=ps).tolist()
-        elif args.method_select == 'greedy':
-            select_ids = sorted(ids, key=lambda x: values[x], reverse=True)[:args.n_select_sample]
-        select_new_ys = [new_ys[select_id] for select_id in select_ids]
+#         # if step == task.steps - 1:
+#         #     print(f"Reach final layer! \n x = {x} \n new_ys = {new_ys} \n value = {values}")
+#         # selection
+#         if args.method_select == 'sample':
+#             ps = np.array(values) / sum(values)
+#             select_ids = np.random.choice(ids, size=args.n_select_sample, p=ps).tolist()
+#         elif args.method_select == 'greedy':
+#             select_ids = sorted(ids, key=lambda x: values[x], reverse=True)[:args.n_select_sample]
+#         select_new_ys = [new_ys[select_id] for select_id in select_ids]
 
-        # log
-        if to_print: 
-            sorted_new_ys, sorted_values = zip(*sorted(zip(new_ys, values), key=lambda x: x[1], reverse=True))
-            print(f'-- new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
+#         # log
+#         if to_print: 
+#             sorted_new_ys, sorted_values = zip(*sorted(zip(new_ys, values), key=lambda x: x[1], reverse=True))
+#             print(f'-- new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
         
-        infos.append({'step': step, 'x': x, 'ys': ys, 'new_ys': new_ys, 'values': values, 'select_new_ys': select_new_ys})
-        ys = select_new_ys
-        thoughts[step] = ys
-        nodes_num += len(ys)
-        ans = check_answer(ys)
-        if ans != None:
-            print("Find final answer!\n")
-            return x, [ans], {'steps': infos}, thoughts, nodes_num
-    if to_print: 
-        print(ys)
-    return x, ys, {'steps': infos}, thoughts, nodes_num
+#         infos.append({'step': step, 'x': x, 'ys': ys, 'new_ys': new_ys, 'values': values, 'select_new_ys': select_new_ys})
+#         ys = select_new_ys
+#         thoughts[step] = ys
+#         nodes_num += len(ys)
+#         ans = check_answer(ys)
+#         if ans != None:
+#             print("Find final answer!\n")
+#             return x, [ans], {'steps': infos}, thoughts, nodes_num
+#     if to_print: 
+#         print(ys)
+#     return x, ys, {'steps': infos}, thoughts, nodes_num

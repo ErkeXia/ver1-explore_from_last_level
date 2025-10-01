@@ -337,6 +337,8 @@ def model_setup(model_name_arg, instruct_model = True, TGI_arg = True):
     if model_name == 'llama':
         if instruct_model:
             model_id = "meta-llama/Llama-3.1-8B-Instruct"
+        else:
+            model_id = "meta-llama/Llama-3.1-8B"
     elif model_name == 'mistral':
         if instruct_model:
             model_id = "mistralai/Mistral-7B-Instruct-v0.3"
@@ -392,30 +394,6 @@ def llama_instruct(user_prompt, system_prompt = "You are a helpful assistant", t
     # print(model.config._attn_implementation)
 
     outputs = []
-    
-    # if TGI:
-    #     TGI_prompt = format_chat_prompt_TGI(user_prompt, system_prompt)
-    #     for _ in range(n):
-    #         response = client.generate(
-    #             TGI_prompt,
-    #             max_new_tokens=max_tokens,
-    #             temperature=temperature,
-    #             top_p=0.9,
-    #             do_sample=True,
-    #             return_full_text=False
-    #         )
-    #         output_text = response.generated_text
-
-    #         # prompt_token_count = len(tokenizer.encode(prompt))
-    #         # completion_token_count = len(tokenizer.encode(output_text))
-    #         # prompt_llama_tokens += prompt_token_count
-    #         # llama_tokens += completion_token_count
-
-    #         if output_text.strip() == "":
-    #             print(f"TGI output empty for prompt: {TGI_prompt}")
-    #         outputs.append(output_text)
-    #     return outputs
-    
     system_part, user_part = format_chat_prompt(user_prompt, system_prompt)
     # print(f"system: {system_part} user: {user_part}")
     
@@ -480,7 +458,6 @@ class StopOnSequences(StoppingCriteria):
         return False
 
 
-
 def base_model(prompt: str, temperature: float = 0.7, max_tokens: int = 1000, n: int = 1, stop: list[str] | None = None) -> list[str]:
     enc = tokenizer(prompt, return_tensors="pt", add_special_tokens=True)
     input_ids = enc["input_ids"].to(model.device)
@@ -527,7 +504,6 @@ def base_model(prompt: str, temperature: float = 0.7, max_tokens: int = 1000, n:
         outputs.append(text.strip())
     return outputs
 
-
 @backoff.on_exception(backoff.expo, openai.error.OpenAIError)
 def completions_with_backoff(**kwargs):
     return openai.ChatCompletion.create(**kwargs)
@@ -568,3 +544,32 @@ def gpt_usage(backend="gpt-4"):
 def llama_usage():
     global prompt_llama_tokens, llama_tokens
     return {"llama_completion_tokens": llama_tokens, "llama_prompt_tokens": prompt_llama_tokens}
+
+
+
+
+# TGI CODE
+ 
+    # if TGI:
+    #     TGI_prompt = format_chat_prompt_TGI(user_prompt, system_prompt)
+    #     for _ in range(n):
+    #         response = client.generate(
+    #             TGI_prompt,
+    #             max_new_tokens=max_tokens,
+    #             temperature=temperature,
+    #             top_p=0.9,
+    #             do_sample=True,
+    #             return_full_text=False
+    #         )
+    #         output_text = response.generated_text
+
+    #         # prompt_token_count = len(tokenizer.encode(prompt))
+    #         # completion_token_count = len(tokenizer.encode(output_text))
+    #         # prompt_llama_tokens += prompt_token_count
+    #         # llama_tokens += completion_token_count
+
+    #         if output_text.strip() == "":
+    #             print(f"TGI output empty for prompt: {TGI_prompt}")
+    #         outputs.append(output_text)
+    #     return outputs
+    

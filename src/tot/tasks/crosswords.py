@@ -234,7 +234,7 @@ class MiniCrosswordsTask(Task):
         proposals = sorted(proposals_to_scores.items(), key=lambda x: x[1], reverse=True)
         if n_max_propose != -1:
             proposals = proposals[:n_max_propose]
-        proposals = [y + proposal[0] + '\n' for proposal in proposals]
+        proposals = [proposal[0] + '\n' for proposal in proposals]
         self.cache_proposals[(x, y, n_max_propose)] = proposals
         return proposals
     
@@ -243,11 +243,12 @@ class MiniCrosswordsTask(Task):
         assert n_evaluate_sample == 1 # TODO: ad hoc
         count = {'sure': 0, 'maybe': 0, 'impossible': 0}
         for ans, data, status in zip(self.env.ans, self.env.data, self.env.status):
-            if ans.count('_') >= 4: continue
+            if ans.count('_') >= 3: continue
             ans = ' '.join(ans.lower())
             line = f'{data}: {ans}'
             prompt = value_prompt.format(input=line)
-            res = gpt(prompt)[0]
+            # res = gpt(prompt)[0]
+            res = base_model(prompt)[0]
             print(line)
             print(res)
             print()

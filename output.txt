@@ -1,104 +1,45 @@
-functools.partial(<function gpt at 0x784d935cd090>, model='gpt-4', temperature=0.7)
-x = 3 4 5 7
+x = h1. An agendum; something to be done
+h2. One who wires
+h3. To stir up; to remove from office
+h4. Ascended; awakened
+h5. To put into action
+v1. Mindful; conscious
+v2. A gadget
+v3. Notched or uneven, as if gnawed away (cognate with "erode")
+v4. Not ever
+v5. Drenched; drowned
 
-[{'step': '', 'connect': 0, 'current': '3 4 5 7'}]
 
-Getting proposals for index 0 with current = 3 4 5 7
-Current number is: 3 4 5 7
-Possible next step: ['3 + 4 = 7', '4 + 3 = 7', '3 * 4 = 12', '4 * 3 = 12', '5 - 7 = -2', '7 - 5 = 2', '7 / 5 = 1', '5 / 7 = 0'] 
-New states: ['5 7 7', '5 7 7', '5 7 12', '5 7 12', '3 4 -2', '3 4 2', '3 4 1', '3 4 0']
---Get value for--: [('3 + 4 = 7', 0, '5 7 7'), ('4 + 3 = 7', 0, '5 7 7'), ('3 * 4 = 12', 0, '5 7 12'), ('4 * 3 = 12', 0, '5 7 12'), ('5 - 7 = -2', 0, '3 4 -2'), ('7 - 5 = 2', 0, '3 4 2'), ('7 / 5 = 1', 0, '3 4 1'), ('5 / 7 = 0', 0, '3 4 0')]
-Get value time: 8.109005041000046
-Get value for p: 3 + 4 = 7  s: 5 7 7 value: 62.002
-Get value for p: 4 + 3 = 7  s: 5 7 7 value: 0
-Get value time: 8.1093288940001
-Get value for p: 3 * 4 = 12  s: 5 7 12 value: 21.001
-Get value for p: 4 * 3 = 12  s: 5 7 12 value: 0
-Get value time: 8.096448487000089
-Get value for p: 5 - 7 = -2  s: 3 4 -2 value: 21.001
-Get value time: 23.41015999199999
-Get value for p: 7 - 5 = 2  s: 3 4 2 value: 41.002
-Get value time: 15.94422650599995
-Get value for p: 7 / 5 = 1  s: 3 4 1 value: 1.002
-Get value time: 15.544218747000059
-Get value for p: 5 / 7 = 0  s: 3 4 0 value: 41.0
--- new_ys --: [('3 + 4 = 7', 0, '5 7 7'), ('4 + 3 = 7', 0, '5 7 7'), ('3 * 4 = 12', 0, '5 7 12'), ('4 * 3 = 12', 0, '5 7 12'), ('5 - 7 = -2', 0, '3 4 -2'), ('7 - 5 = 2', 0, '3 4 2'), ('7 / 5 = 1', 0, '3 4 1'), ('5 / 7 = 0', 0, '3 4 0')]
--- values -- [62.002, 0, 21.001, 0, 21.001, 41.002, 1.002, 41.0]
--- sorted_new_ys --: (('3 + 4 = 7', 0, '5 7 7'), ('7 - 5 = 2', 0, '3 4 2'), ('5 / 7 = 0', 0, '3 4 0'), ('3 * 4 = 12', 0, '5 7 12'), ('5 - 7 = -2', 0, '3 4 -2'), ('7 / 5 = 1', 0, '3 4 1'), ('4 + 3 = 7', 0, '5 7 7'), ('4 * 3 = 12', 0, '5 7 12'))
--- sol values --: (62.002, 41.002, 41.0, 21.001, 21.001, 1.002, 0, 0)
--- choices --: [('3 + 4 = 7', 0, '5 7 7'), ('7 - 5 = 2', 0, '3 4 2'), ('5 / 7 = 0', 0, '3 4 0'), ('3 * 4 = 12', 0, '5 7 12'), ('5 - 7 = -2', 0, '3 4 -2')]
+depth 0 with idx 0 parent state {'step': None, 'connect': None, 'current': 'Output:\n_ _ _ _ _\n_ _ _ _ _\n_ _ _ _ _\n_ _ _ _ _\n_ _ _ _ _\n'}
+raw proposals from llama ['You can list only one answer for each word, and you are not allowed to change your answer.', 'If you think a word is wrong, you can list it as "h1. apple (low)".\n\nIn the next round, we\'ll do a 6 x 6 crossword.', '', '', '']
+Actions applied []
+raw proposals from llama ['', 'Please try to explain your reasoning, e.g. "because of the \'v\' and \'e\' in the current board". It helps the rest of us to understand the process.\n\nRemember, this is not a race, so don\'t worry if you\'re a little behind. You can ask for hints if you\'re stuck, but please try to solve the puzzle on your own first.\n\nIf you find a mistake or a typo in the puzzle, please edit the wiki and fix it. Thanks!\n\nWhen you\'re done, check your answers with the solutions.\n\nHave fun!\n\nThe puzzle was created by @ralfkuester, @steverosen and @kathrin_ohm. Thanks to @lucy_c for editing the wiki!\n\n• @ralfkuester is this a new puzzle type? –\xa0r3mainer Mar 14 \'18 at 21:33\n• @r3mainer I think it\'s just a different way to present the', '', '', '']
+Actions applied []
+raw proposals from llama ["The solution will be posted in 24 hours, feel free to ask questions if you get stuck.\n\n• It seems to me that v3 could be either 'gnawed' or 'gnarled' –\xa0Rand al'Thor Jun 29 '15 at 16:04\n• @randal'thor I had the same thought, but the definition for v3 suggests gnawed to me. –\xa0Bailey M Jun 29 '15 at 16:04\n• @BaileyM I'm not sure. I'd say that the first part of the definition suggests gnawed, but the second part (as if gnawed away) suggests gnarled. –\xa0Rand al'Thor Jun 29 '15 at 16:07\n• @randal'thor I think gnawed is the correct answer, but the second part of the definition is just an example of something that might be gnawed. –\xa0Bailey M", '', 'If you change your mind, simply edit your post. You can also add words that you have no idea about to the "Unfilled" section.\nYou can also list some words that you are certain about, but please don\'t post more then 2 words that are certain.\n\nHere is a list of the words that you can use, but not all of them are correct answers:\n\n• v1. mindful\n• v2. gadget\n• v3. gnawed\n• v4. never\n• v5. drowned\n• h1. agenda\n• h2. wire\n• h3. remove\n• h4. ascended\n• h5. put\n\nYou can use this list as a hint, but you should try to solve the crossword without it first.\n\n• I don\'t know why the 5x5 grid is so popular. The 4x4 is much harder and more fun. –\xa0Engineer Toast Mar 28 \'16 at', '', '']
+Actions applied []
+__new ys__ []
+DFS could not find exact solution, returning a likely candidate.
+__state__ {0: [{'step': None, 'connect': None, 'current': 'Output:\n_ _ _ _ _\n_ _ _ _ _\n_ _ _ _ _\n_ _ _ _ _\n_ _ _ _ _\n'}]}
+__my ans_ 
+Output:
+_ _ _ _ _
+_ _ _ _ _
+_ _ _ _ _
+_ _ _ _ _
+_ _ _ _ _
 
---Reasoning-- ['5 7 7', '3 4 2', '3 4 0', '5 7 12', '3 4 -2']
---Step--: 1
-
-Getting proposals for index 0 with current = 5 7 7
-Current number is: 5 7 7
-Possible next step: ['7 + 7 = 14', '7 - 7 = 0', '7 * 7 = 49', '7 / 7 = 1', '5 + 7 = 12', '5 - 7 = -2', '5 * 7 = 35', '5 / 7 = 0.7142857142857143'] 
-New states: ['5 14', '5 0', '5 49', '5 1', '7 12', '7 -2', '7 35', '7 0.7142857142857143']
-
-Getting proposals for index 1 with current = 3 4 2
-Current number is: 3 4 2
-Possible next step: ['3 + 2 = 5', '4 + 2 = 6', '2 + 4 = 6', '3 - 2 = 1', '4 - 2 = 2', '2 - 4 = -2', '3 * 2 = 6', '4 * 2 = 8'] 
-New states: ['4 5', '3 6', '3 6', '4 1', '3 2', '3 -2', '4 6', '3 8']
-
-Getting proposals for index 2 with current = 3 4 0
-Current number is: 3 4 0
-Possible next step: ['3 + 4 = 7', '3 * 4 = 12', '4 + 0 = 4', '4 - 0 = 4', '0 + 4 = 4', '0 * 4 = 0', '0 - 4 = -4', '0 / 4 = 0'] 
-New states: ['0 7', '0 12', '3 4', '3 4', '3 4', '3 0', '3 -4', '3 0']
-
-Getting proposals for index 3 with current = 5 7 12
-Current number is: 5 7 12
-Possible next step: ['5 - 7 = 8', '7 - 5 = 2', '5 + 12 = 17', '12 + 5 = 17', '12 - 5 = 7', '12 / 5 = 2', '5 / 7 = 0', '12 / 7 = 1'] 
-New states: ['12 8', '12 2', '7 17', '7 17', '7 7', '7 2', '12 0', '5 1']
-
-Getting proposals for index 4 with current = 3 4 -2
-Current number is: 3 4 -2
-Possible next step: ['3 - 2 = 1', '4 + 2 = 6', '4 - 2 = 2', '3 - 4 = -1', '3 - 2 = 1', '4 + 2 = 6', '3 + 4 = 7', '-2 + 4 = 2'] 
-New states: ['4 -2 1', '3 -2 6', '3 -2 2', '-2 -1', '4 -2 1', '3 -2 6', '-2 7', '3 2']
---Get value for--: [('7 + 7 = 14', 0, '5 14'), ('7 - 7 = 0', 0, '5 0'), ('7 * 7 = 49', 0, '5 49'), ('7 / 7 = 1', 0, '5 1'), ('5 + 7 = 12', 0, '7 12'), ('5 - 7 = -2', 0, '7 -2'), ('5 * 7 = 35', 0, '7 35'), ('5 / 7 = 0.7142857142857143', 0, '7 0.7142857142857143'), ('3 + 2 = 5', 1, '4 5'), ('4 + 2 = 6', 1, '3 6'), ('2 + 4 = 6', 1, '3 6'), ('3 - 2 = 1', 1, '4 1'), ('4 - 2 = 2', 1, '3 2'), ('2 - 4 = -2', 1, '3 -2'), ('3 * 2 = 6', 1, '4 6'), ('4 * 2 = 8', 1, '3 8'), ('3 + 4 = 7', 2, '0 7'), ('3 * 4 = 12', 2, '0 12'), ('4 + 0 = 4', 2, '3 4'), ('4 - 0 = 4', 2, '3 4'), ('0 + 4 = 4', 2, '3 4'), ('0 * 4 = 0', 2, '3 0'), ('0 - 4 = -4', 2, '3 -4'), ('0 / 4 = 0', 2, '3 0'), ('5 - 7 = 8', 3, '12 8'), ('7 - 5 = 2', 3, '12 2'), ('5 + 12 = 17', 3, '7 17'), ('12 + 5 = 17', 3, '7 17'), ('12 - 5 = 7', 3, '7 7'), ('12 / 5 = 2', 3, '7 2'), ('5 / 7 = 0', 3, '12 0'), ('12 / 7 = 1', 3, '5 1'), ('3 - 2 = 1', 4, '4 -2 1'), ('4 + 2 = 6', 4, '3 -2 6'), ('4 - 2 = 2', 4, '3 -2 2'), ('3 - 4 = -1', 4, '-2 -1'), ('3 - 2 = 1', 4, '4 -2 1'), ('4 + 2 = 6', 4, '3 -2 6'), ('3 + 4 = 7', 4, '-2 7'), ('-2 + 4 = 2', 4, '3 2')]
-Get value time: 15.679417144999888
-Get value for p: 7 + 7 = 14  s: 5 14 value: 40.001
-Get value time: 8.141656816000022
-Get value for p: 7 - 7 = 0  s: 5 0 value: 0.003
-Get value time: 8.116062274000114
-Get value for p: 7 * 7 = 49  s: 5 49 value: 21.001
-Get value time: 8.113794612999982
-Get value for p: 7 / 7 = 1  s: 5 1 value: 0.003
-Get value time: 8.114313106999816
-Get value for p: 5 + 7 = 12  s: 7 12 value: 40.001
-Get value time: 8.104279056999985
-Get value for p: 5 - 7 = -2  s: 7 -2 value: 0.003
-Get value time: 15.553954556000008
-Get value for p: 5 * 7 = 35  s: 7 35 value: 22.0
-Get value time: 8.119960416999902
-Get value for p: 5 / 7 = 0.7142857142857143  s: 7 0.7142857142857143 value: 0.003
-Get value time: 8.10421547299984
-Get value for p: 3 + 2 = 5  s: 4 5 value: 60.0
-Get value time: 8.103187672000104
-Get value for p: 4 + 2 = 6  s: 3 6 value: 44.011
-Get value for p: 2 + 4 = 6  s: 3 6 value: 0
-Get value time: 8.106644834999997
-Get value for p: 3 - 2 = 1  s: 4 1 value: 1.002
-Get value time: 15.962124337999967
-Get value for p: 4 - 2 = 2  s: 3 2 value: 21.001
-Get value time: 15.55497960599996
-Get value for p: 2 - 4 = -2  s: 3 -2 value: 40.001
-Get value time: 8.10792976599987
-Get value for p: 3 * 2 = 6  s: 4 6 value: 60.0
-Get value time: 8.10888528999999
-Get value for p: 4 * 2 = 8  s: 3 8 value: 20.002
-Get value time: 15.558513859999948
-Get value for p: 3 + 4 = 7  s: 0 7 value: 41.002
-Get value time: 8.115333203000091
-Get value for p: 3 * 4 = 12  s: 0 12 value: 21.001
-Get value time: 8.106754405999936
-Get value for p: 4 + 0 = 4  s: 3 4 value: 40.001
-Get value for p: 4 - 0 = 4  s: 3 4 value: 0
-Get value for p: 0 + 4 = 4  s: 3 4 value: 0
-Get value time: 15.555591956999933
-Get value for p: 0 * 4 = 0  s: 3 0 value: 0.003
-Get value time: 15.558661894000124
-Get value for p: 0 - 4 = -4  s: 3 -4 value: 1.002
-Get value for p: 0 / 4 = 0  s: 3 0 value: 0
-Get value time: 8.111620958000003
-Get value for p: 5 - 7 = 8  s: 12 8 value: 20.002
+__Correct Answer Key__
+Horizontal:
+  h1. AGEND
+  h2. WIRER
+  h3. AMOVE
+  h4. RISEN
+  h5. EXERT
+Vertical:
+  v1. AWARE
+  v2. GIMIX
+  v3. EROSE
+  v4. NEVER
+  v5. DRENT
+[1] depth=0 nodes=1  r_word=0.000  r_letter=0.000  r_game=False
+257.254909 seconds
