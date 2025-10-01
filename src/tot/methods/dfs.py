@@ -4,7 +4,7 @@ import copy
 import numpy as np
 from functools import partial
 # from tot.models import gpt
-from tot.models import gpt, base_model, model_setup
+from tot.models import gpt, base_model, model_setup, llama_instruct
 
 propose_num = value_num = 0
 propose_time = value_time = 0
@@ -24,10 +24,13 @@ def apply_action_to_y(task, x, parent_y, action_line):
 # ---------------- propose children ----------------
 def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=5, M=3):
     y_parent = parent_state['current']
-
-    propose_prompt = task.propose_prompt_wrap(x, y_parent)
-    raw = base_model(propose_prompt, n=K, stop=None, max_tokens=200)
     # raw = gpt(propose_prompt, n=K, stop=None, max_tokens=200)  # ask for K samples
+    # propose_prompt = task.propose_prompt_wrap(x, y_parent)
+    # raw = base_model(propose_prompt, n=K, stop=None, max_tokens=200)
+    
+    system_prompt, user_prompt = task.propose_instruct_prompt_wrap(x, y_parent)
+    raw = llama_instruct(user_prompt, system_prompt, n=K, stop=None, max_tokens=200)
+
     print(f"raw proposals from llama {raw}")
 
     # Parse lines like "h3. apple (high)" into y+action strings

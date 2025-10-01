@@ -3,7 +3,7 @@ import os
 import json
 from tot.tasks.base import Task, DATA_PATH
 from tot.prompts.crosswords import * 
-from tot.models import gpt
+from tot.models import gpt, llama_instruct
 
 class MiniCrosswordsEnv:
     def __init__(self, file='mini0505.json'):
@@ -217,6 +217,10 @@ class MiniCrosswordsTask(Task):
         self.set_status(x, y)
         return propose_prompt.format(input=self.env.render())
     
+    def propose_instruct_prompt_wrap(self, x: str, y: str='') -> str:
+        self.set_status(x, y)
+        return system_propose_prompt, user_propose_prompt.format(input=self.env.render(), board = y)
+    
     def propose_outputs_unwrap(self, x: str, y: str, outputs: list, n_max_propose: int) -> list:
         confidence_to_value = {'certain': 1, 'high': 0.5, 'medium': 0.2, 'low': 0.1}  # TODO: ad hoc
         proposals_to_scores = {}
@@ -246,9 +250,11 @@ class MiniCrosswordsTask(Task):
             if ans.count('_') >= 3: continue
             ans = ' '.join(ans.lower())
             line = f'{data}: {ans}'
-            prompt = value_prompt.format(input=line)
+            # prompt = value_prompt.format(input=line)
             # res = gpt(prompt)[0]
-            res = base_model(prompt)[0]
+            # res = base_model(prompt)[0]
+            user_prompt = user_value_prompt.format(input=line)
+            res = llama_instruct(user_prompt, system_value_prompt)[0]
             print(line)
             print(res)
             print()

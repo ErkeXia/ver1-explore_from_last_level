@@ -33,7 +33,7 @@ task = MiniCrosswordsTask()
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
     start = time.perf_counter()
-    sol_idx, sol_y, depth, states = solve_v1(args, task, 351, slm = 'llama', do_validate = True)
+    sol_idx, sol_y, depth, states = solve_v1(args, task, 351, slm = 'llama', do_validate = True, instruct_model_arg = True)
     elapsed = time.perf_counter() - start
     print(f"{elapsed:.6f} seconds")
     # if "Answer" in y:

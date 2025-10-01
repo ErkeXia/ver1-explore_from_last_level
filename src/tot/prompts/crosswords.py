@@ -274,6 +274,51 @@ propose_prompt = '''Let's play a 5 x 5 mini crossword, where each word should ha
 Given the current status, list all possible answers for unfilled or changed words, and your confidence levels (certain/high/medium/low), using the format "h1. apple (medium)". Use "certain" cautiously and only when you are 100% sure this is the correct word. You can list more then one possible answer for each word.
 '''
 
+system_propose_prompt = '''You are an expert crossword puzzle solver. Your goal is to fill a 5 x 5 mini crossword by proposing possible 5-letter answers for the unfilled clues based on the current board.
+
+For each proposal, you must provide a confidence level (certain/high/medium/low). Your response must only contain lines formatted exactly like the examples below.
+
+### Example
+
+**Input:**
+Current Board:
+_ _ _ _ _
+_ _ _ _ _
+_ _ _ _ _
+_ _ _ _ _
+_ _ _ _ _
+
+Clues:
+h1. Scald; an ancient Scandinavian bard
+h2. H2O; to irrigate
+h3. The companion to an "intro", a postscript or exit piece
+h4. An artificial fabric
+h5. Deep religious feeling
+v1. To rush; to stoop; a descent
+v2. A New Zealand fir tree
+v3. Mine refuse
+v4. The garden dormouse
+v5. Like a drone; humming
+
+**Your Output:**
+h1. skald (high)
+h2. water (high)
+v1. swoop (medium)
+v5. drony (low)
+'''
+
+user_propose_prompt = '''
+### Your Turn
+
+**Input:**
+Current Board:
+{board}
+
+Clues:
+{input}
+
+**Your Output:**
+'''
 
 value_prompt = '''Evaluate if there exists a five letter word of some meaning that fit some letter constraints (sure/maybe/impossible).
 
@@ -323,4 +368,59 @@ I cannot think of any words now. 4 letters are constrained, and it is extremely 
 impossible
 
 {input}
+'''
+
+system_value_prompt = '''You are a language expert and logician. Your task is to evaluate if a five-letter English word exists that fits a given definition and specific letter constraints.
+
+Based on your analysis, you must conclude with a single word: "sure", "maybe", or "impossible".
+
+- "sure": You are certain a word exists and fits perfectly.
+- "maybe": You cannot find a word, but the letter constraints are not restrictive enough to rule out the possibility.
+- "impossible": The letter constraints are so restrictive that it is extremely unlikely a word exists.
+
+### Examples of Reasoning
+
+**Example 1:**
+Input:
+Incorrect; to injure: w _ o _ g
+Analysis:
+The constraint is 5 letters: w _ o _ g.
+The word "wrong" means "incorrect" and fits the pattern w r o n g.
+Conclusion:
+sure
+
+**Example 2:**
+Input:
+A person with an all-consuming enthusiasm, such as for computers or anime: _ _ _ _ u
+Analysis:
+The constraint is 5 letters: _ _ _ _ u.
+The word "otaku" fits this definition and the pattern o t a k u.
+Conclusion:
+sure
+
+**Example 3:**
+Input:
+Dewy; roscid: r _ _ _ l
+Analysis:
+The constraint is 5 letters: r _ _ _ l.
+I cannot think of a common word that fits. However, with only two letters constrained, it's still possible one exists.
+Conclusion:
+maybe
+
+**Example 4:**
+Input:
+An inn: _ d _ w f
+Analysis:
+The constraint is 5 letters: _ d _ w f.
+I cannot think of any words. The letter pattern "_d_wf" is extremely rare in English. It is highly unlikely a word with this pattern means "an inn."
+Conclusion:
+impossible
+'''
+
+user_value_prompt = '''
+### Your Turn
+
+Input:
+{input}
+Analysis:
 '''
