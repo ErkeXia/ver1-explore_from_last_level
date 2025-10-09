@@ -97,7 +97,7 @@ def format_chat_prompt(user_prompt: str, system_prompt: str = "You are a helpful
     return system_part, user_part
 
 
-def llama_instruct(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=1000, n=1, stop=None, query_task = None) -> list:
+def llama_instruct(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=200, n=1, stop=None, query_task = None) -> list:
     global prompt_llama_tokens, llama_tokens
     # print(model.config._attn_implementation)
 

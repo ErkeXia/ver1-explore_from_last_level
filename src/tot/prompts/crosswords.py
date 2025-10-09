@@ -274,12 +274,15 @@ propose_prompt = '''Let's play a 5 x 5 mini crossword, where each word should ha
 Given the current status, list all possible answers for unfilled or changed words, and your confidence levels (certain/high/medium/low), using the format "h1. apple (medium)". Use "certain" cautiously and only when you are 100% sure this is the correct word. You can list more then one possible answer for each word.
 '''
 
-system_propose_prompt = '''You are an expert crossword puzzle solver. Your goal is to fill a 5 x 5 mini crossword by proposing possible 5-letter answers for the unfilled clues based on the current board.
+system_propose_prompt = '''You are a meticulous and expert crossword puzzle solver. Your task is to analyze a 5x5 mini crossword and propose possible 5-letter answers.
 
-For each proposal, you must provide a confidence level (certain/high/medium/low). Your response must only contain lines formatted exactly like the examples below.
+**Core Directives:**
+1.  Your goal is to propose 5-letter answers for **both horizontal (h) and vertical (v) clues** that are not yet complete.
+2.  Examine **all** unfilled clues, both horizontal and vertical, before making proposals.
+3.  Assign a confidence level to each proposal: `certain`, `high`, `medium`, or `low`.
+4.  **Your response MUST ONLY contain the list of proposals.** Do not add any introductory text, explanations, or conversational remarks.
 
-### Example
-
+**Task Example:**
 **Input:**
 Current Board:
 _ _ _ _ _
@@ -303,7 +306,12 @@ v5. Like a drone; humming
 **Your Output:**
 h1. skald (high)
 h2. water (high)
+h3. outro (low)
+h4. orlon (low)
 v1. swoop (medium)
+v2. kauri (high)
+v3. attle (medium)
+v4. lerot (medium)
 v5. drony (low)
 '''
 

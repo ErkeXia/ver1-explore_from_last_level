@@ -6,6 +6,31 @@ from functools import partial
 # from tot.models import gpt
 from tot.models import gpt, base_model, model_setup, llama_instruct
 
+import json
+import os
+
+class FileCache:
+    def __init__(self, cache_file="crossword_cache.json"):
+        self.cache_file = cache_file
+        # Load existing cache from file
+        if os.path.exists(cache_file):
+            with open(cache_file, "r", encoding="utf-8") as f:
+                self.data = json.load(f)
+        else:
+            self.data = {}
+
+    def get(self, key: str):
+        """Return cached result if present, else None."""
+        return self.data.get(key)
+
+    def set(self, key: str, value: str):
+        """Store result and write to disk."""
+        self.data[key] = value
+        with open(self.cache_file, "w", encoding="utf-8") as f:
+            json.dump(self.data, f, ensure_ascii=False, indent=2)
+            
+cache = FileCache()
+
 propose_num = value_num = 0
 propose_time = value_time = 0
 
@@ -26,24 +51,30 @@ def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=
     y_parent = parent_state['current']
     print(f"proposals for {y_parent}")
     
-    # raw = gpt(propose_prompt, n=K, stop=None, max_tokens=200)  # ask for K samples
-    # propose_prompt = task.propose_prompt_wrap(x, y_parent)
-    # raw = base_model(propose_prompt, n=K, stop=None, max_tokens=200)
-    
-    system_prompt, user_prompt = task.propose_instruct_prompt_wrap(x, y_parent)
-    raw = llama_instruct(user_prompt, system_prompt, n=K, stop=None, max_tokens=200)
+    self.set_status(x, y)
+    actions = []
+    for ans, data, status in zip(self.env.ans, self.env.data, self.env.status):
+        ans = ' '.join(ans.lower())
+        line = f'{data}: {ans}'
+        action = cache.get(line)
+        if action is not None:
+            actions.append(action)
+            continue
+        system_prompt, user_prompt = task.propose_one_instruct_prompt_wrap(x, line)
+        raw = llama_instruct(user_prompt, system_prompt, n=K, stop=None, max_tokens=200)
+        print(f"raw proposals from llama {raw} for line {line}")
+        y_action = task.propose_one_outputs_unwrap(x, y_parent, raw, n_max_propose=M)
+        actions.append(y_action)
+        cache.set(line, y_action)
 
-    print(f"raw proposals from llama {raw}")
-
-    # Parse lines like "h3. apple (high)" into y+action strings
-    y_action_variants = task.propose_outputs_unwrap(x, y_parent, raw, n_max_propose=M)
-    print(f"Actions applied {y_action_variants}")
     children = []
-    for action in y_action_variants:
+    for action in actions:
         last = [ln for ln in action.strip().split("\n") if ln]
         last = last[-1] if last else ""
         if not last or (last[0] not in ("h", "v")):
             continue
+        
+        print(f'__last action__{last}')
         y_child = apply_action_to_y(task, x, y_parent, last)
         children.append((y_parent, parent_index, y_child))
     return children
@@ -401,68 +432,3 @@ def get_time():
     print(f"propose num: {propose_num}, propose time per num: {(propose_time/propose_num):.6f}")
     print(f"value num: {value_num}, value time per num: {(value_time/value_num):.6f}")
     return propose_num, value_num, validate_num, (propose_time/propose_num), (value_time/value_num), (validate_time/validate_num)
-
-# def get_proposals(task, x, y): 
-#     global propose_num, propose_time
-#     propose_num += 1
-#     propose_prompt = task.propose_prompt_wrap(x, y)
-#     start = time.perf_counter()
-#     proposals = gpt(propose_prompt, n=1, stop=None, max_tokens=200)[0].split('\n')
-#     elapsed = time.perf_counter() - start
-#     propose_time += elapsed
-#     proposals = [s for s in proposals if not ("Input" in s or "steps" in s)]
-#     return [y + _ + '\n' for _ in proposals]
-
-# def solve(args, task, idx, to_print=True):
-#     global gpt
-#     global thoughts
-#     global value_num, value_time
-#     global propose_num, propose_time
-#     nodes_num = 1
-    
-#     thoughts = [[] for _ in range(task.steps)]
-#     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
-#     propose_num = value_num = 0
-#     propose_time = value_time = 0
-#     print(gpt)
-#     x = task.get_input(idx)  # input
-#     print(f"x = {x}")
-#     ys = ['']  # current output candidates
-#     infos = []
-#     for step in range(task.steps):
-#         # generation
-#         new_ys = [get_proposals(task, x, y) for y in ys]
-#         new_ys = list(itertools.chain(*new_ys))
-#         ids = list(range(len(new_ys)))
-#         # evaluation
-#         if args.method_evaluate == 'vote':
-#             values = get_votes(task, x, new_ys, args.n_evaluate_sample)
-#         elif args.method_evaluate == 'value':
-#             values = get_values(task, x, new_ys, args.n_evaluate_sample)
-
-#         # if step == task.steps - 1:
-#         #     print(f"Reach final layer! \n x = {x} \n new_ys = {new_ys} \n value = {values}")
-#         # selection
-#         if args.method_select == 'sample':
-#             ps = np.array(values) / sum(values)
-#             select_ids = np.random.choice(ids, size=args.n_select_sample, p=ps).tolist()
-#         elif args.method_select == 'greedy':
-#             select_ids = sorted(ids, key=lambda x: values[x], reverse=True)[:args.n_select_sample]
-#         select_new_ys = [new_ys[select_id] for select_id in select_ids]
-
-#         # log
-#         if to_print: 
-#             sorted_new_ys, sorted_values = zip(*sorted(zip(new_ys, values), key=lambda x: x[1], reverse=True))
-#             print(f'-- new_ys --: {sorted_new_ys}\n-- sol values --: {sorted_values}\n-- choices --: {select_new_ys}\n')
-        
-#         infos.append({'step': step, 'x': x, 'ys': ys, 'new_ys': new_ys, 'values': values, 'select_new_ys': select_new_ys})
-#         ys = select_new_ys
-#         thoughts[step] = ys
-#         nodes_num += len(ys)
-#         ans = check_answer(ys)
-#         if ans != None:
-#             print("Find final answer!\n")
-#             return x, [ans], {'steps': infos}, thoughts, nodes_num
-#     if to_print: 
-#         print(ys)
-#     return x, ys, {'steps': infos}, thoughts, nodes_num
