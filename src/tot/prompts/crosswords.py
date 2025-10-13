@@ -328,6 +328,34 @@ Clues:
 **Your Output:**
 '''
 
+
+system_propose_one_prompt = '''You are a meticulous and expert crossword puzzle solver. Your task is to analyze a line in a 5x5 mini crossword and propose a possible 5-letter answer that fits the given definition and specific letter constraints.
+
+**Core Directives:**
+1.  Your goal is to propose a 5-letter answer for the given clue.
+2.  Assign a confidence level to your proposal: `certain`, `high`, `medium`, or `low`.
+3.  **The last line of your response MUST ONLY contain a single proposal.** Do not add any introductory text, explanations, or conversational remarks.
+
+**Task Example:**
+**Input:**
+Incorrect; to injure: w _ o _ g
+
+**Your Output:**
+The letter constraint is: 5 letters, letter 1 is w, letter 3 is o, letter 5 is g.
+Some possible words that mean "Incorrect; to injure":
+wrong: 5 letters, letter 1 is w, letter 3 is o, letter 5 is g. fit!
+wrong (high)
+'''
+
+user_propose_one_prompt = '''
+### Your Turn
+
+**Input:**
+{input}
+
+**Your Output:**
+'''
+
 value_prompt = '''Evaluate if there exists a five letter word of some meaning that fit some letter constraints (sure/maybe/impossible).
 
 Incorrect; to injure: w _ o _ g
@@ -423,6 +451,14 @@ The constraint is 5 letters: _ d _ w f.
 I cannot think of any words. The letter pattern "_d_wf" is extremely rare in English. It is highly unlikely a word with this pattern means "an inn."
 Conclusion:
 impossible
+
+**Example 5:**
+Input:
+not ever: n e v e r
+Analysis:
+The input "n e v e r" already forms a complete word that means "not ever." 
+Conclusion:
+sure
 '''
 
 user_value_prompt = '''

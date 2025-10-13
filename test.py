@@ -2,13 +2,17 @@ import argparse
 import sys
 import time
 import openai
+import os
 # from tot.methods.bfs import solve, solve_v1
 # from tot.methods.bfs_sys import solve_v1, check_answer, get_time
 # from tot.tasks.game24 import Game24Task
-from tot.methods.dfs import solve_v1
+# from tot.methods.dfs import solve_v1
+from tot.methods.dfs_cache import solve_v1
+
 
 from tot.tasks.crosswords import MiniCrosswordsTask
 from tot.models import gpt_usage, llama_usage
+from tot.cache import FileCache
 import torch
 import transformers
 # models = openai.Model.list()
@@ -30,6 +34,8 @@ task = MiniCrosswordsTask()
 # y = "13 - 11 = 2 (left: 1 2 12)\n2 * 12 = 24 (left: 1 24)\n1 * 24 = 24 (left: 24)"
 # print(task.check_multistep_solution("1 11 12 13", y))
 # check_answer(['24', '12', '576', '10', '6'])
+
+
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
     start = time.perf_counter()
@@ -55,3 +61,40 @@ with open('output.txt', 'w', buffering=1) as f:
     # print(llama_ans)
     # print(gpt_usage(model))
     # print(llama_usage())
+    
+    
+# def run_demo():
+#     """Demonstrates the basic usage of the FileCache class."""
+    
+#     demo_cache_file = "demo_cache.json"
+#     print(f"--- Running FileCache Demo ---")
+#     print(f"Using temporary cache file: '{demo_cache_file}'\n")
+
+#     # 1. Initialize the cache.
+#     # If demo_cache.json exists from a previous run, it will be loaded.
+#     cache = FileCache(demo_cache_file)
+
+#     # 2. Define a key and a value to store.
+#     clue_key = "A popular fruit: a _ p _ _"
+#     proposal_value = ("apple", 0.9) # Storing a tuple (word, score)
+
+#     # 3. Use .set() to store the value. This writes to the file.
+#     print(f"Setting cache for key: '{clue_key}'")
+#     cache.set(clue_key, proposal_value)
+#     print("Value set successfully.\n")
+
+#     # 4. Use .get() to retrieve the stored value.
+#     retrieved_value = cache.get(clue_key)
+#     print(f"Retrieving value for key: '{clue_key}'")
+#     print(f"  -> Retrieved: {retrieved_value}\n")
+
+#     # 5. Try to get a key that does not exist.
+#     non_existent_key = "An unknown clue: _ _ _ _ _"
+#     retrieved_value = cache.get(non_existent_key)
+#     print(f"Retrieving value for a non-existent key: '{non_existent_key}'")
+#     print(f"  -> Retrieved: {retrieved_value} (as expected)\n")
+    
+#     # 6. Clean up the created cache file.
+#     print(f"--- Demo Finished. Cleaning up. ---")
+        
+# run_demo()

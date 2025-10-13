@@ -5,31 +5,13 @@ import numpy as np
 from functools import partial
 # from tot.models import gpt
 from tot.models import gpt, base_model, model_setup, llama_instruct
+from tot.cache import FileCache
 
 import json
 import os
 
-class FileCache:
-    def __init__(self, cache_file="crossword_cache.json"):
-        self.cache_file = cache_file
-        # Load existing cache from file
-        if os.path.exists(cache_file):
-            with open(cache_file, "r", encoding="utf-8") as f:
-                self.data = json.load(f)
-        else:
-            self.data = {}
 
-    def get(self, key: str):
-        """Return cached result if present, else None."""
-        return self.data.get(key)
-
-    def set(self, key: str, value: str):
-        """Store result and write to disk."""
-        self.data[key] = value
-        with open(self.cache_file, "w", encoding="utf-8") as f:
-            json.dump(self.data, f, ensure_ascii=False, indent=2)
-            
-cache = FileCache()
+cache = FileCache("crossword_propose_cache.json")
 
 propose_num = value_num = 0
 propose_time = value_time = 0
@@ -47,36 +29,57 @@ def apply_action_to_y(task, x, parent_y, action_line):
     return y_output_from_env(task.env)              # serialize back to Output-grid
 
 # ---------------- propose children ----------------
-def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=5, M=5):
+def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=5, M=3):
     y_parent = parent_state['current']
     print(f"proposals for {y_parent}")
     
-    self.set_status(x, y)
+    task.set_status(x, y_parent)
     actions = []
-    for ans, data, status in zip(self.env.ans, self.env.data, self.env.status):
+    for i, (ans, data, status) in enumerate(zip(task.env.ans, task.env.data, task.env.status)):
+        position = f"h{i+1}" if i < 5 else f"v{i-5+1}"
         ans = ' '.join(ans.lower())
         line = f'{data}: {ans}'
-        action = cache.get(line)
-        if action is not None:
-            actions.append(action)
-            continue
-        system_prompt, user_prompt = task.propose_one_instruct_prompt_wrap(x, line)
-        raw = llama_instruct(user_prompt, system_prompt, n=K, stop=None, max_tokens=200)
-        print(f"raw proposals from llama {raw} for line {line}")
-        y_action = task.propose_one_outputs_unwrap(x, y_parent, raw, n_max_propose=M)
-        actions.append(y_action)
-        cache.set(line, y_action)
-
-    children = []
-    for action in actions:
-        last = [ln for ln in action.strip().split("\n") if ln]
-        last = last[-1] if last else ""
-        if not last or (last[0] not in ("h", "v")):
+        
+        cached_result = cache.get(line)
+        if cached_result:
+            word, score = cached_result
+            full_action = f"{position}. {word}"
+            actions.append((full_action, score))
             continue
         
-        print(f'__last action__{last}')
-        y_child = apply_action_to_y(task, x, y_parent, last)
+        system_prompt, user_prompt = task.propose_one_instruct_prompt_wrap(line)
+        raw = llama_instruct(user_prompt, system_prompt, n=K, stop=None, max_tokens=200)
+        print(f"raw proposals from llama {raw} for line {line}")
+        y_action = task.propose_one_outputs_unwrap(x, y_parent, raw)
+        
+        if y_action:
+            word, score = y_action
+            full_action = f"{position}. {word}"
+            actions.append((full_action, score))
+            cache.set(line, (word, score))
+            
+    valid_actions = []
+    for action, score in actions:
+        if task.action_valid(action, x, y_parent):
+            valid_actions.append((action, score))
+        else:
+            print(f"Filtered invalid action: {action}")
+
+    # 3. Rank the valid actions and select the top M
+    if not valid_actions:
+        return []
+        
+    valid_actions.sort(key=lambda item: item[1], reverse=True)
+    top_actions = [action for action, score in valid_actions[:M]]
+
+    print(f"Top {M} valid actions considered: {top_actions}")
+    
+    # 3. Create a child node for each of the top M actions
+    children = []
+    for action_line in top_actions:
+        y_child = apply_action_to_y(task, x, y_parent, action_line)
         children.append((y_parent, parent_index, y_child))
+        
     return children
 
 # ---------------- score children ----------------

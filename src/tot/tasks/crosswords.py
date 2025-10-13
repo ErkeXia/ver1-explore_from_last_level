@@ -4,6 +4,7 @@ import json
 from tot.tasks.base import Task, DATA_PATH
 from tot.prompts.crosswords import * 
 from tot.models import gpt, llama_instruct
+from tot.cache import FileCache
 
 class MiniCrosswordsEnv:
     def __init__(self, file='mini0505.json'):
@@ -171,6 +172,7 @@ class MiniCrosswordsTask(Task):
             self.xs.append(self.env.render_clues())
         self.steps = 10  # TODO: variable steps??
         self.cache_proposals = {}
+        self.cache = FileCache("crossword_value_cache.json")
 
     def __len__(self) -> int:
         return len(self.env)
@@ -221,6 +223,9 @@ class MiniCrosswordsTask(Task):
         self.set_status(x, y)
         return system_propose_prompt, user_propose_prompt.format(input=self.env.render(), board = y)
     
+    def propose_one_instruct_prompt_wrap(self, line: str) -> str:
+        return system_propose_one_prompt, user_propose_one_prompt.format(input=line)
+    
     def propose_outputs_unwrap(self, x: str, y: str, outputs: list, n_max_propose: int) -> list:
         confidence_to_value = {'certain': 1, 'high': 0.5, 'medium': 0.2, 'low': 0.1}  # TODO: ad hoc
         proposals_to_scores = {}
@@ -242,9 +247,97 @@ class MiniCrosswordsTask(Task):
         self.cache_proposals[(x, y, n_max_propose)] = proposals
         return proposals
     
+    def propose_one_outputs_unwrap(self, x: str, y: str, outputs: list) -> str:
+        confidence_to_value = {'certain': 1.0, 'high': 0.5, 'medium': 0.2, 'low': 0.1}
+        proposals_to_scores = {}
+        
+        for output in outputs:
+            # This regex is more flexible, looking for the last instance of the pattern
+            pattern = r'([a-zA-Z]{5,5})\s*\((certain|high|medium|low)\)'
+            matches = re.findall(pattern, output.lower())
+            
+            for match in matches:
+                word, confidence = match
+                score = confidence_to_value.get(confidence, 0)
+                # We add score to handle multiple generations of the same word
+                proposals_to_scores[word] = proposals_to_scores.get(word, 0) + score
+                
+        if not proposals_to_scores:
+            return None
+
+        # Find the best proposal among all parsed outputs
+        best_proposal, best_score = max(proposals_to_scores.items(), key=lambda item: item[1])
+        
+        return best_proposal, best_score
+    
+    def action_valid(self, action: str, x: str, y: str) -> bool:
+        """
+        Checks if a proposed action (e.g., "h1. apple") is valid by ensuring
+        it does not conflict with any existing letters on the board.
+
+        Args:
+            action: The proposed move string.
+            y: The current board state as a flat list of 25 characters.
+
+        Returns:
+            True if the move is valid (no conflicts), False otherwise.
+        """
+        self.set_status(x, y) 
+        current_board = list(self.env.board)
+        try:
+            pos, word = action.split('. ')
+            word = word.strip().upper()
+
+            if len(word) != 5:
+                return False
+
+            if pos.startswith('h'):
+                row_idx = int(pos[1:]) - 1
+                
+                # --- START: New Logic ---
+                # Get the current word from the board at that position
+                current_word_on_board = "".join(current_board[row_idx * 5 : (row_idx * 5) + 5])
+                
+                # If the proposed word is exactly the same as what's already there, it's not a valid *new* move.
+                if word == current_word_on_board:
+                    return False  # Exact match found, so invalid
+                # --- END: New Logic ---
+
+                # Original conflict check (remains the same)
+                for i in range(5):
+                    board_char = current_board[row_idx * 5 + i]
+                    word_char = word[i]
+                    if board_char != '_' and board_char != word_char:
+                        return False  # Conflict found
+
+            elif pos.startswith('v'):
+                col_idx = int(pos[1:]) - 1
+
+                # --- START: New Logic ---
+                # Get the current word from the board at that position
+                current_word_on_board = "".join(current_board[i * 5 + col_idx] for i in range(5))
+
+                # If the proposed word is exactly the same, it's not a valid *new* move.
+                if word == current_word_on_board:
+                    return False # Exact match found, so invalid
+                # --- END: New Logic ---
+
+                # Original conflict check (remains the same)
+                for i in range(5):
+                    board_char = current_board[i * 5 + col_idx]
+                    word_char = word[i]
+                    if board_char != '_' and board_char != word_char:
+                        return False  # Conflict found
+            else:
+                return False # Invalid position format
+                
+        except (ValueError, IndexError):
+            return False # Malformed action string
+
+        return True # No conflicts found and not an exact match
+    
     def evaluate(self, x: str, y: str, n_evaluate_sample: int) -> int:
         self.set_status(x, y)
-        assert n_evaluate_sample == 1 # TODO: ad hoc
         count = {'sure': 0, 'maybe': 0, 'impossible': 0}
         for ans, data, status in zip(self.env.ans, self.env.data, self.env.status):
             if ans.count('_') >= 3: continue
@@ -253,12 +346,19 @@ class MiniCrosswordsTask(Task):
             # prompt = value_prompt.format(input=line)
             # res = gpt(prompt)[0]
             # res = base_model(prompt)[0]
+            res = self.cache.get(line)
+            if res is not None:
+                print(res)
+                count[res] += 1
+                continue
             user_prompt = user_value_prompt.format(input=line)
-            res = llama_instruct(user_prompt, system_value_prompt)[0]
+            res = llama_instruct(user_prompt, system_value_prompt)[0].strip()
             print(line)
             print(res)
             print()
             res = res.split('\n')[-1].strip()
-            if res in count: count[res] += 1
+            if res in count: 
+                count[res] += 1
+                self.cache.set(line, res)
         print(count)
         return count
