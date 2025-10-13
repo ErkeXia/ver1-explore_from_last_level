@@ -173,6 +173,7 @@ class MiniCrosswordsTask(Task):
         self.steps = 10  # TODO: variable steps??
         self.cache_proposals = {}
         self.cache = FileCache("crossword_value_cache.json")
+        self.eval_cache = FileCache("gpt3_5_evaluation.json")
 
     def __len__(self) -> int:
         return len(self.env)
@@ -180,14 +181,7 @@ class MiniCrosswordsTask(Task):
     def get_input(self, idx: int) -> str:
         self.env.reset(idx)
         return self.env.render_clues()
-    
-    # def test_output(self, idx: int, output: str):  # TODO: r_word for now
-    #     self.env.reset(idx)
-    #     info = {'r_word': 0}
-    #     for line in output.split('\n'):
-    #         if line.startswith('h') or line.startswith('v'):
-    #             _, _, _, info = self.env.step(line)
-    #     return info['r_word']
+
     
     def test_output(self, idx: int, output: str):
         self.env.reset(idx)
@@ -362,3 +356,51 @@ class MiniCrosswordsTask(Task):
                 self.cache.set(line, res)
         print(count)
         return count
+    
+    def gpt_evaluate(self, x: str, y: str) -> int:
+        self.set_status(x, y)
+        sure_lst = []
+        for i, (ans, data, status) in enumerate(zip(self.env.ans, self.env.data, self.env.status)):
+            if ans.count('_') >= 3: continue
+            ans = ' '.join(ans.lower())
+            line = f'{data}: {ans}'
+            
+            res = self.eval_cache.get(line)
+            if res is None:
+                prompt = value_prompt.format(input=line)
+                res = gpt(prompt)[0]
+                self.eval_cache.set(line, res)
+                
+            print(line)
+            print(res)
+            print()
+            res = res.split('\n')[-1].strip()
+            if res == 'sure':
+                sure_lst.append(i)
+
+        print(sure_lst)
+        return sure_lst
+    
+    def prune_grid_by_sure_list(self, x: str, y: str, sure_list: list[int]) -> str:
+        """Keeps only the words at indices in sure_list and blanks out the rest."""
+        self.set_status(x, y) 
+        board = list(self.env.board)
+        if board is None: 
+            # If parsing fails, return the original string to be safe
+            return y_grid_string
+
+        # Create a boolean mask of 25 cells to keep
+        keep_mask = [False] * 25
+        for idx in sure_list:
+            if 0 <= idx < 5: # Horizontal word (indices 0-4)
+                for i in range(5): keep_mask[idx * 5 + i] = True
+            elif 5 <= idx < 10: # Vertical word (indices 5-9)
+                col_idx = idx - 5
+                for i in range(5): keep_mask[i * 5 + col_idx] = True
+
+        # Build the new pruned board
+        pruned_board = [board[i] if keep_mask[i] else '_' for i in range(25)]
+        
+        # Format it back into a grid string
+        rows = [" ".join(pruned_board[i*5:(i+1)*5]) for i in range(5)]
+        return "Output:\n" + "\n".join(rows) + "\n"

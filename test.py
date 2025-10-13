@@ -36,8 +36,15 @@ task = MiniCrosswordsTask()
 # check_answer(['24', '12', '576', '10', '6'])
 
 
+
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
+
+    for i in range(10):
+        idx = i
+        x = task.get_input(idx)
+        print(x)
+        
     start = time.perf_counter()
     sol_idx, sol_y, depth, states = solve_v1(args, task, 351, slm = 'llama', do_validate = True, instruct_model_arg = True)
     elapsed = time.perf_counter() - start
