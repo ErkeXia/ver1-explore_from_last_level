@@ -75,10 +75,20 @@ def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=
     print(f"Top {M} valid actions considered: {top_actions}")
     
     # 3. Create a child node for each of the top M actions
+    # children = []
+    # for action_line in top_actions:
+    #     y_child = apply_action_to_y(task, x, y_parent, action_line)
+    #     children.append((y_parent, parent_index, y_child))
     children = []
     for action_line in top_actions:
         y_child = apply_action_to_y(task, x, y_parent, action_line)
-        children.append((y_parent, parent_index, y_child))
+        # Return a dictionary that includes the action taken
+        children.append({
+            'parent_y': y_parent, 
+            'parent_idx': parent_index, 
+            'child_y': y_child, 
+            'action': action_line
+        })
         
     return children
 
@@ -171,7 +181,7 @@ def reasoning_dfs(task, x, start_grid, max_depth=12, branch=5, K=5, M=5):
         if not new_ys_triplets:
             continue
 
-        child_ys = [t[2] for t in new_ys_triplets]
+        child_ys = [t['child_y'] for t in new_ys_triplets]
         values = get_values_v1(task, x, child_ys, n_eval=1)
 
         # ranked = sorted(zip(new_ys_triplets, values), key=lambda z: z[1], reverse=True)[:branch]
@@ -181,7 +191,8 @@ def reasoning_dfs(task, x, start_grid, max_depth=12, branch=5, K=5, M=5):
             llm_score = values[i]
             filled_words = count_filled_words(y_child)
             # New score = LLM's quality score + bonus for each completed word
-            combined_score = llm_score + (completeness_bonus * filled_words)
+            # combined_score = llm_score + (completeness_bonus * filled_words)
+            combined_score = llm_score
             combined_scores.append(combined_score)
             print(f"Child {i}: LLM Score={llm_score:.2f}, Filled Words={filled_words}, Combined Score={combined_score:.2f}")
 
@@ -190,7 +201,8 @@ def reasoning_dfs(task, x, start_grid, max_depth=12, branch=5, K=5, M=5):
         combined_data = zip(new_ys_triplets, values, combined_scores)
         sorted_data = sorted(combined_data, key=lambda item: item[2], reverse=True)
         ranked = [(triplet, value) for triplet, value, score in sorted_data[:branch]]
-
+        ranked_data = sorted_data[:branch]
+        
         # ensure next layer
         if (depth + 1) not in states:
             states[depth + 1] = []
@@ -198,13 +210,21 @@ def reasoning_dfs(task, x, start_grid, max_depth=12, branch=5, K=5, M=5):
         print(f"rank: {ranked}")
         
         # store children nodes
-        states[depth + 1].extend([
-            {'step': trip[0], 'connect': trip[1], 'current': trip[2]} for (trip, _v) in ranked
-        ])
-        nodes += len(ranked)
+        # states[depth + 1].extend([
+        #     {'step': trip[0], 'connect': trip[1], 'current': trip[2]} for (trip, _v) in ranked
+        # ])
+        # nodes += len(ranked)
+        for data_dict, _, score in ranked_data:
+            states[depth + 1].append({
+                'step': data_dict['action'],  # This now correctly stores the action
+                'connect': data_dict['parent_idx'],
+                'current': data_dict['child_y'],
+                'score': score  # Store the combined score
+            })
+        nodes += len(ranked_data)
 
         # check if solved
-        cand_y = [trip[2] for (trip, _v) in ranked]
+        cand_y = [d['child_y'] for d, _, _ in ranked_data]
         idx_sol, ans = check_answer(cand_y, task=task, x=x)
         if ans is not None:
             return idx_sol, ans, depth + 1, states, nodes
@@ -229,7 +249,7 @@ def evaluate(task, x, y):
     print(f"Original Llama Output:\n{y}")
     print(f"Grid after GPT Pruning:\n{pruned_y}")
         
-    return pruned_y
+    return pruned_y, sure_lst
 
 
 def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = False, do_validate = True):
@@ -264,6 +284,8 @@ def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = False, do_vali
     
     start_y = "Output:\n" + "\n".join(["_ _ _ _ _"]*5) + "\n"
     all_states = []
+    gpt_eval_results = []
+    iteration_details = [] 
 
     max_iterations = 3
 
@@ -273,9 +295,22 @@ def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = False, do_vali
         all_states.append(states)
         
         if not do_validate:
+            iteration_details.append({
+                "iteration": i + 1,
+                "llama_result_grid": sol_y,
+                "gpt_pruned_grid": "N/A (Validation skipped)"
+            })
             break
         
-        pruned_y = evaluate(task, x, sol_y)
+        pruned_y, sure_lst = evaluate(task, x, sol_y)
+        gpt_eval_results.append(sure_lst)
+        
+        iteration_details.append({
+            "iteration": i + 1,
+            "llama_result_grid": sol_y,
+            "gpt_pruned_grid": pruned_y
+        })
+                
         if pruned_y == sol_y:
             print("\nGPT pruning resulted in no changes. Halting refinement.")
             break
@@ -297,7 +332,7 @@ def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = False, do_vali
     
 
     print(f"[{idx}] depth={depth} nodes={nodes}  r_word={info['r_word']:.3f}  r_letter={info['r_letter']:.3f}  r_game={info['r_game']}")
-    return sol_idx, sol_y, depth, all_states, nodes      
+    return sol_idx, sol_y, depth, all_states, nodes, gpt_eval_results, iteration_details
 
 def get_time():
     global propose_num, propose_time, value_num, value_time

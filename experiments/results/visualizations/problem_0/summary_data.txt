@@ -1,0 +1,65 @@
+==================================================
+  Summary for Crossword Problem ID: 0
+==================================================
+
+Refinement Iterations (Explorations): 3
+Total Nodes Explored (All Iterations): 25
+
+--- Correct Answer ---
+A G E N D
+M O T O R
+A R T S Y
+S A L L E
+S L E E R
+
+--- Iteration Details ---
+
+--- Iteration 1 ---
+Llama Result Grid (before GPT eval):
+P C C S D
+I H H P R
+L I E O I
+E N M U E
+S K E T R
+
+GPT Pruned Grid (start of next iteration):
+P _ _ S D
+I _ _ P R
+L _ _ O I
+E _ _ U E
+S _ _ T R
+
+--- Iteration 2 ---
+Llama Result Grid (before GPT eval):
+P C C S D
+I H H P R
+L I E O I
+E N M U E
+S K E T R
+
+GPT Pruned Grid (start of next iteration):
+P _ _ S D
+I _ _ P R
+L _ _ O I
+E _ _ U E
+S _ _ T R
+
+--- Iteration 3 ---
+Llama Result Grid (before GPT eval):
+P C C S D
+I H H P R
+L I E O I
+E N M U E
+S K E T R
+
+GPT Pruned Grid (start of next iteration):
+P _ _ S D
+I _ _ P R
+L _ _ O I
+E _ _ U E
+S _ _ T R
+
+--- GPT Evaluation Results ---
+Iteration 1: GPT was 'sure' about word indices: [5, 8, 9]
+Iteration 2: GPT was 'sure' about word indices: [5, 8, 9]
+Iteration 3: GPT was 'sure' about word indices: [5, 8, 9]

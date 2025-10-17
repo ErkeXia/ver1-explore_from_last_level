@@ -1,0 +1,13 @@
+nohup: ignoring input
+Solving Crosswords:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][A
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.12it/s][A
+Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.12it/s][A
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.13it/s][A
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.62it/s][ALoading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.40it/s]
+Solving Crosswords:  50%|█████     | 1/2 [03:09<03:09, 189.63s/it]Solving Crosswords: 100%|██████████| 2/2 [03:19<00:00, 84.07s/it] Solving Crosswords: 100%|██████████| 2/2 [03:19<00:00, 99.91s/it]
+Running experiment for crossword problems 0 to 1.
+Detailed logs will be saved to: crossword_output.txt
+Structured results will be saved to: crossword_results.jsonl
+
+Experiment finished. Results saved in 'crossword_results.jsonl'.

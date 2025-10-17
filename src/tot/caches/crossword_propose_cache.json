@@ -2046,5 +2046,225 @@
   "Odorous; fragrant: a r o m a": [
     "aroma",
     4.5
+  ],
+  "An agendum; something to be done: _ _ _ s _": [
+    "items",
+    1.0
+  ],
+  "An engine: _ _ _ p _": [
+    "motor",
+    1.0
+  ],
+  "Pretentious; flowery: _ _ _ o _": [
+    "rhaps",
+    2.700000000000001
+  ],
+  "A salon; a hall: _ _ _ u _": [
+    "salon",
+    1.5
+  ],
+  "To mock; to sneer: _ _ _ t _": [
+    "scoff",
+    1.5
+  ],
+  "A nozzle: s p o u t": [
+    "spout",
+    3.5
+  ],
+  "An agendum; something to be done: p _ _ s _": [
+    "items",
+    0.5
+  ],
+  "An engine: i _ _ p _": [
+    "ngine",
+    1.0
+  ],
+  "Pretentious; flowery: l _ _ o _": [
+    "lofty",
+    2.5
+  ],
+  "A salon; a hall: e _ _ u _": [
+    "beaus",
+    0.5
+  ],
+  "To mock; to sneer: s _ _ t _": [
+    "sneer",
+    1.5
+  ],
+  "To heap: p i l e s": [
+    "piles",
+    2.0
+  ],
+  "An agendum; something to be done: p c _ s _": [
+    "oject",
+    5.6
+  ],
+  "An engine: i h _ p _": [
+    "hippo",
+    0.5
+  ],
+  "Pretentious; flowery: l i _ o _": [
+    "lofty",
+    2.5
+  ],
+  "A salon; a hall: e n _ u _": [
+    "venue",
+    2.0
+  ],
+  "To mock; to sneer: s k _ t _": [
+    "sneer",
+    1.5
+  ],
+  "An Indian antelope: c h i n k": [
+    "chink",
+    2.2000000000000006
+  ],
+  "An agendum; something to be done: p c _ s d": [
+    "piece",
+    1.5
+  ],
+  "An engine: i h _ p r": [
+    "inher",
+    5.399999999999997
+  ],
+  "Pretentious; flowery: l i _ o i": [
+    "lofty",
+    2.5
+  ],
+  "A salon; a hall: e n _ u e": [
+    "alone",
+    2.1000000000000005
+  ],
+  "To mock; to sneer: s k _ t r": [
+    "sneer",
+    1.5
+  ],
+  "Desiccator; more dry: d r i e r": [
+    "ydrat",
+    0.9999999999999999
+  ],
+  "An agendum; something to be done: _ c _ _ _": [
+    "genda",
+    1.0
+  ],
+  "An engine: _ h _ _ _": [
+    "heave",
+    1.9
+  ],
+  "Pretentious; flowery: _ i _ _ _": [
+    "piest",
+    2.2000000000000006
+  ],
+  "A salon; a hall: _ n _ _ _": [
+    "arlor",
+    2.2
+  ],
+  "To mock; to sneer: _ k _ _ _": [
+    "scoff",
+    1.5
+  ],
+  "An agendum; something to be done: _ c _ s _": [
+    "tasks",
+    1.0
+  ],
+  "An engine: _ h _ p _": [
+    "chump",
+    1.1
+  ],
+  "Pretentious; flowery: _ i _ o _": [
+    "rnier",
+    2.800000000000001
+  ],
+  "A salon; a hall: _ n _ u _": [
+    "salon",
+    2.0
+  ],
+  "To mock; to sneer: _ k _ t _": [
+    "sneer",
+    0.5
+  ],
+  "An agendum; something to be done: p c c s _": [
+    "piece",
+    0.5
+  ],
+  "An engine: i h h p _": [
+    "ihhps",
+    2.2000000000000006
+  ],
+  "Pretentious; flowery: l i e o _": [
+    "lofty",
+    2.5
+  ],
+  "A salon; a hall: e n m u _": [
+    "menue",
+    3.5000000000000018
+  ],
+  "To mock; to sneer: s k e t _": [
+    "scoff",
+    2.5
+  ],
+  "To intend; to plan; to devise; a nettle; to guess: c h e m e": [
+    "cheme",
+    1.7000000000000002
+  ],
+  "An agendum; something to be done: p _ _ s d": [
+    "point",
+    3.1000000000000014
+  ],
+  "An engine: i _ _ p r": [
+    "ipper",
+    6.2
+  ],
+  "Pretentious; flowery: l _ _ o i": [
+    "lofty",
+    3.3
+  ],
+  "A salon; a hall: e _ _ u e": [
+    "suite",
+    1.5
+  ],
+  "To mock; to sneer: s _ _ t r": [
+    "scorn",
+    1.5
+  ],
+  "An agendum; something to be done: _ c _ s d": [
+    "genda",
+    2.0
+  ],
+  "An engine: _ h _ p r": [
+    "ooper",
+    1.6000000000000003
+  ],
+  "Pretentious; flowery: _ i _ o i": [
+    "iotic",
+    1.0
+  ],
+  "A salon; a hall: _ n _ u e": [
+    "salon",
+    1.0
+  ],
+  "To mock; to sneer: _ k _ t r": [
+    "ektor",
+    2.500000000000001
+  ],
+  "An agendum; something to be done: p _ c s d": [
+    "piece",
+    2.0
+  ],
+  "An engine: i _ h p r": [
+    "inher",
+    3.2000000000000015
+  ],
+  "Pretentious; flowery: l _ e o i": [
+    "lofty",
+    3.0
+  ],
+  "A salon; a hall: e _ m u e": [
+    "salon",
+    0.6
+  ],
+  "To mock; to sneer: s _ e t r": [
+    "sneer",
+    3.5
   ]
 }

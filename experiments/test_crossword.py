@@ -35,7 +35,7 @@ def run_crossword_experiment(start_idx=0, end_idx=9, log_file="crossword_output.
 
             # --- Call your main solving function ---
             # It now returns the final node count as the fifth item
-            _, final_y, depth, all_states, nodes = solve_v1(
+            _, final_y, depth, all_states, nodes, gpt_results, iteration_details = solve_v1(
                 args, task, i, slm='llama', instruct_model_arg=True, do_validate=True
             )
             
@@ -55,6 +55,8 @@ def run_crossword_experiment(start_idx=0, end_idx=9, log_file="crossword_output.
                 "r_word": info.get('r_word', 0),
                 "r_letter": info.get('r_letter', 0),
                 "r_game": info.get('r_game', 0),
+                "gpt_eval_results": gpt_results,
+                "iteration_details": iteration_details,
                 "all_states": all_states,
             }
 
@@ -67,4 +69,4 @@ def run_crossword_experiment(start_idx=0, end_idx=9, log_file="crossword_output.
 
 if __name__ == '__main__':
     # This block runs when you execute the script directly
-    run_crossword_experiment(start_idx=0, end_idx=9)
+    run_crossword_experiment(start_idx=0, end_idx=1)

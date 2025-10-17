@@ -22,3 +22,33 @@ Detailed logs will be saved to: crossword_output.txt
 Structured results will be saved to: crossword_results.jsonl
 
 Experiment finished. Results saved in 'crossword_results.jsonl'.
+Solving Crosswords:   0%|          | 0/10 [00:00<?, ?it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][ALoading checkpoint shards:   0%|          | 0/4 [00:11<?, ?it/s]
+Solving Crosswords:   0%|          | 0/10 [00:12<?, ?it/s]
+Running experiment for crossword problems 0 to 9.
+Detailed logs will be saved to: crossword_output.txt
+Structured results will be saved to: crossword_results.jsonl
+Traceback (most recent call last):
+  File "/home/ubuntu/work/ver1-explore_from_last_level/experiments/test_crossword.py", line 71, in <module>
+    run_crossword_experiment(start_idx=0, end_idx=9)
+  File "/home/ubuntu/work/ver1-explore_from_last_level/experiments/test_crossword.py", line 38, in run_crossword_experiment
+    _, final_y, depth, all_states, nodes, gpt_results = solve_v1(
+  File "/home/ubuntu/work/ver1-explore_from_last_level/src/tot/methods/dfs_cache.py", line 266, in solve_v1
+    instruct_model = model_setup(slm, instruct_model_arg, TGI_arg = False)
+  File "/home/ubuntu/work/ver1-explore_from_last_level/src/tot/models.py", line 56, in model_setup
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 600, in from_pretrained
+    return model_class.from_pretrained(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/modeling_utils.py", line 311, in _wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4833, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/modeling_utils.py", line 5296, in _load_pretrained_model
+    _error_msgs, disk_offload_index, cpu_offload_index = load_shard_file(args)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/modeling_utils.py", line 933, in load_shard_file
+    disk_offload_index, cpu_offload_index = _load_state_dict_into_meta_model(
+  File "/home/ubuntu/miniconda3/envs/lazy/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/modeling_utils.py", line 810, in _load_state_dict_into_meta_model
+    param = param.to(casting_dtype)
+KeyboardInterrupt
