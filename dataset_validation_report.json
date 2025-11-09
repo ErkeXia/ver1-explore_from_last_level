@@ -1,0 +1,3244 @@
+{
+  "total_tasks": 156,
+  "tasks_with_perfect_10_valid_words": 0,
+  "total_invalid_words_detected": 585,
+  "detailed_results": {
+    "0": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "AGEND",
+        "SALLE",
+        "SLEER",
+        "ETTLE",
+        "NOSLE"
+      ],
+      "all_words": [
+        "AGEND",
+        "MOTOR",
+        "ARTSY",
+        "SALLE",
+        "SLEER",
+        "AMASS",
+        "GORAL",
+        "ETTLE",
+        "NOSLE",
+        "DRYER"
+      ]
+    },
+    "1": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "AGEND",
+        "AMOVE",
+        "GIMIX",
+        "DRENT"
+      ],
+      "all_words": [
+        "AGEND",
+        "WIRER",
+        "AMOVE",
+        "RISEN",
+        "EXERT",
+        "AWARE",
+        "GIMIX",
+        "EROSE",
+        "NEVER",
+        "DRENT"
+      ]
+    },
+    "2": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "MAMOU",
+        "HALER"
+      ],
+      "all_words": [
+        "AMIGO",
+        "MAMOU",
+        "INPUT",
+        "SIEGE",
+        "HALER",
+        "AMISH",
+        "MANIA",
+        "IMPEL",
+        "GOUGE",
+        "OUTER"
+      ]
+    },
+    "3": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "VOLOW",
+        "IDOSE",
+        "ILION"
+      ],
+      "all_words": [
+        "AMIGO",
+        "VOLOW",
+        "ANION",
+        "IDOSE",
+        "LONER",
+        "AVAIL",
+        "MONDO",
+        "ILION",
+        "GOOSE",
+        "OWNER"
+      ]
+    },
+    "4": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "AREFY",
+        "ISTRA",
+        "SILER",
+        "ETERN",
+        "ETTLE",
+        "FIRER"
+      ],
+      "all_words": [
+        "AREFY",
+        "RETIE",
+        "ISTRA",
+        "SILER",
+        "ETERN",
+        "ARISE",
+        "RESIT",
+        "ETTLE",
+        "FIRER",
+        "YEARN"
+      ]
+    },
+    "5": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "AREFY",
+        "REVIE",
+        "IGALA",
+        "ETERN",
+        "REGET"
+      ],
+      "all_words": [
+        "AREFY",
+        "REVIE",
+        "IGALA",
+        "SEDER",
+        "ETERN",
+        "ARISE",
+        "REGET",
+        "EVADE",
+        "FILER",
+        "YEARN"
+      ]
+    },
+    "6": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "AREFY",
+        "ETERN",
+        "AVALE",
+        "RABOT"
+      ],
+      "all_words": [
+        "AREFY",
+        "VALUE",
+        "ABOMA",
+        "LOPER",
+        "ETERN",
+        "AVALE",
+        "RABOT",
+        "ELOPE",
+        "FUMER",
+        "YEARN"
+      ]
+    },
+    "7": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "INULA",
+        "AVISE",
+        "TRANT"
+      ],
+      "all_words": [
+        "AVERT",
+        "VINER",
+        "INULA",
+        "SARIN",
+        "ELECT",
+        "AVISE",
+        "VINAL",
+        "ENURE",
+        "RELIC",
+        "TRANT"
+      ]
+    },
+    "8": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "FLETE",
+        "UVATE",
+        "VALVA",
+        "RETTE"
+      ],
+      "all_words": [
+        "AVERT",
+        "WAXER",
+        "FLETE",
+        "UVATE",
+        "LATEN",
+        "AWFUL",
+        "VALVA",
+        "EXEAT",
+        "RETTE",
+        "TREEN"
+      ]
+    },
+    "9": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "EMULE",
+        "LOREL",
+        "EMOVE",
+        "OLENT"
+      ],
+      "all_words": [
+        "BEBOP",
+        "EMULE",
+        "LOREL",
+        "AVANT",
+        "YENTA",
+        "BELAY",
+        "EMOVE",
+        "BURAN",
+        "OLENT",
+        "PELTA"
+      ]
+    },
+    "10": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "FONGE",
+        "ORGAL",
+        "PAREL"
+      ],
+      "all_words": [
+        "BEBOP",
+        "URENA",
+        "FRIAR",
+        "FONGE",
+        "ORGAL",
+        "BUFFO",
+        "ERROR",
+        "BEING",
+        "ONAGA",
+        "PAREL"
+      ]
+    },
+    "11": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "URENA",
+        "IRIAN",
+        "LOGGE",
+        "ONAGA"
+      ],
+      "all_words": [
+        "BEBOP",
+        "URENA",
+        "IRIAN",
+        "LOGGE",
+        "DREAD",
+        "BUILD",
+        "ERROR",
+        "BEIGE",
+        "ONAGA",
+        "PANED"
+      ]
+    },
+    "12": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "CLOTE",
+        "BOCCE"
+      ],
+      "all_words": [
+        "BIPED",
+        "OGIVE",
+        "CALIF",
+        "CLOTE",
+        "EATER",
+        "BOCCE",
+        "IGALA",
+        "PILOT",
+        "EVITE",
+        "DEFER"
+      ]
+    },
+    "13": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "URALI",
+        "EDUCT",
+        "RESTY",
+        "IRADE",
+        "PAGUS"
+      ],
+      "all_words": [
+        "BIPED",
+        "URALI",
+        "YAGER",
+        "EDUCT",
+        "RESTY",
+        "BUYER",
+        "IRADE",
+        "PAGUS",
+        "ELECT",
+        "DIRTY"
+      ]
+    },
+    "14": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "PAGOD",
+        "CAPEL",
+        "AMATI"
+      ],
+      "all_words": [
+        "CANIS",
+        "AMINE",
+        "PAGOD",
+        "ETUDE",
+        "LINER",
+        "CAPEL",
+        "AMATI",
+        "NIGUN",
+        "INODE",
+        "SEDER"
+      ]
+    },
+    "15": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "OROCH",
+        "SASIN"
+      ],
+      "all_words": [
+        "CANIS",
+        "OROCH",
+        "RAMEE",
+        "PRONE",
+        "SASIN",
+        "CORPS",
+        "ARARA",
+        "NOMOS",
+        "ICENI",
+        "SHEEN"
+      ]
+    },
+    "16": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "RAKAN",
+        "CURCH"
+      ],
+      "all_words": [
+        "CANIS",
+        "URINE",
+        "RAKAN",
+        "CRAPS",
+        "HAUTE",
+        "CURCH",
+        "ARARA",
+        "NIKAU",
+        "INAPT",
+        "SENSE"
+      ]
+    },
+    "17": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "URALI",
+        "ROMIC",
+        "AROPH",
+        "NAMOI",
+        "SICLE"
+      ],
+      "all_words": [
+        "CANIS",
+        "URALI",
+        "ROMIC",
+        "SPOOL",
+        "THINE",
+        "CURST",
+        "AROPH",
+        "NAMOI",
+        "ILION",
+        "SICLE"
+      ]
+    },
+    "18": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "URENA",
+        "SNERT",
+        "TARTY",
+        "CURST"
+      ],
+      "all_words": [
+        "CANIS",
+        "URENA",
+        "REVEL",
+        "SNERT",
+        "TARTY",
+        "CURST",
+        "ARENA",
+        "NEVER",
+        "INERT",
+        "SALTY"
+      ]
+    },
+    "19": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "CHESE",
+        "EMULE",
+        "SNERT",
+        "HEMEN",
+        "SILER"
+      ],
+      "all_words": [
+        "CHESE",
+        "HELIX",
+        "EMULE",
+        "SEDER",
+        "SNERT",
+        "CHESS",
+        "HEMEN",
+        "ELUDE",
+        "SILER",
+        "EXERT"
+      ]
+    },
+    "20": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "CHESE",
+        "SOPER",
+        "SNERT",
+        "SISER"
+      ],
+      "all_words": [
+        "CHESE",
+        "HELIX",
+        "EROSE",
+        "SOPER",
+        "SNERT",
+        "CHESS",
+        "HERON",
+        "ELOPE",
+        "SISER",
+        "EXERT"
+      ]
+    },
+    "21": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "CHESE",
+        "HEMEN",
+        "SERER",
+        "HERTE",
+        "EMEER",
+        "SECLE"
+      ],
+      "all_words": [
+        "CHESE",
+        "HEMEN",
+        "ERECT",
+        "STELE",
+        "SERER",
+        "CHESS",
+        "HERTE",
+        "EMEER",
+        "SECLE",
+        "ENTER"
+      ]
+    },
+    "22": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "CHESE",
+        "OLENT",
+        "CROMA"
+      ],
+      "all_words": [
+        "CHESE",
+        "RIVEN",
+        "OLENT",
+        "MANSE",
+        "ALTER",
+        "CROMA",
+        "HILAL",
+        "EVENT",
+        "SENSE",
+        "ENTER"
+      ]
+    },
+    "23": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "CHESE",
+        "RANTY",
+        "OSUMI",
+        "NEESE",
+        "HALSE"
+      ],
+      "all_words": [
+        "CHESE",
+        "RANTY",
+        "OLDER",
+        "OSUMI",
+        "NEESE",
+        "CROON",
+        "HALSE",
+        "ENDUE",
+        "STEMS",
+        "EYRIE"
+      ]
+    },
+    "24": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "CHESE",
+        "OLENT",
+        "EVENE",
+        "ENTAD"
+      ],
+      "all_words": [
+        "CHESE",
+        "RIVEN",
+        "OLENT",
+        "WANNA",
+        "DREAD",
+        "CROWD",
+        "HILAR",
+        "EVENE",
+        "SENNA",
+        "ENTAD"
+      ]
+    },
+    "25": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "CHESE",
+        "REBIA",
+        "ULLET",
+        "SLIVE",
+        "HOSER",
+        "EBLIS"
+      ],
+      "all_words": [
+        "CHESE",
+        "REBIA",
+        "ULLET",
+        "SLIVE",
+        "HOSER",
+        "CRUSH",
+        "HELLO",
+        "EBLIS",
+        "SIEVE",
+        "EATER"
+      ]
+    },
+    "26": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "CHESE",
+        "ULLET",
+        "SLIVE",
+        "HALER"
+      ],
+      "all_words": [
+        "CHESE",
+        "RONIN",
+        "ULLET",
+        "SLIVE",
+        "HALER",
+        "CRUSH",
+        "HOLLA",
+        "ENLIL",
+        "SIEVE",
+        "ENTER"
+      ]
+    },
+    "27": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "CHESE",
+        "URENA",
+        "TIMAL",
+        "CRUTH",
+        "HERIE"
+      ],
+      "all_words": [
+        "CHESE",
+        "REDOX",
+        "URENA",
+        "TIMAL",
+        "HEART",
+        "CRUTH",
+        "HERIE",
+        "EDEMA",
+        "SONAR",
+        "EXALT"
+      ]
+    },
+    "28": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "OMBRE",
+        "LIMBA",
+        "IMBAR",
+        "NERTS"
+      ],
+      "all_words": [
+        "CLING",
+        "LIMER",
+        "OMBRE",
+        "ABATE",
+        "KARST",
+        "CLOAK",
+        "LIMBA",
+        "IMBAR",
+        "NERTS",
+        "GREET"
+      ]
+    },
+    "29": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "AMATE",
+        "LIMMA",
+        "IMBAR"
+      ],
+      "all_words": [
+        "CLING",
+        "LIMER",
+        "OMBRE",
+        "AMATE",
+        "KARST",
+        "CLOAK",
+        "LIMMA",
+        "IMBAR",
+        "NERTS",
+        "GREET"
+      ]
+    },
+    "30": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "AMATE",
+        "LIMMA",
+        "IMBAR"
+      ],
+      "all_words": [
+        "CLING",
+        "RIMER",
+        "OMBRE",
+        "AMATE",
+        "KARST",
+        "CROAK",
+        "LIMMA",
+        "IMBAR",
+        "NERTS",
+        "GREET"
+      ]
+    },
+    "31": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "LIMMA",
+        "IMBAR",
+        "GREIT"
+      ],
+      "all_words": [
+        "CLING",
+        "RIMER",
+        "OMBRE",
+        "AMATI",
+        "KARST",
+        "CROAK",
+        "LIMMA",
+        "IMBAR",
+        "NERTS",
+        "GREIT"
+      ]
+    },
+    "32": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "MEUTE",
+        "AREST",
+        "CROMA"
+      ],
+      "all_words": [
+        "CLING",
+        "RIMER",
+        "OMBRE",
+        "MEUTE",
+        "AREST",
+        "CROMA",
+        "LIMER",
+        "IMBUE",
+        "NERTS",
+        "GREET"
+      ]
+    },
+    "33": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "RUNER",
+        "ASTAY",
+        "PEISE",
+        "SLEER"
+      ],
+      "all_words": [
+        "COULD",
+        "RUNER",
+        "ASTAY",
+        "PEISE",
+        "SLEER",
+        "CRAPS",
+        "OUSEL",
+        "UNTIE",
+        "LEASE",
+        "DRYER"
+      ]
+    },
+    "34": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "RUNER",
+        "SIAGA",
+        "CRASE",
+        "OUSIA",
+        "UNIAT"
+      ],
+      "all_words": [
+        "COULD",
+        "RUNER",
+        "ASIDE",
+        "SIAGA",
+        "EATER",
+        "CRASE",
+        "OUSIA",
+        "UNIAT",
+        "LEDGE",
+        "DREAR"
+      ]
+    },
+    "35": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "RUNER",
+        "TAWER",
+        "OUSIA"
+      ],
+      "all_words": [
+        "COULD",
+        "RUNER",
+        "ESSAY",
+        "SIEVE",
+        "TAWER",
+        "CREST",
+        "OUSIA",
+        "UNSEW",
+        "LEAVE",
+        "DRYER"
+      ]
+    },
+    "36": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "RUNER",
+        "UPLAY",
+        "OUPHE"
+      ],
+      "all_words": [
+        "COULD",
+        "RUNER",
+        "UPLAY",
+        "SHAVE",
+        "HEWER",
+        "CRUSH",
+        "OUPHE",
+        "UNLAW",
+        "LEAVE",
+        "DRYER"
+      ]
+    },
+    "37": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "EROSE",
+        "ENURE",
+        "INUST"
+      ],
+      "all_words": [
+        "DEBIT",
+        "INANE",
+        "CUTUP",
+        "EROSE",
+        "RENTE",
+        "DICER",
+        "ENURE",
+        "BATON",
+        "INUST",
+        "TEPEE"
+      ]
+    },
+    "38": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "IMIDO",
+        "DIMIT"
+      ],
+      "all_words": [
+        "DEBIT",
+        "INANE",
+        "MESON",
+        "IMIDO",
+        "TASER",
+        "DIMIT",
+        "ENEMA",
+        "BASIS",
+        "INODE",
+        "TENOR"
+      ]
+    },
+    "39": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "MENSE",
+        "DISME",
+        "IMPEN",
+        "CENSE"
+      ],
+      "all_words": [
+        "DISCO",
+        "IMPEL",
+        "SPEND",
+        "MENSE",
+        "ENTER",
+        "DISME",
+        "IMPEN",
+        "SPENT",
+        "CENSE",
+        "OLDER"
+      ]
+    },
+    "40": {
+      "valid_word_count": 9,
+      "invalid_words": [
+        "SHEND"
+      ],
+      "all_words": [
+        "DISCO",
+        "UNHAT",
+        "OVERT",
+        "MANSE",
+        "ORDER",
+        "DUOMO",
+        "INVAR",
+        "SHEND",
+        "CARSE",
+        "OTTER"
+      ]
+    },
+    "41": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "PEART",
+        "REFAR",
+        "INEYE"
+      ],
+      "all_words": [
+        "DISCO",
+        "UNCUT",
+        "PEART",
+        "EYRIE",
+        "REFAR",
+        "DUPER",
+        "INEYE",
+        "SCARF",
+        "CURIA",
+        "OTTER"
+      ]
+    },
+    "42": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "URALI",
+        "PALET",
+        "IGALA"
+      ],
+      "all_words": [
+        "DRIVE",
+        "REGAL",
+        "URALI",
+        "PALET",
+        "ENATE",
+        "DRUPE",
+        "RERAN",
+        "IGALA",
+        "VALET",
+        "ELITE"
+      ]
+    },
+    "43": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "EIRIE",
+        "ICKLE",
+        "ETERN"
+      ],
+      "all_words": [
+        "EIRIE",
+        "SCENT",
+        "SKATE",
+        "ALTER",
+        "YEARN",
+        "ESSAY",
+        "ICKLE",
+        "REATA",
+        "INTER",
+        "ETERN"
+      ]
+    },
+    "44": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "AREST",
+        "ETAAC"
+      ],
+      "all_words": [
+        "ERUCT",
+        "TETRA",
+        "ATTAR",
+        "AREST",
+        "CORSE",
+        "ETAAC",
+        "RETRO",
+        "UTTER",
+        "CRASS",
+        "TARTE"
+      ]
+    },
+    "45": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "AWARN",
+        "REWIN"
+      ],
+      "all_words": [
+        "ERUCT",
+        "VENUE",
+        "AWARN",
+        "DIPSO",
+        "ENTER",
+        "EVADE",
+        "REWIN",
+        "UNAPT",
+        "CURSE",
+        "TENOR"
+      ]
+    },
+    "46": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "THURL",
+        "OWLER"
+      ],
+      "all_words": [
+        "FATSO",
+        "ARROW",
+        "THURL",
+        "WASTE",
+        "ATTAR",
+        "FATWA",
+        "ARHAT",
+        "TRUST",
+        "SORTA",
+        "OWLER"
+      ]
+    },
+    "47": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "UREAL",
+        "ECHON",
+        "SEYNT",
+        "ARACE",
+        "OLENT"
+      ],
+      "all_words": [
+        "FATSO",
+        "UREAL",
+        "MACLE",
+        "ECHON",
+        "SEYNT",
+        "FUMES",
+        "ARACE",
+        "TECHY",
+        "SALON",
+        "OLENT"
+      ]
+    },
+    "48": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "SATLE",
+        "ECHON",
+        "SEINT",
+        "ARACE",
+        "TITHI",
+        "OLENT"
+      ],
+      "all_words": [
+        "FATSO",
+        "URIAL",
+        "SATLE",
+        "ECHON",
+        "SEINT",
+        "FUSES",
+        "ARACE",
+        "TITHI",
+        "SALON",
+        "OLENT"
+      ]
+    },
+    "49": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "UNOIL",
+        "FUSIL"
+      ],
+      "all_words": [
+        "FATSO",
+        "UNOIL",
+        "SIDED",
+        "IMAGE",
+        "LAYER",
+        "FUSIL",
+        "ANIMA",
+        "TODAY",
+        "SIEGE",
+        "OLDER"
+      ]
+    },
+    "50": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "FLAWN",
+        "ENTAL",
+        "FLEAM",
+        "LINGE",
+        "ATTER",
+        "NOLDE"
+      ],
+      "all_words": [
+        "FLAWN",
+        "LITHO",
+        "ENTAL",
+        "AGEND",
+        "MERGE",
+        "FLEAM",
+        "LINGE",
+        "ATTER",
+        "WHANG",
+        "NOLDE"
+      ]
+    },
+    "51": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "FLAWN",
+        "LIFEN",
+        "ATTLE",
+        "NEROL"
+      ],
+      "all_words": [
+        "FLAWN",
+        "LITHE",
+        "IFTAR",
+        "CELLO",
+        "KNEEL",
+        "FLICK",
+        "LIFEN",
+        "ATTLE",
+        "WHALE",
+        "NEROL"
+      ]
+    },
+    "52": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "FLAWN",
+        "RATHE",
+        "HIPPS",
+        "ATTAP",
+        "NERTS"
+      ],
+      "all_words": [
+        "FLAWN",
+        "RATHE",
+        "OTTER",
+        "SHALT",
+        "HIPPS",
+        "FROSH",
+        "LATHI",
+        "ATTAP",
+        "WHELP",
+        "NERTS"
+      ]
+    },
+    "53": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "FRAPE",
+        "REBAT",
+        "STARN",
+        "PALAR"
+      ],
+      "all_words": [
+        "FRAPE",
+        "REBAT",
+        "AMOLE",
+        "SIMAR",
+        "STARN",
+        "FRASS",
+        "REMIT",
+        "ABOMA",
+        "PALAR",
+        "ETERN"
+      ]
+    },
+    "54": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "FRAPE",
+        "RONAY",
+        "SHOOI",
+        "TINNE",
+        "ROSHI"
+      ],
+      "all_words": [
+        "FRAPE",
+        "RONAY",
+        "OSIER",
+        "SHOOI",
+        "TINNE",
+        "FROST",
+        "ROSHI",
+        "ANION",
+        "PAEON",
+        "EYRIE"
+      ]
+    },
+    "55": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "FRAPE",
+        "EWERY",
+        "FROTE",
+        "RESOW",
+        "AMATE"
+      ],
+      "all_words": [
+        "FRAPE",
+        "REMAN",
+        "OSAGE",
+        "TOTEM",
+        "EWERY",
+        "FROTE",
+        "RESOW",
+        "AMATE",
+        "PAGER",
+        "ENEMY"
+      ]
+    },
+    "56": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "FRAPE",
+        "RAMAL",
+        "MESEN"
+      ],
+      "all_words": [
+        "FRAPE",
+        "RAMAL",
+        "UVULA",
+        "MESEN",
+        "PLEAD",
+        "FRUMP",
+        "RAVEL",
+        "AMUSE",
+        "PALEA",
+        "ELAND"
+      ]
+    },
+    "57": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "FRAPE",
+        "PEERT",
+        "ALURE",
+        "PALAR"
+      ],
+      "all_words": [
+        "FRAPE",
+        "RELAX",
+        "UVULA",
+        "MURAL",
+        "PEERT",
+        "FRUMP",
+        "REVUE",
+        "ALURE",
+        "PALAR",
+        "EXALT"
+      ]
+    },
+    "58": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "ABAND",
+        "PUKER",
+        "ETERN",
+        "GALPE"
+      ],
+      "all_words": [
+        "GALEA",
+        "ABAND",
+        "LOTTO",
+        "PUKER",
+        "ETERN",
+        "GALPE",
+        "ABOUT",
+        "LATKE",
+        "ENTER",
+        "ADORN"
+      ]
+    },
+    "59": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "SLATT",
+        "ANOIL"
+      ],
+      "all_words": [
+        "GALEA",
+        "UNARM",
+        "LONGE",
+        "EIKON",
+        "SLATT",
+        "GULES",
+        "ANOIL",
+        "LANKA",
+        "ERGOT",
+        "AMENT"
+      ]
+    },
+    "60": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "LARUM",
+        "AROID",
+        "EMEER"
+      ],
+      "all_words": [
+        "GLADE",
+        "LARUM",
+        "ANOLE",
+        "RAISE",
+        "EIDER",
+        "GLARE",
+        "LANAI",
+        "AROID",
+        "DULSE",
+        "EMEER"
+      ]
+    },
+    "61": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "RORAL",
+        "OTAKU",
+        "SIRET",
+        "LOTIC",
+        "ARARA",
+        "DAKER"
+      ],
+      "all_words": [
+        "GLADE",
+        "RORAL",
+        "OTAKU",
+        "SIRET",
+        "SCARE",
+        "GROSS",
+        "LOTIC",
+        "ARARA",
+        "DAKER",
+        "ELUTE"
+      ]
+    },
+    "62": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "ORANG",
+        "SARSE"
+      ],
+      "all_words": [
+        "GLADE",
+        "ROWED",
+        "ORANG",
+        "SARSE",
+        "SNEER",
+        "GROSS",
+        "LORAN",
+        "AWARE",
+        "DENSE",
+        "EDGER"
+      ]
+    },
+    "63": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "REGEL",
+        "LECHE",
+        "DEESS"
+      ],
+      "all_words": [
+        "GLADE",
+        "REGEL",
+        "OCREA",
+        "WHIST",
+        "LEASE",
+        "GROWL",
+        "LECHE",
+        "AGRIA",
+        "DEESS",
+        "ELATE"
+      ]
+    },
+    "64": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "REGET",
+        "WETAR",
+        "AGITA",
+        "DENAR",
+        "ETERN"
+      ],
+      "all_words": [
+        "GLADE",
+        "REGET",
+        "OVINE",
+        "WETAR",
+        "LEARN",
+        "GROWL",
+        "LEVEE",
+        "AGITA",
+        "DENAR",
+        "ETERN"
+      ]
+    },
+    "65": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "REMEX",
+        "MESAL",
+        "PLEYT"
+      ],
+      "all_words": [
+        "GLADE",
+        "REMEX",
+        "UVULA",
+        "MESAL",
+        "PLEYT",
+        "GRUMP",
+        "LEVEL",
+        "AMUSE",
+        "DELAY",
+        "EXALT"
+      ]
+    },
+    "66": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "RAMED",
+        "UNBAG",
+        "TITER",
+        "DEAVE"
+      ],
+      "all_words": [
+        "GLADE",
+        "RAMED",
+        "UNBAG",
+        "NAIVE",
+        "TITER",
+        "GRUNT",
+        "LANAI",
+        "AMBIT",
+        "DEAVE",
+        "EDGER"
+      ]
+    },
+    "67": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "UREAL",
+        "ALAWI",
+        "GUACO",
+        "TAWSE"
+      ],
+      "all_words": [
+        "GOTTA",
+        "UREAL",
+        "ALAWI",
+        "CORSE",
+        "ONSEN",
+        "GUACO",
+        "ORLON",
+        "TEARS",
+        "TAWSE",
+        "ALIEN"
+      ]
+    },
+    "68": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "GOTTA",
+        "NEELD",
+        "ATTLE"
+      ],
+      "all_words": [
+        "GOTTA",
+        "UNARM",
+        "ASCII",
+        "NEELD",
+        "ATTLE",
+        "GUANA",
+        "ONSET",
+        "TACET",
+        "TRILL",
+        "AMIDE"
+      ]
+    },
+    "69": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "GOTTA",
+        "TIMBO",
+        "ALOSE"
+      ],
+      "all_words": [
+        "GOTTA",
+        "URIAL",
+        "TEMPO",
+        "TABES",
+        "ADORE",
+        "GUTTA",
+        "OREAD",
+        "TIMBO",
+        "TAPER",
+        "ALOSE"
+      ]
+    },
+    "70": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "GUANG",
+        "ATTAP",
+        "GUARA",
+        "UNBIT",
+        "NASSA",
+        "GWEEP"
+      ],
+      "all_words": [
+        "GUANG",
+        "UNLAW",
+        "ABASE",
+        "RINSE",
+        "ATTAP",
+        "GUARA",
+        "UNBIT",
+        "ALANT",
+        "NASSA",
+        "GWEEP"
+      ]
+    },
+    "71": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "GUANG",
+        "UPBAR",
+        "TEDGE",
+        "AREAD",
+        "UPHER",
+        "NANGA"
+      ],
+      "all_words": [
+        "GUANG",
+        "UPBAR",
+        "THINE",
+        "TEDGE",
+        "AREAD",
+        "GUTTA",
+        "UPHER",
+        "ABIDE",
+        "NANGA",
+        "GREED"
+      ]
+    },
+    "72": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "RAMED",
+        "ARABA"
+      ],
+      "all_words": [
+        "HANSA",
+        "AROID",
+        "RAMED",
+        "ABOVE",
+        "MASER",
+        "HARAM",
+        "ARABA",
+        "NOMOS",
+        "SIEVE",
+        "ADDER"
+      ]
+    },
+    "73": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "ROKES",
+        "DROIL",
+        "HURDS",
+        "ANORN",
+        "NAKOO",
+        "SMEIR"
+      ],
+      "all_words": [
+        "HANSA",
+        "UNAMI",
+        "ROKES",
+        "DROIL",
+        "SNORE",
+        "HURDS",
+        "ANORN",
+        "NAKOO",
+        "SMEIR",
+        "AISLE"
+      ]
+    },
+    "74": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "SOLER",
+        "ISOKO",
+        "RETTE"
+      ],
+      "all_words": [
+        "INERT",
+        "SOLER",
+        "OVATE",
+        "KENTE",
+        "OLDEN",
+        "ISOKO",
+        "NOVEL",
+        "ELAND",
+        "RETTE",
+        "TREEN"
+      ]
+    },
+    "75": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "KESAR",
+        "ATIMY",
+        "GLEDE",
+        "ENTAL",
+        "STIVE"
+      ],
+      "all_words": [
+        "KESAR",
+        "INTRO",
+        "ATIMY",
+        "NAVEL",
+        "GLEDE",
+        "KIANG",
+        "ENTAL",
+        "STIVE",
+        "ARMED",
+        "ROYLE"
+      ]
+    },
+    "76": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "KESAR",
+        "MORDA",
+        "KUMAM",
+        "REAME"
+      ],
+      "all_words": [
+        "KESAR",
+        "URINE",
+        "MORDA",
+        "ADEEM",
+        "MENSE",
+        "KUMAM",
+        "ERODE",
+        "SIREN",
+        "ANDES",
+        "REAME"
+      ]
+    },
+    "77": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "URALI",
+        "ROOSE",
+        "RABOT",
+        "ALOSE"
+      ],
+      "all_words": [
+        "KORAT",
+        "URALI",
+        "KABOB",
+        "ROOSE",
+        "INTER",
+        "KUKRI",
+        "ORAON",
+        "RABOT",
+        "ALOSE",
+        "TIBER"
+      ]
+    },
+    "78": {
+      "valid_word_count": 3,
+      "invalid_words": [
+        "LOTSA",
+        "SARDA",
+        "SAWER",
+        "LUSUS",
+        "ONAGA",
+        "THRAW",
+        "APAIR"
+      ],
+      "all_words": [
+        "LOTSA",
+        "UNHIP",
+        "SARDA",
+        "UGALI",
+        "SAWER",
+        "LUSUS",
+        "ONAGA",
+        "THRAW",
+        "SIDLE",
+        "APAIR"
+      ]
+    },
+    "79": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "MEROM",
+        "NEOID",
+        "MESEN",
+        "ROLEO",
+        "OSUMI",
+        "MESAD"
+      ],
+      "all_words": [
+        "MEROM",
+        "EROSE",
+        "SOLUS",
+        "EDEMA",
+        "NEOID",
+        "MESEN",
+        "ERODE",
+        "ROLEO",
+        "OSUMI",
+        "MESAD"
+      ]
+    },
+    "80": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "MEROM",
+        "OVILE",
+        "ENTAL",
+        "REAME",
+        "EVENE",
+        "MEDLE"
+      ],
+      "all_words": [
+        "MEROM",
+        "OVILE",
+        "WEALD",
+        "ENTAL",
+        "REAME",
+        "MOWER",
+        "EVENE",
+        "RIATA",
+        "OLLAM",
+        "MEDLE"
+      ]
+    },
+    "81": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "MONEL",
+        "PUTID"
+      ],
+      "all_words": [
+        "MONEL",
+        "OVOLO",
+        "PUTID",
+        "ELATE",
+        "SEMEN",
+        "MOPES",
+        "OVULE",
+        "NOTAM",
+        "ELITE",
+        "LODEN"
+      ]
+    },
+    "82": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "MONEL",
+        "ATTER",
+        "NISTE"
+      ],
+      "all_words": [
+        "MONEL",
+        "URINE",
+        "RASTA",
+        "ATTER",
+        "LEERY",
+        "MURAL",
+        "ORATE",
+        "NISTE",
+        "ENTER",
+        "LEARY"
+      ]
+    },
+    "83": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "URENA",
+        "RELIK",
+        "MURRA",
+        "UREAL"
+      ],
+      "all_words": [
+        "MURAL",
+        "URENA",
+        "RELIK",
+        "RAISE",
+        "ALTER",
+        "MURRA",
+        "UREAL",
+        "RELIT",
+        "ANISE",
+        "LAKER"
+      ]
+    },
+    "84": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "MUDGE",
+        "SPARY",
+        "NUMPS",
+        "MADIA"
+      ],
+      "all_words": [
+        "NUMEN",
+        "USAGE",
+        "MUDGE",
+        "PRIED",
+        "SPARY",
+        "NUMPS",
+        "USURP",
+        "MADIA",
+        "EGGER",
+        "NEEDY"
+      ]
+    },
+    "85": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "MUNGE",
+        "NUMPS",
+        "NEESE"
+      ],
+      "all_words": [
+        "NUMEN",
+        "USAGE",
+        "MUNGE",
+        "PRIES",
+        "SPARE",
+        "NUMPS",
+        "USURP",
+        "MANIA",
+        "EGGER",
+        "NEESE"
+      ]
+    },
+    "86": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "PAGUS",
+        "PALAR",
+        "UPHER"
+      ],
+      "all_words": [
+        "PAGUS",
+        "ADOPT",
+        "LITHE",
+        "AGREE",
+        "REARM",
+        "PALAR",
+        "ADIGE",
+        "GOTRA",
+        "UPHER",
+        "STEEM"
+      ]
+    },
+    "87": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "PAGUS",
+        "PUTID",
+        "STROY"
+      ],
+      "all_words": [
+        "PAGUS",
+        "UNAPT",
+        "TIMER",
+        "IMINO",
+        "DANDY",
+        "PUTID",
+        "ANIMA",
+        "GAMIN",
+        "UPEND",
+        "STROY"
+      ]
+    },
+    "88": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "PENAN",
+        "TASTO",
+        "OLEIN",
+        "ENTAL",
+        "NEESE",
+        "AMATI"
+      ],
+      "all_words": [
+        "PENAN",
+        "ENEMY",
+        "STEAL",
+        "TASTO",
+        "OLEIN",
+        "PESTO",
+        "ENTAL",
+        "NEESE",
+        "AMATI",
+        "NYLON"
+      ]
+    },
+    "89": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "PENAN",
+        "UNODE",
+        "LUTER",
+        "PULER",
+        "NOTUS"
+      ],
+      "all_words": [
+        "PENAN",
+        "UNODE",
+        "LUTER",
+        "ERUPT",
+        "RESTS",
+        "PULER",
+        "ENURE",
+        "NOTUS",
+        "ADEPT",
+        "NERTS"
+      ]
+    },
+    "90": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "SILLA",
+        "PISHU",
+        "PALLA"
+      ],
+      "all_words": [
+        "PIPIT",
+        "IRADE",
+        "SILLA",
+        "HALER",
+        "UNARY",
+        "PISHU",
+        "IRIAN",
+        "PALLA",
+        "IDLER",
+        "TEARY"
+      ]
+    },
+    "91": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "UNAMI",
+        "STRIB",
+        "IRADE",
+        "PUSIL",
+        "PARAN"
+      ],
+      "all_words": [
+        "PIPIT",
+        "UNAMI",
+        "STRIB",
+        "IRADE",
+        "LONER",
+        "PUSIL",
+        "INTRO",
+        "PARAN",
+        "IMIDE",
+        "TIBER"
+      ]
+    },
+    "92": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "POLAK",
+        "OVILE",
+        "SECHE"
+      ],
+      "all_words": [
+        "POLAK",
+        "OVILE",
+        "LINEN",
+        "INAPT",
+        "SECHE",
+        "POLIS",
+        "OVINE",
+        "LINAC",
+        "ALEPH",
+        "KENTE"
+      ]
+    },
+    "93": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "POLAK",
+        "UREDO",
+        "RAMAL",
+        "PURSY",
+        "ADACT",
+        "KOLKA"
+      ],
+      "all_words": [
+        "POLAK",
+        "UREDO",
+        "RAMAL",
+        "STOCK",
+        "YENTA",
+        "PURSY",
+        "ORATE",
+        "LEMON",
+        "ADACT",
+        "KOLKA"
+      ]
+    },
+    "94": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "SCISE",
+        "PSSST",
+        "RECCO",
+        "NOSLE"
+      ],
+      "all_words": [
+        "PRINT",
+        "SEROW",
+        "SCISE",
+        "SCALE",
+        "TONED",
+        "PSSST",
+        "RECCO",
+        "IRIAN",
+        "NOSLE",
+        "TWEED"
+      ]
+    },
+    "95": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "SCISE",
+        "PSSST",
+        "NASSA"
+      ],
+      "all_words": [
+        "PRINT",
+        "SIMAR",
+        "SCISE",
+        "SENSE",
+        "TREAD",
+        "PSSST",
+        "RICER",
+        "IMINE",
+        "NASSA",
+        "TREED"
+      ]
+    },
+    "96": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "MURRA",
+        "RAMAL",
+        "ADURE"
+      ],
+      "all_words": [
+        "RAKED",
+        "ADORE",
+        "MURRA",
+        "ARMOR",
+        "LEARY",
+        "RAMAL",
+        "ADURE",
+        "KORMA",
+        "ERROR",
+        "DEARY"
+      ]
+    },
+    "97": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "ANELE",
+        "SERER",
+        "KESAR"
+      ],
+      "all_words": [
+        "RAKED",
+        "ANELE",
+        "POSIT",
+        "ELATE",
+        "SERER",
+        "RAPES",
+        "ANOLE",
+        "KESAR",
+        "ELITE",
+        "DETER"
+      ]
+    },
+    "98": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "URALI",
+        "RUDAS",
+        "DIKER"
+      ],
+      "all_words": [
+        "RAKED",
+        "URALI",
+        "DAYAK",
+        "ABATE",
+        "SAKER",
+        "RUDAS",
+        "ARABA",
+        "KAYAK",
+        "ELATE",
+        "DIKER"
+      ]
+    },
+    "99": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "STEEK",
+        "TARRE",
+        "ENTAL",
+        "INERM"
+      ],
+      "all_words": [
+        "REIFY",
+        "ENNUI",
+        "STEEK",
+        "TARRE",
+        "OLMOS",
+        "RESTO",
+        "ENTAL",
+        "INERM",
+        "FUERO",
+        "YIKES"
+      ]
+    },
+    "100": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "ROTAL",
+        "ILEBO",
+        "LIPSE"
+      ],
+      "all_words": [
+        "RILLE",
+        "OLEIN",
+        "TEMPT",
+        "ABASE",
+        "LONER",
+        "ROTAL",
+        "ILEBO",
+        "LEMAN",
+        "LIPSE",
+        "ENTER"
+      ]
+    },
+    "101": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "NUMPS",
+        "HERRY",
+        "RUNCH",
+        "LIMER",
+        "ENSKY"
+      ],
+      "all_words": [
+        "RILLE",
+        "UNION",
+        "NUMPS",
+        "CREEK",
+        "HERRY",
+        "RUNCH",
+        "INURE",
+        "LIMER",
+        "LOPER",
+        "ENSKY"
+      ]
+    },
+    "102": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "SAWER",
+        "CROMA",
+        "ARRET",
+        "ROSET",
+        "EWERY",
+        "EMEER"
+      ],
+      "all_words": [
+        "SAWER",
+        "CROMA",
+        "ARRET",
+        "ROSET",
+        "EWERY",
+        "SCARE",
+        "ARROW",
+        "WORSE",
+        "EMEER",
+        "RATTY"
+      ]
+    },
+    "103": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "SAWER",
+        "UVATE",
+        "HEYNE",
+        "AVILE",
+        "WAVEY",
+        "ETERN"
+      ],
+      "all_words": [
+        "SAWER",
+        "UVATE",
+        "RIVEN",
+        "ALERT",
+        "HEYNE",
+        "SURAH",
+        "AVILE",
+        "WAVEY",
+        "ETERN",
+        "RENTE"
+      ]
+    },
+    "104": {
+      "valid_word_count": 3,
+      "invalid_words": [
+        "SAWER",
+        "UVATE",
+        "HEYNE",
+        "AVILE",
+        "WAVEY",
+        "ETERN",
+        "RETTE"
+      ],
+      "all_words": [
+        "SAWER",
+        "UVATE",
+        "RIVET",
+        "ALERT",
+        "HEYNE",
+        "SURAH",
+        "AVILE",
+        "WAVEY",
+        "ETERN",
+        "RETTE"
+      ]
+    },
+    "105": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "SAWER",
+        "EARAL",
+        "WETAR",
+        "RORAL"
+      ],
+      "all_words": [
+        "SAWER",
+        "UREDO",
+        "RATER",
+        "GRAMA",
+        "EARAL",
+        "SURGE",
+        "ARARA",
+        "WETAR",
+        "EDEMA",
+        "RORAL"
+      ]
+    },
+    "106": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "BOUSE",
+        "FRETT"
+      ],
+      "all_words": [
+        "SCURF",
+        "ELVER",
+        "BOUSE",
+        "UNLIT",
+        "MEANT",
+        "SEBUM",
+        "CLONE",
+        "UVULA",
+        "RESIN",
+        "FRETT"
+      ]
+    },
+    "107": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "WIVER",
+        "AMATE",
+        "CIMAR",
+        "UVATE"
+      ],
+      "all_words": [
+        "SCURF",
+        "WIVER",
+        "AMATE",
+        "RATIO",
+        "TREEN",
+        "SWART",
+        "CIMAR",
+        "UVATE",
+        "RETIE",
+        "FREON"
+      ]
+    },
+    "108": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "WANER",
+        "HEPAR",
+        "CALLE",
+        "UNLAP"
+      ],
+      "all_words": [
+        "SCURF",
+        "WANER",
+        "ALLAY",
+        "SLATE",
+        "HEPAR",
+        "SWASH",
+        "CALLE",
+        "UNLAP",
+        "REATA",
+        "FRYER"
+      ]
+    },
+    "109": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "WANER",
+        "STRAM",
+        "HEYNE"
+      ],
+      "all_words": [
+        "SCURF",
+        "WANER",
+        "ARARA",
+        "STRAM",
+        "HEYNE",
+        "SWASH",
+        "CARTE",
+        "UNARY",
+        "RERAN",
+        "FRAME"
+      ]
+    },
+    "110": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "IRADE",
+        "EXEAT",
+        "UVATE",
+        "FRETT"
+      ],
+      "all_words": [
+        "SCURF",
+        "WAVER",
+        "IRADE",
+        "PETIT",
+        "EXEAT",
+        "SWIPE",
+        "CAREX",
+        "UVATE",
+        "REDIA",
+        "FRETT"
+      ]
+    },
+    "111": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "WEDEL",
+        "OLENT",
+        "FLETE"
+      ],
+      "all_words": [
+        "SCURF",
+        "WEDEL",
+        "OLDIE",
+        "OLENT",
+        "NORSE",
+        "SWOON",
+        "CELLO",
+        "UDDER",
+        "REINS",
+        "FLETE"
+      ]
+    },
+    "112": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "SHALY",
+        "HERIE",
+        "ETERN",
+        "HERUT",
+        "LIMER"
+      ],
+      "all_words": [
+        "SHALY",
+        "HERIE",
+        "AROMA",
+        "MUSER",
+        "ETERN",
+        "SHAME",
+        "HERUT",
+        "AROSE",
+        "LIMER",
+        "YEARN"
+      ]
+    },
+    "113": {
+      "valid_word_count": 9,
+      "invalid_words": [
+        "SHALY"
+      ],
+      "all_words": [
+        "SHALY",
+        "TILIA",
+        "ORANG",
+        "MERGE",
+        "ARMOR",
+        "STOMA",
+        "HIRER",
+        "ALARM",
+        "LINGO",
+        "YAGER"
+      ]
+    },
+    "114": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "HANGI",
+        "NITTY"
+      ],
+      "all_words": [
+        "SHOWN",
+        "KAIRI",
+        "INLET",
+        "EGEST",
+        "DIRTY",
+        "SKIED",
+        "HANGI",
+        "OILER",
+        "WREST",
+        "NITTY"
+      ]
+    },
+    "115": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "WIRRA",
+        "RETTE"
+      ],
+      "all_words": [
+        "SHOWN",
+        "WIRRA",
+        "AVAIL",
+        "RETTE",
+        "TREED",
+        "SWART",
+        "HIVER",
+        "ORATE",
+        "WRITE",
+        "NALED"
+      ]
+    },
+    "116": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "ERGAT",
+        "EMOVE",
+        "SKEEL"
+      ],
+      "all_words": [
+        "SKALD",
+        "KOREA",
+        "ERGAT",
+        "EMOVE",
+        "LATER",
+        "SKEEL",
+        "KORMA",
+        "ARGOT",
+        "LEAVE",
+        "DATER"
+      ]
+    },
+    "117": {
+      "valid_word_count": 9,
+      "invalid_words": [
+        "PONGA"
+      ],
+      "all_words": [
+        "SKALD",
+        "WATER",
+        "ERODE",
+        "PONGA",
+        "TOYER",
+        "SWEPT",
+        "KAROO",
+        "ATONY",
+        "LEDGE",
+        "DREAR"
+      ]
+    },
+    "118": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "WARYE",
+        "ERGAT",
+        "ROOSE",
+        "SWERD"
+      ],
+      "all_words": [
+        "SKALD",
+        "WARYE",
+        "ERGAT",
+        "ROOSE",
+        "DOTER",
+        "SWERD",
+        "KAROO",
+        "ARGOT",
+        "LYASE",
+        "DETER"
+      ]
+    },
+    "119": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "KANIN",
+        "AFLAT"
+      ],
+      "all_words": [
+        "SKALD",
+        "WAFER",
+        "INLAY",
+        "PIAVE",
+        "ENTER",
+        "SWIPE",
+        "KANIN",
+        "AFLAT",
+        "LEAVE",
+        "DRYER"
+      ]
+    },
+    "120": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "ATTLE",
+        "LEROT",
+        "DRONY"
+      ],
+      "all_words": [
+        "SKALD",
+        "WATER",
+        "OUTRO",
+        "ORLON",
+        "PIETY",
+        "SWOOP",
+        "KAURI",
+        "ATTLE",
+        "LEROT",
+        "DRONY"
+      ]
+    },
+    "121": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "ODORI",
+        "NONNE",
+        "KIDEO",
+        "DWINE"
+      ],
+      "all_words": [
+        "SKALD",
+        "WIDOW",
+        "ODORI",
+        "RERAN",
+        "NONNE",
+        "SWORN",
+        "KIDEO",
+        "ADORN",
+        "LORAN",
+        "DWINE"
+      ]
+    },
+    "122": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "URALI",
+        "REGLE",
+        "LOREL"
+      ],
+      "all_words": [
+        "SLUFF",
+        "LOSER",
+        "URALI",
+        "REGLE",
+        "PLEAD",
+        "SLURP",
+        "LOREL",
+        "USAGE",
+        "FELLA",
+        "FRIED"
+      ]
+    },
+    "123": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "MELNE",
+        "PLITT",
+        "URALI"
+      ],
+      "all_words": [
+        "SLUFF",
+        "TERAI",
+        "AVAIL",
+        "MELNE",
+        "PLITT",
+        "STAMP",
+        "LEVEL",
+        "URALI",
+        "FAINT",
+        "FILET"
+      ]
+    },
+    "124": {
+      "valid_word_count": 9,
+      "invalid_words": [
+        "LIMER"
+      ],
+      "all_words": [
+        "SLUFF",
+        "TINEA",
+        "AMATI",
+        "RERUN",
+        "TRYST",
+        "START",
+        "LIMER",
+        "UNARY",
+        "FETUS",
+        "FAINT"
+      ]
+    },
+    "125": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "WIVER",
+        "RETTE",
+        "UVATE",
+        "FETTE"
+      ],
+      "all_words": [
+        "SLUFF",
+        "WIVER",
+        "AMATI",
+        "RETTE",
+        "TREES",
+        "SWART",
+        "LIMER",
+        "UVATE",
+        "FETTE",
+        "FRIES"
+      ]
+    },
+    "126": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "AGNUS",
+        "LEARS",
+        "SWEAL",
+        "LINGE",
+        "URENA",
+        "FRASS"
+      ],
+      "all_words": [
+        "SLUFF",
+        "WIRER",
+        "ENEMA",
+        "AGNUS",
+        "LEARS",
+        "SWEAL",
+        "LINGE",
+        "URENA",
+        "FEMUR",
+        "FRASS"
+      ]
+    },
+    "127": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "AGNUS",
+        "LINGE",
+        "URENA",
+        "FRASS"
+      ],
+      "all_words": [
+        "SLUFF",
+        "WIRER",
+        "ENEMA",
+        "AGNUS",
+        "TEARS",
+        "SWEAT",
+        "LINGE",
+        "URENA",
+        "FEMUR",
+        "FRASS"
+      ]
+    },
+    "128": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "FUNIS",
+        "SOFER",
+        "ROSET"
+      ],
+      "all_words": [
+        "SOBER",
+        "OVOLO",
+        "FUNIS",
+        "ELUDE",
+        "RESET",
+        "SOFER",
+        "OVULE",
+        "BONUS",
+        "ELIDE",
+        "ROSET"
+      ]
+    },
+    "129": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "UREDO",
+        "ABOMA",
+        "CITAL",
+        "RORAL"
+      ],
+      "all_words": [
+        "SOBER",
+        "UREDO",
+        "MISER",
+        "ABOMA",
+        "CITAL",
+        "SUMAC",
+        "ORIBI",
+        "BESOT",
+        "EDEMA",
+        "RORAL"
+      ]
+    },
+    "130": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "UREDO",
+        "ABOMA",
+        "BEMOL",
+        "RORAL"
+      ],
+      "all_words": [
+        "SOBER",
+        "UREDO",
+        "RIMER",
+        "ABOMA",
+        "HILAL",
+        "SURAH",
+        "ORIBI",
+        "BEMOL",
+        "EDEMA",
+        "RORAL"
+      ]
+    },
+    "131": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "PAEON",
+        "SEISE",
+        "MUSER",
+        "PAREU",
+        "ROOSE"
+      ],
+      "all_words": [
+        "SPARE",
+        "PAEON",
+        "ARGOT",
+        "SEISE",
+        "MUSER",
+        "SPASM",
+        "PAREU",
+        "AEGIS",
+        "ROOSE",
+        "ENTER"
+      ]
+    },
+    "132": {
+      "valid_word_count": 3,
+      "invalid_words": [
+        "YEMAN",
+        "TRAPT",
+        "EMEER",
+        "SYTHE",
+        "PERIM",
+        "AMATE",
+        "RAPHE"
+      ],
+      "all_words": [
+        "SPARE",
+        "YEMAN",
+        "TRAPT",
+        "HITHE",
+        "EMEER",
+        "SYTHE",
+        "PERIM",
+        "AMATE",
+        "RAPHE",
+        "ENTER"
+      ]
+    },
+    "133": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "YUMAN",
+        "TRAPT",
+        "EMEER",
+        "SYTHE",
+        "AMATE",
+        "RAPHE"
+      ],
+      "all_words": [
+        "SPARE",
+        "YUMAN",
+        "TRAPT",
+        "HITHE",
+        "EMEER",
+        "SYTHE",
+        "PURIM",
+        "AMATE",
+        "RAPHE",
+        "ENTER"
+      ]
+    },
+    "134": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "SPRUG",
+        "LOVEE",
+        "REIVE"
+      ],
+      "all_words": [
+        "SPRUG",
+        "THERE",
+        "ALIGN",
+        "LOVEE",
+        "EXERT",
+        "STALE",
+        "PHLOX",
+        "REIVE",
+        "URGER",
+        "GENET"
+      ]
+    },
+    "135": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "SPRUG",
+        "PALET",
+        "PALLA",
+        "UVATE"
+      ],
+      "all_words": [
+        "SPRUG",
+        "WAIVE",
+        "ELVAN",
+        "ELATE",
+        "PALET",
+        "SWEEP",
+        "PALLA",
+        "RIVAL",
+        "UVATE",
+        "GENET"
+      ]
+    },
+    "136": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "TAPOA",
+        "MENGE"
+      ],
+      "all_words": [
+        "STOGY",
+        "TAPOA",
+        "OPIUM",
+        "MENGE",
+        "PREEN",
+        "STOMP",
+        "TAPER",
+        "OPINE",
+        "GOUGE",
+        "YAMEN"
+      ]
+    },
+    "137": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "WIRRA",
+        "MEACH",
+        "ORDAL",
+        "GRECE",
+        "YASHT"
+      ],
+      "all_words": [
+        "STOGY",
+        "WIRRA",
+        "ANDES",
+        "MEACH",
+        "PALET",
+        "SWAMP",
+        "TINEA",
+        "ORDAL",
+        "GRECE",
+        "YASHT"
+      ]
+    },
+    "138": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "MENOW",
+        "CASER"
+      ],
+      "all_words": [
+        "SUGAR",
+        "UREDO",
+        "MENOW",
+        "ANTRE",
+        "CASER",
+        "SUMAC",
+        "URENA",
+        "GENTS",
+        "ADORE",
+        "ROWER"
+      ]
+    },
+    "139": {
+      "valid_word_count": 5,
+      "invalid_words": [
+        "AURIS",
+        "IRADE",
+        "PULER",
+        "SWAIP",
+        "ROSER"
+      ],
+      "all_words": [
+        "SUGAR",
+        "WHOSO",
+        "AURIS",
+        "IRADE",
+        "PULER",
+        "SWAIP",
+        "UHURU",
+        "GORAL",
+        "ASIDE",
+        "ROSER"
+      ]
+    },
+    "140": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "TABUT",
+        "AROPH",
+        "EMEER"
+      ],
+      "all_words": [
+        "TABUT",
+        "AROPH",
+        "CORSE",
+        "EMEER",
+        "TARTE",
+        "TACET",
+        "AROMA",
+        "BORER",
+        "UPSET",
+        "THERE"
+      ]
+    },
+    "141": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "TABUT",
+        "URENA",
+        "ARARA",
+        "UNODE"
+      ],
+      "all_words": [
+        "TABUT",
+        "URENA",
+        "NABOB",
+        "ERODE",
+        "RAPES",
+        "TUNER",
+        "ARARA",
+        "BEBOP",
+        "UNODE",
+        "TABES"
+      ]
+    },
+    "142": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "POORI",
+        "EXODY"
+      ],
+      "all_words": [
+        "TEASE",
+        "EXPEL",
+        "POORI",
+        "ADDED",
+        "LYASE",
+        "TEPAL",
+        "EXODY",
+        "APODA",
+        "SERES",
+        "ELIDE"
+      ]
+    },
+    "143": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "EMBOX",
+        "SOPER"
+      ],
+      "all_words": [
+        "TEASE",
+        "EMBOX",
+        "TAUPE",
+        "RISER",
+        "ALERT",
+        "TETRA",
+        "EMAIL",
+        "ABUSE",
+        "SOPER",
+        "EXERT"
+      ]
+    },
+    "144": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "UNSIN",
+        "EMOVE",
+        "ASSOT"
+      ],
+      "all_words": [
+        "TEASE",
+        "UNSIN",
+        "BESET",
+        "EMOVE",
+        "RATER",
+        "TUBER",
+        "ENEMA",
+        "ASSOT",
+        "SIEVE",
+        "ENTER"
+      ]
+    },
+    "145": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "ALURE",
+        "PALAR",
+        "TRAPT",
+        "JARAI"
+      ],
+      "all_words": [
+        "THUJA",
+        "RIVAL",
+        "ALURE",
+        "PALAR",
+        "TRAIT",
+        "TRAPT",
+        "HILAR",
+        "UVULA",
+        "JARAI",
+        "ALERT"
+      ]
+    },
+    "146": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "OLENT",
+        "UVATE",
+        "UREAL"
+      ],
+      "all_words": [
+        "THUJA",
+        "RERUN",
+        "OLENT",
+        "UVATE",
+        "TELOS",
+        "TROUT",
+        "HELVE",
+        "UREAL",
+        "JUNTO",
+        "ANTES"
+      ]
+    },
+    "147": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "TOPET",
+        "ENTAD"
+      ],
+      "all_words": [
+        "TOPET",
+        "OVINE",
+        "RASTA",
+        "ATTAR",
+        "NEEDY",
+        "TORAN",
+        "OVATE",
+        "PISTE",
+        "ENTAD",
+        "TEARY"
+      ]
+    },
+    "148": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "TOPET",
+        "PALTA",
+        "TYTHE"
+      ],
+      "all_words": [
+        "TOPET",
+        "UNARY",
+        "ISLET",
+        "LETCH",
+        "ENATE",
+        "TUILE",
+        "ONSEN",
+        "PALTA",
+        "ERECT",
+        "TYTHE"
+      ]
+    },
+    "149": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "REBIA",
+        "OLENT",
+        "VIAGE",
+        "ECHON"
+      ],
+      "all_words": [
+        "TROLL",
+        "REBIA",
+        "OLENT",
+        "VIAGE",
+        "ECHON",
+        "TROVE",
+        "RELIC",
+        "OBEAH",
+        "LINGO",
+        "LATEN"
+      ]
+    },
+    "150": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "NEUMA",
+        "THERF",
+        "PURRE",
+        "GANEF"
+      ],
+      "all_words": [
+        "UNPEG",
+        "NEUMA",
+        "SIREN",
+        "AGREE",
+        "THERF",
+        "UNSAT",
+        "NEIGH",
+        "PURRE",
+        "EMEER",
+        "GANEF"
+      ]
+    },
+    "151": {
+      "valid_word_count": 4,
+      "invalid_words": [
+        "RORAL",
+        "LODDE",
+        "URSAL",
+        "NONDO",
+        "PRODD",
+        "GLEDE"
+      ],
+      "all_words": [
+        "UNPEG",
+        "RORAL",
+        "SNORE",
+        "ADDED",
+        "LODDE",
+        "URSAL",
+        "NONDO",
+        "PRODD",
+        "EARED",
+        "GLEDE"
+      ]
+    },
+    "152": {
+      "valid_word_count": 8,
+      "invalid_words": [
+        "RETTE",
+        "EMULE"
+      ],
+      "all_words": [
+        "VELUM",
+        "IMINE",
+        "CUMIN",
+        "ALIAS",
+        "RETTE",
+        "VICAR",
+        "EMULE",
+        "LIMIT",
+        "UNIAT",
+        "MENSE"
+      ]
+    },
+    "153": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "EMEER",
+        "LIAGE",
+        "UNPEN"
+      ],
+      "all_words": [
+        "VELUM",
+        "IMINE",
+        "LEAPT",
+        "LEGER",
+        "ARENA",
+        "VILLA",
+        "EMEER",
+        "LIAGE",
+        "UNPEN",
+        "METRA"
+      ]
+    },
+    "154": {
+      "valid_word_count": 7,
+      "invalid_words": [
+        "TITER",
+        "HANGI",
+        "RAMEE"
+      ],
+      "all_words": [
+        "WHARF",
+        "HALAL",
+        "ENEMY",
+        "AGREE",
+        "TITER",
+        "WHEAT",
+        "HANGI",
+        "ALERT",
+        "RAMEE",
+        "FLYER"
+      ]
+    },
+    "155": {
+      "valid_word_count": 6,
+      "invalid_words": [
+        "RORAL",
+        "OTAKU",
+        "NEBEK",
+        "ARABA"
+      ],
+      "all_words": [
+        "WHARF",
+        "RORAL",
+        "OTAKU",
+        "NEBEK",
+        "GLADE",
+        "WRONG",
+        "HOTEL",
+        "ARABA",
+        "RAKED",
+        "FLUKE"
+      ]
+    }
+  }
+}

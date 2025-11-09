@@ -172,7 +172,7 @@ class MiniCrosswordsTask(Task):
             self.xs.append(self.env.render_clues())
         self.steps = 10  # TODO: variable steps??
         self.cache_proposals = {}
-        self.cache = FileCache("crossword_value_cache.json")
+        self.value_caches = {}
         self.eval_cache = FileCache("gpt3_5_evaluation.json")
 
     def __len__(self) -> int:
@@ -330,9 +330,16 @@ class MiniCrosswordsTask(Task):
 
         return True # No conflicts found and not an exact match
     
-    def evaluate(self, x: str, y: str, n_evaluate_sample: int) -> int:
+    def evaluate(self, x: str, y: str, n_evaluate_sample: int, model: str = 'llama') -> int:
         self.set_status(x, y)
         count = {'sure': 0, 'maybe': 0, 'impossible': 0}
+        
+        if model not in self.value_caches:
+            safe_model_name = model.replace('/', '_').replace('-', '_')
+            self.value_caches[model] = FileCache(f"crossword_value_cache_{safe_model_name}.json")
+            
+        current_cache = self.value_caches[model]
+        
         for ans, data, status in zip(self.env.ans, self.env.data, self.env.status):
             if ans.count('_') >= 3: continue
             ans = ' '.join(ans.lower())
@@ -340,20 +347,28 @@ class MiniCrosswordsTask(Task):
             # prompt = value_prompt.format(input=line)
             # res = gpt(prompt)[0]
             # res = base_model(prompt)[0]
-            res = self.cache.get(line)
+            res = current_cache.get(line)
             if res is not None:
                 print(res)
                 count[res] += 1
                 continue
-            user_prompt = user_value_prompt.format(input=line)
-            res = llama_instruct(user_prompt, system_value_prompt)[0].strip()
+            
+            if 'gpt' in model.lower():
+                 # Use standard prompt for GPT models
+                 prompt = value_prompt.format(input=line)
+                 res = gpt(prompt, stop=None, max_tokens=200)[0].strip().lower()
+            else:
+                 # Use instruct prompts for Llama/local models
+                 user_prompt = user_value_prompt.format(input=line)
+                 res = llama_instruct(user_prompt, system_value_prompt)[0].strip().lower()
+            
             print(line)
             print(res)
             print()
             res = res.split('\n')[-1].strip()
             if res in count: 
                 count[res] += 1
-                self.cache.set(line, res)
+                current_cache.set(line, res)
         print(count)
         return count
     

@@ -1,0 +1,1954 @@
+{
+  "A music style; a dance hall: _ _ _ _ _": [
+    "swing",
+    1.0
+  ],
+  "To remove the hat: _ _ _ _ _": [
+    "dooff",
+    2.3000000000000007
+  ],
+  "Unhidden; explicit: _ _ _ _ _": [
+    "clear",
+    0.5
+  ],
+  "The minister's house: _ _ _ _ _": [
+    "manse",
+    4.300000000000001
+  ],
+  "To demand; to arrange;: _ _ _ _ _": [
+    "order",
+    2.5
+  ],
+  "An Italian domed cathedral: _ _ _ _ _": [
+    "upola",
+    1.0
+  ],
+  "A nickel steel alloy: _ _ _ _ _": [
+    "invar",
+    2.7
+  ],
+  "To disgrace; to blame; to injure: _ _ _ _ _": [
+    "scorn",
+    1.0
+  ],
+  "Low-lying fertile land: _ _ _ _ _": [
+    "plain",
+    3.0
+  ],
+  "A sea mammal; a fishing device: _ _ _ _ _": [
+    "trawl",
+    1.5
+  ],
+  "The minister's house: m a n s e": [
+    "manse",
+    5.0
+  ],
+  "An Italian domed cathedral: _ _ _ m _": [
+    "domes",
+    0.5
+  ],
+  "A nickel steel alloy: _ _ _ a _": [
+    "invar",
+    2.0
+  ],
+  "To disgrace; to blame; to injure: _ _ _ n _": [
+    "scorn",
+    2.0
+  ],
+  "Low-lying fertile land: _ _ _ s _": [
+    "marsh",
+    1.5
+  ],
+  "A sea mammal; a fishing device: _ _ _ e _": [
+    "seine",
+    16.7
+  ],
+  "To demand; to arrange;: o r d e r": [
+    "order",
+    4.0
+  ],
+  "An Italian domed cathedral: _ _ _ m o": [
+    "domos",
+    3.2000000000000015
+  ],
+  "A nickel steel alloy: _ _ _ a r": [
+    "invar",
+    2.5
+  ],
+  "To disgrace; to blame; to injure: _ _ _ n d": [
+    "scold",
+    2.5
+  ],
+  "Low-lying fertile land: _ _ _ s e": [
+    "plase",
+    2.600000000000001
+  ],
+  "A sea mammal; a fishing device: _ _ _ e r": [
+    "seine",
+    1.5
+  ],
+  "An Italian domed cathedral: _ d _ m o": [
+    "domos",
+    0.9999999999999999
+  ],
+  "A nickel steel alloy: _ o _ a r": [
+    "invar",
+    1.0
+  ],
+  "To disgrace; to blame; to injure: _ o _ n d": [
+    "scold",
+    2.5
+  ],
+  "Low-lying fertile land: _ f _ s e": [
+    "mires",
+    1.0
+  ],
+  "A sea mammal; a fishing device: _ f _ e r": [
+    "etter",
+    2.700000000000001
+  ],
+  "Unhidden; explicit: c l e a r": [
+    "clear",
+    4.5
+  ],
+  "An Italian domed cathedral: _ d c m o": [
+    "omico",
+    2.3000000000000007
+  ],
+  "A nickel steel alloy: _ o l a r": [
+    "invar",
+    3.0
+  ],
+  "To disgrace; to blame; to injure: _ o e n d": [
+    "scold",
+    1.5
+  ],
+  "Low-lying fertile land: _ f a s e": [
+    "delta",
+    3.5
+  ],
+  "A sea mammal; a fishing device: _ f r e r": [
+    "ealer",
+    2.1
+  ],
+  "A music style; a dance hall: s w i n g": [
+    "swing",
+    4.0
+  ],
+  "An Italian domed cathedral: s _ c m o": [
+    "stomo",
+    6.099999999999994
+  ],
+  "A nickel steel alloy: w _ l a r": [
+    "invar",
+    3.3000000000000003
+  ],
+  "To disgrace; to blame; to injure: i _ e n d": [
+    "inend",
+    3.5000000000000018
+  ],
+  "Low-lying fertile land: n _ a s e": [
+    "plane",
+    1.5000000000000004
+  ],
+  "A sea mammal; a fishing device: g _ r e r": [
+    "earer",
+    2.600000000000001
+  ],
+  "Containing shale: _ _ _ _ _": [
+    "hally",
+    6.199999999999994
+  ],
+  "The genus that includes the lime-tree: _ _ _ _ _": [
+    "tilia",
+    4.5
+  ],
+  "An orangutan: _ _ _ _ _": [
+    "orang",
+    1.5
+  ],
+  "To combine: _ _ _ _ _": [
+    "merge",
+    2.5
+  ],
+  "Body protection: _ _ _ _ _": [
+    "armor",
+    3.5
+  ],
+  "A breathing pore; a simple bodily opening: _ _ _ _ _": [
+    "ifice",
+    2.3000000000000007
+  ],
+  "An employer: _ _ _ _ _": [
+    "boast",
+    2.700000000000001
+  ],
+  "Fear; a warning device: _ _ _ _ _": [
+    "alarm",
+    1.5
+  ],
+  "Language; argot; slang; cant; jargon: _ _ _ _ _": [
+    "ongue",
+    1.5
+  ],
+  "A northern bird; a jager, a light infantryman: _ _ _ _ _": [
+    "eider",
+    1.5
+  ],
+  "Body protection: a r m o r": [
+    "armor",
+    5.0
+  ],
+  "A breathing pore; a simple bodily opening: _ _ _ _ a": [
+    "stoma",
+    1.5
+  ],
+  "An employer: _ _ _ _ r": [
+    "hirer",
+    1.5
+  ],
+  "Fear; a warning device: _ _ _ _ m": [
+    "alarm",
+    2.2
+  ],
+  "Language; argot; slang; cant; jargon: _ _ _ _ o": [
+    "argot",
+    1.0
+  ],
+  "A northern bird; a jager, a light infantryman: _ _ _ _ r": [
+    "nowar",
+    2.600000000000001
+  ],
+  "To combine: m e r g e": [
+    "merge",
+    3.5
+  ],
+  "A breathing pore; a simple bodily opening: _ _ _ m a": [
+    "pores",
+    3.0
+  ],
+  "An employer: _ _ _ e r": [
+    "owner",
+    5.8000000000000025
+  ],
+  "Fear; a warning device: _ _ _ r m": [
+    "alarm",
+    2.5
+  ],
+  "Language; argot; slang; cant; jargon: _ _ _ g o": [
+    "argon",
+    3.5
+  ],
+  "A northern bird; a jager, a light infantryman: _ _ _ e r": [
+    "eider",
+    1.0
+  ],
+  "Containing shale: h a l l y": [
+    "hally",
+    1.7000000000000002
+  ],
+  "A breathing pore; a simple bodily opening: h _ _ m a": [
+    "stoma",
+    0.5
+  ],
+  "An employer: a _ _ e r": [
+    "owner",
+    1.0
+  ],
+  "Language; argot; slang; cant; jargon: l _ _ g o": [
+    "lingo",
+    2.5
+  ],
+  "A northern bird; a jager, a light infantryman: y _ _ e r": [
+    "yager",
+    3.0
+  ],
+  "The genus that includes the lime-tree: t i l i a": [
+    "ilias",
+    4.700000000000001
+  ],
+  "A breathing pore; a simple bodily opening: h t _ m a": [
+    "mouth",
+    1.0
+  ],
+  "Fear; a warning device: l l _ r m": [
+    "laser",
+    1.0
+  ],
+  "Language; argot; slang; cant; jargon: l i _ g o": [
+    "lingo",
+    2.5
+  ],
+  "A northern bird; a jager, a light infantryman: y a _ e r": [
+    "yager",
+    2.5
+  ],
+  "Containing shale: _ _ l l y": [
+    "silly",
+    1.4000000000000001
+  ],
+  "An orangutan: o r a n g": [
+    "orang",
+    2.6
+  ],
+  "A breathing pore; a simple bodily opening: _ t o m a": [
+    "stoma",
+    0.7
+  ],
+  "An employer: _ i r e r": [
+    "ireer",
+    1.4000000000000001
+  ],
+  "Fear; a warning device: l l a r m": [
+    "alarm",
+    3.0
+  ],
+  "Language; argot; slang; cant; jargon: l i n g o": [
+    "lingo",
+    3.0
+  ],
+  "A northern bird; a jager, a light infantryman: y a g e r": [
+    "yager",
+    3.7
+  ],
+  "Containing shale: s _ l l y": [
+    "shell",
+    1.6000000000000003
+  ],
+  "A breathing pore; a simple bodily opening: s t o m a": [
+    "stoma",
+    4.0
+  ],
+  "Scald; an ancient Scandinavian bard: _ _ _ _ _": [
+    "skald",
+    3.7
+  ],
+  "H2O; to irrigate: _ _ _ _ _": [
+    "water",
+    3.1
+  ],
+  "To wear away: _ _ _ _ _": [
+    "erode",
+    3.0
+  ],
+  "A New Zealand tree fern: _ _ _ _ _": [
+    "athea",
+    0.7
+  ],
+  "A trifler: _ _ _ _ _": [
+    "awdle",
+    0.7
+  ],
+  "Brushed away: _ _ _ _ _": [
+    "swept",
+    4.0
+  ],
+  "A South African dry plateau: _ _ _ _ _": [
+    "veldt",
+    1.5
+  ],
+  "Debility; lethargy: _ _ _ _ _": [
+    "kness",
+    3.3000000000000016
+  ],
+  "A ridge; a shelf: _ _ _ _ _": [
+    "ledge",
+    3.0
+  ],
+  "Bleakness; a dreary person: _ _ _ _ _": [
+    "gloom",
+    1.5
+  ],
+  "Scald; an ancient Scandinavian bard: _ _ k _ _": [
+    "skald",
+    3.5
+  ],
+  "H2O; to irrigate: _ _ n _ _": [
+    "water",
+    3.0
+  ],
+  "To wear away: _ _ e _ _": [
+    "erode",
+    2.5
+  ],
+  "A New Zealand tree fern: _ _ s _ _": [
+    "kauri",
+    2.0
+  ],
+  "A trifler: _ _ s _ _": [
+    "joker",
+    1.5
+  ],
+  "Debility; lethargy: k n e s s": [
+    "nells",
+    2.800000000000001
+  ],
+  "Scald; an ancient Scandinavian bard: _ _ k l _": [
+    "skald",
+    5.0
+  ],
+  "H2O; to irrigate: _ _ n e _": [
+    "water",
+    4.0
+  ],
+  "To wear away: _ _ e d _": [
+    "erode",
+    1.0
+  ],
+  "A New Zealand tree fern: _ _ s g _": [
+    "kauri",
+    3.1000000000000014
+  ],
+  "A trifler: _ _ s e _": [
+    "ooser",
+    1.0999999999999999
+  ],
+  "A ridge; a shelf: l e d g e": [
+    "ledge",
+    5.0
+  ],
+  "Scald; an ancient Scandinavian bard: s _ k l _": [
+    "skald",
+    4.5
+  ],
+  "H2O; to irrigate: w _ n e _": [
+    "water",
+    4.5
+  ],
+  "To wear away: e _ e d _": [
+    "erode",
+    2.0
+  ],
+  "A New Zealand tree fern: p _ s g _": [
+    "punga",
+    1.0
+  ],
+  "A trifler: t _ s e _": [
+    "ripes",
+    3.3000000000000016
+  ],
+  "Brushed away: s w e p t": [
+    "swept",
+    4.5
+  ],
+  "Scald; an ancient Scandinavian bard: s _ k l g": [
+    "skald",
+    4.5
+  ],
+  "H2O; to irrigate: w _ n e l": [
+    "water",
+    3.5
+  ],
+  "To wear away: e _ e d o": [
+    "erode",
+    3.5
+  ],
+  "A New Zealand tree fern: p _ s g o": [
+    "ponga",
+    2.5
+  ],
+  "A trifler: t _ s e m": [
+    "easer",
+    0.5
+  ],
+  "Bleakness; a dreary person: g l o o m": [
+    "oomer",
+    1.5
+  ],
+  "Scald; an ancient Scandinavian bard: s v _ l g": [
+    "skald",
+    4.1
+  ],
+  "H2O; to irrigate: w e _ e l": [
+    "water",
+    2.5
+  ],
+  "To wear away: e l _ d o": [
+    "erode",
+    2.5
+  ],
+  "A New Zealand tree fern: p d _ g o": [
+    "ponga",
+    3.5
+  ],
+  "A trifler: t t _ e m": [
+    "emmet",
+    2.3000000000000007
+  ],
+  "A South African dry plateau: v e l d t": [
+    "veldt",
+    5.0
+  ],
+  "To discard; to slough: _ _ _ _ _": [
+    "sheds",
+    0.5
+  ],
+  "A moth genus; ringworm; a fungal infection: _ _ _ _ _": [
+    "athal",
+    2.0
+  ],
+  "A violin: _ _ _ _ _": [
+    "iolas",
+    2.700000000000001
+  ],
+  "To run again: _ _ _ _ _": [
+    "eplay",
+    3.800000000000002
+  ],
+  "A lovers's meeting: _ _ _ _ _": [
+    "tryst",
+    2.2
+  ],
+  "A beginning; a sudden twitch: _ _ _ _ _": [
+    "start",
+    0.5
+  ],
+  "One who snares birds with birdlime; a hanger-on: _ _ _ _ _": [
+    "onger",
+    0.7
+  ],
+  "Operating on a single object: _ _ _ _ _": [
+    "ingle",
+    3.2000000000000015
+  ],
+  "An unborn child: _ _ _ _ _": [
+    "fetus",
+    3.5
+  ],
+  "To collapse; barely detectable: _ _ _ _ _": [
+    "faint",
+    1.0
+  ],
+  "To discard; to slough: _ _ i _ _": [
+    "slime",
+    0.9
+  ],
+  "A moth genus; ringworm; a fungal infection: _ _ n _ _": [
+    "hrope",
+    2.2000000000000006
+  ],
+  "A violin: _ _ g _ _": [
+    "fagot",
+    2.0
+  ],
+  "To run again: _ _ l _ _": [
+    "eplay",
+    0.6
+  ],
+  "A lovers's meeting: _ _ e _ _": [
+    "tryst",
+    3.0
+  ],
+  "Operating on a single object: i n g l e": [
+    "ingle",
+    2.2
+  ],
+  "To discard; to slough: _ _ i _ f": [
+    "lough",
+    1.4
+  ],
+  "A moth genus; ringworm; a fungal infection: _ _ n _ a": [
+    "thena",
+    3.0000000000000013
+  ],
+  "A violin: _ _ g _ i": [
+    "violi",
+    3.2000000000000015
+  ],
+  "To run again: _ _ l _ n": [
+    "eloan",
+    9.099999999999985
+  ],
+  "A lovers's meeting: _ _ e _ t": [
+    "newet",
+    2.3000000000000007
+  ],
+  "To collapse; barely detectable: f a i n t": [
+    "faint",
+    3.0
+  ],
+  "To discard; to slough: s _ i _ f": [
+    "lough",
+    2.5
+  ],
+  "A moth genus; ringworm; a fungal infection: t _ n _ a": [
+    "tinea",
+    2.5
+  ],
+  "A violin: a _ g _ i": [
+    "viola",
+    0.5
+  ],
+  "To run again: r _ l _ n": [
+    "eloan",
+    9.199999999999983
+  ],
+  "A lovers's meeting: t _ e _ t": [
+    "tetes",
+    0.1
+  ],
+  "A beginning; a sudden twitch: s t a r t": [
+    "start",
+    2.5
+  ],
+  "To discard; to slough: s o i _ f": [
+    "lough",
+    1.5
+  ],
+  "A moth genus; ringworm; a fungal infection: t n n _ a": [
+    "tinea",
+    4.5
+  ],
+  "A violin: a g g _ i": [
+    "aggie",
+    3.600000000000002
+  ],
+  "To run again: r e l _ n": [
+    "eloan",
+    16.199999999999985
+  ],
+  "A lovers's meeting: t r e _ t": [
+    "treat",
+    1.7
+  ],
+  "One who snares birds with birdlime; a hanger-on: o n g e r": [
+    "onger",
+    0.6
+  ],
+  "To discard; to slough: s _ _ f f": [
+    "scuff",
+    2.5
+  ],
+  "A moth genus; ringworm; a fungal infection: t n n e a": [
+    "tinea",
+    4.5
+  ],
+  "A violin: a _ _ t i": [
+    "alati",
+    2.1000000000000005
+  ],
+  "To run again: r _ _ u n": [
+    "renew",
+    1.5
+  ],
+  "A lovers's meeting: t r e s t": [
+    "tryst",
+    3.0
+  ],
+  "One who snares birds with birdlime; a hanger-on: _ n _ _ r": [
+    "imner",
+    1.0
+  ],
+  "Operating on a single object: _ n _ _ e": [
+    "alone",
+    0.2
+  ],
+  "An unborn child: f e t u s": [
+    "fetus",
+    5.0
+  ],
+  "To discard; to slough: s c u f f": [
+    "scuff",
+    3.0
+  ],
+  "One who snares birds with birdlime; a hanger-on: c n _ _ r": [
+    "anner",
+    2.1999999999999997
+  ],
+  "Operating on a single object: u n _ _ e": [
+    "nique",
+    1.5
+  ],
+  "A violin: a l a t i": [
+    "alati",
+    0.6
+  ],
+  "One who snares birds with birdlime; a hanger-on: c n l _ r": [
+    "liner",
+    2.9000000000000012
+  ],
+  "Operating on a single object: u n a _ e": [
+    "unite",
+    2.5000000000000004
+  ],
+  "One who snares birds with birdlime; a hanger-on: _ n l _ r": [
+    "imner",
+    3.0
+  ],
+  "Operating on a single object: _ n a _ e": [
+    "onane",
+    2.600000000000001
+  ],
+  "To discard; to slough: s _ o f f": [
+    "soffs",
+    1.6
+  ],
+  "To run again: r _ n u n": [
+    "renew",
+    1.5
+  ],
+  "Operating on a single object: o n a n e": [
+    "onean",
+    0.2
+  ],
+  "A violin: a _ a t i": [
+    "aalti",
+    0.5
+  ],
+  "A male friend: _ _ _ _ _": [
+    "buddy",
+    2.5
+  ],
+  "Something big and important: _ _ _ _ _": [
+    "issue",
+    1.7
+  ],
+  "Things that enter; data given to a computer program: _ _ _ _ _": [
+    "input",
+    3.5
+  ],
+  "To besiege: _ _ _ _ _": [
+    "beset",
+    3.0
+  ],
+  "More healthy; a coin: _ _ _ _ _": [
+    "whole",
+    0.5
+  ],
+  "A Mennonite sect, named for Jacob Ammann: _ _ _ _ _": [
+    "mmish",
+    1.6000000000000005
+  ],
+  "A craze: _ _ _ _ _": [
+    "mania",
+    1.7
+  ],
+  "To force; to drive: _ _ _ _ _": [
+    "drive",
+    1.5
+  ],
+  "To dig out roughly: _ _ _ _ _": [
+    "scour",
+    3.0
+  ],
+  "On the outside: _ _ _ _ _": [
+    "outer",
+    1.8
+  ],
+  "A male friend: _ _ _ s _": [
+    "buddy",
+    1.0
+  ],
+  "Something big and important: _ _ _ c _": [
+    "event",
+    2.0
+  ],
+  "Things that enter; data given to a computer program: _ _ _ o _": [
+    "input",
+    3.5
+  ],
+  "To besiege: _ _ _ u _": [
+    "surge",
+    3.1000000000000014
+  ],
+  "More healthy; a coin: _ _ _ r _": [
+    "etter",
+    3.1000000000000014
+  ],
+  "To dig out roughly: s c o u r": [
+    "scour",
+    4.5
+  ],
+  "A male friend: _ _ _ s o": [
+    "broso",
+    0.1
+  ],
+  "Something big and important: _ _ _ c u": [
+    "issue",
+    1.8
+  ],
+  "Things that enter; data given to a computer program: _ _ _ o t": [
+    "input",
+    4.5
+  ],
+  "To besiege: _ _ _ u e": [
+    "surue",
+    2.600000000000001
+  ],
+  "More healthy; a coin: _ _ _ r r": [
+    "other",
+    0.5
+  ],
+  "On the outside: o u t e r": [
+    "outer",
+    5.0
+  ],
+  "A male friend: _ m _ s o": [
+    "mamos",
+    2.400000000000001
+  ],
+  "Something big and important: _ a _ c u": [
+    "issue",
+    1.5
+  ],
+  "Things that enter; data given to a computer program: _ n _ o t": [
+    "input",
+    3.0
+  ],
+  "To besiege: _ i _ u e": [
+    "urieu",
+    3.4000000000000017
+  ],
+  "More healthy; a coin: _ a _ r r": [
+    "atter",
+    2.600000000000001
+  ],
+  "A craze: m a n i a": [
+    "mania",
+    4.5
+  ],
+  "A male friend: m m _ s o": [
+    "mimos",
+    9.699999999999982
+  ],
+  "Something big and important: m a _ c u": [
+    "major",
+    2.0
+  ],
+  "Things that enter; data given to a computer program: i n _ o t": [
+    "input",
+    4.0
+  ],
+  "To besiege: s i _ u e": [
+    "siege",
+    3.0
+  ],
+  "More healthy; a coin: h a _ r r": [
+    "harer",
+    0.6
+  ],
+  "A Mennonite sect, named for Jacob Ammann: m m i s h": [
+    "amish",
+    2.0
+  ],
+  "A two-legged creature: _ _ _ _ _": [
+    "human",
+    0.5
+  ],
+  "A pointed arch: _ _ _ _ _": [
+    "othic",
+    2.6
+  ],
+  "A caliph: _ _ _ _ _": [
+    "aliph",
+    1.3
+  ],
+  "A plant related to the burdock: _ _ _ _ _": [
+    "thorn",
+    1.7
+  ],
+  "One who eats: _ _ _ _ _": [
+    "eater",
+    2.5
+  ],
+  "An Italian lawn game played with wooden balls: _ _ _ _ _": [
+    "bocce",
+    2.5
+  ],
+  "A Yoruba-speaking people: _ _ _ _ _": [
+    "rubas",
+    1.7000000000000004
+  ],
+  "A guide; a captain: _ _ _ _ _": [
+    "steer",
+    1.5
+  ],
+  "To avoid: _ _ _ _ _": [
+    "elude",
+    1.0
+  ],
+  "To delay; to put off: _ _ _ _ _": [
+    "postp",
+    3.800000000000002
+  ],
+  "A pointed arch: o t h i c": [
+    "gival",
+    0.5
+  ],
+  "An Italian lawn game played with wooden balls: _ o _ _ _": [
+    "bocce",
+    4.0
+  ],
+  "A Yoruba-speaking people: _ t _ _ _": [
+    "oruba",
+    0.5
+  ],
+  "A guide; a captain: _ h _ _ _": [
+    "helms",
+    1.0
+  ],
+  "To avoid: _ i _ _ _": [
+    "evite",
+    1.0
+  ],
+  "To delay; to put off: _ c _ _ _": [
+    "postp",
+    3.5000000000000018
+  ],
+  "A caliph: c _ _ _ _": [
+    "aliph",
+    3.5
+  ],
+  "A plant related to the burdock: c _ _ _ _": [
+    "cleat",
+    0.8999999999999999
+  ],
+  "One who eats: e _ _ _ _": [
+    "eater",
+    3.5
+  ],
+  "An Italian lawn game played with wooden balls: b o c c e": [
+    "bocce",
+    4.0
+  ],
+  "A two-legged creature: b _ _ _ _": [
+    "biped",
+    1.0
+  ],
+  "One who eats: e a t e r": [
+    "eater",
+    4.0
+  ],
+  "A Yoruba-speaking people: _ t _ _ a": [
+    "oruba",
+    1.7000000000000002
+  ],
+  "A guide; a captain: _ h _ _ t": [
+    "ftain",
+    11.5
+  ],
+  "To avoid: _ i _ _ e": [
+    "elide",
+    0.5
+  ],
+  "To delay; to put off: _ c _ _ r": [
+    "defer",
+    1.5
+  ],
+  "A two-legged creature: b i p e d": [
+    "biped",
+    3.0
+  ],
+  "A Yoruba-speaking people: i t _ _ a": [
+    "ekiri",
+    0.5
+  ],
+  "A guide; a captain: p h _ _ t": [
+    "pilot",
+    3.0
+  ],
+  "To avoid: e i _ _ e": [
+    "elide",
+    1.5
+  ],
+  "To delay; to put off: d c _ _ r": [
+    "defer",
+    2.5
+  ],
+  "A plant related to the burdock: c l e a t": [
+    "leats",
+    2.600000000000001
+  ],
+  "A Yoruba-speaking people: i t _ l a": [
+    "igala",
+    1.0
+  ],
+  "A guide; a captain: p h _ e t": [
+    "hetes",
+    5.6
+  ],
+  "To avoid: e i _ a e": [
+    "eiate",
+    2.700000000000001
+  ],
+  "To delay; to put off: d c _ t r": [
+    "defer",
+    3.0
+  ],
+  "A Yoruba-speaking people: _ t _ l a": [
+    "yoral",
+    2.600000000000001
+  ],
+  "A guide; a captain: _ h _ e t": [
+    "pherd",
+    0.5
+  ],
+  "To avoid: _ i _ a e": [
+    "evade",
+    1.5
+  ],
+  "To delay; to put off: _ c _ t r": [
+    "stern",
+    2.500000000000001
+  ],
+  "A Yoruba-speaking people: _ t _ l _": [
+    "oruba",
+    2.1
+  ],
+  "A guide; a captain: _ h _ e _": [
+    "sheep",
+    1.1
+  ],
+  "To avoid: _ i _ a _": [
+    "avoid",
+    1.5
+  ],
+  "To delay; to put off: _ c _ t _": [
+    "postp",
+    2.700000000000001
+  ],
+  "A Yoruba-speaking people: i t _ l _": [
+    "itule",
+    0.6
+  ],
+  "A guide; a captain: p h _ e _": [
+    "phile",
+    0.6
+  ],
+  "To avoid: e i _ a _": [
+    "elude",
+    1.5
+  ],
+  "To delay; to put off: d c _ t _": [
+    "defer",
+    3.0
+  ],
+  "A caliph: c u _ _ _": [
+    "calif",
+    2.5
+  ],
+  "One who eats: e e _ _ _": [
+    "eater",
+    4.0
+  ],
+  "A Yoruba-speaking people: i t u l e": [
+    "oruba",
+    1.0
+  ],
+  "A two-legged creature: b _ s _ _": [
+    "biped",
+    1.5
+  ],
+  "A caliph: c _ e _ _": [
+    "aliph",
+    3.5
+  ],
+  "One who eats: e _ p _ _": [
+    "eater",
+    3.0
+  ],
+  "A guide; a captain: s h e e p": [
+    "sheep",
+    3.5
+  ],
+  "An Italian lawn game played with wooden balls: _ o _ _ e": [
+    "bocce",
+    1.0
+  ],
+  "A two-legged creature: h u m a n": [
+    "human",
+    5.0
+  ],
+  "An Italian lawn game played with wooden balls: h o _ _ e": [
+    "bocce",
+    3.1
+  ],
+  "A Yoruba-speaking people: u t _ _ a": [
+    "oruba",
+    3.0
+  ],
+  "A guide; a captain: m h _ _ t": [
+    "mhart",
+    2.2000000000000006
+  ],
+  "To avoid: a i _ _ e": [
+    "aisle",
+    1.2
+  ],
+  "To delay; to put off: n c _ _ r": [
+    "stpon",
+    3.8000000000000016
+  ],
+  "A caliph: _ _ _ s _": [
+    "imams",
+    7.399999999999991
+  ],
+  "A plant related to the burdock: _ _ _ l _": [
+    "istle",
+    8.29999999999999
+  ],
+  "To avoid: a i s l e": [
+    "aisle",
+    7.800000000000003
+  ],
+  "A plant related to the burdock: i s t l e": [
+    "istle",
+    1.4000000000000001
+  ],
+  "An Italian lawn game played with wooden balls: h o _ i e": [
+    "bocce",
+    3.0
+  ],
+  "A Yoruba-speaking people: u t _ s a": [
+    "rubas",
+    3.4000000000000017
+  ],
+  "A guide; a captain: m h _ t t": [
+    "mohat",
+    1.6000000000000003
+  ],
+  "To delay; to put off: n c _ e r": [
+    "defer",
+    2.5
+  ],
+  "A caliph: _ _ a s _": [
+    "imams",
+    4.500000000000001
+  ],
+  "A plant related to the burdock: _ _ r l _": [
+    "istle",
+    0.8
+  ],
+  "A guide; a captain: m h a r t": [
+    "marth",
+    5.599999999999996
+  ],
+  "A caliph: _ _ a _ _": [
+    "imams",
+    0.7999999999999999
+  ],
+  "A plant related to the burdock: _ _ r _ _": [
+    "thorn",
+    1.2
+  ],
+  "A caliph: i m a m s": [
+    "imams",
+    4.0
+  ],
+  "An Italian lawn game played with wooden balls: h o i _ e": [
+    "bocce",
+    3.5
+  ],
+  "A Yoruba-speaking people: u t m _ a": [
+    "oruba",
+    9.2
+  ],
+  "To avoid: a i m _ e": [
+    "amies",
+    2.2000000000000006
+  ],
+  "To delay; to put off: n c s _ r": [
+    "tpone",
+    1.0
+  ],
+  "A caliph: a l i p h": [
+    "aliph",
+    2.1
+  ],
+  "An Italian lawn game played with wooden balls: h o a _ e": [
+    "bocce",
+    3.5
+  ],
+  "A Yoruba-speaking people: u t l _ a": [
+    "oruba",
+    9.6
+  ],
+  "A guide; a captain: m h i _ t": [
+    "might",
+    1.0
+  ],
+  "To avoid: a i p _ e": [
+    "apire",
+    1.6000000000000003
+  ],
+  "To delay; to put off: n c h _ r": [
+    "stern",
+    0.9999999999999999
+  ],
+  "A plant related to the burdock: t h o r n": [
+    "thorn",
+    3.5
+  ],
+  "An Italian lawn game played with wooden balls: h _ _ t e": [
+    "bocce",
+    3.0
+  ],
+  "A Yoruba-speaking people: u _ _ h a": [
+    "oruba",
+    0.5
+  ],
+  "A guide; a captain: m _ _ o t": [
+    "motot",
+    2.1000000000000005
+  ],
+  "To avoid: a _ _ r e": [
+    "arear",
+    2.2000000000000006
+  ],
+  "To delay; to put off: n _ _ n r": [
+    "stpon",
+    12.5
+  ],
+  "An Italian lawn game played with wooden balls: h o _ t e": [
+    "bocce",
+    3.5
+  ],
+  "A Yoruba-speaking people: u t _ h a": [
+    "oruba",
+    2.5
+  ],
+  "A guide; a captain: m h _ o t": [
+    "motho",
+    2.9000000000000012
+  ],
+  "To avoid: a i _ r e": [
+    "airer",
+    3.4000000000000017
+  ],
+  "To delay; to put off: n c _ n r": [
+    "stern",
+    4.4
+  ],
+  "The genus to which the dog and wolf belong: _ _ _ _ _": [
+    "canis",
+    2.0
+  ],
+  "An Altaic language: _ _ _ _ _": [
+    "tatar",
+    2.0
+  ],
+  "Ramie, an Asiatic plant yielding a rope fiber: _ _ _ _ _": [
+    "ettle",
+    3.6
+  ],
+  "Face down; susceptible: _ _ _ _ _": [
+    "ttack",
+    2.400000000000001
+  ],
+  "An Indian antelope: _ _ _ _ _": [
+    "ilgai",
+    13.5
+  ],
+  "A contingent: _ _ _ _ _": [
+    "group",
+    4.0
+  ],
+  "The Brazilian macaw; an Australian bird: _ _ _ _ _": [
+    "ikeet",
+    10.9
+  ],
+  "A Greek province; a law; a coin: _ _ _ _ _": [
+    "polis",
+    2.5
+  ],
+  "An ancient British ethnic group: _ _ _ _ _": [
+    "celts",
+    2.5
+  ],
+  "Gloss; luster: _ _ _ _ _": [
+    "glare",
+    1.1
+  ],
+  "The genus to which the dog and wolf belong: g _ _ _ _": [
+    "genus",
+    2.0
+  ],
+  "An Altaic language: r _ _ _ _": [
+    "tatar",
+    3.5
+  ],
+  "Ramie, an Asiatic plant yielding a rope fiber: o _ _ _ _": [
+    "ettle",
+    11.499999999999991
+  ],
+  "Face down; susceptible: u _ _ _ _": [
+    "upset",
+    2.5
+  ],
+  "An Indian antelope: p _ _ _ _": [
+    "nkara",
+    9.7
+  ],
+  "A contingent: g r o u p": [
+    "group",
+    5.0
+  ],
+  "Face down; susceptible: u p s e t": [
+    "upset",
+    3.5
+  ],
+  "The Brazilian macaw; an Australian bird: _ _ _ p _": [
+    "lorop",
+    2.9000000000000012
+  ],
+  "A Greek province; a law; a coin: _ _ _ s _": [
+    "selis",
+    2.9
+  ],
+  "An ancient British ethnic group: _ _ _ e _": [
+    "picts",
+    0.5
+  ],
+  "Gloss; luster: _ _ _ t _": [
+    "glint",
+    2.5
+  ],
+  "The genus to which the dog and wolf belong: g e n u s": [
+    "genus",
+    3.0
+  ],
+  "The Brazilian macaw; an Australian bird: e _ _ p _": [
+    "sulph",
+    3.0000000000000013
+  ],
+  "A Greek province; a law; a coin: n _ _ s _": [
+    "nesos",
+    6.400000000000003
+  ],
+  "Gloss; luster: s _ _ t _": [
+    "sheen",
+    3.5
+  ],
+  "An ancient British ethnic group: u _ _ e _": [
+    "utees",
+    2.700000000000001
+  ],
+  "An Altaic language: r _ _ t _": [
+    "tatar",
+    2.2
+  ],
+  "Ramie, an Asiatic plant yielding a rope fiber: o _ _ e _": [
+    "ettle",
+    16.2
+  ],
+  "An Indian antelope: p _ _ s _": [
+    "chink",
+    4.100000000000001
+  ],
+  "An ancient British ethnic group: u t e e s": [
+    "teses",
+    4.899999999999999
+  ],
+  "The genus to which the dog and wolf belong: g i _ _ _": [
+    "canis",
+    1.5
+  ],
+  "An Altaic language: r k _ _ _": [
+    "urkic",
+    1.0
+  ],
+  "Ramie, an Asiatic plant yielding a rope fiber: o e _ _ _": [
+    "ettle",
+    5.7999999999999945
+  ],
+  "Face down; susceptible: u e _ _ _": [
+    "upset",
+    1.5
+  ],
+  "An Indian antelope: p t _ _ _": [
+    "hital",
+    1.5
+  ],
+  "The Brazilian macaw; an Australian bird: i k e e t": [
+    "kitee",
+    0.9999999999999999
+  ],
+  "The genus to which the dog and wolf belong: g i _ c _": [
+    "canis",
+    2.5
+  ],
+  "An Altaic language: r k _ e _": [
+    "turke",
+    5.799999999999995
+  ],
+  "Ramie, an Asiatic plant yielding a rope fiber: o e _ l _": [
+    "nelum",
+    2.600000000000001
+  ],
+  "Face down; susceptible: u e _ t _": [
+    "upset",
+    2.5
+  ],
+  "An Indian antelope: p t _ s _": [
+    "chits",
+    2.400000000000001
+  ],
+  "An ancient British ethnic group: c e l t s": [
+    "celts",
+    3.5
+  ],
+  "The genus to which the dog and wolf belong: g i _ c g": [
+    "canid",
+    2.5
+  ],
+  "An Altaic language: r k _ e l": [
+    "turke",
+    2.2000000000000006
+  ],
+  "Ramie, an Asiatic plant yielding a rope fiber: o e _ l a": [
+    "olela",
+    5.299999999999997
+  ],
+  "Face down; susceptible: u e _ t r": [
+    "utter",
+    1.5
+  ],
+  "An Indian antelope: p t _ s e": [
+    "hites",
+    5.899999999999997
+  ],
+  "Gloss; luster: g l a r e": [
+    "glare",
+    3.5
+  ],
+  "The genus to which the dog and wolf belong: g _ p c g": [
+    "canid",
+    2.0
+  ],
+  "Ramie, an Asiatic plant yielding a rope fiber: o _ l l a": [
+    "ramie",
+    3.5
+  ],
+  "Face down; susceptible: u _ i t r": [
+    "vultr",
+    0.2
+  ],
+  "An Indian antelope: p _ s s e": [
+    "chink",
+    0.30000000000000004
+  ],
+  "A Greek province; a law; a coin: p o l i s": [
+    "polis",
+    4.5
+  ],
+  "An Altaic language: r _ o e l": [
+    "urkic",
+    2.0
+  ],
+  "Liquid body waste: _ _ _ _ _": [
+    "urine",
+    4.0
+  ],
+  "An Asian cape: _ _ _ _ _": [
+    "imono",
+    0.2
+  ],
+  "Defecates; a dice game: _ _ _ _ _": [
+    "craps",
+    2.0
+  ],
+  "High; high-class; pretentious: _ _ _ _ _": [
+    "snobb",
+    1.2
+  ],
+  "A kerchief: _ _ _ _ _": [
+    "scarf",
+    0.7
+  ],
+  "A New Zealand palm: _ _ _ _ _": [
+    "nikau",
+    2.5
+  ],
+  "Unfit; clumsy: _ _ _ _ _": [
+    "unfit",
+    1.0
+  ],
+  "To perceive; wisdom; reason; feeling: _ _ _ _ _": [
+    "sense",
+    3.5
+  ],
+  "The genus to which the dog and wolf belong: c a n i s": [
+    "canis",
+    2.5
+  ],
+  "A kerchief: c _ _ _ _": [
+    "scarf",
+    1.5
+  ],
+  "The Brazilian macaw; an Australian bird: a _ _ _ _": [
+    "ariel",
+    0.6
+  ],
+  "A New Zealand palm: n _ _ _ _": [
+    "nikau",
+    1.2
+  ],
+  "Unfit; clumsy: i _ _ _ _": [
+    "inept",
+    2.0
+  ],
+  "To perceive; wisdom; reason; feeling: s _ _ _ _": [
+    "sense",
+    4.5
+  ],
+  "Liquid body waste: _ _ _ _ e": [
+    "urine",
+    2.5
+  ],
+  "An Asian cape: _ _ _ _ n": [
+    "imono",
+    1.0
+  ],
+  "Defecates; a dice game: _ _ _ _ s": [
+    "craps",
+    2.5
+  ],
+  "High; high-class; pretentious: _ _ _ _ e": [
+    "haute",
+    3.5
+  ],
+  "To perceive; wisdom; reason; feeling: s e n s e": [
+    "sense",
+    4.5
+  ],
+  "Defecates; a dice game: c r a p s": [
+    "craps",
+    3.0
+  ],
+  "A kerchief: c _ _ c _": [
+    "scarf",
+    1.5
+  ],
+  "The Brazilian macaw; an Australian bird: a _ _ r _": [
+    "sulur",
+    0.5
+  ],
+  "A New Zealand palm: n _ _ a _": [
+    "ikora",
+    3.0000000000000013
+  ],
+  "Unfit; clumsy: i _ _ p _": [
+    "lumpy",
+    1.9
+  ],
+  "Liquid body waste: u r i n e": [
+    "urine",
+    4.5
+  ],
+  "A kerchief: c u _ c _": [
+    "cuchu",
+    2.0000000000000004
+  ],
+  "The Brazilian macaw; an Australian bird: a r _ r _": [
+    "ories",
+    5.0
+  ],
+  "A New Zealand palm: n i _ a _": [
+    "niata",
+    0.7
+  ],
+  "Unfit; clumsy: i n _ p _": [
+    "inapt",
+    2.0
+  ],
+  "An Asian cape: _ _ _ a n": [
+    "monas",
+    2.3000000000000007
+  ],
+  "High; high-class; pretentious: _ _ _ t e": [
+    "haute",
+    4.0
+  ],
+  "Unfit; clumsy: i n a p t": [
+    "inapt",
+    3.5
+  ],
+  "High; high-class; pretentious: h a u t e": [
+    "haute",
+    3.4000000000000004
+  ],
+  "A kerchief: c u _ c h": [
+    "cutch",
+    0.5
+  ],
+  "The Brazilian macaw; an Australian bird: a r _ r a": [
+    "lorra",
+    2.2000000000000006
+  ],
+  "A New Zealand palm: n i _ a u": [
+    "niuau",
+    1.6
+  ],
+  "An Asian cape: t _ _ a n": [
+    "tanin",
+    2.500000000000001
+  ],
+  "A kerchief: c u t c h": [
+    "ndage",
+    3.5
+  ],
+  "An Asian cape: t _ u a n": [
+    "tunic",
+    0.5
+  ],
+  "A New Zealand palm: n i u a u": [
+    "niuau",
+    3.1
+  ],
+  "An Asian cape: _ _ u a n": [
+    "imona",
+    0.6
+  ],
+  "Unfit; clumsy: i n _ p t": [
+    "inapt",
+    2.5
+  ],
+  "An Asian cape: _ _ u _ n": [
+    "imonu",
+    0.5
+  ],
+  "An Asian cape: t _ u _ n": [
+    "tunic",
+    3.0
+  ],
+  "An Asian cape: t _ _ _ n": [
+    "tunin",
+    1.0999999999999999
+  ],
+  "An Asian cape: _ u n i _": [
+    "umuni",
+    0.5
+  ],
+  "The Brazilian macaw; an Australian bird: a r u r a": [
+    "sulur",
+    1.2
+  ],
+  "A New Zealand palm: n i n a u": [
+    "ninau",
+    2.0
+  ],
+  "Unfit; clumsy: i n i p t": [
+    "niput",
+    2.600000000000001
+  ],
+  "To perceive; wisdom; reason; feeling: s e _ s e": [
+    "sense",
+    3.5
+  ],
+  "An Asian cape: _ u n i n": [
+    "imoni",
+    0.5
+  ],
+  "A financial loss; a negative profit; to remove bits from: _ _ _ _ _": [
+    "debit",
+    1.2
+  ],
+  "Fatuous; empty headed: _ _ _ _ _": [
+    "antly",
+    3.0000000000000013
+  ],
+  "A subatomic particle: _ _ _ _ _": [
+    "quark",
+    1.5
+  ],
+  "Containing an imide: _ _ _ _ _": [
+    "amide",
+    3.5
+  ],
+  "A device that emits electrically charged pellets; \"Thomas A Swift Electric Rifle\": _ _ _ _ _": [
+    "rifle",
+    1.0
+  ],
+  "To demit: _ _ _ _ _": [
+    "signs",
+    4.8
+  ],
+  "A liquid injected into the rectum: _ _ _ _ _": [
+    "enema",
+    3.5
+  ],
+  "A foundation: _ _ _ _ _": [
+    "basis",
+    0.8999999999999999
+  ],
+  "A UNIX file system structure: _ _ _ _ _": [
+    "treer",
+    0.1
+  ],
+  "Purport; a trend; a singing voice: _ _ _ _ _": [
+    "trend",
+    2.0
+  ],
+  "A financial loss; a negative profit; to remove bits from: _ e _ _ _": [
+    "debit",
+    1.0
+  ],
+  "Fatuous; empty headed: _ n _ _ _": [
+    "vapid",
+    1.5
+  ],
+  "A subatomic particle: _ e _ _ _": [
+    "ctron",
+    13.499999999999993
+  ],
+  "Containing an imide: _ m _ _ _": [
+    "amide",
+    3.0
+  ],
+  "A device that emits electrically charged pellets; \"Thomas A Swift Electric Rifle\": _ a _ _ _": [
+    "apper",
+    0.8999999999999999
+  ],
+  "A liquid injected into the rectum: e n e m a": [
+    "enema",
+    4.0
+  ],
+  "A financial loss; a negative profit; to remove bits from: _ e _ _ t": [
+    "debit",
+    3.0
+  ],
+  "Fatuous; empty headed: _ n _ _ r": [
+    "acant",
+    16.6
+  ],
+  "A subatomic particle: _ e _ _ e": [
+    "neutr",
+    0.5
+  ],
+  "Containing an imide: _ m _ _ n": [
+    "imine",
+    1.0
+  ],
+  "A device that emits electrically charged pellets; \"Thomas A Swift Electric Rifle\": _ a _ _ d": [
+    "zooka",
+    1.0
+  ],
+  "Purport; a trend; a singing voice: t r e n d": [
+    "trend",
+    5.0
+  ],
+  "A financial loss; a negative profit; to remove bits from: _ e b _ t": [
+    "debit",
+    2.5
+  ],
+  "Fatuous; empty headed: _ n a _ r": [
+    "acant",
+    8.200000000000003
+  ],
+  "A subatomic particle: _ e s _ e": [
+    "meson",
+    2.5
+  ],
+  "Containing an imide: _ m i _ n": [
+    "minic",
+    0.7
+  ],
+  "A device that emits electrically charged pellets; \"Thomas A Swift Electric Rifle\": _ a s _ d": [
+    "zooka",
+    0.5
+  ],
+  "A foundation: b a s i s": [
+    "basis",
+    4.5
+  ],
+  "A financial loss; a negative profit; to remove bits from: d e b i t": [
+    "debit",
+    3.5
+  ],
+  "To demit: d _ _ _ _": [
+    "demit",
+    4.0
+  ],
+  "A UNIX file system structure: i _ _ _ _": [
+    "inode",
+    2.2
+  ],
+  "Fatuous; empty headed: e n a _ r": [
+    "empty",
+    2.0
+  ],
+  "A subatomic particle: m e s _ e": [
+    "meson",
+    3.0
+  ],
+  "Containing an imide: i m i _ n": [
+    "imine",
+    3.0
+  ],
+  "A device that emits electrically charged pellets; \"Thomas A Swift Electric Rifle\": t a s _ d": [
+    "taser",
+    1.5
+  ],
+  "To demit: d e m i t": [
+    "demit",
+    3.5
+  ],
+  "To belch, to burp: _ _ _ _ _": [
+    "burps",
+    1.5
+  ],
+  "A tropical fish: _ _ _ _ _": [
+    "guppy",
+    2.0
+  ],
+  "A fragrant rose oil: _ _ _ _ _": [
+    "orris",
+    1.0
+  ],
+  "A spear support: _ _ _ _ _": [
+    "shaft",
+    3.0
+  ],
+  "A corpse; the Corsican dialect; a European cape: _ _ _ _ _": [
+    "corso",
+    2.0
+  ],
+  "The South African blaubok: _ _ _ _ _": [
+    "esbok",
+    1.0
+  ],
+  "Referring to the past; pointing backwards: _ _ _ _ _": [
+    "retro",
+    0.5
+  ],
+  "To say; complete: _ _ _ _ _": [
+    "utter",
+    2.5
+  ],
+  "Gross; unsubtle: _ _ _ _ _": [
+    "btuse",
+    2.2000000000000006
+  ],
+  "A French pastry: _ _ _ _ _": [
+    "tarte",
+    3.0
+  ],
+  "A spear support: s h a f t": [
+    "shaft",
+    4.5
+  ],
+  "The South African blaubok: _ _ _ s _": [
+    "bocks",
+    0.7
+  ],
+  "Referring to the past; pointing backwards: _ _ _ h _": [
+    "hence",
+    1.9
+  ],
+  "To say; complete: _ _ _ a _": [
+    "speak",
+    1.5
+  ],
+  "Gross; unsubtle: _ _ _ f _": [
+    "crass",
+    1.0
+  ],
+  "A French pastry: _ _ _ t _": [
+    "tarte",
+    3.0
+  ],
+  "A tropical fish: g u p p y": [
+    "guppy",
+    5.0
+  ],
+  "The South African blaubok: _ g _ s _": [
+    "bokgs",
+    2.3000000000000007
+  ],
+  "Referring to the past; pointing backwards: _ u _ h _": [
+    "oward",
+    1.0
+  ],
+  "To say; complete: _ p _ a _": [
+    "speak",
+    1.0
+  ],
+  "Gross; unsubtle: _ p _ f _": [
+    "rappy",
+    2.700000000000001
+  ],
+  "A French pastry: _ y _ t _": [
+    "tarte",
+    2.2
+  ],
+  "To belch, to burp: b u r p s": [
+    "burps",
+    3.2
+  ],
+  "The South African blaubok: b g _ s _": [
+    "bongo",
+    1.0
+  ],
+  "Referring to the past; pointing backwards: u u _ h _": [
+    "uhhuh",
+    0.7
+  ],
+  "To say; complete: r p _ a _": [
+    "eport",
+    1.5
+  ],
+  "Gross; unsubtle: p p _ f _": [
+    "coffs",
+    2.600000000000001
+  ],
+  "A French pastry: s y _ t _": [
+    "syrts",
+    2.3000000000000007
+  ],
+  "A fragrant rose oil: _ _ _ _ r": [
+    "osear",
+    3.1000000000000014
+  ],
+  "A corpse; the Corsican dialect; a European cape: _ _ _ _ s": [
+    "corsi",
+    0.5
+  ],
+  "A French pastry: s y r t s": [
+    "artes",
+    2.3000000000000007
+  ],
+  "A fragrant rose oil: o s e a r": [
+    "ocean",
+    3.3000000000000016
+  ],
+  "The South African blaubok: b g o s _": [
+    "bogos",
+    1.4000000000000001
+  ],
+  "Referring to the past; pointing backwards: u u s h _": [
+    "ushes",
+    0.7999999999999999
+  ],
+  "To say; complete: r p e a _": [
+    "reply",
+    0.5
+  ],
+  "Gross; unsubtle: p p a f _": [
+    "rappy",
+    1.2
+  ],
+  "A corpse; the Corsican dialect; a European cape: c o r s o": [
+    "corso",
+    2.0
+  ],
+  "The South African blaubok: b g _ s c": [
+    "bgsac",
+    2.700000000000001
+  ],
+  "Referring to the past; pointing backwards: u u _ h o": [
+    "uhoho",
+    2.700000000000001
+  ],
+  "To say; complete: r p _ a r": [
+    "reply",
+    2.0
+  ],
+  "Gross; unsubtle: p p _ f s": [
+    "oarse",
+    1.9000000000000008
+  ],
+  "A French pastry: s y _ t o": [
+    "yrout",
+    1.7000000000000004
+  ]
+}

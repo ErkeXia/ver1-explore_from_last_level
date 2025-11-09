@@ -1,0 +1,13 @@
+nohup: ignoring input
+Solving Crosswords:   0%|          | 0/10 [00:00<?, ?it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][A
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.09it/s][A
+Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.10it/s][A
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.11it/s][A
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.60it/s][ALoading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.37it/s]
+Solving Crosswords:  10%|█         | 1/10 [09:36<1:26:27, 576.39s/it]Solving Crosswords:  20%|██        | 2/10 [18:37<1:14:04, 555.60s/it]Solving Crosswords:  30%|███       | 3/10 [26:30<1:00:26, 518.10s/it]Solving Crosswords:  40%|████      | 4/10 [40:27<1:04:23, 643.84s/it]Solving Crosswords:  50%|█████     | 5/10 [46:39<45:29, 545.84s/it]  Solving Crosswords:  60%|██████    | 6/10 [1:09:28<55:03, 825.84s/it]Solving Crosswords:  70%|███████   | 7/10 [1:22:10<40:14, 804.98s/it]Solving Crosswords:  80%|████████  | 8/10 [1:33:43<25:38, 769.12s/it]Solving Crosswords:  90%|█████████ | 9/10 [1:42:01<11:24, 684.52s/it]Solving Crosswords: 100%|██████████| 10/10 [1:52:19<00:00, 663.92s/it]Solving Crosswords: 100%|██████████| 10/10 [1:52:19<00:00, 673.96s/it]
+Running experiment for 10 specific puzzles: [40, 113, 117, 124, 2, 12, 15, 16, 38, 44]
+Detailed logs will be saved to: ./logs/llama_valid_crossword_output.txt
+Structured results will be saved to: ./results/llama_valid_crossword_results.jsonl
+
+Experiment finished. Results saved in './results/llama_valid_crossword_results.jsonl'.

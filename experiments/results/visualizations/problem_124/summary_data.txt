@@ -1,0 +1,65 @@
+==================================================
+  Summary for Crossword Problem ID: 124
+==================================================
+
+Refinement Iterations (Explorations): 3
+Total Nodes Explored (All Iterations): 26
+
+--- Correct Answer ---
+S L U F F
+T I N E A
+A M A T I
+R E R U N
+T R Y S T
+
+--- Iteration Details ---
+
+--- Iteration 1 ---
+Llama Result Grid (before GPT eval):
+S O I F F
+T N N E A
+A G G T I
+R E L U N
+T R E S T
+
+GPT Pruned Grid (start of next iteration):
+S _ _ F F
+T N N E A
+A _ _ T I
+R _ _ U N
+T R E S T
+
+--- Iteration 2 ---
+Llama Result Grid (before GPT eval):
+S C U F F
+T N N E A
+A L A T I
+R _ _ U N
+T R E S T
+
+GPT Pruned Grid (start of next iteration):
+S C U F F
+T N N E A
+A _ A T I
+R _ _ U N
+T R E S T
+
+--- Iteration 3 ---
+Llama Result Grid (before GPT eval):
+S C U F F
+T N N E A
+A _ A T I
+R _ _ U N
+T R E S T
+
+GPT Pruned Grid (start of next iteration):
+S C U F F
+T N N E A
+A _ A T I
+R _ _ U N
+T R E S T
+
+--- GPT Evaluation Results ---
+Iteration 1: GPT was 'sure' about word indices: [1, 4, 5, 8, 9]
+Iteration 2: GPT was 'sure' about word indices: [0, 1, 3, 4, 5, 7, 8, 9]
+Iteration 3: GPT was 'sure' about word indices: [0, 1, 3, 4, 5, 7, 8, 9]

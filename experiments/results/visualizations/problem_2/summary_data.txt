@@ -1,0 +1,28 @@
+==================================================
+  Summary for Crossword Problem ID: 2
+==================================================
+
+Refinement Iterations (Explorations): 1
+Total Nodes Explored (All Iterations): 17
+
+--- Correct Answer ---
+A M I G O
+M A M O U
+I N P U T
+S I E G E
+H A L E R
+
+--- Iteration Details ---
+
+--- Iteration 1 ---
+Llama Result Grid (before GPT eval):
+B U D D Y
+M A J O R
+I N P U T
+B E S E T
+T O N I C
+
+GPT Pruned Grid (start of next iteration):
+N/A (Validation skipped)
+
+--- GPT Evaluation Results ---

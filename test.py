@@ -7,7 +7,7 @@ import os
 # from tot.methods.bfs_sys import solve_v1, check_answer, get_time
 # from tot.tasks.game24 import Game24Task
 # from tot.methods.dfs import solve_v1
-from tot.methods.dfs_cache import solve_v1
+from tot.methods.one_step_lazy import solve_v1
 
 
 from tot.tasks.crosswords import MiniCrosswordsTask
@@ -40,13 +40,13 @@ task = MiniCrosswordsTask()
 with open('output.txt', 'w', buffering=1) as f:
     sys.stdout = f
 
-    for i in range(10):
-        idx = i
-        x = task.get_input(idx)
-        print(x)
+    # for i in range(10):
+    #     idx = i
+    #     x = task.get_input(idx)
+    #     print(x)
         
     start = time.perf_counter()
-    sol_idx, sol_y, depth, states = solve_v1(args, task, 351, slm = 'llama', do_validate = True, instruct_model_arg = True)
+    sol_idx, sol_y, depth, states = solve_v1(args, task, 124, slm = 'llama', do_validate = False, instruct_model_arg = True)
     elapsed = time.perf_counter() - start
     print(f"{elapsed:.6f} seconds")
     # if "Answer" in y:

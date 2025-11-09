@@ -2,6 +2,7 @@ import argparse
 import sys
 import json
 import time
+import os
 from tqdm import tqdm
 from contextlib import redirect_stdout
 
@@ -10,23 +11,39 @@ from tot.methods.dfs_cache import solve_v1
 from tot.tasks.crosswords import MiniCrosswordsTask
 from tot.models import reset # To reset token counters if you add them later
 
-def run_crossword_experiment(start_idx=0, end_idx=9, log_file="crossword_output.txt", results_file="crossword_results.jsonl"):
+def run_crossword_experiment(indices=None, start_idx=0, end_idx=9, log_file="./logs/llama_valid_crossword_output.txt", results_file="./results/llama_valid_crossword_results.jsonl"):
     """
-    Runs the Llama+GPT refinement solver on a range of crossword problems
-    and saves the results.
+    Runs the Llama+GPT refinement solver on a specific list or range of crossword problems.
+    
+    Args:
+        indices (list[int], optional): A specific list of problem IDs to run. 
+                                       If None, uses start_idx and end_idx.
+        start_idx (int): Start index for range (used if indices is None).
+        end_idx (int): End index for range (used if indices is None).
     """
-    print(f"Running experiment for crossword problems {start_idx} to {end_idx}.")
+    # Determine which puzzles to run
+    if indices is not None:
+        puzzles_to_run = indices
+        print(f"Running experiment for {len(indices)} specific puzzles: {indices}")
+    else:
+        puzzles_to_run = range(start_idx, end_idx + 1)
+        print(f"Running experiment for crossword problems {start_idx} to {end_idx}.")
+        
     print(f"Detailed logs will be saved to: {log_file}")
     print(f"Structured results will be saved to: {results_file}")
 
+    # Ensure output directories exist
+    os.makedirs(os.path.dirname(log_file), exist_ok=True)
+    os.makedirs(os.path.dirname(results_file), exist_ok=True)
+
     # Standard setup for the solver's args
-    args = argparse.Namespace(backend='gpt-4o', temperature=0.7)
+    args = argparse.Namespace(backend='gpt-3.5-turbo', temperature=0.7)
     task = MiniCrosswordsTask()
 
     # Redirect all print statements to the log file
     with open(log_file, 'w', buffering=1) as f, redirect_stdout(f):
         # Use tqdm for a nice progress bar in the console
-        for i in tqdm(range(start_idx, end_idx + 1), desc="Solving Crosswords"):
+        for i in tqdm(puzzles_to_run, desc="Solving Crosswords"):
             # Reset any global counters if you have them (good practice)
             reset()
             
@@ -34,7 +51,7 @@ def run_crossword_experiment(start_idx=0, end_idx=9, log_file="crossword_output.
             start_time = time.perf_counter()
 
             # --- Call your main solving function ---
-            # It now returns the final node count as the fifth item
+            # NOTE: Ensure 'do_validate' matches your desired experiment mode (True for refinement, False for single-pass)
             _, final_y, depth, all_states, nodes, gpt_results, iteration_details = solve_v1(
                 args, task, i, slm='llama', instruct_model_arg=True, do_validate=True
             )
@@ -62,11 +79,14 @@ def run_crossword_experiment(start_idx=0, end_idx=9, log_file="crossword_output.
 
             # Append the JSON object to the results file
             # This is safer than writing all at once, in case of a crash
-            with open('./results/' + results_file, "a") as rf:
+            with open(results_file, "a") as rf:
                 rf.write(json.dumps(result) + "\n")
                 
     print(f"\nExperiment finished. Results saved in '{results_file}'.")
 
 if __name__ == '__main__':
-    # This block runs when you execute the script directly
-    run_crossword_experiment(start_idx=0, end_idx=1)
+    # The specific list of puzzles you want to test
+    TARGET_INDICES = [40, 113, 117, 124, 2, 12, 15, 16, 38, 44]
+    
+    # Run the experiment with this list
+    run_crossword_experiment(indices=TARGET_INDICES)

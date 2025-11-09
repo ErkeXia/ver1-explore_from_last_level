@@ -10,8 +10,8 @@ from tot.cache import FileCache
 import json
 import os
 
-
-cache = FileCache("crossword_propose_cache.json")
+PROPOSE_CACHE = None
+PROPOSE_MODE = 'gpt'
 
 propose_num = value_num = 0
 propose_time = value_time = 0
@@ -40,7 +40,7 @@ def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=
         ans = ' '.join(ans.lower())
         line = f'{data}: {ans}'
         
-        cached_result = cache.get(line)
+        cached_result = PROPOSE_CACHE.get(line)
         if cached_result:
             word, score = cached_result
             full_action = f"{position}. {word}"
@@ -48,15 +48,24 @@ def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=
             continue
         
         system_prompt, user_prompt = task.propose_one_instruct_prompt_wrap(line)
-        raw = llama_instruct(user_prompt, system_prompt, n=K, stop=None, max_tokens=200)
-        print(f"raw proposals from llama {raw} for line {line}")
+        
+        if PROPOSE_MODE == 'gpt':
+             # For GPT, combine prompts into one
+             full_prompt = f"{system_prompt}\n\n{user_prompt}"
+             raw = gpt(full_prompt, n=K, stop=None, max_tokens=200)
+             print(f"raw proposals from GPT {raw} for line {line}")
+        else:
+             # For SLM (Llama), use the instruct wrapper with separate prompts
+             raw = llama_instruct(user_prompt, system_prompt, n=K, stop=None, max_tokens=200)
+             print(f"raw proposals from SLM {raw} for line {line}")
+        
         y_action = task.propose_one_outputs_unwrap(x, y_parent, raw)
         
         if y_action:
             word, score = y_action
             full_action = f"{position}. {word}"
             actions.append((full_action, score))
-            cache.set(line, (word, score))
+            PROPOSE_CACHE.set(line, (word, score))
             
     valid_actions = []
     for action, score in actions:
@@ -97,7 +106,7 @@ def get_values_v1(task, x, ys, n_eval=1):
     vals = []
     for y in ys:
         print(f"Evaluation \n" + y)
-        score_obj = task.evaluate(x, y, n_evaluate_sample=n_eval)  # {'sure','maybe','impossible'}
+        score_obj = task.evaluate(x, y, n_evaluate_sample=n_eval, model = PROPOSE_MODE)  # {'sure','maybe','impossible'}
         s = score_obj.get('sure', 0)
         m = score_obj.get('maybe', 0)
         i = score_obj.get('impossible', 0)
@@ -254,18 +263,20 @@ def evaluate(task, x, y):
 
 def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = False, do_validate = True):
     global gpt, validate_time
-    # global gpt
-    # global thoughts, connection, steps, validators, correctness_r, suggestion_r
-    # global value_num, value_time
-    # global propose_num, propose_time
-    # global validate_num, validate_time
-    # global nodes
-    # global states, repeat_value
-    # global instruct_model
-    
-    gpt = partial(gpt, model=args.backend, temperature=args.temperature)
-    instruct_model = model_setup(slm, instruct_model_arg, TGI_arg = False)
+    global PROPOSE_CACHE, PROPOSE_MODE
 
+    gpt = partial(gpt, model=args.backend, temperature=args.temperature)
+    
+    if slm and slm.lower() != 'gpt':
+        print(f"\n[Config] Setting proposal mode to SLM: {slm}")
+        PROPOSE_MODE = slm
+        PROPOSE_CACHE = FileCache(f"crossword_propose_cache_{slm}.json")
+        model_setup(slm, instruct_model_arg, TGI_arg=False)
+    else:
+        print("\n[Config] Setting proposal mode to GPT")
+        PROPOSE_MODE = 'gpt'
+        PROPOSE_CACHE = FileCache("crossword_propose_cache_gpt.json")
+    
     x = task.get_input(idx)  # input
     
     correct_words = task.env.ans_gt
