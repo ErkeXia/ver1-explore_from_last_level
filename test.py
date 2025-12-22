@@ -7,7 +7,8 @@ import os
 # from tot.methods.bfs_sys import solve_v1, check_answer, get_time
 # from tot.tasks.game24 import Game24Task
 # from tot.methods.dfs import solve_v1
-from tot.methods.one_step_lazy import solve_v1
+# from tot.methods.one_step_lazy import solve_v1
+from tot.methods.crossword_search import solve_v1
 
 
 from tot.tasks.crosswords import MiniCrosswordsTask
@@ -25,7 +26,7 @@ print(torch.cuda.get_device_name(0))      # should print your GPU model
 model = 'gpt-3.5-turbo'
 args = argparse.Namespace(backend=model, temperature=0.7, task='crossword', naive_run=False, prompt_sample=None, method_generate='propose', method_evaluate='value', method_select='greedy', n_generate_sample=1, n_evaluate_sample=3, n_select_sample=5)
 
-task = MiniCrosswordsTask()
+task = MiniCrosswordsTask(file="miniNYT.json")
 # task2 = MiniCrosswordsTask()
 # x = task2.get_input(0)
 # print(x)
@@ -46,7 +47,7 @@ with open('output.txt', 'w', buffering=1) as f:
     #     print(x)
         
     start = time.perf_counter()
-    sol_idx, sol_y, depth, states = solve_v1(args, task, 124, slm = 'llama', do_validate = False, instruct_model_arg = True)
+    sol_idx, sol_y, depth, states, nodes, gpt_eval_results, iteration_details = solve_v1(args, task, 0, slm = 'llama', do_validate = False, instruct_model_arg = True)
     elapsed = time.perf_counter() - start
     print(f"{elapsed:.6f} seconds")
     # if "Answer" in y:

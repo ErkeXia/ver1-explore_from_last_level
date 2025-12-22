@@ -372,7 +372,7 @@ class MiniCrosswordsTask(Task):
         print(count)
         return count
     
-    def gpt_evaluate(self, x: str, y: str) -> int:
+    def gpt_evaluate(self, x: str, y: str) -> list:
         self.set_status(x, y)
         sure_lst = []
         for i, (ans, data, status) in enumerate(zip(self.env.ans, self.env.data, self.env.status)):
@@ -392,7 +392,8 @@ class MiniCrosswordsTask(Task):
             res = res.split('\n')[-1].strip()
             if res == 'sure':
                 sure_lst.append(i)
-
+            if res == 'impossible':
+                return None
         print(sure_lst)
         return sure_lst
     
