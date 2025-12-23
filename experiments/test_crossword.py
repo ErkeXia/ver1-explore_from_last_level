@@ -7,11 +7,12 @@ from tqdm import tqdm
 from contextlib import redirect_stdout
 
 # Import your core solving logic and task definition
-from tot.methods.dfs_cache import solve_v1
+# from tot.methods.dfs_cache import solve_v1
+from tot.methods.crossword_search import solve_v1
 from tot.tasks.crosswords import MiniCrosswordsTask
 from tot.models import reset # To reset token counters if you add them later
 
-def run_crossword_experiment(indices=None, start_idx=0, end_idx=9, log_file="./logs/llama_valid_crossword_output.txt", results_file="./results/llama_valid_crossword_results.jsonl"):
+def run_crossword_experiment(indices=None, start_idx=0, end_idx=9, log_file="./logs/llama_valid_crossword_output.txt", results_file="./results/llama_valid_crossword_results.jsonl", data = None):
     """
     Runs the Llama+GPT refinement solver on a specific list or range of crossword problems.
     
@@ -38,7 +39,10 @@ def run_crossword_experiment(indices=None, start_idx=0, end_idx=9, log_file="./l
 
     # Standard setup for the solver's args
     args = argparse.Namespace(backend='gpt-3.5-turbo', temperature=0.7)
-    task = MiniCrosswordsTask()
+    if data != None:
+        task = MiniCrosswordsTask(data)
+    else:
+        task = MiniCrosswordsTask()
 
     # Redirect all print statements to the log file
     with open(log_file, 'w', buffering=1) as f, redirect_stdout(f):
@@ -86,7 +90,10 @@ def run_crossword_experiment(indices=None, start_idx=0, end_idx=9, log_file="./l
 
 if __name__ == '__main__':
     # The specific list of puzzles you want to test
-    TARGET_INDICES = [40, 113, 117, 124, 2, 12, 15, 16, 38, 44]
-    
+    # TARGET_INDICES = [40, 113, 117, 124, 2, 12, 15, 16, 38, 44]
+    TARGET_INDICES = [0, 1, 2, 3, 4, 5]
     # Run the experiment with this list
-    run_crossword_experiment(indices=TARGET_INDICES)
+    log_file="./logs/llama_NYT_crossword_search_output.txt"
+    results_file="./results/llama_NYT_crossword_search_results.jsonl"
+    task = "miniNYT.json"
+    run_crossword_experiment(indices=TARGET_INDICES, log_file = log_file, results_file = results_file, data = task)
