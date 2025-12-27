@@ -1,0 +1,47 @@
+==================================================
+  Summary for Crossword Problem ID: 4
+==================================================
+
+Refinement Iterations (Explorations): 1
+Total Nodes Explored (All Iterations): 2098
+
+--- Hints (Clues) ---
+Horizontal:
+  h1. Shapes of some gummy candies
+  h2. "See you all later"
+  h3. Sweetness or sourness
+  h4. Sound from a baby bird
+  h5. They work around the clock
+Vertical:
+  v1. Broomstick rider
+  v2. The Oracle of ___, nickname for Warren Buffett
+  v3. Nevada senator Jacky
+  v4. Unable to be heard, on a Zoom call
+  v5. Bits of choreography
+
+--- Correct Answer ---
+W O R M S
+I M O U T
+T A S T E
+C H E E P
+H A N D S
+
+--- Iteration Details ---
+
+--- Iteration 1 ---
+Llama Result Grid (before GPT eval):
+W O R M S
+I M _ _ T
+T A S T E
+C H E E P
+H A N D S
+
+GPT Pruned Grid (start of next iteration):
+W O R M S
+I M _ _ T
+T A S T E
+C H E E P
+H A N D S
+
+--- GPT Evaluation Results ---
+Iteration 1: GPT was 'sure' about word indices: [0, 2, 3, 4, 5, 6, 7, 8, 9]

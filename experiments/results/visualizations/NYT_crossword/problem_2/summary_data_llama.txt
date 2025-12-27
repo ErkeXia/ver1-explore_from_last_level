@@ -1,0 +1,47 @@
+==================================================
+  Summary for Crossword Problem ID: 2
+==================================================
+
+Refinement Iterations (Explorations): 1
+Total Nodes Explored (All Iterations): 47
+
+--- Hints (Clues) ---
+Horizontal:
+  h1. Ejects forcefully
+  h2. Violet shade named for a flower
+  h3. Crème de la crème
+  h4. Baker's thirteen
+  h5. Gaze intently
+Vertical:
+  v1. Goes downhill
+  v2. High flier?
+  v3. "Hamilton" sister who sings "Burn"
+  v4. Zero-calorie drink
+  v5. Act I, ___ I
+
+--- Correct Answer ---
+S P E W S
+L I L A C
+E L I T E
+D O Z E N
+S T A R E
+
+--- Iteration Details ---
+
+--- Iteration 1 ---
+Llama Result Grid (before GPT eval):
+_ _ _ I S
+L I L A C
+_ _ _ T E
+_ _ _ E N
+S T A R E
+
+GPT Pruned Grid (start of next iteration):
+_ _ _ I S
+L I L A C
+_ _ _ T E
+_ _ _ E N
+S T A R E
+
+--- GPT Evaluation Results ---
+Iteration 1: GPT was 'sure' about word indices: [1, 4, 8, 9]

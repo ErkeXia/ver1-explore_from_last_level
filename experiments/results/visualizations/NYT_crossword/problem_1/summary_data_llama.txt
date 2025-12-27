@@ -1,0 +1,47 @@
+==================================================
+  Summary for Crossword Problem ID: 1
+==================================================
+
+Refinement Iterations (Explorations): 1
+Total Nodes Explored (All Iterations): 28
+
+--- Hints (Clues) ---
+Horizontal:
+  h1. ___ Rica
+  h2. Caper
+  h3. Gave a hand in bridge, say
+  h4. Anonymous person, in slang
+  h5. Church official
+Vertical:
+  v1. Military squad
+  v2. Basketball legend Shaquille
+  v3. Put up with
+  v4. Spanish accent mark
+  v5. Thespian
+
+--- Correct Answer ---
+C O S T A
+A N T I C
+D E A L T
+R A N D O
+E L D E R
+
+--- Iteration Details ---
+
+--- Iteration 1 ---
+Llama Result Grid (before GPT eval):
+_ _ _ T A
+A P R I C
+D E A L T
+_ _ _ D O
+_ _ _ E R
+
+GPT Pruned Grid (start of next iteration):
+_ _ _ T A
+A P R I C
+D E A L T
+_ _ _ D O
+_ _ _ E R
+
+--- GPT Evaluation Results ---
+Iteration 1: GPT was 'sure' about word indices: [1, 2, 8, 9]

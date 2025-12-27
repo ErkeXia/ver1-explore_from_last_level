@@ -193,7 +193,7 @@ def reasoning_dfs(task, x, start_grid, max_depth=12, branch=5, K=5, M=5):
     completeness_bonus = 3
 
     # Initialize the search with the provided starting grid
-    states[0] = [{'step': None, 'connect': None, 'current': start_grid}]
+    states[0] = [{'step': None, 'connect': None, 'current': start_grid, 'created_order': 1}]
     nodes = 1
     
     stack = [(0, 0)]
@@ -244,19 +244,21 @@ def reasoning_dfs(task, x, start_grid, max_depth=12, branch=5, K=5, M=5):
 
         print(f"rank: {ranked}")
         
+        for data_dict, _, score in ranked_data:
+            nodes += 1 # Increment counter for each new node created
+            states[depth + 1].append({
+                'step': data_dict['action'], 
+                'connect': data_dict['parent_idx'],
+                'current': data_dict['child_y'],
+                'score': score,
+                'created_order': nodes # Store the unique creation order
+            })
+        
         # store children nodes
         # states[depth + 1].extend([
         #     {'step': trip[0], 'connect': trip[1], 'current': trip[2]} for (trip, _v) in ranked
         # ])
         # nodes += len(ranked)
-        for data_dict, _, score in ranked_data:
-            states[depth + 1].append({
-                'step': data_dict['action'],  # This now correctly stores the action
-                'connect': data_dict['parent_idx'],
-                'current': data_dict['child_y'],
-                'score': score  # Store the combined score
-            })
-        nodes += len(ranked_data)
 
         # check if solved
         cand_y = [d['child_y'] for d, _, _ in ranked_data]
