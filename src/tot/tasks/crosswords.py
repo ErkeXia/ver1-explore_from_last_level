@@ -376,7 +376,6 @@ class MiniCrosswordsTask(Task):
         self.set_status(x, y)
         sure_lst = []
         for i, (ans, data, status) in enumerate(zip(self.env.ans, self.env.data, self.env.status)):
-            if ans.count('_') >= 3: continue
             ans = ' '.join(ans.lower())
             line = f'{data}: {ans}'
             

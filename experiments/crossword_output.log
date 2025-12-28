@@ -1,0 +1,8 @@
+nohup: ignoring input
+Solving Crosswords:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][A
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.12it/s][A
+Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.12it/s][A
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.13it/s][A
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.63it/s][ALoading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.40it/s]
+Solving Crosswords:  17%|█▋        | 1/6 [03:24<17:00, 204.20s/it]Solving Crosswords:  33%|███▎      | 2/6 [07:18<14:48, 222.05s/it]Solving Crosswords:  50%|█████     | 3/6 [14:21<15:41, 313.81s/it]Solving Crosswords:  67%|██████▋   | 4/6 [17:16<08:37, 258.79s/it]Solving Crosswords:  83%|████████▎ | 5/6 [25:30<05:43, 343.70s/it]

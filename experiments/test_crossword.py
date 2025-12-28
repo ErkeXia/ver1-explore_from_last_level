@@ -93,7 +93,7 @@ if __name__ == '__main__':
     # TARGET_INDICES = [40, 113, 117, 124, 2, 12, 15, 16, 38, 44]
     TARGET_INDICES = [0, 1, 2, 3, 4, 5]
     # Run the experiment with this list
-    log_file="./logs/llama_NYT_crossword_search_output.txt"
-    results_file="./results/llama_NYT_crossword_search_results.jsonl"
+    log_file="./logs/llama_NYT_crossword_search_inorder_output.txt"
+    results_file="./results/llama_NYT_crossword_search_inorder_results.jsonl"
     task = "miniNYT.json"
     run_crossword_experiment(indices=TARGET_INDICES, log_file = log_file, results_file = results_file, data = task)

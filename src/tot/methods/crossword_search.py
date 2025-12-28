@@ -11,7 +11,7 @@ import json
 import os
 
 PROPOSE_CACHE = None
-PROPOSE_MODE = 'gpt'
+PROPOSE_MODE = 'llama'
 
 propose_num = value_num = 0
 propose_time = value_time = 0
@@ -31,7 +31,7 @@ def apply_action_to_y(task, x, parent_y, action_line):
 # ---------------- propose children ----------------
 def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=5, M=3):
     y_parent = parent_state['current']
-    print(f"proposals for {y_parent}")
+    print(f"____________________\nProposals for {y_parent}")
     
     task.set_status(x, y_parent)
     actions = []
@@ -90,6 +90,7 @@ def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=
         
         # --- Evaluate with GPT and filter invalid grids ---
         # gpt_evaluate returns None if "impossible" is found in any line
+        print(f"possible action {action_line}")
         eval_result = task.gpt_evaluate(x, y_child)
         if eval_result is None:
             print(f"Child rejected by GPT evaluation: Action '{action_line}' created an impossible state.")
@@ -104,26 +105,6 @@ def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=
             'action': action_line
         })
         
-        
-    # top_actions = [action for action, score in valid_actions[:M]]
-
-    # print(f"Top {M} valid actions considered: {top_actions}")
-    
-    # # 3. Create a child node for each of the top M actions
-    # # children = []
-    # # for action_line in top_actions:
-    # #     y_child = apply_action_to_y(task, x, y_parent, action_line)
-    # #     children.append((y_parent, parent_index, y_child))
-    # children = []
-    # for action_line in top_actions:
-    #     y_child = apply_action_to_y(task, x, y_parent, action_line)
-    #     # Return a dictionary that includes the action taken
-    #     children.append({
-    #         'parent_y': y_parent, 
-    #         'parent_idx': parent_index, 
-    #         'child_y': y_child, 
-    #         'action': action_line
-    #     })
         
     return children
 

@@ -5146,5 +5146,33 @@
   "\"See you all later\": i _ _ _ t": [
     "odbye",
     3.0
+  ],
+  "High flier?: _ _ r _ _": [
+    "tayer",
+    1.5
+  ],
+  "Zero-calorie drink: _ _ a _ _": [
+    "seltz",
+    0.7
+  ],
+  "Sweetness or sourness: _ _ s _ e": [
+    "taste",
+    2.5
+  ],
+  "They work around the clock: _ _ r _ s": [
+    "urses",
+    2.900000000000001
+  ],
+  "Nevada senator Jacky: r o s e r": [
+    "rosen",
+    1.6000000000000003
+  ],
+  "They work around the clock: h _ r _ s": [
+    "hours",
+    3.5
+  ],
+  "They work around the clock: _ _ r d _": [
+    "night",
+    2.0
   ]
 }
