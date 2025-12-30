@@ -330,35 +330,22 @@ Clues:
 
 
 system_propose_one_prompt = '''You are a meticulous and expert crossword puzzle solver. Your task is to analyze a line in a 5x5 mini crossword and propose a possible 5-letter answer that fits the given definition and specific letter constraints.
-There may be constraints on words that you should NOT propose.
+There may be constraints, words that you should not propose. 
 
 **Core Directives:**
 1.  Your goal is to propose a 5-letter answer for the given clue.
 2.  Assign a confidence level to your proposal: `certain`, `high`, `medium`, or `low`.
-3.  **The last line of your response MUST ONLY contain a single proposal.** Do not add any introductory text.
-4.  **If you cannot find any valid word that fits the clue and letter constraints while obeying the negative constraints, output exactly `None` on the last line.**
+3.  **The last line of your response MUST ONLY contain a single proposal.** Do not add any introductory text, explanations, or conversational remarks.
 
-**Task Example 1:**
+**Task Example:**
 **Input:**
 Incorrect; to injure: w _ o _ g
-Constraint: Do NOT propose the following words: wrong
 
 **Your Output:**
 The letter constraint is: 5 letters, letter 1 is w, letter 3 is o, letter 5 is g.
-The word "wrong" is forbidden.
-I cannot find another common 5-letter word fitting w_o_g meaning "Incorrect".
-None
-
-**Task Example 2:**
-**Input:**
-H2O; to irrigate: w _ _ _ r
-Constraint: Do NOT propose the following words: N/A
-
-**Your Output:**
-The letter constraint is: 5 letters, letter 1 is w, letter 5 is r.
-Some possible words that mean "H2O; to irrigate":
-water: 5 letters, letter 1 is w, letter 5 is r. fit!
-water (high)
+Some possible words that mean "Incorrect; to injure":
+wrong: 5 letters, letter 1 is w, letter 3 is o, letter 5 is g. fit!
+wrong (high)
 '''
 
 user_propose_one_prompt = '''

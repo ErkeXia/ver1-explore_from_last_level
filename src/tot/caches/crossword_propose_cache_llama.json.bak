@@ -1,7766 +1,5178 @@
 {
   "A music style; a dance hall: _ _ _ _ _": [
-    [
-      "swing",
-      1.0
-    ]
+    "swing",
+    1.0
   ],
   "To remove the hat: _ _ _ _ _": [
-    [
-      "dooff",
-      2.3000000000000007
-    ]
+    "dooff",
+    2.3000000000000007
   ],
   "Unhidden; explicit: _ _ _ _ _": [
-    [
-      "clear",
-      0.5
-    ]
+    "clear",
+    0.5
   ],
   "The minister's house: _ _ _ _ _": [
-    [
-      "manse",
-      4.300000000000001
-    ]
+    "manse",
+    4.300000000000001
   ],
   "To demand; to arrange;: _ _ _ _ _": [
-    [
-      "order",
-      2.5
-    ]
+    "order",
+    2.5
   ],
   "An Italian domed cathedral: _ _ _ _ _": [
-    [
-      "upola",
-      1.0
-    ]
+    "upola",
+    1.0
   ],
   "A nickel steel alloy: _ _ _ _ _": [
-    [
-      "invar",
-      2.7
-    ]
+    "invar",
+    2.7
   ],
   "To disgrace; to blame; to injure: _ _ _ _ _": [
-    [
-      "scorn",
-      1.0
-    ]
+    "scorn",
+    1.0
   ],
   "Low-lying fertile land: _ _ _ _ _": [
-    [
-      "plain",
-      3.0
-    ]
+    "plain",
+    3.0
   ],
   "A sea mammal; a fishing device: _ _ _ _ _": [
-    [
-      "trawl",
-      1.5
-    ]
+    "trawl",
+    1.5
   ],
   "The minister's house: m a n s e": [
-    [
-      "manse",
-      5.0
-    ]
+    "manse",
+    5.0
   ],
   "An Italian domed cathedral: _ _ _ m _": [
-    [
-      "domes",
-      0.5
-    ]
+    "domes",
+    0.5
   ],
   "A nickel steel alloy: _ _ _ a _": [
-    [
-      "invar",
-      2.0
-    ]
+    "invar",
+    2.0
   ],
   "To disgrace; to blame; to injure: _ _ _ n _": [
-    [
-      "scorn",
-      2.0
-    ]
+    "scorn",
+    2.0
   ],
   "Low-lying fertile land: _ _ _ s _": [
-    [
-      "marsh",
-      1.5
-    ]
+    "marsh",
+    1.5
   ],
   "A sea mammal; a fishing device: _ _ _ e _": [
-    [
-      "seine",
-      16.7
-    ]
+    "seine",
+    16.7
   ],
   "To demand; to arrange;: o r d e r": [
-    [
-      "order",
-      4.0
-    ]
+    "order",
+    4.0
   ],
   "An Italian domed cathedral: _ _ _ m o": [
-    [
-      "domos",
-      3.2000000000000015
-    ]
+    "domos",
+    3.2000000000000015
   ],
   "A nickel steel alloy: _ _ _ a r": [
-    [
-      "invar",
-      2.5
-    ]
+    "invar",
+    2.5
   ],
   "To disgrace; to blame; to injure: _ _ _ n d": [
-    [
-      "scold",
-      2.5
-    ]
+    "scold",
+    2.5
   ],
   "Low-lying fertile land: _ _ _ s e": [
-    [
-      "plase",
-      2.600000000000001
-    ]
+    "plase",
+    2.600000000000001
   ],
   "A sea mammal; a fishing device: _ _ _ e r": [
-    [
-      "seine",
-      1.5
-    ]
+    "seine",
+    1.5
   ],
   "An Italian domed cathedral: _ d _ m o": [
-    [
-      "domos",
-      0.9999999999999999
-    ]
+    "domos",
+    0.9999999999999999
   ],
   "A nickel steel alloy: _ o _ a r": [
-    [
-      "invar",
-      1.0
-    ]
+    "invar",
+    1.0
   ],
   "To disgrace; to blame; to injure: _ o _ n d": [
-    [
-      "scold",
-      2.5
-    ]
+    "scold",
+    2.5
   ],
   "Low-lying fertile land: _ f _ s e": [
-    [
-      "mires",
-      1.0
-    ]
+    "mires",
+    1.0
   ],
   "A sea mammal; a fishing device: _ f _ e r": [
-    [
-      "etter",
-      2.700000000000001
-    ]
+    "etter",
+    2.700000000000001
   ],
   "Unhidden; explicit: c l e a r": [
-    [
-      "clear",
-      4.5
-    ]
+    "clear",
+    4.5
   ],
   "An Italian domed cathedral: _ d c m o": [
-    [
-      "omico",
-      2.3000000000000007
-    ]
+    "omico",
+    2.3000000000000007
   ],
   "A nickel steel alloy: _ o l a r": [
-    [
-      "invar",
-      3.0
-    ]
+    "invar",
+    3.0
   ],
   "To disgrace; to blame; to injure: _ o e n d": [
-    [
-      "scold",
-      1.5
-    ]
+    "scold",
+    1.5
   ],
   "Low-lying fertile land: _ f a s e": [
-    [
-      "delta",
-      3.5
-    ]
+    "delta",
+    3.5
   ],
   "A sea mammal; a fishing device: _ f r e r": [
-    [
-      "ealer",
-      2.1
-    ]
+    "ealer",
+    2.1
   ],
   "A music style; a dance hall: s w i n g": [
-    [
-      "swing",
-      4.0
-    ]
+    "swing",
+    4.0
   ],
   "An Italian domed cathedral: s _ c m o": [
-    [
-      "stomo",
-      6.099999999999994
-    ]
+    "stomo",
+    6.099999999999994
   ],
   "A nickel steel alloy: w _ l a r": [
-    [
-      "invar",
-      3.3000000000000003
-    ]
+    "invar",
+    3.3000000000000003
   ],
   "To disgrace; to blame; to injure: i _ e n d": [
-    [
-      "inend",
-      3.5000000000000018
-    ]
+    "inend",
+    3.5000000000000018
   ],
   "Low-lying fertile land: n _ a s e": [
-    [
-      "plane",
-      1.5000000000000004
-    ]
+    "plane",
+    1.5000000000000004
   ],
   "A sea mammal; a fishing device: g _ r e r": [
-    [
-      "earer",
-      2.600000000000001
-    ]
+    "earer",
+    2.600000000000001
   ],
   "Containing shale: _ _ _ _ _": [
-    [
-      "hally",
-      6.199999999999994
-    ]
+    "hally",
+    6.199999999999994
   ],
   "The genus that includes the lime-tree: _ _ _ _ _": [
-    [
-      "tilia",
-      4.5
-    ]
+    "tilia",
+    4.5
   ],
   "An orangutan: _ _ _ _ _": [
-    [
-      "orang",
-      1.5
-    ]
+    "orang",
+    1.5
   ],
   "To combine: _ _ _ _ _": [
-    [
-      "merge",
-      2.5
-    ]
+    "merge",
+    2.5
   ],
   "Body protection: _ _ _ _ _": [
-    [
-      "armor",
-      3.5
-    ]
+    "armor",
+    3.5
   ],
   "A breathing pore; a simple bodily opening: _ _ _ _ _": [
-    [
-      "ifice",
-      2.3000000000000007
-    ]
+    "ifice",
+    2.3000000000000007
   ],
   "An employer: _ _ _ _ _": [
-    [
-      "boast",
-      2.700000000000001
-    ]
+    "boast",
+    2.700000000000001
   ],
   "Fear; a warning device: _ _ _ _ _": [
-    [
-      "alarm",
-      1.5
-    ]
+    "alarm",
+    1.5
   ],
   "Language; argot; slang; cant; jargon: _ _ _ _ _": [
-    [
-      "ongue",
-      1.5
-    ]
+    "ongue",
+    1.5
   ],
   "A northern bird; a jager, a light infantryman: _ _ _ _ _": [
-    [
-      "eider",
-      1.5
-    ]
+    "eider",
+    1.5
   ],
   "Body protection: a r m o r": [
-    [
-      "armor",
-      5.0
-    ]
+    "armor",
+    5.0
   ],
   "A breathing pore; a simple bodily opening: _ _ _ _ a": [
-    [
-      "stoma",
-      1.5
-    ]
+    "stoma",
+    1.5
   ],
   "An employer: _ _ _ _ r": [
-    [
-      "hirer",
-      1.5
-    ]
+    "hirer",
+    1.5
   ],
   "Fear; a warning device: _ _ _ _ m": [
-    [
-      "alarm",
-      2.2
-    ]
+    "alarm",
+    2.2
   ],
   "Language; argot; slang; cant; jargon: _ _ _ _ o": [
-    [
-      "argot",
-      1.0
-    ]
+    "argot",
+    1.0
   ],
   "A northern bird; a jager, a light infantryman: _ _ _ _ r": [
-    [
-      "nowar",
-      2.600000000000001
-    ]
+    "nowar",
+    2.600000000000001
   ],
   "To combine: m e r g e": [
-    [
-      "merge",
-      3.5
-    ]
+    "merge",
+    3.5
   ],
   "A breathing pore; a simple bodily opening: _ _ _ m a": [
-    [
-      "pores",
-      3.0
-    ]
+    "pores",
+    3.0
   ],
   "An employer: _ _ _ e r": [
-    [
-      "owner",
-      5.8000000000000025
-    ]
+    "owner",
+    5.8000000000000025
   ],
   "Fear; a warning device: _ _ _ r m": [
-    [
-      "alarm",
-      2.5
-    ]
+    "alarm",
+    2.5
   ],
   "Language; argot; slang; cant; jargon: _ _ _ g o": [
-    [
-      "argon",
-      3.5
-    ]
+    "argon",
+    3.5
   ],
   "A northern bird; a jager, a light infantryman: _ _ _ e r": [
-    [
-      "eider",
-      1.0
-    ]
+    "eider",
+    1.0
   ],
   "Containing shale: h a l l y": [
-    [
-      "hally",
-      1.7000000000000002
-    ]
+    "hally",
+    1.7000000000000002
   ],
   "A breathing pore; a simple bodily opening: h _ _ m a": [
-    [
-      "stoma",
-      0.5
-    ]
+    "stoma",
+    0.5
   ],
   "An employer: a _ _ e r": [
-    [
-      "owner",
-      1.0
-    ]
+    "owner",
+    1.0
   ],
   "Language; argot; slang; cant; jargon: l _ _ g o": [
-    [
-      "lingo",
-      2.5
-    ]
+    "lingo",
+    2.5
   ],
   "A northern bird; a jager, a light infantryman: y _ _ e r": [
-    [
-      "yager",
-      3.0
-    ]
+    "yager",
+    3.0
   ],
   "The genus that includes the lime-tree: t i l i a": [
-    [
-      "ilias",
-      4.700000000000001
-    ]
+    "ilias",
+    4.700000000000001
   ],
   "A breathing pore; a simple bodily opening: h t _ m a": [
-    [
-      "mouth",
-      1.0
-    ]
+    "mouth",
+    1.0
   ],
   "Fear; a warning device: l l _ r m": [
-    [
-      "laser",
-      1.0
-    ]
+    "laser",
+    1.0
   ],
   "Language; argot; slang; cant; jargon: l i _ g o": [
-    [
-      "lingo",
-      2.5
-    ]
+    "lingo",
+    2.5
   ],
   "A northern bird; a jager, a light infantryman: y a _ e r": [
-    [
-      "yager",
-      2.5
-    ]
+    "yager",
+    2.5
   ],
   "Containing shale: _ _ l l y": [
-    [
-      "silly",
-      1.4000000000000001
-    ]
+    "silly",
+    1.4000000000000001
   ],
   "An orangutan: o r a n g": [
-    [
-      "orang",
-      2.6
-    ]
+    "orang",
+    2.6
   ],
   "A breathing pore; a simple bodily opening: _ t o m a": [
-    [
-      "stoma",
-      0.7
-    ]
+    "stoma",
+    0.7
   ],
   "An employer: _ i r e r": [
-    [
-      "ireer",
-      1.4000000000000001
-    ]
+    "ireer",
+    1.4000000000000001
   ],
   "Fear; a warning device: l l a r m": [
-    [
-      "alarm",
-      3.0
-    ]
+    "alarm",
+    3.0
   ],
   "Language; argot; slang; cant; jargon: l i n g o": [
-    [
-      "lingo",
-      3.0
-    ]
+    "lingo",
+    3.0
   ],
   "A northern bird; a jager, a light infantryman: y a g e r": [
-    [
-      "yager",
-      3.7
-    ]
+    "yager",
+    3.7
   ],
   "Containing shale: s _ l l y": [
-    [
-      "shell",
-      1.6000000000000003
-    ]
+    "shell",
+    1.6000000000000003
   ],
   "A breathing pore; a simple bodily opening: s t o m a": [
-    [
-      "stoma",
-      4.0
-    ]
+    "stoma",
+    4.0
   ],
   "Scald; an ancient Scandinavian bard: _ _ _ _ _": [
-    [
-      "skald",
-      3.7
-    ]
+    "skald",
+    3.7
   ],
   "H2O; to irrigate: _ _ _ _ _": [
-    [
-      "water",
-      3.1
-    ]
+    "water",
+    3.1
   ],
   "To wear away: _ _ _ _ _": [
-    [
-      "erode",
-      3.0
-    ]
+    "erode",
+    3.0
   ],
   "A New Zealand tree fern: _ _ _ _ _": [
-    [
-      "athea",
-      0.7
-    ]
+    "athea",
+    0.7
   ],
   "A trifler: _ _ _ _ _": [
-    [
-      "awdle",
-      0.7
-    ]
+    "awdle",
+    0.7
   ],
   "Brushed away: _ _ _ _ _": [
-    [
-      "swept",
-      4.0
-    ]
+    "swept",
+    4.0
   ],
   "A South African dry plateau: _ _ _ _ _": [
-    [
-      "veldt",
-      1.5
-    ]
+    "veldt",
+    1.5
   ],
   "Debility; lethargy: _ _ _ _ _": [
-    [
-      "kness",
-      3.3000000000000016
-    ]
+    "kness",
+    3.3000000000000016
   ],
   "A ridge; a shelf: _ _ _ _ _": [
-    [
-      "ledge",
-      3.0
-    ]
+    "ledge",
+    3.0
   ],
   "Bleakness; a dreary person: _ _ _ _ _": [
-    [
-      "gloom",
-      1.5
-    ]
+    "gloom",
+    1.5
   ],
   "Scald; an ancient Scandinavian bard: _ _ k _ _": [
-    [
-      "skald",
-      3.5
-    ]
+    "skald",
+    3.5
   ],
   "H2O; to irrigate: _ _ n _ _": [
-    [
-      "water",
-      3.0
-    ]
+    "water",
+    3.0
   ],
   "To wear away: _ _ e _ _": [
-    [
-      "erode",
-      2.5
-    ]
+    "erode",
+    2.5
   ],
   "A New Zealand tree fern: _ _ s _ _": [
-    [
-      "kauri",
-      2.0
-    ]
+    "kauri",
+    2.0
   ],
   "A trifler: _ _ s _ _": [
-    [
-      "joker",
-      1.5
-    ]
+    "joker",
+    1.5
   ],
   "Debility; lethargy: k n e s s": [
-    [
-      "nells",
-      2.800000000000001
-    ]
+    "nells",
+    2.800000000000001
   ],
   "Scald; an ancient Scandinavian bard: _ _ k l _": [
-    [
-      "skald",
-      5.0
-    ]
+    "skald",
+    5.0
   ],
   "H2O; to irrigate: _ _ n e _": [
-    [
-      "water",
-      4.0
-    ]
+    "water",
+    4.0
   ],
   "To wear away: _ _ e d _": [
-    [
-      "erode",
-      1.0
-    ]
+    "erode",
+    1.0
   ],
   "A New Zealand tree fern: _ _ s g _": [
-    [
-      "kauri",
-      3.1000000000000014
-    ]
+    "kauri",
+    3.1000000000000014
   ],
   "A trifler: _ _ s e _": [
-    [
-      "ooser",
-      1.0999999999999999
-    ]
+    "ooser",
+    1.0999999999999999
   ],
   "A ridge; a shelf: l e d g e": [
-    [
-      "ledge",
-      5.0
-    ]
+    "ledge",
+    5.0
   ],
   "Scald; an ancient Scandinavian bard: s _ k l _": [
-    [
-      "skald",
-      4.5
-    ]
+    "skald",
+    4.5
   ],
   "H2O; to irrigate: w _ n e _": [
-    [
-      "water",
-      4.5
-    ]
+    "water",
+    4.5
   ],
   "To wear away: e _ e d _": [
-    [
-      "erode",
-      2.0
-    ]
+    "erode",
+    2.0
   ],
   "A New Zealand tree fern: p _ s g _": [
-    [
-      "punga",
-      1.0
-    ]
+    "punga",
+    1.0
   ],
   "A trifler: t _ s e _": [
-    [
-      "ripes",
-      3.3000000000000016
-    ]
+    "ripes",
+    3.3000000000000016
   ],
   "Brushed away: s w e p t": [
-    [
-      "swept",
-      4.5
-    ]
+    "swept",
+    4.5
   ],
   "Scald; an ancient Scandinavian bard: s _ k l g": [
-    [
-      "skald",
-      4.5
-    ]
+    "skald",
+    4.5
   ],
   "H2O; to irrigate: w _ n e l": [
-    [
-      "water",
-      3.5
-    ]
+    "water",
+    3.5
   ],
   "To wear away: e _ e d o": [
-    [
-      "erode",
-      3.5
-    ]
+    "erode",
+    3.5
   ],
   "A New Zealand tree fern: p _ s g o": [
-    [
-      "ponga",
-      2.5
-    ]
+    "ponga",
+    2.5
   ],
   "A trifler: t _ s e m": [
-    [
-      "easer",
-      0.5
-    ]
+    "easer",
+    0.5
   ],
   "Bleakness; a dreary person: g l o o m": [
-    [
-      "oomer",
-      1.5
-    ]
+    "oomer",
+    1.5
   ],
   "Scald; an ancient Scandinavian bard: s v _ l g": [
-    [
-      "skald",
-      4.1
-    ]
+    "skald",
+    4.1
   ],
   "H2O; to irrigate: w e _ e l": [
-    [
-      "water",
-      2.5
-    ]
+    "water",
+    2.5
   ],
   "To wear away: e l _ d o": [
-    [
-      "erode",
-      2.5
-    ]
+    "erode",
+    2.5
   ],
   "A New Zealand tree fern: p d _ g o": [
-    [
-      "ponga",
-      3.5
-    ]
+    "ponga",
+    3.5
   ],
   "A trifler: t t _ e m": [
-    [
-      "emmet",
-      2.3000000000000007
-    ]
+    "emmet",
+    2.3000000000000007
   ],
   "A South African dry plateau: v e l d t": [
-    [
-      "veldt",
-      5.0
-    ]
+    "veldt",
+    5.0
   ],
   "To discard; to slough: _ _ _ _ _": [
-    [
-      "sheds",
-      0.5
-    ]
+    "sheds",
+    0.5
   ],
   "A moth genus; ringworm; a fungal infection: _ _ _ _ _": [
-    [
-      "athal",
-      2.0
-    ]
+    "athal",
+    2.0
   ],
   "A violin: _ _ _ _ _": [
-    [
-      "iolas",
-      2.700000000000001
-    ]
+    "iolas",
+    2.700000000000001
   ],
   "To run again: _ _ _ _ _": [
-    [
-      "eplay",
-      3.800000000000002
-    ]
+    "eplay",
+    3.800000000000002
   ],
   "A lovers's meeting: _ _ _ _ _": [
-    [
-      "tryst",
-      2.2
-    ]
+    "tryst",
+    2.2
   ],
   "A beginning; a sudden twitch: _ _ _ _ _": [
-    [
-      "start",
-      0.5
-    ]
+    "start",
+    0.5
   ],
   "One who snares birds with birdlime; a hanger-on: _ _ _ _ _": [
-    [
-      "onger",
-      0.7
-    ]
+    "onger",
+    0.7
   ],
   "Operating on a single object: _ _ _ _ _": [
-    [
-      "ingle",
-      3.2000000000000015
-    ]
+    "ingle",
+    3.2000000000000015
   ],
   "An unborn child: _ _ _ _ _": [
-    [
-      "fetus",
-      3.5
-    ]
+    "fetus",
+    3.5
   ],
   "To collapse; barely detectable: _ _ _ _ _": [
-    [
-      "faint",
-      1.0
-    ]
+    "faint",
+    1.0
   ],
   "To discard; to slough: _ _ i _ _": [
-    [
-      "slime",
-      0.9
-    ]
+    "slime",
+    0.9
   ],
   "A moth genus; ringworm; a fungal infection: _ _ n _ _": [
-    [
-      "hrope",
-      2.2000000000000006
-    ]
+    "hrope",
+    2.2000000000000006
   ],
   "A violin: _ _ g _ _": [
-    [
-      "fagot",
-      2.0
-    ]
+    "fagot",
+    2.0
   ],
   "To run again: _ _ l _ _": [
-    [
-      "eplay",
-      0.6
-    ]
+    "eplay",
+    0.6
   ],
   "A lovers's meeting: _ _ e _ _": [
-    [
-      "tryst",
-      3.0
-    ]
+    "tryst",
+    3.0
   ],
   "Operating on a single object: i n g l e": [
-    [
-      "ingle",
-      2.2
-    ]
+    "ingle",
+    2.2
   ],
   "To discard; to slough: _ _ i _ f": [
-    [
-      "lough",
-      1.4
-    ]
+    "lough",
+    1.4
   ],
   "A moth genus; ringworm; a fungal infection: _ _ n _ a": [
-    [
-      "thena",
-      3.0000000000000013
-    ]
+    "thena",
+    3.0000000000000013
   ],
   "A violin: _ _ g _ i": [
-    [
-      "violi",
-      3.2000000000000015
-    ]
+    "violi",
+    3.2000000000000015
   ],
   "To run again: _ _ l _ n": [
-    [
-      "eloan",
-      9.099999999999985
-    ]
+    "eloan",
+    9.099999999999985
   ],
   "A lovers's meeting: _ _ e _ t": [
-    [
-      "newet",
-      2.3000000000000007
-    ]
+    "newet",
+    2.3000000000000007
   ],
   "To collapse; barely detectable: f a i n t": [
-    [
-      "faint",
-      3.0
-    ]
+    "faint",
+    3.0
   ],
   "To discard; to slough: s _ i _ f": [
-    [
-      "lough",
-      2.5
-    ]
+    "lough",
+    2.5
   ],
   "A moth genus; ringworm; a fungal infection: t _ n _ a": [
-    [
-      "tinea",
-      2.5
-    ]
+    "tinea",
+    2.5
   ],
   "A violin: a _ g _ i": [
-    [
-      "viola",
-      0.5
-    ]
+    "viola",
+    0.5
   ],
   "To run again: r _ l _ n": [
-    [
-      "eloan",
-      9.199999999999983
-    ]
+    "eloan",
+    9.199999999999983
   ],
   "A lovers's meeting: t _ e _ t": [
-    [
-      "tetes",
-      0.1
-    ]
+    "tetes",
+    0.1
   ],
   "A beginning; a sudden twitch: s t a r t": [
-    [
-      "start",
-      2.5
-    ]
+    "start",
+    2.5
   ],
   "To discard; to slough: s o i _ f": [
-    [
-      "lough",
-      1.5
-    ]
+    "lough",
+    1.5
   ],
   "A moth genus; ringworm; a fungal infection: t n n _ a": [
-    [
-      "tinea",
-      4.5
-    ]
+    "tinea",
+    4.5
   ],
   "A violin: a g g _ i": [
-    [
-      "aggie",
-      3.600000000000002
-    ]
+    "aggie",
+    3.600000000000002
   ],
   "To run again: r e l _ n": [
-    [
-      "eloan",
-      16.199999999999985
-    ]
+    "eloan",
+    16.199999999999985
   ],
   "A lovers's meeting: t r e _ t": [
-    [
-      "treat",
-      1.7
-    ]
+    "treat",
+    1.7
   ],
   "One who snares birds with birdlime; a hanger-on: o n g e r": [
-    [
-      "onger",
-      0.6
-    ]
+    "onger",
+    0.6
   ],
   "To discard; to slough: s _ _ f f": [
-    [
-      "scuff",
-      2.5
-    ]
+    "scuff",
+    2.5
   ],
   "A moth genus; ringworm; a fungal infection: t n n e a": [
-    [
-      "tinea",
-      4.5
-    ]
+    "tinea",
+    4.5
   ],
   "A violin: a _ _ t i": [
-    [
-      "alati",
-      2.1000000000000005
-    ]
+    "alati",
+    2.1000000000000005
   ],
   "To run again: r _ _ u n": [
-    [
-      "renew",
-      1.5
-    ]
+    "renew",
+    1.5
   ],
   "A lovers's meeting: t r e s t": [
-    [
-      "tryst",
-      3.0
-    ]
+    "tryst",
+    3.0
   ],
   "One who snares birds with birdlime; a hanger-on: _ n _ _ r": [
-    [
-      "imner",
-      1.0
-    ]
+    "imner",
+    1.0
   ],
   "Operating on a single object: _ n _ _ e": [
-    [
-      "alone",
-      0.2
-    ]
+    "alone",
+    0.2
   ],
   "An unborn child: f e t u s": [
-    [
-      "fetus",
-      5.0
-    ]
+    "fetus",
+    5.0
   ],
   "To discard; to slough: s c u f f": [
-    [
-      "scuff",
-      3.0
-    ]
+    "scuff",
+    3.0
   ],
   "One who snares birds with birdlime; a hanger-on: c n _ _ r": [
-    [
-      "anner",
-      2.1999999999999997
-    ]
+    "anner",
+    2.1999999999999997
   ],
   "Operating on a single object: u n _ _ e": [
-    [
-      "nique",
-      1.5
-    ]
+    "nique",
+    1.5
   ],
   "A violin: a l a t i": [
-    [
-      "alati",
-      0.6
-    ]
+    "alati",
+    0.6
   ],
   "One who snares birds with birdlime; a hanger-on: c n l _ r": [
-    [
-      "liner",
-      2.9000000000000012
-    ]
+    "liner",
+    2.9000000000000012
   ],
   "Operating on a single object: u n a _ e": [
-    [
-      "unite",
-      2.5000000000000004
-    ]
+    "unite",
+    2.5000000000000004
   ],
   "One who snares birds with birdlime; a hanger-on: _ n l _ r": [
-    [
-      "imner",
-      3.0
-    ]
+    "imner",
+    3.0
   ],
   "Operating on a single object: _ n a _ e": [
-    [
-      "onane",
-      2.600000000000001
-    ]
+    "onane",
+    2.600000000000001
   ],
   "To discard; to slough: s _ o f f": [
-    [
-      "soffs",
-      1.6
-    ]
+    "soffs",
+    1.6
   ],
   "To run again: r _ n u n": [
-    [
-      "renew",
-      1.5
-    ]
+    "renew",
+    1.5
   ],
   "Operating on a single object: o n a n e": [
-    [
-      "onean",
-      0.2
-    ]
+    "onean",
+    0.2
   ],
   "A violin: a _ a t i": [
-    [
-      "aalti",
-      0.5
-    ]
+    "aalti",
+    0.5
   ],
   "A male friend: _ _ _ _ _": [
-    [
-      "buddy",
-      2.5
-    ]
+    "buddy",
+    2.5
   ],
   "Something big and important: _ _ _ _ _": [
-    [
-      "issue",
-      1.7
-    ]
+    "issue",
+    1.7
   ],
   "Things that enter; data given to a computer program: _ _ _ _ _": [
-    [
-      "input",
-      3.5
-    ]
+    "input",
+    3.5
   ],
   "To besiege: _ _ _ _ _": [
-    [
-      "beset",
-      3.0
-    ]
+    "beset",
+    3.0
   ],
   "More healthy; a coin: _ _ _ _ _": [
-    [
-      "whole",
-      0.5
-    ]
+    "whole",
+    0.5
   ],
   "A Mennonite sect, named for Jacob Ammann: _ _ _ _ _": [
-    [
-      "mmish",
-      1.6000000000000005
-    ]
+    "mmish",
+    1.6000000000000005
   ],
   "A craze: _ _ _ _ _": [
-    [
-      "mania",
-      1.7
-    ]
+    "mania",
+    1.7
   ],
   "To force; to drive: _ _ _ _ _": [
-    [
-      "drive",
-      1.5
-    ]
+    "drive",
+    1.5
   ],
   "To dig out roughly: _ _ _ _ _": [
-    [
-      "scour",
-      3.0
-    ]
+    "scour",
+    3.0
   ],
   "On the outside: _ _ _ _ _": [
-    [
-      "outer",
-      1.8
-    ]
+    "outer",
+    1.8
   ],
   "A male friend: _ _ _ s _": [
-    [
-      "buddy",
-      1.0
-    ]
+    "buddy",
+    1.0
   ],
   "Something big and important: _ _ _ c _": [
-    [
-      "event",
-      2.0
-    ]
+    "event",
+    2.0
   ],
   "Things that enter; data given to a computer program: _ _ _ o _": [
-    [
-      "input",
-      3.5
-    ]
+    "input",
+    3.5
   ],
   "To besiege: _ _ _ u _": [
-    [
-      "surge",
-      3.1000000000000014
-    ]
+    "surge",
+    3.1000000000000014
   ],
   "More healthy; a coin: _ _ _ r _": [
-    [
-      "etter",
-      3.1000000000000014
-    ]
+    "etter",
+    3.1000000000000014
   ],
   "To dig out roughly: s c o u r": [
-    [
-      "scour",
-      4.5
-    ]
+    "scour",
+    4.5
   ],
   "A male friend: _ _ _ s o": [
-    [
-      "broso",
-      0.1
-    ]
+    "broso",
+    0.1
   ],
   "Something big and important: _ _ _ c u": [
-    [
-      "issue",
-      1.8
-    ]
+    "issue",
+    1.8
   ],
   "Things that enter; data given to a computer program: _ _ _ o t": [
-    [
-      "input",
-      4.5
-    ]
+    "input",
+    4.5
   ],
   "To besiege: _ _ _ u e": [
-    [
-      "surue",
-      2.600000000000001
-    ]
+    "surue",
+    2.600000000000001
   ],
   "More healthy; a coin: _ _ _ r r": [
-    [
-      "other",
-      0.5
-    ]
+    "other",
+    0.5
   ],
   "On the outside: o u t e r": [
-    [
-      "outer",
-      5.0
-    ]
+    "outer",
+    5.0
   ],
   "A male friend: _ m _ s o": [
-    [
-      "mamos",
-      2.400000000000001
-    ]
+    "mamos",
+    2.400000000000001
   ],
   "Something big and important: _ a _ c u": [
-    [
-      "issue",
-      1.5
-    ]
+    "issue",
+    1.5
   ],
   "Things that enter; data given to a computer program: _ n _ o t": [
-    [
-      "input",
-      3.0
-    ]
+    "input",
+    3.0
   ],
   "To besiege: _ i _ u e": [
-    [
-      "urieu",
-      3.4000000000000017
-    ]
+    "urieu",
+    3.4000000000000017
   ],
   "More healthy; a coin: _ a _ r r": [
-    [
-      "atter",
-      2.600000000000001
-    ]
+    "atter",
+    2.600000000000001
   ],
   "A craze: m a n i a": [
-    [
-      "mania",
-      4.5
-    ]
+    "mania",
+    4.5
   ],
   "A male friend: m m _ s o": [
-    [
-      "mimos",
-      9.699999999999982
-    ]
+    "mimos",
+    9.699999999999982
   ],
   "Something big and important: m a _ c u": [
-    [
-      "major",
-      2.0
-    ]
+    "major",
+    2.0
   ],
   "Things that enter; data given to a computer program: i n _ o t": [
-    [
-      "input",
-      4.0
-    ]
+    "input",
+    4.0
   ],
   "To besiege: s i _ u e": [
-    [
-      "siege",
-      3.0
-    ]
+    "siege",
+    3.0
   ],
   "More healthy; a coin: h a _ r r": [
-    [
-      "harer",
-      0.6
-    ]
+    "harer",
+    0.6
   ],
   "A Mennonite sect, named for Jacob Ammann: m m i s h": [
-    [
-      "amish",
-      2.0
-    ]
+    "amish",
+    2.0
   ],
   "A two-legged creature: _ _ _ _ _": [
-    [
-      "human",
-      0.5
-    ]
+    "human",
+    0.5
   ],
   "A pointed arch: _ _ _ _ _": [
-    [
-      "othic",
-      2.6
-    ]
+    "othic",
+    2.6
   ],
   "A caliph: _ _ _ _ _": [
-    [
-      "aliph",
-      1.3
-    ]
+    "aliph",
+    1.3
   ],
   "A plant related to the burdock: _ _ _ _ _": [
-    [
-      "thorn",
-      1.7
-    ]
+    "thorn",
+    1.7
   ],
   "One who eats: _ _ _ _ _": [
-    [
-      "eater",
-      2.5
-    ]
+    "eater",
+    2.5
   ],
   "An Italian lawn game played with wooden balls: _ _ _ _ _": [
-    [
-      "bocce",
-      2.5
-    ]
+    "bocce",
+    2.5
   ],
   "A Yoruba-speaking people: _ _ _ _ _": [
-    [
-      "rubas",
-      1.7000000000000004
-    ]
+    "rubas",
+    1.7000000000000004
   ],
   "A guide; a captain: _ _ _ _ _": [
-    [
-      "steer",
-      1.5
-    ]
+    "steer",
+    1.5
   ],
   "To avoid: _ _ _ _ _": [
-    [
-      "elude",
-      1.0
-    ]
+    "elude",
+    1.0
   ],
   "To delay; to put off: _ _ _ _ _": [
-    [
-      "postp",
-      3.800000000000002
-    ]
+    "postp",
+    3.800000000000002
   ],
   "A pointed arch: o t h i c": [
-    [
-      "gival",
-      0.5
-    ]
+    "gival",
+    0.5
   ],
   "An Italian lawn game played with wooden balls: _ o _ _ _": [
-    [
-      "bocce",
-      4.0
-    ]
+    "bocce",
+    4.0
   ],
   "A Yoruba-speaking people: _ t _ _ _": [
-    [
-      "oruba",
-      0.5
-    ]
+    "oruba",
+    0.5
   ],
   "A guide; a captain: _ h _ _ _": [
-    [
-      "helms",
-      1.0
-    ]
+    "helms",
+    1.0
   ],
   "To avoid: _ i _ _ _": [
-    [
-      "evite",
-      1.0
-    ]
+    "evite",
+    1.0
   ],
   "To delay; to put off: _ c _ _ _": [
-    [
-      "postp",
-      3.5000000000000018
-    ]
+    "postp",
+    3.5000000000000018
   ],
   "A caliph: c _ _ _ _": [
-    [
-      "aliph",
-      3.5
-    ]
+    "aliph",
+    3.5
   ],
   "A plant related to the burdock: c _ _ _ _": [
-    [
-      "cleat",
-      0.8999999999999999
-    ]
+    "cleat",
+    0.8999999999999999
   ],
   "One who eats: e _ _ _ _": [
-    [
-      "eater",
-      3.5
-    ]
+    "eater",
+    3.5
   ],
   "An Italian lawn game played with wooden balls: b o c c e": [
-    [
-      "bocce",
-      4.0
-    ]
+    "bocce",
+    4.0
   ],
   "A two-legged creature: b _ _ _ _": [
-    [
-      "biped",
-      1.0
-    ]
+    "biped",
+    1.0
   ],
   "One who eats: e a t e r": [
-    [
-      "eater",
-      4.0
-    ]
+    "eater",
+    4.0
   ],
   "A Yoruba-speaking people: _ t _ _ a": [
-    [
-      "oruba",
-      1.7000000000000002
-    ]
+    "oruba",
+    1.7000000000000002
   ],
   "A guide; a captain: _ h _ _ t": [
-    [
-      "ftain",
-      11.5
-    ]
+    "ftain",
+    11.5
   ],
   "To avoid: _ i _ _ e": [
-    [
-      "elide",
-      0.5
-    ]
+    "elide",
+    0.5
   ],
   "To delay; to put off: _ c _ _ r": [
-    [
-      "defer",
-      1.5
-    ]
+    "defer",
+    1.5
   ],
   "A two-legged creature: b i p e d": [
-    [
-      "biped",
-      3.0
-    ]
+    "biped",
+    3.0
   ],
   "A Yoruba-speaking people: i t _ _ a": [
-    [
-      "ekiri",
-      0.5
-    ]
+    "ekiri",
+    0.5
   ],
   "A guide; a captain: p h _ _ t": [
-    [
-      "pilot",
-      3.0
-    ]
+    "pilot",
+    3.0
   ],
   "To avoid: e i _ _ e": [
-    [
-      "elide",
-      1.5
-    ]
+    "elide",
+    1.5
   ],
   "To delay; to put off: d c _ _ r": [
-    [
-      "defer",
-      2.5
-    ]
+    "defer",
+    2.5
   ],
   "A plant related to the burdock: c l e a t": [
-    [
-      "leats",
-      2.600000000000001
-    ]
+    "leats",
+    2.600000000000001
   ],
   "A Yoruba-speaking people: i t _ l a": [
-    [
-      "igala",
-      1.0
-    ]
+    "igala",
+    1.0
   ],
   "A guide; a captain: p h _ e t": [
-    [
-      "hetes",
-      5.6
-    ]
+    "hetes",
+    5.6
   ],
   "To avoid: e i _ a e": [
-    [
-      "eiate",
-      2.700000000000001
-    ]
+    "eiate",
+    2.700000000000001
   ],
   "To delay; to put off: d c _ t r": [
-    [
-      "defer",
-      3.0
-    ]
+    "defer",
+    3.0
   ],
   "A Yoruba-speaking people: _ t _ l a": [
-    [
-      "yoral",
-      2.600000000000001
-    ]
+    "yoral",
+    2.600000000000001
   ],
   "A guide; a captain: _ h _ e t": [
-    [
-      "pherd",
-      0.5
-    ]
+    "pherd",
+    0.5
   ],
   "To avoid: _ i _ a e": [
-    [
-      "evade",
-      1.5
-    ]
+    "evade",
+    1.5
   ],
   "To delay; to put off: _ c _ t r": [
-    [
-      "stern",
-      2.500000000000001
-    ]
+    "stern",
+    2.500000000000001
   ],
   "A Yoruba-speaking people: _ t _ l _": [
-    [
-      "oruba",
-      2.1
-    ]
+    "oruba",
+    2.1
   ],
   "A guide; a captain: _ h _ e _": [
-    [
-      "sheep",
-      1.1
-    ]
+    "sheep",
+    1.1
   ],
   "To avoid: _ i _ a _": [
-    [
-      "avoid",
-      1.5
-    ]
+    "avoid",
+    1.5
   ],
   "To delay; to put off: _ c _ t _": [
-    [
-      "postp",
-      2.700000000000001
-    ]
+    "postp",
+    2.700000000000001
   ],
   "A Yoruba-speaking people: i t _ l _": [
-    [
-      "itule",
-      0.6
-    ]
+    "itule",
+    0.6
   ],
   "A guide; a captain: p h _ e _": [
-    [
-      "phile",
-      0.6
-    ]
+    "phile",
+    0.6
   ],
   "To avoid: e i _ a _": [
-    [
-      "elude",
-      1.5
-    ]
+    "elude",
+    1.5
   ],
   "To delay; to put off: d c _ t _": [
-    [
-      "defer",
-      3.0
-    ]
+    "defer",
+    3.0
   ],
   "A caliph: c u _ _ _": [
-    [
-      "calif",
-      2.5
-    ]
+    "calif",
+    2.5
   ],
   "One who eats: e e _ _ _": [
-    [
-      "eater",
-      4.0
-    ]
+    "eater",
+    4.0
   ],
   "A Yoruba-speaking people: i t u l e": [
-    [
-      "oruba",
-      1.0
-    ]
+    "oruba",
+    1.0
   ],
   "A two-legged creature: b _ s _ _": [
-    [
-      "biped",
-      1.5
-    ]
+    "biped",
+    1.5
   ],
   "A caliph: c _ e _ _": [
-    [
-      "aliph",
-      3.5
-    ]
+    "aliph",
+    3.5
   ],
   "One who eats: e _ p _ _": [
-    [
-      "eater",
-      3.0
-    ]
+    "eater",
+    3.0
   ],
   "A guide; a captain: s h e e p": [
-    [
-      "sheep",
-      3.5
-    ]
+    "sheep",
+    3.5
   ],
   "An Italian lawn game played with wooden balls: _ o _ _ e": [
-    [
-      "bocce",
-      1.0
-    ]
+    "bocce",
+    1.0
   ],
   "A two-legged creature: h u m a n": [
-    [
-      "human",
-      5.0
-    ]
+    "human",
+    5.0
   ],
   "An Italian lawn game played with wooden balls: h o _ _ e": [
-    [
-      "bocce",
-      3.1
-    ]
+    "bocce",
+    3.1
   ],
   "A Yoruba-speaking people: u t _ _ a": [
-    [
-      "oruba",
-      3.0
-    ]
+    "oruba",
+    3.0
   ],
   "A guide; a captain: m h _ _ t": [
-    [
-      "mhart",
-      2.2000000000000006
-    ]
+    "mhart",
+    2.2000000000000006
   ],
   "To avoid: a i _ _ e": [
-    [
-      "aisle",
-      1.2
-    ]
+    "aisle",
+    1.2
   ],
   "To delay; to put off: n c _ _ r": [
-    [
-      "stpon",
-      3.8000000000000016
-    ]
+    "stpon",
+    3.8000000000000016
   ],
   "A caliph: _ _ _ s _": [
-    [
-      "imams",
-      7.399999999999991
-    ]
+    "imams",
+    7.399999999999991
   ],
   "A plant related to the burdock: _ _ _ l _": [
-    [
-      "istle",
-      8.29999999999999
-    ]
+    "istle",
+    8.29999999999999
   ],
   "To avoid: a i s l e": [
-    [
-      "aisle",
-      7.800000000000003
-    ]
+    "aisle",
+    7.800000000000003
   ],
   "A plant related to the burdock: i s t l e": [
-    [
-      "istle",
-      1.4000000000000001
-    ]
+    "istle",
+    1.4000000000000001
   ],
   "An Italian lawn game played with wooden balls: h o _ i e": [
-    [
-      "bocce",
-      3.0
-    ]
+    "bocce",
+    3.0
   ],
   "A Yoruba-speaking people: u t _ s a": [
-    [
-      "rubas",
-      3.4000000000000017
-    ]
+    "rubas",
+    3.4000000000000017
   ],
   "A guide; a captain: m h _ t t": [
-    [
-      "mohat",
-      1.6000000000000003
-    ]
+    "mohat",
+    1.6000000000000003
   ],
   "To delay; to put off: n c _ e r": [
-    [
-      "defer",
-      2.5
-    ]
+    "defer",
+    2.5
   ],
   "A caliph: _ _ a s _": [
-    [
-      "imams",
-      4.500000000000001
-    ]
+    "imams",
+    4.500000000000001
   ],
   "A plant related to the burdock: _ _ r l _": [
-    [
-      "istle",
-      0.8
-    ]
+    "istle",
+    0.8
   ],
   "A guide; a captain: m h a r t": [
-    [
-      "marth",
-      5.599999999999996
-    ]
+    "marth",
+    5.599999999999996
   ],
   "A caliph: _ _ a _ _": [
-    [
-      "imams",
-      0.7999999999999999
-    ]
+    "imams",
+    0.7999999999999999
   ],
   "A plant related to the burdock: _ _ r _ _": [
-    [
-      "thorn",
-      1.2
-    ]
+    "thorn",
+    1.2
   ],
   "A caliph: i m a m s": [
-    [
-      "imams",
-      4.0
-    ]
+    "imams",
+    4.0
   ],
   "An Italian lawn game played with wooden balls: h o i _ e": [
-    [
-      "bocce",
-      3.5
-    ]
+    "bocce",
+    3.5
   ],
   "A Yoruba-speaking people: u t m _ a": [
-    [
-      "oruba",
-      9.2
-    ]
+    "oruba",
+    9.2
   ],
   "To avoid: a i m _ e": [
-    [
-      "amies",
-      2.2000000000000006
-    ]
+    "amies",
+    2.2000000000000006
   ],
   "To delay; to put off: n c s _ r": [
-    [
-      "tpone",
-      1.0
-    ]
+    "tpone",
+    1.0
   ],
   "A caliph: a l i p h": [
-    [
-      "aliph",
-      2.1
-    ]
+    "aliph",
+    2.1
   ],
   "An Italian lawn game played with wooden balls: h o a _ e": [
-    [
-      "bocce",
-      3.5
-    ]
+    "bocce",
+    3.5
   ],
   "A Yoruba-speaking people: u t l _ a": [
-    [
-      "oruba",
-      9.6
-    ]
+    "oruba",
+    9.6
   ],
   "A guide; a captain: m h i _ t": [
-    [
-      "might",
-      1.0
-    ]
+    "might",
+    1.0
   ],
   "To avoid: a i p _ e": [
-    [
-      "apire",
-      1.6000000000000003
-    ]
+    "apire",
+    1.6000000000000003
   ],
   "To delay; to put off: n c h _ r": [
-    [
-      "stern",
-      0.9999999999999999
-    ]
+    "stern",
+    0.9999999999999999
   ],
   "A plant related to the burdock: t h o r n": [
-    [
-      "thorn",
-      3.5
-    ]
+    "thorn",
+    3.5
   ],
   "An Italian lawn game played with wooden balls: h _ _ t e": [
-    [
-      "bocce",
-      3.0
-    ]
+    "bocce",
+    3.0
   ],
   "A Yoruba-speaking people: u _ _ h a": [
-    [
-      "oruba",
-      0.5
-    ]
+    "oruba",
+    0.5
   ],
   "A guide; a captain: m _ _ o t": [
-    [
-      "motot",
-      2.1000000000000005
-    ]
+    "motot",
+    2.1000000000000005
   ],
   "To avoid: a _ _ r e": [
-    [
-      "arear",
-      2.2000000000000006
-    ]
+    "arear",
+    2.2000000000000006
   ],
   "To delay; to put off: n _ _ n r": [
-    [
-      "stpon",
-      12.5
-    ]
+    "stpon",
+    12.5
   ],
   "An Italian lawn game played with wooden balls: h o _ t e": [
-    [
-      "bocce",
-      3.5
-    ]
+    "bocce",
+    3.5
   ],
   "A Yoruba-speaking people: u t _ h a": [
-    [
-      "oruba",
-      2.5
-    ]
+    "oruba",
+    2.5
   ],
   "A guide; a captain: m h _ o t": [
-    [
-      "motho",
-      2.9000000000000012
-    ]
+    "motho",
+    2.9000000000000012
   ],
   "To avoid: a i _ r e": [
-    [
-      "airer",
-      3.4000000000000017
-    ]
+    "airer",
+    3.4000000000000017
   ],
   "To delay; to put off: n c _ n r": [
-    [
-      "stern",
-      4.4
-    ]
+    "stern",
+    4.4
   ],
   "The genus to which the dog and wolf belong: _ _ _ _ _": [
-    [
-      "canis",
-      2.0
-    ]
+    "canis",
+    2.0
   ],
   "An Altaic language: _ _ _ _ _": [
-    [
-      "tatar",
-      2.0
-    ]
+    "tatar",
+    2.0
   ],
   "Ramie, an Asiatic plant yielding a rope fiber: _ _ _ _ _": [
-    [
-      "ettle",
-      3.6
-    ]
+    "ettle",
+    3.6
   ],
   "Face down; susceptible: _ _ _ _ _": [
-    [
-      "ttack",
-      2.400000000000001
-    ]
+    "ttack",
+    2.400000000000001
   ],
   "An Indian antelope: _ _ _ _ _": [
-    [
-      "ilgai",
-      13.5
-    ]
+    "ilgai",
+    13.5
   ],
   "A contingent: _ _ _ _ _": [
-    [
-      "group",
-      4.0
-    ]
+    "group",
+    4.0
   ],
   "The Brazilian macaw; an Australian bird: _ _ _ _ _": [
-    [
-      "ikeet",
-      10.9
-    ]
+    "ikeet",
+    10.9
   ],
   "A Greek province; a law; a coin: _ _ _ _ _": [
-    [
-      "polis",
-      2.5
-    ]
+    "polis",
+    2.5
   ],
   "An ancient British ethnic group: _ _ _ _ _": [
-    [
-      "celts",
-      2.5
-    ]
+    "celts",
+    2.5
   ],
   "Gloss; luster: _ _ _ _ _": [
-    [
-      "glare",
-      1.1
-    ]
+    "glare",
+    1.1
   ],
   "The genus to which the dog and wolf belong: g _ _ _ _": [
-    [
-      "genus",
-      2.0
-    ]
+    "genus",
+    2.0
   ],
   "An Altaic language: r _ _ _ _": [
-    [
-      "tatar",
-      3.5
-    ]
+    "tatar",
+    3.5
   ],
   "Ramie, an Asiatic plant yielding a rope fiber: o _ _ _ _": [
-    [
-      "ettle",
-      11.499999999999991
-    ]
+    "ettle",
+    11.499999999999991
   ],
   "Face down; susceptible: u _ _ _ _": [
-    [
-      "upset",
-      2.5
-    ]
+    "upset",
+    2.5
   ],
   "An Indian antelope: p _ _ _ _": [
-    [
-      "nkara",
-      9.7
-    ]
+    "nkara",
+    9.7
   ],
   "A contingent: g r o u p": [
-    [
-      "group",
-      5.0
-    ]
+    "group",
+    5.0
   ],
   "Face down; susceptible: u p s e t": [
-    [
-      "upset",
-      3.5
-    ]
+    "upset",
+    3.5
   ],
   "The Brazilian macaw; an Australian bird: _ _ _ p _": [
-    [
-      "lorop",
-      2.9000000000000012
-    ]
+    "lorop",
+    2.9000000000000012
   ],
   "A Greek province; a law; a coin: _ _ _ s _": [
-    [
-      "selis",
-      2.9
-    ]
+    "selis",
+    2.9
   ],
   "An ancient British ethnic group: _ _ _ e _": [
-    [
-      "picts",
-      0.5
-    ]
+    "picts",
+    0.5
   ],
   "Gloss; luster: _ _ _ t _": [
-    [
-      "glint",
-      2.5
-    ]
+    "glint",
+    2.5
   ],
   "The genus to which the dog and wolf belong: g e n u s": [
-    [
-      "genus",
-      3.0
-    ]
+    "genus",
+    3.0
   ],
   "The Brazilian macaw; an Australian bird: e _ _ p _": [
-    [
-      "sulph",
-      3.0000000000000013
-    ]
+    "sulph",
+    3.0000000000000013
   ],
   "A Greek province; a law; a coin: n _ _ s _": [
-    [
-      "nesos",
-      6.400000000000003
-    ]
+    "nesos",
+    6.400000000000003
   ],
   "Gloss; luster: s _ _ t _": [
-    [
-      "sheen",
-      3.5
-    ]
+    "sheen",
+    3.5
   ],
   "An ancient British ethnic group: u _ _ e _": [
-    [
-      "utees",
-      2.700000000000001
-    ]
+    "utees",
+    2.700000000000001
   ],
   "An Altaic language: r _ _ t _": [
-    [
-      "tatar",
-      2.2
-    ]
+    "tatar",
+    2.2
   ],
   "Ramie, an Asiatic plant yielding a rope fiber: o _ _ e _": [
-    [
-      "ettle",
-      16.2
-    ]
+    "ettle",
+    16.2
   ],
   "An Indian antelope: p _ _ s _": [
-    [
-      "chink",
-      4.100000000000001
-    ]
+    "chink",
+    4.100000000000001
   ],
   "An ancient British ethnic group: u t e e s": [
-    [
-      "teses",
-      4.899999999999999
-    ]
+    "teses",
+    4.899999999999999
   ],
   "The genus to which the dog and wolf belong: g i _ _ _": [
-    [
-      "canis",
-      1.5
-    ]
+    "canis",
+    1.5
   ],
   "An Altaic language: r k _ _ _": [
-    [
-      "urkic",
-      1.0
-    ]
+    "urkic",
+    1.0
   ],
   "Ramie, an Asiatic plant yielding a rope fiber: o e _ _ _": [
-    [
-      "ettle",
-      5.7999999999999945
-    ]
+    "ettle",
+    5.7999999999999945
   ],
   "Face down; susceptible: u e _ _ _": [
-    [
-      "upset",
-      1.5
-    ]
+    "upset",
+    1.5
   ],
   "An Indian antelope: p t _ _ _": [
-    [
-      "hital",
-      1.5
-    ]
+    "hital",
+    1.5
   ],
   "The Brazilian macaw; an Australian bird: i k e e t": [
-    [
-      "kitee",
-      0.9999999999999999
-    ]
+    "kitee",
+    0.9999999999999999
   ],
   "The genus to which the dog and wolf belong: g i _ c _": [
-    [
-      "canis",
-      2.5
-    ]
+    "canis",
+    2.5
   ],
   "An Altaic language: r k _ e _": [
-    [
-      "turke",
-      5.799999999999995
-    ]
+    "turke",
+    5.799999999999995
   ],
   "Ramie, an Asiatic plant yielding a rope fiber: o e _ l _": [
-    [
-      "nelum",
-      2.600000000000001
-    ]
+    "nelum",
+    2.600000000000001
   ],
   "Face down; susceptible: u e _ t _": [
-    [
-      "upset",
-      2.5
-    ]
+    "upset",
+    2.5
   ],
   "An Indian antelope: p t _ s _": [
-    [
-      "chits",
-      2.400000000000001
-    ]
+    "chits",
+    2.400000000000001
   ],
   "An ancient British ethnic group: c e l t s": [
-    [
-      "celts",
-      3.5
-    ]
+    "celts",
+    3.5
   ],
   "The genus to which the dog and wolf belong: g i _ c g": [
-    [
-      "canid",
-      2.5
-    ]
+    "canid",
+    2.5
   ],
   "An Altaic language: r k _ e l": [
-    [
-      "turke",
-      2.2000000000000006
-    ]
+    "turke",
+    2.2000000000000006
   ],
   "Ramie, an Asiatic plant yielding a rope fiber: o e _ l a": [
-    [
-      "olela",
-      5.299999999999997
-    ]
+    "olela",
+    5.299999999999997
   ],
   "Face down; susceptible: u e _ t r": [
-    [
-      "utter",
-      1.5
-    ]
+    "utter",
+    1.5
   ],
   "An Indian antelope: p t _ s e": [
-    [
-      "hites",
-      5.899999999999997
-    ]
+    "hites",
+    5.899999999999997
   ],
   "Gloss; luster: g l a r e": [
-    [
-      "glare",
-      3.5
-    ]
+    "glare",
+    3.5
   ],
   "The genus to which the dog and wolf belong: g _ p c g": [
-    [
-      "canid",
-      2.0
-    ]
+    "canid",
+    2.0
   ],
   "Ramie, an Asiatic plant yielding a rope fiber: o _ l l a": [
-    [
-      "ramie",
-      3.5
-    ]
+    "ramie",
+    3.5
   ],
   "Face down; susceptible: u _ i t r": [
-    [
-      "vultr",
-      0.2
-    ]
+    "vultr",
+    0.2
   ],
   "An Indian antelope: p _ s s e": [
-    [
-      "chink",
-      0.30000000000000004
-    ]
+    "chink",
+    0.30000000000000004
   ],
   "A Greek province; a law; a coin: p o l i s": [
-    [
-      "polis",
-      4.5
-    ]
+    "polis",
+    4.5
   ],
   "An Altaic language: r _ o e l": [
-    [
-      "urkic",
-      2.0
-    ]
+    "urkic",
+    2.0
   ],
   "Liquid body waste: _ _ _ _ _": [
-    [
-      "urine",
-      4.0
-    ]
+    "urine",
+    4.0
   ],
   "An Asian cape: _ _ _ _ _": [
-    [
-      "imono",
-      0.2
-    ]
+    "imono",
+    0.2
   ],
   "Defecates; a dice game: _ _ _ _ _": [
-    [
-      "craps",
-      2.0
-    ]
+    "craps",
+    2.0
   ],
   "High; high-class; pretentious: _ _ _ _ _": [
-    [
-      "snobb",
-      1.2
-    ]
+    "snobb",
+    1.2
   ],
   "A kerchief: _ _ _ _ _": [
-    [
-      "scarf",
-      0.7
-    ]
+    "scarf",
+    0.7
   ],
   "A New Zealand palm: _ _ _ _ _": [
-    [
-      "nikau",
-      2.5
-    ]
+    "nikau",
+    2.5
   ],
   "Unfit; clumsy: _ _ _ _ _": [
-    [
-      "unfit",
-      1.0
-    ]
+    "unfit",
+    1.0
   ],
   "To perceive; wisdom; reason; feeling: _ _ _ _ _": [
-    [
-      "sense",
-      3.5
-    ]
+    "sense",
+    3.5
   ],
   "The genus to which the dog and wolf belong: c a n i s": [
-    [
-      "canis",
-      2.5
-    ]
+    "canis",
+    2.5
   ],
   "A kerchief: c _ _ _ _": [
-    [
-      "scarf",
-      1.5
-    ]
+    "scarf",
+    1.5
   ],
   "The Brazilian macaw; an Australian bird: a _ _ _ _": [
-    [
-      "ariel",
-      0.6
-    ]
+    "ariel",
+    0.6
   ],
   "A New Zealand palm: n _ _ _ _": [
-    [
-      "nikau",
-      1.2
-    ]
+    "nikau",
+    1.2
   ],
   "Unfit; clumsy: i _ _ _ _": [
-    [
-      "inept",
-      2.0
-    ]
+    "inept",
+    2.0
   ],
   "To perceive; wisdom; reason; feeling: s _ _ _ _": [
-    [
-      "sense",
-      4.5
-    ]
+    "sense",
+    4.5
   ],
   "Liquid body waste: _ _ _ _ e": [
-    [
-      "urine",
-      2.5
-    ]
+    "urine",
+    2.5
   ],
   "An Asian cape: _ _ _ _ n": [
-    [
-      "imono",
-      1.0
-    ]
+    "imono",
+    1.0
   ],
   "Defecates; a dice game: _ _ _ _ s": [
-    [
-      "craps",
-      2.5
-    ]
+    "craps",
+    2.5
   ],
   "High; high-class; pretentious: _ _ _ _ e": [
-    [
-      "haute",
-      3.5
-    ]
+    "haute",
+    3.5
   ],
   "To perceive; wisdom; reason; feeling: s e n s e": [
-    [
-      "sense",
-      4.5
-    ]
+    "sense",
+    4.5
   ],
   "Defecates; a dice game: c r a p s": [
-    [
-      "craps",
-      3.0
-    ]
+    "craps",
+    3.0
   ],
   "A kerchief: c _ _ c _": [
-    [
-      "scarf",
-      1.5
-    ]
+    "scarf",
+    1.5
   ],
   "The Brazilian macaw; an Australian bird: a _ _ r _": [
-    [
-      "sulur",
-      0.5
-    ]
+    "sulur",
+    0.5
   ],
   "A New Zealand palm: n _ _ a _": [
-    [
-      "ikora",
-      3.0000000000000013
-    ]
+    "ikora",
+    3.0000000000000013
   ],
   "Unfit; clumsy: i _ _ p _": [
-    [
-      "lumpy",
-      1.9
-    ]
+    "lumpy",
+    1.9
   ],
   "Liquid body waste: u r i n e": [
-    [
-      "urine",
-      4.5
-    ]
+    "urine",
+    4.5
   ],
   "A kerchief: c u _ c _": [
-    [
-      "cuchu",
-      2.0000000000000004
-    ]
+    "cuchu",
+    2.0000000000000004
   ],
   "The Brazilian macaw; an Australian bird: a r _ r _": [
-    [
-      "ories",
-      5.0
-    ]
+    "ories",
+    5.0
   ],
   "A New Zealand palm: n i _ a _": [
-    [
-      "niata",
-      0.7
-    ]
+    "niata",
+    0.7
   ],
   "Unfit; clumsy: i n _ p _": [
-    [
-      "inapt",
-      2.0
-    ]
+    "inapt",
+    2.0
   ],
   "An Asian cape: _ _ _ a n": [
-    [
-      "monas",
-      2.3000000000000007
-    ]
+    "monas",
+    2.3000000000000007
   ],
   "High; high-class; pretentious: _ _ _ t e": [
-    [
-      "haute",
-      4.0
-    ]
+    "haute",
+    4.0
   ],
   "Unfit; clumsy: i n a p t": [
-    [
-      "inapt",
-      3.5
-    ]
+    "inapt",
+    3.5
   ],
   "High; high-class; pretentious: h a u t e": [
-    [
-      "haute",
-      3.4000000000000004
-    ]
+    "haute",
+    3.4000000000000004
   ],
   "A kerchief: c u _ c h": [
-    [
-      "cutch",
-      0.5
-    ]
+    "cutch",
+    0.5
   ],
   "The Brazilian macaw; an Australian bird: a r _ r a": [
-    [
-      "lorra",
-      2.2000000000000006
-    ]
+    "lorra",
+    2.2000000000000006
   ],
   "A New Zealand palm: n i _ a u": [
-    [
-      "niuau",
-      1.6
-    ]
+    "niuau",
+    1.6
   ],
   "An Asian cape: t _ _ a n": [
-    [
-      "tanin",
-      2.500000000000001
-    ]
+    "tanin",
+    2.500000000000001
   ],
   "A kerchief: c u t c h": [
-    [
-      "ndage",
-      3.5
-    ]
+    "ndage",
+    3.5
   ],
   "An Asian cape: t _ u a n": [
-    [
-      "tunic",
-      0.5
-    ]
+    "tunic",
+    0.5
   ],
   "A New Zealand palm: n i u a u": [
-    [
-      "niuau",
-      3.1
-    ]
+    "niuau",
+    3.1
   ],
   "An Asian cape: _ _ u a n": [
-    [
-      "imona",
-      0.6
-    ]
+    "imona",
+    0.6
   ],
   "Unfit; clumsy: i n _ p t": [
-    [
-      "inapt",
-      2.5
-    ]
+    "inapt",
+    2.5
   ],
   "An Asian cape: _ _ u _ n": [
-    [
-      "imonu",
-      0.5
-    ]
+    "imonu",
+    0.5
   ],
   "An Asian cape: t _ u _ n": [
-    [
-      "tunic",
-      3.0
-    ]
+    "tunic",
+    3.0
   ],
   "An Asian cape: t _ _ _ n": [
-    [
-      "tunin",
-      1.0999999999999999
-    ]
+    "tunin",
+    1.0999999999999999
   ],
   "An Asian cape: _ u n i _": [
-    [
-      "umuni",
-      0.5
-    ]
+    "umuni",
+    0.5
   ],
   "The Brazilian macaw; an Australian bird: a r u r a": [
-    [
-      "sulur",
-      1.2
-    ]
+    "sulur",
+    1.2
   ],
   "A New Zealand palm: n i n a u": [
-    [
-      "ninau",
-      2.0
-    ]
+    "ninau",
+    2.0
   ],
   "Unfit; clumsy: i n i p t": [
-    [
-      "niput",
-      2.600000000000001
-    ]
+    "niput",
+    2.600000000000001
   ],
   "To perceive; wisdom; reason; feeling: s e _ s e": [
-    [
-      "sense",
-      3.5
-    ]
+    "sense",
+    3.5
   ],
   "An Asian cape: _ u n i n": [
-    [
-      "imoni",
-      0.5
-    ]
+    "imoni",
+    0.5
   ],
   "A financial loss; a negative profit; to remove bits from: _ _ _ _ _": [
-    [
-      "debit",
-      1.2
-    ]
+    "debit",
+    1.2
   ],
   "Fatuous; empty headed: _ _ _ _ _": [
-    [
-      "antly",
-      3.0000000000000013
-    ]
+    "antly",
+    3.0000000000000013
   ],
   "A subatomic particle: _ _ _ _ _": [
-    [
-      "quark",
-      1.5
-    ]
+    "quark",
+    1.5
   ],
   "Containing an imide: _ _ _ _ _": [
-    [
-      "amide",
-      3.5
-    ]
+    "amide",
+    3.5
   ],
   "A device that emits electrically charged pellets; \"Thomas A Swift Electric Rifle\": _ _ _ _ _": [
-    [
-      "rifle",
-      1.0
-    ]
+    "rifle",
+    1.0
   ],
   "To demit: _ _ _ _ _": [
-    [
-      "signs",
-      4.8
-    ]
+    "signs",
+    4.8
   ],
   "A liquid injected into the rectum: _ _ _ _ _": [
-    [
-      "enema",
-      3.5
-    ]
+    "enema",
+    3.5
   ],
   "A foundation: _ _ _ _ _": [
-    [
-      "basis",
-      0.8999999999999999
-    ]
+    "basis",
+    0.8999999999999999
   ],
   "A UNIX file system structure: _ _ _ _ _": [
-    [
-      "treer",
-      0.1
-    ]
+    "treer",
+    0.1
   ],
   "Purport; a trend; a singing voice: _ _ _ _ _": [
-    [
-      "trend",
-      2.0
-    ]
+    "trend",
+    2.0
   ],
   "A financial loss; a negative profit; to remove bits from: _ e _ _ _": [
-    [
-      "debit",
-      1.0
-    ]
+    "debit",
+    1.0
   ],
   "Fatuous; empty headed: _ n _ _ _": [
-    [
-      "vapid",
-      1.5
-    ]
+    "vapid",
+    1.5
   ],
   "A subatomic particle: _ e _ _ _": [
-    [
-      "ctron",
-      13.499999999999993
-    ]
+    "ctron",
+    13.499999999999993
   ],
   "Containing an imide: _ m _ _ _": [
-    [
-      "amide",
-      3.0
-    ]
+    "amide",
+    3.0
   ],
   "A device that emits electrically charged pellets; \"Thomas A Swift Electric Rifle\": _ a _ _ _": [
-    [
-      "apper",
-      0.8999999999999999
-    ]
+    "apper",
+    0.8999999999999999
   ],
   "A liquid injected into the rectum: e n e m a": [
-    [
-      "enema",
-      4.0
-    ]
+    "enema",
+    4.0
   ],
   "A financial loss; a negative profit; to remove bits from: _ e _ _ t": [
-    [
-      "debit",
-      3.0
-    ]
+    "debit",
+    3.0
   ],
   "Fatuous; empty headed: _ n _ _ r": [
-    [
-      "acant",
-      16.6
-    ]
+    "acant",
+    16.6
   ],
   "A subatomic particle: _ e _ _ e": [
-    [
-      "neutr",
-      0.5
-    ]
+    "neutr",
+    0.5
   ],
   "Containing an imide: _ m _ _ n": [
-    [
-      "imine",
-      1.0
-    ]
+    "imine",
+    1.0
   ],
   "A device that emits electrically charged pellets; \"Thomas A Swift Electric Rifle\": _ a _ _ d": [
-    [
-      "zooka",
-      1.0
-    ]
+    "zooka",
+    1.0
   ],
   "Purport; a trend; a singing voice: t r e n d": [
-    [
-      "trend",
-      5.0
-    ]
+    "trend",
+    5.0
   ],
   "A financial loss; a negative profit; to remove bits from: _ e b _ t": [
-    [
-      "debit",
-      2.5
-    ]
+    "debit",
+    2.5
   ],
   "Fatuous; empty headed: _ n a _ r": [
-    [
-      "acant",
-      8.200000000000003
-    ]
+    "acant",
+    8.200000000000003
   ],
   "A subatomic particle: _ e s _ e": [
-    [
-      "meson",
-      2.5
-    ]
+    "meson",
+    2.5
   ],
   "Containing an imide: _ m i _ n": [
-    [
-      "minic",
-      0.7
-    ]
+    "minic",
+    0.7
   ],
   "A device that emits electrically charged pellets; \"Thomas A Swift Electric Rifle\": _ a s _ d": [
-    [
-      "zooka",
-      0.5
-    ]
+    "zooka",
+    0.5
   ],
   "A foundation: b a s i s": [
-    [
-      "basis",
-      4.5
-    ]
+    "basis",
+    4.5
   ],
   "A financial loss; a negative profit; to remove bits from: d e b i t": [
-    [
-      "debit",
-      3.5
-    ]
+    "debit",
+    3.5
   ],
   "To demit: d _ _ _ _": [
-    [
-      "demit",
-      4.0
-    ]
+    "demit",
+    4.0
   ],
   "A UNIX file system structure: i _ _ _ _": [
-    [
-      "inode",
-      2.2
-    ]
+    "inode",
+    2.2
   ],
   "Fatuous; empty headed: e n a _ r": [
-    [
-      "empty",
-      2.0
-    ]
+    "empty",
+    2.0
   ],
   "A subatomic particle: m e s _ e": [
-    [
-      "meson",
-      3.0
-    ]
+    "meson",
+    3.0
   ],
   "Containing an imide: i m i _ n": [
-    [
-      "imine",
-      3.0
-    ]
+    "imine",
+    3.0
   ],
   "A device that emits electrically charged pellets; \"Thomas A Swift Electric Rifle\": t a s _ d": [
-    [
-      "taser",
-      1.5
-    ]
+    "taser",
+    1.5
   ],
   "To demit: d e m i t": [
-    [
-      "demit",
-      3.5
-    ]
+    "demit",
+    3.5
   ],
   "To belch, to burp: _ _ _ _ _": [
-    [
-      "burps",
-      1.5
-    ]
+    "burps",
+    1.5
   ],
   "A tropical fish: _ _ _ _ _": [
-    [
-      "guppy",
-      2.0
-    ]
+    "guppy",
+    2.0
   ],
   "A fragrant rose oil: _ _ _ _ _": [
-    [
-      "orris",
-      1.0
-    ]
+    "orris",
+    1.0
   ],
   "A spear support: _ _ _ _ _": [
-    [
-      "shaft",
-      3.0
-    ]
+    "shaft",
+    3.0
   ],
   "A corpse; the Corsican dialect; a European cape: _ _ _ _ _": [
-    [
-      "corso",
-      2.0
-    ]
+    "corso",
+    2.0
   ],
   "The South African blaubok: _ _ _ _ _": [
-    [
-      "esbok",
-      1.0
-    ]
+    "esbok",
+    1.0
   ],
   "Referring to the past; pointing backwards: _ _ _ _ _": [
-    [
-      "retro",
-      0.5
-    ]
+    "retro",
+    0.5
   ],
   "To say; complete: _ _ _ _ _": [
-    [
-      "utter",
-      2.5
-    ]
+    "utter",
+    2.5
   ],
   "Gross; unsubtle: _ _ _ _ _": [
-    [
-      "btuse",
-      2.2000000000000006
-    ]
+    "btuse",
+    2.2000000000000006
   ],
   "A French pastry: _ _ _ _ _": [
-    [
-      "tarte",
-      3.0
-    ]
+    "tarte",
+    3.0
   ],
   "A spear support: s h a f t": [
-    [
-      "shaft",
-      4.5
-    ]
+    "shaft",
+    4.5
   ],
   "The South African blaubok: _ _ _ s _": [
-    [
-      "bocks",
-      0.7
-    ]
+    "bocks",
+    0.7
   ],
   "Referring to the past; pointing backwards: _ _ _ h _": [
-    [
-      "hence",
-      1.9
-    ]
+    "hence",
+    1.9
   ],
   "To say; complete: _ _ _ a _": [
-    [
-      "speak",
-      1.5
-    ]
+    "speak",
+    1.5
   ],
   "Gross; unsubtle: _ _ _ f _": [
-    [
-      "crass",
-      1.0
-    ]
+    "crass",
+    1.0
   ],
   "A French pastry: _ _ _ t _": [
-    [
-      "tarte",
-      3.0
-    ]
+    "tarte",
+    3.0
   ],
   "A tropical fish: g u p p y": [
-    [
-      "guppy",
-      5.0
-    ]
+    "guppy",
+    5.0
   ],
   "The South African blaubok: _ g _ s _": [
-    [
-      "bokgs",
-      2.3000000000000007
-    ]
+    "bokgs",
+    2.3000000000000007
   ],
   "Referring to the past; pointing backwards: _ u _ h _": [
-    [
-      "oward",
-      1.0
-    ]
+    "oward",
+    1.0
   ],
   "To say; complete: _ p _ a _": [
-    [
-      "speak",
-      1.0
-    ]
+    "speak",
+    1.0
   ],
   "Gross; unsubtle: _ p _ f _": [
-    [
-      "rappy",
-      2.700000000000001
-    ]
+    "rappy",
+    2.700000000000001
   ],
   "A French pastry: _ y _ t _": [
-    [
-      "tarte",
-      2.2
-    ]
+    "tarte",
+    2.2
   ],
   "To belch, to burp: b u r p s": [
-    [
-      "burps",
-      3.2
-    ]
+    "burps",
+    3.2
   ],
   "The South African blaubok: b g _ s _": [
-    [
-      "bongo",
-      1.0
-    ]
+    "bongo",
+    1.0
   ],
   "Referring to the past; pointing backwards: u u _ h _": [
-    [
-      "uhhuh",
-      0.7
-    ]
+    "uhhuh",
+    0.7
   ],
   "To say; complete: r p _ a _": [
-    [
-      "eport",
-      1.5
-    ]
+    "eport",
+    1.5
   ],
   "Gross; unsubtle: p p _ f _": [
-    [
-      "coffs",
-      2.600000000000001
-    ]
+    "coffs",
+    2.600000000000001
   ],
   "A French pastry: s y _ t _": [
-    [
-      "syrts",
-      2.3000000000000007
-    ]
+    "syrts",
+    2.3000000000000007
   ],
   "A fragrant rose oil: _ _ _ _ r": [
-    [
-      "osear",
-      3.1000000000000014
-    ]
+    "osear",
+    3.1000000000000014
   ],
   "A corpse; the Corsican dialect; a European cape: _ _ _ _ s": [
-    [
-      "corsi",
-      0.5
-    ]
+    "corsi",
+    0.5
   ],
   "A French pastry: s y r t s": [
-    [
-      "artes",
-      2.3000000000000007
-    ]
+    "artes",
+    2.3000000000000007
   ],
   "A fragrant rose oil: o s e a r": [
-    [
-      "ocean",
-      3.3000000000000016
-    ]
+    "ocean",
+    3.3000000000000016
   ],
   "The South African blaubok: b g o s _": [
-    [
-      "bogos",
-      1.4000000000000001
-    ]
+    "bogos",
+    1.4000000000000001
   ],
   "Referring to the past; pointing backwards: u u s h _": [
-    [
-      "ushes",
-      0.7999999999999999
-    ]
+    "ushes",
+    0.7999999999999999
   ],
   "To say; complete: r p e a _": [
-    [
-      "reply",
-      0.5
-    ]
+    "reply",
+    0.5
   ],
   "Gross; unsubtle: p p a f _": [
-    [
-      "rappy",
-      1.2
-    ]
+    "rappy",
+    1.2
   ],
   "A corpse; the Corsican dialect; a European cape: c o r s o": [
-    [
-      "corso",
-      2.0
-    ]
+    "corso",
+    2.0
   ],
   "The South African blaubok: b g _ s c": [
-    [
-      "bgsac",
-      2.700000000000001
-    ]
+    "bgsac",
+    2.700000000000001
   ],
   "Referring to the past; pointing backwards: u u _ h o": [
-    [
-      "uhoho",
-      2.700000000000001
-    ]
+    "uhoho",
+    2.700000000000001
   ],
   "To say; complete: r p _ a r": [
-    [
-      "reply",
-      2.0
-    ]
+    "reply",
+    2.0
   ],
   "Gross; unsubtle: p p _ f s": [
-    [
-      "oarse",
-      1.9000000000000008
-    ]
+    "oarse",
+    1.9000000000000008
   ],
   "A French pastry: s y _ t o": [
-    [
-      "yrout",
-      1.7000000000000004
-    ]
+    "yrout",
+    1.7000000000000004
   ],
   "Disney elephant: _ _ _ _ _": [
-    [
-      "dumbo",
-      3.5
-    ]
+    "dumbo",
+    3.5
   ],
   "Tech-support callers: _ _ _ _ _": [
-    [
-      "users",
-      3.5
-    ]
+    "users",
+    3.5
   ],
   "Mozart's output: _ _ _ _ _": [
-    [
-      "music",
-      3.0
-    ]
+    "music",
+    3.0
   ],
   "Angel hair, for example: _ _ _ _ _": [
-    [
-      "odles",
-      1.0
-    ]
+    "odles",
+    1.0
   ],
   "More cagey: _ _ _ _ _": [
-    [
-      "agier",
-      1.8
-    ]
+    "agier",
+    1.8
   ],
   "Refuse heaps: _ _ _ _ _": [
-    [
-      "bbish",
-      1.1
-    ]
+    "bbish",
+    1.1
   ],
   "Standard: _ _ _ _ _": [
-    [
-      "usual",
-      4.3000000000000025
-    ]
+    "usual",
+    4.3000000000000025
   ],
   "In no particular order?: _ _ _ _ _": [
-    [
-      "andom",
-      4.4
-    ]
+    "andom",
+    4.4
   ],
   "Scotch-___ (scouring pad brand): _ _ _ _ _": [
-    [
-      "brite",
-      3.0
-    ]
+    "brite",
+    3.0
   ],
   "Irish poet and playwright Wilde: _ _ _ _ _": [
-    [
-      "wilde",
-      4.0
-    ]
+    "wilde",
+    4.0
   ],
   "Disney elephant: _ u _ _ _": [
-    [
-      "trump",
-      2.0
-    ]
+    "trump",
+    2.0
   ],
   "Tech-support callers: _ s _ _ _": [
-    [
-      "users",
-      2.0
-    ]
+    "users",
+    2.0
   ],
   "Mozart's output: _ u _ _ _": [
-    [
-      "music",
-      3.0
-    ]
+    "music",
+    3.0
   ],
   "Angel hair, for example: _ a _ _ _": [
-    [
-      "angel",
-      1.5
-    ]
+    "angel",
+    1.5
   ],
   "More cagey: _ l _ _ _": [
-    [
-      "shier",
-      1.0
-    ]
+    "shier",
+    1.0
   ],
   "Standard: u s u a l": [
-    [
-      "usual",
-      3.0
-    ]
+    "usual",
+    3.0
   ],
   "Disney elephant: _ u _ b _": [
-    [
-      "dumbo",
-      3.0
-    ]
+    "dumbo",
+    3.0
   ],
   "Tech-support callers: _ s _ r _": [
-    [
-      "users",
-      2.5
-    ]
+    "users",
+    2.5
   ],
   "Mozart's output: _ u _ i _": [
-    [
-      "music",
-      4.0
-    ]
+    "music",
+    4.0
   ],
   "Angel hair, for example: _ a _ t _": [
-    [
-      "odles",
-      3.0000000000000013
-    ]
+    "odles",
+    3.0000000000000013
   ],
   "More cagey: _ l _ e _": [
-    [
-      "shier",
-      1.5
-    ]
+    "shier",
+    1.5
   ],
   "Scotch-___ (scouring pad brand): b r i t e": [
-    [
-      "brite",
-      3.1
-    ]
+    "brite",
+    3.1
   ],
   "Disney elephant: d u m b o": [
-    [
-      "dumbo",
-      4.5
-    ]
+    "dumbo",
+    4.5
   ],
   "Refuse heaps: d _ _ _ _": [
-    [
-      "dumps",
-      2.5
-    ]
+    "dumps",
+    2.5
   ],
   "In no particular order?: m _ _ _ _": [
-    [
-      "mixed",
-      3.0
-    ]
+    "mixed",
+    3.0
   ],
   "Irish poet and playwright Wilde: o _ _ _ _": [
-    [
-      "owens",
-      3.4000000000000017
-    ]
+    "owens",
+    3.4000000000000017
   ],
   "Tech-support callers: u s _ r _": [
-    [
-      "users",
-      2.5
-    ]
+    "users",
+    2.5
   ],
   "Mozart's output: m u _ i _": [
-    [
-      "music",
-      3.0
-    ]
+    "music",
+    3.0
   ],
   "Angel hair, for example: p a _ t _": [
-    [
-      "pasta",
-      2.5
-    ]
+    "pasta",
+    2.5
   ],
   "More cagey: s l _ e _": [
-    [
-      "slier",
-      1.1
-    ]
+    "slier",
+    1.1
   ],
   "Refuse heaps: d u m p s": [
-    [
-      "dumps",
-      3.0
-    ]
+    "dumps",
+    3.0
   ],
   "Mozart's output: m u s i c": [
-    [
-      "music",
-      5.0
-    ]
+    "music",
+    5.0
   ],
   "In no particular order?: m _ s _ _": [
-    [
-      "mixed",
-      2.0
-    ]
+    "mixed",
+    2.0
   ],
   "Irish poet and playwright Wilde: o _ c _ _": [
-    [
-      "oscar",
-      4.0
-    ]
+    "oscar",
+    4.0
   ],
   "Tech-support callers: u s e r s": [
-    [
-      "users",
-      3.0
-    ]
+    "users",
+    3.0
   ],
   "In no particular order?: m e s _ _": [
-    [
-      "mixed",
-      2.5
-    ]
+    "mixed",
+    2.5
   ],
   "Irish poet and playwright Wilde: o s c _ _": [
-    [
-      "oscar",
-      3.2
-    ]
+    "oscar",
+    3.2
   ],
   "Angel hair, for example: p a _ t a": [
-    [
-      "pasta",
-      3.0
-    ]
+    "pasta",
+    3.0
   ],
   "More cagey: s l _ e r": [
-    [
-      "slier",
-      4.000000000000002
-    ]
+    "slier",
+    4.000000000000002
   ],
   "Irish poet and playwright Wilde: o s c a r": [
-    [
-      "oscar",
-      3.0
-    ]
+    "oscar",
+    3.0
   ],
   "Angel hair, for example: p a s t a": [
-    [
-      "pasta",
-      1.5
-    ]
+    "pasta",
+    1.5
   ],
   "In no particular order?: m e s s _": [
-    [
-      "messy",
-      2.8
-    ]
+    "messy",
+    2.8
   ],
   "Refuse heaps: _ _ m _ _": [
-    [
-      "mires",
-      0.6
-    ]
+    "mires",
+    0.6
   ],
   "In no particular order?: _ _ s _ _": [
-    [
-      "andom",
-      1.8000000000000005
-    ]
+    "andom",
+    1.8000000000000005
   ],
   "Scotch-___ (scouring pad brand): _ _ i _ _": [
-    [
-      "cotch",
-      13.6
-    ]
+    "cotch",
+    13.6
   ],
   "Irish poet and playwright Wilde: _ _ c _ _": [
-    [
-      "oscar",
-      2.5
-    ]
+    "oscar",
+    2.5
   ],
   "Disney elephant: _ u _ _ o": [
-    [
-      "dumbo",
-      1.0
-    ]
+    "dumbo",
+    1.0
   ],
   "Tech-support callers: _ s _ _ s": [
-    [
-      "techs",
-      1.0
-    ]
+    "techs",
+    1.0
   ],
   "Angel hair, for example: _ a _ _ a": [
-    [
-      "pagna",
-      2.600000000000001
-    ]
+    "pagna",
+    2.600000000000001
   ],
   "More cagey: _ l _ _ r": [
-    [
-      "arier",
-      1.5
-    ]
+    "arier",
+    1.5
   ],
   "Refuse heaps: d _ m _ _": [
-    [
-      "dumps",
-      2.5
-    ]
+    "dumps",
+    2.5
   ],
   "Scotch-___ (scouring pad brand): b _ i _ _": [
-    [
-      "bissi",
-      5.600000000000002
-    ]
+    "bissi",
+    5.600000000000002
   ],
   "Tech-support callers: u s _ _ s": [
-    [
-      "users",
-      2.5
-    ]
+    "users",
+    2.5
   ],
   "Angel hair, for example: p a _ _ a": [
-    [
-      "pasta",
-      3.0
-    ]
+    "pasta",
+    3.0
   ],
   "More cagey: s l _ _ r": [
-    [
-      "slier",
-      3.2000000000000015
-    ]
+    "slier",
+    3.2000000000000015
   ],
   "More cagey: s l i e r": [
-    [
-      "slier",
-      4.800000000000002
-    ]
+    "slier",
+    4.800000000000002
   ],
   "In no particular order?: m _ s _ i": [
-    [
-      "mixed",
-      2.0
-    ]
+    "mixed",
+    2.0
   ],
   "Scotch-___ (scouring pad brand): b _ i _ e": [
-    [
-      "iebie",
-      0.9999999999999999
-    ]
+    "iebie",
+    0.9999999999999999
   ],
   "In no particular order?: m _ s s _": [
-    [
-      "mixed",
-      1.0
-    ]
+    "mixed",
+    1.0
   ],
   "Scotch-___ (scouring pad brand): b _ i t _": [
-    [
-      "ssell",
-      1.5
-    ]
+    "ssell",
+    1.5
   ],
   "Scotch-___ (scouring pad brand): b r i _ _": [
-    [
-      "brist",
-      3.600000000000002
-    ]
+    "brist",
+    3.600000000000002
   ],
   "Angel hair, for example: p a _ s a": [
-    [
-      "pasta",
-      3.0
-    ]
+    "pasta",
+    3.0
   ],
   "More cagey: s l _ t r": [
-    [
-      "anter",
-      3.3000000000000016
-    ]
+    "anter",
+    3.3000000000000016
   ],
   "Scotch-___ (scouring pad brand): b r i s t": [
-    [
-      "brite",
-      1.0
-    ]
+    "brite",
+    1.0
   ],
   "Refuse heaps: _ u m _ _": [
-    [
-      "ounds",
-      16.6
-    ]
+    "ounds",
+    16.6
   ],
   "In no particular order?: _ e s _ _": [
-    [
-      "mixed",
-      3.5
-    ]
+    "mixed",
+    3.5
   ],
   "Scotch-___ (scouring pad brand): _ r i _ _": [
-    [
-      "brite",
-      4.0
-    ]
+    "brite",
+    4.0
   ],
   "Irish poet and playwright Wilde: _ s c _ _": [
-    [
-      "wilde",
-      3.8000000000000003
-    ]
+    "wilde",
+    3.8000000000000003
   ],
   "Refuse heaps: d u m _ _": [
-    [
-      "dumps",
-      2.5
-    ]
+    "dumps",
+    2.5
   ],
   "Angel hair, for example: _ a _ t a": [
-    [
-      "spata",
-      2.600000000000001
-    ]
+    "spata",
+    2.600000000000001
   ],
   "More cagey: _ l _ e r": [
-    [
-      "shier",
-      1.0
-    ]
+    "shier",
+    1.0
   ],
   "___ Rica: _ _ _ _ _": [
-    [
-      "carib",
-      1.8000000000000005
-    ]
+    "carib",
+    1.8000000000000005
   ],
   "Caper: _ _ _ _ _": [
-    [
-      "apers",
-      16.0
-    ]
+    "apers",
+    16.0
   ],
   "Gave a hand in bridge, say: _ _ _ _ _": [
-    [
-      "rtner",
-      9.3
-    ]
+    "rtner",
+    9.3
   ],
   "Anonymous person, in slang: _ _ _ _ _": [
-    [
-      "ghost",
-      3.0
-    ]
+    "ghost",
+    3.0
   ],
   "Church official: _ _ _ _ _": [
-    [
-      "lergy",
-      14.5
-    ]
+    "lergy",
+    14.5
   ],
   "Military squad: _ _ _ _ _": [
-    [
-      "plato",
-      5.300000000000002
-    ]
+    "plato",
+    5.300000000000002
   ],
   "Basketball legend Shaquille: _ _ _ _ _": [
-    [
-      "uille",
-      0.5
-    ]
+    "uille",
+    0.5
   ],
   "Put up with: _ _ _ _ _": [
-    [
-      "toler",
-      3.1000000000000014
-    ]
+    "toler",
+    3.1000000000000014
   ],
   "Spanish accent mark: _ _ _ _ _": [
-    [
-      "tilde",
-      3.6
-    ]
+    "tilde",
+    3.6
   ],
   "Thespian: _ _ _ _ _": [
-    [
-      "actor",
-      1.7
-    ]
+    "actor",
+    1.7
   ],
   "Anonymous person, in slang: g h o s t": [
-    [
-      "ghost",
-      4.0
-    ]
+    "ghost",
+    4.0
   ],
   "Military squad: _ _ _ g _": [
-    [
-      "plgmn",
-      0.30000000000000004
-    ]
+    "plgmn",
+    0.30000000000000004
   ],
   "Basketball legend Shaquille: _ _ _ h _": [
-    [
-      "uille",
-      2.0
-    ]
+    "uille",
+    2.0
   ],
   "Put up with: _ _ _ o _": [
-    [
-      "toler",
-      9.799999999999988
-    ]
+    "toler",
+    9.799999999999988
   ],
   "Spanish accent mark: _ _ _ s _": [
-    [
-      "tilde",
-      3.0
-    ]
+    "tilde",
+    3.0
   ],
   "Thespian: _ _ _ t _": [
-    [
-      "actor",
-      3.0
-    ]
+    "actor",
+    3.0
   ],
   "Caper: a p e r s": [
-    [
-      "apers",
-      2.1000000000000005
-    ]
+    "apers",
+    2.1000000000000005
   ],
   "Military squad: _ a _ g _": [
-    [
-      "lague",
-      3.900000000000002
-    ]
+    "lague",
+    3.900000000000002
   ],
   "Basketball legend Shaquille: _ p _ h _": [
-    [
-      "uille",
-      1.0
-    ]
+    "uille",
+    1.0
   ],
   "Put up with: _ e _ o _": [
-    [
-      "ender",
-      3.2
-    ]
+    "ender",
+    3.2
   ],
   "Spanish accent mark: _ r _ s _": [
-    [
-      "acres",
-      3.0000000000000013
-    ]
+    "acres",
+    3.0000000000000013
   ],
   "Thespian: _ s _ t _": [
-    [
-      "riest",
-      3.600000000000002
-    ]
+    "riest",
+    3.600000000000002
   ],
   "___ Rica: _ _ _ _ a": [
-    [
-      "ubica",
-      2.1000000000000005
-    ]
+    "ubica",
+    2.1000000000000005
   ],
   "Caper: _ _ _ _ c": [
-    [
-      "apric",
-      6.3
-    ]
+    "apric",
+    6.3
   ],
   "Gave a hand in bridge, say: _ _ _ _ t": [
-    [
-      "aided",
-      0.2
-    ]
+    "aided",
+    0.2
   ],
   "Anonymous person, in slang: _ _ _ _ o": [
-    [
-      "ghost",
-      3.0
-    ]
+    "ghost",
+    3.0
   ],
   "Church official: _ _ _ _ r": [
-    [
-      "riest",
-      2.0
-    ]
+    "riest",
+    2.0
   ],
   "Thespian: a c t o r": [
-    [
-      "actor",
-      4.5
-    ]
+    "actor",
+    4.5
   ],
   "Caper: a p r i c": [
-    [
-      "apric",
-      5.699999999999996
-    ]
+    "apric",
+    5.699999999999996
   ],
   "Military squad: _ a _ _ _": [
-    [
-      "plato",
-      4.300000000000002
-    ]
+    "plato",
+    4.300000000000002
   ],
   "Basketball legend Shaquille: _ p _ _ _": [
-    [
-      "haqil",
-      2.400000000000001
-    ]
+    "haqil",
+    2.400000000000001
   ],
   "Put up with: _ r _ _ _": [
-    [
-      "tires",
-      2.600000000000001
-    ]
+    "tires",
+    2.600000000000001
   ],
   "Spanish accent mark: _ i _ _ _": [
-    [
-      "tilde",
-      2.5
-    ]
+    "tilde",
+    2.5
   ],
   "___ Rica: _ _ _ t a": [
-    [
-      "razil",
-      1.0
-    ]
+    "razil",
+    1.0
   ],
   "Gave a hand in bridge, say: _ _ _ l t": [
-    [
-      "dealt",
-      2.5
-    ]
+    "dealt",
+    2.5
   ],
   "Anonymous person, in slang: _ _ _ d o": [
-    [
-      "ghost",
-      1.0
-    ]
+    "ghost",
+    1.0
   ],
   "Church official: _ _ _ e r": [
-    [
-      "leric",
-      1.5
-    ]
+    "leric",
+    1.5
   ],
   "Spanish accent mark: t i l d e": [
-    [
-      "tilde",
-      4.2
-    ]
+    "tilde",
+    4.2
   ],
   "Gave a hand in bridge, say: d e a l t": [
-    [
-      "dealt",
-      3.0
-    ]
+    "dealt",
+    3.0
   ],
   "Military squad: _ a d _ _": [
-    [
-      "plads",
-      3.4000000000000017
-    ]
+    "plads",
+    3.4000000000000017
   ],
   "Basketball legend Shaquille: _ p e _ _": [
-    [
-      "shake",
-      0.7
-    ]
+    "shake",
+    0.7
   ],
   "Put up with: _ r a _ _": [
-    [
-      "torea",
-      2.0000000000000004
-    ]
+    "torea",
+    2.0000000000000004
   ],
   "Caper: _ _ _ i c": [
-    [
-      "apric",
-      9.499999999999982
-    ]
+    "apric",
+    9.499999999999982
   ],
   "Military squad: _ _ d _ _": [
-    [
-      "plato",
-      2.2
-    ]
+    "plato",
+    2.2
   ],
   "Basketball legend Shaquille: _ _ e _ _": [
-    [
-      "haqui",
-      3.0000000000000013
-    ]
+    "haqui",
+    3.0000000000000013
   ],
   "Put up with: _ _ a _ _": [
-    [
-      "torea",
-      3.600000000000002
-    ]
+    "torea",
+    3.600000000000002
   ],
   "___ Rica: _ _ t _ a": [
-    [
-      "costa",
-      1.0
-    ]
+    "costa",
+    1.0
   ],
   "Caper: _ _ o _ c": [
-    [
-      "jococ",
-      2.9000000000000012
-    ]
+    "jococ",
+    2.9000000000000012
   ],
   "Gave a hand in bridge, say: _ _ l _ t": [
-    [
-      "rtner",
-      2.5999999999999996
-    ]
+    "rtner",
+    2.5999999999999996
   ],
   "Anonymous person, in slang: _ _ e _ o": [
-    [
-      "ghost",
-      2.5
-    ]
+    "ghost",
+    2.5
   ],
   "Church official: _ _ r _ r": [
-    [
-      "rever",
-      1.5999999999999999
-    ]
+    "rever",
+    1.5999999999999999
   ],
   "Put up with: t o l e r": [
-    [
-      "erate",
-      2.6
-    ]
+    "erate",
+    2.6
   ],
   "Put up with: _ e _ _ _": [
-    [
-      "toler",
-      0.7
-    ]
+    "toler",
+    0.7
   ],
   "Spanish accent mark: _ r _ _ _": [
-    [
-      "tilde",
-      2.5
-    ]
+    "tilde",
+    2.5
   ],
   "Thespian: _ s _ _ _": [
-    [
-      "spian",
-      1.0
-    ]
+    "spian",
+    1.0
   ],
   "___ Rica: _ _ _ t _": [
-    [
-      "hilit",
-      2.1000000000000005
-    ]
+    "hilit",
+    2.1000000000000005
   ],
   "Caper: _ _ _ i _": [
-    [
-      "capri",
-      3.2
-    ]
+    "capri",
+    3.2
   ],
   "Gave a hand in bridge, say: _ _ _ l _": [
-    [
-      "dealt",
-      2.0
-    ]
+    "dealt",
+    2.0
   ],
   "Anonymous person, in slang: _ _ _ d _": [
-    [
-      "ghost",
-      2.0
-    ]
+    "ghost",
+    2.0
   ],
   "Church official: _ _ _ e _": [
-    [
-      "eacon",
-      3.700000000000001
-    ]
+    "eacon",
+    3.700000000000001
   ],
   "Thespian: _ _ t _ _": [
-    [
-      "actor",
-      2.0
-    ]
+    "actor",
+    2.0
   ],
   "___ Rica: _ _ t t _": [
-    [
-      "costa",
-      0.5
-    ]
+    "costa",
+    0.5
   ],
   "Caper: _ _ o i _": [
-    [
-      "caper",
-      1.0
-    ]
+    "caper",
+    1.0
   ],
   "Gave a hand in bridge, say: _ _ l l _": [
-    [
-      "dealt",
-      2.0
-    ]
+    "dealt",
+    2.0
   ],
   "Anonymous person, in slang: _ _ e d _": [
-    [
-      "ghost",
-      1.0
-    ]
+    "ghost",
+    1.0
   ],
   "Church official: _ _ r e _": [
-    [
-      "riest",
-      0.5
-    ]
+    "riest",
+    0.5
   ],
   "___ Rica: _ _ t _ _": [
-    [
-      "chili",
-      1.0
-    ]
+    "chili",
+    1.0
   ],
   "Caper: _ _ o _ _": [
-    [
-      "joker",
-      1.5
-    ]
+    "joker",
+    1.5
   ],
   "Gave a hand in bridge, say: _ _ l _ _": [
-    [
-      "dealt",
-      2.0
-    ]
+    "dealt",
+    2.0
   ],
   "Anonymous person, in slang: _ _ e _ _": [
-    [
-      "johoe",
-      0.30000000000000004
-    ]
+    "johoe",
+    0.30000000000000004
   ],
   "Church official: _ _ r _ _": [
-    [
-      "eacon",
-      3.4000000000000017
-    ]
+    "eacon",
+    3.4000000000000017
   ],
   "Ejects forcefully: _ _ _ _ _": [
-    [
-      "xpels",
-      2.3000000000000007
-    ]
+    "xpels",
+    2.3000000000000007
   ],
   "Violet shade named for a flower: _ _ _ _ _": [
-    [
-      "lilac",
-      3.6000000000000023
-    ]
+    "lilac",
+    3.6000000000000023
   ],
   "Crème de la crème: _ _ _ _ _": [
-    [
-      "cream",
-      2.5
-    ]
+    "cream",
+    2.5
   ],
   "Baker's thirteen: _ _ _ _ _": [
-    [
-      "akers",
-      3.2000000000000015
-    ]
+    "akers",
+    3.2000000000000015
   ],
   "Gaze intently: _ _ _ _ _": [
-    [
-      "stare",
-      3.0
-    ]
+    "stare",
+    3.0
   ],
   "Goes downhill: _ _ _ _ _": [
-    [
-      "deter",
-      2.5
-    ]
+    "deter",
+    2.5
   ],
   "High flier?: _ _ _ _ _": [
-    [
-      "angel",
-      1.5
-    ]
+    "angel",
+    1.5
   ],
   "\"Hamilton\" sister who sings \"Burn\": _ _ _ _ _": [
-    [
-      "inlin",
-      3.3000000000000016
-    ]
+    "inlin",
+    3.3000000000000016
   ],
   "Zero-calorie drink: _ _ _ _ _": [
-    [
-      "seltz",
-      0.4
-    ]
+    "seltz",
+    0.4
   ],
   "Act I, ___ I: _ _ _ _ _": [
-    [
-      "scene",
-      1.5
-    ]
+    "scene",
+    1.5
   ],
   "Crème de la crème: c r e a m": [
-    [
-      "cream",
-      3.5
-    ]
+    "cream",
+    3.5
   ],
   "Goes downhill: _ _ c _ _": [
-    [
-      "cline",
-      3.2000000000000015
-    ]
+    "cline",
+    3.2000000000000015
   ],
   "\"Hamilton\" sister who sings \"Burn\": _ _ e _ _": [
-    [
-      "halse",
-      0.5
-    ]
+    "halse",
+    0.5
   ],
   "Act I, ___ I: _ _ m _ _": [
-    [
-      "scene",
-      1.5
-    ]
+    "scene",
+    1.5
   ],
   "Violet shade named for a flower: l i l a c": [
-    [
-      "lilac",
-      4.0
-    ]
+    "lilac",
+    4.0
   ],
   "Goes downhill: _ l c _ _": [
-    [
-      "cline",
-      3.4000000000000017
-    ]
+    "cline",
+    3.4000000000000017
   ],
   "High flier?: _ i r _ _": [
-    [
-      "airie",
-      0.4
-    ]
+    "airie",
+    0.4
   ],
   "\"Hamilton\" sister who sings \"Burn\": _ l e _ _": [
-    [
-      "licia",
-      1.1
-    ]
+    "licia",
+    1.1
   ],
   "Zero-calorie drink: _ a a _ _": [
-    [
-      "seltz",
-      0.1
-    ]
+    "seltz",
+    0.1
   ],
   "Act I, ___ I: _ c m _ _": [
-    [
-      "scene",
-      1.5
-    ]
+    "scene",
+    1.5
   ],
   "Ejects forcefully: _ a _ _ _": [
-    [
-      "blast",
-      1.5
-    ]
+    "blast",
+    1.5
   ],
   "Baker's thirteen: _ i _ _ _": [
-    [
-      "akers",
-      1.0
-    ]
+    "akers",
+    1.0
   ],
   "Gaze intently: _ e _ _ _": [
-    [
-      "stare",
-      1.0
-    ]
+    "stare",
+    1.0
   ],
   "High flier?: a i r i e": [
-    [
-      "erial",
-      6.5
-    ]
+    "erial",
+    6.5
   ],
   "Gaze intently: s t a r e": [
-    [
-      "stare",
-      4.0
-    ]
+    "stare",
+    4.0
   ],
   "Goes downhill: _ _ c _ s": [
-    [
-      "lines",
-      0.8999999999999999
-    ]
+    "lines",
+    0.8999999999999999
   ],
   "High flier?: _ _ r _ t": [
-    [
-      "rplot",
-      2.9000000000000012
-    ]
+    "rplot",
+    2.9000000000000012
   ],
   "\"Hamilton\" sister who sings \"Burn\": _ _ e _ a": [
-    [
-      "licia",
-      2.0
-    ]
+    "licia",
+    2.0
   ],
   "Zero-calorie drink: _ _ a _ r": [
-    [
-      "ietar",
-      0.9999999999999999
-    ]
+    "ietar",
+    0.9999999999999999
   ],
   "Act I, ___ I: _ _ m _ e": [
-    [
-      "scene",
-      2.0
-    ]
+    "scene",
+    2.0
   ],
   "Violet shade named for a flower: _ n _ _ _": [
-    [
-      "lilac",
-      2.0
-    ]
+    "lilac",
+    2.0
   ],
   "Crème de la crème: _ g _ _ _": [
-    [
-      "cream",
-      2.5
-    ]
+    "cream",
+    2.5
   ],
   "Baker's thirteen: _ e _ _ _": [
-    [
-      "dozen",
-      1.4
-    ]
+    "dozen",
+    1.4
   ],
   "Gaze intently: _ l _ _ _": [
-    [
-      "stare",
-      2.5
-    ]
+    "stare",
+    2.5
   ],
   "High flier?: a n g e l": [
-    [
-      "angel",
-      3.5
-    ]
+    "angel",
+    3.5
   ],
   "Ejects forcefully: _ a _ s _": [
-    [
-      "casts",
-      1.0
-    ]
+    "casts",
+    1.0
   ],
   "Violet shade named for a flower: _ n _ e _": [
-    [
-      "lilac",
-      0.5
-    ]
+    "lilac",
+    0.5
   ],
   "Crème de la crème: _ g _ l _": [
-    [
-      "galil",
-      2.600000000000001
-    ]
+    "galil",
+    2.600000000000001
   ],
   "Baker's thirteen: _ e _ t _": [
-    [
-      "eight",
-      1.5
-    ]
+    "eight",
+    1.5
   ],
   "Gaze intently: _ l _ z _": [
-    [
-      "stare",
-      2.0
-    ]
+    "stare",
+    2.0
   ],
   "Zero-calorie drink: s e l t z": [
-    [
-      "seltz",
-      2.7
-    ]
+    "seltz",
+    2.7
   ],
   "Ejects forcefully: _ a _ _ s": [
-    [
-      "thaws",
-      0.7
-    ]
+    "thaws",
+    0.7
   ],
   "Violet shade named for a flower: _ n _ _ c": [
-    [
-      "uvine",
-      0.8999999999999999
-    ]
+    "uvine",
+    0.8999999999999999
   ],
   "Crème de la crème: _ g _ _ e": [
-    [
-      "cream",
-      1.0
-    ]
+    "cream",
+    1.0
   ],
   "Baker's thirteen: _ e _ _ n": [
-    [
-      "eaden",
-      1.8
-    ]
+    "eaden",
+    1.8
   ],
   "Gaze intently: _ l _ _ e": [
-    [
-      "stare",
-      1.5
-    ]
+    "stare",
+    1.5
   ],
   "Act I, ___ I: s c e n e": [
-    [
-      "scene",
-      4.5
-    ]
+    "scene",
+    4.5
   ],
   "Goes downhill: _ l _ _ _": [
-    [
-      "falls",
-      1.0
-    ]
+    "falls",
+    1.0
   ],
   "High flier?: _ i _ _ _": [
-    [
-      "angel",
-      2.5
-    ]
+    "angel",
+    2.5
   ],
   "\"Hamilton\" sister who sings \"Burn\": _ l _ _ _": [
-    [
-      "licia",
-      1.0
-    ]
+    "licia",
+    1.0
   ],
   "Zero-calorie drink: _ a _ _ _": [
-    [
-      "seltz",
-      0.7
-    ]
+    "seltz",
+    0.7
   ],
   "Act I, ___ I: _ c _ _ _": [
-    [
-      "scene",
-      3.0
-    ]
+    "scene",
+    3.0
   ],
   "Goes downhill: _ l _ _ s": [
-    [
-      "slows",
-      1.2
-    ]
+    "slows",
+    1.2
   ],
   "High flier?: _ i _ _ t": [
-    [
-      "itude",
-      3.600000000000002
-    ]
+    "itude",
+    3.600000000000002
   ],
   "\"Hamilton\" sister who sings \"Burn\": _ l _ _ a": [
-    [
-      "licia",
-      4.500000000000002
-    ]
+    "licia",
+    4.500000000000002
   ],
   "Act I, ___ I: _ c _ _ e": [
-    [
-      "scene",
-      4.0
-    ]
+    "scene",
+    4.0
   ],
   "Ejects forcefully: _ _ _ _ s": [
-    [
-      "kicks",
-      1.5
-    ]
+    "kicks",
+    1.5
   ],
   "Crème de la crème: _ _ _ _ e": [
-    [
-      "cream",
-      1.5
-    ]
+    "cream",
+    1.5
   ],
   "Baker's thirteen: _ _ _ _ n": [
-    [
-      "rains",
-      1.1
-    ]
+    "rains",
+    1.1
   ],
   "Zero-calorie drink: _ a _ _ r": [
-    [
-      "iater",
-      2.600000000000001
-    ]
+    "iater",
+    2.600000000000001
   ],
   "Ejects forcefully: _ _ _ i s": [
-    [
-      "kicks",
-      2.5
-    ]
+    "kicks",
+    2.5
   ],
   "Crème de la crème: _ _ _ t e": [
-    [
-      "elite",
-      2.0
-    ]
+    "elite",
+    2.0
   ],
   "Baker's thirteen: _ _ _ e n": [
-    [
-      "baker",
-      2.1
-    ]
+    "baker",
+    2.1
   ],
   "Zero-calorie drink: i a t e r": [
-    [
-      "tater",
-      0.2
-    ]
+    "tater",
+    0.2
   ],
   "Gaze intently: _ _ _ _ e": [
-    [
-      "stare",
-      1.5
-    ]
+    "stare",
+    1.5
   ],
   "Ejects forcefully: k i c k s": [
-    [
-      "kicks",
-      2.0
-    ]
+    "kicks",
+    2.0
   ],
   "Goes downhill: k l _ _ _": [
-    [
-      "klutz",
-      1.7000000000000002
-    ]
+    "klutz",
+    1.7000000000000002
   ],
   "High flier?: i i _ _ _": [
-    [
-      "iisac",
-      2.800000000000001
-    ]
+    "iisac",
+    2.800000000000001
   ],
   "\"Hamilton\" sister who sings \"Burn\": c l _ _ _": [
-    [
-      "nthia",
-      2.700000000000001
-    ]
+    "nthia",
+    2.700000000000001
   ],
   "Zero-calorie drink: k a _ _ _": [
-    [
-      "kafir",
-      2.3000000000000007
-    ]
+    "kafir",
+    2.3000000000000007
   ],
   "Goes downhill: _ _ _ _ s": [
-    [
-      "slows",
-      1.5
-    ]
+    "slows",
+    1.5
   ],
   "High flier?: _ _ _ _ t": [
-    [
-      "aglet",
-      2.9000000000000004
-    ]
+    "aglet",
+    2.9000000000000004
   ],
   "\"Hamilton\" sister who sings \"Burn\": _ _ _ _ a": [
-    [
-      "licia",
-      4.1
-    ]
+    "licia",
+    4.1
   ],
   "Zero-calorie drink: _ _ _ _ r": [
-    [
-      "dietr",
-      3.5000000000000018
-    ]
+    "dietr",
+    3.5000000000000018
   ],
   "Act I, ___ I: _ _ _ _ e": [
-    [
-      "scene",
-      4.0
-    ]
+    "scene",
+    4.0
   ],
   "Violet shade named for a flower: _ _ _ _ c": [
-    [
-      "lilac",
-      3.800000000000001
-    ]
+    "lilac",
+    3.800000000000001
   ],
   "Ejects forcefully: _ _ l _ s": [
-    [
-      "xpels",
-      1.1
-    ]
+    "xpels",
+    1.1
   ],
   "Violet shade named for a flower: _ _ i _ c": [
-    [
-      "lilac",
-      2.0
-    ]
+    "lilac",
+    2.0
   ],
   "Crème de la crème: _ _ c _ e": [
-    [
-      "cream",
-      2.0
-    ]
+    "cream",
+    2.0
   ],
   "Baker's thirteen: _ _ i _ n": [
-    [
-      "scuit",
-      1.0
-    ]
+    "scuit",
+    1.0
   ],
   "\"Hamilton\" sister who sings \"Burn\": l i c i a": [
-    [
-      "licia",
-      2.6
-    ]
+    "licia",
+    2.6
   ],
   "Goes downhill: k _ _ _ s": [
-    [
-      "kicks",
-      1.5
-    ]
+    "kicks",
+    1.5
   ],
   "High flier?: i _ _ _ t": [
-    [
-      "idiot",
-      1.0
-    ]
+    "idiot",
+    1.0
   ],
   "\"Hamilton\" sister who sings \"Burn\": c _ _ _ a": [
-    [
-      "licia",
-      2.800000000000001
-    ]
+    "licia",
+    2.800000000000001
   ],
   "Zero-calorie drink: k _ _ _ r": [
-    [
-      "soker",
-      1.8000000000000005
-    ]
+    "soker",
+    1.8000000000000005
   ],
   "Ejects forcefully: _ _ _ i _": [
-    [
-      "threw",
-      1.5
-    ]
+    "threw",
+    1.5
   ],
   "Crème de la crème: _ _ _ t _": [
-    [
-      "cream",
-      1.5
-    ]
+    "cream",
+    1.5
   ],
   "Baker's thirteen: _ _ _ e _": [
-    [
-      "knife",
-      1.0
-    ]
+    "knife",
+    1.0
   ],
   "Ejects forcefully: _ _ l _ _": [
-    [
-      "expel",
-      1.0
-    ]
+    "expel",
+    1.0
   ],
   "Violet shade named for a flower: _ _ i _ _": [
-    [
-      "ilias",
-      2.3000000000000007
-    ]
+    "ilias",
+    2.3000000000000007
   ],
   "Crème de la crème: _ _ c _ _": [
-    [
-      "cream",
-      4.0
-    ]
+    "cream",
+    4.0
   ],
   "Baker's thirteen: _ _ i _ _": [
-    [
-      "akers",
-      17.0
-    ]
+    "akers",
+    17.0
   ],
   "Ejects forcefully: _ _ _ s s": [
-    [
-      "esses",
-      2.1000000000000005
-    ]
+    "esses",
+    2.1000000000000005
   ],
   "Violet shade named for a flower: _ _ _ e c": [
-    [
-      "ilace",
-      2.2
-    ]
+    "ilace",
+    2.2
   ],
   "Crème de la crème: _ _ _ l e": [
-    [
-      "elite",
-      3.0
-    ]
+    "elite",
+    3.0
   ],
   "Baker's thirteen: _ _ _ t n": [
-    [
-      "teeth",
-      1.0
-    ]
+    "teeth",
+    1.0
   ],
   "Gaze intently: _ _ _ z e": [
-    [
-      "stare",
-      3.0
-    ]
+    "stare",
+    3.0
   ],
   "Goes downhill: k _ _ _ _": [
-    [
-      "knock",
-      3.5000000000000018
-    ]
+    "knock",
+    3.5000000000000018
   ],
   "High flier?: i _ _ _ _": [
-    [
-      "islet",
-      1.6
-    ]
+    "islet",
+    1.6
   ],
   "\"Hamilton\" sister who sings \"Burn\": c _ _ _ _": [
-    [
-      "carly",
-      0.5
-    ]
+    "carly",
+    0.5
   ],
   "Zero-calorie drink: k _ _ _ _": [
-    [
-      "olaid",
-      1.2
-    ]
+    "olaid",
+    1.2
   ],
   "Painter's protective garment: _ _ _ _ _": [
-    [
-      "veral",
-      2.3000000000000007
-    ]
+    "veral",
+    2.3000000000000007
   ],
   "\"Toy Story 5\" studio: _ _ _ _ _": [
-    [
-      "pixar",
-      4.0
-    ]
+    "pixar",
+    4.0
   ],
   "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: _ _ _ _ _": [
-    [
-      "place",
-      0.5
-    ]
+    "place",
+    0.5
   ],
   "Tennis star Rafael: _ _ _ _ _": [
-    [
-      "nadal",
-      2.1
-    ]
+    "nadal",
+    2.1
   ],
   "Solemn sound from a church bell: _ _ _ _ _": [
-    [
-      "peals",
-      1.0
-    ]
+    "peals",
+    1.0
   ],
   "Defeat soundly, in slang: _ _ _ _ _": [
-    [
-      "smack",
-      1.0
-    ]
+    "smack",
+    1.0
   ],
   "Italian city with a fashion week: _ _ _ _ _": [
-    [
-      "milan",
-      4.5
-    ]
+    "milan",
+    4.5
   ],
   "Iron ___ (rust): _ _ _ _ _": [
-    [
-      "rusts",
-      0.5
-    ]
+    "rusts",
+    0.5
   ],
   "Small group of conspirators: _ _ _ _ _": [
-    [
-      "cabal",
-      3.5
-    ]
+    "cabal",
+    3.5
   ],
   "Food for a baleen whale: _ _ _ _ _": [
-    [
-      "krill",
-      2.5
-    ]
+    "krill",
+    2.5
   ],
   "Painter's protective garment: _ m _ _ _": [
-    [
-      "apron",
-      3.0
-    ]
+    "apron",
+    3.0
   ],
   "\"Toy Story 5\" studio: _ i _ _ _": [
-    [
-      "pixar",
-      4.0
-    ]
+    "pixar",
+    4.0
   ],
   "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: _ l _ _ _": [
-    [
-      "homed",
-      0.8999999999999999
-    ]
+    "homed",
+    0.8999999999999999
   ],
   "Tennis star Rafael: _ a _ _ _": [
-    [
-      "nadal",
-      2.0
-    ]
+    "nadal",
+    2.0
   ],
   "Solemn sound from a church bell: _ n _ _ _": [
-    [
-      "clang",
-      1.0
-    ]
+    "clang",
+    1.0
   ],
   "Italian city with a fashion week: m i l a n": [
-    [
-      "milan",
-      4.5
-    ]
+    "milan",
+    4.5
   ],
   "\"Toy Story 5\" studio: p i x a r": [
-    [
-      "pixar",
-      5.0
-    ]
+    "pixar",
+    5.0
   ],
   "Defeat soundly, in slang: _ p _ _ _": [
-    [
-      "whomp",
-      1.0
-    ]
+    "whomp",
+    1.0
   ],
   "Iron ___ (rust): _ x _ _ _": [
-    [
-      "xides",
-      3.1000000000000014
-    ]
+    "xides",
+    3.1000000000000014
   ],
   "Small group of conspirators: _ a _ _ _": [
-    [
-      "cabal",
-      2.2
-    ]
+    "cabal",
+    2.2
   ],
   "Food for a baleen whale: _ r _ _ _": [
-    [
-      "krill",
-      3.0
-    ]
+    "krill",
+    3.0
   ],
   "Painter's protective garment: _ m _ _ k": [
-    [
-      "apron",
-      1.5
-    ]
+    "apron",
+    1.5
   ],
   "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: _ l _ _ i": [
-    [
-      "homei",
-      3.1000000000000014
-    ]
+    "homei",
+    3.1000000000000014
   ],
   "Tennis star Rafael: _ a _ _ l": [
-    [
-      "nadal",
-      3.0
-    ]
+    "nadal",
+    3.0
   ],
   "Solemn sound from a church bell: _ n _ _ l": [
-    [
-      "tonal",
-      1.5
-    ]
+    "tonal",
+    1.5
   ],
   "Food for a baleen whale: k r i l l": [
-    [
-      "krill",
-      4.0
-    ]
+    "krill",
+    4.0
   ],
   "Tennis star Rafael: n a d a l": [
-    [
-      "nadal",
-      3.0
-    ]
+    "nadal",
+    3.0
   ],
   "Defeat soundly, in slang: _ p _ n _": [
-    [
-      "whomp",
-      0.5
-    ]
+    "whomp",
+    0.5
   ],
   "Iron ___ (rust): _ x _ d _": [
-    [
-      "xides",
-      0.5
-    ]
+    "xides",
+    0.5
   ],
   "Small group of conspirators: _ a _ a _": [
-    [
-      "cabal",
-      2.5
-    ]
+    "cabal",
+    2.5
   ],
   "Painter's protective garment: _ m _ c _": [
-    [
-      "apron",
-      1.0
-    ]
+    "apron",
+    1.0
   ],
   "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: _ l _ b _": [
-    [
-      "where",
-      1.0
-    ]
+    "where",
+    1.0
   ],
   "Tennis star Rafael: _ a _ a _": [
-    [
-      "nadal",
-      3.5
-    ]
+    "nadal",
+    3.5
   ],
   "Solemn sound from a church bell: _ n _ l _": [
-    [
-      "tonal",
-      1.2
-    ]
+    "tonal",
+    1.2
   ],
   "Small group of conspirators: c a b a l": [
-    [
-      "cabal",
-      5.0
-    ]
+    "cabal",
+    5.0
   ],
   "Food for a baleen whale: _ r _ l _": [
-    [
-      "krill",
-      3.0
-    ]
+    "krill",
+    3.0
   ],
   "\"Toy Story 5\" studio: _ i _ _ r": [
-    [
-      "pixar",
-      4.0
-    ]
+    "pixar",
+    4.0
   ],
   "Defeat soundly, in slang: _ _ _ n _": [
-    [
-      "whomp",
-      0.5
-    ]
+    "whomp",
+    0.5
   ],
   "Iron ___ (rust): _ _ _ d _": [
-    [
-      "usted",
-      4.0
-    ]
+    "usted",
+    4.0
   ],
   "Small group of conspirators: _ _ _ a _": [
-    [
-      "cabal",
-      2.0
-    ]
+    "cabal",
+    2.0
   ],
   "\"Toy Story 5\" studio: _ i _ a _": [
-    [
-      "pixar",
-      3.0
-    ]
+    "pixar",
+    3.0
   ],
   "Food for a baleen whale: _ _ _ l _": [
-    [
-      "krill",
-      2.5
-    ]
+    "krill",
+    2.5
   ],
   "Painter's protective garment: s m _ _ _": [
-    [
-      "smock",
-      3.5
-    ]
+    "smock",
+    3.5
   ],
   "\"Toy Story 5\" studio: m i _ _ _": [
-    [
-      "pixar",
-      4.0
-    ]
+    "pixar",
+    4.0
   ],
   "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: a l _ _ _": [
-    [
-      "alibi",
-      4.0
-    ]
+    "alibi",
+    4.0
   ],
   "Tennis star Rafael: c a _ _ _": [
-    [
-      "nadal",
-      2.5
-    ]
+    "nadal",
+    2.5
   ],
   "Solemn sound from a church bell: k n _ _ _": [
-    [
-      "knell",
-      4.5
-    ]
+    "knell",
+    4.5
   ],
   "Defeat soundly, in slang: s m a c k": [
-    [
-      "smack",
-      3.0
-    ]
+    "smack",
+    3.0
   ],
   "Painter's protective garment: s m o c k": [
-    [
-      "smock",
-      4.5
-    ]
+    "smock",
+    4.5
   ],
   "Iron ___ (rust): o _ _ _ _": [
-    [
-      "oxide",
-      4.200000000000001
-    ]
+    "oxide",
+    4.200000000000001
   ],
   "Small group of conspirators: c _ _ _ _": [
-    [
-      "lique",
-      10.0
-    ]
+    "lique",
+    10.0
   ],
   "Food for a baleen whale: k _ _ _ _": [
-    [
-      "krill",
-      3.0
-    ]
+    "krill",
+    3.0
   ],
   "Solemn sound from a church bell: k n e l l": [
-    [
-      "knell",
-      5.0
-    ]
+    "knell",
+    5.0
   ],
   "Iron ___ (rust): o _ _ _ e": [
-    [
-      "oxide",
-      2.5
-    ]
+    "oxide",
+    2.5
   ],
   "Small group of conspirators: c _ _ _ l": [
-    [
-      "cabin",
-      1.8000000000000005
-    ]
+    "cabin",
+    1.8000000000000005
   ],
   "Food for a baleen whale: k _ _ _ l": [
-    [
-      "krill",
-      3.5
-    ]
+    "krill",
+    3.5
   ],
   "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: a l i b i": [
-    [
-      "alibi",
-      2.6
-    ]
+    "alibi",
+    2.6
   ],
   "Iron ___ (rust): o _ i _ e": [
-    [
-      "oxide",
-      4.0
-    ]
+    "oxide",
+    4.0
   ],
   "Small group of conspirators: c _ b _ l": [
-    [
-      "cabal",
-      2.5
-    ]
+    "cabal",
+    2.5
   ],
   "Food for a baleen whale: k _ i _ l": [
-    [
-      "krill",
-      4.5
-    ]
+    "krill",
+    4.5
   ],
   "Iron ___ (rust): o _ i _ _": [
-    [
-      "oxide",
-      2.7
-    ]
+    "oxide",
+    2.7
   ],
   "Small group of conspirators: c _ b _ _": [
-    [
-      "cabal",
-      3.0
-    ]
+    "cabal",
+    3.0
   ],
   "Food for a baleen whale: k _ i _ _": [
-    [
-      "krill",
-      2.5
-    ]
+    "krill",
+    2.5
   ],
   "Iron ___ (rust): _ _ _ _ e": [
-    [
-      "usted",
-      1.0
-    ]
+    "usted",
+    1.0
   ],
   "Small group of conspirators: _ _ _ _ l": [
-    [
-      "cabal",
-      1.0
-    ]
+    "cabal",
+    1.0
   ],
   "Food for a baleen whale: _ _ _ _ l": [
-    [
-      "krill",
-      2.5
-    ]
+    "krill",
+    2.5
   ],
   "Iron ___ (rust): _ _ i _ e": [
-    [
-      "ustie",
-      3.000000000000001
-    ]
+    "ustie",
+    3.000000000000001
   ],
   "Small group of conspirators: _ _ b _ l": [
-    [
-      "cabal",
-      3.0
-    ]
+    "cabal",
+    3.0
   ],
   "Food for a baleen whale: _ _ i _ l": [
-    [
-      "krill",
-      2.5
-    ]
+    "krill",
+    2.5
   ],
   "Iron ___ (rust): _ _ i _ _": [
-    [
-      "rusty",
-      0.5
-    ]
+    "rusty",
+    0.5
   ],
   "Small group of conspirators: _ _ b _ _": [
-    [
-      "cabin",
-      1.7
-    ]
+    "cabin",
+    1.7
   ],
   "Food for a baleen whale: _ _ i _ _": [
-    [
-      "krill",
-      2.5
-    ]
+    "krill",
+    2.5
   ],
   "Italian city with a fashion week: _ i _ _ _": [
-    [
-      "milan",
-      4.5
-    ]
+    "milan",
+    4.5
   ],
   "Painter's protective garment: _ _ _ _ k": [
-    [
-      "smock",
-      0.5
-    ]
+    "smock",
+    0.5
   ],
   "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: _ _ _ _ i": [
-    [
-      "honey",
-      1.2
-    ]
+    "honey",
+    1.2
   ],
   "Tennis star Rafael: _ _ _ _ l": [
-    [
-      "nadal",
-      3.5
-    ]
+    "nadal",
+    3.5
   ],
   "Solemn sound from a church bell: _ _ _ _ l": [
-    [
-      "swell",
-      0.5
-    ]
+    "swell",
+    0.5
   ],
   "Italian city with a fashion week: _ i _ a _": [
-    [
-      "milan",
-      4.0
-    ]
+    "milan",
+    4.0
   ],
   "Defeat soundly, in slang: s p _ n _": [
-    [
-      "spank",
-      3.0
-    ]
+    "spank",
+    3.0
   ],
   "Italian city with a fashion week: m i _ a _": [
-    [
-      "milan",
-      4.0
-    ]
+    "milan",
+    4.0
   ],
   "Iron ___ (rust): o x _ d _": [
-    [
-      "xides",
-      3.6
-    ]
+    "xides",
+    3.6
   ],
   "Small group of conspirators: c a _ a _": [
-    [
-      "cabal",
-      2.5
-    ]
+    "cabal",
+    2.5
   ],
   "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: a l _ _ i": [
-    [
-      "alibi",
-      3.5
-    ]
+    "alibi",
+    3.5
   ],
   "Solemn sound from a church bell: k n _ _ l": [
-    [
-      "knell",
-      3.5
-    ]
+    "knell",
+    3.5
   ],
   "Defeat soundly, in slang: s p a n k": [
-    [
-      "anked",
-      1.5
-    ]
+    "anked",
+    1.5
   ],
   "Iron ___ (rust): o x _ d e": [
-    [
-      "oxide",
-      4.0
-    ]
+    "oxide",
+    4.0
   ],
   "Small group of conspirators: c a _ a l": [
-    [
-      "cabal",
-      4.0
-    ]
+    "cabal",
+    4.0
   ],
   "Shapes of some gummy candies: _ _ _ _ _": [
-    [
-      "beads",
-      3.300000000000001
-    ]
+    "beads",
+    3.300000000000001
   ],
   "\"See you all later\": _ _ _ _ _": [
-    [
-      "yeall",
-      2.1000000000000005
-    ]
+    "yeall",
+    2.1000000000000005
   ],
   "Sweetness or sourness: _ _ _ _ _": [
-    [
-      "taste",
-      2.5
-    ]
+    "taste",
+    2.5
   ],
   "Sound from a baby bird: _ _ _ _ _": [
-    [
-      "cheep",
-      2.5
-    ]
+    "cheep",
+    2.5
   ],
   "They work around the clock: _ _ _ _ _": [
-    [
-      "night",
-      2.7
-    ]
+    "night",
+    2.7
   ],
   "Broomstick rider: _ _ _ _ _": [
-    [
-      "witch",
-      1.5
-    ]
+    "witch",
+    1.5
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ _ _ _": [
-    [
-      "omaha",
-      4.000000000000002
-    ]
+    "omaha",
+    4.000000000000002
   ],
   "Nevada senator Jacky: _ _ _ _ _": [
-    [
-      "roser",
-      0.9
-    ]
+    "roser",
+    0.9
   ],
   "Unable to be heard, on a Zoom call: _ _ _ _ _": [
-    [
-      "muted",
-      3.0
-    ]
+    "muted",
+    3.0
   ],
   "Bits of choreography: _ _ _ _ _": [
-    [
-      "steps",
-      3.5
-    ]
+    "steps",
+    3.5
   ],
   "Shapes of some gummy candies: _ _ _ _ s": [
-    [
-      "bears",
-      1.5
-    ]
+    "bears",
+    1.5
   ],
   "\"See you all later\": _ _ _ _ t": [
-    [
-      "byett",
-      2.500000000000001
-    ]
+    "byett",
+    2.500000000000001
   ],
   "Sweetness or sourness: _ _ _ _ e": [
-    [
-      "taste",
-      3.5
-    ]
+    "taste",
+    3.5
   ],
   "Sound from a baby bird: _ _ _ _ p": [
-    [
-      "peeps",
-      2.5
-    ]
+    "peeps",
+    2.5
   ],
   "They work around the clock: _ _ _ _ s": [
-    [
-      "ights",
-      1.0
-    ]
+    "ights",
+    1.0
   ],
   "Bits of choreography: s t e p s": [
-    [
-      "steps",
-      4.5
-    ]
+    "steps",
+    4.5
   ],
   "Shapes of some gummy candies: _ _ _ m s": [
-    [
-      "rcums",
-      3.4000000000000017
-    ]
+    "rcums",
+    3.4000000000000017
   ],
   "\"See you all later\": _ _ _ u t": [
-    [
-      "until",
-      2.5
-    ]
+    "until",
+    2.5
   ],
   "Sweetness or sourness: _ _ _ t e": [
-    [
-      "taste",
-      3.5
-    ]
+    "taste",
+    3.5
   ],
   "Sound from a baby bird: _ _ _ e p": [
-    [
-      "peeps",
-      4.0
-    ]
+    "peeps",
+    4.0
   ],
   "They work around the clock: _ _ _ d s": [
-    [
-      "ights",
-      2.0
-    ]
+    "ights",
+    2.0
   ],
   "Unable to be heard, on a Zoom call: m u t e d": [
-    [
-      "muted",
-      3.2
-    ]
+    "muted",
+    3.2
   ],
   "Sweetness or sourness: t a s t e": [
-    [
-      "taste",
-      3.800000000000001
-    ]
+    "taste",
+    3.800000000000001
   ],
   "Broomstick rider: _ _ t _ _": [
-    [
-      "witch",
-      3.0
-    ]
+    "witch",
+    3.0
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ a _ _": [
-    [
-      "omaha",
-      3.5
-    ]
+    "omaha",
+    3.5
   ],
   "Nevada senator Jacky: _ _ s _ _": [
-    [
-      "rosen",
-      1.2
-    ]
+    "rosen",
+    1.2
   ],
   "Shapes of some gummy candies: r c u m s": [
-    [
-      "cubes",
-      1.0
-    ]
+    "cubes",
+    1.0
   ],
   "Broomstick rider: r _ t _ _": [
-    [
-      "witch",
-      0.7
-    ]
+    "witch",
+    0.7
   ],
   "The Oracle of ___, nickname for Warren Buffett: c _ a _ _": [
-    [
-      "actus",
-      3.3000000000000016
-    ]
+    "actus",
+    3.3000000000000016
   ],
   "Nevada senator Jacky: u _ s _ _": [
-    [
-      "usons",
-      3.1000000000000014
-    ]
+    "usons",
+    3.1000000000000014
   ],
   "Broomstick rider: r _ _ _ _": [
-    [
-      "witch",
-      2.1
-    ]
+    "witch",
+    2.1
   ],
   "The Oracle of ___, nickname for Warren Buffett: c _ _ _ _": [
-    [
-      "omaha",
-      4.200000000000001
-    ]
+    "omaha",
+    4.200000000000001
   ],
   "Nevada senator Jacky: u _ _ _ _": [
-    [
-      "uihui",
-      2.2000000000000006
-    ]
+    "uihui",
+    2.2000000000000006
   ],
   "Shapes of some gummy candies: _ o _ _ s": [
-    [
-      "circs",
-      3.1000000000000014
-    ]
+    "circs",
+    3.1000000000000014
   ],
   "\"See you all later\": _ m _ _ t": [
-    [
-      "emomt",
-      0.1
-    ]
+    "emomt",
+    0.1
   ],
   "Sweetness or sourness: _ a _ _ e": [
-    [
-      "taste",
-      3.0
-    ]
+    "taste",
+    3.0
   ],
   "Sound from a baby bird: _ h _ _ p": [
-    [
-      "cheep",
-      3.5
-    ]
+    "cheep",
+    3.5
   ],
   "They work around the clock: _ a _ _ s": [
-    [
-      "ights",
-      2.0
-    ]
+    "ights",
+    2.0
   ],
   "The Oracle of ___, nickname for Warren Buffett: o m a h a": [
-    [
-      "omaha",
-      3.5
-    ]
+    "omaha",
+    3.5
   ],
   "Shapes of some gummy candies: w o _ _ s": [
-    [
-      "worms",
-      2.5
-    ]
+    "worms",
+    2.5
   ],
   "\"See you all later\": i m _ _ t": [
-    [
-      "until",
-      1.0
-    ]
+    "until",
+    1.0
   ],
   "Sweetness or sourness: t a _ _ e": [
-    [
-      "taste",
-      3.0
-    ]
+    "taste",
+    3.0
   ],
   "Sound from a baby bird: c h _ _ p": [
-    [
-      "cheep",
-      2.5
-    ]
+    "cheep",
+    2.5
   ],
   "They work around the clock: h a _ _ s": [
-    [
-      "hands",
-      3.5
-    ]
+    "hands",
+    3.5
   ],
   "Broomstick rider: w i t c h": [
-    [
-      "witch",
-      5.0
-    ]
+    "witch",
+    5.0
   ],
   "Unable to be heard, on a Zoom call: _ _ t _ _": [
-    [
-      "muted",
-      3.0
-    ]
+    "muted",
+    3.0
   ],
   "Shapes of some gummy candies: w o r m s": [
-    [
-      "worms",
-      2.5
-    ]
+    "worms",
+    2.5
   ],
   "Nevada senator Jacky: r _ s _ _": [
-    [
-      "reeds",
-      3.3000000000000016
-    ]
+    "reeds",
+    3.3000000000000016
   ],
   "Unable to be heard, on a Zoom call: m _ t _ _": [
-    [
-      "muted",
-      3.0
-    ]
+    "muted",
+    3.0
   ],
   "They work around the clock: h a n d s": [
-    [
-      "hands",
-      4.0
-    ]
+    "hands",
+    4.0
   ],
   "Nevada senator Jacky: r _ s _ n": [
-    [
-      "reyns",
-      5.299999999999997
-    ]
+    "reyns",
+    5.299999999999997
   ],
   "Unable to be heard, on a Zoom call: m _ t _ d": [
-    [
-      "muted",
-      2.5
-    ]
+    "muted",
+    2.5
   ],
   "Sound from a baby bird: c h e e p": [
-    [
-      "cheep",
-      4.5
-    ]
+    "cheep",
+    4.5
   ],
   "Nevada senator Jacky: r _ s e n": [
-    [
-      "reese",
-      2.5
-    ]
+    "reese",
+    2.5
   ],
   "Unable to be heard, on a Zoom call: m _ t e d": [
-    [
-      "muted",
-      4.5
-    ]
+    "muted",
+    4.5
   ],
   "Nevada senator Jacky: r _ s e _": [
-    [
-      "rosen",
-      1.0
-    ]
+    "rosen",
+    1.0
   ],
   "Unable to be heard, on a Zoom call: m _ t e _": [
-    [
-      "muted",
-      1.0
-    ]
+    "muted",
+    1.0
   ],
   "Nevada senator Jacky: _ _ s e _": [
-    [
-      "rosen",
-      1.2
-    ]
+    "rosen",
+    1.2
   ],
   "Unable to be heard, on a Zoom call: _ _ t e _": [
-    [
-      "muted",
-      1.0
-    ]
+    "muted",
+    1.0
   ],
   "Nevada senator Jacky: _ _ s e n": [
-    [
-      "rosen",
-      1.0
-    ]
+    "rosen",
+    1.0
   ],
   "Unable to be heard, on a Zoom call: _ _ t e d": [
-    [
-      "muted",
-      3.0
-    ]
+    "muted",
+    3.0
   ],
   "Nevada senator Jacky: _ _ s _ n": [
-    [
-      "ensen",
-      3.4000000000000017
-    ]
+    "ensen",
+    3.4000000000000017
   ],
   "Unable to be heard, on a Zoom call: _ _ t _ d": [
-    [
-      "muted",
-      3.2
-    ]
+    "muted",
+    3.2
   ],
   "Nevada senator Jacky: _ _ _ _ n": [
-    [
-      "osten",
-      3.4000000000000017
-    ]
+    "osten",
+    3.4000000000000017
   ],
   "Unable to be heard, on a Zoom call: _ _ _ _ d": [
-    [
-      "muted",
-      2.5
-    ]
+    "muted",
+    2.5
   ],
   "Nevada senator Jacky: r _ _ _ n": [
-    [
-      "eynan",
-      3.2000000000000015
-    ]
+    "eynan",
+    3.2000000000000015
   ],
   "Unable to be heard, on a Zoom call: m _ _ _ d": [
-    [
-      "muted",
-      3.0
-    ]
+    "muted",
+    3.0
   ],
   "Nevada senator Jacky: r _ _ e n": [
-    [
-      "rohen",
-      0.1
-    ]
+    "rohen",
+    0.1
   ],
   "Unable to be heard, on a Zoom call: m _ _ e d": [
-    [
-      "muted",
-      3.0
-    ]
+    "muted",
+    3.0
   ],
   "Nevada senator Jacky: _ _ _ e n": [
-    [
-      "jacky",
-      1.1
-    ]
+    "jacky",
+    1.1
   ],
   "Unable to be heard, on a Zoom call: _ _ _ e d": [
-    [
-      "muted",
-      2.5
-    ]
+    "muted",
+    2.5
   ],
   "Nevada senator Jacky: r _ _ _ _": [
-    [
-      "rosen",
-      0.4
-    ]
+    "rosen",
+    0.4
   ],
   "Unable to be heard, on a Zoom call: m _ _ _ _": [
-    [
-      "muted",
-      3.3
-    ]
+    "muted",
+    3.3
   ],
   "Nevada senator Jacky: r _ _ e _": [
-    [
-      "reese",
-      2.5
-    ]
+    "reese",
+    2.5
   ],
   "Unable to be heard, on a Zoom call: m _ _ e _": [
-    [
-      "muted",
-      1.0
-    ]
+    "muted",
+    1.0
   ],
   "Nevada senator Jacky: _ _ _ e _": [
-    [
-      "rosen",
-      1.0
-    ]
+    "rosen",
+    1.0
   ],
   "Unable to be heard, on a Zoom call: _ _ _ e _": [
-    [
-      "muted",
-      2.0
-    ]
+    "muted",
+    2.0
   ],
   "Broomstick rider: _ _ t c _": [
-    [
-      "witch",
-      3.0
-    ]
+    "witch",
+    3.0
   ],
   "Shapes of some gummy candies: _ o _ m s": [
-    [
-      "rcums",
-      3.4000000000000017
-    ]
+    "rcums",
+    3.4000000000000017
   ],
   "\"See you all later\": _ m _ u t": [
-    [
-      "adieu",
-      1.5
-    ]
+    "adieu",
+    1.5
   ],
   "They work around the clock: _ a _ d s": [
-    [
-      "ights",
-      3.5
-    ]
+    "ights",
+    3.5
   ],
   "Broomstick rider: _ _ _ c _": [
-    [
-      "witch",
-      4.0
-    ]
+    "witch",
+    4.0
   ],
   "Sweetness or sourness: _ a _ t e": [
-    [
-      "taste",
-      3.5
-    ]
+    "taste",
+    3.5
   ],
   "Shapes of some gummy candies: w _ _ _ s": [
-    [
-      "worms",
-      3.0
-    ]
+    "worms",
+    3.0
   ],
   "Sound from a baby bird: c _ _ _ p": [
-    [
-      "cheep",
-      3.5
-    ]
+    "cheep",
+    3.5
   ],
   "They work around the clock: h _ _ _ s": [
-    [
-      "hours",
-      2.5
-    ]
+    "hours",
+    2.5
   ],
   "Shapes of some gummy candies: w _ r _ s": [
-    [
-      "worms",
-      9.3
-    ]
+    "worms",
+    9.3
   ],
   "\"See you all later\": i _ o _ t": [
-    [
-      "outit",
-      2.3000000000000007
-    ]
+    "outit",
+    2.3000000000000007
   ],
   "Sound from a baby bird: c _ e _ p": [
-    [
-      "cheep",
-      4.0
-    ]
+    "cheep",
+    4.0
   ],
   "They work around the clock: h _ n _ s": [
-    [
-      "enrys",
-      1.5
-    ]
+    "enrys",
+    1.5
   ],
   "Nevada senator Jacky: r o s e n": [
-    [
-      "rosen",
-      2.1
-    ]
+    "rosen",
+    2.1
   ],
   "The Oracle of ___, nickname for Warren Buffett: o _ a _ _": [
-    [
-      "omaha",
-      5.900000000000002
-    ]
+    "omaha",
+    5.900000000000002
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ a h _": [
-    [
-      "omaha",
-      3.5
-    ]
+    "omaha",
+    3.5
   ],
   "They work around the clock: h o u r s": [
-    [
-      "hours",
-      3.5
-    ]
+    "hours",
+    3.5
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ a _ o": [
-    [
-      "omaha",
-      3.0
-    ]
+    "omaha",
+    3.0
   ],
   "Nevada senator Jacky: _ _ s _ u": [
-    [
-      "reeds",
-      3.3000000000000016
-    ]
+    "reeds",
+    3.3000000000000016
   ],
   "Unable to be heard, on a Zoom call: _ _ t _ r": [
-    [
-      "muted",
-      3.5
-    ]
+    "muted",
+    3.5
   ],
   "Shapes of some gummy candies: b e a r s": [
-    [
-      "bears",
-      3.5
-    ]
+    "bears",
+    3.5
   ],
   "Broomstick rider: b _ t _ _": [
-    [
-      "witch",
-      1.7
-    ]
+    "witch",
+    1.7
   ],
   "The Oracle of ___, nickname for Warren Buffett: e _ a _ _": [
-    [
-      "eagle",
-      3.8000000000000016
-    ]
+    "eagle",
+    3.8000000000000016
   ],
   "Nevada senator Jacky: a _ s _ _": [
-    [
-      "robin",
-      6.5
-    ]
+    "robin",
+    6.5
   ],
   "Unable to be heard, on a Zoom call: r _ t _ _": [
-    [
-      "muted",
-      1.0
-    ]
+    "muted",
+    1.0
   ],
   "Shapes of some gummy candies: _ _ r _ s": [
-    [
-      "beers",
-      2.3000000000000007
-    ]
+    "beers",
+    2.3000000000000007
   ],
   "\"See you all later\": _ _ o _ t": [
-    [
-      "odbye",
-      12.3
-    ]
+    "odbye",
+    12.3
   ],
   "Sound from a baby bird: _ _ e _ p": [
-    [
-      "cheep",
-      0.5
-    ]
+    "cheep",
+    0.5
   ],
   "They work around the clock: _ _ n _ s": [
-    [
-      "urses",
-      2.0
-    ]
+    "urses",
+    2.0
   ],
   "Broomstick rider: b _ _ _ _": [
-    [
-      "broom",
-      1.5
-    ]
+    "broom",
+    1.5
   ],
   "The Oracle of ___, nickname for Warren Buffett: e _ _ _ _": [
-    [
-      "omaha",
-      3.8
-    ]
+    "omaha",
+    3.8
   ],
   "Nevada senator Jacky: a _ _ _ _": [
-    [
-      "rosen",
-      4.000000000000002
-    ]
+    "rosen",
+    4.000000000000002
   ],
   "Unable to be heard, on a Zoom call: r _ _ _ _": [
-    [
-      "muted",
-      2.0
-    ]
+    "muted",
+    2.0
   ],
   "Sweetness or sourness: t _ _ _ e": [
-    [
-      "taste",
-      3.0
-    ]
+    "taste",
+    3.0
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ _ h _": [
-    [
-      "omaha",
-      0.5
-    ]
+    "omaha",
+    0.5
   ],
   "Sweetness or sourness: t _ s _ e": [
-    [
-      "taste",
-      2.5
-    ]
+    "taste",
+    2.5
   ],
   "The Oracle of ___, nickname for Warren Buffett: o _ _ h _": [
-    [
-      "omaha",
-      10.599999999999994
-    ]
+    "omaha",
+    10.599999999999994
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ _ h o": [
-    [
-      "omaha",
-      3.7
-    ]
+    "omaha",
+    3.7
   ],
   "Nevada senator Jacky: _ _ _ e u": [
-    [
-      "osene",
-      2.400000000000001
-    ]
+    "osene",
+    2.400000000000001
   ],
   "Unable to be heard, on a Zoom call: _ _ _ e r": [
-    [
-      "muted",
-      3.0
-    ]
+    "muted",
+    3.0
   ],
   "The Oracle of ___, nickname for Warren Buffett: o _ _ _ _": [
-    [
-      "omaha",
-      2.2
-    ]
+    "omaha",
+    2.2
   ],
   "The Oracle of ___, nickname for Warren Buffett: o _ _ _ o": [
-    [
-      "omaha",
-      3.8000000000000003
-    ]
+    "omaha",
+    3.8000000000000003
   ],
   "Nevada senator Jacky: r _ _ _ u": [
-    [
-      "lican",
-      0.5
-    ]
+    "lican",
+    0.5
   ],
   "Unable to be heard, on a Zoom call: m _ _ _ r": [
-    [
-      "muted",
-      4.0
-    ]
+    "muted",
+    4.0
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ _ _ o": [
-    [
-      "omaha",
-      10.3
-    ]
+    "omaha",
+    10.3
   ],
   "Nevada senator Jacky: _ _ _ _ u": [
-    [
-      "roseu",
-      2.800000000000001
-    ]
+    "roseu",
+    2.800000000000001
   ],
   "Unable to be heard, on a Zoom call: _ _ _ _ r": [
-    [
-      "muted",
-      2.5
-    ]
+    "muted",
+    2.5
   ],
   "Shapes of some gummy candies: b e a d s": [
-    [
-      "beads",
-      2.5
-    ]
+    "beads",
+    2.5
   ],
   "Unable to be heard, on a Zoom call: d _ _ _ _": [
-    [
-      "dumps",
-      0.5
-    ]
+    "dumps",
+    0.5
   ],
   "Bits of choreography: s _ _ _ _": [
-    [
-      "steps",
-      3.5
-    ]
+    "steps",
+    3.5
   ],
   "Unable to be heard, on a Zoom call: d _ t _ _": [
-    [
-      "duten",
-      1.3
-    ]
+    "duten",
+    1.3
   ],
   "Bits of choreography: s _ e _ _": [
-    [
-      "steps",
-      2.5
-    ]
+    "steps",
+    2.5
   ],
   "Broomstick rider: b _ _ c _": [
-    [
-      "bucco",
-      2.400000000000001
-    ]
+    "bucco",
+    2.400000000000001
   ],
   "The Oracle of ___, nickname for Warren Buffett: e _ _ h _": [
-    [
-      "omaha",
-      1.5
-    ]
+    "omaha",
+    1.5
   ],
   "Nevada senator Jacky: a _ _ e _": [
-    [
-      "astie",
-      1.0
-    ]
+    "astie",
+    1.0
   ],
   "Unable to be heard, on a Zoom call: d _ _ e _": [
-    [
-      "dazed",
-      0.5
-    ]
+    "dazed",
+    0.5
   ],
   "Bits of choreography: s _ _ p _": [
-    [
-      "steps",
-      3.5
-    ]
+    "steps",
+    3.5
   ],
   "They work around the clock: n i g h t": [
-    [
-      "night",
-      4.0
-    ]
+    "night",
+    4.0
   ],
   "Broomstick rider: b _ _ _ n": [
-    [
-      "began",
-      3.3000000000000016
-    ]
+    "began",
+    3.3000000000000016
   ],
   "The Oracle of ___, nickname for Warren Buffett: e _ _ _ i": [
-    [
-      "omahi",
-      3.1000000000000014
-    ]
+    "omahi",
+    3.1000000000000014
   ],
   "Nevada senator Jacky: a _ _ _ g": [
-    [
-      "reeds",
-      2.800000000000001
-    ]
+    "reeds",
+    2.800000000000001
   ],
   "Unable to be heard, on a Zoom call: d _ _ _ h": [
-    [
-      "drown",
-      4.200000000000001
-    ]
+    "drown",
+    4.200000000000001
   ],
   "Bits of choreography: s _ _ _ t": [
-    [
-      "steps",
-      3.0
-    ]
+    "steps",
+    3.0
   ],
   "Shapes of some gummy candies: _ o _ _ _": [
-    [
-      "ovals",
-      1.0
-    ]
+    "ovals",
+    1.0
   ],
   "\"See you all later\": _ m _ _ _": [
-    [
-      "yemay",
-      0.5
-    ]
+    "yemay",
+    0.5
   ],
   "Sweetness or sourness: _ a _ _ _": [
-    [
-      "taste",
-      3.0
-    ]
+    "taste",
+    3.0
   ],
   "Sound from a baby bird: _ h _ _ _": [
-    [
-      "cheep",
-      3.0
-    ]
+    "cheep",
+    3.0
   ],
   "They work around the clock: _ a _ _ _": [
-    [
-      "ights",
-      2.7
-    ]
+    "ights",
+    2.7
   ],
   "Bits of choreography: _ _ e _ _": [
-    [
-      "steps",
-      2.5
-    ]
+    "steps",
+    2.5
   ],
   "Bits of choreography: _ _ e p _": [
-    [
-      "steps",
-      2.5
-    ]
+    "steps",
+    2.5
   ],
   "Shapes of some gummy candies: w o _ _ _": [
-    [
-      "worms",
-      2.5
-    ]
+    "worms",
+    2.5
   ],
   "\"See you all later\": i m _ _ _": [
-    [
-      "imbye",
-      0.7999999999999999
-    ]
+    "imbye",
+    0.7999999999999999
   ],
   "They work around the clock: h a _ _ _": [
-    [
-      "hands",
-      2.0
-    ]
+    "hands",
+    2.0
   ],
   "Bits of choreography: s _ e p _": [
-    [
-      "steps",
-      3.5
-    ]
+    "steps",
+    3.5
   ],
   "Bits of choreography: s _ e p s": [
-    [
-      "steps",
-      4.0
-    ]
+    "steps",
+    4.0
   ],
   "\"See you all later\": i m _ u _": [
-    [
-      "imvue",
-      0.30000000000000004
-    ]
+    "imvue",
+    0.30000000000000004
   ],
   "They work around the clock: h a _ d _": [
-    [
-      "hands",
-      3.5
-    ]
+    "hands",
+    3.5
   ],
   "Bits of choreography: _ _ e p s": [
-    [
-      "steps",
-      3.0
-    ]
+    "steps",
+    3.0
   ],
   "Shapes of some gummy candies: w o _ m _": [
-    [
-      "worms",
-      3.0
-    ]
+    "worms",
+    3.0
   ],
   "Shapes of some gummy candies: _ o r _ _": [
-    [
-      "bears",
-      2.0
-    ]
+    "bears",
+    2.0
   ],
   "\"See you all later\": _ m o _ _": [
-    [
-      "byomo",
-      1.5
-    ]
+    "byomo",
+    1.5
   ],
   "They work around the clock: _ a n _ _": [
-    [
-      "urses",
-      2.0
-    ]
+    "urses",
+    2.0
   ],
   "Shapes of some gummy candies: _ o _ m _": [
-    [
-      "bombs",
-      2.0
-    ]
+    "bombs",
+    2.0
   ],
   "\"See you all later\": _ m _ u _": [
-    [
-      "adieu",
-      1.5
-    ]
+    "adieu",
+    1.5
   ],
   "They work around the clock: _ a _ d _": [
-    [
-      "ights",
-      0.5
-    ]
+    "ights",
+    0.5
   ],
   "Sound from a baby bird: c h _ _ _": [
-    [
-      "cheep",
-      3.0
-    ]
+    "cheep",
+    3.0
   ],
   "Sound from a baby bird: c h _ e _": [
-    [
-      "cheep",
-      2.5
-    ]
+    "cheep",
+    2.5
   ],
   "Bits of choreography: _ _ e _ s": [
-    [
-      "steps",
-      2.0
-    ]
+    "steps",
+    2.0
   ],
   "Bits of choreography: s _ e _ s": [
-    [
-      "steps",
-      3.0
-    ]
+    "steps",
+    3.0
   ],
   "Sound from a baby bird: _ h _ e _": [
-    [
-      "cheep",
-      2.5
-    ]
+    "cheep",
+    2.5
   ],
   "Sound from a baby bird: _ h e _ _": [
-    [
-      "cheep",
-      3.0
-    ]
+    "cheep",
+    3.0
   ],
   "Bits of choreography: _ _ _ p _": [
-    [
-      "steps",
-      3.0
-    ]
+    "steps",
+    3.0
   ],
   "Sweetness or sourness: t a _ _ _": [
-    [
-      "taste",
-      2.5
-    ]
+    "taste",
+    2.5
   ],
   "Sweetness or sourness: t a _ t _": [
-    [
-      "taste",
-      2.5
-    ]
+    "taste",
+    2.5
   ],
   "Bits of choreography: _ _ _ p s": [
-    [
-      "steps",
-      2.5
-    ]
+    "steps",
+    2.5
   ],
   "Bits of choreography: s _ _ p s": [
-    [
-      "steps",
-      3.5
-    ]
+    "steps",
+    3.5
   ],
   "\"See you all later\": i m b y e": [
-    [
-      "imbye",
-      0.5
-    ]
+    "imbye",
+    0.5
   ],
   "Nevada senator Jacky: r b _ e _": [
-    [
-      "evere",
-      6.800000000000003
-    ]
+    "evere",
+    6.800000000000003
   ],
   "Unable to be heard, on a Zoom call: m y _ e _": [
-    [
-      "muted",
-      2.0
-    ]
+    "muted",
+    2.0
   ],
   "Bits of choreography: s e _ p _": [
-    [
-      "steps",
-      3.0
-    ]
+    "steps",
+    3.0
   ],
   "Sweetness or sourness: _ a _ t _": [
-    [
-      "taste",
-      3.5
-    ]
+    "taste",
+    3.5
   ],
   "Sweetness or sourness: _ a s _ _": [
-    [
-      "taste",
-      2.5
-    ]
+    "taste",
+    2.5
   ],
   "Bits of choreography: _ _ _ _ s": [
-    [
-      "steps",
-      2.5
-    ]
+    "steps",
+    2.5
   ],
   "Bits of choreography: s _ _ _ s": [
-    [
-      "steps",
-      3.0
-    ]
+    "steps",
+    3.0
   ],
   "Nevada senator Jacky: r b _ _ n": [
-    [
-      "ebrin",
-      2.1000000000000005
-    ]
+    "ebrin",
+    2.1000000000000005
   ],
   "Unable to be heard, on a Zoom call: m y _ _ d": [
-    [
-      "muted",
-      2.5
-    ]
+    "muted",
+    2.5
   ],
   "Bits of choreography: s e _ _ s": [
-    [
-      "steps",
-      4.0
-    ]
+    "steps",
+    4.0
   ],
   "Shapes of some gummy candies: _ _ _ m _": [
-    [
-      "bombs",
-      1.0
-    ]
+    "bombs",
+    1.0
   ],
   "\"See you all later\": _ _ _ u _": [
-    [
-      "adieu",
-      2.5
-    ]
+    "adieu",
+    2.5
   ],
   "Sweetness or sourness: _ _ _ t _": [
-    [
-      "taste",
-      2.5
-    ]
+    "taste",
+    2.5
   ],
   "Sound from a baby bird: _ _ _ e _": [
-    [
-      "cheep",
-      4.0
-    ]
+    "cheep",
+    4.0
   ],
   "They work around the clock: _ _ _ d _": [
-    [
-      "ights",
-      2.0
-    ]
+    "ights",
+    2.0
   ],
   "Shapes of some gummy candies: w _ _ m _": [
-    [
-      "worms",
-      3.0
-    ]
+    "worms",
+    3.0
   ],
   "Sweetness or sourness: t _ _ t _": [
-    [
-      "taste",
-      2.5
-    ]
+    "taste",
+    2.5
   ],
   "They work around the clock: h _ _ d _": [
-    [
-      "hands",
-      3.0
-    ]
+    "hands",
+    3.0
   ],
   "\"See you all later\": i _ _ u _": [
-    [
-      "iulia",
-      0.30000000000000004
-    ]
+    "iulia",
+    0.30000000000000004
   ],
   "The Oracle of ___, nickname for Warren Buffett: o _ _ h a": [
-    [
-      "ohaha",
-      4.799999999999999
-    ]
+    "ohaha",
+    4.799999999999999
   ],
   "The Oracle of ___, nickname for Warren Buffett: o _ a h a": [
-    [
-      "ohaha",
-      3.1000000000000014
-    ]
+    "ohaha",
+    3.1000000000000014
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ _ h a": [
-    [
-      "omaha",
-      3.5
-    ]
+    "omaha",
+    3.5
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ a h a": [
-    [
-      "omaha",
-      2.0
-    ]
+    "omaha",
+    2.0
   ],
   "Broomstick rider: r _ _ c _": [
-    [
-      "witch",
-      2.2
-    ]
+    "witch",
+    2.2
   ],
   "The Oracle of ___, nickname for Warren Buffett: c _ _ h _": [
-    [
-      "chuch",
-      3.0000000000000013
-    ]
+    "chuch",
+    3.0000000000000013
   ],
   "Nevada senator Jacky: u _ _ e _": [
-    [
-      "usene",
-      1.0999999999999999
-    ]
+    "usene",
+    1.0999999999999999
   ],
   "Shapes of some gummy candies: _ _ r m _": [
-    [
-      "bears",
-      3.0
-    ]
+    "bears",
+    3.0
   ],
   "\"See you all later\": _ _ o u _": [
-    [
-      "byouo",
-      1.9000000000000006
-    ]
+    "byouo",
+    1.9000000000000006
   ],
   "They work around the clock: _ _ n d _": [
-    [
-      "ights",
-      1.0
-    ]
+    "ights",
+    1.0
   ],
   "Sweetness or sourness: _ _ s t _": [
-    [
-      "taste",
-      2.5
-    ]
+    "taste",
+    2.5
   ],
   "Sound from a baby bird: c _ _ e _": [
-    [
-      "cheep",
-      3.0
-    ]
+    "cheep",
+    3.0
   ],
   "The Oracle of ___, nickname for Warren Buffett: o _ a _ a": [
-    [
-      "omaha",
-      3.5
-    ]
+    "omaha",
+    3.5
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ a _ a": [
-    [
-      "omaha",
-      2.5
-    ]
+    "omaha",
+    2.5
   ],
   "Sound from a baby bird: _ _ e e _": [
-    [
-      "cheep",
-      2.5
-    ]
+    "cheep",
+    2.5
   ],
   "The Oracle of ___, nickname for Warren Buffett: o _ _ _ a": [
-    [
-      "omaha",
-      4.0
-    ]
+    "omaha",
+    4.0
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ _ _ a": [
-    [
-      "omaha",
-      3.5
-    ]
+    "omaha",
+    3.5
   ],
   "Broomstick rider: _ _ _ _ n": [
-    [
-      "witch",
-      1.0
-    ]
+    "witch",
+    1.0
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ _ _ i": [
-    [
-      "omaha",
-      2.1
-    ]
+    "omaha",
+    2.1
   ],
   "Nevada senator Jacky: _ _ _ _ g": [
-    [
-      "gabri",
-      1.5000000000000002
-    ]
+    "gabri",
+    1.5000000000000002
   ],
   "Unable to be heard, on a Zoom call: _ _ _ _ h": [
-    [
-      "muted",
-      1.0
-    ]
+    "muted",
+    1.0
   ],
   "Bits of choreography: _ _ _ _ t": [
-    [
-      "steps",
-      3.0
-    ]
+    "steps",
+    3.0
   ],
   "Broomstick rider: _ _ t _ n": [
-    [
-      "witch",
-      3.0
-    ]
+    "witch",
+    3.0
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ a _ i": [
-    [
-      "omaha",
-      2.5
-    ]
+    "omaha",
+    2.5
   ],
   "Nevada senator Jacky: _ _ s _ g": [
-    [
-      "jacky",
-      2.3000000000000003
-    ]
+    "jacky",
+    2.3000000000000003
   ],
   "Unable to be heard, on a Zoom call: _ _ t _ h": [
-    [
-      "muted",
-      2.5
-    ]
+    "muted",
+    2.5
   ],
   "Bits of choreography: _ _ e _ t": [
-    [
-      "steps",
-      2.5
-    ]
+    "steps",
+    2.5
   ],
   "Broomstick rider: _ _ _ c n": [
-    [
-      "witch",
-      1.5
-    ]
+    "witch",
+    1.5
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ _ h i": [
-    [
-      "omaha",
-      2.0
-    ]
+    "omaha",
+    2.0
   ],
   "Nevada senator Jacky: _ _ _ e g": [
-    [
-      "regge",
-      3.300000000000001
-    ]
+    "regge",
+    3.300000000000001
   ],
   "Unable to be heard, on a Zoom call: _ _ _ e h": [
-    [
-      "muted",
-      0.5
-    ]
+    "muted",
+    0.5
   ],
   "Bits of choreography: _ _ _ p t": [
-    [
-      "steps",
-      2.5
-    ]
+    "steps",
+    2.5
   ],
   "Around one-third of the average person's life: _ _ _ _ _": [
-    [
-      "third",
-      3.5
-    ]
+    "third",
+    3.5
   ],
   "Studio that was acquired by Disney in 2006: _ _ _ _ _": [
-    [
-      "pixar",
-      4.0
-    ]
+    "pixar",
+    4.0
   ],
   "Samuel on the Supreme Court: _ _ _ _ _": [
-    [
-      "outer",
-      3.3000000000000016
-    ]
+    "outer",
+    3.3000000000000016
   ],
   "Ones checking \"M\" on a form: _ _ _ _ _": [
-    [
-      "males",
-      2.0
-    ]
+    "males",
+    2.0
   ],
   "Something a great actor might steal: _ _ _ _ _": [
-    [
-      "scene",
-      2.5
-    ]
+    "scene",
+    2.5
   ],
   "Bombards online: _ _ _ _ _": [
-    [
-      "rolls",
-      1.1
-    ]
+    "rolls",
+    1.1
   ],
   "Shade of light purple: _ _ _ _ _": [
-    [
-      "lilac",
-      2.5
-    ]
+    "lilac",
+    2.5
   ],
   "Banishment from one's country: _ _ _ _ _": [
-    [
-      "exile",
-      2.5
-    ]
+    "exile",
+    2.5
   ],
   "Like pomegranate seeds, but not apple seeds: _ _ _ _ _": [
-    [
-      "arils",
-      4.0
-    ]
+    "arils",
+    4.0
   ],
   "Counterpart to poetry: _ _ _ _ _": [
-    [
-      "prose",
-      4.0
-    ]
+    "prose",
+    4.0
   ],
   "Studio that was acquired by Disney in 2006: p i x a r": [
-    [
-      "pixar",
-      5.0
-    ]
+    "pixar",
+    5.0
   ],
   "Bombards online: _ p _ _ _": [
-    [
-      "spams",
-      1.0
-    ]
+    "spams",
+    1.0
   ],
   "Shade of light purple: _ i _ _ _": [
-    [
-      "lilac",
-      2.5
-    ]
+    "lilac",
+    2.5
   ],
   "Banishment from one's country: _ x _ _ _": [
-    [
-      "exile",
-      4.0
-    ]
+    "exile",
+    4.0
   ],
   "Like pomegranate seeds, but not apple seeds: _ a _ _ _": [
-    [
-      "arils",
-      4.5
-    ]
+    "arils",
+    4.5
   ],
   "Counterpart to poetry: _ r _ _ _": [
-    [
-      "prose",
-      3.0
-    ]
+    "prose",
+    3.0
   ],
   "Around one-third of the average person's life: t h i r d": [
-    [
-      "third",
-      5.0
-    ]
+    "third",
+    5.0
   ],
   "Bombards online: t p _ _ _": [
-    [
-      "rolls",
-      1.1
-    ]
+    "rolls",
+    1.1
   ],
   "Shade of light purple: h i _ _ _": [
-    [
-      "lilac",
-      1.5
-    ]
+    "lilac",
+    1.5
   ],
   "Banishment from one's country: i x _ _ _": [
-    [
-      "exile",
-      4.800000000000002
-    ]
+    "exile",
+    4.800000000000002
   ],
   "Like pomegranate seeds, but not apple seeds: r a _ _ _": [
-    [
-      "arils",
-      4.0
-    ]
+    "arils",
+    4.0
   ],
   "Counterpart to poetry: d r _ _ _": [
-    [
-      "drama",
-      3.0
-    ]
+    "drama",
+    3.0
   ],
   "Samuel on the Supreme Court: _ _ _ _ a": [
-    [
-      "otoma",
-      1.9000000000000006
-    ]
+    "otoma",
+    1.9000000000000006
   ],
   "Ones checking \"M\" on a form: _ _ _ _ m": [
-    [
-      "enums",
-      3.4000000000000017
-    ]
+    "enums",
+    3.4000000000000017
   ],
   "Something a great actor might steal: _ _ _ _ a": [
-    [
-      "scene",
-      1.0
-    ]
+    "scene",
+    1.0
   ],
   "Counterpart to poetry: d r a m a": [
-    [
-      "drama",
-      4.5
-    ]
+    "drama",
+    4.5
   ],
   "Around one-third of the average person's life: _ _ _ _ p": [
-    [
-      "third",
-      3.5
-    ]
+    "third",
+    3.5
   ],
   "Samuel on the Supreme Court: _ _ _ _ o": [
-    [
-      "outer",
-      3.1000000000000014
-    ]
+    "outer",
+    3.1000000000000014
   ],
   "Ones checking \"M\" on a form: _ _ _ _ s": [
-    [
-      "marks",
-      2.5
-    ]
+    "marks",
+    2.5
   ],
   "Something a great actor might steal: _ _ _ _ e": [
-    [
-      "scene",
-      2.5
-    ]
+    "scene",
+    2.5
   ],
   "Counterpart to poetry: p r o s e": [
-    [
-      "prose",
-      5.0
-    ]
+    "prose",
+    5.0
   ],
   "Around one-third of the average person's life: _ _ e _ p": [
-    [
-      "sleep",
-      1.9
-    ]
+    "sleep",
+    1.9
   ],
   "Samuel on the Supreme Court: _ _ i _ o": [
-    [
-      "breno",
-      4.3
-    ]
+    "breno",
+    4.3
   ],
   "Ones checking \"M\" on a form: _ _ l _ s": [
-    [
-      "mails",
-      1.0
-    ]
+    "mails",
+    1.0
   ],
   "Something a great actor might steal: _ _ e _ e": [
-    [
-      "scene",
-      2.5
-    ]
+    "scene",
+    2.5
   ],
   "Banishment from one's country: e x i l e": [
-    [
-      "exile",
-      4.5
-    ]
+    "exile",
+    4.5
   ],
   "Around one-third of the average person's life: s _ e _ p": [
-    [
-      "sleep",
-      2.5
-    ]
+    "sleep",
+    2.5
   ],
   "Samuel on the Supreme Court: a _ i _ o": [
-    [
-      "breno",
-      3.2
-    ]
+    "breno",
+    3.2
   ],
   "Ones checking \"M\" on a form: m _ l _ s": [
-    [
-      "marks",
-      1.5
-    ]
+    "marks",
+    1.5
   ],
   "Something a great actor might steal: s _ e _ e": [
-    [
-      "scene",
-      3.5
-    ]
+    "scene",
+    3.5
   ],
   "Bombards online: s p a m s": [
-    [
-      "spams",
-      4.0
-    ]
+    "spams",
+    4.0
   ],
   "Around one-third of the average person's life: s l e e p": [
-    [
-      "sleep",
-      3.2
-    ]
+    "sleep",
+    3.2
   ],
   "Shade of light purple: l i _ _ _": [
-    [
-      "lilac",
-      3.5
-    ]
+    "lilac",
+    3.5
   ],
   "Like pomegranate seeds, but not apple seeds: e a _ _ _": [
-    [
-      "arils",
-      4.0
-    ]
+    "arils",
+    4.0
   ],
   "Samuel on the Supreme Court: a l i _ o": [
-    [
-      "alito",
-      3.5
-    ]
+    "alito",
+    3.5
   ],
   "Ones checking \"M\" on a form: m a l _ s": [
-    [
-      "mails",
-      1.5
-    ]
+    "mails",
+    1.5
   ],
   "Something a great actor might steal: s c e _ e": [
-    [
-      "scene",
-      3.5
-    ]
+    "scene",
+    3.5
   ],
   "Shade of light purple: l i l a c": [
-    [
-      "lilac",
-      4.5
-    ]
+    "lilac",
+    4.5
   ],
   "Something a great actor might steal: s c e n e": [
-    [
-      "scene",
-      5.0
-    ]
+    "scene",
+    5.0
   ],
   "Like pomegranate seeds, but not apple seeds: e a _ _ n": [
-    [
-      "arils",
-      3.5
-    ]
+    "arils",
+    3.5
   ],
   "Shade of light purple: l i _ _ c": [
-    [
-      "lilac",
-      3.0
-    ]
+    "lilac",
+    3.0
   ],
   "Around one-third of the average person's life: s l e _ p": [
-    [
-      "sleep",
-      3.5
-    ]
+    "sleep",
+    3.5
   ],
   "Like pomegranate seeds, but not apple seeds: _ a _ _ n": [
-    [
-      "arils",
-      1.5
-    ]
+    "arils",
+    1.5
   ],
   "Samuel on the Supreme Court: a l i t o": [
-    [
-      "alito",
-      3.5
-    ]
+    "alito",
+    3.5
   ],
   "Like pomegranate seeds, but not apple seeds: _ a t _ n": [
-    [
-      "rilat",
-      2.700000000000001
-    ]
+    "rilat",
+    2.700000000000001
   ],
   "Like pomegranate seeds, but not apple seeds: _ a t _ _": [
-    [
-      "arils",
-      4.5
-    ]
+    "arils",
+    4.5
   ],
   "Shade of light purple: _ i _ _ c": [
-    [
-      "lilac",
-      4.800000000000002
-    ]
+    "lilac",
+    4.800000000000002
   ],
   "Around one-third of the average person's life: _ l e _ p": [
-    [
-      "leaps",
-      0.5
-    ]
+    "leaps",
+    0.5
   ],
   "Samuel on the Supreme Court: _ l i _ o": [
-    [
-      "breno",
-      1.0
-    ]
+    "breno",
+    1.0
   ],
   "Ones checking \"M\" on a form: _ a l _ s": [
-    [
-      "mails",
-      2.5
-    ]
+    "mails",
+    2.5
   ],
   "Something a great actor might steal: _ c e _ e": [
-    [
-      "scene",
-      4.0
-    ]
+    "scene",
+    4.0
   ],
   "Bombards online: _ p _ _ s": [
-    [
-      "spams",
-      1.0
-    ]
+    "spams",
+    1.0
   ],
   "Bombards online: s p _ _ s": [
-    [
-      "spams",
-      2.5
-    ]
+    "spams",
+    2.5
   ],
   "Bombards online: s p _ _ _": [
-    [
-      "spams",
-      2.5
-    ]
+    "spams",
+    2.5
   ],
   "Around one-third of the average person's life: _ l _ _ p": [
-    [
-      "third",
-      2.5
-    ]
+    "third",
+    2.5
   ],
   "Samuel on the Supreme Court: _ l _ _ o": [
-    [
-      "breno",
-      1.4
-    ]
+    "breno",
+    1.4
   ],
   "Ones checking \"M\" on a form: _ a _ _ s": [
-    [
-      "males",
-      2.0
-    ]
+    "males",
+    2.0
   ],
   "Something a great actor might steal: _ c _ _ e": [
-    [
-      "scene",
-      4.0
-    ]
+    "scene",
+    4.0
   ],
   "Around one-third of the average person's life: s l _ _ p": [
-    [
-      "sleep",
-      3.5
-    ]
+    "sleep",
+    3.5
   ],
   "Samuel on the Supreme Court: a l _ _ o": [
-    [
-      "alito",
-      3.5
-    ]
+    "alito",
+    3.5
   ],
   "Ones checking \"M\" on a form: m a _ _ s": [
-    [
-      "marks",
-      3.0
-    ]
+    "marks",
+    3.0
   ],
   "Something a great actor might steal: s c _ _ e": [
-    [
-      "scene",
-      4.0
-    ]
+    "scene",
+    4.0
   ],
   "Banishment from one's country: _ x _ _ e": [
-    [
-      "exile",
-      3.5
-    ]
+    "exile",
+    3.5
   ],
   "Banishment from one's country: e x _ _ e": [
-    [
-      "exile",
-      3.5
-    ]
+    "exile",
+    3.5
   ],
   "Banishment from one's country: _ x i _ e": [
-    [
-      "exile",
-      1.0
-    ]
+    "exile",
+    1.0
   ],
   "Banishment from one's country: e x _ _ _": [
-    [
-      "exile",
-      3.0
-    ]
+    "exile",
+    3.0
   ],
   "Banishment from one's country: _ x i _ _": [
-    [
-      "exile",
-      3.0
-    ]
+    "exile",
+    3.0
   ],
   "Ones checking \"M\" on a form: m a r k s": [
-    [
-      "marks",
-      3.0
-    ]
+    "marks",
+    3.0
   ],
   "Banishment from one's country: _ x _ r _": [
-    [
-      "exile",
-      3.0
-    ]
+    "exile",
+    3.0
   ],
   "Like pomegranate seeds, but not apple seeds: _ a _ k _": [
-    [
-      "rilak",
-      2.600000000000001
-    ]
+    "rilak",
+    2.600000000000001
   ],
   "Ones checking \"M\" on a form: m a l e s": [
-    [
-      "males",
-      3.0
-    ]
+    "males",
+    3.0
   ],
   "Bombards online: _ p _ m s": [
-    [
-      "spams",
-      2.5
-    ]
+    "spams",
+    2.5
   ],
   "Banishment from one's country: _ x _ l e": [
-    [
-      "exile",
-      4.5
-    ]
+    "exile",
+    4.5
   ],
   "Like pomegranate seeds, but not apple seeds: _ a _ e n": [
-    [
-      "ilene",
-      0.4
-    ]
+    "ilene",
+    0.4
   ],
   "Bombards online: _ p _ m _": [
-    [
-      "spams",
-      1.5
-    ]
+    "spams",
+    1.5
   ],
   "Banishment from one's country: _ x _ l _": [
-    [
-      "exile",
-      3.0
-    ]
+    "exile",
+    3.0
   ],
   "Like pomegranate seeds, but not apple seeds: _ a _ e _": [
-    [
-      "arils",
-      4.0
-    ]
+    "arils",
+    4.0
   ],
   "Banishment from one's country: _ x i l _": [
-    [
-      "exile",
-      3.5
-    ]
+    "exile",
+    3.5
   ],
   "Like pomegranate seeds, but not apple seeds: _ a t e _": [
-    [
-      "arate",
-      0.7999999999999999
-    ]
+    "arate",
+    0.7999999999999999
   ],
   "Shade of light purple: _ i _ a _": [
-    [
-      "lilac",
-      2.5
-    ]
+    "lilac",
+    2.5
   ],
   "Around one-third of the average person's life: s _ _ _ p": [
-    [
-      "sleep",
-      3.5
-    ]
+    "sleep",
+    3.5
   ],
   "Samuel on the Supreme Court: a _ _ _ o": [
-    [
-      "breno",
-      1.2999999999999998
-    ]
+    "breno",
+    1.2999999999999998
   ],
   "Something a great actor might steal: s _ _ _ e": [
-    [
-      "scene",
-      4.5
-    ]
+    "scene",
+    4.5
   ],
   "Ones checking \"M\" on a form: m _ _ _ s": [
-    [
-      "marks",
-      3.5
-    ]
+    "marks",
+    3.5
   ],
   "Counterpart to poetry: _ r _ _ e": [
-    [
-      "prose",
-      3.0
-    ]
+    "prose",
+    3.0
   ],
   "Shade of light purple: _ i _ a c": [
-    [
-      "lilac",
-      2.5
-    ]
+    "lilac",
+    2.5
   ],
   "Counterpart to poetry: _ r _ s e": [
-    [
-      "prose",
-      3.5
-    ]
+    "prose",
+    3.5
   ],
   "Around one-third of the average person's life: _ _ e _ _": [
-    [
-      "third",
-      2.5
-    ]
+    "third",
+    2.5
   ],
   "Samuel on the Supreme Court: _ _ i _ _": [
-    [
-      "reith",
-      3.5000000000000018
-    ]
+    "reith",
+    3.5000000000000018
   ],
   "Around one-third of the average person's life: s _ e _ _": [
-    [
-      "sleep",
-      2.5
-    ]
+    "sleep",
+    2.5
   ],
   "Samuel on the Supreme Court: a _ i _ _": [
-    [
-      "renan",
-      1.7000000000000004
-    ]
+    "renan",
+    1.7000000000000004
   ],
   "Around one-third of the average person's life: s l e _ _": [
-    [
-      "sleep",
-      2.5
-    ]
+    "sleep",
+    2.5
   ],
   "Samuel on the Supreme Court: a l i _ _": [
-    [
-      "alito",
-      2.5
-    ]
+    "alito",
+    2.5
   ],
   "Around one-third of the average person's life: _ l e _ _": [
-    [
-      "third",
-      2.5
-    ]
+    "third",
+    2.5
   ],
   "Samuel on the Supreme Court: _ l i _ _": [
-    [
-      "berts",
-      1.5
-    ]
+    "berts",
+    1.5
   ],
   "Around one-third of the average person's life: s _ _ _ _": [
-    [
-      "sleep",
-      2.0
-    ]
+    "sleep",
+    2.0
   ],
   "Samuel on the Supreme Court: a _ _ _ _": [
-    [
-      "stice",
-      3.800000000000002
-    ]
+    "stice",
+    3.800000000000002
   ],
   "Around one-third of the average person's life: s l _ _ _": [
-    [
-      "sleep",
-      3.7
-    ]
+    "sleep",
+    3.7
   ],
   "Samuel on the Supreme Court: a l _ _ _": [
-    [
-      "alito",
-      3.0
-    ]
+    "alito",
+    3.0
   ],
   "Around one-third of the average person's life: _ l _ _ _": [
-    [
-      "third",
-      3.5
-    ]
+    "third",
+    3.5
   ],
   "Samuel on the Supreme Court: _ l _ _ _": [
-    [
-      "outer",
-      3.6000000000000014
-    ]
+    "outer",
+    3.6000000000000014
   ],
   "Ones checking \"M\" on a form: _ a _ _ _": [
-    [
-      "males",
-      1.0
-    ]
+    "males",
+    1.0
   ],
   "Ones checking \"M\" on a form: _ a l _ _": [
-    [
-      "mails",
-      2.5
-    ]
+    "mails",
+    2.5
   ],
   "Ones checking \"M\" on a form: m a l _ _": [
-    [
-      "mails",
-      1.5
-    ]
+    "mails",
+    1.5
   ],
   "Counterpart to poetry: p r _ _ e": [
-    [
-      "prose",
-      4.0
-    ]
+    "prose",
+    4.0
   ],
   "Counterpart to poetry: _ r o _ e": [
-    [
-      "prose",
-      4.0
-    ]
+    "prose",
+    4.0
   ],
   "Ones checking \"M\" on a form: m a _ _ _": [
-    [
-      "major",
-      2.0
-    ]
+    "major",
+    2.0
   ],
   "Ones checking \"M\" on a form: _ _ l _ _": [
-    [
-      "males",
-      2.5
-    ]
+    "males",
+    2.5
   ],
   "Ones checking \"M\" on a form: m _ l _ _": [
-    [
-      "males",
-      1.0
-    ]
+    "males",
+    1.0
   ],
   "Ones checking \"M\" on a form: m _ _ _ _": [
-    [
-      "males",
-      0.5
-    ]
+    "males",
+    0.5
   ],
   "Something a great actor might steal: _ c _ _ _": [
-    [
-      "scene",
-      3.5
-    ]
+    "scene",
+    3.5
   ],
   "Something a great actor might steal: _ c e _ _": [
-    [
-      "scene",
-      3.0
-    ]
+    "scene",
+    3.0
   ],
   "Something a great actor might steal: s c e _ _": [
-    [
-      "scene",
-      4.0
-    ]
+    "scene",
+    4.0
   ],
   "Counterpart to poetry: p r _ _ _": [
-    [
-      "prose",
-      4.5
-    ]
+    "prose",
+    4.5
   ],
   "Counterpart to poetry: _ r o _ _": [
-    [
-      "prose",
-      3.5
-    ]
+    "prose",
+    3.5
   ],
   "Counterpart to poetry: _ r _ s _": [
-    [
-      "roses",
-      5.4999999999999964
-    ]
+    "roses",
+    5.4999999999999964
   ],
   "Counterpart to poetry: _ r o s _": [
-    [
-      "prose",
-      4.5
-    ]
+    "prose",
+    4.5
   ],
   "Something a great actor might steal: s c _ _ _": [
-    [
-      "scene",
-      4.0
-    ]
+    "scene",
+    4.0
   ],
   "Something a great actor might steal: _ _ e _ _": [
-    [
-      "scene",
-      3.5
-    ]
+    "scene",
+    3.5
   ],
   "Something a great actor might steal: s _ e _ _": [
-    [
-      "scene",
-      3.0
-    ]
+    "scene",
+    3.0
   ],
   "Around one-third of the average person's life: _ _ _ a _": [
-    [
-      "third",
-      3.0
-    ]
+    "third",
+    3.0
   ],
   "Studio that was acquired by Disney in 2006: _ _ _ r _": [
-    [
-      "pixar",
-      3.0
-    ]
+    "pixar",
+    3.0
   ],
   "Samuel on the Supreme Court: _ _ _ i _": [
-    [
-      "reyer",
-      2.3
-    ]
+    "reyer",
+    2.3
   ],
   "Ones checking \"M\" on a form: _ _ _ l _": [
-    [
-      "ailer",
-      1.5
-    ]
+    "ailer",
+    1.5
   ],
   "Something a great actor might steal: _ _ _ s _": [
-    [
-      "scene",
-      1.5
-    ]
+    "scene",
+    1.5
   ],
   "Like pomegranate seeds, but not apple seeds: a r i l s": [
-    [
-      "arils",
-      3.5
-    ]
+    "arils",
+    3.5
   ],
   "Around one-third of the average person's life: _ l _ a _": [
-    [
-      "third",
-      3.5
-    ]
+    "third",
+    3.5
   ],
   "Studio that was acquired by Disney in 2006: _ i _ r _": [
-    [
-      "pixar",
-      3.0
-    ]
+    "pixar",
+    3.0
   ],
   "Samuel on the Supreme Court: _ l _ i _": [
-    [
-      "renia",
-      2.600000000000001
-    ]
+    "renia",
+    2.600000000000001
   ],
   "Ones checking \"M\" on a form: _ a _ l _": [
-    [
-      "males",
-      0.5
-    ]
+    "males",
+    0.5
   ],
   "Something a great actor might steal: _ c _ s _": [
-    [
-      "cenes",
-      9.599999999999987
-    ]
+    "cenes",
+    9.599999999999987
   ],
   "Around one-third of the average person's life: _ l e a _": [
-    [
-      "third",
-      1.0
-    ]
+    "third",
+    1.0
   ],
   "Studio that was acquired by Disney in 2006: _ i x r _": [
-    [
-      "pixar",
-      3.0
-    ]
+    "pixar",
+    3.0
   ],
   "Samuel on the Supreme Court: _ l i i _": [
-    [
-      "breni",
-      0.6
-    ]
+    "breni",
+    0.6
   ],
   "Ones checking \"M\" on a form: _ a l l _": [
-    [
-      "mails",
-      2.0
-    ]
+    "mails",
+    2.0
   ],
   "Something a great actor might steal: _ c e s _": [
-    [
-      "cenes",
-      2.7
-    ]
+    "cenes",
+    2.7
   ],
   "Around one-third of the average person's life: _ _ e a _": [
-    [
-      "third",
-      2.0
-    ]
+    "third",
+    2.0
   ],
   "Studio that was acquired by Disney in 2006: _ _ x r _": [
-    [
-      "pixar",
-      4.0
-    ]
+    "pixar",
+    4.0
   ],
   "Samuel on the Supreme Court: _ _ i i _": [
-    [
-      "renia",
-      2.500000000000001
-    ]
+    "renia",
+    2.500000000000001
   ],
   "Ones checking \"M\" on a form: _ _ l l _": [
-    [
-      "males",
-      1.0
-    ]
+    "males",
+    1.0
   ],
   "Something a great actor might steal: _ _ e s _": [
-    [
-      "cenes",
-      4.100000000000001
-    ]
+    "cenes",
+    4.100000000000001
   ],
   "Around one-third of the average person's life: _ _ _ a p": [
-    [
-      "apart",
-      2.800000000000001
-    ]
+    "apart",
+    2.800000000000001
   ],
   "Studio that was acquired by Disney in 2006: _ _ _ r r": [
-    [
-      "pixar",
-      4.0
-    ]
+    "pixar",
+    4.0
   ],
   "Samuel on the Supreme Court: _ _ _ i o": [
-    [
-      "breno",
-      1.6
-    ]
+    "breno",
+    1.6
   ],
   "Ones checking \"M\" on a form: _ _ _ l s": [
-    [
-      "males",
-      2.0
-    ]
+    "males",
+    2.0
   ],
   "Something a great actor might steal: _ _ _ s e": [
-    [
-      "scene",
-      1.5
-    ]
+    "scene",
+    1.5
   ],
   "Studio that was acquired by Disney in 2006: _ _ _ _ r": [
-    [
-      "pixar",
-      4.0
-    ]
+    "pixar",
+    4.0
   ],
   "Bombards online: _ _ _ m _": [
-    [
-      "spams",
-      1.0
-    ]
+    "spams",
+    1.0
   ],
   "Shade of light purple: _ _ _ a _": [
-    [
-      "pluma",
-      1.8
-    ]
+    "pluma",
+    1.8
   ],
   "Banishment from one's country: _ _ _ r _": [
-    [
-      "exile",
-      3.5
-    ]
+    "exile",
+    3.5
   ],
   "Like pomegranate seeds, but not apple seeds: _ _ _ k _": [
-    [
-      "arils",
-      1.9
-    ]
+    "arils",
+    1.9
   ],
   "Bombards online: _ _ _ m s": [
-    [
-      "rolls",
-      2.5
-    ]
+    "rolls",
+    2.5
   ],
   "Shade of light purple: _ _ _ a c": [
-    [
-      "vanda",
-      2.3000000000000007
-    ]
+    "vanda",
+    2.3000000000000007
   ],
   "Banishment from one's country: _ _ _ r e": [
-    [
-      "exile",
-      1.5
-    ]
+    "exile",
+    1.5
   ],
   "Like pomegranate seeds, but not apple seeds: _ _ _ k n": [
-    [
-      "arils",
-      3.0
-    ]
+    "arils",
+    3.0
   ],
   "Studio that was acquired by Disney in 2006: p _ _ _ r": [
-    [
-      "pixar",
-      3.5
-    ]
+    "pixar",
+    3.5
   ],
   "Shade of light purple: l _ _ a _": [
-    [
-      "lavas",
-      0.1
-    ]
+    "lavas",
+    0.1
   ],
   "Banishment from one's country: e _ _ r _": [
-    [
-      "eport",
-      3.0000000000000013
-    ]
+    "eport",
+    3.0000000000000013
   ],
   "Like pomegranate seeds, but not apple seeds: e _ _ k _": [
-    [
-      "arils",
-      1.0
-    ]
+    "arils",
+    1.0
   ],
   "Bombards online: _ _ _ _ s": [
-    [
-      "spams",
-      2.0
-    ]
+    "spams",
+    2.0
   ],
   "Shade of light purple: _ _ _ _ c": [
-    [
-      "avish",
-      2.600000000000001
-    ]
+    "avish",
+    2.600000000000001
   ],
   "Banishment from one's country: _ _ _ _ e": [
-    [
-      "eport",
-      3.1000000000000014
-    ]
+    "eport",
+    3.1000000000000014
   ],
   "Like pomegranate seeds, but not apple seeds: _ _ _ _ n": [
-    [
-      "arils",
-      3.5
-    ]
+    "arils",
+    3.5
   ],
   "Shade of light purple: l _ _ _ c": [
-    [
-      "lilac",
-      3.8
-    ]
+    "lilac",
+    3.8
   ],
   "Banishment from one's country: e _ _ _ e": [
-    [
-      "exile",
-      3.5
-    ]
+    "exile",
+    3.5
   ],
   "Like pomegranate seeds, but not apple seeds: e _ _ _ n": [
-    [
-      "arils",
-      2.5
-    ]
+    "arils",
+    2.5
   ],
   "Studio that was acquired by Disney in 2006: p i _ _ r": [
-    [
-      "pixar",
-      2.5
-    ]
+    "pixar",
+    2.5
   ],
   "Banishment from one's country: e _ i _ e": [
-    [
-      "exile",
-      3.0
-    ]
+    "exile",
+    3.0
   ],
   "Like pomegranate seeds, but not apple seeds: e _ t _ n": [
-    [
-      "arils",
-      1.5
-    ]
+    "arils",
+    1.5
   ],
   "Studio that was acquired by Disney in 2006: p i x _ r": [
-    [
-      "pixar",
-      4.0
-    ]
+    "pixar",
+    4.0
   ],
   "Studio that was acquired by Disney in 2006: p _ x _ r": [
-    [
-      "pixar",
-      3.5
-    ]
+    "pixar",
+    3.5
   ],
   "Studio that was acquired by Disney in 2006: _ i _ _ r": [
-    [
-      "pixar",
-      7.5
-    ]
+    "pixar",
+    7.5
   ],
   "Studio that was acquired by Disney in 2006: _ i x _ r": [
-    [
-      "pixar",
-      3.0
-    ]
+    "pixar",
+    3.0
   ],
   "Like pomegranate seeds, but not apple seeds: _ _ t _ n": [
-    [
-      "arils",
-      0.5
-    ]
+    "arils",
+    0.5
   ],
   "Banishment from one's country: _ _ i _ e": [
-    [
-      "exile",
-      3.5
-    ]
+    "exile",
+    3.5
   ],
   "Banishment from one's country: _ _ _ l e": [
-    [
-      "exile",
-      3.5
-    ]
+    "exile",
+    3.5
   ],
   "Like pomegranate seeds, but not apple seeds: _ _ _ e n": [
-    [
-      "arils",
-      1.5
-    ]
+    "arils",
+    1.5
   ],
   "Banishment from one's country: _ _ _ l _": [
-    [
-      "exile",
-      3.0
-    ]
+    "exile",
+    3.0
   ],
   "Like pomegranate seeds, but not apple seeds: _ _ _ e _": [
-    [
-      "arils",
-      3.5
-    ]
+    "arils",
+    3.5
   ],
   "Like pomegranate seeds, but not apple seeds: e _ _ e _": [
-    [
-      "arils",
-      2.0
-    ]
+    "arils",
+    2.0
   ],
   "Like pomegranate seeds, but not apple seeds: e _ _ e n": [
-    [
-      "ilene",
-      2.600000000000001
-    ]
+    "ilene",
+    2.600000000000001
   ],
   "Like pomegranate seeds, but not apple seeds: e _ t e n": [
-    [
-      "rilen",
-      0.5
-    ]
+    "rilen",
+    0.5
   ],
   "Like pomegranate seeds, but not apple seeds: _ _ t e _": [
-    [
-      "rilte",
-      2.600000000000001
-    ]
+    "rilte",
+    2.600000000000001
   ],
   "Banishment from one's country: e _ _ l e": [
-    [
-      "exile",
-      3.5
-    ]
+    "exile",
+    3.5
   ],
   "Banishment from one's country: e _ i l e": [
-    [
-      "exile",
-      4.5
-    ]
+    "exile",
+    4.5
   ],
   "Banishment from one's country: e _ _ l _": [
-    [
-      "exile",
-      4.0
-    ]
+    "exile",
+    4.0
   ],
   "Banishment from one's country: _ _ i l _": [
-    [
-      "exile",
-      2.5
-    ]
+    "exile",
+    2.5
   ],
   "Bombards online: t _ _ _ _": [
-    [
-      "touts",
-      2.0
-    ]
+    "touts",
+    2.0
   ],
   "Shade of light purple: h _ _ _ _": [
-    [
-      "avend",
-      1.8
-    ]
+    "avend",
+    1.8
   ],
   "Banishment from one's country: i _ _ _ _": [
-    [
-      "exile",
-      2.1
-    ]
+    "exile",
+    2.1
   ],
   "Like pomegranate seeds, but not apple seeds: r _ _ _ _": [
-    [
-      "rocky",
-      0.5
-    ]
+    "rocky",
+    0.5
   ],
   "Counterpart to poetry: d _ _ _ _": [
-    [
-      "drama",
-      2.5
-    ]
+    "drama",
+    2.5
   ],
   "Bombards online: t _ _ _ s": [
-    [
-      "touts",
-      2.5
-    ]
+    "touts",
+    2.5
   ],
   "Shade of light purple: h _ _ _ c": [
-    [
-      "mocha",
-      1.5
-    ]
+    "mocha",
+    1.5
   ],
   "Banishment from one's country: i _ _ _ e": [
-    [
-      "exile",
-      3.0
-    ]
+    "exile",
+    3.0
   ],
   "Like pomegranate seeds, but not apple seeds: r _ _ _ n": [
-    [
-      "arils",
-      3.5
-    ]
+    "arils",
+    3.5
   ],
   "Counterpart to poetry: d _ _ _ e": [
-    [
-      "prose",
-      4.0
-    ]
+    "prose",
+    4.0
   ],
   "Studio that was acquired by Disney in 2006: o _ _ _ _": [
-    [
-      "pixar",
-      2.0
-    ]
+    "pixar",
+    2.0
   ],
   "Samuel on the Supreme Court: u _ _ _ _": [
-    [
-      "brenu",
-      2.500000000000001
-    ]
+    "brenu",
+    2.500000000000001
   ],
   "Ones checking \"M\" on a form: t _ _ _ _": [
-    [
-      "utors",
-      0.1
-    ]
+    "utors",
+    0.1
   ],
   "Bombards online: t o u t s": [
-    [
-      "touts",
-      2.5
-    ]
+    "touts",
+    2.5
   ],
   "Bombards online: t _ _ m _": [
-    [
-      "rolls",
-      1.1
-    ]
+    "rolls",
+    1.1
   ],
   "Shade of light purple: h _ _ a _": [
-    [
-      "genta",
-      1.5
-    ]
+    "genta",
+    1.5
   ],
   "Banishment from one's country: i _ _ l _": [
-    [
-      "exile",
-      3.3
-    ]
+    "exile",
+    3.3
   ],
   "Like pomegranate seeds, but not apple seeds: r _ _ e _": [
-    [
-      "arils",
-      4.5
-    ]
+    "arils",
+    4.5
   ],
   "Counterpart to poetry: d _ _ s _": [
-    [
-      "drama",
-      2.0
-    ]
+    "drama",
+    2.0
   ],
   "Something a great actor might steal: s _ _ _ _": [
-    [
-      "scene",
-      4.0
-    ]
+    "scene",
+    4.0
   ],
   "Studio that was acquired by Disney in 2006: o _ _ _ r": [
-    [
-      "pixar",
-      2.5
-    ]
+    "pixar",
+    2.5
   ],
   "Samuel on the Supreme Court: u _ _ _ a": [
-    [
-      "brenu",
-      2.1000000000000005
-    ]
+    "brenu",
+    2.1000000000000005
   ],
   "Something a great actor might steal: s _ _ _ a": [
-    [
-      "scene",
-      3.0
-    ]
+    "scene",
+    3.0
   ],
   "Ones checking \"M\" on a form: t _ _ _ m": [
-    [
-      "tames",
-      0.1
-    ]
+    "tames",
+    0.1
   ],
   "Studio that was acquired by Disney in 2006: o _ _ o _": [
-    [
-      "pixar",
-      1.1
-    ]
+    "pixar",
+    1.1
   ],
   "Samuel on the Supreme Court: u _ _ c _": [
-    [
-      "outer",
-      0.5
-    ]
+    "outer",
+    0.5
   ],
   "Ones checking \"M\" on a form: t _ _ k _": [
-    [
-      "akers",
-      1.0
-    ]
+    "akers",
+    1.0
   ],
   "Something a great actor might steal: s _ _ y _": [
-    [
-      "sceny",
-      3.0000000000000013
-    ]
+    "sceny",
+    3.0000000000000013
   ],
   "Like pomegranate seeds, but not apple seeds: r o c k y": [
-    [
-      "rocky",
-      2.0
-    ]
+    "rocky",
+    2.0
   ],
   "Studio that was acquired by Disney in 2006: _ _ _ o r": [
-    [
-      "pixar",
-      3.0
-    ]
+    "pixar",
+    3.0
   ],
   "Samuel on the Supreme Court: _ _ _ c a": [
-    [
-      "breye",
-      2.700000000000001
-    ]
+    "breye",
+    2.700000000000001
   ],
   "Ones checking \"M\" on a form: _ _ _ k m": [
-    [
-      "marks",
-      1.0
-    ]
+    "marks",
+    1.0
   ],
   "Something a great actor might steal: _ _ _ y a": [
-    [
-      "imaye",
-      2.700000000000001
-    ]
+    "imaye",
+    2.700000000000001
   ],
   "Counterpart to poetry: _ _ _ _ e": [
-    [
-      "prose",
-      3.5
-    ]
+    "prose",
+    3.5
   ],
   "Counterpart to poetry: _ _ _ s e": [
-    [
-      "prose",
-      4.5
-    ]
+    "prose",
+    4.5
   ],
   "Studio that was acquired by Disney in 2006: _ _ x _ _": [
-    [
-      "pixar",
-      3.0
-    ]
+    "pixar",
+    3.0
   ],
   "Studio that was acquired by Disney in 2006: _ _ x _ r": [
-    [
-      "pixar",
-      3.0
-    ]
+    "pixar",
+    3.0
   ],
   "Bombards online: s _ _ m s": [
-    [
-      "spams",
-      2.5
-    ]
+    "spams",
+    2.5
   ],
   "Shade of light purple: l _ _ a c": [
-    [
-      "ender",
-      0.5
-    ]
+    "ender",
+    0.5
   ],
   "Studio that was acquired by Disney in 2006: p _ _ _ _": [
-    [
-      "pixar",
-      2.5
-    ]
+    "pixar",
+    2.5
   ],
   "Counterpart to poetry: p _ _ _ e": [
-    [
-      "prose",
-      4.0
-    ]
+    "prose",
+    4.0
   ],
   "Counterpart to poetry: p _ _ s e": [
-    [
-      "prose",
-      3.5
-    ]
+    "prose",
+    3.5
   ],
   "Studio that was acquired by Disney in 2006: p _ x _ _": [
-    [
-      "pixar",
-      3.0
-    ]
+    "pixar",
+    3.0
   ],
   "Studio that was acquired by Disney in 2006: p i _ _ _": [
-    [
-      "pixar",
-      3.0
-    ]
+    "pixar",
+    3.0
   ],
   "Studio that was acquired by Disney in 2006: p i x _ _": [
-    [
-      "pixar",
-      5.0
-    ]
+    "pixar",
+    5.0
   ],
   "Counterpart to poetry: p _ o _ e": [
-    [
-      "prose",
-      3.5
-    ]
+    "prose",
+    3.5
   ],
   "\"See you all later\": i _ _ _ t": [
-    [
-      "odbye",
-      3.0
-    ]
+    "odbye",
+    3.0
   ],
   "High flier?: _ _ r _ _": [
-    [
-      "tayer",
-      1.5
-    ]
+    "tayer",
+    1.5
   ],
   "Zero-calorie drink: _ _ a _ _": [
-    [
-      "seltz",
-      0.7
-    ]
+    "seltz",
+    0.7
   ],
   "Sweetness or sourness: _ _ s _ e": [
-    [
-      "taste",
-      2.5
-    ]
+    "taste",
+    2.5
   ],
   "They work around the clock: _ _ r _ s": [
-    [
-      "urses",
-      2.900000000000001
-    ]
+    "urses",
+    2.900000000000001
   ],
   "Nevada senator Jacky: r o s e r": [
-    [
-      "rosen",
-      1.6000000000000003
-    ]
+    "rosen",
+    1.6000000000000003
   ],
   "They work around the clock: h _ r _ s": [
-    [
-      "hours",
-      3.5
-    ]
+    "hours",
+    3.5
   ],
   "They work around the clock: _ _ r d _": [
-    [
-      "night",
-      2.0
-    ]
+    "night",
+    2.0
   ]
 }

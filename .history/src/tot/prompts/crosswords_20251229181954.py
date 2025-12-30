@@ -355,10 +355,10 @@ H2O; to irrigate: w _ _ _ r
 Constraint: Do NOT propose the following words: N/A
 
 **Your Output:**
-The letter constraint is: 5 letters, letter 1 is w, letter 5 is r.
-Some possible words that mean "H2O; to irrigate":
-water: 5 letters, letter 1 is w, letter 5 is r. fit!
-water (high)
+The letter constraint is: 5 letters, letter 1 is w, letter 3 is o, letter 5 is g.
+Some possible words that mean "Incorrect; to injure":
+wrong: 5 letters, letter 1 is w, letter 3 is o, letter 5 is g. fit!
+wrong (high)
 '''
 
 user_propose_one_prompt = '''

@@ -372,6 +372,14 @@ def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = False, do_vali
             start_y = pruned_y
             
         info = task.test_output(idx, sol_y)
+
+        # results.append({
+        #     'idx': idx,
+        #     'depth': depth,
+        #     'nodes': nodes,
+        #     'y': sol_y,
+        #     'info': info
+        # })
         print(f"__state__ {states}")
         
         print(f"__my ans_ \n" + sol_y)

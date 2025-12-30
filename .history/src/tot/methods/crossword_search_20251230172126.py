@@ -319,73 +319,73 @@ def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = False, do_vali
         PROPOSE_MODE = 'gpt'
         PROPOSE_CACHE = FileCache("crossword_propose_cache_gpt.json")
     
-    try:
-        x = task.get_input(idx)  # input
-        
-        correct_words = task.env.ans_gt
-        
-        print("__Correct Answer Key__")
-        
-        print("Horizontal:")
-        for i in range(5):
-            print(f"  h{i+1}. {correct_words[i]}")
+    x = task.get_input(idx)  # input
+    
+    correct_words = task.env.ans_gt
+    
+    print("__Correct Answer Key__")
+    
+    print("Horizontal:")
+    for i in range(5):
+        print(f"  h{i+1}. {correct_words[i]}")
 
-        print("Vertical:")
-        for i in range(5, 10):
-            print(f"  v{i-5+1}. {correct_words[i]}")
-        
-        print(f'x = {x}\n')
-        
-        start_y = "Output:\n" + "\n".join(["_ _ _ _ _"]*5) + "\n"
-        all_states = []
-        gpt_eval_results = []
-        iteration_details = [] 
+    print("Vertical:")
+    for i in range(5, 10):
+        print(f"  v{i-5+1}. {correct_words[i]}")
+    
+    print(f'x = {x}\n')
+    
+    start_y = "Output:\n" + "\n".join(["_ _ _ _ _"]*5) + "\n"
+    all_states = []
+    gpt_eval_results = []
+    iteration_details = [] 
 
-        max_iterations = 3
+    max_iterations = 3
 
-        for i in range(max_iterations):
-            
-            sol_idx, sol_y, depth, states, nodes = reasoning_dfs(task, x, start_grid=start_y, max_depth=12, branch=5, K=5, M=5)
-            all_states.append(states)
-            
-            if not do_validate:
-                iteration_details.append({
-                    "iteration": i + 1,
-                    "llama_result_grid": sol_y,
-                    "gpt_pruned_grid": "N/A (Validation skipped)"
-                })
-                break
-            
-            pruned_y, sure_lst = evaluate(task, x, sol_y)
-            gpt_eval_results.append(sure_lst)
-            
+    for i in range(max_iterations):
+        
+        sol_idx, sol_y, depth, states, nodes = reasoning_dfs(task, x, start_grid=start_y, max_depth=12, branch=5, K=5, M=5)
+        all_states.append(states)
+        
+        if not do_validate:
             iteration_details.append({
                 "iteration": i + 1,
                 "llama_result_grid": sol_y,
-                "gpt_pruned_grid": pruned_y
+                "gpt_pruned_grid": "N/A (Validation skipped)"
             })
-                    
-            if pruned_y == sol_y:
-                print("\nGPT pruning resulted in no changes. Halting refinement.")
-                break
-            
-            start_y = pruned_y
-            
-        info = task.test_output(idx, sol_y)
-        print(f"__state__ {states}")
+            break
         
-        print(f"__my ans_ \n" + sol_y)
+        pruned_y, sure_lst = evaluate(task, x, sol_y)
+        gpt_eval_results.append(sure_lst)
         
+        iteration_details.append({
+            "iteration": i + 1,
+            "llama_result_grid": sol_y,
+            "gpt_pruned_grid": pruned_y
+        })
+                
+        if pruned_y == sol_y:
+            print("\nGPT pruning resulted in no changes. Halting refinement.")
+            break
+        
+        start_y = pruned_y
+        
+    info = task.test_output(idx, sol_y)
 
-        print(f"[{idx}] depth={depth} nodes={nodes}  r_word={info['r_word']:.3f}  r_letter={info['r_letter']:.3f}  r_game={info['r_game']}")
-        return sol_idx, sol_y, depth, all_states, nodes, gpt_eval_results, iteration_details
-    finally:
-        if os.path.exists(VISITED_CACHE.cache_file):
-            try:
-                os.remove(VISITED_CACHE.cache_file)
-                print(f"[Cleanup] Deleted temporary visited cache: {visited_filename}")
-            except OSError as e:
-                print(f"[Cleanup Error] Could not delete {visited_filename}: {e}")
+    # results.append({
+    #     'idx': idx,
+    #     'depth': depth,
+    #     'nodes': nodes,
+    #     'y': sol_y,
+    #     'info': info
+    # })
+    print(f"__state__ {states}")
+    
+    print(f"__my ans_ \n" + sol_y)
+    
+
+    print(f"[{idx}] depth={depth} nodes={nodes}  r_word={info['r_word']:.3f}  r_letter={info['r_letter']:.3f}  r_game={info['r_game']}")
+    return sol_idx, sol_y, depth, all_states, nodes, gpt_eval_results, iteration_details
 
 def get_time():
     global propose_num, propose_time, value_num, value_time

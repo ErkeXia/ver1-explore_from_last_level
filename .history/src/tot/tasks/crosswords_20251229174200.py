@@ -217,16 +217,8 @@ class MiniCrosswordsTask(Task):
         self.set_status(x, y)
         return system_propose_prompt, user_propose_prompt.format(input=self.env.render(), board = y)
     
-    def propose_one_instruct_prompt_wrap(self, line: str, avoid_words: list = None):
-        prompt_input = line
-        if avoid_words and len(avoid_words) > 0:
-            avoid_str = ", ".join(avoid_words)
-            # Insert the constraint before "Your Output:"
-            constraint_text = f"\nConstraint: Do NOT propose the following words: {avoid_str}\n"
-            prompt_input = prompt_input + constraint_text
-        else:
-            prompt_input = prompt_input + "\nConstraint: Do NOT propose the following words: N/A \n"
-        return system_propose_one_prompt, user_propose_one_prompt.format(input=prompt_input)
+    def propose_one_instruct_prompt_wrap(self, line: str, avoid_words: list = None) -> str:
+        return system_propose_one_prompt, user_propose_one_prompt.format(input=line)
     
     def propose_outputs_unwrap(self, x: str, y: str, outputs: list, n_max_propose: int) -> list:
         confidence_to_value = {'certain': 1, 'high': 0.5, 'medium': 0.2, 'low': 0.1}  # TODO: ad hoc
@@ -254,10 +246,6 @@ class MiniCrosswordsTask(Task):
         proposals_to_scores = {}
         
         for output in outputs:
-            last_line = output.strip().split('\n')[-1].strip().lower()
-            if 'none' in last_line and len(last_line) < 6: # Safety check length to avoid false positives in text
-                return "NONE_SIGNAL"
-            
             # This regex is more flexible, looking for the last instance of the pattern
             pattern = r'([a-zA-Z]{5,5})\s*\((certain|high|medium|low)\)'
             matches = re.findall(pattern, output.lower())

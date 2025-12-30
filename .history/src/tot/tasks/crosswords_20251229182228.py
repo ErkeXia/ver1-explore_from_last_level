@@ -232,6 +232,10 @@ class MiniCrosswordsTask(Task):
         confidence_to_value = {'certain': 1, 'high': 0.5, 'medium': 0.2, 'low': 0.1}  # TODO: ad hoc
         proposals_to_scores = {}
         for output in outputs:
+            last_line = output.strip().split('\n')[-1].strip().lower()
+            if 'none' in last_line and len(last_line) < 6: # Safety check length to avoid false positives in text
+                return "NONE_SIGNAL"
+            
             lines = output.split('\n')
             pattern = r'^([hv][1-5])\. ([a-zA-Z]{5,5}) \((certain|high|medium|low)\).*$'
             for line in lines:
@@ -254,10 +258,6 @@ class MiniCrosswordsTask(Task):
         proposals_to_scores = {}
         
         for output in outputs:
-            last_line = output.strip().split('\n')[-1].strip().lower()
-            if 'none' in last_line and len(last_line) < 6: # Safety check length to avoid false positives in text
-                return "NONE_SIGNAL"
-            
             # This regex is more flexible, looking for the last instance of the pattern
             pattern = r'([a-zA-Z]{5,5})\s*\((certain|high|medium|low)\)'
             matches = re.findall(pattern, output.lower())

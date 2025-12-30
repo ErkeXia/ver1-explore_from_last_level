@@ -37,60 +37,37 @@ def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=
     task.set_status(x, y_parent)
     actions = []
     TARGET_CANDIDATES = N
-    
     for i, (ans, data, status) in enumerate(zip(task.env.ans, task.env.data, task.env.status)):
-        if '_' not in ans: continue
-
         position = f"h{i+1}" if i < 5 else f"v{i-5+1}"
         ans = ' '.join(ans.lower())
         line = f'{data}: {ans}'
         
-        # 1. Retrieve existing proposals (List of [word, score] lists)
-        # We use empty list [] default if nothing cached
-        cached_list = PROPOSE_CACHE.get(line) or []
-        
-        # Extract just the words for the "avoid list"
-        existing_words = [item[0] for item in cached_list]
-        
-        # 2. Check if we need more proposals
-        attempts = 0
-        MAX_RETRIES = TARGET_CANDIDATES
-        
-        while len(cached_list) < TARGET_CANDIDATES and attempts < MAX_RETRIES:
-            system_prompt, user_prompt = task.propose_one_instruct_prompt_wrap(line, avoid_words=existing_words)
-            
-            if PROPOSE_MODE == 'gpt':
-                 full_prompt = f"{system_prompt}\n\n{user_prompt}"
-                 raw = gpt(full_prompt, n=1, stop=None, max_tokens=200)
-                 print(f"raw proposals from GPT {raw} for line {line}")
-            else:
-                 raw = llama_instruct(user_prompt, system_prompt, n=1, stop=None, max_tokens=200)
-                 print(f"raw proposals from SLM {raw} for line {line}")
-            
-            y_action = task.propose_one_outputs_unwrap(x, y_parent, raw)
-            
-            # --- NEW LOGIC START ---
-            if y_action == "NONE_SIGNAL":
-                print(f"  - Model indicated no more valid words for {position}.")
-                break # Stop trying to generate more words for this line
-            # --- NEW LOGIC END ---
-            
-            if y_action:
-                word, score = y_action
-                if word not in existing_words:
-                    cached_list.append([word, score])
-                    existing_words.append(word)
-                    PROPOSE_CACHE.set(line, cached_list)
-                    print(f"  + New proposal found for {position}: {word}")
-                else:
-                    print(f"  - Model repeated existing word: {word}")
-            
-            attempts += 1
-            
-        # 3. Add all cached proposals (old + new) to the current actions list
-        for word, score in cached_list:
+        cached_result = PROPOSE_CACHE.get(line)
+        if cached_result:
+            word, score = cached_result
             full_action = f"{position}. {word}"
             actions.append((full_action, score))
+            continue
+        
+        system_prompt, user_prompt = task.propose_one_instruct_prompt_wrap(line)
+        
+        if PROPOSE_MODE == 'gpt':
+             # For GPT, combine prompts into one
+             full_prompt = f"{system_prompt}\n\n{user_prompt}"
+             raw = gpt(full_prompt, n=K, stop=None, max_tokens=200)
+             print(f"raw proposals from GPT {raw} for line {line}")
+        else:
+             # For SLM (Llama), use the instruct wrapper with separate prompts
+             raw = llama_instruct(user_prompt, system_prompt, n=K, stop=None, max_tokens=200)
+             print(f"raw proposals from SLM {raw} for line {line}")
+        
+        y_action = task.propose_one_outputs_unwrap(x, y_parent, raw)
+        
+        if y_action:
+            word, score = y_action
+            full_action = f"{position}. {word}"
+            actions.append((full_action, score))
+            PROPOSE_CACHE.set(line, (word, score))
             
     valid_actions = []
     for action, score in actions:
@@ -306,8 +283,7 @@ def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = False, do_vali
     global PROPOSE_CACHE, PROPOSE_MODE, VISITED_CACHE
 
     gpt = partial(gpt, model=args.backend, temperature=args.temperature)
-    visited_filename = f"temp_visited_nodes_{idx}.json"
-    VISITED_CACHE = FileCache(visited_filename)
+    VISITED_CACHE = FileCache(f"visited_nodes_{idx}.json")
     
     if slm and slm.lower() != 'gpt':
         print(f"\n[Config] Setting proposal mode to SLM: {slm}")
@@ -319,73 +295,73 @@ def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = False, do_vali
         PROPOSE_MODE = 'gpt'
         PROPOSE_CACHE = FileCache("crossword_propose_cache_gpt.json")
     
-    try:
-        x = task.get_input(idx)  # input
-        
-        correct_words = task.env.ans_gt
-        
-        print("__Correct Answer Key__")
-        
-        print("Horizontal:")
-        for i in range(5):
-            print(f"  h{i+1}. {correct_words[i]}")
+    x = task.get_input(idx)  # input
+    
+    correct_words = task.env.ans_gt
+    
+    print("__Correct Answer Key__")
+    
+    print("Horizontal:")
+    for i in range(5):
+        print(f"  h{i+1}. {correct_words[i]}")
 
-        print("Vertical:")
-        for i in range(5, 10):
-            print(f"  v{i-5+1}. {correct_words[i]}")
-        
-        print(f'x = {x}\n')
-        
-        start_y = "Output:\n" + "\n".join(["_ _ _ _ _"]*5) + "\n"
-        all_states = []
-        gpt_eval_results = []
-        iteration_details = [] 
+    print("Vertical:")
+    for i in range(5, 10):
+        print(f"  v{i-5+1}. {correct_words[i]}")
+    
+    print(f'x = {x}\n')
+    
+    start_y = "Output:\n" + "\n".join(["_ _ _ _ _"]*5) + "\n"
+    all_states = []
+    gpt_eval_results = []
+    iteration_details = [] 
 
-        max_iterations = 3
+    max_iterations = 3
 
-        for i in range(max_iterations):
-            
-            sol_idx, sol_y, depth, states, nodes = reasoning_dfs(task, x, start_grid=start_y, max_depth=12, branch=5, K=5, M=5)
-            all_states.append(states)
-            
-            if not do_validate:
-                iteration_details.append({
-                    "iteration": i + 1,
-                    "llama_result_grid": sol_y,
-                    "gpt_pruned_grid": "N/A (Validation skipped)"
-                })
-                break
-            
-            pruned_y, sure_lst = evaluate(task, x, sol_y)
-            gpt_eval_results.append(sure_lst)
-            
+    for i in range(max_iterations):
+        
+        sol_idx, sol_y, depth, states, nodes = reasoning_dfs(task, x, start_grid=start_y, max_depth=12, branch=5, K=5, M=5)
+        all_states.append(states)
+        
+        if not do_validate:
             iteration_details.append({
                 "iteration": i + 1,
                 "llama_result_grid": sol_y,
-                "gpt_pruned_grid": pruned_y
+                "gpt_pruned_grid": "N/A (Validation skipped)"
             })
-                    
-            if pruned_y == sol_y:
-                print("\nGPT pruning resulted in no changes. Halting refinement.")
-                break
-            
-            start_y = pruned_y
-            
-        info = task.test_output(idx, sol_y)
-        print(f"__state__ {states}")
+            break
         
-        print(f"__my ans_ \n" + sol_y)
+        pruned_y, sure_lst = evaluate(task, x, sol_y)
+        gpt_eval_results.append(sure_lst)
         
+        iteration_details.append({
+            "iteration": i + 1,
+            "llama_result_grid": sol_y,
+            "gpt_pruned_grid": pruned_y
+        })
+                
+        if pruned_y == sol_y:
+            print("\nGPT pruning resulted in no changes. Halting refinement.")
+            break
+        
+        start_y = pruned_y
+        
+    info = task.test_output(idx, sol_y)
 
-        print(f"[{idx}] depth={depth} nodes={nodes}  r_word={info['r_word']:.3f}  r_letter={info['r_letter']:.3f}  r_game={info['r_game']}")
-        return sol_idx, sol_y, depth, all_states, nodes, gpt_eval_results, iteration_details
-    finally:
-        if os.path.exists(VISITED_CACHE.cache_file):
-            try:
-                os.remove(VISITED_CACHE.cache_file)
-                print(f"[Cleanup] Deleted temporary visited cache: {visited_filename}")
-            except OSError as e:
-                print(f"[Cleanup Error] Could not delete {visited_filename}: {e}")
+    # results.append({
+    #     'idx': idx,
+    #     'depth': depth,
+    #     'nodes': nodes,
+    #     'y': sol_y,
+    #     'info': info
+    # })
+    print(f"__state__ {states}")
+    
+    print(f"__my ans_ \n" + sol_y)
+    
+
+    print(f"[{idx}] depth={depth} nodes={nodes}  r_word={info['r_word']:.3f}  r_letter={info['r_letter']:.3f}  r_game={info['r_game']}")
+    return sol_idx, sol_y, depth, all_states, nodes, gpt_eval_results, iteration_details
 
 def get_time():
     global propose_num, propose_time, value_num, value_time

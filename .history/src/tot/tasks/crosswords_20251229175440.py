@@ -225,7 +225,7 @@ class MiniCrosswordsTask(Task):
             constraint_text = f"\nConstraint: Do NOT propose the following words: {avoid_str}\n"
             prompt_input = prompt_input + constraint_text
         else:
-            prompt_input = prompt_input + "\nConstraint: Do NOT propose the following words: N/A \n"
+            prompt_input = prompt_input + "\n" + 
         return system_propose_one_prompt, user_propose_one_prompt.format(input=prompt_input)
     
     def propose_outputs_unwrap(self, x: str, y: str, outputs: list, n_max_propose: int) -> list:
@@ -254,10 +254,6 @@ class MiniCrosswordsTask(Task):
         proposals_to_scores = {}
         
         for output in outputs:
-            last_line = output.strip().split('\n')[-1].strip().lower()
-            if 'none' in last_line and len(last_line) < 6: # Safety check length to avoid false positives in text
-                return "NONE_SIGNAL"
-            
             # This regex is more flexible, looking for the last instance of the pattern
             pattern = r'([a-zA-Z]{5,5})\s*\((certain|high|medium|low)\)'
             matches = re.findall(pattern, output.lower())
