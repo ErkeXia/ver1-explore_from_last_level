@@ -173,7 +173,8 @@ class MiniCrosswordsTask(Task):
         self.steps = 10  # TODO: variable steps??
         self.cache_proposals = {}
         self.value_caches = {}
-        self.eval_cache = FileCache("gpt3_5_evaluation.json")
+        self.eval_cache_gpt = FileCache("gpt3_5_evaluation.json")
+        self.eval_cache_llama = FileCache("llama_evaluation.json")
 
     def __len__(self) -> int:
         return len(self.env)
@@ -342,7 +343,7 @@ class MiniCrosswordsTask(Task):
 
         return True # No conflicts found and not an exact match
     
-    def evaluate(self, x: str, y: str, n_evaluate_sample: int, model: str = 'llama') -> int:
+    def score(self, x: str, y: str, n_evaluate_sample: int, model: str = 'llama') -> int:
         self.set_status(x, y)
         count = {'sure': 0, 'maybe': 0, 'impossible': 0}
         
@@ -384,6 +385,36 @@ class MiniCrosswordsTask(Task):
         print(count)
         return count
     
+    def evaluate_state(self, x: str, y: str, model: str = 'llama') -> list:
+        self.set_status(x, y)
+        sure_lst = []
+        for i, (ans, data, status) in enumerate(zip(self.env.ans, self.env.data, self.env.status)):
+            ans = ' '.join(ans.lower())
+            line = f'{data}: {ans}'
+            if 'gpt' in model.lower():
+                res = self.eval_cache_gpt.get(line)
+                if res is None:
+                    prompt = value_prompt.format(input=line)
+                    res = gpt(prompt)[0]
+                    self.eval_cache_gpt.set(line, res)
+            else:
+                res = self.eval_cache_llama.get(line)
+                if res is None:
+                    user_prompt = user_value_prompt.format(input=line)
+                    res = llama_instruct(user_prompt, system_value_prompt)[0].strip().lower()
+                    self.eval_cache_llama.set(line, res)
+                
+            print(line)
+            print(res)
+            print()
+            res = res.split('\n')[-1].strip()
+            if res == 'sure':
+                sure_lst.append(i)
+            if res == 'impossible':
+                return None
+        print(sure_lst)
+        return sure_lst
+    
     def gpt_evaluate(self, x: str, y: str) -> list:
         self.set_status(x, y)
         sure_lst = []
@@ -403,8 +434,6 @@ class MiniCrosswordsTask(Task):
             res = res.split('\n')[-1].strip()
             if res == 'sure':
                 sure_lst.append(i)
-            if res == 'impossible':
-                return None
         print(sure_lst)
         return sure_lst
     

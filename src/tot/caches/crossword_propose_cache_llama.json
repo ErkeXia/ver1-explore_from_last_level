@@ -3783,60 +3783,180 @@
     [
       "xpels",
       2.3000000000000007
+    ],
+    [
+      "expel",
+      0.5
+    ],
+    [
+      "blows",
+      0.4
+    ],
+    [
+      "blast",
+      0.5
+    ],
+    [
+      "flung",
+      0.5
     ]
   ],
   "Violet shade named for a flower: _ _ _ _ _": [
     [
       "lilac",
       3.6000000000000023
+    ],
+    [
+      "mauve",
+      0.2
+    ],
+    [
+      "avend",
+      3.3000000000000016
     ]
   ],
   "Crème de la crème: _ _ _ _ _": [
     [
       "cream",
       2.5
+    ],
+    [
+      "elite",
+      0.5
+    ],
+    [
+      "finis",
+      0.6
     ]
   ],
   "Baker's thirteen: _ _ _ _ _": [
     [
       "akers",
       3.2000000000000015
+    ],
+    [
+      "ights",
+      1.0
+    ],
+    [
+      "pawns",
+      0.5
+    ],
+    [
+      "dozen",
+      0.5
+    ],
+    [
+      "ozens",
+      0.5
     ]
   ],
   "Gaze intently: _ _ _ _ _": [
     [
       "stare",
       3.0
+    ],
+    [
+      "glare",
+      0.5
+    ],
+    [
+      "gazed",
+      0.2
+    ],
+    [
+      "stern",
+      0.2
+    ],
+    [
+      "gawks",
+      0.5
     ]
   ],
   "Goes downhill: _ _ _ _ _": [
     [
       "deter",
       2.5
+    ],
+    [
+      "slump",
+      0.5
+    ],
+    [
+      "slide",
+      0.2
+    ],
+    [
+      "scend",
+      0.1
     ]
   ],
   "High flier?: _ _ _ _ _": [
     [
       "angel",
       1.5
+    ],
+    [
+      "irman",
+      3.3000000000000016
+    ],
+    [
+      "plane",
+      0.5
+    ],
+    [
+      "birdy",
+      0.5
     ]
   ],
   "\"Hamilton\" sister who sings \"Burn\": _ _ _ _ _": [
     [
       "inlin",
       3.3000000000000016
+    ],
+    [
+      "eliza",
+      1.0
+    ],
+    [
+      "elica",
+      0.5
+    ],
+    [
+      "angel",
+      1.0
     ]
   ],
   "Zero-calorie drink: _ _ _ _ _": [
     [
       "seltz",
       0.4
+    ],
+    [
+      "dietz",
+      0.5
+    ],
+    [
+      "water",
+      0.5
     ]
   ],
   "Act I, ___ I: _ _ _ _ _": [
     [
       "scene",
       1.5
+    ],
+    [
+      "ctone",
+      0.1
+    ],
+    [
+      "actin",
+      0.2
+    ],
+    [
+      "first",
+      0.5
     ]
   ],
   "Crème de la crème: c r e a m": [
@@ -4065,60 +4185,192 @@
     [
       "falls",
       1.0
+    ],
+    [
+      "slope",
+      0.5
+    ],
+    [
+      "slump",
+      0.2
+    ],
+    [
+      "slant",
+      0.5
+    ],
+    [
+      "llier",
+      0.1
     ]
   ],
   "High flier?: _ i _ _ _": [
     [
       "angel",
       2.5
+    ],
+    [
+      "birdy",
+      0.2
+    ],
+    [
+      "airie",
+      0.5
+    ],
+    [
+      "aerie",
+      0.5
+    ],
+    [
+      "flier",
+      0.5
     ]
   ],
   "\"Hamilton\" sister who sings \"Burn\": _ l _ _ _": [
     [
       "licia",
       1.0
+    ],
+    [
+      "alina",
+      0.1
+    ],
+    [
+      "aless",
+      0.1
     ]
   ],
   "Zero-calorie drink: _ a _ _ _": [
     [
       "seltz",
       0.7
+    ],
+    [
+      "water",
+      0.5
     ]
   ],
   "Act I, ___ I: _ c _ _ _": [
     [
       "scene",
       3.0
+    ],
+    [
+      "ction",
+      0.5
+    ],
+    [
+      "actio",
+      0.1
     ]
   ],
   "Goes downhill: _ l _ _ s": [
     [
       "slows",
       1.2
+    ],
+    [
+      "slips",
+      0.5
+    ],
+    [
+      "falls",
+      0.5
+    ],
+    [
+      "slump",
+      0.2
+    ],
+    [
+      "slope",
+      0.2
     ]
   ],
   "High flier?: _ i _ _ t": [
     [
       "itude",
       3.600000000000002
+    ],
+    [
+      "aglet",
+      0.5
+    ],
+    [
+      "eight",
+      1.0
+    ],
+    [
+      "aerit",
+      0.7999999999999999
+    ],
+    [
+      "elite",
+      0.2
     ]
   ],
   "\"Hamilton\" sister who sings \"Burn\": _ l _ _ a": [
     [
       "licia",
       4.500000000000002
+    ],
+    [
+      "alina",
+      0.5
+    ],
+    [
+      "ndsay",
+      0.5
+    ],
+    [
+      "eliza",
+      1.0
+    ],
+    [
+      "elica",
+      0.5
     ]
   ],
   "Act I, ___ I: _ c _ _ e": [
     [
       "scene",
       4.0
+    ],
+    [
+      "actie",
+      0.1
+    ],
+    [
+      "excer",
+      0.2
+    ],
+    [
+      "irste",
+      0.1
+    ],
+    [
+      "actio",
+      0.30000000000000004
     ]
   ],
   "Ejects forcefully: _ _ _ _ s": [
     [
       "kicks",
       1.5
+    ],
+    [
+      "blows",
+      0.5
+    ],
+    [
+      "press",
+      1.0
+    ],
+    [
+      "sends",
+      0.5
+    ],
+    [
+      "hrows",
+      0.5
     ]
   ],
   "Crème de la crème: _ _ _ _ e": [
@@ -4131,30 +4383,106 @@
     [
       "rains",
       1.1
+    ],
+    [
+      "dozen",
+      0.2
+    ],
+    [
+      "score",
+      0.2
+    ],
+    [
+      "baker",
+      0.2
+    ],
+    [
+      "trinn",
+      1.5000000000000002
     ]
   ],
   "Zero-calorie drink: _ a _ _ r": [
     [
       "iater",
       2.600000000000001
+    ],
+    [
+      "dieta",
+      0.5
+    ],
+    [
+      "dietr",
+      0.5
+    ],
+    [
+      "odaar",
+      0.1
+    ],
+    [
+      "deter",
+      0.1
     ]
   ],
   "Ejects forcefully: _ _ _ i s": [
     [
       "kicks",
       2.5
+    ],
+    [
+      "hurls",
+      0.5
+    ],
+    [
+      "blast",
+      0.5
+    ],
+    [
+      "spits",
+      0.7
+    ],
+    [
+      "blows",
+      0.5
     ]
   ],
   "Crème de la crème: _ _ _ t e": [
     [
       "elite",
       2.0
+    ],
+    [
+      "cream",
+      1.0
+    ],
+    [
+      "creme",
+      0.1
+    ],
+    [
+      "rater",
+      0.5
     ]
   ],
   "Baker's thirteen: _ _ _ e n": [
     [
       "baker",
       2.1
+    ],
+    [
+      "akers",
+      0.5
+    ],
+    [
+      "dozen",
+      0.5
+    ],
+    [
+      "score",
+      0.5
+    ],
+    [
+      "baken",
+      0.1
     ]
   ],
   "Zero-calorie drink: i a t e r": [
@@ -4293,6 +4621,22 @@
     [
       "threw",
       1.5
+    ],
+    [
+      "kicks",
+      0.2
+    ],
+    [
+      "blows",
+      0.5
+    ],
+    [
+      "hurls",
+      0.5
+    ],
+    [
+      "puffs",
+      0.2
     ]
   ],
   "Crème de la crème: _ _ _ t _": [
@@ -4305,6 +4649,22 @@
     [
       "knife",
       1.0
+    ],
+    [
+      "trays",
+      0.6
+    ],
+    [
+      "baker",
+      1.0
+    ],
+    [
+      "dozen",
+      0.2
+    ],
+    [
+      "akers",
+      0.5
     ]
   ],
   "Ejects forcefully: _ _ l _ _": [
@@ -7761,6 +8121,450 @@
     [
       "night",
       2.0
+    ]
+  ],
+  "Goes downhill: s l _ _ s": [
+    [
+      "slips",
+      0.5
+    ],
+    [
+      "slope",
+      0.5
+    ],
+    [
+      "slump",
+      0.5
+    ],
+    [
+      "slous",
+      0.1
+    ]
+  ],
+  "High flier?: e i _ _ t": [
+    [
+      "eagle",
+      0.5
+    ],
+    [
+      "elite",
+      0.5
+    ],
+    [
+      "eject",
+      0.5
+    ],
+    [
+      "semit",
+      0.1
+    ]
+  ],
+  "\"Hamilton\" sister who sings \"Burn\": n l _ _ a": [
+    [
+      "linna",
+      0.2
+    ],
+    [
+      "laina",
+      0.5
+    ],
+    [
+      "alina",
+      0.5
+    ],
+    [
+      "liana",
+      0.2
+    ],
+    [
+      "linla",
+      0.1
+    ]
+  ],
+  "Zero-calorie drink: d a _ _ r": [
+    [
+      "dairy",
+      0.5
+    ],
+    [
+      "deter",
+      0.2
+    ],
+    [
+      "daler",
+      0.4
+    ],
+    [
+      "ietar",
+      0.1
+    ]
+  ],
+  "Crème de la crème: i _ _ _ e": [
+    [
+      "elite",
+      0.5
+    ],
+    [
+      "image",
+      0.2
+    ]
+  ],
+  "Baker's thirteen: p _ _ _ n": [
+    [
+      "entin",
+      0.1
+    ],
+    [
+      "piano",
+      1.0
+    ],
+    [
+      "pound",
+      0.5
+    ],
+    [
+      "piern",
+      0.1
+    ],
+    [
+      "pizen",
+      0.1
+    ]
+  ],
+  "Ejects forcefully: s _ _ _ s": [
+    [
+      "kicks",
+      0.5
+    ],
+    [
+      "sends",
+      0.5
+    ],
+    [
+      "press",
+      0.5
+    ],
+    [
+      "spews",
+      0.5
+    ]
+  ],
+  "High flier?: p i _ _ t": [
+    [
+      "light",
+      0.5
+    ],
+    [
+      "pirot",
+      0.1
+    ],
+    [
+      "pilot",
+      1.0
+    ],
+    [
+      "piets",
+      1.2
+    ],
+    [
+      "pirit",
+      0.1
+    ]
+  ],
+  "\"Hamilton\" sister who sings \"Burn\": e l _ _ a": [
+    [
+      "elena",
+      0.5
+    ],
+    [
+      "eliza",
+      0.5
+    ],
+    [
+      "elisa",
+      0.2
+    ]
+  ],
+  "Zero-calorie drink: w a _ _ r": [
+    [
+      "water",
+      0.5
+    ],
+    [
+      "sugar",
+      0.1
+    ],
+    [
+      "dieta",
+      0.1
+    ],
+    [
+      "dietr",
+      0.1
+    ],
+    [
+      "ieter",
+      0.5
+    ]
+  ],
+  "Crème de la crème: i _ i _ e": [
+    [
+      "rimie",
+      1.2
+    ],
+    [
+      "criie",
+      2.9000000000000012
+    ],
+    [
+      "elite",
+      0.5
+    ],
+    [
+      "crime",
+      0.5
+    ]
+  ],
+  "Baker's thirteen: p _ z _ n": [
+    [
+      "pizza",
+      0.1
+    ],
+    [
+      "iezen",
+      0.1
+    ],
+    [
+      "pizen",
+      0.2
+    ],
+    [
+      "izzas",
+      0.1
+    ],
+    [
+      "ieszn",
+      0.1
+    ]
+  ],
+  "Ejects forcefully: s _ e _ s": [
+    [
+      "eizes",
+      0.5
+    ],
+    [
+      "seems",
+      0.2
+    ],
+    [
+      "sends",
+      0.2
+    ],
+    [
+      "snees",
+      0.2
+    ],
+    [
+      "seeds",
+      0.5
+    ]
+  ],
+  "Ejects forcefully: _ _ e _ s": [
+    [
+      "xpels",
+      1.6000000000000003
+    ]
+  ],
+  "Crème de la crème: _ _ i _ e": [
+    [
+      "elite",
+      0.5
+    ],
+    [
+      "cream",
+      0.5
+    ]
+  ],
+  "Baker's thirteen: _ _ z _ n": [
+    [
+      "bizen",
+      0.1
+    ],
+    [
+      "pizza",
+      0.5
+    ]
+  ],
+  "Ejects forcefully: _ _ a _ s": [
+    [
+      "xpels",
+      0.1
+    ],
+    [
+      "casts",
+      0.5
+    ],
+    [
+      "expel",
+      0.5
+    ],
+    [
+      "hurls",
+      0.5
+    ]
+  ],
+  "Baker's thirteen: _ _ n _ n": [
+    [
+      "baker",
+      1.0
+    ],
+    [
+      "banns",
+      1.0
+    ]
+  ],
+  "Ejects forcefully: _ _ e i _": [
+    [
+      "kicks",
+      0.5
+    ],
+    [
+      "eject",
+      0.5
+    ],
+    [
+      "threw",
+      0.5
+    ],
+    [
+      "sieve",
+      0.5
+    ],
+    [
+      "expel",
+      0.5
+    ]
+  ],
+  "Crème de la crème: _ _ i t _": [
+    [
+      "elite",
+      0.5
+    ],
+    [
+      "cream",
+      0.5
+    ],
+    [
+      "crite",
+      0.5
+    ]
+  ],
+  "Baker's thirteen: _ _ z e _": [
+    [
+      "pizza",
+      0.5
+    ],
+    [
+      "fazes",
+      0.2
+    ],
+    [
+      "baker",
+      0.1
+    ],
+    [
+      "rozen",
+      0.1
+    ],
+    [
+      "cardz",
+      0.1
+    ]
+  ],
+  "Ejects forcefully: s _ _ i _": [
+    [
+      "spits",
+      0.5
+    ],
+    [
+      "sling",
+      0.5
+    ],
+    [
+      "spews",
+      0.5
+    ],
+    [
+      "sends",
+      0.5
+    ],
+    [
+      "sings",
+      0.5
+    ]
+  ],
+  "Crème de la crème: i _ _ t _": [
+    [
+      "elite",
+      0.1
+    ],
+    [
+      "crite",
+      0.2
+    ],
+    [
+      "cream",
+      0.5
+    ],
+    [
+      "tself",
+      0.5
+    ],
+    [
+      "ntact",
+      0.5
+    ]
+  ],
+  "Baker's thirteen: p _ _ e _": [
+    [
+      "pieno",
+      0.1
+    ],
+    [
+      "peeps",
+      0.5
+    ],
+    [
+      "ieone",
+      0.2
+    ],
+    [
+      "piece",
+      1.0
+    ],
+    [
+      "pound",
+      0.5
+    ]
+  ],
+  "Ejects forcefully: _ _ a i _": [
+    [
+      "casts",
+      1.0
+    ],
+    [
+      "blast",
+      0.5
+    ],
+    [
+      "expel",
+      1.0
+    ]
+  ],
+  "Baker's thirteen: _ _ n e _": [
+    [
+      "knife",
+      0.5
     ]
   ]
 }

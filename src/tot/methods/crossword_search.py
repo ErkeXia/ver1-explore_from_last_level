@@ -116,7 +116,7 @@ def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=
         # --- Evaluate with GPT and filter invalid grids ---
         # gpt_evaluate returns None if "impossible" is found in any line
         print(f"possible action {action_line}")
-        eval_result = task.gpt_evaluate(x, y_child)
+        eval_result = task.evaluate_state(x, y_child, model = 'gpt')
         if eval_result is None:
             print(f"Child rejected by GPT evaluation: Action '{action_line}' created an impossible state.")
             continue
@@ -138,7 +138,7 @@ def get_values_v1(task, x, ys, n_eval=1):
     vals = []
     for y in ys:
         print(f"Evaluation \n" + y)
-        score_obj = task.evaluate(x, y, n_evaluate_sample=n_eval, model = PROPOSE_MODE)  # {'sure','maybe','impossible'}
+        score_obj = task.score(x, y, n_evaluate_sample=n_eval, model = PROPOSE_MODE)  # {'sure','maybe','impossible'}
         s = score_obj.get('sure', 0)
         m = score_obj.get('maybe', 0)
         i = score_obj.get('impossible', 0)
