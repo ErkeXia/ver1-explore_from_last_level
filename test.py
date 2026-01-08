@@ -47,7 +47,7 @@ with open('output.txt', 'w', buffering=1) as f:
     #     print(x)
         
     start = time.perf_counter()
-    sol_idx, sol_y, depth, states, nodes, gpt_eval_results, iteration_details = solve_v1(args, task, 2, slm = 'llama', do_validate = False, instruct_model_arg = True)
+    sol_idx, sol_y, depth, states, nodes, gpt_eval_results, iteration_details = solve_v1(args, task, 4, slm = 'llama', do_validate = False, instruct_model_arg = True)
     elapsed = time.perf_counter() - start
     print(f"{elapsed:.6f} seconds")
     # if "Answer" in y:

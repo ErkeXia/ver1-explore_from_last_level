@@ -53,42 +53,46 @@ def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=
         existing_words = [item[0] for item in cached_list]
         
         # 2. Check if we need more proposals
-        attempts = 0
-        MAX_RETRIES = TARGET_CANDIDATES
-        
-        print(f"use cache {len(cached_list)} for line {line}\n")
-        
-        while len(cached_list) < TARGET_CANDIDATES and attempts < MAX_RETRIES:
-            system_prompt, user_prompt = task.propose_one_instruct_prompt_wrap(line, avoid_words=existing_words)
+        if len(existing_words) > 0 and existing_words[-1] == "NONE_SIGNAL":
+            cached_list = cached_list[:-1]
+        elif len(existing_words) <= 1:
+            attempts = 0
+            MAX_RETRIES = TARGET_CANDIDATES
             
-            if PROPOSE_MODE == 'gpt':
-                 full_prompt = f"{system_prompt}\n\n{user_prompt}"
-                 raw = gpt(full_prompt, n=1, stop=None, max_tokens=200)
-                 print(f"raw proposals from GPT {raw} for line {line}")
-            else:
-                 raw = llama_instruct(user_prompt, system_prompt, n=1, stop=None, max_tokens=200)
-                 print(f"raw proposals from SLM {raw} for line {line}")
+            print(f"use cache {len(cached_list)} for line {line}\n")
             
-            y_action = task.propose_one_outputs_unwrap(x, y_parent, raw)
-            
-            # --- NEW LOGIC START ---
-            if y_action == "NONE_SIGNAL":
-                print(f"  - Model indicated no more valid words for {position}.")
-                break # Stop trying to generate more words for this line
-            # --- NEW LOGIC END ---
-            
-            if y_action:
-                word, score = y_action
-                if word not in existing_words:
-                    cached_list.append([word, score])
-                    existing_words.append(word)
-                    PROPOSE_CACHE.set(line, cached_list)
-                    print(f"  + New proposal found for {position}: {word}")
+            while len(cached_list) < TARGET_CANDIDATES and attempts < MAX_RETRIES:
+                system_prompt, user_prompt = task.propose_one_instruct_prompt_wrap(line, avoid_words=existing_words)
+                
+                if PROPOSE_MODE == 'gpt':
+                    full_prompt = f"{system_prompt}\n\n{user_prompt}"
+                    raw = gpt(full_prompt, n=1, stop=None, max_tokens=200)
+                    print(f"raw proposals from GPT {raw} for line {line}")
                 else:
-                    print(f"  - Model repeated existing word: {word}")
-            
-            attempts += 1
-            
+                    raw = llama_instruct(user_prompt, system_prompt, n=1, stop=None, max_tokens=200)
+                    print(f"raw proposals from SLM {raw} for line {line}")
+                
+                y_action = task.propose_one_outputs_unwrap(x, y_parent, raw)
+                
+                # --- NEW LOGIC START ---
+                if y_action == "NONE_SIGNAL":
+                    print(f"  - Model indicated no more valid words for {position}.")
+                    PROPOSE_CACHE.set(line, cached_list + [(y_action, 0)])
+                    break # Stop trying to generate more words for this line
+                # --- NEW LOGIC END ---
+                
+                if y_action:
+                    word, score = y_action
+                    if word not in existing_words:
+                        cached_list.append([word, score])
+                        existing_words.append(word)
+                        PROPOSE_CACHE.set(line, cached_list)
+                        print(f"  + New proposal found for {position}: {word}")
+                    else:
+                        print(f"  - Model repeated existing word: {word}")
+                
+                attempts += 1
+                
         # 3. Add all cached proposals (old + new) to the current actions list
         for word, score in cached_list:
             full_action = f"{position}. {word}"

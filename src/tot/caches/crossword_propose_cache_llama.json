@@ -3005,6 +3005,10 @@
     [
       "elica",
       5.5
+    ],
+    [
+      "pasta",
+      0.5
     ]
   ],
   "More cagey: _ _ _ _ _": [
@@ -3059,6 +3063,10 @@
     [
       "ndard",
       1.0
+    ],
+    [
+      "nderd",
+      0.2
     ]
   ],
   "In no particular order?: _ _ _ _ _": [
@@ -3069,6 +3077,10 @@
     [
       "mixed",
       0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
     ]
   ],
   "Scotch-___ (scouring pad brand): _ _ _ _ _": [
@@ -3079,6 +3091,14 @@
     [
       "otchb",
       0.1
+    ],
+    [
+      "cotch",
+      0.5
+    ],
+    [
+      "scour",
+      0.2
     ]
   ],
   "Irish poet and playwright Wilde: _ _ _ _ _": [
@@ -3092,6 +3112,14 @@
     ],
     [
       "ilder",
+      0.1
+    ],
+    [
+      "woden",
+      0.1
+    ],
+    [
+      "smund",
       0.1
     ]
   ],
@@ -3151,6 +3179,14 @@
     [
       "peras",
       2.2000000000000006
+    ],
+    [
+      "opera",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
     ]
   ],
   "Angel hair, for example: _ a _ _ _": [
@@ -3169,6 +3205,10 @@
     [
       "paghi",
       0.7
+    ],
+    [
+      "aghet",
+      0.1
     ]
   ],
   "More cagey: _ l _ _ _": [
@@ -3182,6 +3222,10 @@
     ],
     [
       "slier",
+      0.5
+    ],
+    [
+      "slant",
       0.5
     ]
   ],
@@ -3661,12 +3705,32 @@
     [
       "spata",
       2.600000000000001
+    ],
+    [
+      "pasta",
+      1.0
+    ],
+    [
+      "atain",
+      3.2000000000000015
     ]
   ],
   "More cagey: _ l _ e r": [
     [
       "shier",
       1.0
+    ],
+    [
+      "slier",
+      0.2
+    ],
+    [
+      "slyer",
+      0.5
+    ],
+    [
+      "ooler",
+      0.5
     ]
   ],
   "___ Rica: _ _ _ _ _": [
@@ -3977,6 +4041,10 @@
     [
       "haqil",
       2.400000000000001
+    ],
+    [
+      "uille",
+      1.0
     ]
   ],
   "Put up with: _ r _ _ _": [
@@ -6939,6 +7007,10 @@
     [
       "muted",
       3.0
+    ],
+    [
+      "muter",
+      0.5
     ]
   ],
   "They work around the clock: h a n d s": [
@@ -7147,6 +7219,14 @@
     [
       "muted",
       3.2
+    ],
+    [
+      "otted",
+      0.1
+    ],
+    [
+      "outed",
+      0.5
     ]
   ],
   "Nevada senator Jacky: _ _ _ _ n": [
@@ -7331,6 +7411,10 @@
     [
       "muted",
       1.0
+    ],
+    [
+      "miced",
+      0.2
     ]
   ],
   "Nevada senator Jacky: _ _ _ e _": [
@@ -8301,6 +8385,18 @@
     [
       "cheep",
       3.0
+    ],
+    [
+      "chirp",
+      0.5
+    ],
+    [
+      "peeps",
+      0.5
+    ],
+    [
+      "heeps",
+      0.1
     ]
   ],
   "Bits of choreography: _ _ _ p _": [
@@ -11285,6 +11381,14 @@
     [
       "rando",
       0.5
+    ],
+    [
+      "radar",
+      0.5
+    ],
+    [
+      "rager",
+      0.5
     ]
   ],
   "Church official: e l _ e _": [
@@ -12469,6 +12573,22 @@
     [
       "sinas",
       0.1
+    ],
+    [
+      "cksin",
+      0.1
+    ],
+    [
+      "eisin",
+      0.1
+    ],
+    [
+      "rosen",
+      0.5
+    ],
+    [
+      "ossin",
+      0.2
     ]
   ],
   "Unable to be heard, on a Zoom call: _ _ t r d": [
@@ -12711,6 +12831,10 @@
     [
       "taste",
       0.5
+    ],
+    [
+      "tater",
+      0.1
     ]
   ],
   "Nevada senator Jacky: r _ _ i _": [
@@ -12933,6 +13057,22 @@
     [
       "roser",
       0.5
+    ],
+    [
+      "osier",
+      2.0000000000000004
+    ],
+    [
+      "nders",
+      0.5
+    ],
+    [
+      "enser",
+      0.7
+    ],
+    [
+      "rosen",
+      0.1
     ]
   ],
   "Bits of choreography: _ _ e _ y": [
@@ -12943,6 +13083,322 @@
     [
       "stepy",
       0.2
+    ]
+  ],
+  "Disney elephant: _ u _ _ w": [
+    [
+      "dumbo",
+      0.5
+    ],
+    [
+      "tuskw",
+      0.2
+    ],
+    [
+      "pumbw",
+      0.1
+    ],
+    [
+      "trump",
+      0.5
+    ]
+  ],
+  "Tech-support callers: _ s _ _ i": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "omers",
+      0.5
+    ],
+    [
+      "techs",
+      0.5
+    ]
+  ],
+  "Mozart's output: _ u _ _ l": [
+    [
+      "music",
+      0.5
+    ],
+    [
+      "march",
+      0.5
+    ],
+    [
+      "peras",
+      4.0
+    ],
+    [
+      "opera",
+      0.5
+    ],
+    [
+      "ussul",
+      0.7999999999999999
+    ]
+  ],
+  "Angel hair, for example: _ a _ _ d": [
+    [
+      "pasta",
+      0.5
+    ],
+    [
+      "angel",
+      0.5
+    ],
+    [
+      "oodle",
+      0.5
+    ]
+  ],
+  "More cagey: _ l _ _ e": [
+    [
+      "slier",
+      0.5
+    ],
+    [
+      "guile",
+      0.5
+    ],
+    [
+      "slyer",
+      0.2
+    ],
+    [
+      "shier",
+      0.5
+    ]
+  ],
+  "Disney elephant: _ u _ b o": [
+    [
+      "trump",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ s _ r s": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "geeks",
+      0.5
+    ],
+    [
+      "serfs",
+      0.5
+    ]
+  ],
+  "Military squad: _ a l _ _": [
+    [
+      "squad",
+      0.5
+    ],
+    [
+      "plato",
+      10.2
+    ]
+  ],
+  "Basketball legend Shaquille: _ p a _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Put up with: _ e y _ _": [
+    [
+      "toler",
+      0.2
+    ],
+    [
+      "entry",
+      0.2
+    ],
+    [
+      "toney",
+      0.2
+    ]
+  ],
+  "Spanish accent mark: _ r e _ _": [
+    [
+      "tilde",
+      1.0
+    ],
+    [
+      "acute",
+      0.5
+    ],
+    [
+      "grave",
+      15.0
+    ]
+  ],
+  "Thespian: _ s d _ _": [
+    [
+      "layer",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Put up with: s _ a n d": [
+    [
+      "stand",
+      0.5
+    ],
+    [
+      "sands",
+      0.2
+    ],
+    [
+      "saint",
+      0.5
+    ],
+    [
+      "sanda",
+      0.5
+    ]
+  ],
+  "Thespian: a _ t o r": [
+    [
+      "actor",
+      1.0
+    ],
+    [
+      "artor",
+      0.5
+    ]
+  ],
+  "Caper: a n t i _": [
+    [
+      "nticy",
+      0.8999999999999999
+    ],
+    [
+      "antic",
+      0.5
+    ]
+  ],
+  "Nevada senator Jacky: _ _ _ i n": [
+    [
+      "echin",
+      0.1
+    ],
+    [
+      "ackin",
+      0.1
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: _ _ _ l d": [
+    [
+      "muted",
+      0.5
+    ],
+    [
+      "ffled",
+      0.2
+    ]
+  ],
+  "Broomstick rider: _ _ _ c h": [
+    [
+      "witch",
+      0.5
+    ],
+    [
+      "oomch",
+      0.2
+    ],
+    [
+      "broom",
+      0.1
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: _ _ _ l _": [
+    [
+      "muted",
+      0.5
+    ],
+    [
+      "ulled",
+      0.2
+    ],
+    [
+      "still",
+      0.5
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: _ _ _ l l": [
+    [
+      "utedl",
+      0.1
+    ],
+    [
+      "muted",
+      1.0
+    ],
+    [
+      "still",
+      0.5
+    ]
+  ],
+  "Bits of choreography: s _ e r s": [
+    [
+      "steps",
+      0.5
+    ],
+    [
+      "erers",
+      0.1
+    ],
+    [
+      "seers",
+      0.5
+    ],
+    [
+      "eries",
+      0.5
+    ]
+  ],
+  "Shapes of some gummy candies: w o o _ _": [
+    [
+      "worms",
+      0.5
+    ],
+    [
+      "edges",
+      0.5
+    ],
+    [
+      "heels",
+      0.5
+    ]
+  ],
+  "\"See you all later\": i m s _ _": [
+    [
+      "msoon",
+      0.1
+    ],
+    [
+      "imese",
+      0.2
+    ],
+    [
+      "imsae",
+      1.5000000000000002
+    ]
+  ],
+  "Broomstick rider: _ _ t _ h": [
+    [
+      "witch",
+      0.5
     ]
   ]
 }
