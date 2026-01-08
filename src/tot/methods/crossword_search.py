@@ -56,6 +56,8 @@ def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=
         attempts = 0
         MAX_RETRIES = TARGET_CANDIDATES
         
+        print(f"use cache {len(cached_list)} for line {line}\n")
+        
         while len(cached_list) < TARGET_CANDIDATES and attempts < MAX_RETRIES:
             system_prompt, user_prompt = task.propose_one_instruct_prompt_wrap(line, avoid_words=existing_words)
             

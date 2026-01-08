@@ -1,0 +1,47 @@
+==================================================
+  Summary for Crossword Problem ID: 3
+==================================================
+
+Refinement Iterations (Explorations): 1
+Total Nodes Explored (All Iterations): 28
+
+--- Hints (Clues) ---
+Horizontal:
+  h1. Painter's protective garment
+  h2. "Toy Story 5" studio
+  h3. Your answer to "Where were you at 9 p.m. last night?", perhaps
+  h4. Tennis star Rafael
+  h5. Solemn sound from a church bell
+Vertical:
+  v1. Defeat soundly, in slang
+  v2. Italian city with a fashion week
+  v3. Iron ___ (rust)
+  v4. Small group of conspirators
+  v5. Food for a baleen whale
+
+--- Correct Answer ---
+S M O C K
+P I X A R
+A L I B I
+N A D A L
+K N E L L
+
+--- Iteration Details ---
+
+--- Iteration 1 ---
+Llama Result Grid (before GPT eval):
+S M O C K
+P I X A R
+A L I B I
+N A D A L
+K N E L L
+
+GPT Pruned Grid (start of next iteration):
+S M O C K
+P I X A R
+A L I B I
+N A D A L
+K N E L L
+
+--- GPT Evaluation Results ---
+Iteration 1: GPT was 'sure' about word indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]

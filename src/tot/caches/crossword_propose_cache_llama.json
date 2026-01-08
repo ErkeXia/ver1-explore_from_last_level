@@ -2931,90 +2931,258 @@
     [
       "dumbo",
       3.5
+    ],
+    [
+      "pachy",
+      0.30000000000000004
+    ],
+    [
+      "trump",
+      0.1
+    ],
+    [
+      "tusks",
+      2.0
+    ],
+    [
+      "mater",
+      0.1
     ]
   ],
   "Tech-support callers: _ _ _ _ _": [
     [
       "users",
       3.5
+    ],
+    [
+      "omers",
+      0.5
+    ],
+    [
+      "techs",
+      0.2
+    ],
+    [
+      "helps",
+      0.2
+    ],
+    [
+      "llers",
+      0.5
     ]
   ],
   "Mozart's output: _ _ _ _ _": [
     [
       "music",
       3.0
+    ],
+    [
+      "peras",
+      0.1
+    ],
+    [
+      "opera",
+      0.5
+    ],
+    [
+      "songs",
+      0.2
+    ],
+    [
+      "mphon",
+      1.0
     ]
   ],
   "Angel hair, for example: _ _ _ _ _": [
     [
       "odles",
       1.0
+    ],
+    [
+      "angel",
+      1.0
+    ],
+    [
+      "elica",
+      5.5
     ]
   ],
   "More cagey: _ _ _ _ _": [
     [
       "agier",
       1.8
+    ],
+    [
+      "shier",
+      0.5
+    ],
+    [
+      "slier",
+      0.5
     ]
   ],
   "Refuse heaps: _ _ _ _ _": [
     [
       "bbish",
       1.1
+    ],
+    [
+      "trash",
+      0.5
+    ],
+    [
+      "mound",
+      0.2
+    ],
+    [
+      "dumps",
+      0.5
+    ],
+    [
+      "mires",
+      0.5
     ]
   ],
   "Standard: _ _ _ _ _": [
     [
       "usual",
       4.3000000000000025
+    ],
+    [
+      "ormal",
+      0.5
+    ],
+    [
+      "norms",
+      0.2
+    ],
+    [
+      "ndard",
+      1.0
     ]
   ],
   "In no particular order?: _ _ _ _ _": [
     [
       "andom",
       4.4
+    ],
+    [
+      "mixed",
+      0.5
     ]
   ],
   "Scotch-___ (scouring pad brand): _ _ _ _ _": [
     [
       "brite",
       3.0
+    ],
+    [
+      "otchb",
+      0.1
     ]
   ],
   "Irish poet and playwright Wilde: _ _ _ _ _": [
     [
       "wilde",
       4.0
+    ],
+    [
+      "oscar",
+      0.5
+    ],
+    [
+      "ilder",
+      0.1
     ]
   ],
   "Disney elephant: _ u _ _ _": [
     [
       "trump",
       2.0
+    ],
+    [
+      "pumba",
+      0.5
+    ],
+    [
+      "dumbo",
+      0.5
+    ],
+    [
+      "tusks",
+      0.2
+    ],
+    [
+      "ouche",
+      0.1
     ]
   ],
   "Tech-support callers: _ s _ _ _": [
     [
       "users",
       2.0
+    ],
+    [
+      "calls",
+      0.5
+    ],
+    [
+      "helps",
+      0.1
+    ],
+    [
+      "olves",
+      0.5
+    ],
+    [
+      "nerds",
+      0.5
     ]
   ],
   "Mozart's output: _ u _ _ _": [
     [
       "music",
       3.0
+    ],
+    [
+      "cores",
+      0.5
+    ],
+    [
+      "peras",
+      2.2000000000000006
     ]
   ],
   "Angel hair, for example: _ a _ _ _": [
     [
       "angel",
       1.5
+    ],
+    [
+      "pasta",
+      0.5
+    ],
+    [
+      "hetti",
+      0.5
+    ],
+    [
+      "paghi",
+      0.7
     ]
   ],
   "More cagey: _ l _ _ _": [
     [
       "shier",
       1.0
+    ],
+    [
+      "agier",
+      1.0999999999999999
+    ],
+    [
+      "slier",
+      0.5
     ]
   ],
   "Standard: u s u a l": [
@@ -3153,12 +3321,40 @@
     [
       "pasta",
       3.0
+    ],
+    [
+      "atain",
+      0.2
+    ],
+    [
+      "patas",
+      0.1
+    ],
+    [
+      "atina",
+      0.5
+    ],
+    [
+      "parta",
+      0.1
     ]
   ],
   "More cagey: s l _ e r": [
     [
       "slier",
       4.000000000000002
+    ],
+    [
+      "sleer",
+      0.1
+    ],
+    [
+      "lower",
+      0.5
+    ],
+    [
+      "sluer",
+      0.7
     ]
   ],
   "Irish poet and playwright Wilde: o s c a r": [
@@ -3183,48 +3379,124 @@
     [
       "mires",
       0.6
+    ],
+    [
+      "dumps",
+      0.5
+    ],
+    [
+      "rumps",
+      0.5
+    ],
+    [
+      "mound",
+      0.2
+    ],
+    [
+      "mumps",
+      0.5
     ]
   ],
   "In no particular order?: _ _ s _ _": [
     [
       "andom",
       1.8000000000000005
+    ],
+    [
+      "sorts",
+      0.2
+    ],
+    [
+      "mixed",
+      0.5
+    ],
+    [
+      "rands",
+      0.2
     ]
   ],
   "Scotch-___ (scouring pad brand): _ _ i _ _": [
     [
       "cotch",
       13.6
+    ],
+    [
+      "brite",
+      1.0
+    ],
+    [
+      "scour",
+      0.5
     ]
   ],
   "Irish poet and playwright Wilde: _ _ c _ _": [
     [
       "oscar",
       2.5
+    ],
+    [
+      "wicke",
+      0.2
+    ],
+    [
+      "wilde",
+      0.5
     ]
   ],
   "Disney elephant: _ u _ _ o": [
     [
       "dumbo",
       1.0
+    ],
+    [
+      "toulo",
+      0.1
+    ],
+    [
+      "tusko",
+      0.5
     ]
   ],
   "Tech-support callers: _ s _ _ s": [
     [
       "techs",
       1.0
+    ],
+    [
+      "geeks",
+      0.5
+    ],
+    [
+      "users",
+      0.5
+    ],
+    [
+      "helps",
+      0.5
     ]
   ],
   "Angel hair, for example: _ a _ _ a": [
     [
       "pagna",
       2.600000000000001
+    ],
+    [
+      "ghett",
+      0.9999999999999999
     ]
   ],
   "More cagey: _ l _ _ r": [
     [
       "arier",
       1.5
+    ],
+    [
+      "slier",
+      0.5
+    ],
+    [
+      "shier",
+      0.5
     ]
   ],
   "Refuse heaps: d _ m _ _": [
@@ -3243,18 +3515,42 @@
     [
       "users",
       2.5
+    ],
+    [
+      "usess",
+      3.1000000000000014
+    ],
+    [
+      "helps",
+      0.2
+    ],
+    [
+      "techs",
+      1.0
     ]
   ],
   "Angel hair, for example: p a _ _ a": [
     [
       "pasta",
       3.0
+    ],
+    [
+      "angel",
+      1.0
+    ],
+    [
+      "spaga",
+      0.1
     ]
   ],
   "More cagey: s l _ _ r": [
     [
       "slier",
       3.2000000000000015
+    ],
+    [
+      "lower",
+      0.5
     ]
   ],
   "More cagey: s l i e r": [
@@ -3267,6 +3563,18 @@
     [
       "mixed",
       2.0
+    ],
+    [
+      "misci",
+      0.2
+    ],
+    [
+      "iscel",
+      0.1
+    ],
+    [
+      "andom",
+      0.5
     ]
   ],
   "Scotch-___ (scouring pad brand): b _ i _ e": [
@@ -3279,6 +3587,14 @@
     [
       "mixed",
       1.0
+    ],
+    [
+      "andom",
+      0.5
+    ],
+    [
+      "messy",
+      0.2
     ]
   ],
   "Scotch-___ (scouring pad brand): b _ i t _": [
@@ -3357,60 +3673,180 @@
     [
       "carib",
       1.8000000000000005
+    ],
+    [
+      "nicar",
+      0.1
+    ],
+    [
+      "costa",
+      0.5
+    ],
+    [
+      "ostar",
+      0.5
+    ],
+    [
+      "chili",
+      1.0
     ]
   ],
   "Caper: _ _ _ _ _": [
     [
       "apers",
       16.0
+    ],
+    [
+      "prank",
+      0.5
+    ],
+    [
+      "caper",
+      1.0
+    ],
+    [
+      "apest",
+      2.9000000000000012
     ]
   ],
   "Gave a hand in bridge, say: _ _ _ _ _": [
     [
       "rtner",
       9.3
+    ],
+    [
+      "aller",
+      0.2
+    ],
+    [
+      "dealt",
+      0.5
+    ],
+    [
+      "layed",
+      0.2
+    ],
+    [
+      "arter",
+      0.2
     ]
   ],
   "Anonymous person, in slang: _ _ _ _ _": [
     [
       "ghost",
       3.0
+    ],
+    [
+      "ivvie",
+      0.5
+    ],
+    [
+      "civie",
+      0.5
+    ],
+    [
+      "chump",
+      0.5
+    ],
+    [
+      "ormie",
+      1.5000000000000002
     ]
   ],
   "Church official: _ _ _ _ _": [
     [
       "lergy",
       14.5
+    ],
+    [
+      "rever",
+      0.5
+    ],
+    [
+      "riest",
+      0.5
+    ],
+    [
+      "prest",
+      0.2
+    ],
+    [
+      "eacon",
+      0.2
     ]
   ],
   "Military squad: _ _ _ _ _": [
     [
       "plato",
       5.300000000000002
+    ],
+    [
+      "troop",
+      0.5
+    ],
+    [
+      "squad",
+      0.5
     ]
   ],
   "Basketball legend Shaquille: _ _ _ _ _": [
     [
       "uille",
       0.5
+    ],
+    [
+      "haqui",
+      2.2000000000000006
     ]
   ],
   "Put up with: _ _ _ _ _": [
     [
       "toler",
       3.1000000000000014
+    ],
+    [
+      "abide",
+      0.5
+    ],
+    [
+      "tough",
+      0.5
     ]
   ],
   "Spanish accent mark: _ _ _ _ _": [
     [
       "tilde",
       3.6
+    ],
+    [
+      "acute",
+      0.5
+    ],
+    [
+      "diere",
+      0.1
+    ],
+    [
+      "grave",
+      0.2
     ]
   ],
   "Thespian: _ _ _ _ _": [
     [
       "actor",
       1.7
+    ],
+    [
+      "layer",
+      0.5
+    ],
+    [
+      "spian",
+      0.1
+    ],
+    [
+      "pians",
+      2.400000000000001
     ]
   ],
   "Anonymous person, in slang: g h o s t": [
@@ -3531,6 +3967,10 @@
     [
       "plato",
       4.300000000000002
+    ],
+    [
+      "squad",
+      0.5
     ]
   ],
   "Basketball legend Shaquille: _ p _ _ _": [
@@ -3555,6 +3995,22 @@
     [
       "razil",
       1.0
+    ],
+    [
+      "costa",
+      0.5
+    ],
+    [
+      "santa",
+      0.5
+    ],
+    [
+      "chita",
+      0.5
+    ],
+    [
+      "ragua",
+      0.5
     ]
   ],
   "Gave a hand in bridge, say: _ _ _ l t": [
@@ -3567,12 +4023,44 @@
     [
       "ghost",
       1.0
+    ],
+    [
+      "dildo",
+      0.1
+    ],
+    [
+      "dudno",
+      1.8000000000000005
+    ],
+    [
+      "erson",
+      0.5
+    ],
+    [
+      "dudeo",
+      0.1
     ]
   ],
   "Church official: _ _ _ e r": [
     [
       "leric",
       1.5
+    ],
+    [
+      "riest",
+      0.5
+    ],
+    [
+      "rever",
+      0.2
+    ],
+    [
+      "aster",
+      0.2
+    ],
+    [
+      "eacon",
+      3.0000000000000013
     ]
   ],
   "Spanish accent mark: t i l d e": [
@@ -3609,24 +4097,80 @@
     [
       "apric",
       9.499999999999982
+    ],
+    [
+      "capri",
+      0.5
+    ],
+    [
+      "prick",
+      0.5
+    ],
+    [
+      "capic",
+      0.2
+    ],
+    [
+      "capie",
+      0.5
     ]
   ],
   "Military squad: _ _ d _ _": [
     [
       "plato",
       2.2
+    ],
+    [
+      "squad",
+      0.5
+    ],
+    [
+      "teamd",
+      0.1
+    ],
+    [
+      "etail",
+      0.2
+    ],
+    [
+      "etent",
+      1.0999999999999999
     ]
   ],
   "Basketball legend Shaquille: _ _ e _ _": [
     [
       "haqui",
       3.0000000000000013
+    ],
+    [
+      "haque",
+      0.7999999999999999
+    ],
+    [
+      "shaqu",
+      0.1
+    ],
+    [
+      "haile",
+      0.7
     ]
   ],
   "Put up with: _ _ a _ _": [
     [
       "torea",
       3.600000000000002
+    ],
+    [
+      "olera",
+      3.3000000000000016
+    ],
+    [
+      "tolar",
+      0.2
+    ],
+    [
+      "toler",
+      0.6
     ]
   ],
   "___ Rica: _ _ t _ a": [
@@ -3669,54 +4213,142 @@
     [
       "toler",
       0.7
+    ],
+    [
+      "tires",
+      0.4
+    ],
+    [
+      "abuse",
+      4.1
     ]
   ],
   "Spanish accent mark: _ r _ _ _": [
     [
       "tilde",
       2.5
+    ],
+    [
+      "ceria",
+      0.9999999999999999
     ]
   ],
   "Thespian: _ s _ _ _": [
     [
       "spian",
       1.0
+    ],
+    [
+      "hespi",
+      0.1
     ]
   ],
   "___ Rica: _ _ _ t _": [
     [
       "hilit",
       2.1000000000000005
+    ],
+    [
+      "costa",
+      0.5
+    ],
+    [
+      "minic",
+      0.5
+    ],
+    [
+      "icart",
+      0.6
+    ],
+    [
+      "crist",
+      0.5
     ]
   ],
   "Caper: _ _ _ i _": [
     [
       "capri",
       3.2
+    ],
+    [
+      "caper",
+      0.5
+    ],
+    [
+      "capis",
+      0.1
+    ],
+    [
+      "capie",
+      0.2
+    ],
+    [
+      "aping",
+      1.8000000000000005
     ]
   ],
   "Gave a hand in bridge, say: _ _ _ l _": [
     [
       "dealt",
       2.0
+    ],
+    [
+      "helps",
+      0.5
     ]
   ],
   "Anonymous person, in slang: _ _ _ d _": [
     [
       "ghost",
       2.0
+    ],
+    [
+      "udmen",
+      0.2
+    ],
+    [
+      "dudie",
+      2.400000000000001
+    ],
+    [
+      "dudey",
+      0.2
+    ],
+    [
+      "dweeb",
+      0.5
     ]
   ],
   "Church official: _ _ _ e _": [
     [
       "eacon",
       3.700000000000001
+    ],
+    [
+      "riest",
+      0.5
+    ],
+    [
+      "rever",
+      2.0
     ]
   ],
   "Thespian: _ _ t _ _": [
     [
       "actor",
       2.0
+    ],
+    [
+      "heist",
+      2.9000000000000012
+    ],
+    [
+      "theat",
+      0.1
+    ],
+    [
+      "hiest",
+      0.1
     ]
   ],
   "___ Rica: _ _ t t _": [
@@ -3813,6 +4445,14 @@
     [
       "avend",
       3.3000000000000016
+    ],
+    [
+      "plumy",
+      0.1
+    ],
+    [
+      "rchid",
+      0.5
     ]
   ],
   "Crème de la crème: _ _ _ _ _": [
@@ -3827,6 +4467,14 @@
     [
       "finis",
       0.6
+    ],
+    [
+      "bests",
+      0.5
+    ],
+    [
+      "reams",
+      0.5
     ]
   ],
   "Baker's thirteen: _ _ _ _ _": [
@@ -3889,6 +4537,10 @@
     [
       "scend",
       0.1
+    ],
+    [
+      "downs",
+      0.2
     ]
   ],
   "High flier?: _ _ _ _ _": [
@@ -3907,6 +4559,10 @@
     [
       "birdy",
       0.5
+    ],
+    [
+      "eagle",
+      1.0
     ]
   ],
   "\"Hamilton\" sister who sings \"Burn\": _ _ _ _ _": [
@@ -3925,6 +4581,10 @@
     [
       "angel",
       1.0
+    ],
+    [
+      "phoen",
+      2.3000000000000007
     ]
   ],
   "Zero-calorie drink: _ _ _ _ _": [
@@ -3957,6 +4617,10 @@
     [
       "first",
       0.5
+    ],
+    [
+      "actio",
+      0.1
     ]
   ],
   "Crème de la crème: c r e a m": [
@@ -4167,6 +4831,22 @@
     [
       "eaden",
       1.8
+    ],
+    [
+      "decan",
+      0.5
+    ],
+    [
+      "baken",
+      2.700000000000001
+    ],
+    [
+      "baker",
+      0.5
+    ],
+    [
+      "akers",
+      0.2
     ]
   ],
   "Gaze intently: _ l _ _ e": [
@@ -4237,6 +4917,14 @@
     [
       "aless",
       0.1
+    ],
+    [
+      "ndsay",
+      0.7
+    ],
+    [
+      "linet",
+      0.1
     ]
   ],
   "Zero-calorie drink: _ a _ _ _": [
@@ -4247,6 +4935,10 @@
     [
       "water",
       0.5
+    ],
+    [
+      "dieta",
+      0.4
     ]
   ],
   "Act I, ___ I: _ c _ _ _": [
@@ -4261,6 +4953,14 @@
     [
       "actio",
       0.1
+    ],
+    [
+      "ctoin",
+      1.7000000000000004
+    ],
+    [
+      "acton",
+      0.2
     ]
   ],
   "Goes downhill: _ l _ _ s": [
@@ -4377,6 +5077,22 @@
     [
       "cream",
       1.5
+    ],
+    [
+      "elite",
+      1.0
+    ],
+    [
+      "creme",
+      0.5
+    ],
+    [
+      "raeme",
+      0.2
+    ],
+    [
+      "preme",
+      0.5
     ]
   ],
   "Baker's thirteen: _ _ _ _ n": [
@@ -4461,6 +5177,10 @@
     [
       "rater",
       0.5
+    ],
+    [
+      "crate",
+      0.2
     ]
   ],
   "Baker's thirteen: _ _ _ e n": [
@@ -4495,6 +5215,22 @@
     [
       "stare",
       1.5
+    ],
+    [
+      "glare",
+      0.5
+    ],
+    [
+      "gleam",
+      0.2
+    ],
+    [
+      "peers",
+      0.5
+    ],
+    [
+      "eered",
+      0.5
     ]
   ],
   "Ejects forcefully: k i c k s": [
@@ -4507,24 +5243,76 @@
     [
       "klutz",
       1.7000000000000002
+    ],
+    [
+      "klump",
+      0.2
+    ],
+    [
+      "kloud",
+      0.2
     ]
   ],
   "High flier?: i i _ _ _": [
     [
       "iisac",
       2.800000000000001
+    ],
+    [
+      "icarc",
+      0.7
+    ],
+    [
+      "icbic",
+      2.600000000000001
+    ],
+    [
+      "idiot",
+      0.5
+    ],
+    [
+      "icier",
+      0.2
     ]
   ],
   "\"Hamilton\" sister who sings \"Burn\": c l _ _ _": [
     [
       "nthia",
       2.700000000000001
+    ],
+    [
+      "clara",
+      0.5
+    ],
+    [
+      "cline",
+      0.1
+    ],
+    [
+      "laire",
+      0.5
     ]
   ],
   "Zero-calorie drink: k a _ _ _": [
     [
       "kafir",
       2.3000000000000007
+    ],
+    [
+      "affir",
+      0.1
+    ],
+    [
+      "kaffe",
+      1.1
+    ],
+    [
+      "kafoo",
+      0.30000000000000004
+    ],
+    [
+      "kagua",
+      0.5
     ]
   ],
   "Goes downhill: _ _ _ _ s": [
@@ -4643,6 +5431,14 @@
     [
       "cream",
       1.5
+    ],
+    [
+      "elite",
+      0.5
+    ],
+    [
+      "crest",
+      0.5
     ]
   ],
   "Baker's thirteen: _ _ _ e _": [
@@ -4749,17 +5545,57 @@
     [
       "veral",
       2.3000000000000007
+    ],
+    [
+      "apron",
+      0.5
+    ],
+    [
+      "erall",
+      0.1
+    ],
+    [
+      "smock",
+      0.5
+    ],
+    [
+      "cover",
+      0.5
     ]
   ],
   "\"Toy Story 5\" studio: _ _ _ _ _": [
     [
       "pixar",
       4.0
+    ],
+    [
+      "isney",
+      0.5
+    ],
+    [
+      "disne",
+      0.2
     ]
   ],
   "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: _ _ _ _ _": [
     [
       "place",
+      0.5
+    ],
+    [
+      "where",
+      0.5
+    ],
+    [
+      "homes",
+      0.5
+    ],
+    [
+      "house",
+      0.5
+    ],
+    [
+      "there",
       0.5
     ]
   ],
@@ -4767,71 +5603,215 @@
     [
       "nadal",
       2.1
+    ],
+    [
+      "afael",
+      1.0
+    ],
+    [
+      "rafel",
+      0.1
+    ],
+    [
+      "raule",
+      0.1
     ]
   ],
   "Solemn sound from a church bell: _ _ _ _ _": [
     [
       "peals",
       1.0
+    ],
+    [
+      "clong",
+      0.5
+    ],
+    [
+      "chime",
+      0.2
     ]
   ],
   "Defeat soundly, in slang: _ _ _ _ _": [
     [
       "smack",
       1.0
+    ],
+    [
+      "whomp",
+      1.0
+    ],
+    [
+      "whump",
+      0.5
+    ],
+    [
+      "drubs",
+      0.5
     ]
   ],
   "Italian city with a fashion week: _ _ _ _ _": [
     [
       "milan",
       4.5
+    ],
+    [
+      "romeo",
+      0.2
     ]
   ],
   "Iron ___ (rust): _ _ _ _ _": [
     [
       "rusts",
       0.5
+    ],
+    [
+      "xides",
+      1.0
+    ],
+    [
+      "oxide",
+      0.5
+    ],
+    [
+      "roned",
+      1.9000000000000006
+    ],
+    [
+      "usted",
+      2.400000000000001
     ]
   ],
   "Small group of conspirators: _ _ _ _ _": [
     [
       "cabal",
       3.5
+    ],
+    [
+      "coter",
+      0.5
+    ],
+    [
+      "clans",
+      0.5
+    ],
+    [
+      "cabin",
+      0.1
     ]
   ],
   "Food for a baleen whale: _ _ _ _ _": [
     [
       "krill",
       2.5
+    ],
+    [
+      "plank",
+      0.5
+    ],
+    [
+      "phyto",
+      0.5
+    ],
+    [
+      "zoopl",
+      0.1
+    ],
+    [
+      "nkton",
+      0.5
     ]
   ],
   "Painter's protective garment: _ m _ _ _": [
     [
       "apron",
       3.0
+    ],
+    [
+      "smock",
+      0.5
+    ],
+    [
+      "overm",
+      0.1
+    ],
+    [
+      "loves",
+      0.5
+    ],
+    [
+      "cover",
+      0.5
     ]
   ],
   "\"Toy Story 5\" studio: _ i _ _ _": [
     [
       "pixar",
       4.0
+    ],
+    [
+      "ights",
+      0.2
+    ],
+    [
+      "light",
+      0.5
+    ],
+    [
+      "sfilm",
+      0.2
     ]
   ],
   "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: _ l _ _ _": [
     [
       "homed",
       0.8999999999999999
+    ],
+    [
+      "onway",
+      0.2
+    ],
+    [
+      "where",
+      0.5
+    ],
+    [
+      "hotel",
+      0.5
+    ],
+    [
+      "homey",
+      0.1
     ]
   ],
   "Tennis star Rafael: _ a _ _ _": [
     [
       "nadal",
       2.0
+    ],
+    [
+      "afael",
+      0.5
+    ],
+    [
+      "natal",
+      0.5
     ]
   ],
   "Solemn sound from a church bell: _ n _ _ _": [
     [
       "clang",
+      1.0
+    ],
+    [
+      "bongs",
+      0.5
+    ],
+    [
+      "tolln",
+      0.1
+    ],
+    [
+      "tones",
       1.0
     ]
   ],
@@ -4851,48 +5831,112 @@
     [
       "whomp",
       1.0
+    ],
+    [
+      "trump",
+      0.5
+    ],
+    [
+      "smack",
+      0.5
+    ],
+    [
+      "homps",
+      0.5
+    ],
+    [
+      "whoms",
+      0.1
     ]
   ],
   "Iron ___ (rust): _ x _ _ _": [
     [
       "xides",
       3.1000000000000014
+    ],
+    [
+      "oxide",
+      0.5
+    ],
+    [
+      "ustic",
+      1.0
+    ],
+    [
+      "stain",
+      0.5
     ]
   ],
   "Small group of conspirators: _ a _ _ _": [
     [
       "cabal",
       2.2
+    ],
+    [
+      "coter",
+      0.5
     ]
   ],
   "Food for a baleen whale: _ r _ _ _": [
     [
       "krill",
       3.0
+    ],
+    [
+      "plank",
+      0.1
+    ],
+    [
+      "nkton",
+      0.5
     ]
   ],
   "Painter's protective garment: _ m _ _ k": [
     [
       "apron",
       1.5
+    ],
+    [
+      "smock",
+      0.5
     ]
   ],
   "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: _ l _ _ i": [
     [
       "homei",
       3.1000000000000014
+    ],
+    [
+      "local",
+      0.2
+    ],
+    [
+      "where",
+      0.5
     ]
   ],
   "Tennis star Rafael: _ a _ _ l": [
     [
       "nadal",
       3.0
+    ],
+    [
+      "rafel",
+      0.1
+    ],
+    [
+      "afael",
+      1.0
     ]
   ],
   "Solemn sound from a church bell: _ n _ _ l": [
     [
       "tonal",
       1.5
+    ],
+    [
+      "bells",
+      0.5
     ]
   ],
   "Food for a baleen whale: k r i l l": [
@@ -5217,6 +6261,18 @@
     [
       "spank",
       3.0
+    ],
+    [
+      "smack",
+      1.0
+    ],
+    [
+      "whips",
+      0.5
+    ],
+    [
+      "whomp",
+      0.5
     ]
   ],
   "Italian city with a fashion week: m i _ a _": [
@@ -5235,6 +6291,22 @@
     [
       "cabal",
       2.5
+    ],
+    [
+      "cella",
+      0.5
+    ],
+    [
+      "clans",
+      0.5
+    ],
+    [
+      "cacao",
+      0.1
+    ],
+    [
+      "cabin",
+      0.5
     ]
   ],
   "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: a l _ _ i": [
@@ -5271,60 +6343,168 @@
     [
       "beads",
       3.300000000000001
+    ],
+    [
+      "balls",
+      0.5
+    ],
+    [
+      "worms",
+      0.5
+    ],
+    [
+      "rings",
+      0.5
+    ],
+    [
+      "cubes",
+      0.5
     ]
   ],
   "\"See you all later\": _ _ _ _ _": [
     [
       "yeall",
       2.1000000000000005
+    ],
+    [
+      "until",
+      0.5
+    ],
+    [
+      "later",
+      0.5
     ]
   ],
   "Sweetness or sourness: _ _ _ _ _": [
     [
       "taste",
       2.5
+    ],
+    [
+      "tangy",
+      0.5
+    ],
+    [
+      "lavor",
+      7.9
     ]
   ],
   "Sound from a baby bird: _ _ _ _ _": [
     [
       "cheep",
       2.5
+    ],
+    [
+      "peeps",
+      0.5
+    ],
+    [
+      "chirp",
+      1.0
+    ],
+    [
+      "chirr",
+      0.2
     ]
   ],
   "They work around the clock: _ _ _ _ _": [
     [
       "night",
       2.7
+    ],
+    [
+      "shift",
+      0.5
+    ],
+    [
+      "round",
+      0.1
+    ],
+    [
+      "clock",
+      0.5
     ]
   ],
   "Broomstick rider: _ _ _ _ _": [
     [
       "witch",
       1.5
+    ],
+    [
+      "izard",
+      0.5
     ]
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ _ _ _": [
     [
       "omaha",
       4.000000000000002
+    ],
+    [
+      "elphi",
+      0.2
     ]
   ],
   "Nevada senator Jacky: _ _ _ _ _": [
     [
       "roser",
       0.9
+    ],
+    [
+      "renee",
+      3.3000000000000016
+    ],
+    [
+      "rosen",
+      0.5
+    ],
+    [
+      "jacky",
+      0.5
+    ],
+    [
+      "evere",
+      0.5
     ]
   ],
   "Unable to be heard, on a Zoom call: _ _ _ _ _": [
     [
       "muted",
       3.0
+    ],
+    [
+      "ulled",
+      0.2
+    ],
+    [
+      "audio",
+      0.2
+    ],
+    [
+      "opped",
+      0.5
+    ],
+    [
+      "ffmic",
+      0.5
     ]
   ],
   "Bits of choreography: _ _ _ _ _": [
     [
       "steps",
       3.5
+    ],
+    [
+      "moves",
+      0.5
+    ],
+    [
+      "parts",
+      0.5
+    ],
+    [
+      "oting",
+      0.2
     ]
   ],
   "Shapes of some gummy candies: _ _ _ _ s": [
@@ -5409,6 +6589,14 @@
     [
       "witch",
       3.0
+    ],
+    [
+      "biker",
+      0.5
+    ],
+    [
+      "broom",
+      0.2
     ]
   ],
   "The Oracle of ___, nickname for Warren Buffett: _ _ a _ _": [
@@ -5421,6 +6609,22 @@
     [
       "rosen",
       1.2
+    ],
+    [
+      "schor",
+      0.1
+    ],
+    [
+      "ackys",
+      0.1
+    ],
+    [
+      "jacky",
+      0.5
+    ],
+    [
+      "jacks",
+      0.2
     ]
   ],
   "Shapes of some gummy candies: r c u m s": [
@@ -5469,30 +6673,98 @@
     [
       "circs",
       3.1000000000000014
+    ],
+    [
+      "ovals",
+      0.2
+    ],
+    [
+      "ounds",
+      0.5
+    ],
+    [
+      "heres",
+      0.2
+    ],
+    [
+      "uares",
+      0.5
     ]
   ],
   "\"See you all later\": _ m _ _ t": [
     [
       "emomt",
       0.1
+    ],
+    [
+      "goodt",
+      0.1
+    ],
+    [
+      "ntilt",
+      0.1
+    ],
+    [
+      "until",
+      0.5
+    ],
+    [
+      "tillt",
+      3.5
     ]
   ],
   "Sweetness or sourness: _ a _ _ e": [
     [
       "taste",
       3.0
+    ],
+    [
+      "flave",
+      0.1
+    ],
+    [
+      "sauce",
+      0.5
     ]
   ],
   "Sound from a baby bird: _ h _ _ p": [
     [
       "cheep",
       3.5
+    ],
+    [
+      "chirp",
+      0.5
+    ],
+    [
+      "peeps",
+      0.5
+    ],
+    [
+      "chelp",
+      0.2
     ]
   ],
   "They work around the clock: _ a _ _ s": [
     [
       "ights",
       2.0
+    ],
+    [
+      "nails",
+      0.5
+    ],
+    [
+      "labor",
+      0.5
+    ],
+    [
+      "oases",
+      0.2
+    ],
+    [
+      "shift",
+      1.0
     ]
   ],
   "The Oracle of ___, nickname for Warren Buffett: o m a h a": [
@@ -5505,30 +6777,106 @@
     [
       "worms",
       2.5
+    ],
+    [
+      "edges",
+      0.5
+    ],
+    [
+      "olves",
+      0.1
+    ],
+    [
+      "wools",
+      0.5
+    ],
+    [
+      "woses",
+      0.1
     ]
   ],
   "\"See you all later\": i m _ _ t": [
     [
       "until",
       1.0
+    ],
+    [
+      "might",
+      0.5
+    ],
+    [
+      "immit",
+      0.8999999999999999
+    ],
+    [
+      "oodby",
+      0.5
+    ],
+    [
+      "imbit",
+      0.2
     ]
   ],
   "Sweetness or sourness: t a _ _ e": [
     [
       "taste",
       3.0
+    ],
+    [
+      "tangy",
+      0.5
+    ],
+    [
+      "flave",
+      0.1
+    ],
+    [
+      "lavor",
+      0.5
     ]
   ],
   "Sound from a baby bird: c h _ _ p": [
     [
       "cheep",
       2.5
+    ],
+    [
+      "chirp",
+      1.0
+    ],
+    [
+      "chump",
+      0.2
+    ],
+    [
+      "chick",
+      1.0
+    ],
+    [
+      "chelp",
+      0.1
     ]
   ],
   "They work around the clock: h a _ _ s": [
     [
       "hands",
       3.5
+    ],
+    [
+      "hasps",
+      0.4
+    ],
+    [
+      "hacks",
+      0.5
+    ],
+    [
+      "hazes",
+      0.5
+    ],
+    [
+      "hauls",
+      0.5
     ]
   ],
   "Broomstick rider: w i t c h": [
@@ -5541,6 +6889,22 @@
     [
       "muted",
       3.0
+    ],
+    [
+      "tseen",
+      0.1
+    ],
+    [
+      "stint",
+      0.5
+    ],
+    [
+      "stilt",
+      0.5
+    ],
+    [
+      "stiff",
+      0.2
     ]
   ],
   "Shapes of some gummy candies: w o r m s": [
@@ -5553,6 +6917,22 @@
     [
       "reeds",
       3.3000000000000016
+    ],
+    [
+      "eisch",
+      3.3000000000000016
+    ],
+    [
+      "rosen",
+      0.5
+    ],
+    [
+      "jacky",
+      0.2
+    ],
+    [
+      "rossi",
+      1.0
     ]
   ],
   "Unable to be heard, on a Zoom call: m _ t _ _": [
@@ -5571,12 +6951,20 @@
     [
       "reyns",
       5.299999999999997
+    ],
+    [
+      "nolds",
+      0.5
     ]
   ],
   "Unable to be heard, on a Zoom call: m _ t _ d": [
     [
       "muted",
       2.5
+    ],
+    [
+      "ffled",
+      0.5
     ]
   ],
   "Sound from a baby bird: c h e e p": [
@@ -5589,18 +6977,58 @@
     [
       "reese",
       2.5
+    ],
+    [
+      "icans",
+      0.5
+    ],
+    [
+      "resen",
+      0.1
+    ],
+    [
+      "rosen",
+      1.0
+    ],
+    [
+      "eisen",
+      0.2
     ]
   ],
   "Unable to be heard, on a Zoom call: m _ t e d": [
     [
       "muted",
       4.5
+    ],
+    [
+      "amped",
+      0.30000000000000004
+    ],
+    [
+      "meted",
+      0.1
     ]
   ],
   "Nevada senator Jacky: r _ s e _": [
     [
       "rosen",
       1.0
+    ],
+    [
+      "reese",
+      0.5
+    ],
+    [
+      "eisch",
+      3.2000000000000015
+    ],
+    [
+      "jacky",
+      0.1
+    ],
+    [
+      "ackie",
+      0.5
     ]
   ],
   "Unable to be heard, on a Zoom call: m _ t e _": [
@@ -5613,30 +7041,106 @@
     [
       "rosen",
       1.2
+    ],
+    [
+      "jacky",
+      0.5
+    ],
+    [
+      "eller",
+      0.5
+    ],
+    [
+      "ellen",
+      0.2
+    ],
+    [
+      "reese",
+      0.5
     ]
   ],
   "Unable to be heard, on a Zoom call: _ _ t e _": [
     [
       "muted",
       1.0
+    ],
+    [
+      "deter",
+      0.2
+    ],
+    [
+      "dette",
+      0.1
+    ],
+    [
+      "etite",
+      0.5
     ]
   ],
   "Nevada senator Jacky: _ _ s e n": [
     [
       "rosen",
       1.0
+    ],
+    [
+      "assen",
+      0.1
+    ],
+    [
+      "ensen",
+      0.1
+    ],
+    [
+      "jacky",
+      1.0
+    ],
+    [
+      "ackie",
+      0.5
     ]
   ],
   "Unable to be heard, on a Zoom call: _ _ t e d": [
     [
       "muted",
       3.0
+    ],
+    [
+      "ilted",
+      0.1
+    ],
+    [
+      "outed",
+      0.2
+    ],
+    [
+      "sited",
+      2.500000000000001
+    ],
+    [
+      "ofted",
+      0.1
     ]
   ],
   "Nevada senator Jacky: _ _ s _ n": [
     [
       "ensen",
       3.4000000000000017
+    ],
+    [
+      "ackie",
+      0.1
+    ],
+    [
+      "eller",
+      0.2
+    ],
+    [
+      "hisen",
+      3.0000000000000013
+    ],
+    [
+      "ellis",
+      0.5
     ]
   ],
   "Unable to be heard, on a Zoom call: _ _ t _ d": [
@@ -5649,66 +7153,178 @@
     [
       "osten",
       3.4000000000000017
+    ],
+    [
+      "eynan",
+      0.5
+    ],
+    [
+      "ackyn",
+      0.30000000000000004
     ]
   ],
   "Unable to be heard, on a Zoom call: _ _ _ _ d": [
     [
       "muted",
       2.5
+    ],
+    [
+      "ulled",
+      0.5
+    ],
+    [
+      "uffed",
+      0.2
     ]
   ],
   "Nevada senator Jacky: r _ _ _ n": [
     [
       "eynan",
       3.2000000000000015
+    ],
+    [
+      "eagan",
+      0.5
     ]
   ],
   "Unable to be heard, on a Zoom call: m _ _ _ d": [
     [
       "muted",
       3.0
+    ],
+    [
+      "uffed",
+      0.1
+    ],
+    [
+      "ummed",
+      0.1
     ]
   ],
   "Nevada senator Jacky: r _ _ e n": [
     [
       "rohen",
       0.1
+    ],
+    [
+      "renee",
+      0.2
+    ],
+    [
+      "euben",
+      0.5
+    ],
+    [
+      "eynan",
+      0.1
+    ],
+    [
+      "eynen",
+      0.2
     ]
   ],
   "Unable to be heard, on a Zoom call: m _ _ e d": [
     [
       "muted",
       3.0
+    ],
+    [
+      "miced",
+      0.1
+    ],
+    [
+      "ummed",
+      0.1
+    ],
+    [
+      "mumed",
+      0.1
     ]
   ],
   "Nevada senator Jacky: _ _ _ e n": [
     [
       "jacky",
       1.1
+    ],
+    [
+      "senor",
+      0.1
+    ],
+    [
+      "enken",
+      2.500000000000001
+    ],
+    [
+      "assie",
+      0.2
+    ],
+    [
+      "reven",
+      0.2
     ]
   ],
   "Unable to be heard, on a Zoom call: _ _ _ e d": [
     [
       "muted",
       2.5
+    ],
+    [
+      "faded",
+      0.1
+    ],
+    [
+      "ulled",
+      0.2
     ]
   ],
   "Nevada senator Jacky: r _ _ _ _": [
     [
       "rosen",
       0.4
+    ],
+    [
+      "jacky",
+      0.5
+    ],
+    [
+      "reyns",
+      0.2
     ]
   ],
   "Unable to be heard, on a Zoom call: m _ _ _ _": [
     [
       "muted",
       3.3
+    ],
+    [
+      "ffled",
+      0.5
+    ],
+    [
+      "miked",
+      0.2
     ]
   ],
   "Nevada senator Jacky: r _ _ e _": [
     [
       "reese",
       2.5
+    ],
+    [
+      "roger",
+      0.2
+    ],
+    [
+      "reeds",
+      3.3000000000000016
+    ],
+    [
+      "evere",
+      0.7
+    ],
+    [
+      "renee",
+      0.2
     ]
   ],
   "Unable to be heard, on a Zoom call: m _ _ e _": [
@@ -5721,48 +7337,156 @@
     [
       "rosen",
       1.0
+    ],
+    [
+      "heney",
+      1.0
+    ],
+    [
+      "jacky",
+      0.6000000000000001
+    ],
+    [
+      "reeds",
+      0.1
+    ],
+    [
+      "johne",
+      0.1
     ]
   ],
   "Unable to be heard, on a Zoom call: _ _ _ e _": [
     [
       "muted",
       2.0
+    ],
+    [
+      "distr",
+      0.1
+    ],
+    [
+      "ffmic",
+      0.1
+    ],
+    [
+      "micro",
+      0.5
     ]
   ],
   "Broomstick rider: _ _ t c _": [
     [
       "witch",
       3.0
+    ],
+    [
+      "biker",
+      0.5
+    ],
+    [
+      "idder",
+      3.3000000000000016
+    ],
+    [
+      "itchy",
+      1.2999999999999998
+    ],
+    [
+      "broom",
+      0.5
     ]
   ],
   "Shapes of some gummy candies: _ o _ m s": [
     [
       "rcums",
       3.4000000000000017
+    ],
+    [
+      "earts",
+      0.5
+    ],
+    [
+      "circs",
+      0.2
+    ],
+    [
+      "balls",
+      0.5
+    ],
+    [
+      "cubes",
+      0.5
     ]
   ],
   "\"See you all later\": _ m _ u t": [
     [
       "adieu",
       1.5
+    ],
+    [
+      "odbye",
+      0.5
+    ],
+    [
+      "oodby",
+      0.5
+    ],
+    [
+      "mutts",
+      0.1
+    ],
+    [
+      "seems",
+      1.9000000000000006
     ]
   ],
   "They work around the clock: _ a _ d s": [
     [
       "ights",
       3.5
+    ],
+    [
+      "labor",
+      0.5
+    ],
+    [
+      "nails",
+      0.2
+    ],
+    [
+      "hands",
+      0.5
     ]
   ],
   "Broomstick rider: _ _ _ c _": [
     [
       "witch",
       4.0
+    ],
+    [
+      "biker",
+      0.5
+    ],
+    [
+      "stick",
+      0.1
+    ],
+    [
+      "broom",
+      0.5
+    ],
+    [
+      "rlock",
+      0.5
     ]
   ],
   "Sweetness or sourness: _ a _ t e": [
     [
       "taste",
       3.5
+    ],
+    [
+      "flave",
+      0.2
     ]
   ],
   "Shapes of some gummy candies: w _ _ _ s": [
@@ -5961,6 +7685,18 @@
     [
       "osene",
       2.400000000000001
+    ],
+    [
+      "jacky",
+      0.5
+    ],
+    [
+      "ortue",
+      0.7
+    ],
+    [
+      "renew",
+      0.1
     ]
   ],
   "Unable to be heard, on a Zoom call: _ _ _ e r": [
@@ -6039,6 +7775,14 @@
     [
       "steps",
       2.5
+    ],
+    [
+      "seems",
+      0.7
+    ],
+    [
+      "seets",
+      0.30000000000000004
     ]
   ],
   "Broomstick rider: b _ _ c _": [
@@ -6111,114 +7855,346 @@
     [
       "ovals",
       1.0
+    ],
+    [
+      "ircos",
+      0.6
+    ],
+    [
+      "rcles",
+      0.5
+    ],
+    [
+      "circs",
+      0.5
     ]
   ],
   "\"See you all later\": _ m _ _ _": [
     [
       "yemay",
       0.5
+    ],
+    [
+      "byeem",
+      0.1
+    ],
+    [
+      "bymay",
+      0.1
+    ],
+    [
+      "mayby",
+      0.2
     ]
   ],
   "Sweetness or sourness: _ a _ _ _": [
     [
       "taste",
       3.0
+    ],
+    [
+      "flava",
+      0.1
     ]
   ],
   "Sound from a baby bird: _ h _ _ _": [
     [
       "cheep",
       3.0
+    ],
+    [
+      "chirp",
+      1.0
+    ],
+    [
+      "peeps",
+      0.5
+    ],
+    [
+      "heeps",
+      0.5
     ]
   ],
   "They work around the clock: _ a _ _ _": [
     [
       "ights",
       2.7
+    ],
+    [
+      "night",
+      0.5
+    ],
+    [
+      "hifts",
+      3.0000000000000013
+    ],
+    [
+      "shift",
+      0.2
+    ],
+    [
+      "staff",
+      0.5
     ]
   ],
   "Bits of choreography: _ _ e _ _": [
     [
       "steps",
       2.5
+    ],
+    [
+      "steep",
+      0.1
+    ],
+    [
+      "beats",
+      0.5
+    ],
+    [
+      "feats",
+      0.5
+    ],
+    [
+      "feete",
+      0.1
     ]
   ],
   "Bits of choreography: _ _ e p _": [
     [
       "steps",
       2.5
+    ],
+    [
+      "tepes",
+      0.1
+    ],
+    [
+      "epics",
+      0.5
     ]
   ],
   "Shapes of some gummy candies: w o _ _ _": [
     [
       "worms",
       2.5
+    ],
+    [
+      "edges",
+      0.5
+    ],
+    [
+      "rings",
+      0.5
+    ],
+    [
+      "wobbl",
+      0.1
+    ],
+    [
+      "ovals",
+      0.5
     ]
   ],
   "\"See you all later\": i m _ _ _": [
     [
       "imbye",
       0.7999999999999999
+    ],
+    [
+      "imago",
+      0.1
+    ],
+    [
+      "yeall",
+      0.1
     ]
   ],
   "They work around the clock: h a _ _ _": [
     [
       "hands",
       2.0
+    ],
+    [
+      "handy",
+      0.5
+    ],
+    [
+      "hours",
+      0.5
+    ],
+    [
+      "harms",
+      0.2
+    ],
+    [
+      "shift",
+      0.5
     ]
   ],
   "Bits of choreography: s _ e p _": [
     [
       "steps",
       3.5
+    ],
+    [
+      "seems",
+      0.5
+    ],
+    [
+      "seeps",
+      0.5
+    ],
+    [
+      "tepes",
+      0.1
     ]
   ],
   "Bits of choreography: s _ e p s": [
     [
       "steps",
       4.0
+    ],
+    [
+      "seeps",
+      0.5
+    ],
+    [
+      "seems",
+      0.2
     ]
   ],
   "\"See you all later\": i m _ u _": [
     [
       "imvue",
       0.30000000000000004
+    ],
+    [
+      "imoou",
+      0.1
+    ],
+    [
+      "oodby",
+      0.5
+    ],
+    [
+      "imugo",
+      0.2
+    ],
+    [
+      "imago",
+      0.1
     ]
   ],
   "They work around the clock: h a _ d _": [
     [
       "hands",
       3.5
+    ],
+    [
+      "hadit",
+      0.2
+    ],
+    [
+      "hardy",
+      0.5
+    ],
+    [
+      "handy",
+      0.5
+    ],
+    [
+      "hadly",
+      0.1
     ]
   ],
   "Bits of choreography: _ _ e p s": [
     [
       "steps",
       3.0
+    ],
+    [
+      "epics",
+      0.5
+    ],
+    [
+      "tapes",
+      0.5
+    ],
+    [
+      "peeps",
+      0.5
+    ],
+    [
+      "leaps",
+      0.5
     ]
   ],
   "Shapes of some gummy candies: w o _ m _": [
     [
       "worms",
       3.0
+    ],
+    [
+      "wombs",
+      0.1
+    ],
+    [
+      "womps",
+      0.5
+    ],
+    [
+      "gummy",
+      0.5
+    ],
+    [
+      "ndies",
+      0.5
     ]
   ],
   "Shapes of some gummy candies: _ o r _ _": [
     [
       "bears",
       2.0
+    ],
+    [
+      "circs",
+      0.1
+    ],
+    [
+      "ringo",
+      0.1
+    ],
+    [
+      "sorbs",
+      0.1
+    ],
+    [
+      "toros",
+      0.1
     ]
   ],
   "\"See you all later\": _ m o _ _": [
     [
       "byomo",
       1.5
+    ],
+    [
+      "oodby",
+      0.1
+    ],
+    [
+      "byemo",
+      0.1
     ]
   ],
   "They work around the clock: _ a n _ _": [
     [
       "urses",
       2.0
+    ],
+    [
+      "hands",
+      0.2
     ]
   ],
   "Shapes of some gummy candies: _ o _ m _": [
@@ -6243,24 +8219,76 @@
     [
       "cheep",
       3.0
+    ],
+    [
+      "chirp",
+      0.5
+    ],
+    [
+      "chirr",
+      0.5
+    ],
+    [
+      "chuck",
+      0.5
+    ],
+    [
+      "atter",
+      0.5
     ]
   ],
   "Sound from a baby bird: c h _ e _": [
     [
       "cheep",
       2.5
+    ],
+    [
+      "chirp",
+      0.5
+    ],
+    [
+      "chirr",
+      0.5
+    ],
+    [
+      "cheek",
+      2.3000000000000007
+    ],
+    [
+      "chute",
+      0.2
     ]
   ],
   "Bits of choreography: _ _ e _ s": [
     [
       "steps",
       2.0
+    ],
+    [
+      "moves",
+      0.5
+    ],
+    [
+      "asses",
+      0.5
     ]
   ],
   "Bits of choreography: s _ e _ s": [
     [
       "steps",
       3.0
+    ],
+    [
+      "seems",
+      0.2
+    ],
+    [
+      "seats",
+      0.1
+    ],
+    [
+      "ences",
+      0.5
     ]
   ],
   "Sound from a baby bird: _ h _ e _": [
@@ -8139,6 +10167,10 @@
     [
       "slous",
       0.1
+    ],
+    [
+      "slows",
+      0.5
     ]
   ],
   "High flier?: e i _ _ t": [
@@ -8157,6 +10189,10 @@
     [
       "semit",
       0.1
+    ],
+    [
+      "seems",
+      0.5
     ]
   ],
   "\"Hamilton\" sister who sings \"Burn\": n l _ _ a": [
@@ -8197,6 +10233,10 @@
     [
       "ietar",
       0.1
+    ],
+    [
+      "iquir",
+      0.5
     ]
   ],
   "Crème de la crème: i _ _ _ e": [
@@ -8206,6 +10246,10 @@
     ],
     [
       "image",
+      0.2
+    ],
+    [
+      "crime",
       0.2
     ]
   ],
@@ -8247,6 +10291,10 @@
     [
       "spews",
       0.5
+    ],
+    [
+      "sputs",
+      0.2
     ]
   ],
   "High flier?: p i _ _ t": [
@@ -8283,6 +10331,14 @@
     [
       "elisa",
       0.2
+    ],
+    [
+      "elora",
+      0.2
+    ],
+    [
+      "elpha",
+      0.1
     ]
   ],
   "Zero-calorie drink: w a _ _ r": [
@@ -8322,6 +10378,10 @@
     ],
     [
       "crime",
+      0.5
+    ],
+    [
+      "creme",
       0.5
     ]
   ],
@@ -8373,6 +10433,14 @@
     [
       "xpels",
       1.6000000000000003
+    ],
+    [
+      "expel",
+      0.5
+    ],
+    [
+      "kicks",
+      0.5
     ]
   ],
   "Crème de la crème: _ _ i _ e": [
@@ -8383,6 +10451,14 @@
     [
       "cream",
       0.5
+    ],
+    [
+      "remie",
+      0.1
+    ],
+    [
+      "rimie",
+      0.1
     ]
   ],
   "Baker's thirteen: _ _ z _ n": [
@@ -8393,6 +10469,18 @@
     [
       "pizza",
       0.5
+    ],
+    [
+      "tizon",
+      0.1
+    ],
+    [
+      "baker",
+      1.0
+    ],
+    [
+      "ajzen",
+      0.2
     ]
   ],
   "Ejects forcefully: _ _ a _ s": [
@@ -8411,6 +10499,10 @@
     [
       "hurls",
       0.5
+    ],
+    [
+      "blows",
+      0.5
     ]
   ],
   "Baker's thirteen: _ _ n _ n": [
@@ -8421,6 +10513,18 @@
     [
       "banns",
       1.0
+    ],
+    [
+      "inths",
+      0.1
+    ],
+    [
+      "nives",
+      0.5
+    ],
+    [
+      "treen",
+      0.1
     ]
   ],
   "Ejects forcefully: _ _ e i _": [
@@ -8456,6 +10560,14 @@
     ],
     [
       "crite",
+      0.5
+    ],
+    [
+      "crits",
+      2.600000000000001
+    ],
+    [
+      "ritic",
       0.5
     ]
   ],
@@ -8559,12 +10671,2278 @@
     [
       "expel",
       1.0
+    ],
+    [
+      "hails",
+      0.5
+    ],
+    [
+      "fails",
+      0.5
     ]
   ],
   "Baker's thirteen: _ _ n e _": [
     [
       "knife",
       0.5
+    ],
+    [
+      "baker",
+      0.5
+    ],
+    [
+      "akers",
+      0.5
+    ],
+    [
+      "trine",
+      0.5
+    ]
+  ],
+  "Disney elephant: d u _ _ o": [
+    [
+      "dumbo",
+      0.5
+    ],
+    [
+      "tusko",
+      0.1
+    ]
+  ],
+  "Disney elephant: d u _ b o": [
+    [
+      "dumbo",
+      1.0
+    ],
+    [
+      "dantu",
+      0.5
+    ],
+    [
+      "doudo",
+      0.1
+    ],
+    [
+      "doobo",
+      0.1
+    ],
+    [
+      "ottie",
+      0.5
+    ]
+  ],
+  "Tech-support callers: u s _ r s": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "omers",
+      1.0
+    ],
+    [
+      "rters",
+      0.5
+    ],
+    [
+      "techs",
+      0.5
+    ],
+    [
+      "usurs",
+      0.1
+    ]
+  ],
+  "In no particular order?: _ _ s _ i": [
+    [
+      "mixed",
+      0.5
+    ],
+    [
+      "isori",
+      0.8999999999999999
+    ],
+    [
+      "dered",
+      0.2
+    ]
+  ],
+  "In no particular order?: m u s _ i": [
+    [
+      "mixed",
+      0.5
+    ],
+    [
+      "musli",
+      0.1
+    ],
+    [
+      "music",
+      0.5
+    ]
+  ],
+  "In no particular order?: _ _ s s i": [
+    [
+      "mixed",
+      0.5
+    ],
+    [
+      "andom",
+      0.6
+    ]
+  ],
+  "In no particular order?: _ _ s s _": [
+    [
+      "andom",
+      0.1
+    ],
+    [
+      "mixed",
+      0.5
+    ]
+  ],
+  "Military squad: _ a _ _ p": [
+    [
+      "troop",
+      0.5
+    ],
+    [
+      "plato",
+      0.5
+    ],
+    [
+      "squad",
+      0.5
+    ],
+    [
+      "atrol",
+      0.5
+    ],
+    [
+      "atoon",
+      0.5
+    ]
+  ],
+  "Basketball legend Shaquille: _ p _ _ r": [
+    [
+      "haper",
+      0.8999999999999999
+    ],
+    [
+      "oneal",
+      0.5
+    ]
+  ],
+  "Put up with: _ e _ _ e": [
+    [
+      "olere",
+      1.8
+    ],
+    [
+      "toler",
+      0.5
+    ],
+    [
+      "abode",
+      0.7
+    ],
+    [
+      "erate",
+      0.2
+    ],
+    [
+      "tense",
+      0.1
+    ]
+  ],
+  "Spanish accent mark: _ r _ _ s": [
+    [
+      "tirse",
+      0.1
+    ],
+    [
+      "resis",
+      0.5
+    ],
+    [
+      "tilde",
+      0.5
+    ],
+    [
+      "ceros",
+      0.5
+    ],
+    [
+      "erres",
+      0.5
+    ]
+  ],
+  "Thespian: _ s _ _ t": [
+    [
+      "spian",
+      0.2
+    ],
+    [
+      "espit",
+      0.7
+    ],
+    [
+      "actor",
+      1.0
+    ],
+    [
+      "hespi",
+      0.1
+    ],
+    [
+      "thesp",
+      0.1
+    ]
+  ],
+  "Military squad: c _ d _ _": [
+    [
+      "cadet",
+      0.5
+    ],
+    [
+      "mpany",
+      0.5
+    ],
+    [
+      "coter",
+      0.2
+    ],
+    [
+      "cadre",
+      0.5
+    ],
+    [
+      "mmand",
+      0.9999999999999999
+    ]
+  ],
+  "Basketball legend Shaquille: o _ e _ _": [
+    [
+      "oneal",
+      0.5
+    ],
+    [
+      "shaqe",
+      0.2
+    ],
+    [
+      "shoes",
+      0.1
+    ],
+    [
+      "ocean",
+      0.1
+    ],
+    [
+      "shaoe",
+      0.2
+    ]
+  ],
+  "Put up with: s _ a _ _": [
+    [
+      "saint",
+      0.5
+    ],
+    [
+      "savor",
+      0.5
+    ],
+    [
+      "toler",
+      0.2
+    ],
+    [
+      "soura",
+      0.1
+    ],
+    [
+      "salsa",
+      0.2
+    ]
+  ],
+  "Caper: _ n _ i c": [
+    [
+      "apric",
+      0.2
+    ],
+    [
+      "capin",
+      0.1
+    ],
+    [
+      "apine",
+      1.6000000000000003
+    ],
+    [
+      "caper",
+      0.5
+    ]
+  ],
+  "Anonymous person, in slang: _ a _ d o": [
+    [
+      "goato",
+      0.1
+    ],
+    [
+      "gando",
+      0.2
+    ],
+    [
+      "nando",
+      0.1
+    ],
+    [
+      "ghost",
+      0.5
+    ],
+    [
+      "mando",
+      0.5
+    ]
+  ],
+  "Church official: _ l _ e r": [
+    [
+      "riest",
+      0.5
+    ],
+    [
+      "eacon",
+      0.5
+    ],
+    [
+      "leric",
+      0.5
+    ]
+  ],
+  "Military squad: s _ d _ _": [
+    [
+      "squad",
+      1.0
+    ],
+    [
+      "teams",
+      0.2
+    ],
+    [
+      "ction",
+      1.0
+    ],
+    [
+      "entry",
+      0.5
+    ],
+    [
+      "plato",
+      0.2
+    ]
+  ],
+  "Basketball legend Shaquille: a _ e _ _": [
+    [
+      "shake",
+      0.5
+    ],
+    [
+      "haqui",
+      1.2
+    ],
+    [
+      "shaqi",
+      0.5
+    ],
+    [
+      "shaqu",
+      0.1
+    ],
+    [
+      "haque",
+      0.1
+    ]
+  ],
+  "Put up with: n _ a _ _": [
+    [
+      "nance",
+      0.1
+    ],
+    [
+      "toler",
+      2.600000000000001
+    ],
+    [
+      "taint",
+      0.5
+    ],
+    [
+      "nurse",
+      0.5
+    ],
+    [
+      "tanal",
+      0.1
+    ]
+  ],
+  "Basketball legend Shaquille: h _ e _ _": [
+    [
+      "shahe",
+      0.1
+    ],
+    [
+      "shake",
+      0.5
+    ],
+    [
+      "haqui",
+      3.0000000000000013
+    ],
+    [
+      "shane",
+      0.1
+    ],
+    [
+      "shaqu",
+      0.5
+    ]
+  ],
+  "Put up with: i _ a _ _": [
+    [
+      "taint",
+      0.2
+    ],
+    [
+      "tolia",
+      2.400000000000001
+    ],
+    [
+      "toler",
+      0.5
+    ],
+    [
+      "toria",
+      0.5
+    ],
+    [
+      "tolar",
+      0.1
+    ]
+  ],
+  "Caper: a _ _ i c": [
+    [
+      "capri",
+      0.5
+    ],
+    [
+      "ffect",
+      0.30000000000000004
+    ],
+    [
+      "caper",
+      1.0
+    ],
+    [
+      "capie",
+      0.2
+    ],
+    [
+      "apric",
+      0.2
+    ]
+  ],
+  "Anonymous person, in slang: r _ _ d o": [
+    [
+      "edout",
+      0.2
+    ],
+    [
+      "rando",
+      0.5
+    ],
+    [
+      "reddo",
+      0.1
+    ],
+    [
+      "rondo",
+      3.2000000000000015
+    ],
+    [
+      "eddit",
+      0.5
+    ]
+  ],
+  "Church official: e _ _ e r": [
+    [
+      "elder",
+      0.5
+    ],
+    [
+      "deere",
+      0.2
+    ],
+    [
+      "riest",
+      0.5
+    ],
+    [
+      "rever",
+      0.30000000000000004
+    ],
+    [
+      "astor",
+      0.5
+    ]
+  ],
+  "Thespian: a _ t _ _": [
+    [
+      "actor",
+      1.0
+    ],
+    [
+      "actin",
+      0.5
+    ],
+    [
+      "athet",
+      0.30000000000000004
+    ],
+    [
+      "actit",
+      0.1
+    ],
+    [
+      "theat",
+      0.1
+    ]
+  ],
+  "Caper: a _ _ i _": [
+    [
+      "capri",
+      0.5
+    ],
+    [
+      "capia",
+      0.2
+    ],
+    [
+      "caper",
+      0.5
+    ],
+    [
+      "aegis",
+      0.1
+    ]
+  ],
+  "Anonymous person, in slang: r _ _ d _": [
+    [
+      "rando",
+      0.5
+    ],
+    [
+      "rider",
+      0.2
+    ],
+    [
+      "rudie",
+      0.5
+    ]
+  ],
+  "Church official: e _ _ e _": [
+    [
+      "earie",
+      0.1
+    ],
+    [
+      "deane",
+      0.5
+    ]
+  ],
+  "Caper: a n _ i _": [
+    [
+      "capri",
+      0.2
+    ],
+    [
+      "anion",
+      0.5
+    ],
+    [
+      "capin",
+      0.2
+    ],
+    [
+      "anise",
+      0.2
+    ],
+    [
+      "anile",
+      0.2
+    ]
+  ],
+  "Anonymous person, in slang: r a _ d _": [
+    [
+      "rando",
+      0.5
+    ]
+  ],
+  "Church official: e l _ e _": [
+    [
+      "deane",
+      0.5
+    ],
+    [
+      "elder",
+      0.5
+    ],
+    [
+      "riest",
+      0.5
+    ]
+  ],
+  "Put up with: s _ a n _": [
+    [
+      "saint",
+      0.1
+    ],
+    [
+      "satan",
+      0.5
+    ],
+    [
+      "saner",
+      0.5
+    ],
+    [
+      "toler",
+      0.5
+    ]
+  ],
+  "Thespian: a _ t o _": [
+    [
+      "actor",
+      0.5
+    ],
+    [
+      "platy",
+      0.4
+    ]
+  ],
+  "Caper: a n _ i c": [
+    [
+      "anics",
+      0.1
+    ],
+    [
+      "anile",
+      0.1
+    ],
+    [
+      "antic",
+      0.5
+    ]
+  ],
+  "Church official: e l _ e r": [
+    [
+      "elder",
+      1.0
+    ],
+    [
+      "riest",
+      0.5
+    ],
+    [
+      "ieler",
+      0.1
+    ],
+    [
+      "eleer",
+      0.1
+    ],
+    [
+      "eeler",
+      0.2
+    ]
+  ],
+  "Put up with: s t a n _": [
+    [
+      "stand",
+      0.5
+    ],
+    [
+      "stain",
+      0.4
+    ]
+  ],
+  "Ejects forcefully: _ _ e _ _": [
+    [
+      "kicks",
+      0.5
+    ],
+    [
+      "expel",
+      0.5
+    ],
+    [
+      "threw",
+      0.5
+    ],
+    [
+      "blows",
+      0.5
+    ]
+  ],
+  "Crème de la crème: _ _ i _ _": [
+    [
+      "cream",
+      1.0
+    ],
+    [
+      "elite",
+      0.5
+    ],
+    [
+      "rimie",
+      0.30000000000000004
+    ],
+    [
+      "crimi",
+      0.5
+    ]
+  ],
+  "Baker's thirteen: _ _ z _ _": [
+    [
+      "halfs",
+      0.1
+    ],
+    [
+      "pizza",
+      0.5
+    ],
+    [
+      "zebra",
+      0.5
+    ]
+  ],
+  "Ejects forcefully: s _ e _ _": [
+    [
+      "kicks",
+      0.2
+    ],
+    [
+      "seems",
+      0.1
+    ],
+    [
+      "sends",
+      0.5
+    ],
+    [
+      "swept",
+      0.5
+    ]
+  ],
+  "Crème de la crème: i _ i _ _": [
+    [
+      "cream",
+      0.5
+    ],
+    [
+      "elite",
+      0.5
+    ],
+    [
+      "creme",
+      0.1
+    ],
+    [
+      "crims",
+      0.2
+    ],
+    [
+      "idyll",
+      0.5
+    ]
+  ],
+  "Baker's thirteen: p _ z _ _": [
+    [
+      "pizza",
+      0.5
+    ],
+    [
+      "pizze",
+      0.1
+    ],
+    [
+      "pizzo",
+      0.5
+    ],
+    [
+      "iezes",
+      2.600000000000001
+    ]
+  ],
+  "Ejects forcefully: s _ _ _ _": [
+    [
+      "spews",
+      0.5
+    ],
+    [
+      "blows",
+      0.5
+    ],
+    [
+      "sends",
+      0.5
+    ],
+    [
+      "spits",
+      0.5
+    ]
+  ],
+  "Crème de la crème: i _ _ _ _": [
+    [
+      "cream",
+      0.5
+    ],
+    [
+      "elite",
+      1.0
+    ],
+    [
+      "icing",
+      0.5
+    ],
+    [
+      "inner",
+      0.5
+    ]
+  ],
+  "Baker's thirteen: p _ _ _ _": [
+    [
+      "pizza",
+      0.5
+    ],
+    [
+      "piezo",
+      0.1
+    ],
+    [
+      "packs",
+      1.0999999999999999
+    ],
+    [
+      "poker",
+      0.5
+    ],
+    [
+      "piano",
+      0.5
+    ]
+  ],
+  "Act I, ___ I: s c _ _ e": [
+    [
+      "scene",
+      0.5
+    ],
+    [
+      "actis",
+      0.2
+    ],
+    [
+      "ctise",
+      0.2
+    ],
+    [
+      "cenic",
+      0.2
+    ],
+    [
+      "cript",
+      0.5
+    ]
+  ],
+  "Crème de la crème: i l _ _ _": [
+    [
+      "elite",
+      0.5
+    ],
+    [
+      "cream",
+      0.5
+    ],
+    [
+      "ilite",
+      0.4
+    ]
+  ],
+  "Baker's thirteen: p o _ _ _": [
+    [
+      "poker",
+      0.5
+    ],
+    [
+      "pound",
+      0.5
+    ],
+    [
+      "point",
+      0.5
+    ],
+    [
+      "oints",
+      0.5
+    ],
+    [
+      "ocket",
+      0.5
+    ]
+  ],
+  "\"Hamilton\" sister who sings \"Burn\": e l i _ a": [
+    [
+      "eliza",
+      0.5
+    ],
+    [
+      "aliah",
+      0.5
+    ],
+    [
+      "elisa",
+      0.2
+    ],
+    [
+      "liaha",
+      0.1
+    ],
+    [
+      "elina",
+      0.1
+    ]
+  ],
+  "Zero-calorie drink: w a t _ r": [
+    [
+      "water",
+      0.5
+    ]
+  ],
+  "Act I, ___ I: s c e _ e": [
+    [
+      "scene",
+      0.5
+    ],
+    [
+      "uence",
+      0.1
+    ],
+    [
+      "seene",
+      0.5
+    ],
+    [
+      "rance",
+      0.5
+    ],
+    [
+      "econd",
+      0.5
+    ]
+  ],
+  "Baker's thirteen: p o _ e _": [
+    [
+      "poise",
+      0.5
+    ],
+    [
+      "ocket",
+      0.2
+    ],
+    [
+      "poets",
+      0.5
+    ],
+    [
+      "poems",
+      0.5
+    ],
+    [
+      "poker",
+      0.5
+    ]
+  ],
+  "Crème de la crème: i _ e _ _": [
+    [
+      "icecr",
+      0.1
+    ],
+    [
+      "elite",
+      0.5
+    ],
+    [
+      "cream",
+      0.5
+    ]
+  ],
+  "Baker's thirteen: p _ n _ _": [
+    [
+      "penny",
+      1.0
+    ],
+    [
+      "pints",
+      0.2
+    ],
+    [
+      "pawns",
+      0.5
+    ],
+    [
+      "entas",
+      0.1
+    ],
+    [
+      "izzas",
+      0.5
+    ]
+  ],
+  "High flier?: p i _ i t": [
+    [
+      "pilot",
+      0.5
+    ],
+    [
+      "pijet",
+      1.8000000000000005
+    ]
+  ],
+  "Zero-calorie drink: w a _ t r": [
+    [
+      "water",
+      0.5
+    ],
+    [
+      "sugar",
+      0.1
+    ],
+    [
+      "ltzer",
+      0.5
+    ],
+    [
+      "deter",
+      0.1
+    ]
+  ],
+  "Act I, ___ I: s c _ s e": [
+    [
+      "scene",
+      1.0
+    ],
+    [
+      "enses",
+      0.5
+    ],
+    [
+      "cense",
+      0.1
+    ],
+    [
+      "since",
+      0.5
+    ],
+    [
+      "cenes",
+      0.2
+    ]
+  ],
+  "Ejects forcefully: _ _ a _ _": [
+    [
+      "kicks",
+      1.0
+    ]
+  ],
+  "Baker's thirteen: _ _ n _ _": [
+    [
+      "knave",
+      0.5
+    ],
+    [
+      "baker",
+      1.9999999999999998
+    ],
+    [
+      "pawns",
+      0.5
+    ],
+    [
+      "ights",
+      0.1
+    ]
+  ],
+  "Ejects forcefully: s _ a _ _": [
+    [
+      "blast",
+      0.5
+    ],
+    [
+      "slung",
+      0.8
+    ],
+    [
+      "sends",
+      0.7
+    ],
+    [
+      "slams",
+      0.5
+    ]
+  ],
+  "High flier?: l i _ _ t": [
+    [
+      "light",
+      1.0
+    ],
+    [
+      "limit",
+      0.2
+    ],
+    [
+      "erlit",
+      0.2
+    ],
+    [
+      "elite",
+      0.2
+    ],
+    [
+      "lifts",
+      0.5
+    ]
+  ],
+  "Zero-calorie drink: m a _ _ r": [
+    [
+      "sugar",
+      0.5
+    ],
+    [
+      "maker",
+      0.2
+    ],
+    [
+      "water",
+      0.5
+    ],
+    [
+      "etmar",
+      0.1
+    ],
+    [
+      "araza",
+      0.7999999999999999
+    ]
+  ],
+  "Goes downhill: p l _ _ _": [
+    [
+      "plows",
+      0.5
+    ],
+    [
+      "plumb",
+      0.5
+    ],
+    [
+      "lunge",
+      0.1
+    ],
+    [
+      "plump",
+      0.5
+    ],
+    [
+      "plods",
+      0.5
+    ]
+  ],
+  "High flier?: r i _ _ _": [
+    [
+      "rider",
+      0.5
+    ],
+    [
+      "irdie",
+      1.2
+    ],
+    [
+      "angel",
+      0.5
+    ],
+    [
+      "airie",
+      0.1
+    ],
+    [
+      "birdy",
+      0.5
+    ]
+  ],
+  "\"Hamilton\" sister who sings \"Burn\": e l _ _ _": [
+    [
+      "eliza",
+      0.5
+    ],
+    [
+      "gelic",
+      0.5
+    ],
+    [
+      "elise",
+      0.5
+    ],
+    [
+      "elene",
+      0.5
+    ],
+    [
+      "elish",
+      0.1
+    ]
+  ],
+  "Zero-calorie drink: s a _ _ _": [
+    [
+      "seltz",
+      0.4
+    ],
+    [
+      "sugar",
+      0.5
+    ],
+    [
+      "sapid",
+      0.2
+    ],
+    [
+      "sodas",
+      0.5
+    ],
+    [
+      "ltzer",
+      0.1
+    ]
+  ],
+  "Crème de la crème: u _ _ _ e": [
+    [
+      "imate",
+      0.5
+    ],
+    [
+      "elite",
+      1.0
+    ],
+    [
+      "upper",
+      0.5
+    ]
+  ],
+  "Baker's thirteen: m _ _ _ n": [
+    [
+      "major",
+      0.5
+    ],
+    [
+      "meats",
+      0.5
+    ],
+    [
+      "menon",
+      0.2
+    ],
+    [
+      "magic",
+      1.0
+    ],
+    [
+      "inion",
+      0.1
+    ]
+  ],
+  "Gaze intently: b _ _ _ e": [
+    [
+      "beams",
+      0.5
+    ],
+    [
+      "stare",
+      0.5
+    ],
+    [
+      "beady",
+      0.5
+    ],
+    [
+      "bogle",
+      0.1
+    ],
+    [
+      "glare",
+      0.5
+    ]
+  ],
+  "Gaze intently: _ _ a _ e": [
+    [
+      "stare",
+      0.5
+    ],
+    [
+      "glare",
+      0.5
+    ]
+  ],
+  "Crème de la crème: o _ i _ e": [
+    [
+      "crime",
+      0.5
+    ],
+    [
+      "olive",
+      1.0
+    ],
+    [
+      "oalie",
+      0.8999999999999999
+    ]
+  ],
+  "Baker's thirteen: d _ z _ n": [
+    [
+      "decan",
+      3.700000000000001
+    ],
+    [
+      "eckan",
+      0.2
+    ],
+    [
+      "dekan",
+      1.0
+    ],
+    [
+      "dizen",
+      0.5
+    ],
+    [
+      "dozen",
+      0.1
+    ]
+  ],
+  "Gaze intently: s _ a _ e": [
+    [
+      "stare",
+      0.5
+    ],
+    [
+      "sauce",
+      0.5
+    ],
+    [
+      "saute",
+      0.2
+    ],
+    [
+      "scape",
+      0.2
+    ],
+    [
+      "safer",
+      0.5
+    ]
+  ],
+  "Crème de la crème: _ d _ _ e": [
+    [
+      "creme",
+      0.5
+    ]
+  ],
+  "Gaze intently: _ r _ _ e": [
+    [
+      "stare",
+      0.5
+    ],
+    [
+      "glare",
+      1.0
+    ]
+  ],
+  "Crème de la crème: o d _ _ e": [
+    [
+      "odile",
+      0.2
+    ],
+    [
+      "odeme",
+      0.2
+    ],
+    [
+      "odour",
+      0.2
+    ],
+    [
+      "odeum",
+      0.30000000000000004
+    ],
+    [
+      "odore",
+      0.2
+    ]
+  ],
+  "Baker's thirteen: d e _ _ n": [
+    [
+      "decan",
+      0.1
+    ],
+    [
+      "dough",
+      0.1
+    ],
+    [
+      "denim",
+      0.5
+    ],
+    [
+      "demon",
+      0.5
+    ],
+    [
+      "deans",
+      0.2
+    ]
+  ],
+  "Gaze intently: s r _ _ e": [
+    [
+      "stare",
+      0.5
+    ],
+    [
+      "sieve",
+      0.2
+    ],
+    [
+      "earch",
+      0.5
+    ],
+    [
+      "glare",
+      0.5
+    ],
+    [
+      "surge",
+      0.5
+    ]
+  ],
+  "Goes downhill: _ l e _ _": [
+    [
+      "slope",
+      0.5
+    ],
+    [
+      "slide",
+      0.5
+    ],
+    [
+      "level",
+      0.5
+    ],
+    [
+      "decel",
+      0.1
+    ]
+  ],
+  "High flier?: _ i l _ _": [
+    [
+      "angel",
+      0.5
+    ],
+    [
+      "airil",
+      0.1
+    ],
+    [
+      "illie",
+      0.5
+    ],
+    [
+      "hilly",
+      0.5
+    ]
+  ],
+  "\"Hamilton\" sister who sings \"Burn\": _ l i _ _": [
+    [
+      "licia",
+      0.2
+    ]
+  ],
+  "Goes downhill: _ l e d _": [
+    [
+      "sleds",
+      1.0
+    ],
+    [
+      "leded",
+      0.1
+    ]
+  ],
+  "High flier?: _ i l o _": [
+    [
+      "cloud",
+      0.5
+    ],
+    [
+      "angel",
+      1.0
+    ],
+    [
+      "pilot",
+      1.0
+    ],
+    [
+      "liero",
+      0.1
+    ],
+    [
+      "ilios",
+      0.1
+    ]
+  ],
+  "\"Hamilton\" sister who sings \"Burn\": _ l i z _": [
+    [
+      "licia",
+      0.5
+    ],
+    [
+      "abeth",
+      0.5
+    ],
+    [
+      "eliza",
+      1.0
+    ],
+    [
+      "lbiza",
+      0.2
+    ]
+  ],
+  "Zero-calorie drink: _ a t e _": [
+    [
+      "etate",
+      2.700000000000001
+    ],
+    [
+      "odate",
+      0.2
+    ]
+  ],
+  "Gaze intently: s _ _ _ e": [
+    [
+      "stare",
+      1.0
+    ],
+    [
+      "glare",
+      0.5
+    ],
+    [
+      "seize",
+      0.2
+    ],
+    [
+      "sieve",
+      0.2
+    ]
+  ],
+  "Ejects forcefully: s p e _ s": [
+    [
+      "xpels",
+      0.2
+    ],
+    [
+      "spews",
+      0.5
+    ],
+    [
+      "spees",
+      0.1
+    ]
+  ],
+  "Gaze intently: s t a _ e": [
+    [
+      "stare",
+      1.0
+    ],
+    [
+      "state",
+      0.2
+    ],
+    [
+      "steal",
+      0.1
+    ]
+  ],
+  "Zero-calorie drink: w a t e _": [
+    [
+      "water",
+      0.5
+    ],
+    [
+      "seltz",
+      0.1
+    ]
+  ],
+  "Painter's protective garment: _ m o _ k": [
+    [
+      "smock",
+      1.0
+    ],
+    [
+      "pomok",
+      0.7999999999999999
+    ]
+  ],
+  "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: _ l i _ i": [
+    [
+      "where",
+      0.5
+    ],
+    [
+      "homes",
+      0.5
+    ],
+    [
+      "hotel",
+      0.5
+    ],
+    [
+      "house",
+      0.5
+    ],
+    [
+      "oneli",
+      0.5
+    ]
+  ],
+  "Tennis star Rafael: _ a d _ l": [
+    [
+      "nadal",
+      0.5
+    ]
+  ],
+  "Solemn sound from a church bell: _ n e _ l": [
+    [
+      "tonel",
+      0.5
+    ],
+    [
+      "belle",
+      0.2
+    ]
+  ],
+  "Defeat soundly, in slang: s p _ _ _": [
+    [
+      "smack",
+      0.5
+    ],
+    [
+      "smash",
+      0.5
+    ],
+    [
+      "spank",
+      0.5
+    ],
+    [
+      "swoon",
+      1.5000000000000002
+    ]
+  ],
+  "Small group of conspirators: c a _ _ _": [
+    [
+      "cabal",
+      1.0
+    ],
+    [
+      "coter",
+      0.5
+    ],
+    [
+      "cable",
+      0.5
+    ]
+  ],
+  "Your answer to \"Where were you at 9 p.m. last night?\", perhaps: _ l i b i": [
+    [
+      "libis",
+      1.0
+    ],
+    [
+      "libbi",
+      0.2
+    ],
+    [
+      "libel",
+      0.5
+    ]
+  ],
+  "Solemn sound from a church bell: _ n e l l": [
+    [
+      "ennel",
+      0.7999999999999999
+    ],
+    [
+      "ellon",
+      1.8000000000000005
+    ]
+  ],
+  "\"See you all later\": i m e _ t": [
+    [
+      "odbye",
+      1.0
+    ],
+    [
+      "immet",
+      0.1
+    ],
+    [
+      "imete",
+      0.2
+    ]
+  ],
+  "Nevada senator Jacky: r _ s i n": [
+    [
+      "esina",
+      0.30000000000000004
+    ],
+    [
+      "eisin",
+      0.4
+    ],
+    [
+      "rosin",
+      0.2
+    ],
+    [
+      "rosen",
+      1.0
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: m _ t r d": [
+    [
+      "muted",
+      0.5
+    ],
+    [
+      "etred",
+      0.1
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: _ _ t l d": [
+    [
+      "muted",
+      1.0
+    ],
+    [
+      "ulled",
+      0.5
+    ],
+    [
+      "ilted",
+      1.2
+    ],
+    [
+      "ttled",
+      0.30000000000000004
+    ],
+    [
+      "outld",
+      0.1
+    ]
+  ],
+  "Nevada senator Jacky: _ _ s i n": [
+    [
+      "sinas",
+      0.1
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: _ _ t r d": [
+    [
+      "muted",
+      1.0
+    ],
+    [
+      "heard",
+      0.5
+    ],
+    [
+      "lostd",
+      0.1
+    ],
+    [
+      "utred",
+      1.3
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: m _ _ l d": [
+    [
+      "muted",
+      1.0
+    ],
+    [
+      "moldy",
+      2.1000000000000005
+    ],
+    [
+      "mould",
+      0.2
+    ],
+    [
+      "mumld",
+      1.4000000000000001
+    ],
+    [
+      "ulded",
+      0.7
+    ]
+  ],
+  "Nevada senator Jacky: r _ _ i n": [
+    [
+      "einin",
+      0.1
+    ],
+    [
+      "rikin",
+      0.1
+    ],
+    [
+      "lican",
+      1.0
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: m _ _ r d": [
+    [
+      "muted",
+      1.0
+    ],
+    [
+      "mured",
+      0.2
+    ],
+    [
+      "urred",
+      0.1
+    ],
+    [
+      "umred",
+      0.1
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: _ _ _ r d": [
+    [
+      "muted",
+      0.2
+    ],
+    [
+      "heard",
+      0.2
+    ],
+    [
+      "uffed",
+      0.5
+    ],
+    [
+      "arred",
+      0.1
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: m _ t l _": [
+    [
+      "muted",
+      0.5
+    ],
+    [
+      "ottle",
+      0.1
+    ],
+    [
+      "ettle",
+      0.5
+    ],
+    [
+      "metal",
+      0.5
+    ]
+  ],
+  "Nevada senator Jacky: r _ s i _": [
+    [
+      "rosen",
+      0.5
+    ],
+    [
+      "reiss",
+      1.9999999999999998
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: m _ t r _": [
+    [
+      "muted",
+      1.0
+    ],
+    [
+      "utter",
+      0.2
+    ]
+  ],
+  "Nevada senator Jacky: _ _ s i _": [
+    [
+      "gabis",
+      0.1
+    ],
+    [
+      "rosie",
+      0.1
+    ],
+    [
+      "sensi",
+      0.1
+    ],
+    [
+      "jacky",
+      0.5
+    ],
+    [
+      "ackie",
+      0.5
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: _ _ t r _": [
+    [
+      "muted",
+      0.5
+    ],
+    [
+      "blank",
+      0.5
+    ],
+    [
+      "distr",
+      0.2
+    ],
+    [
+      "otrto",
+      0.1
+    ],
+    [
+      "outro",
+      0.2
+    ]
+  ],
+  "Nevada senator Jacky: _ _ s _ c": [
+    [
+      "rosen",
+      0.1
+    ],
+    [
+      "gassc",
+      2.600000000000001
+    ],
+    [
+      "carsi",
+      3.2000000000000015
+    ],
+    [
+      "jacky",
+      1.0
+    ],
+    [
+      "hahan",
+      0.5
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: _ _ t _ k": [
+    [
+      "muted",
+      0.5
+    ],
+    [
+      "ottek",
+      0.1
+    ],
+    [
+      "outok",
+      0.1
+    ],
+    [
+      "blank",
+      0.1
+    ],
+    [
+      "stuck",
+      0.2
+    ]
+  ],
+  "Nevada senator Jacky: r _ _ e c": [
+    [
+      "renee",
+      0.1
+    ],
+    [
+      "retec",
+      2.700000000000001
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: m _ _ e k": [
+    [
+      "mutek",
+      0.1
+    ],
+    [
+      "muted",
+      0.5
+    ]
+  ],
+  "Sweetness or sourness: t a t _ e": [
+    [
+      "taste",
+      0.5
+    ]
+  ],
+  "Nevada senator Jacky: r _ _ i _": [
+    [
+      "reidi",
+      0.1
+    ],
+    [
+      "rishi",
+      0.1
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: m _ _ r _": [
+    [
+      "muted",
+      0.5
+    ],
+    [
+      "mured",
+      0.2
+    ],
+    [
+      "murer",
+      0.1
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: _ _ _ e l": [
+    [
+      "muted",
+      0.5
+    ],
+    [
+      "eleid",
+      1.7000000000000004
+    ],
+    [
+      "nwell",
+      0.5
+    ],
+    [
+      "umbel",
+      0.1
+    ],
+    [
+      "dwell",
+      0.5
+    ]
+  ],
+  "Nevada senator Jacky: _ _ _ i _": [
+    [
+      "osiny",
+      2.400000000000001
+    ],
+    [
+      "ackie",
+      1.0
+    ],
+    [
+      "jacki",
+      0.5
+    ],
+    [
+      "jacky",
+      1.0
+    ],
+    [
+      "oseni",
+      0.1
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: _ _ _ r _": [
+    [
+      "muted",
+      0.5
+    ],
+    [
+      "distr",
+      0.1
+    ],
+    [
+      "arout",
+      0.1
+    ],
+    [
+      "outro",
+      0.5
+    ],
+    [
+      "outer",
+      0.1
+    ]
+  ],
+  "Nevada senator Jacky: _ _ _ i c": [
+    [
+      "rosen",
+      0.5
+    ],
+    [
+      "ackie",
+      0.5
+    ],
+    [
+      "jacky",
+      1.0
+    ],
+    [
+      "relic",
+      0.1
+    ],
+    [
+      "eidic",
+      0.1
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: _ _ _ r k": [
+    [
+      "muted",
+      1.0
+    ],
+    [
+      "forks",
+      0.6000000000000001
+    ],
+    [
+      "orked",
+      0.2
+    ],
+    [
+      "irked",
+      0.2
+    ],
+    [
+      "urred",
+      0.2
+    ]
+  ],
+  "Broomstick rider: _ _ t c h": [
+    [
+      "witch",
+      1.0
+    ],
+    [
+      "bitch",
+      0.5
+    ],
+    [
+      "broom",
+      0.5
+    ]
+  ],
+  "Unable to be heard, on a Zoom call: _ _ t l _": [
+    [
+      "muted",
+      1.0
+    ],
+    [
+      "utlet",
+      0.2
+    ]
+  ],
+  "\"See you all later\": i m e _ _": [
+    [
+      "image",
+      1.0
+    ],
+    [
+      "imago",
+      0.4
+    ],
+    [
+      "imego",
+      2.400000000000001
+    ]
+  ],
+  "Bits of choreography: _ _ e p y": [
+    [
+      "steps",
+      1.0
+    ],
+    [
+      "tepsy",
+      0.7999999999999999
+    ],
+    [
+      "stepy",
+      0.5
+    ],
+    [
+      "steep",
+      0.5
+    ],
+    [
+      "epipy",
+      0.1
+    ]
+  ],
+  "Nevada senator Jacky: _ _ s e r": [
+    [
+      "ackie",
+      1.5
+    ],
+    [
+      "osier",
+      0.1
+    ],
+    [
+      "rosen",
+      0.5
+    ],
+    [
+      "roser",
+      0.2
+    ],
+    [
+      "jaser",
+      0.5
+    ]
+  ],
+  "Nevada senator Jacky: _ _ s _ r": [
+    [
+      "roser",
+      0.5
+    ]
+  ],
+  "Bits of choreography: _ _ e _ y": [
+    [
+      "steps",
+      0.5
+    ],
+    [
+      "stepy",
+      0.2
     ]
   ]
 }

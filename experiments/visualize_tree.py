@@ -7,8 +7,8 @@ from tot.tasks.crosswords import MiniCrosswordsTask
 
 # --- Configuration ---
 # Change this to point to the specific results file you want to visualize
-RESULTS_FILE = "./results/llama_NYT_crossword_search_results.jsonl" 
-BASE_OUTPUT_DIR = "./results/visualizations/NYT_crossword"
+RESULTS_FILE = "./results/llama_NYT_crossword_search_inorder_multi_cache_results.jsonl" 
+BASE_OUTPUT_DIR = "./results/visualizations/NYT_crossword/MC"
 DATA_FILE = "miniNYT.json"
 
 def format_grid_for_display(grid_string: str, compact=True) -> str:

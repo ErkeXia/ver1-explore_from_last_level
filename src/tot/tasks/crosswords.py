@@ -422,11 +422,11 @@ class MiniCrosswordsTask(Task):
             ans = ' '.join(ans.lower())
             line = f'{data}: {ans}'
             
-            res = self.eval_cache.get(line)
+            res = self.eval_cache_gpt.get(line)
             if res is None:
                 prompt = value_prompt.format(input=line)
                 res = gpt(prompt)[0]
-                self.eval_cache.set(line, res)
+                self.eval_cache_gpt.set(line, res)
                 
             print(line)
             print(res)
