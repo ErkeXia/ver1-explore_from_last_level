@@ -386,6 +386,7 @@ class MiniCrosswordsTask(Task):
         return count
     
     def evaluate_state(self, x: str, y: str, model: str = 'llama') -> list:
+        valid_response = ['sure', 'maybe', 'impossible']
         self.set_status(x, y)
         sure_lst = []
         for i, (ans, data, status) in enumerate(zip(self.env.ans, self.env.data, self.env.status)):
@@ -397,16 +398,35 @@ class MiniCrosswordsTask(Task):
                     prompt = value_prompt.format(input=line)
                     res = gpt(prompt)[0]
                     self.eval_cache_gpt.set(line, res)
-            else:
+            elif 'llama' in model.lower():
                 res = self.eval_cache_llama.get(line)
                 if res is None:
-                    user_prompt = user_value_prompt.format(input=line)
-                    res = llama_instruct(user_prompt, system_value_prompt)[0].strip().lower()
+                    attempt = 0
+                    while attempt < 3:
+                        user_prompt = user_evaluate_prompt.format(input=line)
+                        full_res = llama_instruct(user_prompt, system_evaluate_prompt)[0]
+                        
+                        print(f" ----evaluate {line} with attempt {attempt}: \nfull response {full_res}")
+                        res_lines = full_res.split('\n')
+                        raw_output = ""
+                        for i, res_line in enumerate(res_lines):
+                            if 'conclusion' in res_line.lower():
+                                if i + 1 < len(res_lines):
+                                    raw_output = res_lines[i+1].strip().lower()
+                                break
+                        for key in valid_response:
+                            if key in raw_output:
+                                res = key
+                                break            
+                        if res in valid_response:
+                            break
+                        attempt += 1
+                    if attempt == 3:
+                        res = 'impossible'
                     self.eval_cache_llama.set(line, res)
+            
                 
-            print(line)
-            print(res)
-            print()
+            print(f"_________finish evaluate for {line} with {res} \n")
             res = res.split('\n')[-1].strip()
             if res == 'sure':
                 sure_lst.append(i)

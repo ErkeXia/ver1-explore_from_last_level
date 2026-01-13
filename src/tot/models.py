@@ -18,7 +18,6 @@ cached_system_prompts = {}
 model_name = None
 model = None
 tokenizer = None
-TGI = False
 has_load = False
 
 api_key = os.getenv("OPENAI_API_KEY", "")
@@ -33,11 +32,10 @@ if api_base != "":
     openai.api_base = api_base
     
     
-def model_setup(model_name_arg, instruct_model = True, TGI_arg = True):
-    global tokenizer, model, model_name, TGI, has_load
-    TGI = TGI_arg
+def model_setup(model_name_arg, instruct_model = True):
+    global tokenizer, model, model_name, has_load
     model_name = model_name_arg
-    if TGI or has_load:
+    if has_load:
         return True
     
     # instruct_model = False
@@ -52,6 +50,11 @@ def model_setup(model_name_arg, instruct_model = True, TGI_arg = True):
             model_id = "mistralai/Mistral-7B-Instruct-v0.3"
         else:
             model_id = "mistralai/Mistral-7B-v0.3"
+    elif model_name == 'qwen':
+        if instruct_model:
+            model_id = "Qwen/Qwen3-8B"
+        else:
+            model_id = "Qwen/Qwen3-8B-Base"
     tokenizer = AutoTokenizer.from_pretrained(model_id)
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
@@ -66,19 +69,6 @@ def model_setup(model_name_arg, instruct_model = True, TGI_arg = True):
     has_load = True
     return instruct_model
 
-#llama setup
-
-def format_chat_prompt_TGI(user_prompt: str, system_prompt: str = "You are a helpful assistant.") -> str:
-    if model_name == 'llama':
-        return (
-            "<|start_header_id|>system<|end_header_id|>\n"
-            f"{system_prompt}<|eot_id|>\n"
-            "<|start_header_id|>user<|end_header_id|>\n"
-            f"{user_prompt}<|eot_id|>\n"
-            "<|start_header_id|>assistant<|end_header_id|>\n"
-        )
-    elif model_name == 'mistral':
-        return f"<s>[INST] <<SYS>>\n{system_prompt}\n<</SYS>>\n{user_prompt} [/INST]"
     
 def format_chat_prompt(user_prompt: str, system_prompt: str = "You are a helpful assistant.") -> tuple[str, str]:
     if model_name == 'llama':
@@ -94,10 +84,26 @@ def format_chat_prompt(user_prompt: str, system_prompt: str = "You are a helpful
     elif model_name == 'mistral':
         system_part = f"<s>[INST] <<SYS>>\n{system_prompt}\n<</SYS>>\n"
         user_part = f"{user_prompt} [/INST]"
+    elif model_name == 'qwen':
+        sys_msgs = [{"role": "system", "content": system_prompt}] if system_prompt else []
+        full_msgs = sys_msgs + [{"role": "user", "content": user_prompt}]
+
+        try:
+            system_part = tokenizer.apply_chat_template(
+                sys_msgs, tokenize=False, add_generation_prompt=False, enable_thinking=False
+            )
+            full_text = tokenizer.apply_chat_template(
+                full_msgs, tokenize=False, add_generation_prompt=True, enable_thinking=False
+            )
+        except TypeError:
+            system_part = tokenizer.apply_chat_template(sys_msgs, tokenize=False, add_generation_prompt=False)
+            full_text = tokenizer.apply_chat_template(full_msgs, tokenize=False, add_generation_prompt=True)
+
+        user_part = full_text[len(system_part):] if full_text.startswith(system_part) else full_text
     return system_part, user_part
 
 
-def llama_instruct(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.7, max_tokens=200, n=1, stop=None, query_task = None) -> list:
+def llama_instruct(user_prompt, system_prompt = "You are a helpful assistant", temperature=0.6, max_tokens=200, n=1, stop=None, query_task = None) -> list:
     global prompt_llama_tokens, llama_tokens
     # print(model.config._attn_implementation)
 
@@ -109,7 +115,8 @@ def llama_instruct(user_prompt, system_prompt = "You are a helpful assistant", t
         system_tokens_cache = cached_system_prompts[query_task]
     else:
         system_tokens_cache = tokenizer(system_part, return_tensors="pt", add_special_tokens=False).input_ids
-        cached_system_prompts[query_task] = system_tokens_cache
+        if query_task is not None:
+            cached_system_prompts[query_task] = system_tokens_cache
     user_tokens = tokenizer(user_part, return_tensors="pt", add_special_tokens=False).input_ids
     full_tokens = torch.cat([system_tokens_cache, user_tokens], dim=-1).to(model.device)
     attention_mask = torch.ones_like(full_tokens)
@@ -131,6 +138,8 @@ def llama_instruct(user_prompt, system_prompt = "You are a helpful assistant", t
             temperature=temperature,
             top_p=0.9,
             num_return_sequences=n,
+            repetition_penalty=1.1,
+            no_repeat_ngram_size=10,
         )
     for output in res:
         generated_tokens = output[prompt_len:]
@@ -254,30 +263,3 @@ def llama_usage():
     return {"llama_completion_tokens": llama_tokens, "llama_prompt_tokens": prompt_llama_tokens}
 
 
-
-
-# TGI CODE
- 
-    # if TGI:
-    #     TGI_prompt = format_chat_prompt_TGI(user_prompt, system_prompt)
-    #     for _ in range(n):
-    #         response = client.generate(
-    #             TGI_prompt,
-    #             max_new_tokens=max_tokens,
-    #             temperature=temperature,
-    #             top_p=0.9,
-    #             do_sample=True,
-    #             return_full_text=False
-    #         )
-    #         output_text = response.generated_text
-
-    #         # prompt_token_count = len(tokenizer.encode(prompt))
-    #         # completion_token_count = len(tokenizer.encode(output_text))
-    #         # prompt_llama_tokens += prompt_token_count
-    #         # llama_tokens += completion_token_count
-
-    #         if output_text.strip() == "":
-    #             print(f"TGI output empty for prompt: {TGI_prompt}")
-    #         outputs.append(output_text)
-    #     return outputs
-    

@@ -30,7 +30,7 @@ def apply_action_to_y(task, x, parent_y, action_line):
     return y_output_from_env(task.env)              # serialize back to Output-grid
 
 # ---------------- propose children ----------------
-def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=5, M=3, N=5):
+def get_proposals_v1(task, parent_state, parent_index, eval_model = "gpt",feedback=None, x=None, K=5, M=3, N=5):
     y_parent = parent_state['current']
     print(f"____________________\nProposals for {y_parent}")
     
@@ -122,7 +122,7 @@ def get_proposals_v1(task, parent_state, parent_index, feedback=None, x=None, K=
         # --- Evaluate with GPT and filter invalid grids ---
         # gpt_evaluate returns None if "impossible" is found in any line
         print(f"possible action {action_line}")
-        eval_result = task.evaluate_state(x, y_child, model = 'gpt')
+        eval_result = task.evaluate_state(x, y_child, model = eval_model)
         if eval_result is None:
             print(f"Child rejected by GPT evaluation: Action '{action_line}' created an impossible state.")
             continue
@@ -196,7 +196,7 @@ def count_filled_words(y_grid_string: str) -> int:
     return filled_word_count
 
 # ---------------- DFS core ----------------
-def reasoning_dfs(task, x, start_grid, max_depth=12, branch=5, K=5, M=5):
+def reasoning_dfs(task, x, start_grid, eval_model = "gpt", max_depth=12, branch=5, K=5, M=5):
     global nodes, states
     completeness_bonus = 3
 
@@ -227,7 +227,7 @@ def reasoning_dfs(task, x, start_grid, max_depth=12, branch=5, K=5, M=5):
         new_ys_triplets = []
         attempt = 0 
         while(new_ys_triplets == [] and attempt < 3):
-            new_ys_triplets = get_proposals_v1(task, parent_state, idx_in_level, x=x, K=K, M=M)
+            new_ys_triplets = get_proposals_v1(task, parent_state, idx_in_level, eval_model = eval_model, x=x, K=K, M=M)
             attempt += 1
         
         print(f'__new ys__ {new_ys_triplets}')
@@ -307,7 +307,7 @@ def evaluate(task, x, y):
     return pruned_y, sure_lst
 
 
-def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = False, do_validate = True):
+def solve_v1(args, task, idx, slm = 'llama', eval_model = "gpt", instruct_model_arg = False, do_validate = True):
     global gpt, validate_time
     global PROPOSE_CACHE, PROPOSE_MODE, VISITED_CACHE
 
@@ -351,7 +351,7 @@ def solve_v1(args, task, idx, slm = 'llama', instruct_model_arg = False, do_vali
 
         for i in range(max_iterations):
             
-            sol_idx, sol_y, depth, states, nodes = reasoning_dfs(task, x, start_grid=start_y, max_depth=12, branch=5, K=5, M=5)
+            sol_idx, sol_y, depth, states, nodes = reasoning_dfs(task, x, start_grid=start_y, eval_model = eval_model, max_depth=12, branch=5, K=5, M=5)
             all_states.append(states)
             
             if not do_validate:

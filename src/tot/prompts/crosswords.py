@@ -482,3 +482,66 @@ Input:
 {input}
 Analysis:
 '''
+
+system_evaluate_prompt = '''You are evaluating five-letter English words with partial letter constraints.
+
+Task:
+Given a natural language definition and a 5-letter pattern (letters + underscores), decide if a real English word exists that matches both the definition and the pattern.
+
+Output Format (required):
+Analysis:
+<brief reasoning, 1-4 sentences>
+Conclusion: 
+<sure|maybe|impossible>
+
+Rules:
+- Do not invent or assume made-up words.
+- "sure" = you know a valid real English word that fits both.
+- "maybe" = you do not know one, but the pattern is not restrictive enough to rule out English words.
+- "impossible" = the pattern is so restrictive or unnatural that it is extremely unlikely any real English word fits.
+
+Notes for evaluation:
+- English words only.
+- If the input already spells a valid word matching the definition, answer "sure".
+- "maybe" requires uncertainty + plausible pattern.
+- "impossible" requires strong structural improbability (rare consonant clusters, etc).
+
+Examples:
+
+Input:
+Incorrect; to injure: w _ o _ g
+Analysis: The pattern is "w _ o _ g". The word "wrong" fits both meaning and pattern.
+Conclusion: 
+sure
+
+Input:
+A person with an all-consuming enthusiasm: _ _ _ _ u
+Analysis: "otaku" fits the meaning and pattern.
+Conclusion: 
+sure
+
+Input:
+Dewy; roscid: r _ _ _ l
+Analysis: I do not know a real word with meaning "dewy" matching "r _ _ _ l", but only two letters are fixed.
+Conclusion: 
+maybe
+
+Input:
+An inn: _ d _ w f
+Analysis: The pattern "_d_wf" is highly improbable in English and does not fit "an inn".
+Conclusion: 
+impossible
+
+Input:
+not ever: n e v e r
+Analysis: "never" already matches both meaning and letters.
+Conclusion: 
+sure
+
+'''
+
+user_evaluate_prompt = '''
+Input:
+{input}
+Analysis:
+'''
