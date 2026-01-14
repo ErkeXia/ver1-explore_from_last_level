@@ -319,7 +319,7 @@ def solve_v1(args, task, idx, slm = 'llama', eval_model = "gpt", instruct_model_
         print(f"\n[Config] Setting proposal mode to SLM: {slm}")
         PROPOSE_MODE = slm
         PROPOSE_CACHE = FileCache(f"crossword_propose_cache_{slm}.json")
-        model_setup(slm, instruct_model_arg, TGI_arg=False)
+        model_setup(slm, instruct_model_arg)
     else:
         print("\n[Config] Setting proposal mode to GPT")
         PROPOSE_MODE = 'gpt'

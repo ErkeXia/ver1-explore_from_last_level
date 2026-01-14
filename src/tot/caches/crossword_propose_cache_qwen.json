@@ -1,0 +1,1820 @@
+{
+  "Disney elephant: _ _ _ _ _": [
+    [
+      "dumbo",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ _ _ _ _": [
+    [
+      "techs",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: _ _ _ _ _": [
+    [
+      "music",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ _ _ _ _": [
+    [
+      "straw",
+      0.5
+    ],
+    [
+      "fluff",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: _ _ _ _ _": [
+    [
+      "slyer",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: _ _ _ _ _": [
+    [
+      "dumps",
+      0.5
+    ],
+    [
+      "ounds",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: _ _ _ _ _": [
+    [
+      "model",
+      0.5
+    ],
+    [
+      "norms",
+      0.5
+    ],
+    [
+      "usual",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: _ _ _ _ _": [
+    [
+      "andom",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: _ _ _ _ _": [
+    [
+      "wilde",
+      1.0
+    ],
+    [
+      "oscar",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Disney elephant: _ _ _ _ w": [
+    [
+      "dumbo",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ _ _ _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: _ _ _ _ l": [
+    [
+      "muzak",
+      0.5
+    ],
+    [
+      "music",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ _ _ _ d": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: _ _ _ _ e": [
+    [
+      "slyer",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Disney elephant: o _ _ _ w": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u _ _ _ i": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: n _ _ _ l": [
+    [
+      "sonat",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: d _ _ _ d": [
+    [
+      "dread",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: s _ _ _ e": [
+    [
+      "slyer",
+      0.5
+    ],
+    [
+      "shyer",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Disney elephant: o n _ _ w": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u o _ _ i": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: n r _ _ l": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: d m _ _ d": [
+    [
+      "damnd",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: s s _ _ e": [
+    [
+      "sneer",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: _ _ _ r _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: _ _ _ e _": [
+    [
+      "hodge",
+      0.5
+    ],
+    [
+      "mixed",
+      0.5
+    ],
+    [
+      "scram",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): _ _ _ a _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Disney elephant: o u _ _ w": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u s _ _ i": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: n u _ _ l": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: d a _ _ d": [
+    [
+      "daddy",
+      0.5
+    ],
+    [
+      "dandy",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: s l _ _ e": [
+    [
+      "slyer",
+      0.5
+    ],
+    [
+      "slier",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Disney elephant: o _ a _ w": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u _ n _ i": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: n _ d _ l": [
+    [
+      "noble",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: d _ o _ d": [
+    [
+      "oodad",
+      0.5
+    ],
+    [
+      "oddle",
+      0.5
+    ],
+    [
+      "oodle",
+      0.5
+    ]
+  ],
+  "More cagey: s _ m _ e": [
+    [
+      "smear",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Disney elephant: _ m _ _ w": [
+    [
+      "dumbo",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ o _ _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: _ d _ _ l": [
+    [
+      "modal",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ e _ _ d": [
+    [
+      "hread",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: _ l _ _ e": [
+    [
+      "slyer",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Disney elephant: _ u _ _ w": [
+    [
+      "dumbo",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ s _ _ i": [
+    [
+      "calls",
+      0.5
+    ],
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: _ u _ _ l": [
+    [
+      "music",
+      0.5
+    ],
+    [
+      "mural",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ a _ _ d": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Disney elephant: d u _ _ w": [
+    [
+      "dumbo",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: m u _ _ l": [
+    [
+      "music",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: p a _ _ d": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: _ _ m _ _": [
+    [
+      "dumps",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: _ _ r _ _": [
+    [
+      "andom",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): _ _ a _ _": [
+    [
+      "brite",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Disney elephant: _ u a _ w": [
+    [
+      "dumbo",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ s n _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: _ u d _ l": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ a o _ d": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: _ l m _ e": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Disney elephant: _ _ a _ w": [
+    [
+      "dumbo",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ _ n _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: _ _ d _ l": [
+    [
+      "sonat",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ _ o _ d": [
+    [
+      "fluff",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: _ _ m _ e": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Disney elephant: _ n a _ w": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ o n _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: _ r d _ l": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ m o _ d": [
+    [
+      "fluff",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: _ s m _ e": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Disney elephant: d _ a _ w": [
+    [
+      "dumbo",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: m _ d _ l": [
+    [
+      "model",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: p _ o _ d": [
+    [
+      "oodle",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: _ _ o _ _": [
+    [
+      "norms",
+      0.5
+    ],
+    [
+      "norma",
+      0.2
+    ],
+    [
+      "stand",
+      0.5
+    ],
+    [
+      "model",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): _ _ e _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: d _ _ _ _": [
+    [
+      "umped",
+      0.5
+    ],
+    [
+      "dumps",
+      0.5
+    ],
+    [
+      "dregs",
+      0.5
+    ],
+    [
+      "dross",
+      0.5
+    ]
+  ],
+  "Standard: u _ _ _ _": [
+    [
+      "usual",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: m _ _ _ _": [
+    [
+      "mixed",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o _ _ _ _": [
+    [
+      "oscar",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: d _ _ s _": [
+    [
+      "dumps",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u _ _ t _": [
+    [
+      "unfit",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: m _ _ r _": [
+    [
+      "mixed",
+      0.5
+    ],
+    [
+      "merry",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ _ a _": [
+    [
+      "rawny",
+      0.5
+    ],
+    [
+      "balsa",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o _ _ w _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: d _ m s _": [
+    [
+      "dumps",
+      0.5
+    ],
+    [
+      "dregs",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u _ u t _": [
+    [
+      "usual",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: m _ s r _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ i a _": [
+    [
+      "briar",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o _ c w _": [
+    [
+      "oscar",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ _ _ r _": [
+    [
+      "aller",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: _ _ _ r _": [
+    [
+      "slyer",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: d _ _ s s": [
+    [
+      "dumps",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u _ _ t l": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: m _ _ r y": [
+    [
+      "myrrh",
+      0.5
+    ],
+    [
+      "murky",
+      0.5
+    ],
+    [
+      "merry",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ _ a e": [
+    [
+      "brite",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o _ _ w r": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ _ e _ _": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: _ _ r _ _": [
+    [
+      "music",
+      0.5
+    ],
+    [
+      "score",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: d u _ s s": [
+    [
+      "dumps",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u s _ t l": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b r _ a e": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o s _ w r": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: _ _ y _ _": [
+    [
+      "shyly",
+      0.5
+    ],
+    [
+      "slyly",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: d u _ s _": [
+    [
+      "dumps",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u s _ t _": [
+    [
+      "usual",
+      0.5
+    ],
+    [
+      "usury",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b r _ a _": [
+    [
+      "rawns",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o s _ w _": [
+    [
+      "oscar",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b r _ a l": [
+    [
+      "brual",
+      0.5
+    ],
+    [
+      "brand",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o s _ w y": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: _ _ r u _": [
+    [
+      "score",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u _ _ t h": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ _ a l": [
+    [
+      "awley",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o _ _ w y": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: d _ _ f _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u _ _ l _": [
+    [
+      "usual",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: m _ _ u _": [
+    [
+      "uddle",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ _ f _": [
+    [
+      "buffs",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o _ _ f _": [
+    [
+      "oscar",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: d _ _ f s": [
+    [
+      "dumps",
+      0.5
+    ],
+    [
+      "dregs",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u _ _ l l": [
+    [
+      "usual",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: m _ _ u y": [
+    [
+      "mukey",
+      0.2
+    ],
+    [
+      "murky",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ _ f e": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o _ _ f r": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ _ _ u _": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: _ _ _ f _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: _ _ _ s _": [
+    [
+      "shrew",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ _ _ _ s": [
+    [
+      "llers",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: _ _ _ _ c": [
+    [
+      "music",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ _ _ _ a": [
+    [
+      "straw",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "More cagey: _ _ _ _ r": [
+    [
+      "slyer",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: d _ _ _ s": [
+    [
+      "dumps",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u _ _ _ l": [
+    [
+      "usual",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: m _ _ _ y": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ _ _ e": [
+    [
+      "brite",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: d _ m _ s": [
+    [
+      "dumps",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u _ u _ l": [
+    [
+      "usual",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: m _ s _ y": [
+    [
+      "missy",
+      0.5
+    ],
+    [
+      "messy",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ i _ e": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ _ i _ s": [
+    [
+      "calls",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ _ s _ a": [
+    [
+      "straw",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u _ i _ s": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: p _ s _ a": [
+    [
+      "pasta",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u _ u a l": [
+    [
+      "usual",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ i t e": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u s i _ s": [
+    [
+      "calls",
+      0.5
+    ],
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: p a s _ a": [
+    [
+      "spars",
+      0.5
+    ],
+    [
+      "passa",
+      0.5
+    ],
+    [
+      "pasta",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ i s e": [
+    [
+      "riese",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ s i _ s": [
+    [
+      "calls",
+      0.5
+    ],
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ a s _ a": [
+    [
+      "salsa",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ s _ _ s": [
+    [
+      "calls",
+      0.5
+    ],
+    [
+      "users",
+      0.5
+    ],
+    [
+      "techs",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ a _ _ a": [
+    [
+      "straw",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ s e _ s": [
+    [
+      "calls",
+      0.5
+    ],
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u s e _ s": [
+    [
+      "users",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b r i _ e": [
+    [
+      "brine",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: d u m _ s": [
+    [
+      "dumps",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u s _ _ s": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: p a _ _ a": [
+    [
+      "panna",
+      0.5
+    ],
+    [
+      "pasta",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: m e s _ y": [
+    [
+      "messy",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: m _ s n y": [
+    [
+      "mynas",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ i n e": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: m _ s s y": [
+    [
+      "missy",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ _ e _ s": [
+    [
+      "calls",
+      0.5
+    ],
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u _ e _ s": [
+    [
+      "users",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u s u _ l": [
+    [
+      "usual",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u _ _ _ s": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: p _ _ _ a": [
+    [
+      "pasta",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Mozart's output: _ u _ _ c": [
+    [
+      "music",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Refuse heaps: d u _ _ s": [
+    [
+      "dumps",
+      1.0
+    ]
+  ],
+  "Refuse heaps: d _ m _ _": [
+    [
+      "dumps",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Standard: u _ u _ _": [
+    [
+      "usual",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In no particular order?: m _ s _ _": [
+    [
+      "mixed",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Scotch-___ (scouring pad brand): b _ i _ _": [
+    [
+      "briar",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o _ c _ _": [
+    [
+      "oscar",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o _ c _ r": [
+    [
+      "oscar",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ _ i _ _": [
+    [
+      "techs",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ _ s _ _": [
+    [
+      "rands",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u _ i _ _": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: p _ s _ _": [
+    [
+      "pasta",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u s i _ _": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: p a s _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o _ c a r": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: _ s i _ _": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Angel hair, for example: _ a s _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u _ e _ _": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tech-support callers: u s e _ _": [
+    [
+      "users",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Irish poet and playwright Wilde: o s c _ r": [
+    [
+      "oscar",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ]
+}

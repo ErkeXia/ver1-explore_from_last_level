@@ -175,6 +175,7 @@ class MiniCrosswordsTask(Task):
         self.value_caches = {}
         self.eval_cache_gpt = FileCache("gpt3_5_evaluation.json")
         self.eval_cache_llama = FileCache("llama_evaluation.json")
+        self.eval_cache_qwen = FileCache("qwen_evaluation.json")
 
     def __len__(self) -> int:
         return len(self.env)
@@ -385,55 +386,125 @@ class MiniCrosswordsTask(Task):
         print(count)
         return count
     
-    def evaluate_state(self, x: str, y: str, model: str = 'llama') -> list:
-        valid_response = ['sure', 'maybe', 'impossible']
+    def _get_eval_cache(self, model: str):
+        if 'gpt' in model.lower():
+            return self.eval_cache_gpt
+        if 'qwen' in model.lower():
+            return self.eval_cache_qwen
+        return self.eval_cache_llama
+
+    def _parse_eval_label(self, text: str) -> str | None:
+        valid = ('sure', 'maybe', 'impossible')
+        t = (text or "").lower()
+
+        lines = t.splitlines()
+        for i, line in enumerate(lines):
+            if 'conclusion' in line:
+                if i + 1 < len(lines):
+                    cand = lines[i + 1].strip()
+                    for v in valid:
+                        if v in cand:
+                            return v
+
+        for v in valid:
+            if v in t:
+                return v
+        return None
+    
+    def evaluate_state(self, x: str, y: str, model: str = 'llama') -> list[int] | None:
+        valid = {'sure', 'maybe', 'impossible'}
         self.set_status(x, y)
-        sure_lst = []
+
+        cache = self._get_eval_cache(model)
+        sure_lst: list[int] = []
+
         for i, (ans, data, status) in enumerate(zip(self.env.ans, self.env.data, self.env.status)):
-            ans = ' '.join(ans.lower())
-            line = f'{data}: {ans}'
-            if 'gpt' in model.lower():
-                res = self.eval_cache_gpt.get(line)
-                if res is None:
-                    prompt = value_prompt.format(input=line)
-                    res = gpt(prompt)[0]
-                    self.eval_cache_gpt.set(line, res)
-            elif 'llama' in model.lower():
-                res = self.eval_cache_llama.get(line)
-                if res is None:
-                    attempt = 0
-                    while attempt < 3:
+            ans_spaced = ' '.join(ans.lower())
+            line = f'{data}: {ans_spaced}'
+
+            res = cache.get(line)
+            if res is None:
+                for attempt in range(3):
+                    if 'gpt' in model.lower():
+                        prompt = value_prompt.format(input=line)
+                        full_res = gpt(prompt)[0]
+                    else:
                         user_prompt = user_evaluate_prompt.format(input=line)
                         full_res = llama_instruct(user_prompt, system_evaluate_prompt)[0]
-                        
-                        print(f" ----evaluate {line} with attempt {attempt}: \nfull response {full_res}")
-                        res_lines = full_res.split('\n')
-                        raw_output = ""
-                        for i, res_line in enumerate(res_lines):
-                            if 'conclusion' in res_line.lower():
-                                if i + 1 < len(res_lines):
-                                    raw_output = res_lines[i+1].strip().lower()
-                                break
-                        for key in valid_response:
-                            if key in raw_output:
-                                res = key
-                                break            
-                        if res in valid_response:
-                            break
-                        attempt += 1
-                    if attempt == 3:
-                        res = 'impossible'
-                    self.eval_cache_llama.set(line, res)
-            
-                
+                    print(f" ----evaluate {line} with attempt {attempt}: \nfull response {full_res}")
+                    parsed = self._parse_eval_label(full_res)
+                    if parsed in valid:
+                        res = parsed
+                        break
+
+                if res is None:
+                    res = 'impossible'
+                cache.set(line, res)
+
             print(f"_________finish evaluate for {line} with {res} \n")
-            res = res.split('\n')[-1].strip()
+
             if res == 'sure':
                 sure_lst.append(i)
-            if res == 'impossible':
+            elif res == 'impossible':
                 return None
+
         print(sure_lst)
         return sure_lst
+
+    # def evaluate_state(self, x: str, y: str, model: str = 'llama') -> list:
+    #     valid_response = ['sure', 'maybe', 'impossible']
+    #     self.set_status(x, y)
+    #     sure_lst = []
+    #     for i, (ans, data, status) in enumerate(zip(self.env.ans, self.env.data, self.env.status)):
+    #         ans = ' '.join(ans.lower())
+    #         line = f'{data}: {ans}'
+    #         if 'gpt' in model.lower():
+    #             res = self.eval_cache_gpt.get(line)
+    #             if res is None:
+    #                 prompt = value_prompt.format(input=line)
+    #                 res = gpt(prompt)[0]
+    #                 self.eval_cache_gpt.set(line, res)
+    #         else:
+    #             if 'llama' in model:
+    #                 res = self.eval_cache_llama.get(line)
+    #             elif 'qwen' in model:
+    #                 res = self.eval_cache_qwen.get(line)
+    #             if res is None:
+    #                 attempt = 0
+    #                 while attempt < 3:
+    #                     user_prompt = user_evaluate_prompt.format(input=line)
+    #                     full_res = llama_instruct(user_prompt, system_evaluate_prompt)[0]
+                        
+    #                     print(f" ----evaluate {line} with attempt {attempt}: \nfull response {full_res}")
+    #                     res_lines = full_res.split('\n')
+    #                     raw_output = ""
+    #                     for i, res_line in enumerate(res_lines):
+    #                         if 'conclusion' in res_line.lower():
+    #                             if i + 1 < len(res_lines):
+    #                                 raw_output = res_lines[i+1].strip().lower()
+    #                             break
+    #                     for key in valid_response:
+    #                         if key in raw_output:
+    #                             res = key
+    #                             break            
+    #                     if res in valid_response:
+    #                         break
+    #                     attempt += 1
+    #                 if attempt == 3:
+    #                     res = 'impossible'
+    #                 if 'llama' in model:
+    #                     self.eval_cache_llama.set(line, res)
+    #                 elif 'qwen' in model:
+    #                     self.eval_cache_qwen.set(line, res)            
+                
+    #         print(f"_________finish evaluate for {line} with {res} \n")
+    #         res = res.split('\n')[-1].strip()
+    #         if res == 'sure':
+    #             sure_lst.append(i)
+    #         if res == 'impossible':
+    #             return None
+    #     print(sure_lst)
+    #     return sure_lst
     
     def gpt_evaluate(self, x: str, y: str) -> list:
         self.set_status(x, y)
