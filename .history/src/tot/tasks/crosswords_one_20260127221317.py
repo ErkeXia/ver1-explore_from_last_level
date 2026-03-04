@@ -203,22 +203,6 @@ class MiniCrosswordsTask(Task):
         idx = self.xs.index(x)
         self.test_output(idx, y)  # update self.env
     
-    @staticmethod
-    def standard_prompt_wrap(x: str, y:str='') -> str:
-        return standard_prompt.format(input=x) + y
-
-    @staticmethod
-    def cot_prompt_wrap(x: str, y:str='') -> str:
-        return cot_prompt.format(input=x) + y
-    
-    def propose_prompt_wrap(self, x: str, y: str='') -> str:
-        self.set_status(x, y)
-        return propose_prompt.format(input=self.env.render())
-    
-    def propose_instruct_prompt_wrap(self, x: str, y: str='') -> str:
-        self.set_status(x, y)
-        return system_propose_prompt, user_propose_prompt.format(input=self.env.render(), board = y)
-    
     def propose_one_instruct_prompt_wrap(self, line: str, avoid_words: list = None):
         prompt_input = line
         if avoid_words and len(avoid_words) > 0:
@@ -229,27 +213,6 @@ class MiniCrosswordsTask(Task):
         else:
             prompt_input = prompt_input + "\nConstraint: Do NOT propose the following words: N/A \n"
         return system_propose_one_prompt, user_propose_one_prompt.format(input=prompt_input)
-    
-    def propose_outputs_unwrap(self, x: str, y: str, outputs: list, n_max_propose: int) -> list:
-        confidence_to_value = {'certain': 1, 'high': 0.5, 'medium': 0.2, 'low': 0.1}  # TODO: ad hoc
-        proposals_to_scores = {}
-        for output in outputs:
-            lines = output.split('\n')
-            pattern = r'^([hv][1-5])\. ([a-zA-Z]{5,5}) \((certain|high|medium|low)\).*$'
-            for line in lines:
-                match = re.match(pattern, line.lower())
-                if match:
-                    parts = [match.group(1), match.group(2), match.group(3)]
-                    proposal = parts[0].lower() + '. ' + parts[1].lower()
-                    score = confidence_to_value.get(parts[2], 0)
-                    proposals_to_scores[proposal] = proposals_to_scores.get(proposal, 0) + score
-        
-        proposals = sorted(proposals_to_scores.items(), key=lambda x: x[1], reverse=True)
-        if n_max_propose != -1:
-            proposals = proposals[:n_max_propose]
-        proposals = [proposal[0] + '\n' for proposal in proposals]
-        self.cache_proposals[(x, y, n_max_propose)] = proposals
-        return proposals
     
     def propose_one_outputs_unwrap(self, x: str, y: str, outputs: list) -> str:
         confidence_to_value = {'certain': 1.0, 'high': 0.5, 'medium': 0.2, 'low': 0.1}

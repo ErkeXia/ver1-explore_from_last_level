@@ -1,0 +1,35 @@
+# Netscape HTTP Cookie File
+# https://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file! Do not edit.
+
+.nytimes.com	TRUE	/	TRUE	1801150788	nyt-a	qpebmBtcPHG5JeMJyp4RwB
+.nytimes.com	TRUE	/	TRUE	1803784086	purr-pref-agent	<G_<C_<T0<Td_<Tp1_<Tp2_<Tp3_<Tp4_<Tp7_<a0_
+.nytimes.com	TRUE	/	TRUE	1803784086	gpp-string	",,DBABLA~BVQqAAAAAABo.QA"
+.nytimes.com	TRUE	/	FALSE	1773739430	_gcl_au	1.1.914185249.1765963430
+.nytimes.com	TRUE	/	TRUE	1803742097	_cb	0B3njIdUXNFdgy4
+.nytimes.com	TRUE	/	TRUE	1803784086	purr-cache	<G_<C_<T0<Td_<Tp1_<Tp2_<Tp3_<Tp4_<Tp7_<a0_<K0<S0<rUS+US-PA<ur
+.nytimes.com	TRUE	/	TRUE	1781515532	nyt-auth-method	username
+.nytimes.com	TRUE	/	FALSE	1800177934	_scid	SWlopRqkjLW6vp5AEU2vL2d-JChCg-9b
+.nytimes.com	TRUE	/	FALSE	1799463048	_pin_unauth	dWlkPVpUQXhORE5oWkRrdE5qSmtaaTAwTVdWa0xXRmxORFF0WlRjNU0yUTFNVGxrT0RWaA
+.nytimes.com	TRUE	/	FALSE	1800523536	iter_id	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI2NTYwYzNkNDAxM2NmODAwMDFiOGRhZTQiLCJhaWRfZXh0Ijp0cnVlLCJjb21wYW55X2lkIjoiNWMwOThiM2QxNjU0YzEwMDAxMmM2OGY5IiwiaWF0IjoxNzY1OTYzNTM1fQ.qYQDkyZuwefnBzeAqR4tRPv6DZn9nwhDJs6EJuwH_is
+.nytimes.com	TRUE	/	TRUE	1799659427	__gads	ID=6057a5dabd02fdb7:T=1765963427:RT=1765998224:S=ALNI_MYOM8ckySFKRBMo_2FvFQ9l9BbiWg
+.nytimes.com	TRUE	/	TRUE	1799659427	__gpi	UID=000011cceeeb191f:T=1765963427:RT=1765998224:S=ALNI_MaYjJ4lZZ7_jIoRod9k_pS35KLLiw
+.nytimes.com	TRUE	/	TRUE	1781515427	__eoi	ID=b5c450bfe29edfcd:T=1765963427:RT=1765998224:S=AA-AfjamC2XbWKtYc1S-bd6-nR-Q
+.nytimes.com	TRUE	/	FALSE	1799676230	cto_bundle	1IOr8l9KeWhEeHd3VnAwRWlKVm5lJTJCZEtxdzQlMkZJT2tlQUFuTiUyQmRGTSUyQmdDMmREWFF5ZzJ6ZSUyRm8zTXZ2c2tWaFZRQzlzS3VzMnZERyUyRmgzNHcwSk92ek9LM2ZKSyUyRjV5TTU4eUpkNmVmT2xDSXZNTEljS3VBZWgxMURocDdZbjhjRCUyRjB3OWs5SVFZTnRSVTVsJTJCdVBGYVB2OFh2eGclM0QlM0Q
+.nytimes.com	TRUE	/	FALSE	1799676230	cto_bidid	s81nIF8lMkZKWWdVb2Q2MjNGT2pwZTFlR1ExbG1Bdnc2WjNCWFFDTmlzSXdDdGxBZ0N0cm91WmJJak5mWEdYakZhSThFU0NOdGljZzFzejFGT2ZLJTJCdkRZVCUyRmQwRUZYZ2lPcTRCdzVKdDJGVWRyZURWayUzRA
+.nytimes.com	TRUE	/	FALSE	1802141418	_sctr	1%7C1767888000000
+.nytimes.com	TRUE	/	FALSE	1802141800	_scid_r	VelopRqkjLW6vp5AEU2vL2d-JChCg-9b3DW8YQ
+.nytimes.com	TRUE	/	FALSE	1775703444	_fbp	fb.1.1767927401001.628983457268897876
+.nytimes.com	TRUE	/	TRUE	1801150096	nyt-purr	cfshcfhshckfhdfshgas2taaa
+.nytimes.com	TRUE	/	TRUE	0	nyt-traceid	000000000000000072024dac01e2b495
+.nytimes.com	TRUE	/	FALSE	1801097885	regi_cookie	lssl=DORMANT&news_tenure=18&regi_id=223992830
+.nytimes.com	TRUE	/	TRUE	1803689887	_v__chartbeat3	CV2XhexnNO7C5_Awv
+.nytimes.com	TRUE	/	FALSE	1804121957	nyt-m	C240BB91E265DD5FFEC7C852F3513B40&ifv=i.0&iru=i.1&iir=i.0&uuid=s.fa1a1b6e-f285-4996-aa65-7f3a5cbf478f&e=i.1769954400&ft=i.0&cav=i.0&imu=i.1&iub=i.0&igf=i.0&ird=i.0&g=i.0&vp=i.0&ira=i.0&prt=i.0&imv=i.0&n=i.2&pr=l.4.0.0.0.0&fv=i.0&rc=i.0&vr=l.4.0.0.0.0&igu=i.1&ica=i.0&t=i.0&v=i.0&iue=i.1&ier=i.0&igd=i.0&iga=i.0&s=s.crosswords&er=i.1769561955
+.nytimes.com	TRUE	/	FALSE	1769635697	nyt-gdpr	0
+.nytimes.com	TRUE	/	FALSE	1769635696	nyt-geo	US
+.nytimes.com	TRUE	/	TRUE	1801150084	NYT-S	0^CB4SMQiK7onKBhD71ujLBhoSMS1cqJhw781cpDs93AIORPjMIP6352oqAh53OIT5gqsGQgAaQC4HdxCvjABMcq9FJc_XYyKAV5lToF1e3Rfs29lXQUriJzsoa_g2gNKOVDApB4SQQTL6oua3IkmKWkMjugpXyQ0=
+.nytimes.com	TRUE	/	FALSE	1801150096	fides_consent	%7B%22consent%22%3A%7B%22targeted_advertising_gpp_us_national%22%3Atrue%7D%2C%22identity%22%3A%7B%22fides_user_device_id%22%3A%22dc558464-fb7d-4f23-a646-dbd9d6fd18c1%22%7D%2C%22fides_meta%22%3A%7B%22version%22%3A%220.9.0%22%2C%22createdAt%22%3A%222025-12-17T09%3A25%3A32.571Z%22%2C%22updatedAt%22%3A%222026-01-28T15%3A28%3A16.518Z%22%2C%22consentMethod%22%3A%22script%22%7D%2C%22tcf_consent%22%3A%7B%7D%2C%22non_applicable_notice_keys%22%3A%5B%5D%2C%22fides_string%22%3A%22%2C%2CDBABLA~BVQqAAAAAABo.QA%22%7D
+.nytimes.com	TRUE	/	FALSE	1801150098	nyt-jkidd	uid=223992830&lastRequest=1769614097773&activeDays=%5B0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C1%2C0%2C0%2C0%2C1%2C1%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C0%2C1%5D&adv=4&a7dv=1&a14dv=1&a21dv=4&lastKnownType=sub&newsStartDate=1767927397&entitlements=AAA+ATH+AUD+CKG+MM+MOW+MSD+MTD+WC+XWD
+.nytimes.com	TRUE	/	TRUE	1803742097	_chartbeat2	.1730860063818.1769614097893.1000000000000011.CTqmWUDjRyEsJOqy3B3IRHgo3NHo.1
+.www.nytimes.com	TRUE	/	TRUE	1801150108	datadome	bi6wfYhQu0WECWHa6ZPNi4A342~DVKdnilk9YHcvb~64miL65qso18IeaOcBzLlJUqsw07M3lTLqdEhRV8HkVNki188svCPUJRRQYQdS0nP8p8aXR~KOIuvn7YtTSsgG
+www.nytimes.com	FALSE	/	TRUE	1801152883	_dd_s	isExpired=1&aid=eb252473-7a1d-4617-bad8-c5f24591ee52

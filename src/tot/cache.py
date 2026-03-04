@@ -16,8 +16,8 @@ class FileCache:
         self.cache_file = os.path.join(CACHE_DIR, filename)
         self.data = {}
         
-        # Ensure the cache directory exists.
-        os.makedirs(CACHE_DIR, exist_ok=True)
+        # Ensure the cache directory (and optional subdirectory) exists.
+        os.makedirs(os.path.dirname(self.cache_file), exist_ok=True)
 
         # Load existing cache from file upon initialization
         if os.path.exists(self.cache_file):
