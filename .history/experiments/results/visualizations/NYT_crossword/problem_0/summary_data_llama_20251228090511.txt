@@ -1,0 +1,47 @@
+==================================================
+  Summary for Crossword Problem ID: 0
+==================================================
+
+Refinement Iterations (Explorations): 1
+Total Nodes Explored (All Iterations): 25
+
+--- Hints (Clues) ---
+Horizontal:
+  h1. Disney elephant
+  h2. Tech-support callers
+  h3. Mozart's output
+  h4. Angel hair, for example
+  h5. More cagey
+Vertical:
+  v1. Refuse heaps
+  v2. Standard
+  v3. In no particular order?
+  v4. Scotch-___ (scouring pad brand)
+  v5. Irish poet and playwright Wilde
+
+--- Correct Answer ---
+D U M B O
+U S E R S
+M U S I C
+P A S T A
+S L Y E R
+
+--- Iteration Details ---
+
+--- Iteration 1 ---
+Llama Result Grid (before GPT eval):
+D U M B O
+U S E R S
+M U S I C
+P A S T A
+S L Y E R
+
+GPT Pruned Grid (start of next iteration):
+D U M B O
+U S E R S
+M U S I C
+P A S T A
+S L Y E R
+
+--- GPT Evaluation Results ---
+Iteration 1: GPT was 'sure' about word indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
