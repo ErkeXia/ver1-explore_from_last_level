@@ -251,6 +251,52 @@ def apply_candidates(task, x, y_parent, kept_candidates):
     return y_current, applied_actions, failed_actions
 
 
+def summarize_proposals(task, candidates_by_eid):
+    """
+    Compare round proposals to ground-truth entry answers and print a compact summary.
+    """
+    pairs = []
+    correct = 0
+    incorrect = 0
+
+    for eid, item in sorted(candidates_by_eid.items(), key=lambda kv: int(kv[0])):
+        eidx = task.env.eid_to_idx.get(int(eid))
+        if eidx is None:
+            continue
+        spec = task.env.entries[eidx]
+        proposed = item["word"].upper()
+        answer = spec.answer.upper()
+        is_correct = proposed == answer
+        if is_correct:
+            correct += 1
+        else:
+            incorrect += 1
+        pairs.append(
+            {
+                "entry_id": int(eid),
+                "position": f"{spec.direction}{spec.label}",
+                "proposed": proposed,
+                "answer": answer,
+                "correct": is_correct,
+            }
+        )
+
+    print(f"[Proposal Summary] total={len(pairs)} correct={correct} incorrect={incorrect}")
+    for row in pairs:
+        mark = "OK" if row["correct"] else "X"
+        print(
+            f"  [{mark}] e{row['entry_id']} {row['position']}: "
+            f"{row['proposed']} -> {row['answer']}"
+        )
+
+    return {
+        "total": len(pairs),
+        "correct": correct,
+        "incorrect": incorrect,
+        "pairs": pairs,
+    }
+
+
 def solve_v2(
     args,
     task,
@@ -311,6 +357,7 @@ def solve_v2(
         )
         candidates = proposal_stage["candidates"]
         exhausted = proposal_stage["exhausted_entry_ids"]
+        proposal_summary = summarize_proposals(task, candidates)
 
         if not candidates:
             print(f"[Round {r}] No candidates proposed. Stopping.")
@@ -320,6 +367,7 @@ def solve_v2(
                     "mode": "iterative_propose_conflict_prune",
                     "status": "no_candidates",
                     "exhausted_entry_ids": sorted(list(exhausted)),
+                    "proposal_summary": proposal_summary,
                 }
             )
             break
@@ -363,6 +411,7 @@ def solve_v2(
                 "filled_entries_after": filled_now,
                 "progress": progress,
                 "exhausted_entry_ids": sorted(list(exhausted)),
+                "proposal_summary": proposal_summary,
                 "result_grid": next_y,
             }
         )
