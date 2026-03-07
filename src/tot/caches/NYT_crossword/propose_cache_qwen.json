@@ -1,0 +1,3304 @@
+{
+  "Rapscallion: _ _ _ _ _": [
+    [
+      "ROGUE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Certain tankful: _ _ _": [
+    [
+      "FUL",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Kind of game that's a pitcher's dream: _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "PITCH",
+      0.5
+    ]
+  ],
+  "Micronesian island that was the setting for a season of \"Survivor\": _ _ _ _ _": [
+    [
+      "TONGA",
+      0.2
+    ],
+    [
+      "POHNPEI",
+      1.0
+    ],
+    [
+      "PALAU",
+      1.0
+    ],
+    [
+      "KOSRAE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tuna type: _ _ _": [
+    [
+      "SKIP",
+      0.5
+    ],
+    [
+      "ALB",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Airport near the intersection of I-90 and I-294: _ _ _ _ _": [
+    [
+      "HARE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cove: _ _ _ _ _": [
+    [
+      "INLET",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "On the ___: _ _ _": [
+    [
+      "JOB",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Christopher who directed \"Oppenheimer\": _ _ _ _ _": [
+    [
+      "NOLAN",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Slangy suffix with \"most\": _ _ _": [
+    [
+      "ISH",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"OK ... tell me\": _ _ _ _ _ _ _": [
+    [
+      "ME",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "N.B.A. 1-pointers: Abbr.: _ _ _": [
+    [
+      "FOUL",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Exclamation from Homer: _ _ _": [
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Hero of \"The Matrix\": _ _ _": [
+    [
+      "NEO",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"A work of ___ that isn't based on feeling isn't ___ at all\": Cézanne: _ _ _": [
+    [
+      "ART",
+      1.0
+    ],
+    [
+      "FORM",
+      1.0
+    ],
+    [
+      "WORK",
+      0.5
+    ],
+    [
+      "SHAPE",
+      0.5
+    ],
+    [
+      "STYLE",
+      0.5
+    ]
+  ],
+  "\"Look at Me, I'm Sandra ___\" (\"Grease\" song): _ _ _": [
+    [
+      "DEE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Dickens's \"The Mystery of ___ Drood\": _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Chinese greeting: _ _ _ _ _": [
+    [
+      "NIHAO",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tool for a pineapple: _ _ _ _ _": [
+    [
+      "SPOON",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "1990s sitcom featuring a bookstore: _ _ _ _ _": [
+    [
+      "FRASIER",
+      1.0
+    ],
+    [
+      "SEINF",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "You can count on them: _ _ _ _ _": [
+    [
+      "COUNT",
+      1.0
+    ],
+    [
+      "TRUST",
+      1.0
+    ],
+    [
+      "DEPEND",
+      1.0
+    ],
+    [
+      "RELY",
+      0.5
+    ],
+    [
+      "SOLID",
+      0.5
+    ]
+  ],
+  "Rating for junk bonds: _ _ _": [
+    [
+      "SPEC",
+      0.5
+    ],
+    [
+      "CCC",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Candymaker Wonka: _ _ _ _ _": [
+    [
+      "WONKA",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Chauvinist or racist: _ _ _ _ _": [
+    [
+      "BIGOT",
+      1.0
+    ],
+    [
+      "BIASE",
+      0.5
+    ],
+    [
+      "RACIST",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the style of: _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "COPY",
+      1.0
+    ]
+  ],
+  "Start of Caesar's boast: _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Actress Hatcher: _ _ _ _": [
+    [
+      "TINA",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Deposit, as an egg: _ _ _": [
+    [
+      "LAY",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Patrick Stewart and Elton John, for two: _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "STAR",
+      0.5
+    ]
+  ],
+  "Singer on \"Give Peace a Chance\": _ _ _": [
+    [
+      "JOE",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"Golden Girls\" actress Arthur: _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Sheds, with \"off\": _ _ _ _ _ _ _": [
+    [
+      "SHEDDING",
+      1.0
+    ],
+    [
+      "DISCARD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Stylish tote for an executive: _ _ _ _ _ _ _": [
+    [
+      "BRIEFCASE",
+      1.0
+    ],
+    [
+      "PORTFOLIO",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Worshiping rows: _ _ _ _": [
+    [
+      "PRAYER",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cousin of a croc: _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "CAIMAN",
+      1.0
+    ]
+  ],
+  "The Emerald Isle: _ _ _ _": [
+    [
+      "IRE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"___ have to do\": _ _ _ _": [
+    [
+      "MUST",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Like the breeds Shetland and merino: _ _ _ _ _": [
+    [
+      "FLOCK",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "TALK LIKE THIS!: _ _ _ _": [
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "SLANG",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Like a yenta: _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Props for close-up magicians: _ _ _ _ _": [
+    [
+      "TRICK",
+      0.5
+    ],
+    [
+      "DECOY",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Arrogant sort: _ _ _ _": [
+    [
+      "BOAST",
+      0.5
+    ],
+    [
+      "PRIG",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Worked for the C.I.A., perhaps: _ _ _ _ _": [
+    [
+      "SPOOK",
+      1.0
+    ],
+    [
+      "AGENT",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Playground retort: _ _ _ _ _": [
+    [
+      "JOKER",
+      1.0
+    ],
+    [
+      "JOKES",
+      0.5
+    ],
+    [
+      "TAUNT",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ _ _ _ _ _ _ _ _ _": [
+    [
+      "ULTRAMODERN",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "West who said \"Men are my life, diamonds are my career\": _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "WES",
+      0.5
+    ]
+  ],
+  "Set down on paper: _ _ _ _ _ _ _ _ _ _ _ _": [
+    [
+      "DOCUMENTATION",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cider unit: _ _ _ _ _ _": [
+    [
+      "GALLON",
+      1.0
+    ],
+    [
+      "HOGSHEAD",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Starbuck's higher-up?: _ _ _ _": [
+    [
+      "AHAB",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "BOSS",
+      0.5
+    ]
+  ],
+  "Ape or monkey: _ _ _ _ _ _": [
+    [
+      "CHIMP",
+      1.0
+    ],
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ _ _ _ _ _ _ _ _ _ _": [
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"Well, lookee there!\": _ _ _": [
+    [
+      "LOOKIE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ _ _ _ _ _ _ _ _": [
+    [
+      "WORD",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Hopping mad: _ _ _ _ _": [
+    [
+      "FURIOUS",
+      1.0
+    ],
+    [
+      "IRATE",
+      1.0
+    ],
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Past, present or future: _ _ _ _ _": [
+    [
+      "ALWAYS",
+      1.0
+    ],
+    [
+      "TIMES",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Flowery necklace: _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Multisport race, in short: _ _ _": [
+    [
+      "TRI",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ _ _ _ _ _ _ _ _": [
+    [
+      "PRECISELY",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Singer with the #1 albums \"As I Am\" and \"Girl on Fire\": _ _ _ _ _ _ _ _ _ _": [
+    [
+      "GRANDE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "What you might call a tipsy friend: _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Last words?: _ _ _ _": [
+    [
+      "LAST",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Symbols of wisdom: _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "WORD",
+      0.2
+    ],
+    [
+      "OWL",
+      1.0
+    ]
+  ],
+  "12/31: _ _ _": [
+    [
+      "EVE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Part of U.C.L.A.: Abbr.: _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Material used to make the object \"illustrated\" here, in a seasonal song: _ _ _ _": [
+    [
+      "FROSTED",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Coral island: _ _ _": [
+    [
+      "ATOLL",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"Yikes!\": _ _ _ _ _": [
+    [
+      "YIKES",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Puts to sleep, say: _ _ _ _ _": [
+    [
+      "SEDATES",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Take a turn with the object illustrated by the central black squares in this puzzle (leading to one of the four circled results): _ _ _ _": [
+    [
+      "WORD",
+      1.0
+    ],
+    [
+      "TURN",
+      1.0
+    ],
+    [
+      "ROLL",
+      1.0
+    ]
+  ],
+  "Oscar-winning Jared: _ _ _ _": [
+    [
+      "JARED",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Word processing command: _ _ _ _": [
+    [
+      "SAVE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Policy nerd: _ _ _ _": [
+    [
+      "POLI",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"Très ___\": _ _ _ _": [
+    [
+      "BIEN",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Singer Guthrie: _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "WORD",
+      1.0
+    ]
+  ],
+  "Chocolate money won or lost in this puzzle's game: _ _ _ _": [
+    [
+      "CASH",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "___-tac-toe: _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "WORD",
+      1.0
+    ]
+  ],
+  "Worked for the C.I.A., perhaps: _ p _ _ _": [
+    [
+      "PILOT",
+      0.5
+    ],
+    [
+      "SPYER",
+      0.5
+    ],
+    [
+      "AGENT",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Playground retort: _ a _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ l _ _ _ _ _ _ _ _": [
+    [
+      "ULTRAMODERN",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "West who said \"Men are my life, diamonds are my career\": _ a _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ _ _ _ _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cider unit: _ _ j _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Starbuck's higher-up?: _ _ o _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: _ _ b _ _ _": [
+    [
+      "BABOON",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ l _ _ _ _ _ u _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ _ _ _ t _ _ _ _": [
+    [
+      "UNDERTAKE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ n _ _ _ _ _ _ _": [
+    [
+      "STERNLY",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "What you might call a tipsy friend: _ c _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Last words?: _ o _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ n _ _ _ _ _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"Well, lookee there!\": _ _ o": [
+    [
+      "LOOK",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ l _ _ _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Hopping mad: _ _ a _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Past, present or future: _ _ n _ _": [
+    [
+      "EVERY",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ n _ _ _ _ w _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ l _ _ _ _ n _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Singer with the #1 albums \"As I Am\" and \"Girl on Fire\": _ _ o _ _ _ _ _ _ _": [
+    [
+      "GRANDE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Symbols of wisdom: _ k _ _": [
+    [
+      "KNOT",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "12/31: _ a _": [
+    [
+      "EVE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ l _ d _ _ n _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Hopping mad: _ _ a _ e": [
+    [
+      "FLAME",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Past, present or future: _ _ n _ e": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Singer with the #1 albums \"As I Am\" and \"Girl on Fire\": _ _ o _ _ _ _ _ _ p": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"Très ___\": _ _ _ r": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Singer Guthrie: _ _ _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Chocolate money won or lost in this puzzle's game: _ _ _ g": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ l _ _ _ _ _ u _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ _ _ _ t _ a _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ n _ n _ _ _ _ _": [
+    [
+      "PRIMLY",
+      1.0
+    ],
+    [
+      "PRIGGY",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Last words?: _ o _ t": [
+    [
+      "FOOT",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Certain tankful: _ _ b": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tuna type: _ _ a": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"OK ... tell me\": _ _ _ _ o _ _": [
+    [
+      "OKTELLME",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"A work of ___ that isn't based on feeling isn't ___ at all\": Cézanne: o _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Chinese greeting: n _ _ _ _": [
+    [
+      "NIHAO",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Singer on \"Give Peace a Chance\": _ _ y": [
+    [
+      "JOEY",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Sheds, with \"off\": _ _ _ _ _ i _": [
+    [
+      "SHEDDING",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cousin of a croc: k _ _ _ _": [
+    [
+      "KRAIT",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Like the breeds Shetland and merino: e _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Props for close-up magicians: s _ _ _ _": [
+    [
+      "SLEIGHT",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"OK ... tell me\": _ _ _ _ o t _": [
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"A work of ___ that isn't based on feeling isn't ___ at all\": Cézanne: o r _": [
+    [
+      "WORD",
+      0.2
+    ],
+    [
+      "ORAL",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Chinese greeting: n i _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ n _ _ h _ w _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ l _ d o _ n _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Multisport race, in short: _ _ i": [
+    [
+      "TRI",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Singer with the #1 albums \"As I Am\" and \"Girl on Fire\": a _ o _ _ _ _ _ _ p": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Sheds, with \"off\": w _ _ _ _ i _": [
+    [
+      "WORD",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Worshiping rows: o _ _ _": [
+    [
+      "ORATE",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"___ have to do\": r _ _ _": [
+    [
+      "WORD",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Like a yenta: d _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Part of U.C.L.A.: Abbr.: _ _ l": [
+    [
+      "UCL",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Material used to make the object \"illustrated\" here, in a seasonal song: _ _ a _": [
+    [
+      "FLOCK",
+      1.0
+    ],
+    [
+      "FLAKE",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Coral island: _ _ y": [
+    [
+      "CAY",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ n _ n _ _ _ t _": [
+    [
+      "PRIMLY",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Take a turn with the object illustrated by the central black squares in this puzzle (leading to one of the four circled results): _ _ m _": [
+    [
+      "DICE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Oscar-winning Jared: _ _ u _": [
+    [
+      "JUDE",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Symbols of wisdom: _ _ s _": [
+    [
+      "EYES",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Sheds, with \"off\": w _ _ _ _ _ _": [
+    [
+      "WORD",
+      0.2
+    ],
+    [
+      "WASTES",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Sheds, with \"off\": t _ _ _ _ _ _": [
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Worshiping rows: u _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Like a yenta: n _ _ _": [
+    [
+      "NOSEY",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Rating for junk bonds: _ _ c": [
+    [
+      "CCC",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the style of: _ _ a": [
+    [
+      "MOCK",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Rating for junk bonds: u _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the style of: c _ _": [
+    [
+      "COP",
+      1.0
+    ],
+    [
+      "COPY",
+      0.5
+    ],
+    [
+      "COY",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Sheds, with \"off\": _ _ _ _ _ _ s": [
+    [
+      "WORD",
+      0.2
+    ],
+    [
+      "SHEDDS",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cousin of a croc: _ a _ _ _": [
+    [
+      "CAIMAN",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Like the breeds Shetland and merino: _ v _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Props for close-up magicians: _ e _ _ _": [
+    [
+      "STAGE",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"OK ... tell me\": _ _ _ _ _ t _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"A work of ___ that isn't based on feeling isn't ___ at all\": Cézanne: _ r _": [
+    [
+      "CRASS",
+      0.5
+    ],
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Chinese greeting: _ i _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Sheds, with \"off\": t _ _ _ _ i _": [
+    [
+      "SHEDOFF",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Worked for the C.I.A., perhaps: _ p _ i _": [
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Playground retort: _ a _ s _": [
+    [
+      "JOKES",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ l _ h _ _ _ u _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Sheds, with \"off\": w _ _ _ _ _ s": [
+    [
+      "WASTES",
+      1.0
+    ],
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: _ _ b _ a _": [
+    [
+      "CHIMP",
+      1.0
+    ],
+    [
+      "BABOON",
+      1.0
+    ],
+    [
+      "BONOBO",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ n _ t _ _ w _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Multisport race, in short: _ r _": [
+    [
+      "TRI",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cider unit: _ a j _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Starbuck's higher-up?: _ l o _": [
+    [
+      "AHAB",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: _ b b _ a _": [
+    [
+      "BABOON",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Rating for junk bonds: u _ c": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the style of: c _ a": [
+    [
+      "CAP",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Sheds, with \"off\": _ _ _ _ _ i s": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cousin of a croc: k a _ _ _": [
+    [
+      "KAIJU",
+      0.5
+    ],
+    [
+      "KANGA",
+      0.2
+    ],
+    [
+      "KAPPA",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Like the breeds Shetland and merino: e v _ _ _": [
+    [
+      "EVENS",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Props for close-up magicians: s e _ _ _": [
+    [
+      "SEALS",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ n _ _ _ _ _ t _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ l _ h _ _ _ u _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Sheds, with \"off\": w _ _ _ _ i s": [
+    [
+      "WORD",
+      0.2
+    ],
+    [
+      "WITHERS",
+      1.0
+    ]
+  ],
+  "Singer with the #1 albums \"As I Am\" and \"Girl on Fire\": a _ o _ _ _ _ _ _ _": [
+    [
+      "RIHANNA",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Stylish tote for an executive: _ _ _ _ b _ _": [
+    [
+      "BRIEFCASE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "The Emerald Isle: _ i _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "TALK LIKE THIS!: _ e _ _": [
+    [
+      "ECHO",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Arrogant sort: _ n _ _": [
+    [
+      "SNARK",
+      0.5
+    ],
+    [
+      "PRIG",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ l _ _ o _ n _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ l _ d _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Singer with the #1 albums \"As I Am\" and \"Girl on Fire\": _ _ _ _ _ _ _ _ _ p": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ n _ _ h _ _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ l _ d o _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Singer with the #1 albums \"As I Am\" and \"Girl on Fire\": a _ _ _ _ _ _ _ _ p": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "1990s sitcom featuring a bookstore: _ _ _ _ e": [
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "BOOKS",
+      0.5
+    ]
+  ],
+  "Candymaker Wonka: _ _ _ _ v": [
+    [
+      "WONKA",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Start of Caesar's boast: _ _ _ _ e": [
+    [
+      "VENI",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ n _ t _ _ _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Singer with the #1 albums \"As I Am\" and \"Girl on Fire\": a _ _ _ _ _ _ _ _ _": [
+    [
+      "GRANDE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ l _ _ o _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ _ _ _ _ _ w _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ _ _ _ _ _ n _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ _ _ t _ _ w _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Kind of game that's a pitcher's dream: _ _ _ i _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Airport near the intersection of I-90 and I-294: _ _ _ r _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Christopher who directed \"Oppenheimer\": _ _ _ a _": [
+    [
+      "NOLAN",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "N.B.A. 1-pointers: Abbr.: _ t _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"Look at Me, I'm Sandra ___\" (\"Grease\" song): _ e _": [
+    [
+      "DEE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ _ _ d _ _ n _ _": [
+    [
+      "DEALEY",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Past, present or future: _ _ _ _ e": [
+    [
+      "TENSE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Hopping mad: _ _ _ _ e": [
+    [
+      "IRATE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Kind of game that's a pitcher's dream: _ _ _ _ t": [
+    [
+      "PITCH",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Airport near the intersection of I-90 and I-294: _ _ _ _ e": [
+    [
+      "HARE",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Christopher who directed \"Oppenheimer\": _ _ _ _ n": [
+    [
+      "NOLAN",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "N.B.A. 1-pointers: Abbr.: _ _ s": [
+    [
+      "FREES",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ _ _ _ h _ w _ _ _ _": [
+    [
+      "SHADOWWALKER",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ _ _ d o _ n _ _": [
+    [
+      "DONUT",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ _ _ _ o _ n _ _": [
+    [
+      "WHITEHOUSE",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ _ _ t _ _ _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ _ _ d _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ _ _ _ h _ _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ _ _ d o _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: _ _ _ _ _ o _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ l _ _ _ _ _ _ _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ _ _ _ _ _ a _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ _ _ n _ _ _ _ _": [
+    [
+      "PRECISELY",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Last words?: _ _ _ t": [
+    [
+      "LAST",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ l _ _ _ _ _ _ g i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ _ _ _ _ t a _ _": [
+    [
+      "UNDERTAKEN",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ _ o n _ _ _ _ _": [
+    [
+      "STERNLY",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "What you might call a tipsy friend: _ _ b": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Last words?: _ _ i t": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ _ o n _ _ _ t _": [
+    [
+      "POISED",
+      0.5
+    ],
+    [
+      "PRIMLY",
+      0.2
+    ],
+    [
+      "PROPERLY",
+      1.0
+    ]
+  ],
+  "Super-trendy: _ l _ h _ _ _ _ g i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tool for a pineapple: _ l _ _ _": [
+    [
+      "SPILE",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "You can count on them: _ a _ _ _": [
+    [
+      "COUNT",
+      1.0
+    ],
+    [
+      "TRUST",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Chauvinist or racist: _ s _ _ _": [
+    [
+      "BIGOT",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ s _ n _ _ _ _ _": [
+    [
+      "PRISY",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "What you might call a tipsy friend: _ t _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Last words?: _ r _ t": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ _ _ n _ _ _ t _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ s _ n _ _ _ t _": [
+    [
+      "STERNLY",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ l _ _ _ _ _ _ g _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ _ _ _ _ t _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ _ o _ _ _ _ _ _": [
+    [
+      "PRIMLY",
+      0.5
+    ],
+    [
+      "PRISTINE",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Last words?: _ _ i _": [
+    [
+      "FINI",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ _ o _ _ _ _ t _": [
+    [
+      "STRICTLY",
+      1.0
+    ],
+    [
+      "STOICALLY",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ l _ h _ _ _ _ g _": [
+    [
+      "ULTRAGLAM",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ s _ _ _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Last words?: _ r _ _": [
+    [
+      "RANT",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ s _ _ _ _ _ t _": [
+    [
+      "PROPERLY",
+      1.0
+    ],
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: _ _ _ _ _ _ _ _ t _": [
+    [
+      "PRECISELY",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Actress Hatcher: t _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ n _ _ _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cider unit: _ _ _ _ o _": [
+    [
+      "WORD",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Flowery necklace: _ e _": [
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "WORD",
+      0.5
+    ]
+  ],
+  "Cider unit: f _ _ _ o _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Starbuck's higher-up?: u _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: l _ _ _ _ _": [
+    [
+      "LORIS",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cider unit: f _ j _ o _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Starbuck's higher-up?: u _ o _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: l _ b _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ n _ _ _ t _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ n _ _ _ t a _ _": [
+    [
+      "NOTED",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: l _ b _ a _": [
+    [
+      "LABOR",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ n _ _ t _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ n _ _ t _ a _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ n _ _ _ _ a _ _": [
+    [
+      "UNDERTAKEN",
+      1.0
+    ],
+    [
+      "UNWRITTEN",
+      1.0
+    ],
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: l _ _ _ a _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Certain tankful: _ a _": [
+    [
+      "GAS",
+      1.0
+    ],
+    [
+      "WORD",
+      0.1
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tuna type: _ h _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "On the ___: _ a _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"OK ... tell me\": _ _ _ b _ _ _": [
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cider unit: g _ _ _ o _": [
+    [
+      "GALLON",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: s _ _ _ _ _": [
+    [
+      "SIMIAN",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tuna type: _ h i": [
+    [
+      "AHI",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "On the ___: _ a m": [
+    [
+      "LAM",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"OK ... tell me\": _ _ _ b i _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"A work of ___ that isn't based on feeling isn't ___ at all\": Cézanne: a _ _": [
+    [
+      "ART",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tuna type: a h _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "On the ___: l a _": [
+    [
+      "LAP",
+      1.0
+    ],
+    [
+      "WORD",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"OK ... tell me\": _ _ l b _ _ _": [
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Dickens's \"The Mystery of ___ Drood\": _ _ _ _ n": [
+    [
+      "EDWIN",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: s _ _ _ a _": [
+    [
+      "SAPIEN",
+      0.5
+    ],
+    [
+      "SIMIAN",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"OK ... tell me\": _ _ _ b _ t _": [
+    [
+      "OKTELLME",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: _ _ _ _ a _": [
+    [
+      "MACACA",
+      1.0
+    ],
+    [
+      "CAPUCHA",
+      0.5
+    ],
+    [
+      "ORANGA",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cider unit: f _ _ _ _ _": [
+    [
+      "FIFTH",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Certain tankful: g _ _": [
+    [
+      "GAS",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Tuna type: a _ _": [
+    [
+      "ALB",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "AHI",
+      1.0
+    ]
+  ],
+  "On the ___: l _ _": [
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"OK ... tell me\": _ _ l _ _ _ _": [
+    [
+      "OKLETME",
+      1.0
+    ],
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "OKAYLAD",
+      0.5
+    ]
+  ],
+  "Hero of \"The Matrix\": _ _ o": [
+    [
+      "NEO",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Starbuck's higher-up?: a _ _ _": [
+    [
+      "AHAB",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ l _ _ _ e _ u _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ _ w _ t _ a _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Flowery necklace: _ _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: d _ n _ n _ _ _ _ _": [
+    [
+      "DIGNIFIED",
+      1.0
+    ],
+    [
+      "DECENTLY",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ o _ _ _ t _ a _ _": [
+    [
+      "NOTED",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Starbuck's higher-up?: _ _ _ e": [
+    [
+      "AHAB",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: _ _ _ t a _": [
+    [
+      "CHIMP",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ n e t _ _ w _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Flowery necklace: k _ _": [
+    [
+      "KNOT",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Multisport race, in short: m r _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: d _ n _ n _ _ _ t _": [
+    [
+      "DIGNIFIED",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: _ _ _ t _ _": [
+    [
+      "APEMAN",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ n e _ _ _ w _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Multisport race, in short: m _ _": [
+    [
+      "TRI",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ l _ _ _ e _ u _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ _ _ w _ t _ _ _ _": [
+    [
+      "UNWITTINGLY",
+      1.0
+    ],
+    [
+      "UNWRITTEN",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: d _ n _ _ _ _ _ t _": [
+    [
+      "DIGNIFIED",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ u _ o _ _ _ t _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ n e t _ _ _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: d _ s _ n _ _ _ _ _": [
+    [
+      "DIGNIFIED",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: d _ s _ n _ _ _ t _": [
+    [
+      "DISSECTED",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: d _ s _ _ _ _ _ t _": [
+    [
+      "DIGNIFIED",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: _ _ _ e t _ _ w _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ _ _ _ _ _ _ _ g _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ _ _ _ _ _ _ _ t _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ _ _ _ _ _ _ _ g i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ _ _ _ _ _ _ _ t a _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Rapscallion: s _ _ _ _": [
+    [
+      "SCAMP",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Micronesian island that was the setting for a season of \"Survivor\": p _ _ _ _": [
+    [
+      "POHNPEI",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cove: o _ _ _ _": [
+    [
+      "OCEAN",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Slangy suffix with \"most\": o _ _": [
+    [
+      "OOF",
+      0.5
+    ],
+    [
+      "WORD",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Exclamation from Homer: k _ _": [
+    [
+      "KAI",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Playground retort: c _ _ _ _": [
+    [
+      "CRACK",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: a _ _ _ _ _ _ _ g i": [
+    [
+      "WORD",
+      0.1
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "West who said \"Men are my life, diamonds are my career\": m _ _": [
+    [
+      "WORD",
+      0.2
+    ],
+    [
+      "MAN",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: p _ _ _ _ _ _ _ t a _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Rapscallion: a _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Micronesian island that was the setting for a season of \"Survivor\": g _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cove: e _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Slangy suffix with \"most\": n _ _": [
+    [
+      "NLY",
+      0.5
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Exclamation from Homer: t _ _": [
+    [
+      "TUT",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Playground retort: _ _ _ l _": [
+    [
+      "PRANK",
+      1.0
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ _ _ y _ _ _ _ g i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: a _ _ _ _ _ _ _ g _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: p _ _ _ _ _ _ _ t _ _ _": [
+    [
+      "WORD",
+      0.2
+    ],
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Stylish tote for an executive: p _ _ _ _ _ c": [
+    [
+      "PACKET",
+      0.5
+    ]
+  ],
+  "Cousin of a croc: k a _ o _": [
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "WORD",
+      0.1
+    ]
+  ],
+  "The Emerald Isle: _ _ _ a": [
+    [
+      "NONE_SIGNAL",
+      0.0
+    ],
+    [
+      "EIRE",
+      1.0
+    ]
+  ],
+  "Like the breeds Shetland and merino: e v _ l _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "TALK LIKE THIS!: _ _ _ s": [
+    [
+      "TALKS",
+      1.0
+    ]
+  ],
+  "Props for close-up magicians: s e _ i _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Arrogant sort: _ _ _ h": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ _ _ _ _ _ o u _ i": [
+    [
+      "CHICANO",
+      1.0
+    ]
+  ],
+  "Set down on paper: _ _ _ _ n _ n t _ a _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Ape or monkey: _ _ _ _ a n": [
+    [
+      "APEMAN",
+      1.0
+    ]
+  ],
+  "In the dark about something nefarious: p _ n _ t h _ _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"Well, lookee there!\": i _ o": [
+    [
+      "WORD",
+      0.2
+    ]
+  ],
+  "Place to see J.F.K.: t _ l _ d o _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Hopping mad: c _ a _ e": [
+    [
+      "CRAZE",
+      0.5
+    ]
+  ],
+  "Past, present or future: h _ n _ e": [
+    [
+      "HENCE",
+      1.0
+    ]
+  ],
+  "In a prim and proper way: _ o n _ n _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "What you might call a tipsy friend: s c _": [
+    [
+      "SCAMP",
+      0.5
+    ]
+  ],
+  "Last words?: p o _ t": [
+    [
+      "POET",
+      1.0
+    ]
+  ],
+  "Material used to make the object \"illustrated\" here, in a seasonal song: c _ a _": [
+    [
+      "CARVE",
+      0.5
+    ]
+  ],
+  "Coral island: c _ y": [
+    [
+      "CAY",
+      1.0
+    ]
+  ],
+  "Airport near the intersection of I-90 and I-294: _ _ _ r e": [
+    [
+      "OHARE",
+      1.0
+    ]
+  ],
+  "N.B.A. 1-pointers: Abbr.: _ z c": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Chauvinist or racist: _ e _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Playground retort: c _ _ o _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: a _ _ f _ e o u _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: p _ _ _ n w n t _ a _ _": [
+    [
+      "PENNANT",
+      1.0
+    ]
+  ],
+  "Ape or monkey: s _ _ _ a n": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the dark about something nefarious: p _ n _ t h _ _ _ s _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: t _ l _ d o _ _ _ a": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Flowery necklace: _ e i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In a prim and proper way: d o n _ n _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Singer with the #1 albums \"As I Am\" and \"Girl on Fire\": a _ _ _ t _ _ _ _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Symbols of wisdom: _ _ _ r": [
+    [
+      "CROSS",
+      1.0
+    ]
+  ],
+  "Part of U.C.L.A.: Abbr.: c _ l": [
+    [
+      "CAL",
+      1.0
+    ]
+  ],
+  "Micronesian island that was the setting for a season of \"Survivor\": p _ _ a _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Cove: o _ _ n _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "In the style of: a _ a": [
+    [
+      "APA",
+      0.5
+    ]
+  ]
+}
