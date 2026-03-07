@@ -297,6 +297,53 @@ def summarize_proposals(task, candidates_by_eid):
     }
 
 
+def print_conflict_resolution_summary(task, kept_by_eid, removed_by_eid):
+    """
+    Print which entries were kept vs pruned after conflict resolution,
+    and whether each proposed word matches the ground truth answer.
+    """
+    print(
+        f"[Conflict Resolution] kept={len(kept_by_eid)} pruned={len(removed_by_eid)}"
+    )
+
+    if removed_by_eid:
+        print("  Pruned entries:")
+        for eid, item in sorted(removed_by_eid.items(), key=lambda kv: int(kv[0])):
+            eidx = task.env.eid_to_idx.get(int(eid))
+            if eidx is None:
+                continue
+            spec = task.env.entries[eidx]
+            proposed = item["word"].upper()
+            answer = spec.answer.upper()
+            is_correct = proposed == answer
+            mark = "OK" if is_correct else "X"
+            reason = item.get("reason", "unknown")
+            print(
+                f"    [{mark}] e{eid} {spec.direction}{spec.label}: "
+                f"{proposed} -> {answer}  reason={reason}"
+            )
+    else:
+        print("  Pruned entries: none")
+
+    if kept_by_eid:
+        print("  Kept entries:")
+        for eid, item in sorted(kept_by_eid.items(), key=lambda kv: int(kv[0])):
+            eidx = task.env.eid_to_idx.get(int(eid))
+            if eidx is None:
+                continue
+            spec = task.env.entries[eidx]
+            proposed = item["word"].upper()
+            answer = spec.answer.upper()
+            is_correct = proposed == answer
+            mark = "OK" if is_correct else "X"
+            print(
+                f"    [{mark}] e{eid} {spec.direction}{spec.label}: "
+                f"{proposed} -> {answer}"
+            )
+    else:
+        print("  Kept entries: none")
+
+
 def solve_v2(
     args,
     task,
@@ -373,6 +420,7 @@ def solve_v2(
             break
 
         kept, removed = resolve_conflicts(task, x, current_y, candidates)
+        print_conflict_resolution_summary(task, kept, removed)
         for eid, item in removed.items():
             rejected_words_by_entry.setdefault(eid, set()).add(item["word"])
 
