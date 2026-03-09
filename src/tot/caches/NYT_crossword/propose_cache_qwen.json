@@ -190,7 +190,11 @@
   "Dickens's \"The Mystery of ___ Drood\": _ _ _ _ _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "EDWIN",
+      1.0
     ]
   ],
   "Chinese greeting: _ _ _ _ _": [
@@ -304,7 +308,11 @@
   "Start of Caesar's boast: _ _ _ _ _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "VENI",
+      1.0
     ]
   ],
   "Actress Hatcher: _ _ _ _": [
@@ -350,7 +358,11 @@
   "\"Golden Girls\" actress Arthur: _ _ _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "WORD",
+      1.0
     ]
   ],
   "Sheds, with \"off\": _ _ _ _ _ _ _": [
@@ -448,7 +460,11 @@
   "Like a yenta: _ _ _ _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "GOSS",
+      0.2
     ]
   ],
   "Props for close-up magicians: _ _ _ _ _": [
@@ -724,7 +740,11 @@
   "Part of U.C.L.A.: Abbr.: _ _ _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "SCI",
+      0.5
     ]
   ],
   "Material used to make the object \"illustrated\" here, in a seasonal song: _ _ _ _": [
@@ -1294,7 +1314,11 @@
   "Like a yenta: d _ _ _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "DRONE",
+      0.5
     ]
   ],
   "Part of U.C.L.A.: Abbr.: _ _ l": [
@@ -2958,7 +2982,11 @@
     ],
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "WORD",
+      0.5
     ]
   ],
   "Playground retort: c _ _ _ _": [
@@ -3112,13 +3140,21 @@
   "Props for close-up magicians: s e _ i _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "SEIZE",
+      0.5
     ]
   ],
   "Arrogant sort: _ _ _ h": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "WORD",
+      0.1
     ]
   ],
   "Super-trendy: _ _ _ _ _ _ o u _ i": [
@@ -3214,19 +3250,31 @@
   "Chauvinist or racist: _ e _ _ _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "EGOIST",
+      0.5
     ]
   ],
   "Playground retort: c _ _ o _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "COOED",
+      0.5
     ]
   ],
   "Super-trendy: a _ _ f _ e o u _ i": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "AFTERNOON",
+      1.0
     ]
   ],
   "Set down on paper: p _ _ _ n w n t _ a _ _": [
@@ -3238,19 +3286,31 @@
   "Ape or monkey: s _ _ _ a n": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "SAPIAN",
+      1.0
     ]
   ],
   "In the dark about something nefarious: p _ n _ t h _ _ _ s _ _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "PENETRATION",
+      1.0
     ]
   ],
   "Place to see J.F.K.: t _ l _ d o _ _ _ a": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "TALLADEGA",
+      1.0
     ]
   ],
   "Flowery necklace: _ e i": [
@@ -3262,13 +3322,21 @@
   "In a prim and proper way: d o n _ n _ _ _ _ _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "DONNEE",
+      0.5
     ]
   ],
   "Singer with the #1 albums \"As I Am\" and \"Girl on Fire\": a _ _ _ t _ _ _ _ _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "ARIANA",
+      0.5
     ]
   ],
   "Symbols of wisdom: _ _ _ r": [
@@ -3292,12 +3360,64 @@
   "Cove: o _ _ n _": [
     [
       "NONE_SIGNAL",
-      0
+      0.0
+    ],
+    [
+      "WORD",
+      0.2
     ]
   ],
   "In the style of: a _ a": [
     [
       "APA",
+      0.5
+    ]
+  ],
+  "Tuna type: a _ a": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "On the ___: l _ p": [
+    [
+      "WORD",
+      0.5
+    ]
+  ],
+  "\"OK ... tell me\": _ _ l _ i t _": [
+    [
+      "OKLETME",
+      1.0
+    ]
+  ],
+  "In the dark about something nefarious: p o n _ t h _ _ _ s _ _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Place to see J.F.K.: t a l _ d o _ _ _ a": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "\"OK ... tell me\": _ _ l _ _ t _": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Super-trendy: _ _ _ _ _ e o u _ i": [
+    [
+      "NONE_SIGNAL",
+      0
+    ]
+  ],
+  "Set down on paper: _ _ _ _ n w n t _ a _ _": [
+    [
+      "ENTRUSTED",
       0.5
     ]
   ]

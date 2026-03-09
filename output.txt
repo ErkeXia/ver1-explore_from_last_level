@@ -1,360 +1,1180 @@
-
-[Config] Setting proposal mode to SLM: qwen
-__Correct Answer Key (first 30 entries)__
-  A1 (e0): SCAMP
-  A6 (e1): GAS
-  A9 (e2): NOHIT
-  A14 (e3): PALAU
-  A15 (e4): AHI
-  A16 (e5): OHARE
-  A17 (e6): INLET
-  A18 (e7): LAM
-  A19 (e8): NOLAN
-  A20 (e9): EST
-  A21 (e10): ILLBITE
-  A24 (e11): FTS
-  A25 (e12): DOH
-  A26 (e13): NEO
-  A27 (e14): ART
-  A28 (e15): DEE
-  A29 (e16): EDWIN
-  A31 (e17): NIHAO
-  A33 (e18): CORER
-  A35 (e19): ELLEN
-  A38 (e20): ABACI
-  A39 (e21): CCC
-  A42 (e22): WILLY
-  A43 (e23): BIGOT
-  A44 (e24): ALA
-  A45 (e25): ICAME
-  A46 (e26): TERI
-  A47 (e27): LAY
-  A48 (e28): SIRS
-  A49 (e29): ONO
-x = A1. Rapscallion
-A6. Certain tankful
-A9. Kind of game that's a pitcher's dream
-A14. Micronesian island that was the setting for a season of "Survivor"
-A15. Tuna type
-A16. Airport near the intersection of I-90 and I-294
-A17. Cove
-A18. On the ___
-A19. Christopher who directed "Oppenheimer"
-A20. Slangy suffix with "most"
-A21. "OK ... tell me"
-A24. N.B.A. 1-pointers: Abbr.
-A25. Exclamation from Homer
-A26. Hero of "The Matrix"
-A27. "A work of ___ that isn't based on feeling isn't ___ at all": Cézanne
-A28. "Look at Me, I'm Sandra ___" ("Grease" song)
-A29. Dickens's "The Mystery of ___ Drood"
-A31. Chinese greeting
-A33. Tool for a pineapple
-A35. 1990s sitcom featuring a bookstore
-A38. You can count on them
-A39. Rating for junk bonds
-A42. Candymaker Wonka
-A43. Chauvinist or racist
-A44. In the style of
-A45. Start of Caesar's boast
-A46. Actress Hatcher
-A47. Deposit, as an egg
-A48. Patrick Stewart and Elton John, for two
-A49. Singer on "Give Peace a Chance"
-A51. "Golden Girls" actress Arthur
-A52. Sheds, with "off"
-A56. Stylish tote for an executive
-A60. Worshiping rows
-A61. Cousin of a croc
-A63. The Emerald Isle
-A64. "___ have to do"
-A65. Like the breeds Shetland and merino
-A66. TALK LIKE THIS!
-A67. Like a yenta
-A68. Props for close-up magicians
-A69. Arrogant sort
-D1. Worked for the C.I.A., perhaps
-D2. Playground retort
-D3. Super-trendy
-D4. West who said "Men are my life, diamonds are my career"
-D5. Set down on paper
-D6. Cider unit
-D7. Starbuck's higher-up?
-D8. Ape or monkey
-D9. In the dark about something nefarious
-D10. "Well, lookee there!"
-D11. Place to see J.F.K.
-D12. Hopping mad
-D13. Past, present or future
-D22. Flowery necklace
-D23. Multisport race, in short
-D30. In a prim and proper way
-D32. Singer with the #1 albums "As I Am" and "Girl on Fire"
-D33. What you might call a tipsy friend
-D34. Last words?
-D36. Symbols of wisdom
-D37. 12/31
-D39. Part of U.C.L.A.: Abbr.
-D40. Material used to make the object "illustrated" here, in a seasonal song
-D41. Coral island
-D50. "Yikes!"
-D51. Puts to sleep, say
-D52. Take a turn with the object illustrated by the central black squares in this puzzle (leading to one of the four circled results)
-D53. Oscar-winning Jared
-D54. Symbols of wisdom
-D55. Word processing command
-D56. Policy nerd
-D57. "Très ___"
-D58. Singer Guthrie
-D59. Chocolate money won or lost in this puzzle's game
-D62. ___-tac-toe
-
-
-____________________
-Proposals (iterative round) for []
-raw proposals from SLM ['The clue refers to a type of game that is a pitcher’s dream, which typically implies a game where the pitcher has an advantage—such as in baseball, where a "no-hitter" or "shutout" could be considered a pitcher\'s dream. However, given the pattern "_ _ _ _ _", we\'re looking for a five-letter word.\n\nA fitting term might be "pitch," but it doesn\'t fully capture the idea of a game. Another possibility is "pitcher\'s dream" itself, but that exceeds the character limit. A more suitable term that fits both the clue and the pattern is "pitch."\n\nHowever, since there may not be a perfect fit, let\'s consider other options. Given the constraint and the need for a 5-letter word, "pitch" seems plausible.\n\nPitch (high)  \nWORD (high)'] for line Kind of game that's a pitcher's dream: _ _ _ _ _
-Filtered invalid action: e3. POHNPEI
-Filtered invalid action: e4. SKIP
-Filtered invalid action: e5. HARE
-Filtered invalid action: e10. ME
-Filtered invalid action: e11. FOUL
-Filtered invalid action: e12. WORD
-raw proposals from SLM ['The clue refers to Dickens\'s unfinished novel "The Mystery of Edwin Drood." The blank requires a 5-letter word that completes the title. The only valid completion is "Edwin," but it is explicitly forbidden in the constraint list.\n\nSince no other plausible 5-letter word fits the pattern and the clue, and "Edwin" is not allowed, there is no valid solution.\n\nNone'] for line Dickens's "The Mystery of ___ Drood": _ _ _ _ _
-Filtered invalid action: e19. FRASIER
-raw proposals from SLM ['The clue "In the style of" suggests a phrase or term indicating imitation or mimicry. Given the pattern _ _ _, we are looking for a three-letter word that fits this context.\n\nA common phrase used in this context is "in the style of," which often refers to imitating someone else’s work or manner. However, since we\'re restricted to three letters, the most fitting word would be "copy."\n\nCOPY (certain)'] for line In the style of: _ _ _
-Filtered invalid action: e24. COPY
-raw proposals from SLM ['The clue refers to the start of Caesar\'s famous boast, which is "Veni, Vidi, Vici." The first four letters of this phrase are "VENI."\n\nPattern length is 5 with all letters unknown initially, but the clue suggests it\'s the beginning of a well-known Latin phrase. Given the constraint and no forbidden words, "VENI" fits as the start of "Veni, Vidi, Vici," though it only uses four letters. However, since the pattern requires five letters, we need a five-letter word starting with "VENI."\n\nThe correct five-letter word that begins Caesar\'s boast is "VENI," but it doesn\'t fit the five-letter requirement unless we consider "VENI" as part of a longer phrase or accept that the pattern may not perfectly align. Since there\'s no clear five-letter word fitting the pattern and the clue, and "VENI" is too short, I cannot confidently propose a valid five-letter word matching both the'] for line Start of Caesar's boast: _ _ _ _ _
-raw proposals from SLM ['Pattern length is 4 with all letters unknown.\nThe clue refers to Patrick Stewart and Elton John, both of whom have been associated with the term "Sir." However, since the pattern is four letters and no specific letters are given, it\'s challenging to identify a direct fit without more context.\n\nGiven the constraint and lack of specific clues or patterns, I cannot confidently determine a matching word.\n\nNone'] for line Patrick Stewart and Elton John, for two: _ _ _ _
-raw proposals from SLM ['The clue refers to an actress from *Golden Girls* named Arthur. The only known actress from that show with the surname Arthur is **Betty White**, but she is not named Arthur. There is no well-known actress from *Golden Girls* whose name includes "Arthur." \n\nGiven the constraint and the lack of a matching name, there is no valid 3-letter word fitting the pattern "_ _ _" that corresponds to a "Golden Girls" actress named Arthur.\n\nNone'] for line "Golden Girls" actress Arthur: _ _ _
-Filtered invalid action: e31. SHEDDING
-Filtered invalid action: e32. BRIEFCASE
-Filtered invalid action: e33. PRAYER
-raw proposals from SLM ['The clue "Cousin of a croc" refers to a relative of a crocodile. A likely answer is "ALLIGATOR," but it has 9 letters. Another possibility is "CAIMAN," which is a close relative of a crocodile and fits the 6-letter pattern.\n\nCAIMAN (certain)'] for line Cousin of a croc: _ _ _ _ _
-Filtered invalid action: e34. CAIMAN
-Filtered invalid action: e35. IRE
-Filtered invalid action: e38. SLANG
-raw proposals from SLM ['The clue "Like a yenta" suggests a synonym for a gossip or busybody. A common term for someone who spreads rumors is "gossip."  \nThe pattern is 4 letters with no fixed letters.  \n"Gossip" fits the pattern and meaning.  \n\nGOSPE (no, not correct) – let me recheck.  \nActually, the correct 4-letter word matching the clue and pattern is **GOSS** (though less common), but more accurately, it should be **GOSS** isn\'t standard. Let me reconsider.  \n\nThe most accurate 4-letter word fitting the clue "Like a yenta" is **GOSS** — though it’s less commonly used than "gossip," it is a valid variant. However, if we consider standard usage, there may not be a perfect fit. But given the constraint and the need for a 4-letter word, **GOSS** seems the closest.  \n\nGOSPI (invalid), GOSSIP ('] for line Like a yenta: _ _ _ _
-Filtered invalid action: e44. ULTRAMODERN
-raw proposals from SLM ['The clue refers to West, likely referring to the actor or personality known as "West," and the quote suggests a reference to someone in entertainment or fashion. Given the pattern "_ _ _", we\'re looking for a 3-letter word.\n\nThe most fitting answer based on the clue and pattern is "WES."\n\nWES (high)'] for line West who said "Men are my life, diamonds are my career": _ _ _
-Filtered invalid action: e46. DOCUMENTATION
-Filtered invalid action: e49. CHIMP
-Filtered invalid action: e50. WORD
-Filtered invalid action: e51. LOOKIE
-Filtered invalid action: e52. WORD
-Filtered invalid action: e53. FURIOUS
-Filtered invalid action: e54. ALWAYS
-raw proposals from SLM ['The clue "Flowery necklace" suggests a type of ornamental jewelry often associated with floral designs. Given the pattern "_ _ _", we are looking for a 3-letter word.\n\nA suitable word that fits both the clue and the pattern is "cors." However, "cors" is not commonly used as a standalone term for a flowery necklace. A more common term would be "bouq," but it also doesn\'t fit well in standard usage.\n\nGiven the constraint and the lack of a clear 3-letter word fitting the clue and pattern, no valid solution exists under these conditions.\n\nNone'] for line Flowery necklace: _ _ _
-Filtered invalid action: e57. PRECISELY
-Filtered invalid action: e58. GRANDE
-raw proposals from SLM ['The clue "What you might call a tipsy friend" suggests a slang term for someone who is slightly drunk or intoxicated. A common term for this is "tipsy," but we need a three-letter word fitting the pattern _ _ _.\n\nConsidering possible three-letter terms related to being tipsy or a friend in that state, and ensuring it does not match the forbidden word "NONE_SIGNAL," the best fit is "DRUNK." However, "DRUNK" is four letters long and doesn\'t fit the pattern.\n\nAfter reviewing possibilities, there isn’t a suitable three-letter word that fits both the clue and the pattern without violating the constraints.\n\nNone'] for line What you might call a tipsy friend: _ _ _
-raw proposals from SLM ['The clue "Symbols of wisdom" suggests something symbolic and associated with knowledge or enlightenment. Given the pattern "_ _ _ _", we need a 4-letter word.\n\nA fitting word could be "TALIS" — though not commonly used, it refers to a symbol or token, which aligns somewhat with the clue. However, more standard answers like "SIGIL" (a symbol) might be better, but it doesn\'t directly relate to wisdom.\n\nAnother possibility is "CROWN," as it can symbolize wisdom and royalty, but again, it may stretch the clue slightly.\n\nGiven the constraint and lack of clear alternatives, I propose:\n\n**TALIS** (medium)\n\nWORD (medium)'] for line Symbols of wisdom: _ _ _ _
-raw proposals from SLM ['Pattern length is 3 with no fixed letters.\n"Part of U.C.L.A." refers to a university or college abbreviation. UCLA stands for University of California, Los Angeles. A common abbreviation for part of UCLA could be "COLL" but it doesn\'t fit the 3-letter pattern. Another possibility is "CIT" which represents the College of Letters & Science at UCLA. However, "CIT" is not commonly used as an abbreviation for a specific part of UCLA. Given the constraint and lack of clear 3-letter abbreviations for parts of UCLA, I cannot confidently identify a matching word.\nNone'] for line Part of U.C.L.A.: Abbr.: _ _ _
-Filtered invalid action: e64. FROSTED
-Filtered invalid action: e65. ATOLL
-Filtered invalid action: e67. SEDATES
-Filtered invalid action: e69. JARED
-raw proposals from SLM ['The clue refers to a singer named Guthrie. A well-known singer with the surname Guthrie is Woody Guthrie.  \nThe pattern is four underscores, so we need a 4-letter first name.  \nWoody Guthrie fits the clue and pattern.  \n\nWORD (certain)'] for line Singer Guthrie: _ _ _ _
-raw proposals from SLM ['The clue refers to a variant of tic-tac-toe, which is commonly known as "noughts-and-crosses" in British English. However, the clue uses the format "___-tac-toe," suggesting a three-letter prefix followed by "-tac-toe."\n\nThe most common variation is "XO-tac-toe," where "XO" represents the symbols used (crosses and circles). This fits the pattern "_ _ _-tac-toe" perfectly.\n\nConfidence: certain  \nWORD (certain)'] for line ___-tac-toe: _ _ _
-Filtered invalid action: e76. WORD
-[Proposal Summary] total=40 correct=14 incorrect=26
-  [X] e0 A1: ROGUE -> SCAMP
-  [X] e1 A6: FUL -> GAS
-  [X] e2 A9: PITCH -> NOHIT
-  [OK] e6 A17: INLET -> INLET
-  [X] e7 A18: JOB -> LAM
-  [OK] e8 A19: NOLAN -> NOLAN
-  [X] e9 A20: ISH -> EST
-  [OK] e13 A26: NEO -> NEO
-  [OK] e14 A27: ART -> ART
-  [OK] e15 A28: DEE -> DEE
-  [OK] e17 A31: NIHAO -> NIHAO
-  [X] e18 A33: SPOON -> CORER
-  [X] e20 A38: COUNT -> ABACI
-  [OK] e21 A39: CCC -> CCC
-  [X] e22 A42: WONKA -> WILLY
-  [OK] e23 A43: BIGOT -> BIGOT
-  [X] e26 A46: TINA -> TERI
-  [OK] e27 A47: LAY -> LAY
-  [X] e29 A49: JOE -> ONO
-  [X] e36 A64: MUST -> ITLL
-  [X] e37 A65: FLOCK -> OVINE
-  [X] e40 A68: TRICK -> DECKS
-  [X] e41 A69: PRIG -> SNOT
-  [X] e42 D1: SPOOK -> SPIED
-  [X] e43 D2: JOKER -> CANSO
-  [X] e45 D4: WES -> MAE
-  [OK] e47 D6: GALLON -> GALLON
-  [OK] e48 D7: AHAB -> AHAB
-  [OK] e56 D23: TRI -> TRI
-  [X] e60 D34: LAST -> OBIT
-  [X] e61 D36: WORD -> ELMS
-  [X] e62 D37: EVE -> NYE
-  [X] e66 D50: YIKES -> OHGOD
-  [X] e68 D52: WORD -> SPIN
-  [X] e70 D54: WORD -> OWLS
-  [OK] e71 D55: SAVE -> SAVE
-  [X] e72 D56: POLI -> WONK
-  [OK] e73 D57: BIEN -> BIEN
-  [X] e74 D58: WORD -> ARLO
-  [X] e75 D59: CASH -> GELT
-[Round 1] filled=20 progress=20 r_word=0.130 r_letter=0.221 r_game=False
-____________________
-Proposals (iterative round) for [{"entry_id":0,"label":"1","length":5,"fill":"S____"},{"entry_id":1,"label":"6","length":3,"fill":"G__"},{"entry_id":2,"label":"9","length":5,"fill":"PITCH"},{"entry_id":3,"label":"14","length":5,"fill":"P____"},{"entry_id":4,"label":"15","length":3,"fill":"A__"},{"entry_id":6,"label":"17","length":5,"fill":"O____"},{"entry_id":7,"label":"18","length":3,"fill":"L__"},{"entry_id":8,"label":"19","length":5,"fill":"NOLAN"},{"entry_id":9,"label":"20","length":3,"fill":"O__"},{"entry_id":10,"label":"21","length":7,"fill":"__L__T_"},{"entry_id":12,"label":"25","length":3,"fill":"K__"},{"entry_id":13,"label":"26","length":3,"fill":"NEO"},{"entry_id":14,"label":"27","length":3,"fill":"ART"},{"entry_id":15,"label":"28","length":3,"fill":"DEE"},{"entry_id":16,"label":"29","length":5,"fill":"____N"},{"entry_id":17,"label":"31","length":5,"fill":"NIHAO"},{"entry_id":18,"label":"33","length":5,"fill":"SPOON"},{"entry_id":19,"label":"35","length":5,"fill":"____E"},{"entry_id":20,"label":"38","length":5,"fill":"COUNT"},{"entry_id":21,"label":"39","length":3,"fill":"CCC"},{"entry_id":22,"label":"42","length":5,"fill":"____V"},{"entry_id":25,"label":"45","length":5,"fill":"____E"},{"entry_id":26,"label":"46","length":4,"fill":"TINA"},{"entry_id":27,"label":"47","length":3,"fill":"LAY"},{"entry_id":29,"label":"49","length":3,"fill":"__Y"},{"entry_id":31,"label":"52","length":7,"fill":"W____IS"},{"entry_id":32,"label":"56","length":7,"fill":"P_____C"},{"entry_id":33,"label":"60","length":4,"fill":"O___"},{"entry_id":34,"label":"61","length":5,"fill":"KA_O_"},{"entry_id":35,"label":"63","length":4,"fill":"___A"},{"entry_id":36,"label":"64","length":4,"fill":"R___"},{"entry_id":37,"label":"65","length":5,"fill":"EV_L_"},{"entry_id":38,"label":"66","length":4,"fill":"___S"},{"entry_id":39,"label":"67","length":4,"fill":"D___"},{"entry_id":40,"label":"68","length":5,"fill":"SE_I_"},{"entry_id":41,"label":"69","length":4,"fill":"___H"},{"entry_id":42,"label":"1","length":5,"fill":"SPOOK"},{"entry_id":44,"label":"3","length":10,"fill":"______OU_I"},{"entry_id":46,"label":"5","length":12,"fill":"____N_NT_A__"},{"entry_id":47,"label":"6","length":6,"fill":"GALLON"},{"entry_id":49,"label":"8","length":6,"fill":"____AN"},{"entry_id":50,"label":"9","length":12,"fill":"P_N_TH______"},{"entry_id":51,"label":"10","length":3,"fill":"I_O"},{"entry_id":52,"label":"11","length":10,"fill":"T_L_DO____"},{"entry_id":53,"label":"12","length":5,"fill":"C_A_E"},{"entry_id":54,"label":"13","length":5,"fill":"H_N_E"},{"entry_id":55,"label":"22","length":3,"fill":"_E_"},{"entry_id":56,"label":"23","length":3,"fill":"TRI"},{"entry_id":57,"label":"30","length":10,"fill":"_ON_N_____"},{"entry_id":58,"label":"32","length":10,"fill":"A_________"},{"entry_id":59,"label":"33","length":3,"fill":"SC_"},{"entry_id":60,"label":"34","length":4,"fill":"PO_T"},{"entry_id":62,"label":"37","length":3,"fill":"EVE"},{"entry_id":63,"label":"39","length":3,"fill":"C_L"},{"entry_id":64,"label":"40","length":4,"fill":"C_A_"},{"entry_id":65,"label":"41","length":3,"fill":"C_Y"},{"entry_id":66,"label":"50","length":5,"fill":"YIKES"},{"entry_id":68,"label":"52","length":4,"fill":"WORD"},{"entry_id":71,"label":"55","length":4,"fill":"SAVE"},{"entry_id":72,"label":"56","length":4,"fill":"POLI"},{"entry_id":75,"label":"59","length":4,"fill":"CASH"}]
-Filtered invalid action: e3. POHNPEI
-Filtered invalid action: e5. HARE
-Filtered invalid action: e7. WORD
-raw proposals from SLM ['The clue "_ _ l _ _ t _" suggests a phrase or expression commonly used in a conversational tone, possibly implying hesitation or reluctance to speak. Given the structure, it could fit a common filler phrase like "Tell me" or part of a dialogue.\n\nThe pattern has 7 characters with the third character being \'l\' and the sixth character being \'t\'. A fitting word that matches this pattern and the clue is "Tell me".\n\nHowever, the clue is phrased as "OK ... tell me", which might suggest a longer phrase rather than just "Tell me". But given the strict pattern matching and no forbidden words, the most likely fit is:\n\nTELLME (but it doesn\'t have a space, so we need to consider if it\'s a hyphenated or compound form).\n\nAnother possibility is "Tell me" itself, but it doesn’t fully align with the pattern due to the space.\n\nConsidering all, the only plausible 7-character word that fits the pattern'] for line "OK ... tell me": _ _ l _ _ t _
-Filtered invalid action: e11. FOUL
-raw proposals from SLM ['The clue refers to a 1990s sitcom that features a bookstore. The pattern has five letters ending in "e". A well-known sitcom from the 1990s that includes a bookstore is *Frasier*, but it does not fit the pattern. Another possibility is *Friends* or *Seinfeld*, but neither ends in "e".\n\nHowever, the most fitting answer based on the pattern and the context is *BOOKS*. It aligns with the idea of a bookstore and fits the pattern _ _ _ _ e.\n\nBOOKS (high)'] for line 1990s sitcom featuring a bookstore: _ _ _ _ e
-Filtered invalid action: e19. BOOKS
-raw proposals from SLM ['The clue "Candymaker Wonka" refers to Willy Wonka, but the pattern "_ _ _ _ v" suggests a 5-letter word ending in \'v\'. Given the constraint that "WONKA" is not allowed, there are no other common 5-letter candymaker names fitting the pattern ending in \'v\'.\n\nNone'] for line Candymaker Wonka: _ _ _ _ v
-Filtered invalid action: e23. RACIST
-Filtered invalid action: e24. COPY
-Filtered invalid action: e25. VENI
-raw proposals from SLM ['The clue refers to two famous people: Patrick Stewart and Elton John. Both are well-known actors/singers. The pattern is four letters, so we need a four-letter word that could represent both or be associated with them.\n\n"Stewart" and "John" don\'t fit directly into a four-letter word, but if we consider common nicknames or titles, "Sir" is a title often used with both. However, "Sir" is only three letters. Another possibility is "Lord," which is also a title, but it doesn’t fit either name specifically.\n\nConsidering the constraint "NONE_SIGNAL" is not in the forbidden list, I\'ll look for a fitting four-letter word that might represent both names indirectly.\n\nA plausible answer is "STAR." While not directly matching their names, "star" is commonly associated with both as they are prominent figures in entertainment. It fits the pattern and has no conflicts with the given constraint.\n\nSTAR (high)'] for line Patrick Stewart and Elton John, for two: _ _ _ _
-Filtered invalid action: e29. JOEY
-raw proposals from SLM ['The clue refers to an actress from *Golden Girls* named Arthur. The only known actress with the surname Arthur from the show is **Bebe Neuwirth**, but she does not fit the three-letter pattern. There are no other well-known actresses from *Golden Girls* with the last name Arthur that would fit a three-letter pattern. Additionally, the constraint "NONE_SIGNAL" does not apply here as it seems unrelated.\n\nGiven the lack of a matching three-letter name and the absence of a clear fit, no valid word satisfies the clue and pattern.\n\nNone'] for line "Golden Girls" actress Arthur: _ _ _
-Filtered invalid action: e31. WITHERS
-raw proposals from SLM ['The clue "Stylish tote for an executive" suggests a type of professional or elegant bag. The pattern is 7 letters long with the first letter \'p\' and last letter \'c\'. A suitable word fitting this description is "PENCIL". However, "pencil" is not typically considered a tote bag. Another possibility is "PORTMANN", but it doesn\'t fit the pattern. The only word matching the pattern and clue meaning is "PACIFIST", which does not fit the context. After reviewing options, the most plausible word is "PACKET".\n\nPACKET (high)'] for line Stylish tote for an executive: p _ _ _ _ _ c
-Filtered invalid action: e32. PACKET
-Filtered invalid action: e33. ORATE
-raw proposals from SLM ['A cousin of a crocodile could be an alligator. The pattern is k a _ o _, which fits ALLIGATOR if we consider only the first five letters. However, "ALLIGATOR" is longer than the pattern suggests.\n\nLet’s analyze the pattern more carefully: it has 5 characters, with fixed letters at positions 1 (k), 2 (a), 4 (o), and 5 (_). We need a 5-letter word starting with "ka", containing "o" in the fourth position.\n\nA possible fit is "KANGAROO," but that doesn\'t start with "ka." Another possibility is "KAYAK," but it doesn’t contain an "o."\n\nConsidering the pattern and clue, the most likely answer is "KAPPA," though it does not directly relate to a croc. However, given the constraint and available options, I\'m unable to identify a perfect fit.\n\nNone'] for line Cousin of a croc: k a _ o _
-raw proposals from SLM ['The clue refers to "The Emerald Isle," which is a nickname for Ireland. The pattern has four letters with the third being \'a\'. The only possible word fitting this description is IRELAND, but it does not fit the pattern. However, the correct shorter term for Ireland in this context is "Eire." But "Eire" doesn\'t fit the pattern either.\n\nGiven the pattern "_ _ _ a" and the clue "The Emerald Isle," the most likely intended answer is "IRELAND," but it doesn\'t match the pattern. There are no other plausible 4-letter words matching the pattern and referring to Ireland.\n\nNone'] for line The Emerald Isle: _ _ _ a
-Filtered invalid action: e36. WORD
-raw proposals from SLM ['The clue refers to sheep breeds like Shetland and Merino, which are types of wool. The pattern is e v _ l _, indicating a 5-letter word starting with "ev" and ending in "l_".\n\nA fitting word that matches the pattern and relates to sheep or wool is "evolve". However, "evolve" does not directly relate to sheep breeds. Another possibility is "event", but it doesn\'t fit the context either.\n\nGiven the constraint and the lack of a clear alternative that fits both the pattern and the clue, no suitable word can be proposed.\n\nNone'] for line Like the breeds Shetland and merino: e v _ l _
-raw proposals from SLM ['Pattern length is 4 with pattern _ _ _ s.\n"TALK LIKE THIS!" suggests speaking in a specific manner, and a common phrase that fits the pattern is "talks".\nTALKS (certain)'] for line TALK LIKE THIS!: _ _ _ s
-Filtered invalid action: e38. TALKS
-raw proposals from SLM ['A yenta is a gossip or busybody. The clue "Like a yenta" suggests a synonym for someone who gossips or spreads rumors.  \nThe pattern is D _ _ _, so we need a 4-letter word starting with "D."  \nPossible candidates include "dope," "drab," "dart," etc., but none perfectly fit the clue.  \nHowever, "dope" could work as slang for being informed or knowing things, which might align with the idea of spreading rumors.  \n\nDOPES (plural) would be 5 letters, not fitting the pattern.  \nNo strong match exists for a 4-letter word starting with "D" that precisely fits the clue and pattern.  \n\nNone'] for line Like a yenta: d _ _ _
-raw proposals from SLM ['The clue refers to props used by close-up magicians, which often include items like cards or small objects. Given the pattern "s e _ i _", we need a 5-letter word starting with "se" and ending in "i_".\n\nA fitting word could be "seize," but it doesn\'t fit the pattern. Another possibility is "sewix," which isn\'t a standard term. However, "seize" does not match the structure "s e _ i _."\n\nAfter reviewing potential options and ensuring no forbidden words are used, there appears to be no valid 5-letter English word matching the given pattern and clue while avoiding the forbidden word "TRICK."\n\nNone'] for line Props for close-up magicians: s e _ i _
-raw proposals from SLM ['The clue "Arrogant sort" suggests a synonym for someone who is overly confident or self-important. The pattern "_ _ _ h" indicates a four-letter word ending in \'h\'.\n\nA fitting word that matches the clue and pattern is "PRIG," but it is explicitly forbidden. No other common four-letter word ending in \'h\' that means "arrogant sort" comes to mind.\n\nI cannot find another valid four-letter completion for this clue and pattern.\nNone'] for line Arrogant sort: _ _ _ h
-raw proposals from SLM ['The clue "Super-trendy" suggests a term related to something fashionable or in vogue. The pattern "_ _ _ _ _ _ o u _ i" indicates a 9-letter word with specific letters at positions 7, 8, and 9 being \'o\', \'u\', and \'i\' respectively.\n\nA fitting word matching this pattern and the clue is "CHICANO." It means someone from Mexico or of Mexican descent, but it also carries connotations of cultural influence and trendiness, aligning with the idea of "super-trendy."\n\nCHICANO (certain)'] for line Super-trendy: _ _ _ _ _ _ o u _ i
-Filtered invalid action: e44. CHICANO
-raw proposals from SLM ['The clue refers to West, likely referring to the actor or person associated with the quote. Given the constraint that "WES" is not allowed, we need a 3-letter word starting with the letter "W" but not containing "WES."\n\nA well-known figure associated with the quote "Men are my life, diamonds are mycareer" is **Wes** (short for Wesley), but since "WES" is explicitly forbidden, we look for alternative interpretations.\n\nHowever, there is no widely recognized 3-letter name or term related to this quote that fits the pattern "_ _ _" and avoids "WES." No other plausible 3-letter word matching the clue exists without violating constraints.\n\nNone'] for line West who said "Men are my life, diamonds are my career": _ _ _
-raw proposals from SLM ['The clue "Set down on paper" suggests a synonym for writing or recording something. The pattern has 12 characters with the last few letters being "n t _ a _ _".\n\nA likely fit for this clue is "SET DOWN ON PAPER", but it doesn\'t match the pattern. However, if we consider a shorter phrase that fits the pattern, the most plausible word fitting the pattern and meaning is "SCRIPT".\n\nPattern length is 12 with fixed letters at positions 7 ("n"), 8 ("t"), 10 ("a"), and 11 ("_"). The word "SCRIPT" does not fit the pattern directly, so there may be no valid word matching both the clue and the pattern.\n\nI cannot find a valid 12-letter word that fits the pattern and matches the clue meaning.\nNone'] for line Set down on paper: _ _ _ _ n _ n t _ a _ _
-raw proposals from SLM ['Starbuck\'s higher-up? refers to Captain Ahab from *Moby-Dick*. However, "AHAB" is in the forbidden list. We need a 4-letter word matching the pattern _ _ _ _ that means a superior or boss.\n\nA plausible alternative could be "BOSS," which fits the pattern and means a higher-up. It does not appear in the forbidden list.\n\nBOSS (high)'] for line Starbuck's higher-up?: _ _ _ _
-raw proposals from SLM ['The clue "Ape or monkey" suggests a word ending in "an" and has six letters. The pattern "_ _ _ _ a n" indicates a 6-letter word ending in "an." A suitable word fitting this description is "MONKEY," but it does not end in "an." Another possibility is "APEMAN," which means a human-like being or a primitive man, often used in reference to apes. It fits the pattern and the clue.\n\nAPEMAN (certain)'] for line Ape or monkey: _ _ _ _ a n
-raw proposals from SLM ['The clue "In the dark about something nefarious" suggests a phrase related to secrecy or hidden wrongdoing. Given the pattern "p _ n _ t h _ _ _ _", we need a 11-letter word starting with "p", followed by an unknown letter, then "n", then an unknown letter, "t", "h", and ending with four more unknown letters.\n\nA fitting word that aligns with the clue and pattern is **PLOT HATCH** (though it\'s two words), but since the pattern implies a single word, we consider **PLOTTHICKER**, which means someone involved in plotting or scheming—something nefarious.\n\nHowever, "PLOTTHICKER" does not fit the pattern exactly due to its length and structure. After careful consideration, there appears to be no clear 11-letter English word matching the given pattern and clue without violating the constraints or being too obscure.\n\nNone'] for line In the dark about something nefarious: p _ n _ t h _ _ _ _ _ _
-raw proposals from SLM ['The clue "Well, lookee there!" suggests an exclamation or expression of surprise or attention. The pattern is "i _ o", which means a three-letter word starting with \'i\' and ending with \'o\'.\n\nA fitting word that matches the pattern and the clue is "IYO". While not commonly used in modern English, it can be found in some dialects or as an archaic term, and it fits the structure of the clue.\n\nConfidence: medium\n\nWORD (medium)'] for line "Well, lookee there!": i _ o
-Filtered invalid action: e51. WORD
-raw proposals from SLM ['The clue "Place to see J.F.K." suggests a location associated with John F. Kennedy. The pattern has 10 letters with fixed letters at positions 1, 3, 6, 7, 8, and 9: T, L, D, O, _, _, _. \n\nA plausible answer fitting this pattern is "TOWER LODGE," but it doesn\'t fit the pattern. Another possibility is "TOWEL DOOR," which also doesn\'t fit. However, the most likely and historically accurate place where J.F.K. was seen is the **Texas School Book Depository**, but it does not match the pattern.\n\nAfter careful consideration, there is no clear 10-letter word matching the pattern and clue without violating constraints or being too obscure.\n\nNone'] for line Place to see J.F.K.: t _ l _ d o _ _ _ _
-raw proposals from SLM ['Pattern length is 5 with fixed letters c, _, a, _, e.\n"Hopping mad" suggests a synonym for being angry or irate. A fitting word matching the pattern is "CRAZE".\nCRAZE (high)'] for line Hopping mad: c _ a _ e
-raw proposals from SLM ['The clue "Past, present or future" suggests a term that encompasses time periods. The pattern is h _ n _ e, which is 5 letters long. A fitting word is "HONEY," but it doesn\'t relate directly to time. Another possibility is "HONOR," which also does not fit the clue. However, the most suitable word matching the pattern and clue is "HENCE."\n\nHENCE (certain)'] for line Past, present or future: h _ n _ e
-raw proposals from SLM ['The clue "Flowery necklace" suggests a type of ornamental jewelry often associated with floral designs. Given the pattern "_e_", we need a 3-letter word fitting this format.\n\nA suitable word that matches the clue and pattern is "CROWN," but it doesn\'t fit the pattern. Another possibility is "BROOCH," which is too long. However, considering the pattern and the clue, the most fitting word is "BEAD."\n\nBEAD fits the pattern "_e_" and relates to a flowery necklace as beads are commonly used in such accessories.\n\nWORD (high)'] for line Flowery necklace: _ e _
-Filtered invalid action: e55. WORD
-raw proposals from SLM ['The clue "In a prim and proper way" suggests a synonym for being formal or restrained in behavior. The pattern has 9 letters with the second, third, and fifth letters fixed as \'o\', \'n\', and \'n\' respectively.\n\nA suitable word matching this clue and pattern is "PRIMLY", but it does not fit the pattern. Another possibility is "PROPERLY", which also doesn\'t match the pattern.\n\nAfter evaluating possible options, the only fitting word that adheres to the pattern "_ o n _ n _ _ _ _ _" and means "in a prim and proper way" is **PONDERING** — though it doesn’t precisely match the clue. A more accurate match would be **PRONOUNCED**, but it doesn’t fit the pattern either.\n\nGiven the strict pattern and the lack of a clear match, I cannot confidently propose a valid word.\n\nNone'] for line In a prim and proper way: _ o n _ n _ _ _ _ _
-Filtered invalid action: e58. GRANDE
-raw proposals from SLM ['Pattern length is 3 with fixed letters s, c, _.  \nThe clue "What you might call a tipsy friend" suggests a slang term for someone slightly drunk. A fitting word could be "scoff," but it doesn\'t fit the context well. Another possibility is "scally," which refers to a rowdy or drunken person, though it\'s more British slang. However, the most common and fitting term for a tipsy friend in this pattern would be "scamp." While "scamp" typically means a mischievous person, it can also imply someone who acts foolishly, possibly in a tipsy state.  \n\nGiven the limited options and the need to match the pattern, "scamp" is the best fit.  \n\nSCAMP (high)'] for line What you might call a tipsy friend: s c _
-Filtered invalid action: e59. SCAMP
-raw proposals from SLM ['The clue "Last words?" suggests a phrase or expression related to final utterances. The pattern "p o _ t" indicates a 4-letter word starting with \'p\', followed by \'o\', then an unknown letter, ending in \'t\'. \n\nA fitting word that matches the pattern and the clue is "POET". It aligns with the idea of "last words" as in a poet\'s final work or expression. There are no conflicts with the forbidden word "LAST".\n\nPOET (certain)'] for line Last words?: p o _ t
-raw proposals from SLM ['The clue "Symbols of wisdom" suggests something symbolic and related to knowledge or intellect. Given the pattern "_ _ _ _", we need a 4-letter word.\n\nA common symbol of wisdom is the **owl**, which is often associated with intelligence and knowledge in mythology and literature.\n\nOWL is a valid 4-letter word that fits the pattern and aligns with the clue.\n\nOWL (certain)'] for line Symbols of wisdom: _ _ _ _
-Filtered invalid action: e61. OWL
-raw proposals from SLM ['Pattern length is 3 with fixed letters c and l.\n"Part of U.C.L.A." refers to the university\'s abbreviation, which is UCLA. The abbreviation for "University of California, Los Angeles" is often abbreviated as UCLA. The clue asks for an abbreviation, so the answer should be the first three letters of UCLA, which is "UCL". However, the pattern given is "c _ l", which starts with \'c\', not \'u\'. Therefore, it seems like there might be a mismatch or misinterpretation in the clue.\n\nGiven the pattern "c _ l" and the clue referring to part of U.C.L.A., the most likely intended answer would be "CUL" (as in "Culver City," but that doesn\'t fit perfectly). Alternatively, if we consider the abbreviation for "California" itself, it could be "CAL", but again, it does not start with \'c\' followed by \'l\'.\n\nHowever, based on the pattern'] for line Part of U.C.L.A.: Abbr.: c _ l
-raw proposals from SLM ['The clue refers to a material used in making an object related to a seasonal song, with the pattern C _ A _. The word likely relates to something made or associated with winter, as it is a seasonal reference. \n\nA fitting word that matches the pattern and context is "CARVE." It suggests carving, which could be part of creating an illustrated object, possibly in a seasonal context like holiday decorations.\n\nCARVE (high)'] for line Material used to make the object "illustrated" here, in a seasonal song: c _ a _
-Filtered invalid action: e64. CARVE
-raw proposals from SLM ['Pattern length is 3 with fixed letters c and y.\n"Coral island" refers to a small island, often associated with coral reefs. A common term for such an island is "cay."\nCAY (certain)\n\nWORD (certain)'] for line Coral island: c _ y
-Filtered invalid action: e67. SEDATES
-Filtered invalid action: e69. JARED
-Filtered invalid action: e70. OWL
-raw proposals from SLM ['The clue "Très ___" suggests a French phrase or expression. "Très bien" means "very good" in French. Given the pattern _ _ _ _, the missing word should be "BIEN". However, "BIEN" is listed as a forbidden word.\n\nSince "BIEN" is not allowed, I need to consider other possibilities. There are no other common four-letter words that fit the clue "Très ___" and match the pattern. \n\nI cannot find another valid 4-letter completion for this clue and pattern.\nNone'] for line "Très ___": _ _ _ _
-raw proposals from SLM ['The clue refers to a singer named Guthrie. A well-known singer with the surname Guthrie is Woody Guthrie. The pattern is four underscores, so we need a 4-letter first name. "Woody" is too long, but "Woody" is not fitting the pattern. However, there is no widely recognized 4-letter first name associated with Guthrie that fits the clue. Additionally, the constraint prohibits "NONE_SIGNAL" and "WORD," which are irrelevant here. Given these constraints and lack of a suitable fit, I cannot provide a valid answer.\n\nNone'] for line Singer Guthrie: _ _ _ _
-Filtered invalid action: e76. WORD
-[Proposal Summary] total=15 correct=4 incorrect=11
-  [OK] e0 A1: SCAMP -> SCAMP
-  [OK] e1 A6: GAS -> GAS
-  [X] e4 A15: ALB -> AHI
-  [X] e6 A17: OCEAN -> INLET
-  [X] e9 A20: OOF -> EST
-  [X] e12 A25: KAI -> DOH
-  [OK] e16 A29: EDWIN -> EDWIN
-  [X] e28 A48: STAR -> SIRS
-  [X] e43 D2: JOKES -> CANSO
-  [X] e48 D7: BOSS -> AHAB
-  [X] e49 D8: APEMAN -> SIMIAN
-  [X] e53 D12: CRAZE -> IRATE
-  [X] e54 D13: HENCE -> TENSE
-  [X] e60 D34: POET -> OBIT
-  [OK] e65 D41: CAY -> CAY
-[Round 2] filled=29 progress=9 r_word=0.182 r_letter=0.298 r_game=False
-____________________
-Proposals (iterative round) for [{"entry_id":0,"label":"1","length":5,"fill":"SCAMP"},{"entry_id":1,"label":"6","length":3,"fill":"GAS"},{"entry_id":2,"label":"9","length":5,"fill":"PITCH"},{"entry_id":3,"label":"14","length":5,"fill":"P____"},{"entry_id":4,"label":"15","length":3,"fill":"A__"},{"entry_id":5,"label":"16","length":5,"fill":"___RE"},{"entry_id":6,"label":"17","length":5,"fill":"O____"},{"entry_id":7,"label":"18","length":3,"fill":"L__"},{"entry_id":8,"label":"19","length":5,"fill":"NOLAN"},{"entry_id":9,"label":"20","length":3,"fill":"OOF"},{"entry_id":10,"label":"21","length":7,"fill":"__L__T_"},{"entry_id":11,"label":"24","length":3,"fill":"_ZC"},{"entry_id":12,"label":"25","length":3,"fill":"K__"},{"entry_id":13,"label":"26","length":3,"fill":"NEO"},{"entry_id":14,"label":"27","length":3,"fill":"ART"},{"entry_id":15,"label":"28","length":3,"fill":"DEE"},{"entry_id":16,"label":"29","length":5,"fill":"EDWIN"},{"entry_id":17,"label":"31","length":5,"fill":"NIHAO"},{"entry_id":18,"label":"33","length":5,"fill":"SPOON"},{"entry_id":19,"label":"35","length":5,"fill":"____E"},{"entry_id":20,"label":"38","length":5,"fill":"COUNT"},{"entry_id":21,"label":"39","length":3,"fill":"CCC"},{"entry_id":22,"label":"42","length":5,"fill":"____V"},{"entry_id":23,"label":"43","length":5,"fill":"_E___"},{"entry_id":24,"label":"44","length":3,"fill":"__A"},{"entry_id":25,"label":"45","length":5,"fill":"____E"},{"entry_id":26,"label":"46","length":4,"fill":"TINA"},{"entry_id":27,"label":"47","length":3,"fill":"LAY"},{"entry_id":28,"label":"48","length":4,"fill":"STAR"},{"entry_id":29,"label":"49","length":3,"fill":"__Y"},{"entry_id":31,"label":"52","length":7,"fill":"W____IS"},{"entry_id":32,"label":"56","length":7,"fill":"P_____C"},{"entry_id":33,"label":"60","length":4,"fill":"O___"},{"entry_id":34,"label":"61","length":5,"fill":"KA_O_"},{"entry_id":35,"label":"63","length":4,"fill":"___A"},{"entry_id":36,"label":"64","length":4,"fill":"R___"},{"entry_id":37,"label":"65","length":5,"fill":"EV_L_"},{"entry_id":38,"label":"66","length":4,"fill":"___S"},{"entry_id":39,"label":"67","length":4,"fill":"D___"},{"entry_id":40,"label":"68","length":5,"fill":"SE_I_"},{"entry_id":41,"label":"69","length":4,"fill":"___H"},{"entry_id":42,"label":"1","length":5,"fill":"SPOOK"},{"entry_id":43,"label":"2","length":5,"fill":"C__O_"},{"entry_id":44,"label":"3","length":10,"fill":"A__F_EOU_I"},{"entry_id":45,"label":"4","length":3,"fill":"M__"},{"entry_id":46,"label":"5","length":12,"fill":"P___NWNT_A__"},{"entry_id":47,"label":"6","length":6,"fill":"GALLON"},{"entry_id":48,"label":"7","length":4,"fill":"A___"},{"entry_id":49,"label":"8","length":6,"fill":"S___AN"},{"entry_id":50,"label":"9","length":12,"fill":"P_N_TH___S__"},{"entry_id":51,"label":"10","length":3,"fill":"I_O"},{"entry_id":52,"label":"11","length":10,"fill":"T_L_DO___A"},{"entry_id":53,"label":"12","length":5,"fill":"CRAZE"},{"entry_id":54,"label":"13","length":5,"fill":"HENCE"},{"entry_id":55,"label":"22","length":3,"fill":"_EI"},{"entry_id":56,"label":"23","length":3,"fill":"TRI"},{"entry_id":57,"label":"30","length":10,"fill":"DON_N_____"},{"entry_id":58,"label":"32","length":10,"fill":"A___T_____"},{"entry_id":59,"label":"33","length":3,"fill":"SC_"},{"entry_id":60,"label":"34","length":4,"fill":"POET"},{"entry_id":61,"label":"36","length":4,"fill":"___R"},{"entry_id":62,"label":"37","length":3,"fill":"EVE"},{"entry_id":63,"label":"39","length":3,"fill":"C_L"},{"entry_id":64,"label":"40","length":4,"fill":"C_A_"},{"entry_id":65,"label":"41","length":3,"fill":"CAY"},{"entry_id":66,"label":"50","length":5,"fill":"YIKES"},{"entry_id":68,"label":"52","length":4,"fill":"WORD"},{"entry_id":71,"label":"55","length":4,"fill":"SAVE"},{"entry_id":72,"label":"56","length":4,"fill":"POLI"},{"entry_id":75,"label":"59","length":4,"fill":"CASH"}]
-Filtered invalid action: e3. POHNPEI
-raw proposals from SLM ['The clue "Tuna type" suggests a specific kind of tuna. Given the pattern "a _ _", we need a 3-letter word starting with "a".\n\nPossible candidates include "albacore," but it\'s too long. Other possibilities like "ahi" or "atlantic" also don\'t fit the pattern.\n\nGiven the constraint that "ALB" and "NONE_SIGNAL" are not allowed, and no other valid 3-letter word matching the pattern and clue exists, I conclude there is no suitable answer.\n\nNone'] for line Tuna type: a _ _
-raw proposals from SLM ['The clue refers to an airport located near the intersection of I-90 and U.S. Route 294, which is in Chicago. The correct airport is O\'Hare International Airport. The pattern "_ _ _ r e" matches "OHARE," which is a common abbreviation or reference to O\'Hare Airport.\n\nOHARE (certain)'] for line Airport near the intersection of I-90 and I-294: _ _ _ r e
-raw proposals from SLM ['The clue "Cove" refers to a small bay or inlet, typically sheltered by land on two sides. The pattern is 5 letters with the first letter fixed as \'o\'. \n\nGiven the constraint that "INLET", "NONE_SIGNAL", and "OCEAN" are forbidden, we need to find another 5-letter word starting with \'o\' that means "cove."\n\nA suitable alternative is "ORATE," but it does not fit the definition. Other options like "OVALS" or "OZONE" also do not align with the clue.\n\nAfter reviewing possible alternatives, there is no valid 5-letter word matching the pattern "o____" that means "cove" and is not in the forbidden list.\n\nNone'] for line Cove: o _ _ _ _
-Filtered invalid action: e7. WORD
-raw proposals from SLM ['The clue "_ _ l _ _ t _" suggests a phrase or expression that fits the structure of a spoken dialogue, possibly something like "Tell me" or "Say it." Given the pattern length of 7 and the fixed letter \'l\' in position 3, we look for a 7-letter phrase matching the structure.\n\nA plausible fit is "Tell me," but it doesn\'t match the pattern directly. However, considering common phrases, "Tell me" could be part of a longer phrase such as "Tell me what..." which might be abbreviated or adapted into the given format.\n\nAnother possibility is "Okay, tell me," but that exceeds the character limit. A more fitting and concise option within the pattern is "Tell me."\n\nGiven the structure and context, "Tell me" fits the pattern _ _ l _ _ t _, where the first two letters are unknown, followed by \'l\', then three unknowns, ending with \'t\' and \'e\'.\n\nHowever, since the'] for line "OK ... tell me": _ _ l _ _ t _
-raw proposals from SLM ['The clue refers to "N.B.A. 1-pointers," which are typically referred to as "free throws." The abbreviation for free throw is F.T., but the pattern given is "_ z c," indicating a three-letter word where the second letter is \'z\' and the third is \'c.\'\n\nGiven the pattern "_ z c" and the context of basketball terminology, the only plausible fit is "FZC," which does not correspond to any standard basketball term or abbreviation. No other valid three-letter word matching the pattern "_ z c" exists in standard English vocabulary related to NBA 1-pointers.\n\nNone'] for line N.B.A. 1-pointers: Abbr.: _ z c
-raw proposals from SLM ['The clue "Exclamation from Homer" suggests a Greek exclamation or interjection. The pattern is k _ _, so we need a 3-letter word starting with \'k\'.\n\nPossible options include "KAI," which is a common Greek exclamation, but it is listed as a forbidden word. Another possibility could be "KAY," but it doesn\'t fit the context of an exclamation from Homer. No other valid 3-letter words starting with \'k\' that fit the clue and pattern exist.\n\nNone'] for line Exclamation from Homer: k _ _
-Filtered invalid action: e19. BOOKS
-raw proposals from SLM ['The clue refers to a candymaker named Wonka. The pattern has five letters with the last being \'v\'. The only known name fitting this pattern is WOBBLY, but it does not refer to Wonka. There are no other plausible names matching the pattern "_ _ _ _ v" that refer to Candymaker Wonka. Additionally, "WONKA" is explicitly excluded by the constraint.\n\nNone'] for line Candymaker Wonka: _ _ _ _ v
-raw proposals from SLM ['The clue "Chauvinist or racist" suggests a synonym for prejudice or bigotry. The pattern "_e___" indicates a 5-letter word with \'e\' as the second letter. \n\nConsidering the constraint that "BIGOT" is not allowed, we look for other synonyms of chauvinist or racist that fit the pattern. A strong candidate is "EGOIST," but it doesn\'t directly relate to racism or chauvinism. Another possibility is "ELDER," which doesn\'t fit the theme either.\n\nAfter reviewing possible options, there isn\'t a clear 5-letter word matching the pattern "_e___" that accurately represents a chauvinist or racist without being "BIGOT." Therefore, no suitable word exists under these constraints.\n\nNone'] for line Chauvinist or racist: _ e _ _ _
-Filtered invalid action: e24. MOCK
-Filtered invalid action: e25. VENI
-Filtered invalid action: e29. JOEY
-raw proposals from SLM ['The clue refers to an actress from *The Golden Girls* named Arthur. The only actress from that show with the last name Arthur is **Estelle Getty**, but she is not typically referred to by her full name in such clues. However, there is no well-known actress from *The Golden Girls* named Arthur.\n\nGiven the constraint and the lack of a clear fit, I cannot identify a valid three-letter word matching the clue and pattern.\n\nNone'] for line "Golden Girls" actress Arthur: _ _ _
-Filtered invalid action: e31. WITHERS
-Filtered invalid action: e32. PACKET
-Filtered invalid action: e33. ORATE
-raw proposals from SLM ['The clue "Cousin of a croc" refers to a relative of a crocodile. A likely answer is "kangaroo," which is a cousin of a crocodile in terms of being a large reptile. The pattern "k a _ o _" matches "KANGAROO" if we consider only the first five letters (KANGA), but since the pattern has five characters and "KANGAROO" is longer than five letters, it doesn\'t fit directly.\n\nHowever, the most fitting 5-letter word matching "k a _ o _" and the clue would be "KANGO." While not commonly used as a standalone term, it could be a variant or abbreviation. Alternatively, considering possible synonyms or related terms, no other common 5-letter word fits both the pattern and the clue.\n\nConfidence: low\n\nWORD (low)'] for line Cousin of a croc: k a _ o _
-Filtered invalid action: e34. WORD
-raw proposals from SLM ['The clue refers to "The Emerald Isle," which is a nickname for Ireland. The pattern has four underscores with the fourth letter being \'a\'. The word "IRELAND" does not fit because it is longer than the pattern. However, "ERAIL" is not correct either. The correct 4-letter word ending in \'a\' that refers to Ireland is "Eire." \n\nEIRE (certain)'] for line The Emerald Isle: _ _ _ a
-Filtered invalid action: e35. EIRE
-Filtered invalid action: e36. WORD
-raw proposals from SLM ['The clue refers to sheep breeds like Shetland and Merino, which are types of wool or related to sheep. The pattern is e v _ l _, indicating a 5-letter word starting with "ev".\n\nMatching the clue and pattern, the most fitting word is "EVELY", but it does not correspond to a known breed. However, "EVILS" doesn\'t fit the clue context. After careful consideration and checking against the forbidden words, no valid 5-letter word matching the pattern and clue exists without violating constraints.\n\nNone'] for line Like the breeds Shetland and merino: e v _ l _
-Filtered invalid action: e38. TALKS
-raw proposals from SLM ['A yenta is a gossip or busybody. The clue "Like a yenta" suggests a synonym for someone who gossips. The pattern is D _ _ _, so we need a 4-letter word starting with "D." \n\nPossible candidates could include "dabber," "drone," "doper," etc., but none perfectly fit the definition of a yenta. Among these, "doper" might be considered in slang contexts, but it doesn\'t directly align with the behavior of a yenta.\n\nGiven the constraint and lack of a strong fit, no suitable word meets both the clue and pattern requirements.\n\nNone'] for line Like a yenta: d _ _ _
-raw proposals from SLM ['The clue refers to props used by close-up magicians, which often involve illusions or tricks. Given the pattern "s e _ i _", we need a 5-letter word starting with \'s\', followed by \'e\', then two unknown letters, ending in \'i\' and another unknown letter.\n\nA fitting word could be **SEWING**, but it doesn\'t fit the magician context well. Another possibility is **SLEET**, but it doesn’t align with the clue either. \n\nConsidering the constraint that "NONE_SIGNAL" and "TRICK" are not allowed, and looking for a term related to props or magic, **SEWING** might seem plausible, but it lacks direct relevance to magic props. After reviewing possible options, no clear match satisfies both the clue and pattern while avoiding forbidden words.\n\nNone'] for line Props for close-up magicians: s e _ i _
-raw proposals from SLM ['The clue "Arrogant sort" suggests a synonym for someone who is conceited or haughty. The pattern "_ _ _ h" indicates a four-letter word ending in \'h\'. \n\nGiven the constraint, we must avoid "NONE_SIGNAL" and "PRIG". While "PRIG" is a possible synonym for an arrogant person, it does not fit the pattern "_ _ _ h".\n\nAfter evaluating potential words matching the pattern and meaning, no suitable word fitting the clue, pattern, and constraints was found.\n\nNone'] for line Arrogant sort: _ _ _ h
-raw proposals from SLM ['The clue "Playground retort" suggests a playful or humorous remark, often associated with children\'s games or slang. Given the pattern C _ _ O _, we need a 5-letter word starting with \'C\', containing an \'O\' as the fourth letter.\n\nA fitting word that matches both the clue and the pattern is "COYLY." However, it doesn\'t fit the context of a playground retort. Another possibility is "COYLY," but it also lacks relevance to the clue.\n\nConsidering the constraint that "JOKER" and "JOKES" are forbidden, and no other valid 5-letter words matching the pattern and clue emerge, there is no suitable answer.\n\nNone'] for line Playground retort: c _ _ o _
-raw proposals from SLM ['The clue "Super-trendy" suggests a trendy or fashionable term. The pattern is a _ _ f _ e o u _ _ i, which indicates a 10-letter word with specific letters at positions 1, 4, 6, 7, 8, and 10.\n\nGiven the fixed letters and the context of being super-trendy, the most fitting word is **AFLUENT**. However, it does not fit the pattern. Another possible word that fits the pattern and the clue is **AFROCI** — but that doesn\'t make sense in the context. \n\nAfter careful consideration, there appears to be no standard English word that fits the given pattern and clue while respecting the constraints.\n\nNone'] for line Super-trendy: a _ _ f _ e o u _ i
-raw proposals from SLM ['The clue "Set down on paper" suggests the act of writing or recording something, which could relate to the verb "pennant." However, the pattern provided is p _ _ _ n w n t _ _ _ _, indicating a longer word than "pennant."\n\nGiven the pattern p _ _ _ n w n t _ _, it appears there may be a formatting or input error in the pattern since it contains more characters than expected. If we consider the intended pattern as p _ _ _ n w n t _ (with 9 characters), then "pennant" does not fit.\n\nHowever, if we assume the pattern was meant to be p _ _ _ n (5 letters) and ignore the extra characters due to possible input error, then "pennant" would fit the pattern p _ _ _ n.\n\nAssuming the correct pattern is p _ _ _ n, the best fitting word is:\n\nPENNANT (certain)\n\nWORD (certain)'] for line Set down on paper: p _ _ _ n w n t _ a _ _
-Filtered invalid action: e46. PENNANT
-raw proposals from SLM ['Starbuck\'s higher-up? refers to Captain Ahab from Moby-Dick. However, "AHAB" is in the forbidden list. Other possibilities include "BOSS," which is also forbidden. "NONE_SIGNAL" is not applicable here as it doesn\'t fit the 4-letter pattern. No valid alternative matches the clue, pattern, and constraints.\n\nNone'] for line Starbuck's higher-up?: a _ _ _
-raw proposals from SLM ['The clue "Ape or monkey" suggests a term related to primates. The pattern is "s _ _ _ a n", which indicates a 6-letter word starting with \'s\' and ending with \'an\'.\n\nConsidering the pattern and the clue, the most fitting word is "SAPIAN". However, it\'s important to note that "sapian" refers more generally to human-like qualities rather than specifically to apes or monkeys. Another possible word could be "SIMIAN," but it does not fit the pattern.\n\nGiven the constraint that "APEMAN" is forbidden, and after reviewing potential options, there are no other valid 6-letter words matching the pattern "s _ _ _ a n" that directly refer to apes or monkeys.\n\nNone'] for line Ape or monkey: s _ _ _ a n
-raw proposals from SLM ['The clue "In the dark about something nefarious" suggests a phrase related to secrecy or hidden evil. Given the pattern `p _ n _ t h _ _ _ s _$`, we need a word that starts with "p", has "n" as the third letter, contains "t", "h", and ends with "s". \n\nA fitting word that aligns with the clue and pattern is **PLOTTHES** — though it appears to be a non-standard or constructed term. However, given the ambiguity in the clue and the lack of clear alternatives matching both the clue and pattern, no standard English word perfectly fits.\n\nNone'] for line In the dark about something nefarious: p _ n _ t h _ _ _ s _ _
-Filtered invalid action: e51. WORD
-raw proposals from SLM ['The clue "Place to see J.F.K." suggests a location associated with John F. Kennedy. The pattern has 9 letters with fixed letters at positions 1, 3, 6, 7, 8, and 9: T, L, D, O, _, _, A.\n\nA plausible place to see J.F.K. is the **Kennedy Airport**. However, the pattern does not fit directly. Another possibility is **Dallas**, but it doesn\'t fit the pattern either.\n\nAfter considering possible locations and matching the pattern, the only fitting word is **TOWELDOORAA**, which is not meaningful or related to the clue.\n\nNo valid word fits the clue and pattern while respecting the constraints.\n\nNone'] for line Place to see J.F.K.: t _ l _ d o _ _ _ a
-raw proposals from SLM ['Pattern length is 3 with fixed letters e and i in positions 2 and 3.\nThe clue "Flowery necklace" suggests a term related to adornment or floral decoration. A fitting word could be "bracelet," but it doesn\'t fit the pattern. Another possibility is "bangle," which also doesn\'t match. However, the only 3-letter word matching the pattern "_ei" and relating to a flowery necklace is "bei," which is not standard English. No suitable English word fits the given pattern and clue.\n\nNone'] for line Flowery necklace: _ e i
-raw proposals from SLM ['The clue "In a prim and proper way" suggests a word related to being formal or restrained. The pattern is "d o n _ n _ _ _ _ _", which indicates a 10-letter word starting with "don" followed by "n" at the fifth position.\n\nA suitable word fitting this pattern and meaning is "DONNISH," though it\'s not commonly used. However, more likely, the intended word might be "DONNIE" but that doesn\'t fit the pattern. A better fit could be "DONNIE" but again, it doesn\'t align perfectly. Given the constraints and the need for a 10-letter word matching the pattern, the most plausible word is:\n\n**DONNIE** – although it does not fully conform to the pattern due to its shorter length. After careful consideration, no other 10-letter word starting with "don", containing an "n" as the fifth letter, and matching the clue appears to exist.\n\nNone'] for line In a prim and proper way: d o n _ n _ _ _ _ _
-raw proposals from SLM ['The clue refers to a singer known for the albums "As I Am" and "Girl On Fire." These albums are by Rihanna.  \nThe pattern is a _ _ _ t _ _ _ _ _, which is 10 letters long.  \nRIHANNA does not fit the pattern. However, the correct name fitting the pattern is ARIANA.  \n\nAriana Grande has released albums such as "Yours Truly," "The Electric Tour," and others, but she is not associated with "As I Am" or "Girl On Fire." The correct artist for those albums is Rihanna, but her name doesn\'t fit the given pattern. There appears to be no other singer matching both the clue and the pattern.  \n\nNone'] for line Singer with the #1 albums "As I Am" and "Girl on Fire": a _ _ _ t _ _ _ _ _
-Filtered invalid action: e59. SCAMP
-raw proposals from SLM ['The clue "Symbols of wisdom" suggests something related to knowledge or sacred symbols. The pattern "_ _ _ r" indicates a four-letter word ending in \'r\'.\n\nA fitting word could be "CROSS," which symbolizes wisdom and is often associated with religious or spiritual contexts.\n\nCROSS (certain)'] for line Symbols of wisdom: _ _ _ r
-Filtered invalid action: e61. CROSS
-raw proposals from SLM ['Pattern length is 3 with fixed letters c and l.\n"Part of U.C.L.A." refers to the university\'s abbreviation, which is UCLA. The abbreviation for "University of California, Los Angeles" is often represented as UCLA. Therefore, the missing letter between \'c\' and \'l\' is \'a\', forming the word "CAL".\nCAL (certain)'] for line Part of U.C.L.A.: Abbr.: c _ l
-Filtered invalid action: e64. CARVE
-Filtered invalid action: e67. SEDATES
-Filtered invalid action: e69. JARED
-Filtered invalid action: e70. OWL
-raw proposals from SLM ['The clue "Très ___" suggests a French phrase or expression, as "très" means "very" in French. The blank is likely completing a common French expression or phrase.\n\nGiven the pattern _ _ _ _, we need a four-letter word that pairs well with "très." Common expressions include "très bien" (very well), but "BIEN" is explicitly forbidden. Another possibility is "très mal" (very badly), but "mal" is only three letters, so it doesn\'t fit the pattern. \n\nThere are no other widely recognized four-letter completions for "très" that are commonly used in French. Given the constraint and lack of viable alternatives, I cannot find a suitable word that meets the criteria.\n\nNone'] for line "Très ___": _ _ _ _
-raw proposals from SLM ['The clue refers to a singer named Guthrie. A well-known singer with the last name Guthrie is Woody Guthrie. The pattern requires a 4-letter word for the first name.  \nThe only possible fit is "WOODY," but it does not match the 4-letter requirement. No other common 4-letter names fit the clue and pattern.  \n\nNone'] for line Singer Guthrie: _ _ _ _
-Filtered invalid action: e76. WORD
-[Proposal Summary] total=3 correct=2 incorrect=1
-  [OK] e5 A16: OHARE -> OHARE
-  [X] e45 D4: MAN -> MAE
-  [OK] e63 D39: CAL -> CAL
-[Round 3] filled=33 progress=4 r_word=0.208 r_letter=0.326 r_game=False
-____________________
-Proposals (iterative round) for [{"entry_id":0,"label":"1","length":5,"fill":"SCAMP"},{"entry_id":1,"label":"6","length":3,"fill":"GAS"},{"entry_id":2,"label":"9","length":5,"fill":"PITCH"},{"entry_id":3,"label":"14","length":5,"fill":"P__A_"},{"entry_id":4,"label":"15","length":3,"fill":"A__"},{"entry_id":5,"label":"16","length":5,"fill":"OHARE"},{"entry_id":6,"label":"17","length":5,"fill":"O__N_"},{"entry_id":7,"label":"18","length":3,"fill":"L__"},{"entry_id":8,"label":"19","length":5,"fill":"NOLAN"},{"entry_id":9,"label":"20","length":3,"fill":"OOF"},{"entry_id":10,"label":"21","length":7,"fill":"__L__T_"},{"entry_id":11,"label":"24","length":3,"fill":"_ZC"},{"entry_id":12,"label":"25","length":3,"fill":"K__"},{"entry_id":13,"label":"26","length":3,"fill":"NEO"},{"entry_id":14,"label":"27","length":3,"fill":"ART"},{"entry_id":15,"label":"28","length":3,"fill":"DEE"},{"entry_id":16,"label":"29","length":5,"fill":"EDWIN"},{"entry_id":17,"label":"31","length":5,"fill":"NIHAO"},{"entry_id":18,"label":"33","length":5,"fill":"SPOON"},{"entry_id":19,"label":"35","length":5,"fill":"____E"},{"entry_id":20,"label":"38","length":5,"fill":"COUNT"},{"entry_id":21,"label":"39","length":3,"fill":"CCC"},{"entry_id":22,"label":"42","length":5,"fill":"____V"},{"entry_id":23,"label":"43","length":5,"fill":"_E___"},{"entry_id":24,"label":"44","length":3,"fill":"A_A"},{"entry_id":25,"label":"45","length":5,"fill":"____E"},{"entry_id":26,"label":"46","length":4,"fill":"TINA"},{"entry_id":27,"label":"47","length":3,"fill":"LAY"},{"entry_id":28,"label":"48","length":4,"fill":"STAR"},{"entry_id":29,"label":"49","length":3,"fill":"__Y"},{"entry_id":31,"label":"52","length":7,"fill":"W____IS"},{"entry_id":32,"label":"56","length":7,"fill":"P_____C"},{"entry_id":33,"label":"60","length":4,"fill":"O___"},{"entry_id":34,"label":"61","length":5,"fill":"KA_O_"},{"entry_id":35,"label":"63","length":4,"fill":"___A"},{"entry_id":36,"label":"64","length":4,"fill":"R___"},{"entry_id":37,"label":"65","length":5,"fill":"EV_L_"},{"entry_id":38,"label":"66","length":4,"fill":"___S"},{"entry_id":39,"label":"67","length":4,"fill":"D___"},{"entry_id":40,"label":"68","length":5,"fill":"SE_I_"},{"entry_id":41,"label":"69","length":4,"fill":"___H"},{"entry_id":42,"label":"1","length":5,"fill":"SPOOK"},{"entry_id":43,"label":"2","length":5,"fill":"C__O_"},{"entry_id":44,"label":"3","length":10,"fill":"A__F_EOU_I"},{"entry_id":45,"label":"4","length":3,"fill":"MAN"},{"entry_id":46,"label":"5","length":12,"fill":"P___NWNT_A__"},{"entry_id":47,"label":"6","length":6,"fill":"GALLON"},{"entry_id":48,"label":"7","length":4,"fill":"A___"},{"entry_id":49,"label":"8","length":6,"fill":"S___AN"},{"entry_id":50,"label":"9","length":12,"fill":"PON_TH___S__"},{"entry_id":51,"label":"10","length":3,"fill":"IHO"},{"entry_id":52,"label":"11","length":10,"fill":"TAL_DO___A"},{"entry_id":53,"label":"12","length":5,"fill":"CRAZE"},{"entry_id":54,"label":"13","length":5,"fill":"HENCE"},{"entry_id":55,"label":"22","length":3,"fill":"_EI"},{"entry_id":56,"label":"23","length":3,"fill":"TRI"},{"entry_id":57,"label":"30","length":10,"fill":"DON_N_____"},{"entry_id":58,"label":"32","length":10,"fill":"A___T_____"},{"entry_id":59,"label":"33","length":3,"fill":"SC_"},{"entry_id":60,"label":"34","length":4,"fill":"POET"},{"entry_id":61,"label":"36","length":4,"fill":"___R"},{"entry_id":62,"label":"37","length":3,"fill":"EVE"},{"entry_id":63,"label":"39","length":3,"fill":"CAL"},{"entry_id":64,"label":"40","length":4,"fill":"C_A_"},{"entry_id":65,"label":"41","length":3,"fill":"CAY"},{"entry_id":66,"label":"50","length":5,"fill":"YIKES"},{"entry_id":68,"label":"52","length":4,"fill":"WORD"},{"entry_id":71,"label":"55","length":4,"fill":"SAVE"},{"entry_id":72,"label":"56","length":4,"fill":"POLI"},{"entry_id":75,"label":"59","length":4,"fill":"CASH"}]
-raw proposals from SLM ["The clue refers to a Micronesian island that served as the setting for a season of *Survivor*. The pattern is 5 letters with the fixed letters P, _, _, A, _. \n\nOne well-known Micronesian island used in *Survivor* is **Pohnpei**. However, it does not fit the pattern because it has more than 5 letters. Another possible island is **Palau**, but it doesn't fit the pattern either. There are no other widely recognized Micronesian islands that match the pattern **p _ _ a _** and were used in *Survivor*.\n\nGiven the constraints and the lack of a clear match, I cannot identify a valid 5-letter word fitting the pattern and matching the clue.\n\nNone"] for line Micronesian island that was the setting for a season of "Survivor": p _ _ a _
-raw proposals from SLM ['The clue "Tuna type" suggests a variety or kind of tuna. The pattern is a _ _, indicating a 3-letter word starting with \'a\'.\n\nPossible candidates include "ALB," but it is listed as a forbidden word. Another possibility could be "AHI," which refers to a type of tuna.\n\nAHI (certain)'] for line Tuna type: a _ _
-raw proposals from SLM ['The clue "Cove" refers to a small bay or inlet, typically sheltered by land on two sides. The pattern is o _ _ n _, indicating a 5-letter word starting with \'o\' and ending with \'n\'.\n\nGiven the constraint that "INLET" and "OCEAN" are not allowed, we need an alternative 5-letter word matching the pattern **o _ _ n _** that means "cove".\n\nA suitable word is **OVATE**, but it does not mean "cove". Another possibility is **ONION**, which also doesn\'t fit the definition.\n\nAfter evaluating possible options, no other standard English word fits both the definition of "cove" and the pattern **o _ _ n _** while avoiding the forbidden words.\n\nNone'] for line Cove: o _ _ n _
-Filtered invalid action: e7. WORD
-raw proposals from SLM ['The clue "_ _ l _ _ t _" suggests a phrase or expression that fits the structure and includes the word "tell me." A common phrase matching this pattern is "Tell me," but it needs to fit the given underscore format. The correct phrase fitting the pattern and clue is "Tell me."\n\nHowever, the pattern "_ _ l _ _ t _" has seven characters, which does not match the expected structure of "Tell me" (which is five characters). Therefore, we need to identify a 7-letter word containing "l", "t", and "e" in positions that align with the pattern.\n\nA suitable match is "Tell me," but it doesn\'t fit the pattern. Another possibility is "Tell me," but again, it doesn\'t fit the pattern.\n\nAfter reviewing possible options and ensuring the pattern matches exactly, the most likely answer is:\n\n**TELL ME** – however, it doesn’t match the pattern. \n\nGiven the pattern "_ _ l _ _ t'] for line "OK ... tell me": _ _ l _ _ t _
-raw proposals from SLM ['The clue refers to "N.B.A. 1-pointers," which are typically referred to as "FOULS" in basketball context. However, given the pattern "_z_c" and the constraint, we need to fit a 4-letter word matching the format with \'z\' and \'c\' in positions 2 and 4 respectively.\n\nThe only word fitting the pattern "_z_c" and relevant to NBA 1-pointers is "FZUC" — but it’s not a standard term. There are no other plausible words that fit the pattern and meaning while respecting the constraint.\n\nNone'] for line N.B.A. 1-pointers: Abbr.: _ z c
-raw proposals from SLM ['The clue "Exclamation from Homer" suggests a vocal exclamation or expression, possibly from Greek mythology or literature. Given the pattern "k _ _", we\'re looking for a 3-letter word starting with \'k\'.\n\nPossible candidates include "KAY," "KAP," "KAT," etc. However, "KAI" is explicitly forbidden in the constraints. Among the remaining options, "KAY" is a plausible exclamation but not typically associated with Homer. "KAP" could refer to a type of exclamation, though it\'s less common. \n\nHowever, the most fitting and commonly recognized exclamation from Homer would be "KAI" — which is excluded by the constraint. Since no other valid 3-letter word matching the pattern and context exists without violating the constraints, there is no suitable answer.\n\nNone'] for line Exclamation from Homer: k _ _
-Filtered invalid action: e19. BOOKS
-raw proposals from SLM ['The clue refers to a candymaker named Wonka. The pattern has five letters with the last being \'v\'. The word "Wonka" itself is excluded due to the constraint. However, there isn\'t a common 5-letter word ending in \'v\' that directly relates to a candymaker besides "Wonka." No other plausible candidates fit both the clue and the pattern while avoiding the forbidden words.\n\nNone'] for line Candymaker Wonka: _ _ _ _ v
-raw proposals from SLM ['The clue "Chauvinist or racist" suggests a synonym for prejudice or bigotry. The pattern "_e___" indicates a 5-letter word with \'e\' as the second letter.\n\nPossible candidates include "BIGOT," but it is explicitly forbidden. Other options like "RACIST" do not fit the pattern. No other valid 5-letter words matching the pattern and meaning exist while respecting the constraint.\n\nNone'] for line Chauvinist or racist: _ e _ _ _
-raw proposals from SLM ['The clue "In the style of" suggests a phrase or term indicating imitation or mimicry. The pattern "a _ a" indicates a three-letter word starting and ending with \'a\'.\n\nA fitting word that matches both the clue and the pattern is "APA", which can refer to a style of writing or formatting, often used in academic contexts. It also fits the pattern "a _ a".\n\nAPA (high)'] for line In the style of: a _ a
-Filtered invalid action: e25. VENI
-Filtered invalid action: e29. JOEY
-raw proposals from SLM ['The clue refers to an actress from *Golden Girls* named Arthur. The only known actress with the last name Arthur from the show is **Bea Arthur**. \n\nGiven the pattern "_ _ _", we need a 3-letter word. However, "Arthur" itself does not fit the 3-letter requirement. There are no other well-known actresses from *Golden Girls* with the surname Arthur that would fit a 3-letter pattern.\n\nTherefore, there is no valid 3-letter word matching the clue and pattern.\n\nNone'] for line "Golden Girls" actress Arthur: _ _ _
-Filtered invalid action: e31. WITHERS
-Filtered invalid action: e32. PACKET
-Filtered invalid action: e33. ORATE
-Filtered invalid action: e34. WORD
-Filtered invalid action: e35. EIRE
-Filtered invalid action: e36. WORD
-raw proposals from SLM ['The clue refers to types of sheep breeds, such as Shetland and Merino. The pattern is e v _ l _, which suggests a 5-letter word starting with "ev" and ending in "l_".\n\nA fitting word that matches the pattern and relates to sheep breeds is "Evelyn", but it doesn\'t fit the context. Another possibility is "Evelo", but it isn\'t commonly used. However, the most plausible and relevant term is "EVELY" — though not standard, it might be considered in some contexts. However, none of these fit perfectly within the given constraints or context.\n\nAfter careful consideration, no suitable word matching the pattern, clue, and constraints exists.\n\nNone'] for line Like the breeds Shetland and merino: e v _ l _
-Filtered invalid action: e38. TALKS
-raw proposals from SLM ['A yenta is a gossip or busybody. The clue "Like a yenta" suggests a synonym for someone who gossips.  \nThe pattern is D _ _ _, so we need a 4-letter word starting with D.  \n\nPossible candidates include:  \n- **DINK** – Not related to gossip.  \n- **DRIB** – Not a standard English word.  \n- **DRAB** – Means dull, not fitting.  \n- **DREG** – Means refuse, not fitting.  \n- **DRON** – Not a standard English word.  \n  \nNone of these fit well with the clue. However, **DRONE** is a 5-letter word, but it doesn\'t match the pattern.  \n\nGiven the constraint and lack of suitable options, no valid word fits the pattern and clue.  \n\nNone'] for line Like a yenta: d _ _ _
+[split] start model=gpt-4.1 temp=0.0 max_retries=2 entries=77
+[split] attempt=1/3 querying GPT
+[split] validation_failed attempt=1 issues=6
+[split] failed_parsed_json_begin
+{
+  "regions": [
+    {
+      "region_id": 0,
+      "entry_ids": [
+        0,
+        1,
+        2,
+        42,
+        43,
+        44,
+        45,
+        46,
+        3,
+        6
+      ],
+      "overlap_entry_ids": [
+        0,
+        42,
+        44,
+        46
+      ],
+      "rationale": "Dense, highly intersecting NW region with strong Across/Down balance and maximal local connectivity."
+    },
+    {
+      "region_id": 1,
+      "entry_ids": [
+        4,
+        5,
+        7,
+        8,
+        47,
+        48,
+        49,
+        50,
+        10,
+        14
+      ],
+      "overlap_entry_ids": [
+        8,
+        10,
+        50
+      ],
+      "rationale": "North-central region with many shared intersections and spatial locality, bridging to region 0 via 10 and 50."
+    },
+    {
+      "region_id": 2,
+      "entry_ids": [
+        9,
+        12,
+        13,
+        15,
+        16,
+        17,
+        51,
+        52,
+        53,
+        54
+      ],
+      "overlap_entry_ids": [
+        12,
+        52
+      ],
+      "rationale": "NE region with strong vertical/horizontal overlap, especially via 52, and compact spatial grouping."
+    },
+    {
+      "region_id": 3,
+      "entry_ids": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        57,
+        58,
+        59,
+        60
+      ],
+      "overlap_entry_ids": [
+        19,
+        58
+      ],
+      "rationale": "Central region with high intersection density and good Across/Down mix, bridging north and south."
+    },
+    {
+      "region_id": 4,
+      "entry_ids": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "overlap_entry_ids": [
+        25,
+        61
+      ],
+      "rationale": "East-central region, spatially compact, with strong internal intersections and some overlap to adjacent regions."
+    },
+    {
+      "region_id": 5,
+      "entry_ids": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "overlap_entry_ids": [
+        31,
+        66,
+        67
+      ],
+      "rationale": "Central-south region with dense intersection structure and balanced directionality."
+    },
+    {
+      "region_id": 6,
+      "entry_ids": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        72,
+        73,
+        74,
+        75,
+        76,
+        40,
+        41
+      ],
+      "overlap_entry_ids": [
+        37,
+        72,
+        73,
+        76
+      ],
+      "rationale": "SE region, spatially local, with strong internal connectivity and overlap to region 5 via 37 and 72."
+    }
+  ],
+  "coverage": {
+    "all_entries_covered": true,
+    "uncovered_entry_ids": [],
+    "entry_appearance_counts": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 2,
+      "9": 1,
+      "10": 2,
+      "11": 0,
+      "12": 2,
+      "13": 1,
+      "14": 2,
+      "15": 1,
+      "16": 1,
+      "17": 1,
+      "18": 1,
+      "19": 2,
+      "20": 1,
+      "21": 1,
+      "22": 1,
+      "23": 1,
+      "24": 1,
+      "25": 2,
+      "26": 1,
+      "27": 1,
+      "28": 1,
+      "29": 1,
+      "30": 1,
+      "31": 2,
+      "32": 1,
+      "33": 1,
+      "34": 1,
+      "35": 1,
+      "36": 1,
+      "37": 2,
+      "38": 1,
+      "39": 1,
+      "40": 1,
+      "41": 1,
+      "42": 2,
+      "43": 1,
+      "44": 2,
+      "45": 1,
+      "46": 2,
+      "47": 1,
+      "48": 1,
+      "49": 1,
+      "50": 2,
+      "51": 1,
+      "52": 2,
+      "53": 1,
+      "54": 1,
+      "55": 0,
+      "56": 0,
+      "57": 1,
+      "58": 2,
+      "59": 1,
+      "60": 1,
+      "61": 2,
+      "62": 1,
+      "63": 1,
+      "64": 1,
+      "65": 1,
+      "66": 2,
+      "67": 2,
+      "68": 1,
+      "69": 1,
+      "70": 1,
+      "71": 1,
+      "72": 2,
+      "73": 2,
+      "74": 1,
+      "75": 1,
+      "76": 2
+    }
+  }
+}
+[split] failed_parsed_json_end
+[split] failed_raw_response_begin
+{
+  "regions": [
+    {
+      "region_id": 0,
+      "entry_ids": [0, 1, 2, 42, 43, 44, 45, 46, 3, 6],
+      "overlap_entry_ids": [0, 42, 44, 46],
+      "rationale": "Dense, highly intersecting NW region with strong Across/Down balance and maximal local connectivity."
+    },
+    {
+      "region_id": 1,
+      "entry_ids": [4, 5, 7, 8, 47, 48, 49, 50, 10, 14],
+      "overlap_entry_ids": [8, 10, 50],
+      "rationale": "North-central region with many shared intersections and spatial locality, bridging to region 0 via 10 and 50."
+    },
+    {
+      "region_id": 2,
+      "entry_ids": [9, 12, 13, 15, 16, 17, 51, 52, 53, 54],
+      "overlap_entry_ids": [12, 52],
+      "rationale": "NE region with strong vertical/horizontal overlap, especially via 52, and compact spatial grouping."
+    },
+    {
+      "region_id": 3,
+      "entry_ids": [18, 19, 20, 21, 22, 23, 57, 58, 59, 60],
+      "overlap_entry_ids": [19, 58],
+      "rationale": "Central region with high intersection density and good Across/Down mix, bridging north and south."
+    },
+    {
+      "region_id": 4,
+      "entry_ids": [24, 25, 26, 27, 28, 29, 61, 62, 63, 64, 65],
+      "overlap_entry_ids": [25, 61],
+      "rationale": "East-central region, spatially compact, with strong internal intersections and some overlap to adjacent regions."
+    },
+    {
+      "region_id": 5,
+      "entry_ids": [30, 31, 32, 33, 34, 66, 67, 68, 69, 70, 71],
+      "overlap_entry_ids": [31, 66, 67],
+      "rationale": "Central-south region with dense intersection structure and balanced directionality."
+    },
+    {
+      "region_id": 6,
+      "entry_ids": [35, 36, 37, 38, 39, 72, 73, 74, 75, 76, 40, 41],
+      "overlap_entry_ids": [37, 72, 73, 76],
+      "rationale": "SE region, spatially local, with strong internal connectivity and overlap to region 5 via 37 and 72."
+    }
+  ],
+  "coverage": {
+    "all_entries_covered": true,
+    "uncovered_entry_ids": [],
+    "entry_appearance_counts": {
+      "0": 1, "1": 1, "2": 1, "3": 1, "4": 1, "5": 1, "6": 1, "7": 1, "8": 2, "9": 1, "10": 2, "11": 0, "12": 2, "13": 1, "14": 2, "15": 1, "16": 1, "17": 1, "18": 1, "19": 2, "20": 1, "21": 1, "22": 1, "23": 1, "24": 1, "25": 2, "26": 1, "27": 1, "28": 1, "29": 1, "30": 1, "31": 2, "32": 1, "33": 1, "34": 1, "35": 1, "36": 1, "37": 2, "38": 1, "39": 1, "40": 1, "41": 1, "42": 2, "43": 1, "44": 2, "45": 1, "46": 2, "47": 1, "48": 1, "49": 1, "50": 2, "51": 1, "52": 2, "53": 1, "54": 1, "55": 0, "56": 0, "57": 1, "58": 2, "59": 1, "60": 1, "61": 2, "62": 1, "63": 1, "64": 1, "65": 1, "66": 2, "67": 2, "68": 1, "69": 1, "70": 1, "71": 1, "72": 2, "73": 2, "74": 1, "75": 1, "76": 2
+    }
+  }
+}
+[split] failed_raw_response_end
+[split] issue_1: Region 0 disconnected: 3 components with sizes [8, 1, 1].
+[split] issue_2: Region 2 disconnected: 6 components with sizes [5, 1, 1, 1, 1, 1].
+[split] issue_3: Region 3 disconnected: 3 components with sizes [6, 3, 1].
+[split] issue_4: Region 4 disconnected: 4 components with sizes [5, 4, 1, 1].
+[split] issue_5: Region 6 disconnected: 4 components with sizes [6, 4, 1, 1].
+[split] issue_6: Coverage failure: uncovered_entry_ids=[11, 55, 56]
+[split] building repair prompt for attempt=2
+[split] attempt=2/3 querying GPT
+[split] validation_failed attempt=2 issues=6
+[split] failed_parsed_json_begin
+{
+  "regions": [
+    {
+      "region_id": 0,
+      "entry_ids": [
+        0,
+        3,
+        6,
+        42,
+        43,
+        44,
+        45,
+        46,
+        9,
+        12
+      ],
+      "overlap_entry_ids": [
+        0,
+        44,
+        46
+      ],
+      "rationale": "NW region with dense intersections and strong Across/Down balance, all entries form a single connected component."
+    },
+    {
+      "region_id": 1,
+      "entry_ids": [
+        1,
+        4,
+        7,
+        47,
+        48,
+        49,
+        10,
+        13,
+        16,
+        55
+      ],
+      "overlap_entry_ids": [
+        10,
+        47
+      ],
+      "rationale": "North-central region with high intersection density and spatial locality, including 55 for coverage and connectivity."
+    },
+    {
+      "region_id": 2,
+      "entry_ids": [
+        2,
+        5,
+        8,
+        14,
+        17,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "overlap_entry_ids": [
+        8,
+        50,
+        52
+      ],
+      "rationale": "NE region with strong vertical/horizontal overlap, all entries connected via intersections."
+    },
+    {
+      "region_id": 3,
+      "entry_ids": [
+        11,
+        15,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        57,
+        58
+      ],
+      "overlap_entry_ids": [
+        19,
+        58
+      ],
+      "rationale": "Central region with good Across/Down mix and all entries connected, includes 11 for coverage."
+    },
+    {
+      "region_id": 4,
+      "entry_ids": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "overlap_entry_ids": [
+        25,
+        61
+      ],
+      "rationale": "East-central region, spatially compact, with strong internal intersections and all entries connected."
+    },
+    {
+      "region_id": 5,
+      "entry_ids": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        56
+      ],
+      "overlap_entry_ids": [
+        31,
+        66,
+        67
+      ],
+      "rationale": "Central-south region with dense intersection structure, includes 56 for coverage, all entries connected."
+    },
+    {
+      "region_id": 6,
+      "entry_ids": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "overlap_entry_ids": [
+        37,
+        72,
+        73,
+        76
+      ],
+      "rationale": "SE region, spatially local, with strong internal connectivity and all entries connected."
+    }
+  ],
+  "coverage": {
+    "all_entries_covered": true,
+    "uncovered_entry_ids": [],
+    "entry_appearance_counts": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 1,
+      "14": 1,
+      "15": 1,
+      "16": 1,
+      "17": 1,
+      "18": 1,
+      "19": 2,
+      "20": 1,
+      "21": 1,
+      "22": 1,
+      "23": 1,
+      "24": 1,
+      "25": 2,
+      "26": 1,
+      "27": 1,
+      "28": 1,
+      "29": 1,
+      "30": 1,
+      "31": 1,
+      "32": 1,
+      "33": 1,
+      "34": 1,
+      "35": 1,
+      "36": 1,
+      "37": 2,
+      "38": 1,
+      "39": 1,
+      "40": 1,
+      "41": 1,
+      "42": 1,
+      "43": 1,
+      "44": 2,
+      "45": 1,
+      "46": 2,
+      "47": 2,
+      "48": 1,
+      "49": 1,
+      "50": 2,
+      "51": 1,
+      "52": 2,
+      "53": 1,
+      "54": 1,
+      "55": 1,
+      "56": 1,
+      "57": 1,
+      "58": 2,
+      "59": 1,
+      "60": 1,
+      "61": 2,
+      "62": 1,
+      "63": 1,
+      "64": 1,
+      "65": 1,
+      "66": 2,
+      "67": 2,
+      "68": 1,
+      "69": 1,
+      "70": 1,
+      "71": 1,
+      "72": 2,
+      "73": 2,
+      "74": 1,
+      "75": 1,
+      "76": 2
+    }
+  }
+}
+[split] failed_parsed_json_end
+[split] failed_raw_response_begin
+{
+  "regions": [
+    {
+      "region_id": 0,
+      "entry_ids": [0, 3, 6, 42, 43, 44, 45, 46, 9, 12],
+      "overlap_entry_ids": [0, 44, 46],
+      "rationale": "NW region with dense intersections and strong Across/Down balance, all entries form a single connected component."
+    },
+    {
+      "region_id": 1,
+      "entry_ids": [1, 4, 7, 47, 48, 49, 10, 13, 16, 55],
+      "overlap_entry_ids": [10, 47],
+      "rationale": "North-central region with high intersection density and spatial locality, including 55 for coverage and connectivity."
+    },
+    {
+      "region_id": 2,
+      "entry_ids": [2, 5, 8, 14, 17, 50, 51, 52, 53, 54],
+      "overlap_entry_ids": [8, 50, 52],
+      "rationale": "NE region with strong vertical/horizontal overlap, all entries connected via intersections."
+    },
+    {
+      "region_id": 3,
+      "entry_ids": [11, 15, 18, 19, 20, 21, 22, 23, 57, 58],
+      "overlap_entry_ids": [19, 58],
+      "rationale": "Central region with good Across/Down mix and all entries connected, includes 11 for coverage."
+    },
+    {
+      "region_id": 4,
+      "entry_ids": [24, 25, 26, 27, 28, 29, 61, 62, 63, 64, 65],
+      "overlap_entry_ids": [25, 61],
+      "rationale": "East-central region, spatially compact, with strong internal intersections and all entries connected."
+    },
+    {
+      "region_id": 5,
+      "entry_ids": [30, 31, 32, 33, 34, 66, 67, 68, 69, 70, 71, 56],
+      "overlap_entry_ids": [31, 66, 67],
+      "rationale": "Central-south region with dense intersection structure, includes 56 for coverage, all entries connected."
+    },
+    {
+      "region_id": 6,
+      "entry_ids": [35, 36, 37, 38, 39, 40, 41, 72, 73, 74, 75, 76],
+      "overlap_entry_ids": [37, 72, 73, 76],
+      "rationale": "SE region, spatially local, with strong internal connectivity and all entries connected."
+    }
+  ],
+  "coverage": {
+    "all_entries_covered": true,
+    "uncovered_entry_ids": [],
+    "entry_appearance_counts": {
+      "0": 1, "1": 1, "2": 1, "3": 1, "4": 1, "5": 1, "6": 1, "7": 1, "8": 1, "9": 1, "10": 1, "11": 1, "12": 1, "13": 1, "14": 1, "15": 1, "16": 1, "17": 1, "18": 1, "19": 2, "20": 1, "21": 1, "22": 1, "23": 1, "24": 1, "25": 2, "26": 1, "27": 1, "28": 1, "29": 1, "30": 1, "31": 1, "32": 1, "33": 1, "34": 1, "35": 1, "36": 1, "37": 2, "38": 1, "39": 1, "40": 1, "41": 1, "42": 1, "43": 1, "44": 2, "45": 1, "46": 2, "47": 2, "48": 1, "49": 1, "50": 2, "51": 1, "52": 2, "53": 1, "54": 1, "55": 1, "56": 1, "57": 1, "58": 2, "59": 1, "60": 1, "61": 2, "62": 1, "63": 1, "64": 1, "65": 1, "66": 2, "67": 2, "68": 1, "69": 1, "70": 1, "71": 1, "72": 2, "73": 2, "74": 1, "75": 1, "76": 2}
+  }
+}
+[split] failed_raw_response_end
+[split] issue_1: Region 3 disconnected: 5 components with sizes [4, 3, 1, 1, 1].
+[split] issue_2: Region 4 disconnected: 4 components with sizes [5, 4, 1, 1].
+[split] issue_3: Region 5 disconnected: 2 components with sizes [11, 1].
+[split] issue_4: Region 6 disconnected: 4 components with sizes [6, 4, 1, 1].
+[split] issue_5: Coverage failure: uncovered_entry_ids=[59, 60]
+[split] issue_6: Region 3 across/down imbalance too high: A=8, D=2, |A-D|=6 > 5.
+[split] building repair prompt for attempt=3
+[split] attempt=3/3 querying GPT
+[split] validation_failed attempt=3 issues=4
+[split] failed_parsed_json_begin
+{
+  "regions": [
+    {
+      "region_id": 0,
+      "entry_ids": [
+        0,
+        3,
+        6,
+        9,
+        42,
+        43,
+        44,
+        45,
+        46,
+        12
+      ],
+      "overlap_entry_ids": [
+        0,
+        44,
+        46
+      ],
+      "rationale": "NW region with dense intersections and strong Across/Down balance, all entries form a single connected component."
+    },
+    {
+      "region_id": 1,
+      "entry_ids": [
+        1,
+        4,
+        7,
+        10,
+        13,
+        16,
+        47,
+        48,
+        49,
+        55
+      ],
+      "overlap_entry_ids": [
+        10,
+        47
+      ],
+      "rationale": "North-central region with high intersection density and spatial locality, all entries connected."
+    },
+    {
+      "region_id": 2,
+      "entry_ids": [
+        2,
+        5,
+        8,
+        14,
+        17,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "overlap_entry_ids": [
+        8,
+        50,
+        52
+      ],
+      "rationale": "NE region with strong vertical/horizontal overlap, all entries connected via intersections."
+    },
+    {
+      "region_id": 3,
+      "entry_ids": [
+        11,
+        15,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        57,
+        58,
+        59,
+        60
+      ],
+      "overlap_entry_ids": [
+        19,
+        58
+      ],
+      "rationale": "Central region with good Across/Down mix and all entries connected, includes 59 and 60 for coverage and connectivity."
+    },
+    {
+      "region_id": 4,
+      "entry_ids": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "overlap_entry_ids": [
+        25,
+        61
+      ],
+      "rationale": "East-central region, spatially compact, with strong internal intersections and all entries connected."
+    },
+    {
+      "region_id": 5,
+      "entry_ids": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        56
+      ],
+      "overlap_entry_ids": [
+        31,
+        66,
+        67
+      ],
+      "rationale": "Central-south region with dense intersection structure, includes 56 for coverage, all entries connected."
+    },
+    {
+      "region_id": 6,
+      "entry_ids": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "overlap_entry_ids": [
+        37,
+        72,
+        73,
+        76
+      ],
+      "rationale": "SE region, spatially local, with strong internal connectivity and all entries connected."
+    }
+  ],
+  "coverage": {
+    "all_entries_covered": true,
+    "uncovered_entry_ids": [],
+    "entry_appearance_counts": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "13": 1,
+      "14": 1,
+      "15": 1,
+      "16": 1,
+      "17": 1,
+      "18": 1,
+      "19": 2,
+      "20": 1,
+      "21": 1,
+      "22": 1,
+      "23": 1,
+      "24": 1,
+      "25": 2,
+      "26": 1,
+      "27": 1,
+      "28": 1,
+      "29": 1,
+      "30": 1,
+      "31": 1,
+      "32": 1,
+      "33": 1,
+      "34": 1,
+      "35": 1,
+      "36": 1,
+      "37": 2,
+      "38": 1,
+      "39": 1,
+      "40": 1,
+      "41": 1,
+      "42": 1,
+      "43": 1,
+      "44": 2,
+      "45": 1,
+      "46": 2,
+      "47": 2,
+      "48": 1,
+      "49": 1,
+      "50": 2,
+      "51": 1,
+      "52": 2,
+      "53": 1,
+      "54": 1,
+      "55": 1,
+      "56": 1,
+      "57": 1,
+      "58": 2,
+      "59": 1,
+      "60": 1,
+      "61": 2,
+      "62": 1,
+      "63": 1,
+      "64": 1,
+      "65": 1,
+      "66": 2,
+      "67": 2,
+      "68": 1,
+      "69": 1,
+      "70": 1,
+      "71": 1,
+      "72": 2,
+      "73": 2,
+      "74": 1,
+      "75": 1,
+      "76": 2
+    }
+  }
+}
+[split] failed_parsed_json_end
+[split] failed_raw_response_begin
+{
+  "regions": [
+    {
+      "region_id": 0,
+      "entry_ids": [0, 3, 6, 9, 42, 43, 44, 45, 46, 12],
+      "overlap_entry_ids": [0, 44, 46],
+      "rationale": "NW region with dense intersections and strong Across/Down balance, all entries form a single connected component."
+    },
+    {
+      "region_id": 1,
+      "entry_ids": [1, 4, 7, 10, 13, 16, 47, 48, 49, 55],
+      "overlap_entry_ids": [10, 47],
+      "rationale": "North-central region with high intersection density and spatial locality, all entries connected."
+    },
+    {
+      "region_id": 2,
+      "entry_ids": [2, 5, 8, 14, 17, 50, 51, 52, 53, 54],
+      "overlap_entry_ids": [8, 50, 52],
+      "rationale": "NE region with strong vertical/horizontal overlap, all entries connected via intersections."
+    },
+    {
+      "region_id": 3,
+      "entry_ids": [11, 15, 18, 19, 20, 21, 22, 23, 57, 58, 59, 60],
+      "overlap_entry_ids": [19, 58],
+      "rationale": "Central region with good Across/Down mix and all entries connected, includes 59 and 60 for coverage and connectivity."
+    },
+    {
+      "region_id": 4,
+      "entry_ids": [24, 25, 26, 27, 28, 61, 62, 63, 64, 65],
+      "overlap_entry_ids": [25, 61],
+      "rationale": "East-central region, spatially compact, with strong internal intersections and all entries connected."
+    },
+    {
+      "region_id": 5,
+      "entry_ids": [29, 30, 31, 32, 33, 34, 66, 67, 68, 69, 70, 71, 56],
+      "overlap_entry_ids": [31, 66, 67],
+      "rationale": "Central-south region with dense intersection structure, includes 56 for coverage, all entries connected."
+    },
+    {
+      "region_id": 6,
+      "entry_ids": [35, 36, 37, 38, 39, 40, 41, 72, 73, 74, 75, 76],
+      "overlap_entry_ids": [37, 72, 73, 76],
+      "rationale": "SE region, spatially local, with strong internal connectivity and all entries connected."
+    }
+  ],
+  "coverage": {
+    "all_entries_covered": true,
+    "uncovered_entry_ids": [],
+    "entry_appearance_counts": {
+      "0": 1, "1": 1, "2": 1, "3": 1, "4": 1, "5": 1, "6": 1, "7": 1, "8": 1, "9": 1,
+      "10": 1, "11": 1, "12": 1, "13": 1, "14": 1, "15": 1, "16": 1, "17": 1, "18": 1, "19": 2,
+      "20": 1, "21": 1, "22": 1, "23": 1, "24": 1, "25": 2, "26": 1, "27": 1, "28": 1, "29": 1,
+      "30": 1, "31": 1, "32": 1, "33": 1, "34": 1, "35": 1, "36": 1, "37": 2, "38": 1, "39": 1,
+      "40": 1, "41": 1, "42": 1, "43": 1, "44": 2, "45": 1, "46": 2, "47": 2, "48": 1, "49": 1,
+      "50": 2, "51": 1, "52": 2, "53": 1, "54": 1, "55": 1, "56": 1, "57": 1, "58": 2, "59": 1,
+      "60": 1, "61": 2, "62": 1, "63": 1, "64": 1, "65": 1, "66": 2, "67": 2, "68": 1, "69": 1,
+      "70": 1, "71": 1, "72": 2, "73": 2, "74": 1, "75": 1, "76": 2
+    }
+  }
+}
+[split] failed_raw_response_end
+[split] issue_1: Region 3 disconnected: 5 components with sizes [6, 3, 1, 1, 1].
+[split] issue_2: Region 4 disconnected: 3 components with sizes [5, 4, 1].
+[split] issue_3: Region 5 disconnected: 2 components with sizes [12, 1].
+[split] issue_4: Region 6 disconnected: 4 components with sizes [6, 4, 1, 1].
+[split] exhausted retries; returning best effort result
+elapsed_sec=59.494187
+backend=gpt-4.1
+problem_idx=0
+status=split_only
+message=Task split completed. Sub-region solving is not implemented yet.
+{
+  "problem_id": 0,
+  "status": "split_only",
+  "message": "Task split completed. Sub-region solving is not implemented yet.",
+  "region_plan": {
+    "regions": [
+      {
+        "region_id": 0,
+        "entry_ids": [
+          0,
+          3,
+          6,
+          9,
+          42,
+          43,
+          44,
+          45,
+          46,
+          12
+        ],
+        "overlap_entry_ids": [
+          0,
+          44,
+          46
+        ],
+        "rationale": "NW region with dense intersections and strong Across/Down balance, all entries form a single connected component."
+      },
+      {
+        "region_id": 1,
+        "entry_ids": [
+          1,
+          4,
+          7,
+          10,
+          13,
+          16,
+          47,
+          48,
+          49,
+          55
+        ],
+        "overlap_entry_ids": [
+          10,
+          47
+        ],
+        "rationale": "North-central region with high intersection density and spatial locality, all entries connected."
+      },
+      {
+        "region_id": 2,
+        "entry_ids": [
+          2,
+          5,
+          8,
+          14,
+          17,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "overlap_entry_ids": [
+          8,
+          50,
+          52
+        ],
+        "rationale": "NE region with strong vertical/horizontal overlap, all entries connected via intersections."
+      },
+      {
+        "region_id": 3,
+        "entry_ids": [
+          11,
+          15,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          57,
+          58,
+          59,
+          60
+        ],
+        "overlap_entry_ids": [
+          19,
+          58
+        ],
+        "rationale": "Central region with good Across/Down mix and all entries connected, includes 59 and 60 for coverage and connectivity."
+      },
+      {
+        "region_id": 4,
+        "entry_ids": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          61,
+          62,
+          63,
+          64,
+          65
+        ],
+        "overlap_entry_ids": [
+          25,
+          61
+        ],
+        "rationale": "East-central region, spatially compact, with strong internal intersections and all entries connected."
+      },
+      {
+        "region_id": 5,
+        "entry_ids": [
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          56
+        ],
+        "overlap_entry_ids": [
+          31,
+          66,
+          67
+        ],
+        "rationale": "Central-south region with dense intersection structure, includes 56 for coverage, all entries connected."
+      },
+      {
+        "region_id": 6,
+        "entry_ids": [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          72,
+          73,
+          74,
+          75,
+          76
+        ],
+        "overlap_entry_ids": [
+          37,
+          72,
+          73,
+          76
+        ],
+        "rationale": "SE region, spatially local, with strong internal connectivity and all entries connected."
+      }
+    ],
+    "coverage": {
+      "all_entries_covered": true,
+      "uncovered_entry_ids": [],
+      "entry_appearance_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "17": 1,
+        "18": 1,
+        "19": 1,
+        "20": 1,
+        "21": 1,
+        "22": 1,
+        "23": 1,
+        "24": 1,
+        "25": 1,
+        "26": 1,
+        "27": 1,
+        "28": 1,
+        "29": 1,
+        "30": 1,
+        "31": 1,
+        "32": 1,
+        "33": 1,
+        "34": 1,
+        "35": 1,
+        "36": 1,
+        "37": 1,
+        "38": 1,
+        "39": 1,
+        "40": 1,
+        "41": 1,
+        "42": 1,
+        "43": 1,
+        "44": 1,
+        "45": 1,
+        "46": 1,
+        "47": 1,
+        "48": 1,
+        "49": 1,
+        "50": 1,
+        "51": 1,
+        "52": 1,
+        "53": 1,
+        "54": 1,
+        "55": 1,
+        "56": 1,
+        "57": 1,
+        "58": 1,
+        "59": 1,
+        "60": 1,
+        "61": 1,
+        "62": 1,
+        "63": 1,
+        "64": 1,
+        "65": 1,
+        "66": 1,
+        "67": 1,
+        "68": 1,
+        "69": 1,
+        "70": 1,
+        "71": 1,
+        "72": 1,
+        "73": 1,
+        "74": 1,
+        "75": 1,
+        "76": 1
+      }
+    },
+    "_critical_issues": [
+      "Region 3 disconnected: 5 components with sizes [6, 3, 1, 1, 1].",
+      "Region 4 disconnected: 3 components with sizes [5, 4, 1].",
+      "Region 5 disconnected: 2 components with sizes [12, 1].",
+      "Region 6 disconnected: 4 components with sizes [6, 4, 1, 1]."
+    ],
+    "_secondary_issues": [],
+    "_issues": [
+      "Region 3 disconnected: 5 components with sizes [6, 3, 1, 1, 1].",
+      "Region 4 disconnected: 3 components with sizes [5, 4, 1].",
+      "Region 5 disconnected: 2 components with sizes [12, 1].",
+      "Region 6 disconnected: 4 components with sizes [6, 4, 1, 1]."
+    ],
+    "_raw_response": "{\n  \"regions\": [\n    {\n      \"region_id\": 0,\n      \"entry_ids\": [0, 3, 6, 9, 42, 43, 44, 45, 46, 12],\n      \"overlap_entry_ids\": [0, 44, 46],\n      \"rationale\": \"NW region with dense intersections and strong Across/Down balance, all entries form a single connected component.\"\n    },\n    {\n      \"region_id\": 1,\n      \"entry_ids\": [1, 4, 7, 10, 13, 16, 47, 48, 49, 55],\n      \"overlap_entry_ids\": [10, 47],\n      \"rationale\": \"North-central region with high intersection density and spatial locality, all entries connected.\"\n    },\n    {\n      \"region_id\": 2,\n      \"entry_ids\": [2, 5, 8, 14, 17, 50, 51, 52, 53, 54],\n      \"overlap_entry_ids\": [8, 50, 52],\n      \"rationale\": \"NE region with strong vertical/horizontal overlap, all entries connected via intersections.\"\n    },\n    {\n      \"region_id\": 3,\n      \"entry_ids\": [11, 15, 18, 19, 20, 21, 22, 23, 57, 58, 59, 60],\n      \"overlap_entry_ids\": [19, 58],\n      \"rationale\": \"Central region with good Across/Down mix and all entries connected, includes 59 and 60 for coverage and connectivity.\"\n    },\n    {\n      \"region_id\": 4,\n      \"entry_ids\": [24, 25, 26, 27, 28, 61, 62, 63, 64, 65],\n      \"overlap_entry_ids\": [25, 61],\n      \"rationale\": \"East-central region, spatially compact, with strong internal intersections and all entries connected.\"\n    },\n    {\n      \"region_id\": 5,\n      \"entry_ids\": [29, 30, 31, 32, 33, 34, 66, 67, 68, 69, 70, 71, 56],\n      \"overlap_entry_ids\": [31, 66, 67],\n      \"rationale\": \"Central-south region with dense intersection structure, includes 56 for coverage, all entries connected.\"\n    },\n    {\n      \"region_id\": 6,\n      \"entry_ids\": [35, 36, 37, 38, 39, 40, 41, 72, 73, 74, 75, 76],\n      \"overlap_entry_ids\": [37, 72, 73, 76],\n      \"rationale\": \"SE region, spatially local, with strong internal connectivity and all entries connected.\"\n    }\n  ],\n  \"coverage\": {\n    \"all_entries_covered\": true,\n    \"uncovered_entry_ids\": [],\n    \"entry_appearance_counts\": {\n      \"0\": 1, \"1\": 1, \"2\": 1, \"3\": 1, \"4\": 1, \"5\": 1, \"6\": 1, \"7\": 1, \"8\": 1, \"9\": 1,\n      \"10\": 1, \"11\": 1, \"12\": 1, \"13\": 1, \"14\": 1, \"15\": 1, \"16\": 1, \"17\": 1, \"18\": 1, \"19\": 2,\n      \"20\": 1, \"21\": 1, \"22\": 1, \"23\": 1, \"24\": 1, \"25\": 2, \"26\": 1, \"27\": 1, \"28\": 1, \"29\": 1,\n      \"30\": 1, \"31\": 1, \"32\": 1, \"33\": 1, \"34\": 1, \"35\": 1, \"36\": 1, \"37\": 2, \"38\": 1, \"39\": 1,\n      \"40\": 1, \"41\": 1, \"42\": 1, \"43\": 1, \"44\": 2, \"45\": 1, \"46\": 2, \"47\": 2, \"48\": 1, \"49\": 1,\n      \"50\": 2, \"51\": 1, \"52\": 2, \"53\": 1, \"54\": 1, \"55\": 1, \"56\": 1, \"57\": 1, \"58\": 2, \"59\": 1,\n      \"60\": 1, \"61\": 2, \"62\": 1, \"63\": 1, \"64\": 1, \"65\": 1, \"66\": 2, \"67\": 2, \"68\": 1, \"69\": 1,\n      \"70\": 1, \"71\": 1, \"72\": 2, \"73\": 2, \"74\": 1, \"75\": 1, \"76\": 2\n    }\n  }\n}"
+  }
+}
+gpt_usage={'completion_tokens': 3390, 'prompt_tokens': 46385, 'cost': 0.0}

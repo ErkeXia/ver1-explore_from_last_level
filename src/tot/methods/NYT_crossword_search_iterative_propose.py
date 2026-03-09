@@ -344,6 +344,88 @@ def print_conflict_resolution_summary(task, kept_by_eid, removed_by_eid):
         print("  Kept entries: none")
 
 
+def print_final_entry_summary(task, x, final_y, proposed_history_by_eid):
+    """
+    Print final grouped summary:
+      1) entries that received at least one proposal
+      2) entries that never received any proposal
+      3) final rendered grid
+    """
+    task.set_status(x, final_y)
+
+    print("\n[Final Summary]")
+    print("Proposed entries (correct or not):")
+
+    proposed_ids = set(int(eid) for eid in proposed_history_by_eid.keys())
+    proposed_count = 0
+    for spec in task.env.entries:
+        eid = int(spec.entry_id)
+        if eid not in proposed_ids:
+            continue
+
+        eidx = task.env.eid_to_idx.get(eid)
+        if eidx is None:
+            continue
+
+        answer = spec.answer.upper()
+        final_fill = task.env.entry_fills[eidx].upper()
+        final_ok = final_fill == answer and "_" not in final_fill
+
+        proposals = proposed_history_by_eid.get(eid, [])
+        seen = set()
+        ordered_words = []
+        for row in proposals:
+            word = row["word"].upper()
+            if word in seen:
+                continue
+            seen.add(word)
+            ordered_words.append(word)
+
+        if ordered_words:
+            rendered_props = ", ".join(
+                f"{w}({'OK' if w == answer else 'X'})" for w in ordered_words
+            )
+        else:
+            rendered_props = "-"
+
+        print(
+            f"  e{eid} {spec.direction}{spec.label}: "
+            f"proposed=[{rendered_props}] final={final_fill} "
+            f"answer={answer} final_correct={final_ok}"
+        )
+        proposed_count += 1
+
+    if proposed_count == 0:
+        print("  none")
+
+    print("Entries with no proposal:")
+    no_proposal_count = 0
+    for spec in task.env.entries:
+        eid = int(spec.entry_id)
+        if eid in proposed_ids:
+            continue
+
+        eidx = task.env.eid_to_idx.get(eid)
+        if eidx is None:
+            continue
+
+        answer = spec.answer.upper()
+        final_fill = task.env.entry_fills[eidx].upper()
+        final_ok = final_fill == answer and "_" not in final_fill
+
+        print(
+            f"  e{eid} {spec.direction}{spec.label}: "
+            f"final={final_fill} answer={answer} final_correct={final_ok}"
+        )
+        no_proposal_count += 1
+
+    if no_proposal_count == 0:
+        print("  none")
+
+    print("\nFinal grid:")
+    print(task.render_grid_only(x, final_y))
+
+
 def solve_v2(
     args,
     task,
@@ -381,10 +463,11 @@ def solve_v2(
     print("__Correct Answer Key (first 30 entries)__")
     for spec in task.env.entries[:30]:
         print(f"  {spec.direction}{spec.label} (e{spec.entry_id}): {spec.answer}")
-    print(f"x = {x}\n")
+    print(f"Input = \n\n {x}\n")
 
     start_y = "[]"
     rejected_words_by_entry = {}
+    proposed_history_by_entry = {}
     all_states = []
     iteration_details = []
     no_progress_rounds = 0
@@ -404,6 +487,16 @@ def solve_v2(
         )
         candidates = proposal_stage["candidates"]
         exhausted = proposal_stage["exhausted_entry_ids"]
+
+        for eid, item in candidates.items():
+            proposed_history_by_entry.setdefault(int(eid), []).append(
+                {
+                    "iteration": r,
+                    "word": item["word"],
+                    "score": item["score"],
+                }
+            )
+
         proposal_summary = summarize_proposals(task, candidates)
 
         if not candidates:
@@ -496,5 +589,6 @@ def solve_v2(
         f"[{idx}] depth={depth} nodes={nodes}  "
         f"r_word={final_info['r_word']:.3f}  r_letter={final_info['r_letter']:.3f}  r_game={final_info['r_game']}"
     )
+    print_final_entry_summary(task, x, final_y, proposed_history_by_eid=proposed_history_by_entry)
 
     return 0, final_y, depth, all_states, nodes, [], iteration_details

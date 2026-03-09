@@ -250,16 +250,18 @@ def reset():
     
 def gpt_usage(backend="gpt-4"):
     global completion_tokens, prompt_tokens
-    if backend == "gpt-4":
-        cost = completion_tokens / 1000 * 0.06 + prompt_tokens / 1000 * 0.03
-    elif backend == "gpt-3.5-turbo":
-        cost = completion_tokens / 1000 * 0.002 + prompt_tokens / 1000 * 0.0015
-    elif backend == "gpt-4o":
-        cost = completion_tokens / 1000 * 0.00250 + prompt_tokens / 1000 * 0.01
+    # Price map is intentionally conservative; unknown backends default to 0.
+    price_per_1k = {
+        "gpt-4": {"prompt": 0.03, "completion": 0.06},
+        "gpt-3.5-turbo": {"prompt": 0.0015, "completion": 0.002},
+        "gpt-4o": {"prompt": 0.01, "completion": 0.00250},
+        "gpt-4.1": {"prompt": 0.0, "completion": 0.0},
+    }
+    price = price_per_1k.get(backend, {"prompt": 0.0, "completion": 0.0})
+    cost = completion_tokens / 1000 * price["completion"] + prompt_tokens / 1000 * price["prompt"]
     return {"completion_tokens": completion_tokens, "prompt_tokens": prompt_tokens, "cost": cost}
 
 def llama_usage():
     global prompt_llama_tokens, llama_tokens
     return {"llama_completion_tokens": llama_tokens, "llama_prompt_tokens": prompt_llama_tokens}
-
 
